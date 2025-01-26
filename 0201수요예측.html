@@ -1,0 +1,1860 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.39">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>수요예측 – 공장관리기술사(2E)</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./0202프로세스진도관리.html" rel="next">
+<link href="./0105사업환경분석.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-160d5d975b9dfffeaf699822bedbd9bf.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<meta name="mermaid-theme" content="neutral">
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./0201수요예측.html">02. 생산운영</a></li><li class="breadcrumb-item"><a href="./0201수요예측.html"><span class="chapter-title">수요예측</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">공장관리기술사(2E)</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://yeonkyupark.github.io/" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-globe"></i></a>
+    <a href="https://www.instagram.com/yeonkyu.park/" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-instagram"></i></a>
+    <a href="https://github.com/yeonkyupark/PEPC" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">들어가는 글</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">01. 생산전략</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0101경쟁우위생산전략.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">경쟁우위 생산전략</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0102생산구조와방식.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">생산구조와 방식(Layout)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0103구매와외주전략.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">구매와 외주전략</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0104인력과직무설계.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">인력과 직무설계</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0105사업환경분석.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">사업환경 분석</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">02. 생산운영</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0201수요예측.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">수요예측</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0202프로세스진도관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">프로세스 진도관리</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">03. 물류관리</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0301공급망관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">공급망 관리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0302물류관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">물류관리</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">04. 재고관리</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0401재고관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">재고관리</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">05. 공정관리</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0501생산계획수립.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">생산계획 수립</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0502공정설계.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">공정설계</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0503작업계획수립.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">작업계획 수립</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0504표준작업관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">표준작업 관리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0505공정개선.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">공정개선</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">06. 설비관리</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0601설비계획.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">설비계획</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0602설비보전관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">설비보전 관리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0603자재취급및운반관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">자재취급 및 운반관리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0604환경관리및안전관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">환경 관리 및 안전 관리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0605시설및유틸리티관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">시설 및 유틸리티 관리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0606공장자동화기술.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">공장 자동화 기술</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">07. 작업관리</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0701작업방법및시간연구.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">작업방법 및 시간연구</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false">
+ <span class="menu-text">08. 생산성관리</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0801프로세스분석과개선.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">프로세스 분석과 개선</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0802생산성관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">생산성 관리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0803품질관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">품질관리</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false">
+ <span class="menu-text">09. 원가관리</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0901사업성분석.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">사업성분석</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0902원가관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">원가관리</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false">
+ <span class="menu-text">10. 경제성 공학</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1001가치공학.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">가치공학</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1002경영과학.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">경영과학</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false">
+ <span class="menu-text">11. 생산지원기술</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1101정보화활용기술.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">정보화 활용 기술</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1102제품개발기술.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">제품개발 기술</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1103서비스운영관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">서비스 운영관리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1104생산혁신기술.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">생산혁신기술</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1105신기술및동향.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">신기술및동향</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false">
+ <span class="menu-text">12. ISO</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1201ISO9001.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ISO9001</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1202ISO14001.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ISO14001</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1203ISO31000.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ISO31000</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1204ISO21500.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ISO21500</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">목차</h2>
+   
+  <ul>
+  <li><a href="#수요예측-기법" id="toc-수요예측-기법" class="nav-link active" data-scroll-target="#수요예측-기법">수요예측 기법</a>
+  <ul>
+  <li><a href="#시계열-분석" id="toc-시계열-분석" class="nav-link" data-scroll-target="#시계열-분석">시계열 분석</a></li>
+  </ul></li>
+  <li><a href="#예측-오차" id="toc-예측-오차" class="nav-link" data-scroll-target="#예측-오차">예측 오차</a>
+  <ul>
+  <li><a href="#sec-forecast-error-index" id="toc-sec-forecast-error-index" class="nav-link" data-scroll-target="#sec-forecast-error-index">예측오차 지표</a></li>
+  <li><a href="#추적지표" id="toc-추적지표" class="nav-link" data-scroll-target="#추적지표">추적지표</a></li>
+  </ul></li>
+  <li><a href="#수요-불확실성-감소-방안" id="toc-수요-불확실성-감소-방안" class="nav-link" data-scroll-target="#수요-불확실성-감소-방안">수요 불확실성 감소 방안</a>
+  <ul>
+  <li><a href="#수요예측-개선" id="toc-수요예측-개선" class="nav-link" data-scroll-target="#수요예측-개선">수요예측 개선</a></li>
+  <li><a href="#신속대응" id="toc-신속대응" class="nav-link" data-scroll-target="#신속대응">신속대응</a></li>
+  <li><a href="#sec-delayed-differentiation" id="toc-sec-delayed-differentiation" class="nav-link" data-scroll-target="#sec-delayed-differentiation">차별화 지연</a></li>
+  <li><a href="#맞춤보충" id="toc-맞춤보충" class="nav-link" data-scroll-target="#맞춤보충">맞춤보충</a></li>
+  </ul></li>
+  <li><a href="#sec-crm" id="toc-sec-crm" class="nav-link" data-scroll-target="#sec-crm">CRM</a>
+  <ul>
+  <li><a href="#crm-특징" id="toc-crm-특징" class="nav-link" data-scroll-target="#crm-특징">CRM 특징</a></li>
+  <li><a href="#crm-전제-조건" id="toc-crm-전제-조건" class="nav-link" data-scroll-target="#crm-전제-조건">CRM 전제 조건</a></li>
+  <li><a href="#crm-기대-효과" id="toc-crm-기대-효과" class="nav-link" data-scroll-target="#crm-기대-효과">CRM 기대 효과</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/yeonkyupark/PEPC/edit/main/0201수요예측.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content column-body" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./0201수요예측.html">02. 생산운영</a></li><li class="breadcrumb-item"><a href="./0201수요예측.html"><span class="chapter-title">수요예측</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-title">수요예측</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta column-body">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 97-2-2, 97-4-6, 103-2-2, 106-3-5, 118-2-2">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+기출: 97-2-2, 97-4-6, 103-2-2, 106-3-5, 118-2-2
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+<section id="수요예측-기법" class="level2">
+<h2 class="anchored" data-anchor-id="수요예측-기법">수요예측 기법</h2>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+subgraph s1["   "]
+10["정성적 예측법&lt;br&gt;(질적 예측 기법)"]
+11[직관을 이용한 예측]
+12[시장 조사에 의한 예측]
+13[유추에 의한 예측]
+11 --- 111[데파이법]
+11 --- 112[판매원 의견 종합법]
+11 --- 113[경영자 판단법]
+11 --- 114[위원회 홥의법, 패널 동의법]
+12 --- 시장조사법
+13 --- 131[라이프 사이클 유추법]
+13 --- 132[자료 유추법]
+10 --- 11 &amp; 12 &amp; 13
+end
+
+subgraph s2["   "]
+20["정량적 예측법&lt;br&gt;(양적 예측 기법)"]
+21[시계열 예측기법]
+22[인과관계 예측기법]
+21 --- 211[이동 평균법]
+21 --- 212[지수 평활법]
+21 --- 213[수학적 모형]
+21 --- 214[Box-Jenkins]
+21 --- 215[추세 분석법]
+22 --- 221[회귀분석]
+22 --- 222[계량경제모형]
+22 --- 223[투입-산출 모형]
+22 --- 224[시뮬레이션 모형]
+22 --- 225[선도지표법]
+20 --- 21 &amp; 22
+end
+
+예측기법 --- 10 &amp; 20
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<dl>
+<dt>델파이법</dt>
+<dd>
+<blockquote class="blockquote">
+<p><strong>델파이법</strong>(Delphi)은 <font color="blue">익명 전문가 집단으로부터 합의</font>를 도출하는 과정이다. 통계적 모형을 개발하기 위한 과거 자료가 없거나 경영자가 경험이 없어서 판단 근거를 찾을 수 없을 때 사용한다. 장기 수요 예측이나 신제품 수요 예측에 사용할 수 있으며, 기술 예측에 있어 매우 효과적이다. 예측에 걸리는 시간이 상당히 길고 응답 내용에 책임감이 적으며, 전문가 집단에 제공할 설문지를 잘못 설계하면 잘못된 결론을 도출할 수도 있다. 새로운 제품 수요 변환점을 예측하는데 상당히 우수하다고 알려져 있다.</p>
+</blockquote>
+</dd>
+<dt>중역판단법(경영진 의견)</dt>
+<dd>
+<blockquote class="blockquote">
+<p>경영자 집단 의견과 경험을 집약하여 단일 예측치를 얻는 방법이다.</p>
+</blockquote>
+</dd>
+<dt>판매원 추정법(영업자 예측)</dt>
+<dd>
+<blockquote class="blockquote">
+<p>주기적으로판매원들이 수요 추정치를 작성하게 하고 이를 근거로 예측하는 방식이며, 구역별이나 지역별 판매 예측치를 쉽게 계산할 수 있고, 재고관리, 유통, 판매관리 등에 상당히 유용하다. 판매원 개인적 편견이 예측에 반영될 수 있으며, 이를 판매원 성과측정치로사용한다면 낮은 예측치가 될 가능성이 높다.</p>
+</blockquote>
+</dd>
+<dt>소비자 조사법</dt>
+<dd>
+<blockquote class="blockquote">
+<p>설문서 드응로 수집한 자료를 이용하여 고객 관심사에 대한 가설을 만들고 검증하는 체계적인 접근법이다. 시장조사법은 단기, 중기, 장기 수요 예측에 모두 사용할 수 있다. 시장 조사가 중요한 정보를 제공하기도 하지만 추정치를 결정할 권한을 가진 사람이 너무 많고 결과가 모호하다는 약점도 가지고 있다.</p>
+</blockquote>
+</dd>
+<dt>시계열분해법</dt>
+<dd>
+<blockquote class="blockquote">
+<p><strong>시계열 분석</strong>이란 시계열(연, 월, 주, 일 등 시간 간격)에 따라 제시된 <font color="blue">과거 자료(수요량, 매출액 등)로부터 그 추세나 경향을 파악</font>하여 장래 수요를 예측하는 것이다. 이 경우 과거 자료를 미래 예측 길잡이로 이용하는데 시간이 독립변수가 되며 수요량 또는 매출액은 종속변수가 된다. 따라서 시계열 분석 초점은 과거에 발생한 수요와 관련된 시계열성에 있다고 볼 수 있다. 분석 방법에 따라 단순이동평균법, 가중이동평균법, 지수평활법 등이 있다.</p>
+</blockquote>
+</dd>
+</dl>
+<p><br></p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 109-1-9, 124-4-4">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+기출: 109-1-9, 124-4-4
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+<section id="시계열-분석" class="level4">
+<h4 class="anchored" data-anchor-id="시계열-분석">시계열 분석</h4>
+<section id="수요변동-형태" class="level5">
+<h5 class="anchored" data-anchor-id="수요변동-형태">수요변동 형태</h5>
+<p>시계열 수요자료에서 관찰할 수 있는 수요 변동 형태는 과거 데이터를 분석해 미래 수요를 예측하는 데 중요한 역할을 한다. 이러한 변동 형태는 주로 네 가지로 구분된다.</p>
+<dl>
+<dt>추세 (Trend)</dt>
+<dd>
+<ul>
+<li><strong>정의</strong>: 수요가 장기간에 걸쳐 일정한 방향으로 증가하거나 감소하는 패턴을 의미한다.<br>
+</li>
+<li><strong>특징</strong>: 시간이 지남에 따라 꾸준히 변화하며, 직선형 또는 곡선형으로 나타날 수 있다.<br>
+</li>
+<li><strong>예시</strong>: 기술 발전에 따라 스마트폰 판매량이 지속적으로 증가하는 경우.</li>
+</ul>
+</dd>
+<dt>계절성 (Seasonality)</dt>
+<dd>
+<ul>
+<li><strong>정의</strong>: 일정 주기로 반복되는 수요 변동 형태로, 주기적으로 수요가 높아지거나 낮아진다.<br>
+</li>
+<li><strong>특징</strong>: 연간, 분기별, 월별 등 특정 기간에 반복되는 패턴이 명확하게 나타난다.<br>
+</li>
+<li><strong>예시</strong>: 여름철 에어컨 판매 증가, 연말 쇼핑 시즌의 매출 급증.</li>
+</ul>
+</dd>
+<dt>주기적 변동 (Cyclic Variation)</dt>
+<dd>
+<ul>
+<li><strong>정의</strong>: 경제 환경이나 시장 변화에 따라 발생하는 장기적인 수요 변동을 의미한다.<br>
+</li>
+<li><strong>특징</strong>: 계절성과 달리 불규칙하고, 주기가 길며 경기 순환에 따라 발생하는 경우가 많다.<br>
+</li>
+<li><strong>예시</strong>: 경기 호황기와 불황기에 따른 자동차 판매량 변화.</li>
+</ul>
+</dd>
+<dt>불규칙 변동 (Irregular Variation)</dt>
+<dd>
+<ul>
+<li><strong>정의</strong>: 예측 불가능한 외부 요인(자연재해, 전쟁, 팬데믹 등)으로 인해 발생하는 비정상적인 수요 변동이다.<br>
+</li>
+<li><strong>특징</strong>: 갑작스럽고 예측이 어렵기 때문에 일반적인 패턴으로 설명되지 않는다.<br>
+</li>
+<li><strong>예시</strong>: 코로나19 팬데믹으로 인한 마스크 및 의료용품 수요 급증.</li>
+</ul>
+</dd>
+</dl>
+<p>이러한 변동 형태를 파악하면 기업은 수요 예측을 보다 정확하게 수행하고, 재고 관리 및 생산 계획을 효율적으로 수립할 수 있다. 특히, 계절성과 추세는 예측 모델에서 중요한 요소로 반영된다.</p>
+<p><br></p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 106-3-6">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+기출: 106-3-6
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+</section>
+<section id="수요-변동-공급-관리" class="level5">
+<h5 class="anchored" data-anchor-id="수요-변동-공급-관리">수요 변동 공급 관리</h5>
+<p>수요변동 요인 중 하나인 계절적 요인은 일정한 패턴을 갖고 변동한다. 예를 들면 냉난방 제품이나 계절식품 등이 있다. 계절적 요인은 1년 또는 1년 미만 주기로반복되는 변동으로 기후, 전통, 생활관습 등 여러 원인에 의해 발생한다. 계절 변동은 순환변동에 비해 규칙적이므로 예측하기가 상대적으로 용이하다. 이런 수요변동이 발생하게 되면 생산능력을 일정하게 유지할 수 없기 때문에 공급에 대한 문제가 발생할 수 있다. 물론 수요변동 폭이 작다면 잔업 및 특근이나 일용직 고용 등으로 대응할 수 있으나 품질이나 비용 상승 등과 같은 문제가 발생할 수 있다. 비수기 생산 능력을 활용하기 위한 대안품을 개발한다거나 일정한 생산량을 프로모션이나 가격 할인 등을 통해 비수기에 판촉활동을 하는 등 다양한 방안을 고려해 볼 수 있다.</p>
+</section>
+<section id="이동평균법" class="level5">
+<h5 class="anchored" data-anchor-id="이동평균법">이동평균법</h5>
+<dl>
+<dt><strong>이동평균법</strong>(Moving average method)</dt>
+<dd>
+<blockquote class="blockquote">
+<p>전기수요법을 좀 더 발전시킨 것으로 과거 일정 기간 실적을 평균해서 예측하는 방법이다.</p>
+</blockquote>
+</dd>
+<dt>단순이동평균법</dt>
+<dd>
+<ul>
+<li>과거 여러 기간 실적치에 동일한 가중치를 부여하는 방법</li>
+<li>공식 <span class="math display">\[
+F_t = \frac{\sum{A_{t-i}}}{n}
+\]</span>
+<ul>
+<li>단, <span class="math inline">\(F_t = t\)</span>기간 예측치, <span class="math inline">\(A_{i-i} = (t-i)\)</span> 기간 실적치, n = 기간 수</li>
+</ul></li>
+</ul>
+</dd>
+<dt>가중이동평균법</dt>
+<dd>
+<ul>
+<li>단순이동평균법에서 추세경향을 고려한 수요 예측기법</li>
+<li>공식 <span class="math display">\[
+\sum{w_i}=1일 \ 때, F_{t+1} = w_tA_t + w_{t-1}A_{t-1} + ... + w_{t-N}A_{t-N}
+\]</span></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="지수평활법" class="level5">
+<h5 class="anchored" data-anchor-id="지수평활법">지수평활법</h5>
+<p>최소자승법이나 이동평균법에는 장기간 과거실적을 필요로 하지만 지수평활법은 최근 데이터만으로 예측이 가능한 장점이 있다.</p>
+<p>현 시점에 가까운 실측치에 큰 비중을 주면서 과거로 거슬러 올라갈수록 그 비중을 지수적으로 적게 주는 지수가중 이동평균법이다.</p>
+<p>차기 예측치 = 당기 예측치 + <span class="math inline">\(\alpha\)</span>(당기실적치 - 당기예측치)로 계산되면 공식은 아래와 같다.</p>
+<p><span class="math display">\[
+F_t = F_{t-1} + \alpha (A_{t-1} - F_{t-1}) = \alpha A_{t-1} + (1-\alpha)F_{t-1}
+\]</span> 단, <span class="math inline">\(\alpha\)</span>는 지수평활계수로 <span class="math inline">\(0 &lt; \alpha &lt; 1\)</span> 범위를 갖는다.</p>
+</section>
+</section>
+</section>
+<section id="예측-오차" class="level2">
+<h2 class="anchored" data-anchor-id="예측-오차">예측 오차</h2>
+<p>예측오차가 발생하는 원인은 다음과 같다.</p>
+<ul>
+<li>예측모형에 사용한 변수 처리를 적절하게 하지 못한 경우
+<ul>
+<li>중요한 변수 생략</li>
+<li>예측모형이 처리할 수 없는 변수 변동이나 움직임(추세나 순환변동이 갑자기 발생)</li>
+<li>새로운 변수 발생(신규 경쟁자 등)으로 인해 모형이 부적절한 경우</li>
+</ul></li>
+<li>이상 기후나 기타 자연적 현상, 일시적인 과부족이나 고장, 재난, 기타 사유로 인한 불규칙 변동이 발생한 경우</li>
+<li>예측기법을 잘못 사용하였거나 결과를 잘못 해석한 경우</li>
+<li>다른 모든 변동요인들로 설명되고 난 나머지 내재적인 우연변동</li>
+</ul>
+<section id="sec-forecast-error-index" class="level4">
+<h4 class="anchored" data-anchor-id="sec-forecast-error-index">예측오차 지표</h4>
+<dl>
+<dt>예측오차</dt>
+<dd>
+<ul>
+<li><span class="math inline">\(E_t = A_t - F_t\)</span></li>
+</ul>
+</dd>
+<dt>누적예측오차(RSFE, running sum of forcasting errors / CFE, cumulative sum of forecast errors)</dt>
+<dd>
+<ul>
+<li><span class="math inline">\(RSFE(or \ CFE) = \sum{E_t}\)</span></li>
+</ul>
+</dd>
+<dt>평균절대오차(MAD, mean absolute deviation</dt>
+<dd>
+<ul>
+<li><span class="math inline">\(MAE = \frac{\sum{|E_t|}}{n}\)</span></li>
+</ul>
+</dd>
+<dt>평균제곱오차(MSE, mean squared error)</dt>
+<dd>
+<ul>
+<li><span class="math inline">\(MSE = \frac{\sum{|(E_t)^2|}}{n-1}\)</span></li>
+</ul>
+</dd>
+<dt>평균절대백분율오차(MAPE, mean absolute percentage error)</dt>
+<dd>
+<ul>
+<li>MAPE = <span class="math inline">\(\frac{\sum{\frac{|E_t|}{A_t}}}{n} \times 100\)</span></li>
+</ul>
+</dd>
+<dt>추적지표(TS, tracking signal)</dt>
+<dd>
+<span class="math inline">\(TS = \frac{RSFE}{MAD}\)</span>
+</dd>
+</dl>
+</section>
+<section id="추적지표" class="level4">
+<h4 class="anchored" data-anchor-id="추적지표">추적지표</h4>
+<p><strong>추적지표</strong>(TS)는 <font color="blue">예측기법이 실제수요변화를 정확히 예측하고 있는지</font>를 나타내는 지표이다. 예측치가 실측치를 잘 따라가고 있으면 TS는 0에 가까운 값을 갖는다. 예측치가 실제치보다 낮은 경우 TS는 양수값을 갖게 되고 이는 과소예측을 의미한다. 반면 예측치가 실측치보다 높은 경우 TS는 음수값을 가지며 과다예측을 의미한다.</p>
+<div class="callout callout-style-default callout-important no-icon callout-titled" title="추적지표">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+추적지표
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>실제수요와 예측치가 아래와 같을 때 CFE, MAD, TS를 계산하시오.</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: right;">월</th>
+<th style="text-align: right;">실제수요</th>
+<th style="text-align: right;">예측치</th>
+<th style="text-align: left;">누적예측오차</th>
+<th style="text-align: left;">평균절대오차</th>
+<th style="text-align: left;">추적지표</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">95</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">110</td>
+<td style="text-align: right;">106</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">102</td>
+<td style="text-align: right;">106</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">98</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">120</td>
+<td style="text-align: right;">111</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>산식에 따라 계산하면 다음과 같다.</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: right;">월</th>
+<th style="text-align: right;">A</th>
+<th style="text-align: right;">F</th>
+<th style="text-align: right;">E</th>
+<th style="text-align: right;">CFE</th>
+<th style="text-align: right;">MAD</th>
+<th style="text-align: right;">TS</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">95</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">-5</td>
+<td style="text-align: right;">-5</td>
+<td style="text-align: right;">5.00</td>
+<td style="text-align: right;">-1.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">-5</td>
+<td style="text-align: right;">2.50</td>
+<td style="text-align: right;">-2.00</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">110</td>
+<td style="text-align: right;">106</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">3.00</td>
+<td style="text-align: right;">-0.33</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">102</td>
+<td style="text-align: right;">106</td>
+<td style="text-align: right;">-4</td>
+<td style="text-align: right;">-5</td>
+<td style="text-align: right;">3.25</td>
+<td style="text-align: right;">-1.54</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">98</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-7</td>
+<td style="text-align: right;">3.00</td>
+<td style="text-align: right;">-2.33</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">120</td>
+<td style="text-align: right;">111</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">4.00</td>
+<td style="text-align: right;">0.50</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-important no-icon callout-titled" title="추적지표 관리도">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+추적지표 관리도
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>실제 판매량과 수요 예측치가 아래와 같이 주어졌다. 추적지표를 ±4MAD 관리도를 적용하여 평가하시오.</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: right;">월</th>
+<th style="text-align: right;">실제판매량</th>
+<th style="text-align: right;">수요예측치</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">90</td>
+<td style="text-align: right;">95</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1001</td>
+<td style="text-align: right;">95</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">105</td>
+<td style="text-align: right;">100</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">105</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">95</td>
+<td style="text-align: right;">100</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">110</td>
+<td style="text-align: right;">95</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>주어진 식에서 추적지표(TS) 계산을 위하여 아래 지표를 산출한다.</p>
+<div class="cell" data-tbl-colwidths="[20,10,10,10,10,10,10,10,10]">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">월</th>
+<th style="text-align: right;">A</th>
+<th style="text-align: right;">F</th>
+<th style="text-align: right;">A-F</th>
+<th style="text-align: right;">RSFE</th>
+<th style="text-align: right;">|A-F|</th>
+<th style="text-align: right;">∑|A-F|</th>
+<th style="text-align: right;">MAD</th>
+<th style="text-align: right;">TS</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">90</td>
+<td style="text-align: right;">95</td>
+<td style="text-align: right;">-5</td>
+<td style="text-align: right;">-5</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5.000000</td>
+<td style="text-align: right;">-1.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">95</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">5.000000</td>
+<td style="text-align: right;">0.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">105</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">5.000000</td>
+<td style="text-align: right;">1.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">105</td>
+<td style="text-align: right;">-5</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">5.000000</td>
+<td style="text-align: right;">0.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">95</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">-5</td>
+<td style="text-align: right;">-5</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">5.000000</td>
+<td style="text-align: right;">-1.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">110</td>
+<td style="text-align: right;">95</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">6.666667</td>
+<td style="text-align: right;">1.5</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>계산된 TS은 위와 같다. ±4MAD 관리도를 적용하면 다음과 같이 작성된다.</p>
+<center>
+<img src="images/ts_chart.png" class="img-fluid">
+</center>
+<p>TS가 ±4MAD 내 관리되므로 예측모델이 유효하다고 판단할 수 있다.</p>
+</div>
+</div>
+<p><br></p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 106-2-3">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+기출: 106-2-3
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+</section>
+</section>
+<section id="수요-불확실성-감소-방안" class="level2">
+<h2 class="anchored" data-anchor-id="수요-불확실성-감소-방안">수요 불확실성 감소 방안</h2>
+<section id="수요예측-개선" class="level3">
+<h3 class="anchored" data-anchor-id="수요예측-개선">수요예측 개선</h3>
+<p>예측에는 언제나 정도 차이가 있을 뿐 오차가 존재한다. 예측 정확성과 효율성을 유지하기 위해서는 오차를 효과적으로 통제할 수 있어야 한다.</p>
+<dl>
+<dt>수요예측 개선방안</dt>
+<dd>
+<ul>
+<li>예측 기법 개발</li>
+<li>예측에 필요한 자료에 대한 정확성/정합성 확보</li>
+<li>예측 오차 발생 요인 파악 및 제거</li>
+<li>현 예측시스템 정기적 점검</li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="신속대응" class="level3">
+<h3 class="anchored" data-anchor-id="신속대응">신속대응</h3>
+<p><strong>신속대응</strong>(QR, quick response, <a href="0301공급망관리.html#sec-qr" class="quarto-xref"><span>신속대응</span></a>) 시스템은 제품 제조에서 소비자에게 전달되기가지 제조 전 과정을 단축시키고소비자 요구 및 수요에 적합한 제품을 공급함으로써 제품 공급 사슬(SCM) 효율성을 극대화하는 시스템으로 시장수요에 신속하게 대응하여 기업 경쟁력을 향상시키는 것을 말한다.</p>
+<p>QR 목표는 공급체인 길이를 단축시키고물류 속도를 높임으로써 달성할 수 있다. 주문접수에서 납품까지 시간을 분석한 결과 가치생산활동에 사용되는 시간은 총 사이클 타임 중 10~20%에 불과하고 나머지 80~90% 시간은 비용만 발생시키는 것으로 조사되었다.</p>
+<p>QR은 재고가 쌓이고 반응시간이 길어지는 요인을 제거하는 것으로 공급체인상 존재하는 긴 준비사간과 교체시간, 병목현상, 과다 재고, 비효율적인 작업 등을 찾아내어 효율적으로 제어하는 것이다.</p>
+<dl>
+<dt>QR 목적</dt>
+<dd>
+<ul>
+<li>생산, 유통 관련 거래당사자가 상호 협력하여 소비자에게 정확한 장소와 시기에 정확한 상품을 정확핝 양과 적정한 가격으로 제공하는 것이다.</li>
+</ul>
+</dd>
+<dt>QR 시스템 효과</dt>
+<dd>
+<ul>
+<li>재고 수준 감소</li>
+<li>납기 단축</li>
+<li>총 비용 절감</li>
+<li>변화하는 시장 수요에 대한 대응력 증대</li>
+<li>인력난 해소 및 업무 생산성 향상</li>
+</ul>
+</dd>
+</dl>
+<p><br></p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 115-1-8">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+기출: 115-1-8
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+</section>
+<section id="sec-delayed-differentiation" class="level3">
+<h3 class="anchored" data-anchor-id="sec-delayed-differentiation">차별화 지연</h3>
+<p><strong>차별화 지연(Delayed Differentiation)</strong>은 제품이나 서비스에 있어 기본적인 형태를 먼저 생산한 후, 고객 요구에 맞게 최종 제품이나 서비스를 맞춤화하는 전략이다. 이는 생산 효율성을 높이고, 고객 수요에 맞는 개인화된 서비스를 제공하기 위해 사용된다. 차별화 지연은 <strong>모듀러 디자인(Modular Design)</strong> 또는 <strong>지연된 맞춤화</strong>라고도 불리며, 특정 시점까지는 표준화된 생산을 유지하고, 그 후에 고객 요구에 맞춰 차별화된 제품이나 서비스를 제공하는 방식을 의미한다.</p>
+<dl>
+<dt>차별화 지연의 주요 특징</dt>
+<dd>
+<ol type="1">
+<li><strong>표준화된 생산</strong>
+<ul>
+<li>초기에는 대부분의 부품이나 프로세스가 표준화되어 생산된다. 이때, 제품의 핵심 기능이나 기본적인 디자인이 결정된다.</li>
+</ul></li>
+<li><strong>고객 맞춤화</strong>
+<ul>
+<li>고객의 요구나 특성에 맞는 차별화는 제품이나 서비스의 최종 단계를 통해 이루어진다. 고객의 요구가 명확히 드러나기 전까지는 표준화된 형태로 생산한다.</li>
+</ul></li>
+<li><strong>생산 효율성</strong>
+<ul>
+<li>표준화된 부품과 생산 과정을 사용하여 생산 효율성을 높이고, 생산 비용을 절감할 수 있다.</li>
+</ul></li>
+<li><strong>수요에 따른 유연성</strong>
+<ul>
+<li>고객이 특정 요구를 제시하기 전에 제품을 표준화하여 생산하고, 최종적으로 고객의 요구에 맞춰 제품을 완성할 수 있다. 이는 생산 과정에서의 유연성을 제공한다.</li>
+</ul></li>
+</ol>
+</dd>
+<dt>차별화 지연의 적용 예시</dt>
+<dd>
+<ol type="1">
+<li><strong>자동차 산업</strong>
+<ul>
+<li>자동차 제조에서 차별화 지연 전략을 적용할 수 있다. 예를 들어, 자동차 제조사가 기본 차체와 주요 부품을 표준화하여 생산한 후, 고객이 선택한 색상, 내장재, 엔진 타입 등에 맞게 마지막 단계에서 차별화를 추가한다.</li>
+</ul></li>
+<li><strong>컴퓨터 및 전자 제품</strong>
+<ul>
+<li>컴퓨터와 같은 전자 제품에서도 차별화 지연이 사용된다. 기본적인 하드웨어를 표준화된 부품을 사용하여 조립한 후, 고객이 원하는 소프트웨어나 기능을 추가하는 방식이다.</li>
+</ul></li>
+<li><strong>패션 산업</strong>
+<ul>
+<li>의류 브랜드는 기본적인 옷을 대량 생산한 후, 고객의 요구에 맞는 디자인 수정이나 맞춤화를 통해 최종 제품을 제공할 수 있다.</li>
+</ul></li>
+<li><strong>음식 및 외식 산업</strong>:
+<ul>
+<li>패스트푸드 체인에서는 기본적인 식사 메뉴를 표준화하여 미리 준비해두고, 고객이 주문할 때마다 소스나 추가 토핑 등을 선택하여 차별화된 제품을 제공한다.</li>
+</ul></li>
+</ol>
+</dd>
+<dt>차별화 지연의 장점</dt>
+<dd>
+<ol type="1">
+<li><strong>비용 절감</strong>
+<ul>
+<li>표준화된 부품이나 서비스를 사용하여 생산 과정에서의 비용을 절감할 수 있다. 후속 맞춤화 작업만 수행하기 때문에 초기 생산이 효율적이다.</li>
+</ul></li>
+<li><strong>수요 예측</strong>
+<ul>
+<li>고객의 개별 요구 사항을 정확히 예측하기 어려운 경우, 차별화 지연 전략을 통해 고객의 실제 요구가 명확해질 때까지 대량 생산을 진행할 수 있다.</li>
+</ul></li>
+<li><strong>재고 관리 용이</strong>
+<ul>
+<li>제품의 기본 형태를 대량으로 생산해두어야 하므로, 일정량 이상의 재고를 보유해야 할 수 있다. 이는 창고 비용이나 재고 관리에 부담을 줄 수 있다.</li>
+</ul></li>
+<li><strong>고객 맞춤화 가능</strong>
+<ul>
+<li>고객의 요구에 맞춰 제품을 차별화하여, 고객 만족도를 높이고 브랜드의 차별화를 꾀할 수 있다.</li>
+</ul></li>
+<li><strong>운영 효율성</strong>
+<ul>
+<li>대량 생산 후 마지막 단계에서 맞춤화를 진행하기 때문에, 생산과 배송의 효율성을 동시에 유지할 수 있다.</li>
+</ul></li>
+</ol>
+</dd>
+<dt>차별화 지연의 한계</dt>
+<dd>
+<ol type="1">
+<li><strong>최종 맞춤화 시간 지연</strong>
+<ul>
+<li>고객이 요구 사항을 전달한 후에 맞춤화가 이루어지므로, 이로 인해 서비스나 제품 제공 시간이 지연될 수 있다.</li>
+</ul></li>
+<li><strong>재고 부담</strong>
+<ul>
+<li>제품의 기본 형태를 대량으로 생산해두어야 하므로, 일정량 이상의 재고를 보유해야 할 수 있다. 이는 창고 비용이나 재고 관리에 부담을 줄 수 있다.</li>
+</ul></li>
+<li><strong>고객 맞춤화 한계</strong>
+<ul>
+<li>제품을 표준화하여 대량 생산하는 방식이기 때문에, 고객의 요구 사항이 지나치게 구체적일 경우 맞춤화가 어려운 경우가 있을 수 있다.</li>
+</ul></li>
+<li><strong>고객의 기대 관리 어려움</strong>
+<ul>
+<li>고객이 차별화된 제품을 기대하는 수준에 맞춰 맞춤화를 진행하려면 고객의 요구 사항을 잘 반영해야 하며, 이를 잘못 처리할 경우 고객 불만이 발생할 수 있다.</li>
+</ul></li>
+</ol>
+</dd>
+<dt>차별화 지연의 활용 방안</dt>
+<dd>
+<ul>
+<li><strong>모듈화 전략</strong>: 제품이나 서비스의 각 부품을 모듈화하여 고객이 원하는 최종 조합을 선택할 수 있게 만든다. 예를 들어, 컴퓨터의 하드웨어 부품, 자동차의 색상 및 옵션 등을 모듈화하여 최종 제품을 구성한다.</li>
+<li><strong>디지털 기술 활용</strong>: 온라인 플랫폼을 통해 고객이 쉽게 요구 사항을 입력하고, 이를 기반으로 맞춤형 제품을 제공하는 방안을 설계할 수 있다. 예를 들어, 온라인 맞춤화 서비스(예: 옷, 신발, 액세서리 등)에서 차별화 지연을 활용할 수 있다.</li>
+</ul>
+</dd>
+</dl>
+<p><strong>차별화 지연</strong>은 <strong>표준화된 생산 과정과 고객 맞춤화를 결합한 전략</strong>으로, 생산 효율성을 높이면서도 고객의 개별 요구를 충족시킬 수 있는 방법이다. 이를 통해 기업은 생산 비용을 절감하면서도 고객 만족도를 높일 수 있으며, 수요 예측이 어려운 시장에서 유용한 전략으로 활용된다.</p>
+</section>
+<section id="맞춤보충" class="level3">
+<h3 class="anchored" data-anchor-id="맞춤보충">맞춤보충</h3>
+<p><strong>맞춤보충</strong>(Tailored sourcing)은 매일 제품 판매량을 확인해 잘 팔리는 상품은 더 많이 생산하고 안 팔리는 상품은 덜 생산하여 수요변동에 능동적으로 대처하여 납기준수 생삲율성을 성공적으로 이루는 방식이다.</p>
+<p><br></p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 97-1-8">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+기출: 97-1-8
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+</section>
+</section>
+<section id="sec-crm" class="level2">
+<h2 class="anchored" data-anchor-id="sec-crm">CRM</h2>
+<section id="crm-특징" class="level3">
+<h3 class="anchored" data-anchor-id="crm-특징">CRM 특징</h3>
+<p>CRM은 다음과 같은 특징이 있다.</p>
+<ul>
+<li>구매 고객 전체보다 개별 고객 특성 중시 (고객별 차별 대응)</li>
+<li>신규 고객 확보보다 기존 고객 유지 중시</li>
+<li>단기적 성과보다 고객과 장기적 관계 및 가치 중시</li>
+<li>매출보다 이익 중시</li>
+<li>고객과 기업, 양측 모두 만족 추구</li>
+</ul>
+</section>
+<section id="crm-전제-조건" class="level3">
+<h3 class="anchored" data-anchor-id="crm-전제-조건">CRM 전제 조건</h3>
+<dl>
+<dt>프로세스 통합</dt>
+<dd>
+<ul>
+<li>마켓팅, 판매, 고객 서비스 업무 영역을 통합하여 고객 접촉 단계에 상관없이 단일화된 메시지를 전달 할 수 있도록 구성되어야 함</li>
+</ul>
+</dd>
+<dt>정보 통합</dt>
+<dd>
+<ul>
+<li>댜앙한 고객 정보(고객 프로파일 정보, 상품 및 서비스 가입 정보, 서비스 요청 및 처리 이력 정보, 접촉 이력 정보, 빌링 및 납부 정보 등)를 통합하여 다양한 형태로 제공할 수 있어야 함</li>
+<li>데이터웨어 하우스, 데이터 마이닝 및 분석 도구와 전사적인 정보 공유 체제 확립</li>
+</ul>
+</dd>
+<dt>고객 관점(Channel) 통합</dt>
+<dd>
+<ul>
+<li>Call Center, 직접 방문 응대, 영업사원, 대리점, e-CRM(<span class="quarto-unresolved-ref">?nte-ecrm</span>) 등 다양한 고객 접점에서 동일한 고객에 대해 동일한 메시지를 전달할 수 있어야 함</li>
+</ul>
+</dd>
+<dt>내부 고객 관리</dt>
+<dd>
+<ul>
+<li>내부 구성원이 고객과의 접점에 위치해 있으므로 구성원들 만족 여부가 고객 충성도에 많은 영향을 미침</li>
+</ul>
+</dd>
+<dt>외부 고객 관리</dt>
+<dd>
+<ul>
+<li>우량 고객 선정 요소</li>
+<li>고객과 기업의 적합성, 고객 관계 지향 성향, 고객의 수익 기여도(현재 + 미래)</li>
+<li>CRM 고객 정보</li>
+<li>고객과 관계를 이해하는데 필요한 정보와 자료, 관계에 대한 기록으로 고객과의 관계를 개발, 변화 및 유지하는데 활용</li>
+<li>고객을 지속적으로 관찰/분석하는 과정(고객에 대한 360도 시각)</li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="crm-기대-효과" class="level3">
+<h3 class="anchored" data-anchor-id="crm-기대-효과">CRM 기대 효과</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 77%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>업무 영역</th>
+<th>CRM 기대 효과</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>마케팅 기회 분석</td>
+<td><ul>
+<li><p>수익 및 고객 평생 가치(LTV) 증대</p></li>
+<li><p>신규 고객 유치 및 기존 고객 활성화</p></li>
+<li><p>고객 Life Cycle상 결정적 시점에 효과적 마케팅 활동</p></li>
+<li><p>평생 고객으로 가치를 창출할 수 있게 함</p></li>
+</ul></td>
+</tr>
+<tr class="even">
+<td>영업지원 활동</td>
+<td><ul>
+<li><p>시장에서의 경쟁력 있는 제품이 파악 및 신속한 대응 전략 수립</p></li>
+<li><p>시장에서 경쟁력 있는 제품 파악 및 신속한 대응 전략 수립</p></li>
+<li><p>수익성 높은 고객 분류와 Target Marketing</p></li>
+</ul></td>
+</tr>
+<tr class="odd">
+<td>마케팅 관리</td>
+<td><ul>
+<li><p>시장 변화 및 고객 Needs에 맞는 상품 개발</p></li>
+<li><p>상품에 대한 시장 반응의 신속한 파악 및 보완</p></li>
+<li><p>고객 Need변화에 대한 신속한 파악 및 대응</p></li>
+</ul></td>
+</tr>
+<tr class="even">
+<td>고객 서비스</td>
+<td><ul>
+<li><p>고객 충성도(Loyalty), 유지율 및 고객 만족 증대</p></li>
+<li><p>고객 행위에 대한 이해</p></li>
+<li><p>Cross-Selling과 Up-selling 기회 증대 및 활용</p></li>
+</ul></td>
+</tr>
+<tr class="odd">
+<td>고객 채널 관리</td>
+<td><ul>
+<li><p>고객 Needs에 맞춘 최적 채널 제공</p></li>
+<li><p>비용을 최소화할 수 있는 고객 유도</p></li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation column-body">
+  <div class="nav-page nav-page-previous">
+      <a href="./0105사업환경분석.html" class="pagination-link" aria-label="사업환경 분석">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">사업환경 분석</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./0202프로세스진도관리.html" class="pagination-link" aria-label="프로세스 진도관리">
+        <span class="nav-page-text"><span class="chapter-title">프로세스 진도관리</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/yeonkyupark/PEPC/edit/main/0201수요예측.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div></div></footer></body></html>

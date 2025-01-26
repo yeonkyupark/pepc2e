@@ -1,0 +1,1447 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.39">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>물류관리 – 공장관리기술사(2E)</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./0401재고관리.html" rel="next">
+<link href="./0301공급망관리.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-160d5d975b9dfffeaf699822bedbd9bf.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<meta name="mermaid-theme" content="neutral">
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./0301공급망관리.html">03. 물류관리</a></li><li class="breadcrumb-item"><a href="./0302물류관리.html"><span class="chapter-title">물류관리</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">공장관리기술사(2E)</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://yeonkyupark.github.io/" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-globe"></i></a>
+    <a href="https://www.instagram.com/yeonkyu.park/" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-instagram"></i></a>
+    <a href="https://github.com/yeonkyupark/PEPC" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">들어가는 글</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">01. 생산전략</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0101경쟁우위생산전략.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">경쟁우위 생산전략</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0102생산구조와방식.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">생산구조와 방식(Layout)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0103구매와외주전략.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">구매와 외주전략</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0104인력과직무설계.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">인력과 직무설계</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0105사업환경분석.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">사업환경 분석</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">02. 생산운영</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0201수요예측.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">수요예측</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0202프로세스진도관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">프로세스 진도관리</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">03. 물류관리</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0301공급망관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">공급망 관리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0302물류관리.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">물류관리</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">04. 재고관리</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0401재고관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">재고관리</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">05. 공정관리</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0501생산계획수립.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">생산계획 수립</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0502공정설계.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">공정설계</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0503작업계획수립.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">작업계획 수립</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0504표준작업관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">표준작업 관리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0505공정개선.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">공정개선</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">06. 설비관리</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0601설비계획.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">설비계획</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0602설비보전관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">설비보전 관리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0603자재취급및운반관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">자재취급 및 운반관리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0604환경관리및안전관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">환경 관리 및 안전 관리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0605시설및유틸리티관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">시설 및 유틸리티 관리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0606공장자동화기술.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">공장 자동화 기술</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">07. 작업관리</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0701작업방법및시간연구.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">작업방법 및 시간연구</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false">
+ <span class="menu-text">08. 생산성관리</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0801프로세스분석과개선.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">프로세스 분석과 개선</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0802생산성관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">생산성 관리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0803품질관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">품질관리</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false">
+ <span class="menu-text">09. 원가관리</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0901사업성분석.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">사업성분석</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0902원가관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">원가관리</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false">
+ <span class="menu-text">10. 경제성 공학</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1001가치공학.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">가치공학</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1002경영과학.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">경영과학</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false">
+ <span class="menu-text">11. 생산지원기술</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1101정보화활용기술.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">정보화 활용 기술</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1102제품개발기술.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">제품개발 기술</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1103서비스운영관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">서비스 운영관리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1104생산혁신기술.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">생산혁신기술</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1105신기술및동향.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">신기술및동향</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false">
+ <span class="menu-text">12. ISO</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1201ISO9001.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ISO9001</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1202ISO14001.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ISO14001</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1203ISO31000.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ISO31000</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1204ISO21500.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ISO21500</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">목차</h2>
+   
+  <ul>
+  <li><a href="#물류-5대-기능" id="toc-물류-5대-기능" class="nav-link active" data-scroll-target="#물류-5대-기능">물류 5대 기능</a></li>
+  <li><a href="#wms" id="toc-wms" class="nav-link" data-scroll-target="#wms">WMS</a>
+  <ul>
+  <li><a href="#수불관리-입출고-관리" id="toc-수불관리-입출고-관리" class="nav-link" data-scroll-target="#수불관리-입출고-관리">수불관리 (입출고 관리)</a></li>
+  <li><a href="#재고관리" id="toc-재고관리" class="nav-link" data-scroll-target="#재고관리">재고관리</a></li>
+  <li><a href="#설비보전관리" id="toc-설비보전관리" class="nav-link" data-scroll-target="#설비보전관리">설비보전관리</a></li>
+  <li><a href="#운송관리" id="toc-운송관리" class="nav-link" data-scroll-target="#운송관리">운송관리</a></li>
+  <li><a href="#종합-개선방향" id="toc-종합-개선방향" class="nav-link" data-scroll-target="#종합-개선방향">종합 개선방향</a></li>
+  </ul></li>
+  <li><a href="#유닛로드" id="toc-유닛로드" class="nav-link" data-scroll-target="#유닛로드">유닛로드</a></li>
+  <li><a href="#오더피킹" id="toc-오더피킹" class="nav-link" data-scroll-target="#오더피킹">오더피킹</a></li>
+  <li><a href="#크로스-도킹" id="toc-크로스-도킹" class="nav-link" data-scroll-target="#크로스-도킹">크로스 도킹</a></li>
+  <li><a href="#철도-물류" id="toc-철도-물류" class="nav-link" data-scroll-target="#철도-물류">철도 물류</a>
+  <ul>
+  <li><a href="#tofc" id="toc-tofc" class="nav-link" data-scroll-target="#tofc">TOFC</a></li>
+  <li><a href="#cofc" id="toc-cofc" class="nav-link" data-scroll-target="#cofc">COFC</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/yeonkyupark/PEPC/edit/main/0302물류관리.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content column-body" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./0301공급망관리.html">03. 물류관리</a></li><li class="breadcrumb-item"><a href="./0302물류관리.html"><span class="chapter-title">물류관리</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-title">물류관리</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta column-body">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 124-1-13">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+기출: 124-1-13
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+<section id="물류-5대-기능" class="level2">
+<h2 class="anchored" data-anchor-id="물류-5대-기능">물류 5대 기능</h2>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+
+00[물류 5대 기능] --- 수송 &amp; 보관 &amp; 하역 &amp; 포장 &amp; 10["정보처리"]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>물류 5대 기능<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>은 <strong>수송</strong>, <strong>보관</strong>, <strong>하역</strong>, <strong>포장</strong>, <strong>정보처리</strong>로 구성되며, 각각의 기능은 물류 과정에서 중요한 역할을 한다. 각 기능이 잘 이루어지면 제품을 원활하게 고객에게 전달할 수 있으며, 물류의 효율성을 높이고 비용을 절감하는 데 기여한다.</p>
+<dl>
+<dt>수송 (Transportation)</dt>
+<dd>
+<ul>
+<li>수송은 제품이나 자재를 한 지점에서 다른 지점으로 이동시키는 활동이다. 수송은 물류 활동 중에서 가장 중요한 기능 중 하나로, 비용, 시간, 운송 방법 등을 잘 관리해야 한다. 수송 방법에는 <strong>육상 운송</strong>, <strong>해상 운송</strong>, <strong>항공 운송</strong>, <strong>철도 운송</strong> 등이 있으며, 각 운송 방법은 비용과 속도에 따라 선택된다.</li>
+<li><strong>주요 활동</strong>: 운송 경로 계획, 운송 수단 선정, 물류비용 관리, 시간 관리 등</li>
+<li><strong>목표</strong>: 적시에 제품을 이동시키고, 운송 비용을 절감하며, 안전한 배송을 보장하는 것</li>
+</ul>
+</dd>
+<dt>보관 (Storage)</dt>
+<dd>
+<ul>
+<li>보관은 제품이나 원자재를 창고나 물류 센터에 저장하고 관리하는 활동이다. 제품을 효율적으로 보관하는 것은 재고 관리와 유통을 최적화하는 데 필수적이다. 적절한 보관 방식과 창고 설계를 통해 재고를 잘 관리하고, 필요할 때 빠르게 출고할 수 있도록 한다.</li>
+<li><strong>주요 활동</strong>: 창고 관리, 재고 관리, 보관 공간 최적화, 입출고 관리 등</li>
+<li><strong>목표</strong>: 재고가 적절하게 보관되고, 유통되는 과정에서 손상 없이 효율적으로 관리되는 것</li>
+</ul>
+</dd>
+<dt>하역 (Handling)</dt>
+<dd>
+<ul>
+<li>하역은 제품이나 자재를 이동 수단에서 내리고, 보관하거나 운송하기 위해 다시 올리는 작업이다. 하역은 물류 과정에서 물품의 손상을 방지하고, 효율적인 이동을 도와주는 중요한 과정이다. 하역 작업에는 제품의 종류에 따라 다양한 장비가 사용되며, 고도화된 기술을 통해 효율성을 높인다.</li>
+<li><strong>주요 활동</strong>: 제품을 운송 수단에서 내리고, 적재하거나 다른 운송 수단으로 옮기는 작업</li>
+<li><strong>목표</strong>: 제품 손상을 최소화하고, 하역 작업을 신속하게 진행하는 것</li>
+</ul>
+</dd>
+<dt>포장 (Packaging)</dt>
+<dd>
+<ul>
+<li>포장은 제품을 보호하고, 유통 과정에서 발생할 수 있는 손상을 방지하는 중요한 역할을 한다. 또한, 제품의 외관과 라벨링은 소비자에게 전달되는 정보와 브랜드 이미지를 형성하는 데 중요한 역할을 한다. 포장은 제품의 안전성뿐만 아니라, 효율적인 유통과 보관에도 큰 영향을 미친다.</li>
+<li><strong>주요 활동</strong>: 포장 디자인, 포장재 선정, 제품 보호, 라벨링 등</li>
+<li><strong>목표</strong>: 제품을 안전하게 보호하고, 유통과 보관 과정에서 효율성을 높이며, 소비자에게 정확한 정보를 제공하는 것</li>
+</ul>
+</dd>
+<dt>정보처리 (Information Processing)</dt>
+<dd>
+<ul>
+<li>정보처리는 물류 활동에서 발생하는 다양한 데이터를 수집하고 처리하는 활동이다. 물류 정보 시스템(WMS, TMS 등)을 사용해 재고, 주문, 운송 상태 등을 실시간으로 추적하고 관리한다. 이는 물류 과정의 효율성을 높이고, 의사결정을 지원하는 데 중요한 역할을 한다.</li>
+<li><strong>주요 활동</strong>: 데이터 수집, 분석, 실시간 모니터링, 재고 관리 시스템 활용, 운송 추적 등</li>
+<li><strong>목표</strong>: 물류 활동에 관한 정보를 정확하게 관리하고, 물류 흐름을 최적화하며 의사결정을 지원하는 것</li>
+</ul>
+</dd>
+</dl>
+<p>물류의 5대 기능은 서로 밀접하게 연결되어 있으며, 효율적인 물류 운영을 위해서는 이들 기능이 원활하게 협력해야 한다. 예를 들어, 수송을 통해 물품이 이동하면 하역이 필요하고, 보관을 통해 재고를 관리한 후 포장하여 최종 고객에게 배송된다. 이 모든 과정에서 정보처리는 각 단계의 상태와 진행 상황을 실시간으로 파악하고, 적절한 의사결정을 내리기 위한 중요한 역할을 한다.</p>
+<p>따라서, 물류의 5대 기능은 모두 중요한 역할을 하며, 물류 효율성을 높이고 고객 만족을 달성하는 데 기여한다.</p>
+<p><br></p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 130-2-4">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+기출: 130-2-4
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+</section>
+<section id="wms" class="level2">
+<h2 class="anchored" data-anchor-id="wms">WMS</h2>
+<p><strong>WMS(Warehouse Management System, 창고관리체계)</strong>는 창고의 효율적인 운영과 관리를 위해 필요한 시스템이다. WMS는 물류의 최적화와 효율화를 지원하는 여러 핵심 모듈을 포함하고 있다.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TB
+
+00[WMS 기능]
+10["수불관리"]
+20["재고관리"]
+30["설비보전관리"]
+40["운송관리"]
+
+00 --- 10 &amp; 20 &amp; 30 &amp; 40
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<section id="수불관리-입출고-관리" class="level3">
+<h3 class="anchored" data-anchor-id="수불관리-입출고-관리">수불관리 (입출고 관리)</h3>
+<dl>
+<dt><strong>정보화 관점</strong></dt>
+<dd>
+<ul>
+<li>수불관리는 창고에 들어오는 물품과 나가는 물품을 관리하는 핵심 기능이다. 시스템은 입고, 출고, 이동 등의 과정을 자동화하여 실시간으로 기록하고 추적한다.</li>
+<li>RFID, 바코드, QR 코드 등의 기술을 활용하여 입출고 데이터를 정확하게 기록하고, 실시간으로 재고 상태를 파악할 수 있다.</li>
+<li>입출고 작업의 효율성을 높이고, 오류를 줄이는 데 도움을 준다.</li>
+</ul>
+</dd>
+<dt><strong>개선방향</strong></dt>
+<dd>
+<ul>
+<li><strong>자동화 확대</strong>: 로봇 및 드론을 활용한 자동화 시스템을 도입하여 입출고 작업의 속도와 정확도를 높인다.</li>
+<li><strong>데이터 통합</strong>: ERP 시스템과 WMS를 통합하여 전사적인 물류 흐름을 실시간으로 추적하고, 재고와 주문 정보를 일관되게 관리한다.</li>
+<li><strong>AI 및 예측 분석</strong>: AI 기반의 예측 분석을 통해 수요 변화를 예측하고 입출고 계획을 최적화한다.</li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="재고관리" class="level3">
+<h3 class="anchored" data-anchor-id="재고관리">재고관리</h3>
+<dl>
+<dt><strong>정보화 관점에서 설명</strong></dt>
+<dd>
+<ul>
+<li>재고관리는 창고에 보관된 제품의 정확한 수량과 위치를 파악하고, 재고 회전율을 관리하는 기능이다.</li>
+<li>RFID, 바코드, GPS 등을 통해 실시간 재고 정보를 관리하며, 재고의 과잉 또는 부족을 예방한다.</li>
+<li>이 시스템은 재고의 실시간 추적 및 정확성을 보장하고, 재고 불일치를 최소화한다.</li>
+</ul>
+</dd>
+<dt><strong>개선방향</strong></dt>
+<dd>
+<ul>
+<li><strong>실시간 재고 추적</strong>: IoT 기술을 활용하여 각 제품의 실시간 위치와 상태를 추적하고, 재고 관리의 정확도를 더욱 높인다.</li>
+<li><strong>자동화된 재고 조정</strong>: 자동화된 시스템을 통해 재고가 일정 수준 이하로 떨어지면 자동으로 보충 주문을 실행하는 시스템을 구축한다.</li>
+<li><strong>데이터 분석 활용</strong>: 재고 데이터를 분석하여 재고 회전율을 최적화하고, 재고 비용을 절감한다.</li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="설비보전관리" class="level3">
+<h3 class="anchored" data-anchor-id="설비보전관리">설비보전관리</h3>
+<dl>
+<dt><strong>정보화 관점에서 설명</strong></dt>
+<dd>
+<ul>
+<li>설비보전관리는 창고 내 설비들의 유지보수 및 수리 일정을 관리하는 모듈이다. 설비의 고장 예방과 효율적인 운영을 위해 중요한 역할을 한다.</li>
+<li>WMS와 통합된 설비보전 시스템은 설비의 상태를 모니터링하고, 고장이 발생하기 전에 예측하여 보수를 진행할 수 있게 돕는다.</li>
+<li>이 시스템은 예측 보수(Predictive Maintenance) 기능을 제공하여 설비의 수명을 연장하고, 고장으로 인한 다운타임을 최소화한다.</li>
+</ul>
+</dd>
+<dt><strong>개선방향</strong></dt>
+<dd>
+<ul>
+<li><strong>IoT 기반의 실시간 모니터링</strong>: IoT 기술을 활용하여 설비의 상태를 실시간으로 모니터링하고, 이상 징후를 조기에 감지하여 예기치 않은 고장을 방지한다.</li>
+<li><strong>예측 보수 시스템</strong>: 빅데이터와 AI를 이용해 설비의 고장을 예측하고, 사전 보수를 자동으로 예약하여 다운타임을 최소화한다.</li>
+<li><strong>통합 유지보수 시스템</strong>: WMS와 설비보전 관리 시스템을 통합하여 유지보수 기록을 관리하고, 설비의 수명 주기 및 관리 효율성을 높인다.</li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="운송관리" class="level3">
+<h3 class="anchored" data-anchor-id="운송관리">운송관리</h3>
+<dl>
+<dt><strong>정보화 관점에서 설명</strong></dt>
+<dd>
+<ul>
+<li>운송관리는 창고에서 물품을 출고하여 목적지까지 배송하는 과정을 관리하는 모듈이다. WMS와 TMS(Transport Management System)가 연계되어 운송 계획, 스케줄, 배송 경로 등을 최적화한다.</li>
+<li>실시간 GPS 추적 및 데이터 분석을 통해 운송 경로와 시간을 최적화하고, 운송 비용을 절감한다.</li>
+<li>이 시스템은 물류의 흐름을 관리하며, 주문 상태 및 배송 현황을 실시간으로 파악할 수 있도록 한다.</li>
+</ul>
+</dd>
+<dt><strong>개선방향</strong></dt>
+<dd>
+<ul>
+<li><strong>운송 경로 최적화</strong>: AI 기반의 경로 최적화 시스템을 도입하여 물품의 운송 경로를 효율적으로 계획하고, 시간과 비용을 절감한다.</li>
+<li><strong>통합 물류 관리</strong>: WMS와 TMS를 통합하여 창고와 운송의 데이터를 일관되게 관리하고, 물류 흐름을 실시간으로 모니터링한다.</li>
+<li><strong>배차 시스템 개선</strong>: 운송 차량의 효율적인 배차 시스템을 통해 자원의 낭비를 줄이고, 운송 효율을 높인다.</li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="종합-개선방향" class="level3">
+<h3 class="anchored" data-anchor-id="종합-개선방향">종합 개선방향</h3>
+<ul>
+<li><strong>모듈 통합</strong>: WMS와 ERP, TMS, 설비보전 시스템을 통합하여 물류의 흐름과 데이터를 일관되게 관리한다. 이를 통해 정보의 중복을 줄이고, 효율성을 높인다.</li>
+<li><strong>자동화 및 IoT 기술 도입</strong>: 입출고, 재고 관리, 설비 모니터링, 운송 과정에서 자동화와 IoT 기술을 도입하여 실시간 데이터를 기반으로 빠르고 정확한 결정을 내린다.</li>
+<li><strong>AI 및 빅데이터 활용</strong>: AI와 빅데이터를 활용하여 예측 분석을 통해 물류를 최적화하고, 미래의 수요와 트렌드를 미리 예측하여 대응한다.</li>
+</ul>
+<p>이러한 정보화 기반의 개선 방향을 통해 WMS의 효율성을 극대화하고, 전체 물류 시스템의 성능을 향상시킬 수 있다.</p>
+<p><br></p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 100-4-4">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+기출: 100-4-4
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+</section>
+</section>
+<section id="유닛로드" class="level2">
+<h2 class="anchored" data-anchor-id="유닛로드">유닛로드</h2>
+<p><strong>유닛로드</strong> 시스템(unit load system)이란 낱개단위 화물을 일정 규모의 단위화물로 만들어 일관된 수송/보관/하역 체계를 구축하여 합리적 물류 활동을 가능하게 하는 시스템으로, 파텟트(pallet), 컨테이너(container) 이용을 통한 수송 및 보관, 지게차에 의한 상하차 등을 예로 들 수 있다.</p>
+<dl>
+<dt>유닛로드 시스템 전제조건</dt>
+<dd>
+<ul>
+<li>파렛트 표준화</li>
+<li>포장단위 치수 표준화</li>
+<li>수송장비 적재함 규격 표준화</li>
+<li>운반 하역장비 표준화</li>
+<li>창고, 보관시설 표준화</li>
+<li>거래단위 표준화</li>
+</ul>
+</dd>
+</dl>
+<p>유닛로드 시스템 장단점은 다음과 같다.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 48%">
+<col style="width: 51%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>장점</strong></th>
+<th><strong>단점</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>제품 파손 및 분실 방지</td>
+<td>장비 확보 필요</td>
+</tr>
+<tr class="even">
+<td>포장 간소화 및 포장비 절감</td>
+<td>검품/이송 등 부수작업 발생</td>
+</tr>
+<tr class="odd">
+<td>시스템화 용이</td>
+<td>넓은 공간 확보 필요</td>
+</tr>
+<tr class="even">
+<td>운송수단 효율성 제고</td>
+<td>고정시설 투자 필요</td>
+</tr>
+<tr class="odd">
+<td>적재효율성 제고</td>
+<td>자재관리 시간 및 비용 추가</td>
+</tr>
+<tr class="even">
+<td>인건비 절감</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>하역 효율 향상</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 106-2-2">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+기출: 106-2-2
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+</section>
+<section id="오더피킹" class="level2">
+<h2 class="anchored" data-anchor-id="오더피킹">오더피킹</h2>
+<p><strong>오더피킹(Order picking)</strong>은 고객 주문을 처리하기 위해 물류창고 또는 보관 시설에서 품목을 선택하고 모으는 과정을 뜻한다. 오더피킹에는 품목 유형, 수량 및 특정한 고객 요구사항과 같은 주문 세부 정보를 기반으로 각 위치에서 지정된 제품을 출고하는 작업이 포함된다.</p>
+<p>일반적으로 물류센터 내 물류활동 비중 중 오더피킹에 소요되는 비용은 55%로 보관이 차지하는 비중인 15%를 함치면 전체 비용 대비 70%를 차지한다.</p>
+<p>제품 손상을 최소화하고 처리 시간 단축 및 피킹 정확도 향상을 위해 아래와 같은 원칙을 검토해야 한다.</p>
+<dl>
+<dt>오더피킹 생상선 향상을 위한 원칙</dt>
+<dd>
+<ol type="1">
+<li>가능한 작업 종류 축소</li>
+<li>피킹 빈도가높은 품목일수록 피커접근이 용이한 장소에 저장</li>
+<li>혼잡을 피하기 위해 피킹 장소 간 피킹 활동 조절</li>
+<li>같이 주문될 가능성이 높아 보통 함께 피킹하는 경우가 많은 물품은 동일 또는 인접한 장소에 배치</li>
+<li>피킹 지역을 forward picking area와 reserve picking area로 구분할 것</li>
+<li>총 이동시간을 줄이기 위해 고객 주문을 일괄 처리할 것</li>
+<li>이동 시ㅏㄱㄴ을 줄이기 위해 피킹 장소 간 피킹 순서를 결정</li>
+<li>찾기 시간 오류를 최소화할 수 있도록 피킹 문서와 피킹 장소 표시를 체계화할 것</li>
+<li>분류 시간 오류를 최소화하고 작업자 편의성을 최대화할 수 있는 운반 기기를 설계할 것</li>
+<li>자사 환경 요건에 맞추어 최적 오더 피킹 설비를 설택할 것</li>
+</ol>
+</dd>
+</dl>
+<p>오더피킹 종류는 다음과 같다.</p>
+<dl>
+<dt>일괄패킹(Batch picking)</dt>
+<dd>
+<ul>
+<li>2단계 피킹 또는 다단계 피킹이라고도 하며 동시에 여러주문에서 여러 품목을 피킹하는 것을 의미</li>
+</ul>
+</dd>
+<dt>클러스터 피킹(Cluster picking)</dt>
+<dd>
+<ul>
+<li>일괄 피킹과 유사하게 작업을 하지만 주문이 한 영역에서 여러 SKU로 피킹되는 경우를 의미</li>
+</ul>
+</dd>
+<dt>개별 오더 피킹(Dscrete order picking)</dt>
+<dd>
+<ul>
+<li>주문을 피킹하는 가장 일반적인 방법으로 주문이 완료될 때까지 항목별로 주문을 단순하게 피킹하는 것을 의미</li>
+</ul>
+</dd>
+<dt>웨이브 피킹(Wave picking)</dt>
+<dd>
+<ul>
+<li>일괄피킹과 유사하며 주문이 여러 교대 시간과 직원에 걸쳐 피킹되는 형태를 의미</li>
+</ul>
+</dd>
+<dt>존 피킹(Zone picking)</dt>
+<dd>
+<ul>
+<li>풀필먼트 센터를 별도 영역 또는 구역으로 나누고 직원은 교대 근무하는 동안 한 구역에서 근무하고 해당 구역 내에서 피킹하도록 지정</li>
+<li>주문에서 여러 구역 SKU가 필요한 경우 SKU는 한 구역에서 피킹되어 다른 구역으로이동해서 주문을 처리(순차구역피킹 또는 픽 앤 패스 피킹)</li>
+</ul>
+</dd>
+</dl>
+<p><br></p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 115-1-11">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+기출: 115-1-11
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+</section>
+<section id="크로스-도킹" class="level2">
+<h2 class="anchored" data-anchor-id="크로스-도킹">크로스 도킹</h2>
+<p>월마트의 <code>크로스 도킹</code>(Cross docking)은 물류 효율성을 극대화하기 위한 재고 관리 및 배송 전략이다. 이 시스템은 제품이 창고에 도착한 후, 별도 보관 없이 바로 다른 차량으로 이동시켜 배송하는 방식이다. 즉, 창고에서 보관하거나 재고를 유지하는 대신, 물류 센터에서 빠르게 물품을 선별하고, 이를 고객에게 전달할 수 있도록 한다.</p>
+<dl>
+<dt>크로스 도킹의 과정</dt>
+<dd>
+<ol type="1">
+<li><strong>입고</strong>: 공급업체에서 제품을 물류 센터로 운송하다.</li>
+<li><strong>선별</strong>: 물류 센터에서 도착한 제품을 목적지별로 분류하다.</li>
+<li><strong>출고</strong>: 분류된 제품을 즉시 배송 차량에 실어 목적지로 출발하다.</li>
+</ol>
+</dd>
+</dl>
+<p>크로스 도킹 장점과 단점은 다음과 같다.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 51%">
+<col style="width: 48%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>장점</th>
+<th>단점</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>재고 보관 비용을 절감하다.</td>
+<td>물류 센터에서 빠른 작업이 필요하여 운영이 복잡해질 수 있다.</td>
+</tr>
+<tr class="even">
+<td>상품 회전율을 높여 재고 관리 효율성을 증대하다.</td>
+<td>공급망의 예기치 못한 지연이 전체 시스템에 영향을 미칠 수 있다.</td>
+</tr>
+<tr class="odd">
+<td>배송 시간을 단축시켜 고객 만족도를 높이다.</td>
+<td>시스템 구현을 위한 초기 투자 비용이 많이 들다.</td>
+</tr>
+<tr class="even">
+<td>물류 효율성이 향상되어 운송비 절감 효과를 가져오다.</td>
+<td>모든 제품에 적용이 어려운 경우가 있을 수 있다.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 115-2-3">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+기출: 115-2-3
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+</section>
+<section id="철도-물류" class="level2">
+<h2 class="anchored" data-anchor-id="철도-물류">철도 물류</h2>
+<section id="tofc" class="level3">
+<h3 class="anchored" data-anchor-id="tofc">TOFC</h3>
+<p><strong>TOFC (Trailer on Flat Car)</strong> 방식은 철도 운송에서 사용되는 방식으로, <strong>트레일러를 평차에 실어 운반하는 방법</strong>을 의미한다. 이 방식은 주로 트럭 운송과 철도 운송을 결합하여 물류 효율성을 극대화하는 데 사용된다. TOFC 방식의 핵심은 트레일러가 철도에 실려 이동하는 것이다.</p>
+<dl>
+<dt>TOFC 방식 특징</dt>
+<dd>
+<ol type="1">
+<li><strong>트레일러 운반</strong>: 일반적으로 트레일러는 기존 트럭에서 하역하여 철도에 실어 운송한다. 이때 트레일러는 차체와 바퀴가 그대로 유지되며, <strong>평차(Flat Car)</strong>에 실려 이동하게 된다.</li>
+<li><strong>상호 운송 시스템</strong>: 트레일러는 철도 운송과 도로 운송이 결합된 형태로, 철도를 이용해 장거리 운송을 진행하고, 철도 역에서 다시 트럭으로 하역하여 목적지까지 배송된다. 즉, “트레일러”와 “철도” 간 결합을 통해 효율적인 운송이 가능하다.</li>
+<li><strong>효율성</strong>: TOFC 방식은 도로와 철도를 결합하여 각각 장점을 극대화한다. 철도를 이용해 대규모 화물을 빠르고 비용 효율적으로 운반하고, 도로 운송으로 유연하게 최종 목적지까지 운반할 수 있다.</li>
+<li><strong>주요 활용</strong>: TOFC 방식은 주로 <strong>화물 운송</strong>, 특히 <strong>대형 화물</strong>이나 <strong>중량 화물</strong> 운송에 사용된다. 이 방식은 물류 비용 절감, 운송 시간 단축 및 효율적인 물류 처리가 필요한 경우에 유리하다.</li>
+</ol>
+</dd>
+</dl>
+<p><strong>TOFC</strong>는 <strong>컨테이너화</strong>된 화물과 <strong>트레일러</strong>를 쉽게 철도로 운송할 수 있어, 다양한 산업에서 중요한 물류 운송 수단으로 사용된다.</p>
+</section>
+<section id="cofc" class="level3">
+<h3 class="anchored" data-anchor-id="cofc">COFC</h3>
+<p><strong>COFC (Container on Flat Car)</strong> 방식은 철도 운송에서 <strong>컨테이너를 평차(Flat Car)에 실어 운반하는 방법</strong>을 의미한다. TOFC와 비슷한 개념으로, COFC는 <strong>컨테이너</strong>를 철도로 운송하는 방식으로, 철도와 도로 운송의 결합을 통해 효율적인 물류 운송을 가능하게 한다.</p>
+<dl>
+<dt>COFC 방식 특징</dt>
+<dd>
+<ol type="1">
+<li><strong>컨테이너 운반</strong>: COFC에서는 <strong>표준화된 컨테이너</strong>(20피트, 40피트 등)를 평차에 실어 철도 운송을 진행한다. 이 컨테이너는 일반적으로 도로 운송에서 사용되는 트럭이나 다른 운송 수단으로도 쉽게 옮길 수 있도록 설계되어 있다.</li>
+<li><strong>철도-도로 통합 시스템</strong>: COFC는 철도와 도로 간의 원활한 연결을 통해 물류 효율성을 극대화한다. 컨테이너는 철도에서 장거리 운송을 마친 후, 철도역에서 트럭으로 하역되어 최종 목적지까지 운반된다. 이 방식은 <strong>복합 운송</strong>이라고도 불린다.</li>
+<li><strong>효율성</strong>: COFC 방식은 철도를 이용한 대량 운송이 가능하고, 컨테이너가 다양한 운송수단에서 호환 가능하므로 <strong>시간과 비용을 절감</strong>할 수 있다. 또한, 다양한 종류의 화물과 컨테이너를 표준화된 방식으로 운반할 수 있어 물류 효율성이 매우 높다.</li>
+<li><strong>주요 활용</strong>: COFC는 <strong>국제 물류</strong> 및 <strong>대량 화물 운송</strong>에서 주로 사용된다. 컨테이너를 철도와 도로를 통해 동시에 운송할 수 있어, 항만과 물류 창고 간의 원활한 운송을 돕는다. 특히, 대륙 간 물류 네트워크에서 중요한 역할을 한다.</li>
+</ol>
+</dd>
+</dl>
+<p><strong>COFC</strong>는 <strong>해상 운송</strong>, <strong>철도 운송</strong>, <strong>도로 운송</strong> 간의 효율적인 연결을 통해, 다양한 산업에서 중요한 물류 시스템으로 자리 잡고 있다.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 40%">
+<col style="width: 43%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>TOFC (Trailer on Flat Car)</th>
+<th>COFC (Container on Flat Car)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>운반 대상</strong></td>
+<td>트레일러 (트럭에 장착된 상태로 운반)</td>
+<td>컨테이너 (표준화된 크기의 컨테이너)</td>
+</tr>
+<tr class="even">
+<td><strong>화물 형태</strong></td>
+<td>트레일러 (트럭에서 사용하는 바퀴와 차체 유지)</td>
+<td>컨테이너 (해상 및 도로 운송에 사용되는 표준 컨테이너)</td>
+</tr>
+<tr class="odd">
+<td><strong>운송 방식</strong></td>
+<td>도로와 철도의 결합 (트레일러는 철도로, 트럭은 도로)</td>
+<td>해상, 도로, 철도의 복합 운송</td>
+</tr>
+<tr class="even">
+<td><strong>적용 분야</strong></td>
+<td>주로 국내 물류, 장거리 육상 운송</td>
+<td>주로 국제 물류, 해상 운송, 복합운송 시스템</td>
+</tr>
+<tr class="odd">
+<td><strong>유연성</strong></td>
+<td>트레일러는 특정 트럭에 맞춰져 있어 제한적</td>
+<td>표준화된 컨테이너로 다양한 운송 수단에서 활용 가능</td>
+</tr>
+<tr class="even">
+<td><strong>비용과 효율성</strong></td>
+<td>비용이 더 들 수 있지만 효율적</td>
+<td>비용 효율적이며 다양한 운송 수단을 통합해 효율성 극대화</td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>4대 기능: 수송, 보관, 하역, 포장<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation column-body">
+  <div class="nav-page nav-page-previous">
+      <a href="./0301공급망관리.html" class="pagination-link" aria-label="공급망 관리">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">공급망 관리</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./0401재고관리.html" class="pagination-link" aria-label="재고관리">
+        <span class="nav-page-text"><span class="chapter-title">재고관리</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/yeonkyupark/PEPC/edit/main/0302물류관리.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div></div></footer></body></html>

@@ -1,0 +1,2420 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.39">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>품질관리 – 공장관리기술사(2E)</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./0901사업성분석.html" rel="next">
+<link href="./0802생산성관리.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-160d5d975b9dfffeaf699822bedbd9bf.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<meta name="mermaid-theme" content="neutral">
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./0801프로세스분석과개선.html">08. 생산성관리</a></li><li class="breadcrumb-item"><a href="./0803품질관리.html"><span class="chapter-title">품질관리</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">공장관리기술사(2E)</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://yeonkyupark.github.io/" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-globe"></i></a>
+    <a href="https://www.instagram.com/yeonkyu.park/" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-instagram"></i></a>
+    <a href="https://github.com/yeonkyupark/PEPC" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">들어가는 글</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">01. 생산전략</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0101경쟁우위생산전략.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">경쟁우위 생산전략</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0102생산구조와방식.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">생산구조와 방식(Layout)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0103구매와외주전략.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">구매와 외주전략</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0104인력과직무설계.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">인력과 직무설계</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0105사업환경분석.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">사업환경 분석</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">02. 생산운영</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0201수요예측.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">수요예측</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0202프로세스진도관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">프로세스 진도관리</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">03. 물류관리</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0301공급망관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">공급망 관리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0302물류관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">물류관리</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">04. 재고관리</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0401재고관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">재고관리</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">05. 공정관리</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0501생산계획수립.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">생산계획 수립</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0502공정설계.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">공정설계</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0503작업계획수립.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">작업계획 수립</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0504표준작업관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">표준작업 관리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0505공정개선.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">공정개선</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">06. 설비관리</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0601설비계획.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">설비계획</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0602설비보전관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">설비보전 관리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0603자재취급및운반관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">자재취급 및 운반관리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0604환경관리및안전관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">환경 관리 및 안전 관리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0605시설및유틸리티관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">시설 및 유틸리티 관리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0606공장자동화기술.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">공장 자동화 기술</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">07. 작업관리</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0701작업방법및시간연구.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">작업방법 및 시간연구</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true">
+ <span class="menu-text">08. 생산성관리</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0801프로세스분석과개선.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">프로세스 분석과 개선</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0802생산성관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">생산성 관리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0803품질관리.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">품질관리</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false">
+ <span class="menu-text">09. 원가관리</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0901사업성분석.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">사업성분석</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0902원가관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">원가관리</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false">
+ <span class="menu-text">10. 경제성 공학</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1001가치공학.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">가치공학</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1002경영과학.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">경영과학</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false">
+ <span class="menu-text">11. 생산지원기술</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1101정보화활용기술.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">정보화 활용 기술</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1102제품개발기술.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">제품개발 기술</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1103서비스운영관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">서비스 운영관리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1104생산혁신기술.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">생산혁신기술</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1105신기술및동향.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">신기술및동향</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false">
+ <span class="menu-text">12. ISO</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1201ISO9001.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ISO9001</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1202ISO14001.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ISO14001</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1203ISO31000.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ISO31000</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1204ISO21500.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ISO21500</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">목차</h2>
+   
+  <ul>
+  <li><a href="#sec-tqm" id="toc-sec-tqm" class="nav-link active" data-scroll-target="#sec-tqm">TQM</a></li>
+  <li><a href="#관리도" id="toc-관리도" class="nav-link" data-scroll-target="#관리도">관리도</a>
+  <ul>
+  <li><a href="#관리도-종류" id="toc-관리도-종류" class="nav-link" data-scroll-target="#관리도-종류">관리도 종류</a></li>
+  <li><a href="#관리도-작성" id="toc-관리도-작성" class="nav-link" data-scroll-target="#관리도-작성">관리도 작성</a>
+  <ul class="collapse">
+  <li><a href="#계량형-관리도" id="toc-계량형-관리도" class="nav-link" data-scroll-target="#계량형-관리도">계량형 관리도</a></li>
+  <li><a href="#계수형-관리도" id="toc-계수형-관리도" class="nav-link" data-scroll-target="#계수형-관리도">계수형 관리도</a></li>
+  </ul></li>
+  <li><a href="#관리도-해석" id="toc-관리도-해석" class="nav-link" data-scroll-target="#관리도-해석">관리도 해석</a></li>
+  </ul></li>
+  <li><a href="#sec-cpk" id="toc-sec-cpk" class="nav-link" data-scroll-target="#sec-cpk">공정능력지수</a></li>
+  <li><a href="#품질경영-4대-절대-조건" id="toc-품질경영-4대-절대-조건" class="nav-link" data-scroll-target="#품질경영-4대-절대-조건">품질경영 4대 절대 조건</a></li>
+  <li><a href="#신뢰성-관리" id="toc-신뢰성-관리" class="nav-link" data-scroll-target="#신뢰성-관리">신뢰성 관리</a></li>
+  <li><a href="#aql" id="toc-aql" class="nav-link" data-scroll-target="#aql">AQL</a></li>
+  <li><a href="#품질비용" id="toc-품질비용" class="nav-link" data-scroll-target="#품질비용">품질비용</a></li>
+  <li><a href="#측정시스템-측정오차-유형" id="toc-측정시스템-측정오차-유형" class="nav-link" data-scroll-target="#측정시스템-측정오차-유형">측정시스템 측정오차 유형</a></li>
+  <li><a href="#품질평가" id="toc-품질평가" class="nav-link" data-scroll-target="#품질평가">품질평가</a>
+  <ul>
+  <li><a href="#sec-mbnqa" id="toc-sec-mbnqa" class="nav-link" data-scroll-target="#sec-mbnqa">MBNQA</a></li>
+  </ul></li>
+  <li><a href="#품질관리-도구" id="toc-품질관리-도구" class="nav-link" data-scroll-target="#품질관리-도구">품질관리 도구</a>
+  <ul>
+  <li><a href="#qc-7가지-도구" id="toc-qc-7가지-도구" class="nav-link" data-scroll-target="#qc-7가지-도구">QC 7가지 도구</a></li>
+  <li><a href="#신-qc-7가지-도구" id="toc-신-qc-7가지-도구" class="nav-link" data-scroll-target="#신-qc-7가지-도구">신 QC 7가지 도구</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/yeonkyupark/PEPC/edit/main/0803품질관리.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content column-body" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./0801프로세스분석과개선.html">08. 생산성관리</a></li><li class="breadcrumb-item"><a href="./0803품질관리.html"><span class="chapter-title">품질관리</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-title">품질관리</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta column-body">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="sec-tqm" class="level2">
+<h2 class="anchored" data-anchor-id="sec-tqm">TQM</h2>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 124-1-9">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+기출: 124-1-9
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+<p><strong>TQM(Total Quality Management, 전사적 품질 경영)</strong>이란 조직의 모든 구성원이 품질 향상과 고객 만족을 목표로 전사적으로 참여하는 경영 철학이자 방식이다. 이는 제품과 서비스의 품질을 개선하는 데 그치지 않고, 조직의 모든 프로세스와 문화를 품질 중심으로 전환하여 지속적인 개선을 추구한다.</p>
+<dl>
+<dt>TQM의 핵심 개념</dt>
+<dd>
+<ol type="1">
+<li>고객 중심<br>
+고객의 요구와 기대를 이해하고 이를 충족하거나 초과 달성하는 데 초점을 둔다. 품질 경영의 최우선 목표는 고객 만족이며, 내부 고객(직원)과 외부 고객(소비자)을 모두 중요하게 여긴다.</li>
+<li>전사적 참여<br>
+조직의 모든 구성원이 품질 개선 활동에 참여한다. 품질 관리는 특정 부서의 책임에 국한되지 않고 전 직원이 협력하여 달성해야 할 공동 목표로 본다.</li>
+<li>프로세스 중심<br>
+품질 개선은 결과뿐만 아니라 결과를 만들어내는 과정(process)을 개선하는 데 중점을 둔다. 프로세스의 효율성과 효과성을 높이는 것이 중요하다.</li>
+<li>지속적인 개선<br>
+품질 향상은 일회성 활동이 아니라 지속적으로 이루어져야 한다. 작은 개선이라도 꾸준히 실행하여 장기적으로 큰 성과를 얻는다.</li>
+<li>의사 결정의 사실 기반<br>
+데이터와 분석을 기반으로 의사 결정을 내린다. 감이나 추측이 아닌 객관적인 정보를 바탕으로 문제를 해결한다.</li>
+<li>통합된 시스템<br>
+품질 경영은 조직 내 모든 부서와 기능이 유기적으로 연결되어야 효과적이다. 조직의 비전, 사명, 목표를 품질 개선 활동과 통합적으로 연계한다.</li>
+<li>커뮤니케이션<br>
+조직 내 원활한 의사소통은 품질 문제를 발견하고 해결하는 데 중요한 역할을 한다. 직원 간, 부서 간의 협력과 피드백을 강조한다.</li>
+</ol>
+</dd>
+<dt>TQM의 주요 원칙</dt>
+<dd>
+<ol type="1">
+<li>고객 만족 최우선<br>
+고객의 요구사항을 정확히 이해하고 이를 만족시키는 것을 최우선 과제로 삼는다.</li>
+<li>품질 우선 경영<br>
+품질은 비용, 생산성, 속도보다 우선시되며, 품질을 개선함으로써 조직의 성과를 궁극적으로 향상시킨다.</li>
+<li>전사적 책임<br>
+최고 경영진부터 말단 직원까지 모두가 품질 개선에 책임을 진다.</li>
+<li>교육과 훈련<br>
+직원들의 역량 강화를 위해 지속적으로 교육과 훈련을 제공한다. 이를 통해 품질 관리 도구와 기법을 습득하도록 돕는다.</li>
+<li>장기적인 관점<br>
+단기적인 성과보다는 장기적인 품질 개선을 통해 지속 가능한 성장을 추구한다.</li>
+</ol>
+</dd>
+<dt>TQM의 장단점</dt>
+<dd>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 7%">
+<col style="width: 46%">
+<col style="width: 46%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>구분</th>
+<th>장점</th>
+<th>단점</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>고객 만족</td>
+<td>고객의 요구를 이해하고 충족시켜 고객 신뢰와 충성도를 높일 수 있다.</td>
+<td>고객의 요구가 모호하거나 변화가 잦을 경우 이를 정확히 반영하기 어려울 수 있다.</td>
+</tr>
+<tr class="even">
+<td>비용 절감</td>
+<td>불량률 감소와 재작업 감소를 통해 품질 비용이 절감된다.</td>
+<td>초기 단계에서 품질 향상 활동에 많은 시간과 비용이 필요하다.</td>
+</tr>
+<tr class="odd">
+<td>생산성 향상</td>
+<td>프로세스 개선을 통해 효율성이 증가하고 생산성이 높아진다.</td>
+<td>모든 구성원이 참여해야 하므로 조직 내 갈등이나 저항이 발생할 수 있다.</td>
+</tr>
+<tr class="even">
+<td>조직 문화</td>
+<td>협력과 참여를 중시하는 조직 문화를 형성할 수 있다.</td>
+<td>전사적인 참여를 유도하기 위해 경영진의 강력한 리더십과 시간이 요구된다.</td>
+</tr>
+<tr class="odd">
+<td>장기적 성장</td>
+<td>지속적인 품질 개선을 통해 조직의 경쟁력과 지속 가능성을 강화할 수 있다.</td>
+<td>단기적인 성과가 부족할 경우 경영진과 직원의 동기 부여가 어려울 수 있다.</td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt>TQM의 주요 도구</dt>
+<dd>
+<ol type="1">
+<li>PDCA 사이클<br>
+Plan(계획), Do(실행), Check(검토), Act(조치)로 구성된 품질 개선의 기본 프레임워크이다.</li>
+<li>6시그마<br>
+결함률을 최소화하기 위한 품질 관리 방법론이다.</li>
+<li>품질 관리 7가지 도구(Q7)
+<ul>
+<li>체크시트<br>
+</li>
+<li>히스토그램<br>
+</li>
+<li>파레토 차트<br>
+</li>
+<li>산점도<br>
+</li>
+<li>관리도<br>
+</li>
+<li>흐름도<br>
+</li>
+<li>원인-결과도(피쉬본 다이어그램)</li>
+</ul></li>
+<li>벤치마킹<br>
+우수 사례를 참고하여 품질을 개선한다.</li>
+<li>ISO 품질 인증<br>
+국제 표준을 준수하여 품질을 보증한다.</li>
+</ol>
+</dd>
+<dt>TQM의 성공 사례</dt>
+<dd>
+<ol type="1">
+<li>토요타(Toyota)<br>
+지속적인 개선(Kaizen)과 품질 중심 문화를 통해 자동차 업계의 글로벌 리더로 자리잡는다.</li>
+<li>GE(General Electric)<br>
+TQM과 6시그마를 결합하여 생산성과 품질을 크게 향상시킨다.</li>
+<li>소니(Sony)<br>
+TQM 도입 후 기술력과 품질을 강화하여 전자 제품 시장에서 성공을 거둔다.</li>
+</ol>
+</dd>
+</dl>
+<p>TQM은 품질을 단순한 목표가 아닌 조직 전체의 철학으로 받아들이게 하는 경영 방식이다. 이를 통해 고객 만족을 극대화하고 조직의 지속 가능한 성장을 도모할 수 있다. TQM은 단기적인 성과가 아닌 장기적인 경쟁력 확보를 목표로 하는 현대 경영의 핵심 요소 중 하나로 자리잡는다.</p>
+</section>
+<section id="관리도" class="level2">
+<h2 class="anchored" data-anchor-id="관리도">관리도</h2>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 97-4-5, 103-3-5">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+기출: 97-4-5, 103-3-5
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+<p><strong>관리도</strong>(Shewhart Chart)는 <font color="blue">통계적인 품질관리 도구</font>로써 자료 분포와 시계열 특성을 동시에 다룬다. 제조 및 경영 프로세스에 있어 통계적 관리 상태 여부 판별을 위한 관리지원 도구 중 하나이다.</p>
+<dl>
+<dt>변동요인</dt>
+<dd>
+<ul>
+<li>우연요인(일상원인, 공통원인 by Deming)</li>
+<li>불가피한 원인, 제거 불가능(경제적 관점)</li>
+<li>재료, 기기, 작업자 변동(통제 불가능한 수준)</li>
+<li>이상원인(특별원인 by Deming)</li>
+<li>체계가 관리상태가 아닌 경우</li>
+<li>관리도 주요 관심 대상</li>
+</ul>
+</dd>
+</dl>
+<section id="관리도-종류" class="level3">
+<h3 class="anchored" data-anchor-id="관리도-종류">관리도 종류</h3>
+<p>사용 목적에 따라 공정 해석용 관리도와 공정 관리용 관리도로 분류할 수 있다. 이는 표준값이 주어져 있느냐에 따라 구분이 가능하다.</p>
+<dl>
+<dt>관리도 분류</dt>
+<dd>
+<ul>
+<li>해석용 관리도</li>
+<li>관리용 관리도</li>
+</ul>
+</dd>
+</dl>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 48%">
+<col style="width: 51%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>해석용 관리도</th>
+<th>관리용 관리도</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><ul>
+<li><p>공정상태가 어떤지 모르는 상황에서 공정 실태를 파악하여 어떤 원인에 의해 어떠한 산포가 발생하는지 알아 볼 목적으로 작성하는 관리도</p></li>
+<li><p>관리한계(UCL, LCL)선을 점선(⋯)으로 표시</p></li>
+<li><p>표준값이 주어져 있지 않기 때문에 수집된 데이터를 통하여 중심선과 관리한계선을 계산하여 사용하며, 공정이 관리상태로 안정되면관리한계선을 연장하여 관리용 관리도 한계선을 사용</p></li>
+</ul></td>
+<td><ul>
+<li><p>관리도를 지속적으로 작성해 나가면서 그 때마다 공정을 해석하고 만일 이상이 나타나면 그 즉시 원인을 조사하여 합당한 조치를 취해줌으로써 공정을 안정상태로 유지하기 위해 작성하는 관리도</p></li>
+<li><p>관리한계(UCL, LCL)선을 일점쇄선(- ⋅ - ⋅ -)으로 표시</p></li>
+<li><p>이전 안정된 상태 관리한계선을 바탕으로 현재 공정을 비교함으로써 공정 변화를 빠르게 점검 가능</p></li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TB
+
+31["xbar - R&lt;br&gt;xbar - s"]
+33["xtilde - R&lt;br&gt;(Me - R)"]
+35["X - Rs"]
+37["x - xbar - R"]
+
+subgraph sg6[&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;포아송분포]
+24
+c
+u
+end
+
+subgraph sg5[&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;이항분포]
+23
+np
+p
+end
+
+subgraph sg0[&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;정규분포]
+22
+21
+31
+33
+35
+37
+end
+23 -- 일정 --&gt; np
+23 -- 불일정 --&gt; p
+
+
+24 -- 일정 --&gt; c
+24 -- 불일정 --&gt; u
+
+22 -- 가능 --&gt; 37
+22 -- 불가능 --&gt; 35
+21 --"xbar"--&gt; 31
+21 --"xtilde(Me)"--&gt; 33
+
+01{"품질 특성값"} -- 계량값 --&gt; 11{"군 크기"}
+01 -- 계수값 --&gt; 12{"판단"}
+
+11 -- "한 개" --&gt; 22{"군 구분"}
+11 -- "여러 개" --&gt; 21{"중심선"}
+
+12 --부적합품 --&gt; 23{"군 크기"}
+12 --부적합--&gt; 24{"군 단위"}
+
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<dl>
+<dt>계수형(계수치)</dt>
+<dd>
+<ul>
+<li>연속량으로 측정되는 품질 특성 값(예, 길이, 무게, 온도, 전류 등)</li>
+</ul>
+</dd>
+<dt>계량형(계량치)</dt>
+<dd>
+<ul>
+<li>유효한 값으로 표시되는 수치 값(예, 1개, 2개 등 이산적으로 셀 수 있는 값)</li>
+</ul>
+</dd>
+<dt>군 크기</dt>
+<dd>
+<ul>
+<li>하나의 통일된 군(집단)을 구성하는 개체 수</li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="관리도-작성" class="level3">
+<h3 class="anchored" data-anchor-id="관리도-작성">관리도 작성</h3>
+<section id="계량형-관리도" class="level4">
+<h4 class="anchored" data-anchor-id="계량형-관리도">계량형 관리도</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>관리도</th>
+<th>측정치</th>
+<th>CL</th>
+<th>UCL</th>
+<th>LCL</th>
+<th>측정치</th>
+<th>CL</th>
+<th>UCL</th>
+<th>LCL</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(x-R\)</span></td>
+<td><span class="math inline">\(\bar{x}\)</span></td>
+<td><span class="math inline">\(\bar{\bar{x}}\)</span></td>
+<td><span class="math inline">\(\bar{\bar{x}} + A_2\bar{R}\)</span></td>
+<td><span class="math inline">\(\bar{\bar{x}} - A_2\bar{R}\)</span></td>
+<td><span class="math inline">\(R\)</span></td>
+<td><span class="math inline">\(\bar{R}\)</span></td>
+<td><span class="math inline">\(D_4\bar{R}\)</span></td>
+<td><span class="math inline">\(D_3\bar{R}\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\bar{x}-R\)</span></td>
+<td><span class="math inline">\(\bar{x}\)</span></td>
+<td><span class="math inline">\(\bar{\bar{x}}\)</span></td>
+<td><span class="math inline">\(\bar{\bar{x}} + E_2\bar{R}\)</span></td>
+<td><span class="math inline">\(\bar{\bar{x}} - E_2\bar{R}\)</span></td>
+<td><span class="math inline">\(R\)</span></td>
+<td><span class="math inline">\(\bar{R}\)</span></td>
+<td><span class="math inline">\(D_4\bar{R}\)</span></td>
+<td><span class="math inline">\(D_3\bar{R}\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(x-s\)</span></td>
+<td><span class="math inline">\(\bar{x}\)</span></td>
+<td><span class="math inline">\(\bar{\bar{x}}\)</span></td>
+<td><span class="math inline">\(\bar{\bar{x}} + A_3\bar{R}\)</span></td>
+<td><span class="math inline">\(\bar{\bar{x}} - A_3\bar{R}\)</span></td>
+<td><span class="math inline">\(s\)</span></td>
+<td><span class="math inline">\(\bar{s}\)</span></td>
+<td><span class="math inline">\(B_4\bar{s}\)</span></td>
+<td><span class="math inline">\(B_3\bar{s}\)</span></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="계수형-관리도" class="level4">
+<h4 class="anchored" data-anchor-id="계수형-관리도">계수형 관리도</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>관리도</th>
+<th>측정치</th>
+<th>CL</th>
+<th>UCL</th>
+<th>LCL</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(p\)</span></td>
+<td><span class="math inline">\(p\)</span></td>
+<td><span class="math inline">\(\bar{p}\)</span></td>
+<td><span class="math inline">\(\bar{p}+3\sqrt{\frac{\bar{p}(1-\bar{p})}{n}}\)</span></td>
+<td><span class="math inline">\(\bar{p}-3\sqrt{\frac{\bar{p}(1-\bar{p})}{n}}\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(np\)</span></td>
+<td><span class="math inline">\(np\)</span></td>
+<td><span class="math inline">\(n\bar{p}\)</span></td>
+<td><span class="math inline">\(n\bar{p} + 3\sqrt{n\bar{p}(1-\bar{p})}\)</span></td>
+<td><span class="math inline">\(n\bar{p} - 3\sqrt{n\bar{p}(1-\bar{p})}\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(u\)</span></td>
+<td><span class="math inline">\(u\)</span></td>
+<td><span class="math inline">\(\bar{u}\)</span></td>
+<td><span class="math inline">\(\bar{u} + 3\sqrt{\frac{\bar{u}}{n}}\)</span></td>
+<td><span class="math inline">\(\bar{u} - 3\sqrt{\frac{\bar{u}}{n}}\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(c\)</span></td>
+<td><span class="math inline">\(c\)</span></td>
+<td><span class="math inline">\(\bar{c}\)</span></td>
+<td><span class="math inline">\(\bar{c} + 3\sqrt{\bar{c}}\)</span></td>
+<td><span class="math inline">\(\bar{c} - 3\sqrt{\bar{c}}\)</span></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="관리도-해석" class="level3">
+<h3 class="anchored" data-anchor-id="관리도-해석">관리도 해석</h3>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 118-2-5">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+기출: 118-2-5
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+<p><strong>관리한계</strong>(Control Limits)와 <strong>규격한계</strong>(Specification Limits)는 품질 관리에서 중요한 개념으로, 공정 성능과 품질을 평가하는 데 사용된다. 두 개념은 모두 제품 품질을 측정하고 평가하는 데 중요하지만, 그 의미와 목적은 다르다.</p>
+<dl>
+<dt>관리한계 (Control Limits)</dt>
+<dd>
+<ul>
+<li><strong>정의</strong>: 관리한계는 <strong>통계적 품질 관리</strong>(Statistical Quality Control, SQC)에서 사용되며, 공정의 변동성을 측정하기 위해 설정된 한계 값이다. 관리한계는 공정이 통계적으로 안정적인지 여부를 평가하는 기준으로, <strong>공정 내 변동</strong>을 기준으로 설정된다.</li>
+<li><strong>목적</strong>: 관리한계는 공정이 자연적인 변동(우연적 변동) 내에서 운영되고 있는지 확인하기 위해 사용된다. 관리한계는 <strong>공정의 안정성</strong>을 파악하기 위한 도구이다.</li>
+<li><strong>계산 방법</strong>: 관리한계는 <strong>공정의 표준편차</strong>(σ)나 <strong>범위</strong>(Range) 등을 기반으로 설정된다. 일반적으로, 공정의 평균에서 ±3σ를 기준으로 설정한다. 이를 통해 공정의 데이터가 <strong>3시그마</strong> 범위 내에 분포하는지 확인한다.
+<ul>
+<li><strong>상한 관리한계 (UCL)</strong>: 평균 + 3σ</li>
+<li><strong>하한 관리한계 (LCL)</strong>: 평균 - 3σ</li>
+</ul></li>
+<li><strong>의미</strong>: 관리한계 밖으로 벗어난 값은 공정이 비정상적이라는 신호로 해석되며, 이는 공정에 문제가 있거나 특수 원인(비정상적인 요인)이 존재할 수 있음을 나타낸다.</li>
+<li><strong>용도</strong>: 관리한계는 <strong>품질 관리 도표</strong>(예: 관리도, Control Chart)에 표시되어, 공정의 상태를 실시간으로 모니터링하는 데 사용된다.</li>
+</ul>
+</dd>
+<dt>규격한계 (Specification Limits)</dt>
+<dd>
+<ul>
+<li><strong>정의</strong>: 규격한계는 제품이나 서비스가 충족해야 하는 <strong>품질 기준</strong>을 정의한 한계 값이다. 이는 <strong>고객의 요구사항</strong> 또는 <strong>제품의 설계 규격</strong>에 기반한 한계이다.</li>
+<li><strong>목적</strong>: 규격한계는 제품이 고객의 요구를 만족하는지 여부를 평가하기 위해 설정된다. 규격한계는 제품이 <strong>허용 가능한 품질 수준</strong> 내에서 생산되는지를 확인하는 데 사용된다.</li>
+<li><strong>계산 방법</strong>: 규격한계는 제품의 설계 사양에 따라 설정되며, 주로 <strong>상한 규격(USL, Upper Specification Limit)</strong>과 <strong>하한 규격(LSL, Lower Specification Limit)</strong>으로 정의된다.
+<ul>
+<li><strong>상한 규격 (USL)</strong>: 제품의 허용 가능한 최대값</li>
+<li><strong>하한 규격 (LSL)</strong>: 제품의 허용 가능한 최소값</li>
+</ul></li>
+<li><strong>의미</strong>: 제품이 규격한계를 벗어나면 품질이 불량하거나, 고객의 요구사항을 충족하지 못한다고 판단된다.</li>
+<li><strong>용도</strong>: 규격한계는 제품이 설계된 품질 기준을 충족하는지 여부를 확인하는 데 사용된다. 고객이 원하는 품질 수준에 맞는 제품을 생산하는 것이 중요하다.</li>
+</ul>
+</dd>
+</dl>
+<p>관리한계와 규격한계의 차이점는 다음과 같다.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 39%">
+<col style="width: 43%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>구분</strong></th>
+<th><strong>관리한계</strong> (Control Limits)</th>
+<th><strong>규격한계</strong> (Specification Limits)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>정의</strong></td>
+<td>공정의 변동 범위를 나타내는 한계 값</td>
+<td>제품의 품질을 나타내는 고객의 요구사항을 기준으로 설정한 한계 값</td>
+</tr>
+<tr class="even">
+<td><strong>목적</strong></td>
+<td>공정이 자연적인 변동 내에서 안정적으로 운영되고 있는지 확인</td>
+<td>제품이 고객의 요구를 충족하는지 여부를 평가</td>
+</tr>
+<tr class="odd">
+<td><strong>설정 기준</strong></td>
+<td>공정 내 변동(우연적 변동)을 기준으로 설정</td>
+<td>고객의 요구나 제품 설계 사양을 기준으로 설정</td>
+</tr>
+<tr class="even">
+<td><strong>계산 방법</strong></td>
+<td>평균 ± 3σ (시그마 기준)</td>
+<td>상한 규격(USL)과 하한 규격(LSL)을 기준으로 설정</td>
+</tr>
+<tr class="odd">
+<td><strong>의미</strong></td>
+<td>공정이 정상적으로 운영되고 있으면 관리한계 내에 있어야 한다</td>
+<td>제품이 규격한계를 벗어나면 불량품으로 간주된다</td>
+</tr>
+<tr class="even">
+<td><strong>용도</strong></td>
+<td>공정의 안정성 확인, 비정상적인 변동 감지</td>
+<td>고객 요구사항을 충족하는지 평가, 품질 기준 확인</td>
+</tr>
+</tbody>
+</table>
+<p><strong>관리한계</strong>는 공정 안정성과 변동을 평가하는 데 중점을 둔다. 공정이 일정한 범위 내에서 변동하는지 모니터링하고, 비정상적인 변동이 발생하면 문제를 해결하기 위한 조치를 취한다. <strong>규격한계</strong>는 제품이 고객 요구를 충족하는지 여부를 확인하는 데 사용된다. 제품이 규격한계를 벗어나면 품질 문제로 간주하고, 불량품으로 처리된다.</p>
+<p>따라서, <strong>관리한계</strong>는 공정 내 변동에 관한 기준이고, <strong>규격한계</strong>는 제품의 품질에 관한 기준이라고 할 수 있다.</p>
+<p>관리도에서 비관리상태로 판정하는 8가지 현상은 다음과 같다.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>현상</th>
+<th>설명</th>
+<th>ISO7870-2:2013</th>
+<th>AT&amp;T</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>이탈</td>
+<td>관리한계선을 벗어남</td>
+<td>#1</td>
+<td>#1</td>
+</tr>
+<tr class="even">
+<td>치우침</td>
+<td>7개 연속으로 중심선 한 쪽에서 있음(AT&amp;T 9개)</td>
+<td>#2</td>
+<td>#2</td>
+</tr>
+<tr class="odd">
+<td>경향</td>
+<td>7개 연속으로 증가(또는 감소)(AT&amp;T 6개)</td>
+<td>#2</td>
+<td>#2</td>
+</tr>
+<tr class="even">
+<td>주기성</td>
+<td>주기성이 나타남(AT&amp;T 14개 연속 지그재그)</td>
+<td>#4</td>
+<td>#4</td>
+</tr>
+<tr class="odd">
+<td>경계1</td>
+<td>3개 중 2개 A 영역</td>
+<td>-</td>
+<td>#5</td>
+</tr>
+<tr class="even">
+<td>경계2</td>
+<td>5개 중 4개 A,B 영역</td>
+<td>-</td>
+<td>#6</td>
+</tr>
+<tr class="odd">
+<td>과집중</td>
+<td>15개 연속 C 영역</td>
+<td>-</td>
+<td>#7</td>
+</tr>
+<tr class="even">
+<td>경계3</td>
+<td>8개 연속 B 영역</td>
+<td>-</td>
+<td>#8</td>
+</tr>
+</tbody>
+</table>
+<dl>
+<dt>영역</dt>
+<dd>
+<ul>
+<li>A: CL <span class="math inline">\(\pm 1\sigma\)</span></li>
+<li>B: <span class="math inline">\(\pm1 \sim \pm2 \sigma\)</span></li>
+<li>C: <span class="math inline">\(\pm2 \sim \pm3 \sigma\)</span></li>
+</ul>
+</dd>
+</dl>
+<div class="callout callout-style-default callout-important no-icon callout-titled" title="$\bar{X}-R$ 관리상한선/중심선/관리하한선 계산">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="math inline">\(\bar{X}-R\)</span> 관리상한선/중심선/관리하한선 계산
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>제품규격이 <span class="math inline">\(750 \pm40mm\)</span>이고, 측정결과 k=16, n=5, <span class="math inline">\(\sum{\bar{X}}=12,137.8\)</span>, <span class="math inline">\(\sum{R}=628\)</span> n=5일 때, <span class="math inline">\(A\)</span> = 1.342, <span class="math inline">\(A_2\)</span>=0.577, <span class="math inline">\(D_2\)</span>=4.918, <span class="math inline">\(D_4\)</span>=2.114, <span class="math inline">\(d_2\)</span>=2.326</p>
+<dl>
+<dt><span class="math inline">\(\bar{X}\)</span> 관리도</dt>
+<dd>
+<ul>
+<li><span class="math inline">\(CL = \bar{\bar{x}} = \frac{\sum\bar{x}}{k} = \frac{12137.8}{16} = 758.61\)</span></li>
+<li><span class="math inline">\(UCL = \bar{\bar{x}} + A_2\bar{R} = 758.61 + 0.577 \times 39.25 = 781.26\)</span></li>
+<li><span class="math inline">\(LCL = \bar{\bar{x}} + A_2\bar{R} = 758.61 - 0.577 \times 39.25 = 735.97\)</span></li>
+</ul>
+</dd>
+<dt>R관리도</dt>
+<dd>
+<ul>
+<li><span class="math inline">\(CL = \frac{\bar{R}}{k} = \frac{628}{16}=39.25\)</span></li>
+<li><span class="math inline">\(UCL = D_4\bar{R} = 2.114 \times 39.25 = 82.97\)</span></li>
+<li><span class="math inline">\(LCL = D_3\bar{R}\)</span> = (음수이므로 고려하지 않음)</li>
+</ul>
+</dd>
+</dl>
+</div>
+</div>
+</section>
+</section>
+<section id="sec-cpk" class="level2">
+<h2 class="anchored" data-anchor-id="sec-cpk">공정능력지수</h2>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 112-1-7, 118-2-3, 127-4-3">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+기출: 112-1-7, 118-2-3, 127-4-3
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+<p><strong>공정능력지수</strong>(Process Capability Index)는 산포와 규격 간 상대적 크기를 나타내는 지표이다.</p>
+<dl>
+<dt>산포</dt>
+<dd>
+<ul>
+<li>공정 결과물 분포, <span class="math inline">\(\mu \pm 3\sigma\)</span>, 좁을수록 좋음</li>
+</ul>
+</dd>
+<dt>규격</dt>
+<dd>
+<ul>
+<li>제품 특성 범위, LSL ~ USL로 고정됨</li>
+</ul>
+</dd>
+</dl>
+<p><span class="math display">\[
+C_p = \frac{USL - LSL}{6\sigma}
+\]</span></p>
+<p><span class="math display">\[
+C_pk = (1-k)C_p, \quad k = |\frac{\frac{USL+LSL}{2}-\bar{x}}{\frac{USL-LSL}{2}}|
+\]</span></p>
+<p><strong>공정능력지수(Cp)</strong>와 <strong>최소공정능력지수(Cpk)</strong>는 모두 생산 공정의 품질 수준을 평가하는 지표이지만, 측정하는 방식과 의미에서 차이가 있다. 아래에서 두 지표를 비교하여 설명한다.</p>
+<dl>
+<dt><strong>공정능력지수 (Cp)</strong></dt>
+<dd>
+<ul>
+<li><strong>정의</strong>: Cp는 공정의 품질이 설계 사양 범위 내에서 얼마나 일관되게 유지되는지를 나타내는 지표다. 공정이 사양의 상한선(USL)과 하한선(LSL) 사이에 얼마나 잘 맞는지, 즉 공정의 폭을 측정한다.</li>
+<li><strong>계산 방법</strong>: Cp는 공정의 허용 범위(USL - LSL)와 공정의 표준편차(σ)를 비교하여 계산한다. 계산식은 다음과 같다. <span class="math display">\[C_p = \frac{USL - LSL}{6\sigma}\]</span> 여기서,
+<ul>
+<li><strong>USL</strong>(Upper Specification Limit): 상한 규격<br>
+</li>
+<li><strong>LSL</strong>(Lower Specification Limit): 하한 규격<br>
+</li>
+<li><strong>σ</strong>: 공정의 표준편차</li>
+</ul></li>
+<li><strong>의미</strong>: Cp 값이 클수록 공정이 더 넓은 규격 범위 내에서 변동이 적고 안정적이라는 의미다. 일반적으로 Cp가 1.33 이상이면 공정이 충분히 능력이 있다고 평가된다.</li>
+<li><strong>한계</strong>: Cp는 공정이 중심을 얼마나 잘 맞추는지에 대한 정보를 제공하지 않는다. 공정이 규격 범위 내에 있지만, 중심이 맞지 않는 경우에는 문제가 될 수 있다.</li>
+</ul>
+</dd>
+<dt><strong>최소공정능력지수 (Cpk)</strong></dt>
+<dd>
+<ul>
+<li><strong>정의</strong>: Cpk는 공정이 규격 범위의 중심에서 얼마나 일관되게 유지되는지, 즉 공정이 얼마나 잘 집중되고 있는지를 나타내는 지표다. 공정이 규격 중심에 얼마나 근접해 있는지를 평가한다.</li>
+<li><strong>계산 방법</strong>: Cpk는 공정 중심에서 규격 상한선 또는 하한선까지의 거리와 공정의 표준편차를 비교하여 계산한다. 계산식은 다음과 같다. <span class="math display">\[C_{pk} = \min \left( \frac{USL - \mu}{3\sigma}, \frac{\mu - LSL}{3\sigma} \right)\]</span> 여기서,
+<ul>
+<li><strong>μ</strong>: 공정의 평균<br>
+</li>
+<li><strong>USL</strong>: 상한 규격<br>
+</li>
+<li><strong>LSL</strong>: 하한 규격<br>
+</li>
+<li><strong>σ</strong>: 공정의 표준편차</li>
+</ul></li>
+<li><strong>의미</strong>: Cpk는 공정이 규격 범위 내에서 얼마나 잘 맞춰져 있는지, 즉 공정의 중심이 규격의 중간과 얼마나 일치하는지를 평가한다. Cpk 값이 클수록 공정이 규격 범위 내에서 더 집중적으로 수행되고 있다는 의미다.</li>
+<li><strong>한계</strong>: Cpk는 공정 중심이 규격의 중간에 가깝더라도 공정의 변동이 커지면 낮게 나올 수 있다. 따라서 공정의 중심과 변동성을 모두 고려하는 지표다.</li>
+</ul>
+</dd>
+</dl>
+<p><strong>Cp와 Cpk의 차이점</strong>은 다음과 같다.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 17%">
+<col style="width: 41%">
+<col style="width: 40%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>구분</strong></th>
+<th><strong>Cp</strong></th>
+<th><strong>Cpk</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>의미</strong></td>
+<td>공정이 규격 범위 내에서 얼마나 잘 맞는지 (공정의 폭)</td>
+<td>공정이 규격 범위 내에서 얼마나 잘 집중되어 있는지 (공정의 중심)</td>
+</tr>
+<tr class="even">
+<td><strong>계산 방법</strong></td>
+<td><span class="math inline">\((\frac{USL - LSL}{6\sigma})\)</span></td>
+<td><span class="math inline">\(min\left( \frac{USL - \mu}{3\sigma}, \frac{\mu - LSL}{3\sigma} \right)\)</span></td>
+</tr>
+<tr class="odd">
+<td><strong>공정의 중심 고려 여부</strong></td>
+<td>고려하지 않음 (공정의 중심이 규격 범위 내에 있지 않아도 Cp 값은 클 수 있음)</td>
+<td>공정의 중심을 고려하며, 공정이 규격 범위 내에서 얼마나 잘 맞는지를 평가</td>
+</tr>
+<tr class="even">
+<td><strong>주요 특징</strong></td>
+<td>공정의 폭만 측정하고, 중심의 이동은 고려하지 않음</td>
+<td>공정의 중심 이동도 고려하므로 Cp보다 더 정확한 품질 평가 가능</td>
+</tr>
+<tr class="odd">
+<td><strong>수치가 1.33 이상일 때</strong></td>
+<td>공정이 규격을 잘 맞춘다고 평가</td>
+<td>공정이 규격을 잘 맞추고 중심이 잘 맞는다고 평가</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Cp</strong>는 공정의 변동성을 기반으로 공정이 규격 범위 내에서 얼마나 잘 맞는지를 평가하지만, <strong>Cpk</strong>는 공정의 변동성과 중심을 동시에 고려하여 공정이 얼마나 규격 범위 내에서 잘 집중되고 있는지를 평가한다. <strong>Cp</strong>는 공정의 폭을 나타내고, <strong>Cpk</strong>는 공정의 품질을 더 정확하게 평가한다. 따라서 <strong>Cpk</strong>가 <strong>Cp</strong>보다 실제 품질을 더 잘 반영하는 지표라고 할 수 있다.</p>
+<div class="callout callout-style-default callout-important no-icon callout-titled" title="공정지수계산">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+공정지수계산
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>제품규격이 <span class="math inline">\(750 \pm40mm\)</span>이고, 측정결과 k=16, n=5, <span class="math inline">\(\sum\bar{X}=12,137.8\)</span>, <span class="math inline">\(\sum{R}=628\)</span> n=5일 때, <span class="math inline">\(A\)</span> = 1.342, <span class="math inline">\(A_2\)</span>=0.577, <span class="math inline">\(D_2\)</span>=4.918, <span class="math inline">\(D_4\)</span>=2.114, <span class="math inline">\(d_2\)</span>=2.326</p>
+<p><span class="math inline">\(\bar{\bar{x}}\)</span> = 12137.8/16 = 758.61이고 M = (790+710)/2 = 750이므로 산포가 USL측으로 치우침이 있다. 따라서 <span class="math inline">\(C_{pk}\)</span>를 계산한다.</p>
+<p><span class="math display">\[
+C_{pk} = (1-k)C_p = (1 - 0.21) \times \frac{790-710}{6 \times \frac{\bar{R}}{d_2}} = 0.62
+\]</span></p>
+<p><span class="math display">\[
+k = \frac{|\bar{\bar{x}}-M|}{\frac{T}{2}} = \frac{758.61 - 750}{\frac{790-710}{2}} = 0.21
+\]</span></p>
+<dl>
+<dt>판정</dt>
+<dd>
+<ul>
+<li><span class="math inline">\(C_{pk}\)</span> = 0.62 &lt; 0.67이므로 4등급 판정되며 공정능력이 매우 부족하다고 판단된다.</li>
+</ul>
+</dd>
+</dl>
+</div>
+</div>
+<div class="callout callout-style-default callout-important no-icon callout-titled" title="공정 부적합수 관리도">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+공정 부적합수 관리도
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>군(k)</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+<th>10</th>
+<th>11</th>
+<th>12</th>
+<th>13</th>
+<th>14</th>
+<th>15</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>시료크기(n)</td>
+<td>1.0</td>
+<td>1.0</td>
+<td>1.0</td>
+<td>1.0</td>
+<td>1.3</td>
+<td>1.3</td>
+<td>1.3</td>
+<td>1.3</td>
+<td>1.3</td>
+<td>1.2</td>
+<td>1.2</td>
+<td>1.2</td>
+<td>1.7</td>
+<td>1.7</td>
+<td>1.7</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>부적합수</td>
+<td>2</td>
+<td>5</td>
+<td>3</td>
+<td>2</td>
+<td>1</td>
+<td>5</td>
+<td>2</td>
+<td>4</td>
+<td>2</td>
+<td>6</td>
+<td>4</td>
+<td>1</td>
+<td>8</td>
+<td>3</td>
+<td>8</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>관리한계선을 계산하고 관리도 작성 및 해석하시오.</p>
+<hr>
+<p>주어진 데이터는 단위당 부적합수를 나타내므로 u관리도를 작성하여 공정을 해석한다. u관리도는 시료 면적이나 길이 등 일정하지 않을 때 사용하며, UCL과 LCL이 CL(중심선)을 기준으로 대칭적이고 계단식이 된다.</p>
+<p><span class="math display">\[
+CL = \bar{u} = \frac{\sum{c}}{\sum{n}} = \frac{56}{19.2} = 2.92
+\]</span></p>
+<p>단위 면적당 UCL과 LCL을 각각 계산한다. LCL 경우 음(-) 값이 되므로 고려하지 않는다.</p>
+<dl>
+<dt>n = 1.0일때</dt>
+<dd>
+<span class="math display">\[
+UCL = \bar{u} + 3\sqrt{\frac{\bar{u}}{n}} = 2.92 + 3\sqrt{\frac{2.92}{1.0}} = 8.04
+\]</span>
+</dd>
+<dt>n = 1.2일때</dt>
+<dd>
+<span class="math display">\[
+UCL = \bar{u} + 3\sqrt{\frac{\bar{u}}{n}} = 2.92 + 3\sqrt{\frac{2.92}{1.2}} = 7.59
+\]</span>
+</dd>
+<dt>n = 1.3일때</dt>
+<dd>
+<span class="math display">\[
+UCL = \bar{u} + 3\sqrt{\frac{\bar{u}}{n}} = 2.92 + 3\sqrt{\frac{2.92}{1.3}} = 7.41
+\]</span>
+</dd>
+<dt>n = 1.7일때</dt>
+<dd>
+<span class="math display">\[
+UCL = \bar{u} + 3\sqrt{\frac{\bar{u}}{n}} = 2.92 + 3\sqrt{\frac{2.92}{1.7}} = 6.85
+\]</span>
+</dd>
+</dl>
+<p>모든 단위당 부적합품수가 관리상한선 내에 있으므로 관리상태에 있다고 판단할 수 있다.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-important no-icon callout-titled" title="공정능력지수">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+공정능력지수
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>가공품 규격이 8.40∼8.60(mm)인 부품의 두께를 품질특성으로 하는 자동차부품회사에서 n=4, k=20의 데이터를 얻어 관리도를 작성하였다. 이때, <span class="math inline">\(\sum\bar{X}=171, \sum{R}=1.6\)</span>인 자료를 얻었다. 다음 물음에 답하시오.(단, n=4일 때, <span class="math inline">\(d_2\)</span> = 2.059이다.)</p>
+<hr>
+<dl>
+<dt>공정능력지수 계산을 위한 사전 변수</dt>
+<dd>
+<ul>
+<li><span class="math inline">\(\bar{\bar{x}} = \frac{\sum{\bar{X}}}{k} = \frac{171}{20} = 8.55\)</span></li>
+<li><span class="math inline">\(\hat{\sigma} = \frac{\bar{R}}{d_2} = \frac{0.08}{2.059} = 0.03885\)</span></li>
+<li><span class="math inline">\(\bar{R} = \frac{\sum{R}}{k} = \frac{1.6}{20} = 0.08\)</span></li>
+<li><span class="math inline">\(L = 0.40, \quad U = 8.60, \quad M = \frac{U+L}{2} = \frac{8.60 + 8.40}{2} = 8.50\)</span></li>
+</ul>
+</dd>
+<dt>최소공정능력지수</dt>
+<dd>
+<span class="math inline">\(C_{pkU} = \frac{U - \bar{\bar{x}}}{3\sigma} = \frac{8.60 - 8.50}{3 \times 0.03885} = 0.4290\)</span>
+</dd>
+</dl>
+<p><span class="math inline">\(C_{pk} = 0.4290 \le 0.67\)</span>이므로 해당 공정능력은 매우 부족하다고 판단된다.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 34%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Cpk 값 범위</th>
+<th>공정 능력 평가</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><font color="#FFA500">Cpk &lt; 0.67</font></td>
+<td>매우 불량 (Very Poor)</td>
+<td>공정이 심각하게 규격을 벗어날 가능성이 높다. 즉시 개선 필요</td>
+</tr>
+<tr class="even">
+<td>0.67 ≤ Cpk &lt; 1.00</td>
+<td>불량 (Poor)</td>
+<td>규격을 벗어날 위험이 크며, 개선이 필요하다</td>
+</tr>
+<tr class="odd">
+<td>1.00 ≤ Cpk &lt; 1.33</td>
+<td>보통 (Fair)</td>
+<td>규격을 간신히 만족하나, 안정성이 부족하다</td>
+</tr>
+<tr class="even">
+<td>1.33 ≤ Cpk &lt; 1.67</td>
+<td>양호 (Good)</td>
+<td>공정이 규격을 잘 만족하며, 안정적인 수준이다</td>
+</tr>
+<tr class="odd">
+<td>Cpk ≥ 1.67</td>
+<td>우수 (Excellent)</td>
+<td>공정이 매우 안정적이며, 규격을 충분히 만족한다</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="품질경영-4대-절대-조건" class="level2">
+<h2 class="anchored" data-anchor-id="품질경영-4대-절대-조건">품질경영 4대 절대 조건</h2>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 103-2-5">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+기출: 103-2-5
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+<p>P.B. Crosby 품질경영 4대 절대조건(Absolute of Quality Management)은 필립 Crosby가 품질관리 이론을 정립하면서 제시한 품질경영 핵심 원치이다. 품질은 “결함 없는 제품”이라는 개념으로 정의하며, 이를 다성하기 위한 4가지 절대 조건을 제시했다. 이 네가지 절대 조건은 품지 경영 실행과 평가를 위한 기본적인 원칙을 제공한다.</p>
+<dl>
+<dt>품질은 적합성(conformance to requirements)이다.</dt>
+<dd>
+<ul>
+<li>품질이란 “고객 요구 사항과 사양에 부합하는지 여부”를 의미한다. 품질은 단순히 제품이나 서비스 특성이 아니라 <strong>고객 요구와 기대를 정확히 충족시키는 것</strong>이 핵심이다. 이는 품질을 결함없는 상태로 정의하는 개념과 연결된다.</li>
+<li>품지은 “적합성”, 즉 고객 요구를 충족하는 정도로 정의하며, 이를 기반으로 품질을평가한다.</li>
+</ul>
+</dd>
+<dt>품질은 예방해야 한다.</dt>
+<dd>
+<ul>
+<li>품질을 향상시키는 가장 좋은 방법은 “<strong>문제를 사전에 예방하는 것</strong>”이다. Crosby는 품질이 결함을 피하는 데 집중해야 하며, 결함이 발생한 후 이를 수정하는 것보다는 결함이 발생하지 않도록 예방하는 데 초점을 맞춰야 한다고 강조했다.</li>
+<li>이 원칙은 품질 관리가 단순히 문제를 해결하는 것이 아니라, <strong>초기 설계와 개발 단계에서부터 품질을 고려하여 잠재적 결함을 방지</strong>하는 데 중점을 두어야 한다는 것을 의미한다.</li>
+</ul>
+</dd>
+<dt>품질 측정은 “결함 없음”이다.</dt>
+<dd>
+<ul>
+<li>Crosby는 품질을 측정하는 방법을 “<strong>결함 없음(zero defects)</strong>” 으로 정의했다. 즉, 품질을 평가할 때 결함이 하나도 없다는 상태를 목표로 해야 한다는 것이다. 이때 결함이란 고객의 요구를 충족하지 못한 부분을 의미한다.</li>
+<li>품질 관리는 “결함이 없다”고 판단될 때까지 개선하고, 이를 목표로 삼아야 한다. 결함 없는 상태가 품질의 지표이며, 결함이 없는 상태를 지향해야 한다는 점이 핵심이다.</li>
+</ul>
+</dd>
+<dt>품질을 위한 비용은 “무결점”을 만드는 데 드는 비용이 가장 경제적이다.</dt>
+<dd>
+<ul>
+<li>Crosby는 품질 개선을 위해서는 결함을 없애는 데 드는 비용이 결국 가장 적게 든다고 주장했다. 즉, 품질 관리에서의 비용은 결함을 발견하고 수정하는 비용보다, 초기 단계에서 결함을 예방하고 품질을 보장하는 데 드는 비용이 훨씬 더 경제적이라고 본 것이다.</li>
+<li>품질을 유지하는 데 드는 비용을 “결함을 예방하는 데 드는 비용” 으로 정의하며, 문제를 나중에 해결하려는 것보다 초기부터 품질을 관리하는 것이 장기적으로 훨씬 비용 효율적이라는 것을 강조했다.</li>
+</ul>
+</dd>
+</dl>
+<p>정리하면, Crosby의 품질경영 4대 절대조건은 <strong>품질의 정의, 예방의 중요성, 품질의 측정 방법, 품질을 위한 비용 관리</strong>에 대한 철학을 담고 있다. 이를 통해 품질을 단순히 결함을 줄이는 것이 아니라, 고객의 요구를 충족시키기 위해 끊임없이 개선하는 과정으로 바라보는 접근 방식을 제시하고 있다. 이 4대 절대조건을 바탕으로 품질경영을 수행하면, 조직은 더 높은 품질 수준을 유지하면서도 효율적인 비용 관리가 가능하다.</p>
+</section>
+<section id="신뢰성-관리" class="level2">
+<h2 class="anchored" data-anchor-id="신뢰성-관리">신뢰성 관리</h2>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 103-3-3">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+기출: 103-3-3
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+<p><strong>신뢰성</strong>(reliability)은 부분품, 장치, 기기, 시스템이 주어진 어떤 조건 아래에서 의도했던 기능을 수행하는 확률, 즉 “고장나지 않을 확률”을 의미한다. 따라서 신뢰성은 시간 변화에 따른 동적인 품질이다. 신뢰성 평가척도로는 신뢰도, 평균고장간격, 평균고장시간 등이 있다.</p>
+<p><strong>신뢰도</strong>는 신뢰성에 대한 양적 표시로 임무기간 중 일어나는 단위시간당 고장회수로 나타내는 것이 일반적이며 이를 시간 함수로 볼 때 R(t)로 나타낸다. 이것은 제품이 t 시간 동안 고장이 나지 않는 확률이다. 즉, 제품을 사용하기 시작해서 어느 시점까지 전체 몇 %가 고장나지 않고 남아 있는가 하는 잔존률에 해당한다.</p>
+<p><strong>신뢰성관리</strong>는 성능과 신리ㅗ성, 보전성 그리고 가동성이 높은 제품을 경제적으로 제조하기 위해서 제품 개발로부터 설계, 제조, 사용 및 보전에 이르기까지 제품 전 생명 주기(life cycle)에 걸쳐 미리 설정된 신뢰성 계획에 따라 제품 신뢰성을 확보하고 유지하기 위한 종합적인 관리활동을 가리킨다.이를 위하여 신뢰성을 정량적으로 측정할 수 있는 척도를 설정하고 이를 바탕으로 불량원인을 발견하고고장 원인을 찾아내서 개선하여 가능한 그 영향을 줄이거나 제거시키고자 하는 활동이다.</p>
+<p>품질경영적 관점에서 볼 때 신뢰성은 품질특성 중 하나이고 품질보증 기능을 한다. 따라서 신뢰성관리는 품질경영과 함께 상호 유기적인 관계에서 전개되어야 한다.</p>
+<p>신뢰성은 고유신뢰성과 사용신뢰성으로 구분할 수 있다.</p>
+<dl>
+<dt>고유신뢰성</dt>
+<dd>
+<ul>
+<li>제품 자체가 가지고 있는 고유한 신뢰성으로 제품 수명을 연장하고 고장을 적게 하는 신뢰성 설계나 공정관리, 공정해석에 의해 기술적 요인을 찾아내고 이를 시정하는 품질관리 활동으로 달성된다.</li>
+<li>증대방안
+<ul>
+<li>설계부문: 용장성 설계, 부하 경감, 안전계수, 환경조건 추정, 안저장치, 인간공학적 적합성 등</li>
+<li>제조부문: 자재, 기계, 제조방법, 작업관리, 품질관리 등</li>
+</ul></li>
+</ul>
+</dd>
+<dt>사용신뢰성</dt>
+<dd>
+<ul>
+<li>제품이 만들어진 후 설계나 제조과정에서 형성된 제품 고유신뢰성이 유지 및 관리되도록 하는 신뢰성을 말한다.</li>
+<li>증대방안
+<ul>
+<li>사용부문: 사용방법, 교육훈련, 취급설명</li>
+<li>보전부문: 보전방법, 예비품 관리, 사용법, 안전요원 훈련</li>
+<li>환경부문: 저장, 운반, 포장, 사용 환경</li>
+</ul></li>
+</ul>
+</dd>
+</dl>
+<p>고장 통계에 따른 신뢰성 비율은 다음과 같다.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+00[신뢰성]
+01[고유신뢰성]
+02[사용신뢰성]
+
+11["부품, 재료에 의한 고장&lt;br&gt;30%"]
+12["설계 기술에 의한 고장&lt;br&gt;40%"]
+13["제조 기술에 의한 고장&lt;br&gt;10%"]
+
+21["사용상 고장(운송,환경,조작,취급 등)&lt;br&gt;20%"]
+
+00 --- 01 &amp; 02
+01 --- 11 &amp; 12 &amp; 13
+02 --- 21
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>신뢰성 설계 3요소는 <strong>고유 기술적 요소</strong>, <strong>소리 통계적 요소</strong>, <strong>관리 기술적 요소</strong>이다.</p>
+<dl>
+<dt>고유 기술적 요소</dt>
+<dd>
+<ul>
+<li>내 스트레스 설계</li>
+<li>실용 설계</li>
+<li>내 소음 설계</li>
+<li><strong>중복 설계</strong>(redundancy)</li>
+<li><strong>fail safe 설계</strong></li>
+<li><strong>fool proof 설계</strong></li>
+<li><strong>derating설계</strong></li>
+<li>안전 설계</li>
+<li>FMEA</li>
+<li>FTA</li>
+<li>보전성 설계</li>
+<li>신뢰성 시험</li>
+<li>스크리닝</li>
+<li>고장 해석 등</li>
+</ul>
+</dd>
+<dt>수리 통계적 요소</dt>
+<dd>
+<ul>
+<li>신뢰도 예측</li>
+<li>신뢰도 배분</li>
+<li>신뢰성 발취 시험</li>
+<li>데이터 해석</li>
+<li>실험계획법</li>
+<li>시뮬레이션</li>
+<li>다구치 설계</li>
+<li>SQC 등</li>
+</ul>
+</dd>
+<dt>관리 기술적 요소</dt>
+<dd>
+<ul>
+<li>설계심사(DR)</li>
+<li>Check List</li>
+<li>표준화</li>
+<li>Trade off</li>
+<li>Configuration관리</li>
+<li>TQC</li>
+<li>QC 신 7가지 도구</li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="aql" class="level2">
+<h2 class="anchored" data-anchor-id="aql">AQL</h2>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 109-1-10">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+기출: 109-1-10
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+<p><strong>AQL</strong>(Acceptable quality level)은 합격판정 샘플링검사에서 공정평균 품질수준으로 구매자가 만족할 수 있는 최대 불량률을 뜻하며, 흔히 합격품질지수라고 부른다. 이 때 로트 합격확률은 보통 95% 수준이다.</p>
+<p><strong>AOQL</strong>(Average outgoing quality limit)은 AOQ가 최대가 되는 출하품질을 뜻한다. 즉, 입고 제품 최대불량률(%)을 나타낸다.</p>
+<p>AOL은 투입되는 원자재 품질, 로트가 합격할 확률, 포본 및 로트 크기에 따라 달라질 수 있다. 입고되는 원자재 품질이 아주 우수하면 출검 품질도 우수하나 원자재 품질이 불량하면 로트 전체가 기각되기에 불량 부품이 통과되지 않기 때문에 이 경우에도 출검 품질은 우수하게 된다. 입고되는 원자재 품질이 아주 좋지도 아주 나쁘지도 않으면 출검 품질이 더 나빠지고 출검 수준 불량률이 평균 출검품질한계라고 알려지 최대값에 근접하게 된다.</p>
+<p>일반적으로 로트 크기를 N, 로트 불량률을 p라고 할 때, AOQ 값은 p값이 커짐에 따라 증가하게 되나 어느 수준을 지나게 되면 불합격될 가능성이 높아져 AOQ는 오히려 감소하게 된다.</p>
+</section>
+<section id="품질비용" class="level2">
+<h2 class="anchored" data-anchor-id="품질비용">품질비용</h2>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 112-4-1, 118-4-2, 127-3-2">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+기출: 112-4-1, 118-4-2, 127-3-2
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+<p><strong>품질비용</strong>(Quality Costs, Q-cost)은 제품이나 서비스 품질을 유지하거나 향상시키기 위해 발생하는 모든 비용을 의미한다. 품질비용은 보통 4가지 주요 카테고리로 분류되며, 각 카테고리에서 발생하는 비용은 다음과 같다.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+
+00[품질비용]
+10[예방비용]
+20[평가비용]
+30[실패비용]
+31[내부실패비용]
+32[외부실패비용]
+
+00 --- 10 &amp; 20 &amp; 30
+30 --- 31 &amp; 32
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<dl>
+<dt>예방비용 (Prevention Costs)</dt>
+<dd>
+<ul>
+<li>예방비용은 품질 문제를 미리 방지하기 위한 활동에 드는 비용이다. 이는 품질을 향상시키고 결함을 사전에 제거하는 데 투입되는 자원이다.
+<ul>
+<li>교육 및 훈련: 직원들에게 품질 관리 및 프로세스 개선에 대한 교육을 제공하는 비용</li>
+<li>품질 계획 및 설계: 품질 기준을 설정하고, 제품 개발 초기에 품질을 고려하여 설계하는 비용</li>
+</ul></li>
+</ul>
+</dd>
+<dt>평가비용 (Appraisal Costs)</dt>
+<dd>
+<ul>
+<li>평가비용은 제품이나 서비스 품질을 측정하고 검사하는 과정에서 발생하는 비용이다. 품질을 확인하고 유지하기 위해 필요한 검사 및 테스트 비용이 포함된다.
+<ul>
+<li>시험 및 검사: 제품이 생산된 후 품질을 검사하고 시험하는 데 드는 비용 (예: 생산라인에서의 품질 검사)</li>
+<li>감사 및 평가: 내부 품질 감사나 외부 인증 기관에 의한 품질 평가 비용</li>
+</ul></li>
+</ul>
+</dd>
+<dt>내부 실패비용 (Internal Failure Costs)</dt>
+<dd>
+<ul>
+<li>내부 실패비용은 제품이 고객에게 전달되기 전에 발생하는 결함을 수정하는 데 드는 비용이다. 즉, 내부에서 품질 문제가 발견되어 이를 해결하기 위한 비용이다.
+<ul>
+<li>불량품 재작업: 생산 과정 중 결함이 발견되어 제품을 수정하거나 재작업하는 데 드는 비용</li>
+<li>폐기 비용: 품질 기준에 미달한 불량품을 폐기하는 데 드는 비용</li>
+</ul></li>
+</ul>
+</dd>
+<dt>외부 실패비용 (External Failure Costs)</dt>
+<dd>
+<ul>
+<li>외부 실패비용은 제품이나 서비스가 고객에게 전달된 후에 발생하는 품질 문제로 인한 비용이다. 고객 불만이나 반환, 리콜 등과 관련된 비용이 포함된다.
+<ul>
+<li>리콜 비용: 품질 문제가 있는 제품을 시장에서 회수하는 데 드는 비용</li>
+<li>고객 불만 처리 및 보상: 품질 문제로 인해 고객에게 불만을 처리하고 보상하는 데 드는 비용 (예: 환불, 교환 등)</li>
+</ul></li>
+</ul>
+</dd>
+</dl>
+<p>간단히 요약하면 다음과 같다.</p>
+<dl>
+<dt>요약</dt>
+<dd>
+<ul>
+<li>예방비용: 품질 문제를 사전에 예방하기 위한 비용</li>
+<li>평가비용: 품질을 측정하고 검사하는 데 드는 비용</li>
+<li>내부 실패비용: 제품이 고객에게 전달되기 전 발생한 품질 문제 수정 비용</li>
+<li>외부 실패비용: 제품이 고객에게 전달된 후 발생한 품질 문제 처리 비용</li>
+</ul>
+</dd>
+</dl>
+<p>이 네 가지 품질비용 카테고리는 제품이나 서비스 품질 향상을 위해 적절한 관리와 투자로 문제를 최소화하는 데 중요한 역할을 한다.</p>
+</section>
+<section id="측정시스템-측정오차-유형" class="level2">
+<h2 class="anchored" data-anchor-id="측정시스템-측정오차-유형">측정시스템 측정오차 유형</h2>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 115-1-13, 130-3-6">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+기출: 115-1-13, 130-3-6
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+<p>측정시스템에서 측정오차 유형에는 5가지가 있다.</p>
+<dl>
+<dt>측정오차</dt>
+<dd>
+<ol type="1">
+<li>정확성(Bias): 동일한 계측기로 동일한 시료를 측정한 경우, 측정치 평균과 기준값(참값) 간 차이로 정확성, 치우침, 편의라고도 한다. <br><img src="https://sixsigmastudyguide.com/wp-content/uploads/2021/04/msa4.png" class="img-fluid" alt="https://sixsigmastudyguide.com/measurement-systems-analysis/"></li>
+<li>반복성(Repeatability): 동일한 측정자가 동일한 시료로 여러 번 측정하여 얻은 데이터 산포 크기를 의미하며 산포 크기가 작을수록 반복성이 좋다고 한다. 정밀도라고도한다. <br><img src="https://sixsigmastudyguide.com/wp-content/uploads/2021/04/msa7.png" class="img-fluid" alt="https://sixsigmastudyguide.com/measurement-systems-analysis/"></li>
+<li>재현성(Reproductibility): 서로 다른 측정자가 동일한 기계로 동일 시료를 측정하였을 때, 얻은 측정치 변동값(평균값 차이)으로서 측정자 간 데이터 값 차이를 의미한다. <br><img src="https://sixsigmastudyguide.com/wp-content/uploads/2021/04/msa8.png" class="img-fluid" alt="https://sixsigmastudyguide.com/measurement-systems-analysis/"></li>
+<li>안전성(Stability): 동일한 측정시스템으로일정한 시료를 정기적으로측정했을 때 얻은 측정치 변동(평균값 차이)을 말한다. <br><img src="https://sixsigmastudyguide.com/wp-content/uploads/2021/04/msa6.png" class="img-fluid" alt="https://sixsigmastudyguide.com/measurement-systems-analysis/"></li>
+<li>직진성(Linearity): 계측기 작동범위 내에서 발생하는 참값과 측정값 간 차이, 즉 편기값들 차이로서 측정 일관성을 평가하는데 사용한다. 직진선에 대한 적합성 여부는 회귀직선 결정계수로 판단하며, 선형성이라고도 한다. <br><img src="https://sixsigmastudyguide.com/wp-content/uploads/2021/04/msa5.png" class="img-fluid" alt="https://sixsigmastudyguide.com/measurement-systems-analysis/"></li>
+</ol>
+</dd>
+</dl>
+</section>
+<section id="품질평가" class="level2">
+<h2 class="anchored" data-anchor-id="품질평가">품질평가</h2>
+<section id="sec-mbnqa" class="level3">
+<h3 class="anchored" data-anchor-id="sec-mbnqa">MBNQA</h3>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://www.jksqm.org/upload/thumbnails/jksqm-44-2-277f1.gif" class="img-fluid figure-img"></p>
+<figcaption>https://www.jksqm.org/journal/Figure.php?xn=jksqm-44-2-277.xml&amp;id=</figcaption>
+</figure>
+</div>
+</center>
+<p><strong>MBNQA(말콤 볼드리지 국가 품질상)</strong>는 미국에서 조직의 품질 경영과 성과 우수성을 평가하는 대표적인 상이다. 평가 기준은 7개 범주로 구성되며, 각 범주는 조직의 경쟁력과 지속 가능성을 높이는 데 중점을 둔다.</p>
+<dl>
+<dt>1 <strong>리더십(Leadership)</strong></dt>
+<dd>
+<ul>
+<li>조직의 비전, 가치 및 윤리를 설정하고, 조직의 방향을 주도하는 경영진의 역할을 평가한다.<br>
+</li>
+<li>경영자가 조직 문화 형성, 거버넌스, 사회적 책임 수행에 어떻게 기여하는지를 중시한다.</li>
+</ul>
+</dd>
+<dt>2 <strong>전략 기획(Strategy Planning)</strong></dt>
+<dd>
+<ul>
+<li>조직의 전략 수립 및 실행 과정을 평가한다.<br>
+</li>
+<li>중장기 목표 설정, 리스크 관리, 자원 배분 등을 통해 조직의 경쟁력을 확보하는 방법을 분석한다.</li>
+</ul>
+</dd>
+<dt>3 <strong>고객 중심(Customer Focus)</strong></dt>
+<dd>
+<ul>
+<li>고객의 요구와 기대를 파악하고 이를 반영하는 고객 중심 경영을 평가한다.<br>
+</li>
+<li>고객 만족, 충성도 및 고객과의 관계 유지 전략을 중시한다.</li>
+</ul>
+</dd>
+<dt>4 <strong>측정, 분석 및 지식 관리(Measurement, Analysis, and Knowledge Management)</strong></dt>
+<dd>
+<ul>
+<li>성과 측정, 분석 및 조직 내 지식 관리를 평가한다.</li>
+<li>데이터 기반 의사결정, 정보의 정확성, 조직 전반의 학습 및 혁신을 촉진하는 시스템을 강조한다.</li>
+</ul>
+</dd>
+<dt>5 <strong>인적 자원(Workforce Focus)</strong></dt>
+<dd>
+<ul>
+<li>인재 개발, 동기 부여, 복지 및 근무 환경을 평가한다.<br>
+</li>
+<li>조직 구성원의 역량 강화와 만족도를 높이기 위한 프로그램을 중요하게 다룬다.</li>
+</ul>
+</dd>
+<dt>6 <strong>운영 프로세스(Operation Focus)</strong></dt>
+<dd>
+<ul>
+<li>조직의 핵심 운영 프로세스와 혁신 활동을 평가한다.
+<ul>
+<li>프로세스 효율성, 생산성, 공급망 관리 및 지속적인 개선 노력이 포함된다.</li>
+</ul></li>
+</ul>
+</dd>
+<dt>7 <strong>성과(Results)</strong></dt>
+<dd>
+<ul>
+<li>재무 성과, 고객 만족도, 시장 점유율, 직원 만족도 등 조직의 전반적인 성과를 평가한다.<br>
+</li>
+<li>조직의 전략과 운영이 실제로 어떤 결과를 창출했는지를 구체적으로 분석한다.</li>
+</ul>
+</dd>
+</dl>
+<p>MBNQA의 7개 범주는 조직 전반의 <strong>전략, 실행 및 결과</strong>를 체계적으로 평가하여 <strong>경쟁력 강화와 지속 가능한 성장</strong>을 도모한다. 이를 통해 조직은 품질 혁신을 달성하고, 글로벌 시장에서 경쟁 우위를 확보할 수 있다.</p>
+</section>
+</section>
+<section id="품질관리-도구" class="level2">
+<h2 class="anchored" data-anchor-id="품질관리-도구">품질관리 도구</h2>
+<section id="qc-7가지-도구" class="level3">
+<h3 class="anchored" data-anchor-id="qc-7가지-도구">QC 7가지 도구</h3>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 127-1-2">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+기출: 127-1-2
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 8%">
+<col style="width: 46%">
+<col style="width: 44%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>구분</th>
+<th>정의</th>
+<th>용도</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>층별 (Stratification)</td>
+<td>집단을 구성하고 있는 많은 데이터를 어떤 특징에 따라서 몇 개의 부분집단으로 나누는 것</td>
+<td>작업자(조별, 숙련도별), 기계(라인별, 위치별), 시간(오전/오후별, 주/야간별) 등을 파악</td>
+</tr>
+<tr class="even">
+<td>체크시트 (Check Sheet)</td>
+<td>주로 계수치의 데이터(불량수, 결점수 등)가 분류항목의 어디에 집중되어 있는지를 알아보기 쉽게 나타낸 그림이나 표</td>
+<td>계수치 데이터의 불량 수, 결점 수 파악</td>
+</tr>
+<tr class="odd">
+<td>파레토 그림 (Pareto Diagram)</td>
+<td>불량, 결점, 고장 등의 발생건수(또는 손실금액)를 분류, 항목별로 나누고 크기 순서대로 나열해 놓은 그림</td>
+<td>모든 품질 문제 중에서 핵심적인 원인 파악</td>
+</tr>
+<tr class="even">
+<td>히스토그램 (Histogram)</td>
+<td>길이, 무게 등의 계량치 데이터가 어떤 분포를 나타내는지 알기 위하여 도수분포표를 만든 후 기둥그래프의 형태로 그린 그림</td>
+<td>계량치 데이터의 중심값과 분산 파악</td>
+</tr>
+<tr class="odd">
+<td>특성요인도 (Cause and Effect Diagram)</td>
+<td>결과(품질특성)에 원인(품질특성에 영향을 주는 요인)이 어떻게 관계하고 있는가를 한눈으로 볼 수 있도록 그린 생선뼈 모양의 그림</td>
+<td>불량원인 파악</td>
+</tr>
+<tr class="even">
+<td>산점도 (Scatter Diagram)</td>
+<td>그래프 용지 위에 서로 대응하는 두 개의 짝으로 된 데이터를 점으로 나타낸 그림</td>
+<td>두 개의 짝으로 된 데이터의 경향이나 밀집현상 및 인과관계 파악</td>
+</tr>
+<tr class="odd">
+<td>각종 그래프</td>
+<td>표현 내용에 따라 계통도표, 예정도표, 기록도표, 통계도표 등을 표나 그래프로 나타낸 그림</td>
+<td>공장조직도, 분임조 활동실시계획표, 온도기록표, 원그래프, 꺾은선그래프 등을 파악</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="신-qc-7가지-도구" class="level3">
+<h3 class="anchored" data-anchor-id="신-qc-7가지-도구">신 QC 7가지 도구</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 77%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>도구</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>친화도법 (Affinity Diagram)</strong></td>
+<td>불량 요인(4M)마다 데이터를 구분해서 분석하고 문제를 체계적으로 정리하는 도구</td>
+</tr>
+<tr class="even">
+<td><strong>연관도법 (Relation Diagram)</strong></td>
+<td>데이터 수집 및 문제 분석을 효율적으로 수행하기 위한 도구</td>
+</tr>
+<tr class="odd">
+<td><strong>매트릭스도법 (Matrix Diagram)</strong></td>
+<td>데이터 산포 상태를 파악하고, 다양한 항목 간의 관계를 시각적으로 표현하는 도구</td>
+</tr>
+<tr class="even">
+<td><strong>매트릭스 데이터 해석법 (Matrix Data Interpretation)</strong></td>
+<td>결과(특성)와 원인(요인)의 관계를 한눈에 파악할 수 있도록 그린 그림</td>
+</tr>
+<tr class="odd">
+<td><strong>계통도법 (Systematic Diagram)</strong></td>
+<td>문제 중점화 및 우선순위를 파악하기 위한 도구</td>
+</tr>
+<tr class="even">
+<td><strong>애로우 다이어그램법 (Arrow Diagram)</strong></td>
+<td>숫자를 시각화하여 정보를 쉽게 전달하고, 공정이 일정한 품질 수준을 유지하는지 판별하는 도구</td>
+</tr>
+<tr class="odd">
+<td><strong>PDPC (Process Decision Program Chart)</strong>법</td>
+<td>두 개의 인자 간의 관계를 파악하고, 문제 발생 시 대처 방안을 시나리오로 구성하는 도구</td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation column-body">
+  <div class="nav-page nav-page-previous">
+      <a href="./0802생산성관리.html" class="pagination-link" aria-label="생산성 관리">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">생산성 관리</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./0901사업성분석.html" class="pagination-link" aria-label="사업성분석">
+        <span class="nav-page-text"><span class="chapter-title">사업성분석</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/yeonkyupark/PEPC/edit/main/0803품질관리.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div></div></footer></body></html>

@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.39">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>사업성분석 – 공장관리기술사(2E)</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./0902원가관리.html" rel="next">
+<link href="./0803품질관리.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-160d5d975b9dfffeaf699822bedbd9bf.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./0901사업성분석.html">09. 원가관리</a></li><li class="breadcrumb-item"><a href="./0901사업성분석.html"><span class="chapter-title">사업성분석</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">공장관리기술사(2E)</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://yeonkyupark.github.io/" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-globe"></i></a>
+    <a href="https://www.instagram.com/yeonkyu.park/" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-instagram"></i></a>
+    <a href="https://github.com/yeonkyupark/PEPC" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">들어가는 글</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">01. 생산전략</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0101경쟁우위생산전략.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">경쟁우위 생산전략</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0102생산구조와방식.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">생산구조와 방식(Layout)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0103구매와외주전략.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">구매와 외주전략</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0104인력과직무설계.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">인력과 직무설계</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0105사업환경분석.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">사업환경 분석</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">02. 생산운영</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0201수요예측.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">수요예측</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0202프로세스진도관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">프로세스 진도관리</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">03. 물류관리</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0301공급망관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">공급망 관리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0302물류관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">물류관리</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">04. 재고관리</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0401재고관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">재고관리</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">05. 공정관리</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0501생산계획수립.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">생산계획 수립</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0502공정설계.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">공정설계</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0503작업계획수립.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">작업계획 수립</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0504표준작업관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">표준작업 관리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0505공정개선.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">공정개선</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">06. 설비관리</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0601설비계획.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">설비계획</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0602설비보전관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">설비보전 관리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0603자재취급및운반관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">자재취급 및 운반관리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0604환경관리및안전관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">환경 관리 및 안전 관리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0605시설및유틸리티관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">시설 및 유틸리티 관리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0606공장자동화기술.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">공장 자동화 기술</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">07. 작업관리</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0701작업방법및시간연구.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">작업방법 및 시간연구</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false">
+ <span class="menu-text">08. 생산성관리</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0801프로세스분석과개선.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">프로세스 분석과 개선</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0802생산성관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">생산성 관리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0803품질관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">품질관리</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true">
+ <span class="menu-text">09. 원가관리</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0901사업성분석.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">사업성분석</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0902원가관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">원가관리</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false">
+ <span class="menu-text">10. 경제성 공학</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1001가치공학.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">가치공학</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1002경영과학.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">경영과학</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false">
+ <span class="menu-text">11. 생산지원기술</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1101정보화활용기술.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">정보화 활용 기술</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1102제품개발기술.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">제품개발 기술</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1103서비스운영관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">서비스 운영관리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1104생산혁신기술.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">생산혁신기술</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1105신기술및동향.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">신기술및동향</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false">
+ <span class="menu-text">12. ISO</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1201ISO9001.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ISO9001</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1202ISO14001.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ISO14001</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1203ISO31000.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ISO31000</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1204ISO21500.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ISO21500</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">목차</h2>
+   
+  <ul>
+  <li><a href="#sec-bep" id="toc-sec-bep" class="nav-link active" data-scroll-target="#sec-bep">손익분기점</a></li>
+  <li><a href="#sec-bsc" id="toc-sec-bsc" class="nav-link" data-scroll-target="#sec-bsc">BSC</a></li>
+  <li><a href="#sec-cfs" id="toc-sec-cfs" class="nav-link" data-scroll-target="#sec-cfs">CSF</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/yeonkyupark/PEPC/edit/main/0901사업성분석.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content column-body" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./0901사업성분석.html">09. 원가관리</a></li><li class="breadcrumb-item"><a href="./0901사업성분석.html"><span class="chapter-title">사업성분석</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-title">사업성분석</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta column-body">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="sec-bep" class="level2">
+<h2 class="anchored" data-anchor-id="sec-bep">손익분기점</h2>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 97-3-4, 100-4-6, 109-1-11, 127-2-3">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+기출: 97-3-4, 100-4-6, 109-1-11, 127-2-3
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+<p><strong>손익분기점</strong>(Break Even Point)이란 총 매출과 이를 위해 지출된 총 비용이 일치되는 매출액을 의미한다. 즉, 일정기간 매출액이 그 기간에 지출된 비용과 같아서 이익도 손실도 발생하지 않는(이익 금액 - 손실 금액 = 0) 지점을 가리킨다. 손익분기점분석은 조업도 변동에 따라 수익과 비용 변동 상황을 나타냄으로써 기업 채산성 파악을 위한 중요한 수단이 됨은 물론 장래 경영 계획과 통제 수잔으로 널리 이용되고 있다.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/bep.png" class="img-fluid figure-img"></p>
+<figcaption>손익분기점</figcaption>
+</figure>
+</div>
+<p><span class="math display">\[
+손익분기점 \ 매출액 \ = \ \frac{고정비}{1 \ - \ \frac{변동비}{매출액}}
+\]</span></p>
+<p><strong>손익분기점률</strong>은 손익분기점에서 매출액과 이미 실현된 매출액 간 비율로서, 일반적으로 이 비율이 낮을수록 영업활동 채산성이 양호함을 의미하나, 손익분기점률 고저가 수익성을 좌우하는 절대적 지표라고는 할 수 없다. 손익분기점은 매출액과 비용 간 상관관계를 나타내지만 투하자본(총자본) 회수를 위한 적정매축액을 표시하는 것이 아니기 떼문이다.</p>
+<p><span class="math display">\[
+손익분기점률(\%) \ = \ \frac{손익분기점 \ 매출액}{매출액} \times \ 100
+\]</span></p>
+<div class="callout callout-style-default callout-important no-icon callout-titled" title="손익분기점 계산">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+손익분기점 계산
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<dl>
+<dt>영업관련 자료</dt>
+<dd>
+<ul>
+<li>매출액: 300,000원</li>
+<li>고정제조원가: 120,000원</li>
+<li>고정판매관리비: 20,000원</li>
+<li>총변동원가: 100,000원</li>
+<li>단위당 판매가격: 15원</li>
+<li>단위당 변동제조원가: 5원</li>
+<li>단위당 변동판매비: 1원</li>
+</ul>
+</dd>
+</dl>
+<ol type="1">
+<li>영업이익을 구하시오.</li>
+</ol>
+<p>영업이익 = 매출액 - 총원가 = 300,000 - (120,000 + 20,000 + 100,000) = 60,000(원)</p>
+<ol start="2" type="1">
+<li>손익분기점 판매수량과 매출액을 구하시오.</li>
+</ol>
+<p><span class="math display">\[
+손익분기점 수량 = \frac{고정비}{판매가-변동비} = \frac{120,000 + 20,000}{15 + 1} = 15,555.6(개)
+\]</span></p>
+<p><span class="math display">\[
+손익분기점 매출액 = \frac{고정비}{1-\frac{변동비}{판매가}} = \frac{140,000}{1-\frac{6}{15}} = 233,333.3(원)
+\]</span></p>
+<ol start="3" type="1">
+<li>안전한계와 한전한계율</li>
+</ol>
+<p><span class="math display">\[
+안전한계 = 매출액 - 손익분기점 판매액 = 300,000 - 233,333.3 = 66,666.7(원)
+\]</span></p>
+<p><span class="math display">\[
+안전한계율 = \frac{안전한계}{매출액} = \frac{66.666.7}{300,000} \times 100 = 22.2(%)
+\]</span></p>
+<ol start="4" type="1">
+<li>목표영업이익이 50,000원인 경우 판매량을 구하시오.</li>
+</ol>
+<p><span class="math display">\[
+판매량 = \frac{고정비+목표이익}{판매비-변동비} = \frac{140,000+50,000}{15-6} = 21,111.1(개)
+\]</span></p>
+<ol start="5" type="1">
+<li>매출액이 30,000원 증가할 경우 순이익증가액을 구하시오.</li>
+</ol>
+<p><span class="math display">\[
+순이익증가액 = 판매액 \times 공헌(한계)이익률 = 30,000 \times (1-\frac{1+5}{15}) = 20,000(원)
+\]</span></p>
+</div>
+</div>
+<div class="callout callout-style-default callout-important no-icon callout-titled" title="공헌이익과 매출액">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+공헌이익과 매출액
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>가공부품업체는 A, B, C의 세 가지 제품을 제조·판매하고 있고, 이 회사의 총고정비용 은 60만 원이다. 총매출액에서 차지하는 각 제품의 매출액 구성 비율이 변하지 않는다고 가정할 때 제품별 비용은 다음 표와 같다. 다음 물음에 답하시오.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 24%">
+<col style="width: 30%">
+<col style="width: 31%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>제품</strong></th>
+<th><strong>판매단가 (원)</strong></th>
+<th><strong>단위당 변동비 (원)</strong></th>
+<th><strong>매출액 구성비율 (%)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td>400</td>
+<td>300</td>
+<td>20</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>1,000</td>
+<td>775</td>
+<td>40</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td>2,000</td>
+<td>1,200</td>
+<td>40</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<dl>
+<dt>공헌이익률 계산 수식</dt>
+<dd>
+<span class="math display">\[
+\text{공헌이익률} = \frac{\text{공헌이익}}{\text{매출액}} \times 100
+\]</span>
+</dd>
+</dl>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 9%">
+<col style="width: 17%">
+<col style="width: 21%">
+<col style="width: 15%">
+<col style="width: 16%">
+<col style="width: 18%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>제품</strong></th>
+<th><strong>판매단가 (원)</strong></th>
+<th><strong>단위당 변동비 (원)</strong></th>
+<th><strong>매출액 (원)</strong></th>
+<th><strong>공헌이익 (원)</strong></th>
+<th><strong>공헌이익률 (%)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td>400</td>
+<td>300</td>
+<td>400</td>
+<td>100</td>
+<td>( = 25% )</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>1,000</td>
+<td>775</td>
+<td>1,000</td>
+<td>225</td>
+<td>( = 22.5% )</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td>2,000</td>
+<td>1,200</td>
+<td>2,000</td>
+<td>800</td>
+<td>( = 40% )</td>
+</tr>
+</tbody>
+</table>
+<p>각 제품에 대해 평균법에 의한 공헌이익률을 계산하면 다음과 같다.</p>
+<p><span class="math display">\[
+\text{평균법에 의한 공헌이익률} = \frac{100+225+800}{400+1000+2000} = \frac{1125}{3400} = 0.33
+\]</span></p>
+<p>따라서 손익분기점 총매출은 다음 산식을 통해 계산된다.</p>
+<p><span class="math display">\[
+\text{손익분기점 총매출액} = \frac{고정비}{단위당 공헌이익률} = \frac{600000}{0.33} = 1,818,182(원)
+\]</span> A제품에 대한 판매량과 매출액을 계산하면 다음과 같다.</p>
+<p><span class="math display">\[
+A제품 매출액 = 1,818,182 \times 0.2 = 363,636.4(원)
+\]</span></p>
+<p><span class="math display">\[
+A제품 판매량 = 363,636.4 / 400 = 909.09(개)
+\]</span></p>
+</div>
+</div>
+</section>
+<section id="sec-bsc" class="level2">
+<h2 class="anchored" data-anchor-id="sec-bsc">BSC</h2>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 118-1-2, 130-2-3">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+기출: 118-1-2, 130-2-3
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://static.intrafocus.com/uploads/2019/10/What-is-the-Balanced-Scorecard.png" class="img-fluid figure-img"></p>
+<figcaption>https://www.intrafocus.com/balanced-scorecard/</figcaption>
+</figure>
+</div>
+</center>
+<p><strong>Balanced Scorecard (BSC)</strong>는 조직의 성과를 측정하고 관리하는 전략적 관리 도구로, 1992년 Robert Kaplan과 David Norton에 의해 개발되었다. 이 도구는 <strong>재무적인 지표뿐만 아니라 비재무적인 지표도 고려</strong>하여 조직의 전체적인 성과를 평가하는데 사용된다. BSC는 조직의 전략적 목표를 실현하는 데 필요한 네 가지 관점으로 구성된다.</p>
+<dl>
+<dt>BSC 4가지 관점</dt>
+<dd>
+<ol type="1">
+<li><strong>재무 관점 (Financial Perspective)</strong>: 조직의 재무적 성과를 측정한다. 여기에는 수익성, 성장률, 비용 절감, 투자 수익률(ROI) 등 재무적 목표와 지표가 포함된다. 이 관점은 조직의 전략적 목표가 실제로 재무적 성과로 이어지는지를 평가한다.</li>
+<li><strong>고객 관점 (Customer Perspective)</strong>: 고객의 요구와 기대를 충족시키는 정도를 측정한다. 고객 만족도, 고객 충성도, 시장 점유율, 고객 서비스 등의 지표가 포함된다. 이 관점은 고객이 조직에 어떻게 반응하는지를 평가한다.</li>
+<li><strong>내부 프로세스 관점 (Internal Business Processes Perspective)</strong>: 조직 내 핵심 프로세스가 효율적으로 운영되고 있는지를 측정한다. 여기에는 생산성, 품질 관리, 혁신, 운영 효율성 등의 지표가 포함된다. 이 관점은 내부 프로세스 개선을 통해 성과를 높이려는 전략에 중점을 둔다.</li>
+<li><strong>학습 및 성장 관점 (Learning and Growth Perspective)</strong>: 조직의 지속적인 개선과 혁신을 위한 역량을 측정한다. 직원의 교육, 기술력, 조직 문화, 지식 관리 등을 포함하며, 조직의 장기적인 성장과 변화에 필요한 기반을 다지는 데 중점을 둔다.</li>
+</ol>
+</dd>
+</dl>
+<p>BSC는 이러한 네 가지 관점이 서로 균형을 이루도록 설계되어 있으며, 조직이 재무적 목표뿐만 아니라 고객 만족도, 내부 프로세스 효율성, 학습과 성장의 측면에서도 성과를 달성하도록 돕는다.</p>
+</section>
+<section id="sec-cfs" class="level2">
+<h2 class="anchored" data-anchor-id="sec-cfs">CSF</h2>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 124-1-8">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+기출: 124-1-8
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+<p><strong>CSF(Critical Success Factor, 핵심성공요인)</strong>은 조직이나 프로젝트가 성공하기 위해 반드시 충족되어야 하는 주요 요소를 의미한다. CSF는 조직의 목표와 전략을 효과적으로 달성하기 위한 필수적인 요인을 구체화하는 데 사용된다.</p>
+<dl>
+<dt>CSF 특징</dt>
+<dd>
+<ul>
+<li><strong>목표 중심성</strong>: CSF는 조직의 비전과 목표에 직접적으로 연관된다.<br>
+</li>
+<li><strong>핵심 집중성</strong>: 모든 요소가 아닌, 성공에 필수적인 몇 가지 핵심 요소에 집중한다.<br>
+</li>
+<li><strong>측정 가능성</strong>: CSF는 구체적으로 정의되고 측정 가능해야 한다.<br>
+</li>
+<li><strong>동적 변화</strong>: 시장 환경, 경쟁 상황, 조직의 성장에 따라 CSF는 변할 수 있다.</li>
+</ul>
+</dd>
+<dt>CSF 주요 범주</dt>
+<dd>
+<ul>
+<li><strong>산업 요인</strong>: 특정 산업에서의 경쟁 우위를 결정하는 요소<br>
+</li>
+<li><strong>환경 요인</strong>: 경제, 사회, 정치 등 외부 환경의 변화에 따른 성공 요인<br>
+</li>
+<li><strong>전략 요인</strong>: 조직의 비전과 전략적 방향에 따라 결정되는 요인<br>
+</li>
+<li><strong>경영 요인</strong>: 리더십, 자원 관리, 내부 프로세스 등 내부 경영에서의 주요 요소</li>
+</ul>
+</dd>
+<dt>CSF 설정 과정</dt>
+<dd>
+<ol type="1">
+<li><strong>조직의 목표와 전략 파악</strong><br>
+</li>
+<li><strong>성공에 중요한 주요 분야 식별</strong><br>
+</li>
+<li><strong>핵심성과지표(KPI)와 연계하여 측정 가능한 항목으로 구체화</strong><br>
+</li>
+<li><strong>각 CSF에 대한 우선순위 설정 및 실행 계획 수립</strong></li>
+</ol>
+</dd>
+<dt>CSF 예시</dt>
+<dd>
+
+</dd>
+</dl>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>CSF 예시</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">CSF</th>
+<th style="text-align: left;">설명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">고객 만족도 향상</td>
+<td style="text-align: left;">서비스 품질과 고객 피드백을 기반으로 만족도 향상</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">기술 혁신</td>
+<td style="text-align: left;">신제품 개발과 기술 도입을 통한 경쟁력 확보</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">운영 효율성 강화</td>
+<td style="text-align: left;">프로세스 개선을 통해 비용 절감 및 생산성 향상</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">시장 점유율 확대</td>
+<td style="text-align: left;">적극적인 마케팅 전략을 통해 시장 내 점유율 확대</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation column-body">
+  <div class="nav-page nav-page-previous">
+      <a href="./0803품질관리.html" class="pagination-link" aria-label="품질관리">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">품질관리</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./0902원가관리.html" class="pagination-link" aria-label="원가관리">
+        <span class="nav-page-text"><span class="chapter-title">원가관리</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/yeonkyupark/PEPC/edit/main/0901사업성분석.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div></div></footer></body></html>

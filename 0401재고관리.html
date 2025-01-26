@@ -1,0 +1,2551 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.39">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>재고관리 – 공장관리기술사(2E)</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./0501생산계획수립.html" rel="next">
+<link href="./0302물류관리.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-160d5d975b9dfffeaf699822bedbd9bf.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<meta name="mermaid-theme" content="neutral">
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./0401재고관리.html">04. 재고관리</a></li><li class="breadcrumb-item"><a href="./0401재고관리.html"><span class="chapter-title">재고관리</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">공장관리기술사(2E)</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://yeonkyupark.github.io/" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-globe"></i></a>
+    <a href="https://www.instagram.com/yeonkyu.park/" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-instagram"></i></a>
+    <a href="https://github.com/yeonkyupark/PEPC" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">들어가는 글</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">01. 생산전략</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0101경쟁우위생산전략.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">경쟁우위 생산전략</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0102생산구조와방식.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">생산구조와 방식(Layout)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0103구매와외주전략.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">구매와 외주전략</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0104인력과직무설계.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">인력과 직무설계</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0105사업환경분석.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">사업환경 분석</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">02. 생산운영</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0201수요예측.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">수요예측</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0202프로세스진도관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">프로세스 진도관리</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">03. 물류관리</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0301공급망관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">공급망 관리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0302물류관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">물류관리</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">04. 재고관리</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0401재고관리.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">재고관리</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">05. 공정관리</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0501생산계획수립.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">생산계획 수립</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0502공정설계.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">공정설계</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0503작업계획수립.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">작업계획 수립</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0504표준작업관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">표준작업 관리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0505공정개선.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">공정개선</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">06. 설비관리</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0601설비계획.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">설비계획</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0602설비보전관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">설비보전 관리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0603자재취급및운반관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">자재취급 및 운반관리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0604환경관리및안전관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">환경 관리 및 안전 관리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0605시설및유틸리티관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">시설 및 유틸리티 관리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0606공장자동화기술.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">공장 자동화 기술</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">07. 작업관리</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0701작업방법및시간연구.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">작업방법 및 시간연구</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false">
+ <span class="menu-text">08. 생산성관리</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0801프로세스분석과개선.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">프로세스 분석과 개선</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0802생산성관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">생산성 관리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0803품질관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">품질관리</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false">
+ <span class="menu-text">09. 원가관리</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0901사업성분석.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">사업성분석</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0902원가관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">원가관리</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false">
+ <span class="menu-text">10. 경제성 공학</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1001가치공학.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">가치공학</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1002경영과학.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">경영과학</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false">
+ <span class="menu-text">11. 생산지원기술</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1101정보화활용기술.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">정보화 활용 기술</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1102제품개발기술.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">제품개발 기술</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1103서비스운영관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">서비스 운영관리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1104생산혁신기술.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">생산혁신기술</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1105신기술및동향.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">신기술및동향</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false">
+ <span class="menu-text">12. ISO</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1201ISO9001.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ISO9001</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1202ISO14001.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ISO14001</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1203ISO31000.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ISO31000</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1204ISO21500.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ISO21500</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">목차</h2>
+   
+  <ul>
+  <li><a href="#sec-invenory-management" id="toc-sec-invenory-management" class="nav-link active" data-scroll-target="#sec-invenory-management">재고관리 개요</a>
+  <ul>
+  <li><a href="#재고-기능" id="toc-재고-기능" class="nav-link" data-scroll-target="#재고-기능">재고 기능</a></li>
+  <li><a href="#재고-삭감-효과" id="toc-재고-삭감-효과" class="nav-link" data-scroll-target="#재고-삭감-효과">재고 삭감 효과</a></li>
+  <li><a href="#재고-종류" id="toc-재고-종류" class="nav-link" data-scroll-target="#재고-종류">재고 종류</a></li>
+  <li><a href="#재고-비용" id="toc-재고-비용" class="nav-link" data-scroll-target="#재고-비용">재고 비용</a></li>
+  <li><a href="#재고-수준-적정성-평가" id="toc-재고-수준-적정성-평가" class="nav-link" data-scroll-target="#재고-수준-적정성-평가">재고 수준 적정성 평가</a></li>
+  <li><a href="#수요-종류" id="toc-수요-종류" class="nav-link" data-scroll-target="#수요-종류">수요 종류</a></li>
+  </ul></li>
+  <li><a href="#재고관리-모형" id="toc-재고관리-모형" class="nav-link" data-scroll-target="#재고관리-모형">재고관리 모형</a>
+  <ul>
+  <li><a href="#확정적-재고관리-모형" id="toc-확정적-재고관리-모형" class="nav-link" data-scroll-target="#확정적-재고관리-모형">확정적 재고관리 모형</a></li>
+  <li><a href="#확률적-재고-모형" id="toc-확률적-재고-모형" class="nav-link" data-scroll-target="#확률적-재고-모형">확률적 재고 모형</a></li>
+  <li><a href="#기타-재고-모형" id="toc-기타-재고-모형" class="nav-link" data-scroll-target="#기타-재고-모형">기타 재고 모형</a>
+  <ul class="collapse">
+  <li><a href="#abc-모형" id="toc-abc-모형" class="nav-link" data-scroll-target="#abc-모형">ABC 모형</a></li>
+  <li><a href="#투빈two-bin-시스템" id="toc-투빈two-bin-시스템" class="nav-link" data-scroll-target="#투빈two-bin-시스템">투빈(Two Bin) 시스템</a></li>
+  <li><a href="#min-max-시스템" id="toc-min-max-시스템" class="nav-link" data-scroll-target="#min-max-시스템">Min-Max 시스템</a></li>
+  <li><a href="#정량발주방식과-정기발주방식" id="toc-정량발주방식과-정기발주방식" class="nav-link" data-scroll-target="#정량발주방식과-정기발주방식">정량발주방식과 정기발주방식</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#재고-비용-및-재고-성과-척도" id="toc-재고-비용-및-재고-성과-척도" class="nav-link" data-scroll-target="#재고-비용-및-재고-성과-척도">재고 비용 및 재고 성과 척도</a>
+  <ul>
+  <li><a href="#재고-관리-척도" id="toc-재고-관리-척도" class="nav-link" data-scroll-target="#재고-관리-척도">재고 관리 척도</a></li>
+  </ul></li>
+  <li><a href="#공급업체-재고-관리" id="toc-공급업체-재고-관리" class="nav-link" data-scroll-target="#공급업체-재고-관리">공급업체 재고 관리</a>
+  <ul>
+  <li><a href="#sec-vmi" id="toc-sec-vmi" class="nav-link" data-scroll-target="#sec-vmi">VMI</a></li>
+  <li><a href="#sec-cmi" id="toc-sec-cmi" class="nav-link" data-scroll-target="#sec-cmi">CMI</a></li>
+  <li><a href="#sec-cpfr" id="toc-sec-cpfr" class="nav-link" data-scroll-target="#sec-cpfr">CPFR</a></li>
+  <li><a href="#sec-cock" id="toc-sec-cock" class="nav-link" data-scroll-target="#sec-cock">COCK</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/yeonkyupark/PEPC/edit/main/0401재고관리.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content column-body" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./0401재고관리.html">04. 재고관리</a></li><li class="breadcrumb-item"><a href="./0401재고관리.html"><span class="chapter-title">재고관리</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-title">재고관리</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta column-body">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TB
+자재관리 --- 1[구매관리] &amp; 재고관리
+
+1 --- 구매관리 &amp; 외주관리 &amp; 협력사관리
+재고관리 --- 소요관리 &amp; 저장관리 &amp; 분배관리
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 97-4-1, 106-4-1, 112-2-2, 118-4-1">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+기출: 97-4-1, 106-4-1, 112-2-2, 118-4-1
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+<section id="sec-invenory-management" class="level2">
+<h2 class="anchored" data-anchor-id="sec-invenory-management">재고관리 개요</h2>
+<p><strong>재고</strong>란 조직에서 판매를 목적으로 보관중인 물품이나 자원으로, 많이 보유하면 빠르게 시장에 대응할 수 있고 재고주문비용이나 생산준비비용이 절감되지만, 재고 저장 비용이나 이자비용, 기회비용이 증가하는 문제점이 발생한다.</p>
+<p>재고관리는 기업에서 재고 수준을 어떻게 유지할 것인지, 언제 보충할 것인지(주문시점/생산시점), 주문량을 얼마로 할 것인지(1회 주문량/생산량) 등을 결정하여 비용을 최소화하면서 고객 서비스 수준을 향상시키는 활동이다.</p>
+<section id="재고-기능" class="level3">
+<h3 class="anchored" data-anchor-id="재고-기능">재고 기능</h3>
+<p>재고는 생산과 소비 사이에서 균형을 맞추는 중요한 역할을 한다. 주요 기능은 다음과 같다.</p>
+<dl>
+<dt>재고의 기능</dt>
+<dd>
+<ol type="1">
+<li><strong>수요와 공급의 불일치 완화</strong>
+<ul>
+<li>생산 속도와 고객 수요가 일치하지 않을 경우, 재고는 이를 조율하는 역할을 한다.<br>
+</li>
+<li>예) 계절별 수요 변동에 대비해 상품을 미리 생산해두는 경우.<br>
+</li>
+</ul></li>
+<li><strong>생산의 안정성 확보</strong>
+<ul>
+<li>생산 라인의 중단 없이 지속적인 생산이 가능하도록 원자재 및 부품을 비축한다.<br>
+</li>
+<li>예) 원재료 공급에 차질이 생겨도 재고가 있다면 생산이 계속된다.<br>
+</li>
+</ul></li>
+<li><strong>긴급 주문 대응</strong>
+<ul>
+<li>고객의 긴급 주문이나 갑작스러운 수요 증가에 대비해 빠르게 대응할 수 있다.<br>
+</li>
+</ul></li>
+<li><strong>가격 변동 완충</strong>
+<ul>
+<li>원자재 가격 상승에 대비해 미리 대량 구매하여 가격 변동에 대한 리스크를 줄인다.<br>
+</li>
+</ul></li>
+<li><strong>운송 및 조달 효율화</strong>
+<ul>
+<li>대량으로 생산 및 조달하여 운송 비용을 절감하고, 수시로 재고를 채우는 부담을 줄인다.</li>
+</ul></li>
+</ol>
+</dd>
+</dl>
+</section>
+<section id="재고-삭감-효과" class="level3">
+<h3 class="anchored" data-anchor-id="재고-삭감-효과">재고 삭감 효과</h3>
+<p>재고 삭감은 비용 절감 및 경영 효율성 향상에 기여한다. 주요 효과는 다음과 같다.</p>
+<dl>
+<dt>재고 삭감 효과</dt>
+<dd>
+<ol type="1">
+<li><strong>비용 절감</strong>
+<ul>
+<li><strong>보관 비용</strong>: 창고 임대료, 유지 관리 비용이 감소한다.<br>
+</li>
+<li><strong>자본 비용</strong>: 불필요한 자금이 재고로 묶이지 않아, 자금을 유동적으로 활용할 수 있다.<br>
+</li>
+<li><strong>손실 비용</strong>: 유통기한이 지나거나, 부품이 구형이 되어 발생하는 폐기 비용이 줄어든다.<br>
+</li>
+</ul></li>
+<li><strong>리드타임 단축</strong>
+<ul>
+<li>재고 삭감으로 생산 및 조달 리드타임이 짧아져, 빠른 납기와 생산 유연성이 확보된다.<br>
+</li>
+</ul></li>
+<li><strong>공간 효율화</strong>
+<ul>
+<li>불필요한 재고를 줄이면 창고 및 생산 현장의 공간 활용도가 높아진다.<br>
+</li>
+</ul></li>
+<li><strong>품질 향상</strong>
+<ul>
+<li>재고가 적을수록 신속한 품질 관리 및 문제 발생 시 즉각적인 대응이 가능해진다.<br>
+</li>
+</ul></li>
+<li><strong>경쟁력 강화</strong>
+<ul>
+<li>낭비를 최소화하고 생산성을 극대화하여 시장 변화에 민첩하게 대응할 수 있다.</li>
+</ul></li>
+</ol>
+</dd>
+</dl>
+<p>재고는 생산과 소비를 조율하는 필수 요소지만, 과도한 재고는 비용 부담으로 작용한다. 도요타 생산방식(TPS)에서 강조하는 <strong>적시 생산(JIT, Just-In-Time)</strong>은 필요한 시점에 필요한 만큼만 생산하여 <strong>재고 삭감을 통한 경영 효율화</strong>를 실현하는 대표적인 사례다.</p>
+<p><br></p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 121-3-2">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+기출: 121-3-2
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+</section>
+<section id="재고-종류" class="level3">
+<h3 class="anchored" data-anchor-id="재고-종류">재고 종류</h3>
+<p>재고는 사용 목적에 따라 다음과 같이 분류된다.</p>
+<dl>
+<dt>안전재고(Safety Inventory)</dt>
+<dd>
+<ul>
+<li>완충재고라고도 하며, 고객 서비스 차질과 부품 부족으로 인한 기회비용을 예방하기 위하여 비축하는 재고</li>
+<li>제품수요, 리드타임, 부품공급 등 불확실성에 대처하기 위한 것</li>
+<li>수요예측을 개선하며, 구매 또는 생산할 품목 리드타임을 줄여서 그 기간 동안 수요 불확실성을 감소</li>
+<li>공급 불확실성 감소</li>
+<li>생산계획을 부품납품업체들에게 알려 주면 예측이 정확해져 공급 신뢰도 향상</li>
+</ul>
+</dd>
+<dt>예상재고(Anticipation stock)</dt>
+<dd>
+<ul>
+<li>계절재고라고도 하며, 사업상 직면하게 되는 불규칙한 수요와 공급에 대응하기 위한 재고</li>
+<li>수요 절정기에 생산수준을 많이 높이지 않기 위하여 수요가 적은 기간 동안 재고를 비축하거나 부품 납품 업체가 파악이나 생산능력 제한 때문에 위협을 받을 경우 비축한 재고</li>
+<li>수요율과 산출률을 일치시키는 것, 그러나 수요 변동이 심하면 생산을 조절하기 어려우므로 수요를 평준화 하는 것이 바람직</li>
+<li>수요 평준화 방안으로, 비수기에 가격을 인하하고 비수기에 판매 촉진을 강화하며, 기존 제품과 수요 사이클이 정반대가 되는 신제품을 제품 라인에 추가하는 방법</li>
+</ul>
+</dd>
+<dt>수송재고</dt>
+<dd>
+<ul>
+<li>물품 대금은 지급하였으나 아직 입고되지 않은 상태, 즉 수송 중인 상태인 재고</li>
+</ul>
+</dd>
+<dt>주기재고(Cycle Inventory)</dt>
+<dd>
+<ul>
+<li>연간 주문횟수를 줄여서 비용을 절감하려면 일회 주문량이 늘어나는데, 이로 인해 발생하는 재고</li>
+<li>주문을 얼마나 자주 하고 한 번에 얼마나 할 것인가를 결정하는 것을 크기 결정이라 함</li>
+<li>외주 또는 생산 로트 사이즈(발주량 Q)를 줄이면 주기재고를 줄일 수 있다. 로트사이즈를 소형화하면 그에 반비례하여 발주(작업준비) 횟수가 많아지므로 발주비(작업준비비)가 증대함</li>
+<li>소로트화를 위해서는 먼저 발주(작업준비) 과정을 개선하여 발주와 작업준비에 소비되는 시간과 비용을 최소화해야 함</li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="재고-비용" class="level3">
+<h3 class="anchored" data-anchor-id="재고-비용">재고 비용</h3>
+<p>재고 보유 시 다음과 같은 관련 비용이 발생한다.</p>
+<dl>
+<dt>재고유지비(inventory holding cost)</dt>
+<dd>
+<ul>
+<li>재고를 보유함으로써 발생하는 비용으로, 자본비용, 저장비, 냉동비 등이 해당한다.</li>
+</ul>
+</dd>
+<dt>재고주문비(ordering cost)</dt>
+<dd>
+<ul>
+<li>재고 보충이나 신규로 주문할 때 소요되는 비용으로, 재고입고 비용, 검사 비용 등이 해당한다(고정비 성격).</li>
+</ul>
+</dd>
+<dt>생산준비비</dt>
+<dd>
+<ul>
+<li>재고를 자체적으로 제작할 경우 제조하기 위해 생산 라인을 준비하는데 소요되는 비용으로, 설비 및 장치 변경 비용, 유휴시간 비용 등이 해당한다(고정비 성격).</li>
+</ul>
+</dd>
+<dt>재고부족비(inventory shortage cost)</dt>
+<dd>
+<ul>
+<li>재고가 부족하여 고객 주문에 대응하지 못할 때 발생하는 비용으로, 품절비용(stockout cost, 기회비용), 추후납품비용(제품인도 지연에 따른 벌과금, 생산독촉비용, 신용 상신, 신뢰도 하락 등)이 해당한다(주관적 평가).</li>
+</ul>
+</dd>
+</dl>
+<p><br></p>
+</section>
+<section id="재고-수준-적정성-평가" class="level3">
+<h3 class="anchored" data-anchor-id="재고-수준-적정성-평가">재고 수준 적정성 평가</h3>
+<p>재고 수준 적정성 평가, 즉 성과 척도 방법은 다음과 같다.</p>
+<dl>
+<dt>평균총재고가치</dt>
+<dd>
+<ul>
+<li>보유하고 있는 모든 재고 단가와 수량을 곱하여 재고 가치를 합한 것으로, 시계열 분석이나 경쟁사 대비 분석을 사용한다.</li>
+</ul>
+</dd>
+<dt>공급일수/공급주수</dt>
+<dd>
+<ul>
+<li>현재 보유하고 있는 재고가 언제 매출이 되는지 계산한 값으로 재고재산 회전일수/회전주수이다(기업이 보유한 평균 재고량과 판매수준 비율).</li>
+<li><span class="math inline">\(공급일수 = \frac{평균총재고}{연간매출원가 (또는 연간매출액)} \times 기간\)</span></li>
+</ul>
+</dd>
+<dt>재고자산회전율</dt>
+<dd>
+<ul>
+<li>매출원가를 평균재고자산으로 나눈 것으로 재고잔산 회전속도를 나타낸다.</li>
+<li><span class="math inline">\(재고회전율 = \frac{매출비용}{평균재고 \times 단위당 원가}\)</span></li>
+</ul>
+</dd>
+<dt>서비스 수준(%)</dt>
+<dd>
+<ul>
+<li>고객수요를 충족시키는 목적이 엉ㄹ마나 잘 달성되었는지를 측정하는 척도</li>
+</ul>
+</dd>
+</dl>
+<p><br></p>
+</section>
+<section id="수요-종류" class="level3">
+<h3 class="anchored" data-anchor-id="수요-종류">수요 종류</h3>
+<p>수요는 크게 독립수요와 종속수요로 구분된다.</p>
+<dl>
+<dt>독립수요</dt>
+<dd>
+<ul>
+<li>완제품이나 예비부품/서비스부품에 대한 수요와 같이 다른 품목 수요에 의존하지 않고 기업 외부 시장 조건에 따라 결정되는 수요 형태</li>
+<li>시계열 패턴을 가지고 지속적으로 발생, 수요 예측 필요</li>
+<li>재고관리에 있어 <strong>보충</strong>(replenishment) 개념이 사용되고, 재고가 줄게 되면 수요 대비를 위해 재고를 보충</li>
+</ul>
+</dd>
+<dt>종속수요</dt>
+<dd>
+<ul>
+<li>최종제품 생산에 소요되는 각종 원자재, 부분품, 구성품 등과 같이 모품목 수요에 따라 종속되어 있는 품목 수요 형태</li>
+<li>독립수요품목 생산계획에 따라 결정
+<ul>
+<li>자전거(독립수요) 생산 시, 핸들, 프레임, 바퀴, 타이어 등이 종속수요가 됨</li>
+</ul></li>
+<li>재고관리에 있어 <strong>소요</strong>(requirement) 개념이 사용되고 원자재나 부분품이 쓰이는 상위단계 품목 또는 최종품목 필요에 따라 주문</li>
+<li>종속수요품목 재고 관리 시스템, MRP 시스템</li>
+</ul>
+</dd>
+</dl>
+<p><br></p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 109-4-6">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+기출: 109-4-6
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+</section>
+</section>
+<section id="재고관리-모형" class="level2">
+<h2 class="anchored" data-anchor-id="재고관리-모형">재고관리 모형</h2>
+<p>재고관리 모형은 수용 특성에 따라 <strong>확정적 재고관리 모형</strong>과 <strong>확률적 재고관리 모형</strong>으로 나눌 수 있다. 또한 특수한 경우 사용할 수 있는 <strong>단일기간 재고관리 모형</strong>이나 <strong>ABC 재고관리 모형</strong>도 있다.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+
+0[재고모형]
+11[확정적 모형]
+12[확률적 모형]
+13[기타 재고 모형]
+21[고정주문량 모형]
+22[고정주문기간 모형]
+23[조건부 재고 보충 시스템]
+24[단일기간 재고관리 모형]
+25[ABC 모형]
+26["투빈시스템&lt;br&gt;원빈시스템&lt;br&gt;기본 재고 시스템"]
+31[EOQ 모형]
+32[EPQ 모형]
+
+subgraph s4[특수한 경우]
+23
+24
+25
+26
+end
+
+subgraph s1[수요 및 조달 기간 특성]
+11
+12
+13
+end
+
+subgraph s2[주문시기 및 주문량 결정 방법]
+21
+22
+end
+
+subgraph s3[고정주문량]
+31
+32
+end
+
+0 --&gt; 11 &amp; 12 &amp; 13
+11 &amp; 12 --&gt; 21 &amp; 22
+13 --&gt; 23 &amp; 24 &amp; 25 &amp; 26
+21 --&gt; 31 &amp; 32
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<section id="확정적-재고관리-모형" class="level3">
+<h3 class="anchored" data-anchor-id="확정적-재고관리-모형">확정적 재고관리 모형</h3>
+<p><strong>확정적 재고관리 모형</strong>은 재고관련 비용, 수요율, 생산율이 확정적인 경우에 사용하는 관리 모형이다.</p>
+<dl>
+<dt>특징</dt>
+<dd>
+<ul>
+<li>재고관련 비용, 수요율, 생산율이 확정적</li>
+</ul>
+</dd>
+<dt>가정</dt>
+<dd>
+<ul>
+<li>수요는 미리 알려져 있고, 일정하며, 균일하게 발생한다.</li>
+<li>조달기간은 알려져 있고 일정하다.</li>
+<li>제품 구입단가는 일정하다.</li>
+<li>주문비용 또는 준비비용은 고정비로서 일정하다.</li>
+<li>주문량은 조달기간이 지나면 일시에 전량이 한번에 들어온다.</li>
+<li>모든 수요는 재고부족 없이 충족된다.</li>
+</ul>
+</dd>
+<dt>주요 용어 설명</dt>
+<dd>
+<ul>
+<li><p>기호 및 설명</p>
+<div class="cell" data-tbl-colwidths="[20,80]">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 80%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">기호</th>
+<th style="text-align: left;">설명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">TC</td>
+<td style="text-align: left;">연간 재고관련 총 비용</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">D</td>
+<td style="text-align: left;">연간 수요량</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Q</td>
+<td style="text-align: left;">1회 주문량</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">EOQ 또는 Q*</td>
+<td style="text-align: left;">경제적 주문량 (최적 주문량)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">C</td>
+<td style="text-align: left;">단위당 구입가격(생산인 경우 생산 비용)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">S</td>
+<td style="text-align: left;">1회 주문비용 또는 준비비용</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">H</td>
+<td style="text-align: left;">연간 단위당 재고유지비용, 1단위를 1년간 재고로 유지하는데 소요되는 비용, 보통 단위당 가입가격의 몇 %로 산정, H = C x 몇 %</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">d</td>
+<td style="text-align: left;">일일 평균 수요</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">L</td>
+<td style="text-align: left;">조달 기간</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">R</td>
+<td style="text-align: left;">재주문점</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">N*</td>
+<td style="text-align: left;">연가 최적 주문 횟수</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">T*</td>
+<td style="text-align: left;">연간 최적 주문 주기</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">P</td>
+<td style="text-align: left;">연간생산율</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div></li>
+</ul>
+</dd>
+</dl>
+<p><br></p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 115-4-2">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+기출: 115-4-2
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+<section id="경제적-주문량-모형eoq" class="level5">
+<h5 class="anchored" data-anchor-id="경제적-주문량-모형eoq">경제적 주문량 모형(EOQ)</h5>
+<p>주문량에 따른 특징은 다음과 같다.</p>
+<div class="cell" data-tbl-colwidths="[50,50]">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">주문량이.적을.경우</th>
+<th style="text-align: left;">주문량이.많을.경우</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">평균재고 감소</td>
+<td style="text-align: left;">평균재고 증가</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">재고 유지비용 감소</td>
+<td style="text-align: left;">재고유지비용 감소</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">연간 주문횟수 증가</td>
+<td style="text-align: left;">연간 주문 횟수 감소</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">연간 주문비용 증가</td>
+<td style="text-align: left;">연간 주문비용 감소</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>이상적인 주문량, 즉 최적주문량은 주문비용과 재고유지비용이 적정한 수준에서 결정된 수량이다.</p>
+<p><strong>경제적 주문량</strong>(EOQ,economic order quantity) 모형이란 가장 단순한 형태를 갖는 재고 모형으로 연간 재고유지비용과 연간 주문비용의 합을 최소화하는 1회 주문량(EOQ 또는 Q*)을 구하는 것으로 이 때 주문량 크기를 경제적 로트 사이즈(ELS, economic lot size)라고도 한다.</p>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/eoq.png" class="img-fluid figure-img"></p>
+<figcaption>경제적 주문량</figcaption>
+</figure>
+</div>
+</center>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>계산식</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>연간 재고관련 총 비용 TC<br>(연간 주문비용 + 연간 재고 유지비용)</td>
+<td><span class="math display">\[ \frac{D}{Q}S + \frac{Q}{2}H = \sqrt{2DSH} \]</span></td>
+</tr>
+<tr class="even">
+<td>경제적 주문량(Q*)</td>
+<td><span class="math display">\[ \sqrt\frac{2DS}{H} \]</span></td>
+</tr>
+<tr class="odd">
+<td>일일평균수요(d)</td>
+<td><span class="math display">\[ \frac{D}{연간영업일수} \]</span></td>
+</tr>
+<tr class="even">
+<td>재주문점(R)</td>
+<td><span class="math display">\[ dL\]</span></td>
+</tr>
+<tr class="odd">
+<td>연간 최적주문횟수(N*)</td>
+<td><span class="math display">\[ \frac{D}{Q^*} = \sqrt{\frac{DH}{2S}} \]</span></td>
+</tr>
+<tr class="even">
+<td>연간 최적주문주기(T*)</td>
+<td><span class="math display">\[ \frac{1}{N^*} = \sqrt{\frac{2S}{DH}}\]</span></td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<dl>
+<dt>모형이 성립하기 위한 전제조건</dt>
+<dd>
+<ol type="1">
+<li><strong>수요가 일정하고 예측 가능하다</strong>: 수요는 일정한 속도로 지속적으로 발생하며, 예측 가능한 형태로 변화한다.</li>
+<li><strong>주문 시 비용은 일정하다</strong>: 각 주문에 대해 발생하는 고정적인 비용이 존재하며, 주문당 비용은 일정하다.</li>
+<li><strong>재고 유지 비용이 일정하다</strong>: 재고를 보유하는 동안 발생하는 비용(저장비용 등)은 일정하며, 보유 재고의 양에 비례한다.</li>
+<li><strong>주문 리드 타임이 일정하다</strong>: 주문을 하고 실제로 물품이 도착하는데 걸리는 시간이 일정하다.</li>
+<li><strong>주문은 한 번에 이루어진다</strong>: 주문은 한 번에 이루어지며, 연속적인 소규모 주문이 아니라 한 번의 주문으로 전체 수요를 충족시킬 수 있다.</li>
+<li><strong>재고가 소진되기 전에 항상 새로운 주문이 이루어진다</strong>: 주문이 이루어질 때 재고가 충분히 남아 있도록 계획되며, 재고가 부족하지 않게 주문이 이루어진다.</li>
+</ol>
+</dd>
+</dl>
+<div class="callout callout-style-default callout-important no-icon callout-titled" title="EOQ 항목 계산">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+EOQ 항목 계산
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>어떤 제품의 연간 수요량은 100,000단위, 연간 재고유지비용은 단위당 100원이며 매회 주문비용은 500원의 비용이 든다. 다음 각 항목을 구하시오(단, 연간 작업일수는 300일)</p>
+<p><span class="math display">\[
+경제적 주문량(Q) = \sqrt{\frac{2DS}{H}} = \sqrt{\frac{2 \times 100,000 \times 500}{100}} = 1,000(개)
+\]</span></p>
+<p><span class="math display">\[
+연간주문횟수 = \frac{D}{Q} \ \frac{100,000}{1,000} = 100(회)
+\]</span></p>
+<p><span class="math display">\[
+주문 \ 간 \ 간격 = \frac{연간작업일수}{연간주문횟수} = \frac{300}{100} = 3(일)
+\]</span></p>
+<p><span class="math display">\[
+연간 \ 총최소재고비용 = (\frac{1,000}{2} \times 100) + (\frac{100,000}{1,000} \times 500) = 50,000 + 50,000 = 100,000(원)
+\]</span></p>
+</div>
+</div>
+<p><br></p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 124-3-3">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+기출: 124-3-3
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+</section>
+<section id="경제적-생산량-모형epq" class="level5">
+<h5 class="anchored" data-anchor-id="경제적-생산량-모형epq">경제적 생산량 모형(EPQ)</h5>
+<p><strong>경제적 생산량</strong>(EPQ, economic production quantity) 모형이란 생산이 진행되는 동안 생산된 제품이 재고에 더해짐과 동시에 소비가 일어나서 재고가 감소하는 경우 최적 1회 생산량을 결정하는 모형이다. 자체 생산, 조달하는 물품의 총 재고비용이 최소가 되는 1회당 경제적 생산량으로 기본 EOQ와 유사하지만 주문비용 대신 작업 준비 비용을 대체하여 사용하다는 점이 다르다.</p>
+<dl>
+<dt>EPQ 모델 가정</dt>
+<dd>
+<ul>
+<li>생산이 시작되고 뒤이어 수요가 이루어지며 수요량은 생산량보다 작다.</li>
+<li>생산은 일정 기간 동안 점진적으로 쌓이고 어느 정도 재고 수준에 이르면 생산을 중단한다.</li>
+<li>생산이 중단되면 쌓였던 재고량은 일정량씩 소요되어 바닥 난다.</li>
+<li>재고가모두 없어지면 즉시 생산 작업이 되풀이 된다.</li>
+<li>재고 유지비는 생산량 크기에 정비례하여 발생한다.</li>
+<li>생산단가는 생산량 크리와 관계없이 일정하다.</li>
+</ul>
+</dd>
+</dl>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>계산식</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>생산기간(t)</td>
+<td><span class="math display">\[\frac{Q}{P}\]</span></td>
+</tr>
+<tr class="even">
+<td>평균재고수준</td>
+<td><span class="math display">\[\frac{(P-D)Q}{2P}\]</span></td>
+</tr>
+<tr class="odd">
+<td>연간재고유지비용</td>
+<td><span class="math display">\[\frac{(P-D)QH}{2P} = \frac{DS}{Q}\]</span></td>
+</tr>
+<tr class="even">
+<td>연간생산준비비용</td>
+<td><span class="math display">\[\frac{D}{Q}S\]</span></td>
+</tr>
+<tr class="odd">
+<td>연간총비용(TC)</td>
+<td><span class="math display">\[\frac{DS}{Q} + \frac{(P-D)QH}{2P}\]</span></td>
+</tr>
+<tr class="even">
+<td>경제적 생산량(EPQ)</td>
+<td><span class="math display">\[\sqrt{\frac{2DS}{H}(\frac{P}{P-D})}\]</span></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="확률적-재고-모형" class="level3">
+<h3 class="anchored" data-anchor-id="확률적-재고-모형">확률적 재고 모형</h3>
+<p><strong>확정적 재고 모형</strong>과 <strong>확률적 재고 모형</strong>은 재고 관리를 위한 두 가지 주요 접근 방식이다. 이 두 모형은 재고 수준을 관리하고 최적화하는 데 필요한 수요 예측 방식에서 차이가 있다. 각각의 특징을 예시와 함께 설명하겠다.</p>
+<dl>
+<dt>확정적 재고 모형 (Deterministic Inventory Model)</dt>
+<dd>
+<blockquote class="blockquote">
+<p><strong>확정적 재고 모형</strong>은 <strong>수요가 일정하고 예측 가능한 경우</strong>에 사용하는 모형이다. 이 모형에서는 수요와 리드 타임이 일정하고 변동이 없다고 가정한다. 즉, <strong>미래의 수요를 정확하게 예측할 수 있으며</strong> 예측된 수요에 따라 재고를 관리한다.</p>
+</blockquote>
+</dd>
+<dt>주요 특징</dt>
+<dd>
+<ul>
+<li><strong>수요가 일정하다</strong>: 수요가 고정되어 있어 예측이 정확하고, 이를 바탕으로 재고를 최적화한다.</li>
+<li><strong>리드 타임이 일정하다</strong>: 재고 보충을 위한 시간도 일정하므로 공급망에 변동성이 없다.</li>
+<li><strong>재고 수준이 미리 계획된다</strong>: 예측된 수요에 맞춰 재고를 정확하게 조절한다.</li>
+</ul>
+</dd>
+<dt>주요 모형</dt>
+<dd>
+<ul>
+<li><strong>EOQ (Economic Order Quantity, 경제적 주문량 모형)</strong>: EOQ 모형은 재고를 최적화하기 위해 <strong>주문량</strong>과 <strong>주문주기</strong>를 결정하는 수학적 모델이다. 이 모형에서는 수요가 일정하고, 주문비용과 보관비용을 고려하여 <strong>최적의 주문량</strong>을 계산한다.</li>
+</ul>
+</dd>
+<dt>예시</dt>
+<dd>
+<ul>
+<li><strong>소매업체</strong>가 일정한 수요를 가진 제품을 판매한다고 가정했을 때, 매일 100개씩 판매되는 제품에 대해 일정량의 주문을 내고, 매번 동일한 양의 제품을 주문한다고 할 수 있다. 이 경우 수요가 일정하므로, EOQ 모형을 사용하여 최적의 주문량을 계산하고, 재고를 효율적으로 관리할 수 있다.</li>
+</ul>
+</dd>
+<dt>확률적 재고 모형 (Stochastic Inventory Model)</dt>
+<dd>
+<blockquote class="blockquote">
+<p><strong>확률적 재고 모형</strong>은 <strong>수요와 리드 타임이 불확실하고 변동성이 있는 경우</strong>에 사용하는 모형이다. 이 모형에서는 수요가 일정하지 않고, 예측할 수 없는 변동성을 포함하고 있기 때문에 확률적인 요소가 들어간다.</p>
+</blockquote>
+</dd>
+<dt>주요 특징</dt>
+<dd>
+<ul>
+<li><strong>수요가 변동적이다</strong>: 수요가 일정하지 않고, 예측할 수 없는 변화가 발생한다. 수요의 분포가 확률적으로 주어지며, 이를 바탕으로 재고를 관리한다.</li>
+<li><strong>리드 타임의 변동성</strong>: 재고 보충에 걸리는 시간 또한 일정하지 않으며, 리드 타임도 확률적이다.</li>
+<li><strong>재고 부족에 대한 리스크 관리</strong>: 확률적 모델은 수요 변동성과 리드 타임의 불확실성에 대비하기 위해 <strong>안전 재고</strong>를 설정하는 등 리스크를 관리하는 방법을 포함한다.</li>
+</ul>
+</dd>
+<dt>주요 모형</dt>
+<dd>
+<ul>
+<li><strong>뉴스벤더 모형 (Newsvendor Model)</strong>: 뉴스벤더 모형은 불확실한 수요와 공급 조건에서 <strong>최적 주문량</strong>을 결정하는 방법이다. 이 모형은 주로 <strong>단기</strong>의 재고 관리에 적용되며, <strong>한정된 기간</strong> 동안 제품을 주문하고 판매하는 경우에 유용하다.
+<ul>
+<li>이 모형에서는 수요의 확률 분포에 따라 <strong>최적의 재고 수준</strong>을 결정한다.</li>
+</ul></li>
+<li><strong>(R, Q) 시스템</strong>: 이 시스템에서는 <strong>주문 점 (R)</strong>을 설정하고, 이 점에 도달했을 때 <strong>주문량 (Q)</strong>을 결정하여 재고를 보충한다. 수요와 리드 타임이 불확실한 상황에서 이 시스템은 주문을 적시에 하기 위해 <strong>안전 재고</strong>와 <strong>주문 주기</strong>를 설정한다.</li>
+</ul>
+</dd>
+<dt>예시</dt>
+<dd>
+<ul>
+<li><strong>레스토랑</strong>이 하루에 <strong>음료수</strong>를 판매한다고 가정했을 때, 음료수의 수요는 날마다 달라질 수 있다. 예를 들어, 날씨가 좋으면 수요가 증가하고, 나쁠 경우에는 수요가 감소한다. 이 경우 <strong>확률적 재고 모형</strong>을 사용하여 수요의 변동성을 고려하고, 재고 부족을 방지하기 위해 <strong>안전 재고</strong>를 설정한다.</li>
+</ul>
+</dd>
+<dt>확정적 재고 모형 vs 확률적 재고 모형</dt>
+<dd>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 23%">
+<col style="width: 39%">
+<col style="width: 37%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>특징</strong></th>
+<th><strong>확정적 재고 모형</strong></th>
+<th><strong>확률적 재고 모형</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>수요 예측</strong></td>
+<td>일정하고 확정적이다</td>
+<td>불확실하고 변동적이다</td>
+</tr>
+<tr class="even">
+<td><strong>리드 타임</strong></td>
+<td>일정하다</td>
+<td>변동성이 있다</td>
+</tr>
+<tr class="odd">
+<td><strong>주요 목표</strong></td>
+<td>최적의 주문량과 주문주기를 결정한다</td>
+<td>수요의 변동성에 대응하는 재고 수준을 결정한다</td>
+</tr>
+<tr class="even">
+<td><strong>주요 모형</strong></td>
+<td>EOQ (경제적 주문량 모형)</td>
+<td>뉴스벤더 모형, (R, Q) 시스템</td>
+</tr>
+<tr class="odd">
+<td><strong>적용 분야</strong></td>
+<td>수요가 일정하고 예측이 가능한 경우</td>
+<td>수요와 리드 타임이 불확실한 경우</td>
+</tr>
+<tr class="even">
+<td><strong>예시</strong></td>
+<td>일정한 수요의 제품 판매, 정기적인 주문이 필요한 경우</td>
+<td>수요 변동이 큰 제품, 계절성 수요가 있는 제품</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<p><strong>확정적 재고 모형</strong>은 <strong>수요가 일정하고 예측 가능한</strong> 경우에 적합하다. 이 모형은 예측이 정확하므로 최적의 재고 수준을 유지하는 데 유리하다.</p>
+<p><strong>확률적 재고 모형</strong>은 <strong>수요와 리드 타임이 불확실한</strong> 경우에 적합하다. 이 모형은 수요의 변동성과 불확실성에 대비해 <strong>안전 재고</strong>를 설정하고 리스크를 관리하는 데 유리하다.</p>
+<p>따라서, 재고 관리 방식은 사업 환경에 따라 선택해야 하며, 수요 예측의 정확도와 변동성에 따라 <strong>확정적</strong> 또는 <strong>확률적</strong> 모형을 선택하여 최적의 재고 관리를 수행해야 한다.</p>
+</section>
+<section id="기타-재고-모형" class="level3">
+<h3 class="anchored" data-anchor-id="기타-재고-모형">기타 재고 모형</h3>
+<p><br></p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 112-2-5">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+기출: 112-2-5
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+<section id="abc-모형" class="level4">
+<h4 class="anchored" data-anchor-id="abc-모형">ABC 모형</h4>
+<p><strong>ABC 재고관리방식</strong>은 다수 경미한 품목보다는 소수 중요품목을 중심으로 재고를 관리하는 방식이다. 중요도 구분은 <code>파레토 분석</code>에 따른다. 재고품목 중요도는 품목 연간 사용액을 기준으로 결정된다. 연간 사용액은 품목 단가에 연간 사용수량을 곱하여 계산한다. 연간 사용액 크기에 따라 A, B, C 세 등급으로 분류하지만, 부패하기 쉬운 품목이나 리드타임이 긴 품목등도 A 품목으로 지정할 수 있다. ABC 품목 구성비는 회사 상황에 따라 차이가 있으며 대체로 다음과 같은 범위 내에서 이루어진다.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>등급</th>
+<th>품목비율</th>
+<th>가치비율</th>
+<th>관리정도</th>
+<th>로트규모</th>
+<th>주문주기</th>
+<th>안전재고</th>
+<th>통제</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td>10~20%</td>
+<td>70~80%</td>
+<td>정밀</td>
+<td>소량</td>
+<td>짧게</td>
+<td>소량</td>
+<td>P시스템</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>20~40$</td>
+<td>15~20%</td>
+<td>정상</td>
+<td>중량</td>
+<td>중간</td>
+<td>중량</td>
+<td>Q시스템</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td>40~60%</td>
+<td>5~10%</td>
+<td>대강</td>
+<td>대량</td>
+<td>길게</td>
+<td>대량</td>
+<td>Two-bin 시스템</td>
+</tr>
+</tbody>
+</table>
+<dl>
+<dt>A등급 품목</dt>
+<dd>
+<ul>
+<li>재고수준을 계속적으로 파악하여 기록 정확성을 기한다.</li>
+<li>발주간격을 짧게 하고 로트사이즈를 작게 한다.</li>
+<li>수요, 리드타임, 관리 비용 등 주요 특성 변동 여부를 자주 점검하고 발주량, 발주간격, 안전 재고 등 수시로 조절한다.</li>
+<li>모형을 통해 의사결정 한다.</li>
+</ul>
+</dd>
+<dt>B등급 품목</dt>
+<dd>
+<ul>
+<li>발주간격을 다소 길게 한다.</li>
+<li>안전재고 소량을 보유한다.</li>
+</ul>
+</dd>
+<dt>C등급 품목</dt>
+<dd>
+<ul>
+<li>단순하고 값싼 관리방식을 사용한다.</li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="투빈two-bin-시스템" class="level4">
+<h4 class="anchored" data-anchor-id="투빈two-bin-시스템">투빈(Two Bin) 시스템</h4>
+<p><strong>Two-bin system</strong>은 재고 관리 방법 중 하나로, 주로 <strong>재고를 두 개의 별도 저장 bin(용기)로 나누어 관리</strong>하는 방식이다. 이 시스템은 특히 <strong>소모성 자재나 부품</strong>을 관리할 때 유용하며, 재고 수준을 효율적으로 추적하고 <strong>자동 주문</strong>을 촉진하는 데 도움을 준다.</p>
+<ol type="1">
+<li><strong>기본 개념</strong>
+<ul>
+<li><strong>두 개의 컨테이너</strong>(bin)를 사용하여 재고를 관리한다.
+<ul>
+<li><strong>첫 번째 bin</strong>: 사용 중인 재고. 이 bin에서 자재를 소모한다.</li>
+<li><strong>두 번째 bin</strong>: 예비 재고. 첫 번째 bin의 자재가 소진되면 두 번째 bin에서 자재를 꺼내 사용한다.</li>
+</ul></li>
+<li><strong>첫 번째 bin</strong>이 비어가면, 두 번째 bin의 자재를 사용하며, 동시에 공급업체에 주문을 하여 첫 번째 bin을 다시 채운다. 주문이 완료되면, 재고를 채운 후 두 번째 bin을 첫 번째 bin으로 옮겨 다시 사용하는 방식이다.</li>
+</ul></li>
+<li><strong>운영 원리</strong>
+<ul>
+<li><strong>초기 재고 분배</strong>: 재고가 두 개의 bin에 균등하게 분배된다.</li>
+<li><strong>첫 번째 bin 사용</strong>: 생산 또는 작업에서 자재가 소진될 때까지 첫 번째 bin에서 자재를 사용한다.</li>
+<li><strong>두 번째 bin 사용</strong>: 첫 번째 bin의 자재가 모두 소진되면 두 번째 bin을 사용하여 자재가 부족하지 않도록 한다.</li>
+<li><strong>주문 프로세스</strong>: 첫 번째 bin이 비었을 때, 즉 자재를 두 번째 bin에서 사용하기 시작할 때 공급업체에 재주문을 하고, 주문된 자재가 들어오면 첫 번째 bin에 자재를 채운다.</li>
+</ul></li>
+<li><strong>주요 특징</strong>
+<ul>
+<li><strong>재고 관리의 단순화</strong>: 두 개의 bin을 사용하여 재고 관리가 간단해지고, 재고 부족을 방지할 수 있다.</li>
+<li><strong>자동 주문 유도</strong>: 첫 번째 bin이 비었을 때 자동으로 재주문이 발생하여, 자재가 부족하지 않도록 유지된다.</li>
+<li><strong>재고 확인 용이</strong>: 두 개의 bin을 통해 현재 사용 중인 재고와 예비 재고를 쉽게 확인할 수 있다.</li>
+<li><strong>낭비 감소</strong>: 과잉 재고를 피할 수 있고, 자재가 부족하지 않게 유지하여 생산 차질을 줄일 수 있다.</li>
+</ul></li>
+<li><strong>장점</strong>
+<ul>
+<li><strong>간단한 시스템</strong>: 재고 관리가 직관적이고, 복잡한 소프트웨어나 고급 시스템 없이도 효율적인 재고 관리가 가능하다.</li>
+<li><strong>주문 자동화</strong>: 자재가 소진되면 즉시 자동으로 주문을 유도하여, 재고 부족 상태를 예방할 수 있다.</li>
+<li><strong>비용 절감</strong>: 재고가 과잉되지 않도록 관리할 수 있으며, 필요한 자재만을 효율적으로 주문할 수 있다.</li>
+</ul></li>
+<li><strong>단점</strong>
+<ul>
+<li><strong>한정된 용도</strong>: 이 시스템은 소모품이나 자주 사용되는 자재에 적합하며, 대량 생산 시스템이나 복잡한 제품에 적용하기 어려울 수 있다.</li>
+<li><strong>재고 수준 관리의 한계</strong>: 두 개의 bin만 사용하므로, 여러 종류의 자재가 필요한 경우 관리가 복잡해질 수 있다.</li>
+</ul></li>
+<li><strong>적용 예시</strong>
+<ul>
+<li><strong>소모성 자재 관리</strong>: 사무실 용품, 부품, 원자재 등 자주 사용되지만 고정된 양을 필요로 하는 자재에 사용된다.</li>
+<li><strong>제조업체</strong>: 일정한 양의 부품을 자주 사용하는 제조업체에서 유용하게 활용된다.</li>
+</ul></li>
+</ol>
+<p>Two-bin system은 간단하고 효과적인 재고 관리 방법으로, 주로 소모품이나 자주 사용하는 자재의 재고를 효율적으로 관리하는 데 유용하다. 두 개의 bin을 사용해 재고를 관리함으로써 과잉 재고나 재고 부족을 방지하고, 자동적으로 재주문을 유도하여 생산 과정의 연속성을 유지할 수 있다.</p>
+<p><br></p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 130-1-8">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+기출: 130-1-8
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+</section>
+<section id="min-max-시스템" class="level4">
+<h4 class="anchored" data-anchor-id="min-max-시스템">Min-Max 시스템</h4>
+<p><strong>Min-Max System</strong>, 또는 <code>(s,S) 시스템</code>, <code>절충 시스템</code>은 재고 관리 방식 중 하나로, <strong>최소 재고 수준(minimum level)</strong>과 <strong>최대 재고 수준(maximum level)</strong>을 설정하여 재고를 관리하는 시스템이다. 이 시스템은 주로 <strong>소매업</strong>이나 <strong>제조업</strong>에서 사용되며, 재고 수준을 효율적으로 유지하고, <strong>과잉 재고</strong>나 <strong>재고 부족</strong>을 방지하는 데 도움을 준다. 이 시스템은 일정기간마다 재고수준을 확인하는 정기발주형 재고관리시스템을 기초로 일정기간에 재고 조사시 정량발주형에 있어 재발주점에 도다하지 앟으면 주문을 하지 않는다. 반면 재발주점에 도달했다면 정량발주하여 발주관련 수고를 최소화 한다.</p>
+<ol type="1">
+<li><strong>기본 개념</strong>
+<ul>
+<li><strong>최소 재고 수준 (Min Level)</strong>: 재고가 이 수준 이하로 떨어지면 자동으로 <strong>재주문</strong>이 이루어지도록 설정하는 최소한의 재고량이다. 이를 통해 <strong>재고 부족</strong>을 예방한다.</li>
+<li><strong>최대 재고 수준 (Max Level)</strong>: 재고가 이 수준 이상으로 증가하지 않도록 설정하는 최대 재고량이다. 이를 통해 <strong>과잉 재고</strong>를 방지하고, <strong>창고 공간</strong>을 효율적으로 관리한다.</li>
+</ul></li>
+<li><strong>운영 원리</strong>
+<ul>
+<li><strong>재고 수준 모니터링</strong>: 재고 수준이 최소 수준 이하로 떨어지면 <strong>재주문</strong>을 통해 재고를 보충하고, 최대 수준을 초과하지 않도록 관리한다.</li>
+<li><strong>재주문 시점</strong>: 재고가 <strong>최소 재고 수준에 도달</strong>하면, 지정된 양의 재고를 주문한다. 이때, 재주문 수량은 <strong>최대 재고 수준</strong>에서 <strong>현재 재고 수준</strong>을 뺀 양만큼 이루어진다.</li>
+<li><strong>자동화된 재주문</strong>: 일부 시스템에서는 재고 수준을 실시간으로 추적하여 자동으로 재주문을 발생시킬 수 있다.</li>
+</ul></li>
+<li><strong>주요 특징</strong>
+<ul>
+<li><strong>단순한 관리</strong>: 최소/최대 수준만 설정하면 되므로 비교적 <strong>단순한 방식</strong>으로 재고를 관리할 수 있다.</li>
+<li><strong>예측 가능한 재고 수준</strong>: 최소 및 최대 수준을 설정해 두면 재고가 과잉이거나 부족하지 않도록 <strong>예측 가능</strong>한 수준으로 관리할 수 있다.</li>
+<li><strong>정해진 주문 시점</strong>: 재고가 일정 수준 이하로 떨어졌을 때 자동으로 주문을 하여 재고 부족을 방지한다.</li>
+</ul></li>
+<li><strong>장점</strong>
+<ul>
+<li><strong>과잉 재고 방지</strong>: 최대 재고 수준을 설정함으로써 <strong>과잉 재고</strong>를 방지할 수 있다.</li>
+<li><strong>재고 부족 예방</strong>: 최소 재고 수준을 설정하여 <strong>재고 부족</strong> 상황을 미리 방지할 수 있다.</li>
+<li><strong>창고 공간 효율적 관리</strong>: 과도한 재고를 쌓아두지 않도록 관리하여 창고 공간을 효율적으로 활용할 수 있다.</li>
+<li><strong>단순하고 직관적인 시스템</strong>: 최소/최대 재고 수준만으로 재고를 관리할 수 있어 <strong>설정이 간단</strong>하고 <strong>이해하기 쉽다</strong>.</li>
+</ul></li>
+<li><strong>단점</strong>
+<ul>
+<li><strong>재고 관리의 유연성 부족</strong>: 수요가 갑자기 변동하는 경우, <strong>고정된 최소/최대 재고 수준</strong>만으로는 적절한 대응이 어려울 수 있다.</li>
+<li><strong>과잉 주문의 위험</strong>: 예상보다 수요가 낮을 경우, <strong>재주문 수량</strong>이 과도해질 수 있어 <strong>재고 과잉</strong>이 발생할 수 있다.</li>
+<li><strong>주문 리드 타임 고려 부족</strong>: 리드 타임(주문부터 입고까지의 시간)을 정확히 반영하지 않으면, 재고 부족 상태가 발생할 수 있다.</li>
+</ul></li>
+<li><strong>적용 예시</strong>
+<ul>
+<li><strong>소매업체</strong>: 인기 있는 제품에 대해 최소 재고 수준을 설정하고, 재고가 그 수준에 도달하면 자동으로 재주문을 하여 고객에게 제품이 계속 공급될 수 있도록 한다.</li>
+<li><strong>제조업체</strong>: 원자재나 부품의 재고를 관리할 때, 최소 및 최대 재고 수준을 설정하여 생산이 원활하게 이루어지도록 한다.</li>
+</ul></li>
+</ol>
+<p>Min-Max 시스템은 재고 관리의 기본적인 방법으로, <strong>최소 재고 수준</strong>과 <strong>최대 재고 수준</strong>을 설정하여 재고 부족과 과잉을 방지한다. 이 시스템은 단순하고 직관적이지만, <strong>수요 변동</strong>이나 <strong>리드 타임</strong>을 고려하는 데 한계가 있을 수 있어, <strong>자동화된 재고 추적</strong>과 <strong>수요 예측</strong>을 추가적으로 활용하면 더욱 효과적이다.</p>
+<p><br></p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 103-1-12, 118-3-3, 127-1-4">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+기출: 103-1-12, 118-3-3, 127-1-4
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+</section>
+<section id="정량발주방식과-정기발주방식" class="level4">
+<h4 class="anchored" data-anchor-id="정량발주방식과-정기발주방식">정량발주방식과 정기발주방식</h4>
+<p><code>정기발주방식</code>과 <code>정량발주방식</code>의 발주 시점에 따라 구분된다.</p>
+<div class="cell" data-tbl-colwidths="[20,40,40]">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 40%">
+<col style="width: 40%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">구분</th>
+<th style="text-align: left;">정량발주시스템</th>
+<th style="text-align: left;">정기발주시스템</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">개요</td>
+<td style="text-align: left;">재고가 발주점에 이르면 정량을 발주</td>
+<td style="text-align: left;">정기적으로 부정량을 발주</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">발주시기</td>
+<td style="text-align: left;">부정기</td>
+<td style="text-align: left;">정기</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">발주량</td>
+<td style="text-align: left;">정량(경제적 발주량)</td>
+<td style="text-align: left;">부정량(최대 재고량 - 현재고)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">재고조사방식</td>
+<td style="text-align: left;">계속 실사</td>
+<td style="text-align: left;">정기 실사</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">안전재고</td>
+<td style="text-align: left;">조달기간 중 수요변화 대비량</td>
+<td style="text-align: left;">조달기간 및 발주주기 중 수요변화 대비량</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="callout callout-style-default callout-important no-icon callout-titled" title="발주점 계산">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+발주점 계산
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<dl>
+<dt>상황</dt>
+<dd>
+<ul>
+<li>1일 평균 사용량: 100개</li>
+<li>평균구매에 걸리는 시간: 5일</li>
+<li>서비스율은 95%로 안전계수 1.65를 적용함</li>
+<li>연속 5일 동안 사용량 표준편차: 20개</li>
+</ul>
+</dd>
+</dl>
+<hr>
+<p>발주점 = 조달기간 수요량(d x L) + 안전계수(<span class="math inline">\(u_{1-\alpha}\)</span>) x 조달기간 중 수요량 표준편차(<span class="math inline">\(\sigma_L\)</span>) = (100x5) + 1.65x20 = 533</p>
+<p>정량발주시스템에 따라 계속적인 재고실사를 통해 재고량이 533개가 남게되면 발저점에 도달한 것으로 판단하여 발주를 진행한다.</p>
+</div>
+</div>
+<p><br></p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 103-3-2, 112-1-1, 130-4-2">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+기출: 103-3-2, 112-1-1, 130-4-2
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="재고-비용-및-재고-성과-척도" class="level2">
+<h2 class="anchored" data-anchor-id="재고-비용-및-재고-성과-척도">재고 비용 및 재고 성과 척도</h2>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TB
+00[재고관련비용]
+01["주문비용&lt;br&gt;Procurement costs"]
+02["재고유지비용&lt;br&gt;Inventory carrying costs"]
+03["품절비용&lt;br&gt;Out-of-stock costs"]
+00 --- 01 &amp; 02 &amp; 03
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p><span class="math display">\[
+총 \ 재고비 = 재고비용 \ 합 = 주문/구매 \ 준비 \ 비용 + 재고 \ 유지 \ 비용 + 품절 \ 비용(재고 \ 부족비)
+\]</span></p>
+<p>재고관련 비용은 일반적으로 제품 가치 15~35% 발생한다(이자, 보관비용, 세금, 보험료, 상품 훼손 비용 등).</p>
+<dl>
+<dt>주문/준비 비용 (order/setup cost)</dt>
+<dd>
+<ul>
+<li>주문비용이란 창고에 입하를 위한 주문 행위를 할 때 발생하는 비용</li>
+<li>주문 또는 준비 횟수에 비례하지만, 주문 크기에는 전혀 관계가 없다고 가정</li>
+</ul>
+</dd>
+</dl>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="생산 준비 비용(Setup or production change cost)">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+생산 준비 비용(Setup or production change cost)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>특정 제품을 생산하기 위하여 생산 공정 변경이나 기계 및 공구 교환 등으로 발생되는 비용</li>
+<li>새로 주문할 때마다 발생되는 고정비적 성격을 띤 비용으로 주문 횟수나 생산 횟수 크기에 비례</li>
+<li>준비 시간 중 발생되는 기계 유휴 비용, 준비 인원 직접 노무비, 사무 처리비, 공구 비용 등이 포함</li>
+</ul>
+</div>
+</div>
+<dl>
+<dt>재고 유지 비용 (holding cost)</dt>
+<dd>
+<ul>
+<li>재고 유지비란 일정 수준 재고품을 보유하고유지할 경우 발생하는 비용</li>
+<li>재고 유지비는 재고량 변화에 따라서 직접적으로 비례하여 변화하므로 변동비로 취급</li>
+</ul>
+</dd>
+<dt>품절비용 (stock out cost)</dt>
+<dd>
+<ul>
+<li>외적 및 내적 재고 부족</li>
+<li>재고 부족(품절)으로 발생되는 비용으로 판매기회나 고객 상실인 기회 상실 비용</li>
+</ul>
+</dd>
+</dl>
+<section id="재고-관리-척도" class="level3">
+<h3 class="anchored" data-anchor-id="재고-관리-척도">재고 관리 척도</h3>
+<p>재고 관리 측정을 위한 기본 형태로 다음 4가지가 있다.</p>
+<ul>
+<li><code>평균 총 재고액</code>(Average aggregate inventory value)</li>
+<li><code>재고 회전율</code></li>
+<li><code>재고 공급 주수</code></li>
+<li><code>재고 공급일수</code>(Day of supply)</li>
+</ul>
+<dl>
+<dt>평균 총 재고액</dt>
+<dd>
+<ul>
+<li>현재 재고로 보유하고 있는 품목 가치 합, 재고 총 평균 가액</li>
+<li>기업이 어떤 기간 동안 재고로 보유하고 있는 모든 품목(원자재, 재공품, 완제품 등) 총 평균 가치(원가 기준)</li>
+<li>평균 총괄 재고가치는 기업이 얼마나 많은 자산이 재고에 묶여 있는가를 나타내는 지표</li>
+<li>총 자산 대비 평균적으로 제조업은 25%, 유통업체는 75% 수준</li>
+</ul>
+</dd>
+</dl>
+<p><span class="math display">\[
+평균총재고액 = \frac{기초재고액 + 기말재고액}{2}
+\]</span></p>
+<dl>
+<dt>재고 공급일수</dt>
+<dd>
+<ul>
+<li>현재 보관 중인 재고를 이용할 경우 기대 판매 가능일 수(현재 재고로 며칠을 공급할 수 있는가)</li>
+</ul>
+</dd>
+</dl>
+<p><span class="math display">\[
+재고 \ 공급일수 = \frac{평균재고가액}{일당매출원가}
+\]</span></p>
+<dl>
+<dt>재고 공급주수</dt>
+<dd>
+<ul>
+<li>평균 총괄 재고 가치를 주당 매출원가로 나눈 값</li>
+</ul>
+</dd>
+</dl>
+<p><span class="math display">\[
+재고 \ 공급주수 = \frac{평균재고가액}{주당매출원가}
+\]</span></p>
+<dl>
+<dt>재고 회전율</dt>
+<dd>
+<ul>
+<li>연간 매출원가를 연간 평균 총재고액으로 나눈 재고 측정치</li>
+<li>회전율은 일정한 기간을 전제로 하고그 사이에 판매 활동이 어떻게 공헌했는지 측정하는 지표로 회전율이 높은수록 좋음</li>
+</ul>
+</dd>
+</dl>
+<p><span class="math display">\[
+회전율 = \frac{(연간)매출액(원가)}{(평균)재고액}
+\]</span></p>
+<div class="callout callout-style-default callout-important no-icon callout-titled" title="재고 성과 척도">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+재고 성과 척도
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>평균 총 재고액 2억원, 연간 매출원가 10억원, 연간 50주 영업, 연간 운영일수가 250일일 때, 재고회전율, 재고공급주수, 재고공급일수를 계산하시오. 만약 재고회전율이 10회/년으로 향상되었다면 평균총재고액을 계산하시오.</p>
+<hr>
+<dl>
+<dt>재고회전율</dt>
+<dd>
+<ul>
+<li>재고회전율 = 10억/2억 = 5(회/년)</li>
+</ul>
+</dd>
+<dt>재고공급주수</dt>
+<dd>
+<ul>
+<li>재고공급주수 = 2억/(10억/50주) = 10주</li>
+</ul>
+</dd>
+<dt>재고공급일수</dt>
+<dd>
+<ul>
+<li>재고공급일수 = 2억/(10억/250일) = 50일</li>
+</ul>
+</dd>
+<dt>재고회전율이 10회/년이면</dt>
+<dd>
+<ul>
+<li>재고회전율 = 10 = 10/<span class="math inline">\(x\)</span>, 따라서 평균재고액은 1억원</li>
+</ul>
+</dd>
+</dl>
+</div>
+</div>
+</section>
+</section>
+<section id="공급업체-재고-관리" class="level2">
+<h2 class="anchored" data-anchor-id="공급업체-재고-관리">공급업체 재고 관리</h2>
+<section id="sec-vmi" class="level3">
+<h3 class="anchored" data-anchor-id="sec-vmi">VMI</h3>
+<p><strong>Vendor Managed Inventory (VMI)</strong>는 공급업체가 고객 재고 수준을 관리하는 시스템이다. 전통적인 재고 관리에서는 고객이 자신 재고를 모니터링하고 필요할 때 공급업체에 주문을 넣는 방식이지만, VMI에서는 공급업체가 고객 재고 현황을 실시간으로 파악하고 재고가 부족할 때 자동으로 발주하여 필요한 상품을 공급하는 방식이다.</p>
+<dl>
+<dt>VMI의 주요 특징</dt>
+<dd>
+<ul>
+<li>재고 관리의 자동화: 공급업체가 고객의 재고 수준을 직접 모니터링하고 재고가 부족할 경우 발주를 자동으로 처리한다. 고객은 재고 수준을 관리할 필요 없이 공급업체가 이를 대신한다.</li>
+<li>실시간 데이터 공유: VMI 시스템에서는 고객과 공급업체가 실시간으로 데이터를 공유한다. 고객의 재고 데이터, 판매 데이터 등이 공급업체에 전달되어 재고 수준과 수요를 예측하고 최적화된 발주를 한다.</li>
+<li>수요 예측 및 최적화: 공급업체는 고객의 판매 패턴과 재고 수준을 분석하여 적절한 시점에 적절한 수량의 상품을 공급할 수 있다. 이를 통해 재고 부족이나 과잉을 방지하고 효율적인 재고 관리를 한다.</li>
+<li>협력적인 관계: VMI는 공급업체와 고객 간의 긴밀한 협력을 기반으로 한다. 공급업체는 고객의 재고를 관리하면서 고객의 필요에 맞춰 공급 일정을 조정하고, 고객은 더 이상 재고 관리에 신경 쓸 필요 없이 원활한 공급을 받을 수 있다.</li>
+</ul>
+</dd>
+</dl>
+<p>VMI 장점과 단점은 다음과 같다.</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>VMI 장점과 단점</caption>
+<colgroup>
+<col style="width: 45%">
+<col style="width: 54%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">장점</th>
+<th style="text-align: left;">단점</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">재고 관리 효율성 향상: 재고 수준을 최적화하여 과잉 재고나 재고 부족을 방지할 수 있다.</td>
+<td style="text-align: left;">정보 공유의 위험: 고객의 재고 데이터와 판매 데이터를 공급업체와 공유해야 하므로 보안에 대한 우려가 있을 수 있다.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">운영 비용 절감: 주문 및 재고 관리가 자동화되어 인건비나 물류 비용을 줄일 수 있다.</td>
+<td style="text-align: left;">초기 설정 비용: VMI 시스템 도입을 위한 초기 비용이 발생할 수 있으며 시스템 통합에 시간이 필요할 수 있다.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">공급망 개선: 공급업체와 고객 간의 신뢰와 협력이 강화되어 공급망 효율성이 향상된다.</td>
+<td style="text-align: left;">의존성: 공급업체에 의존하는 시스템이기 때문에, 공급업체의 관리 능력이 부족하면 문제가 발생할 수 있다.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">빠른 재고 회전율: 재고 수준을 정확히 예측하고 관리할 수 있어 빠른 재고 회전율을 유지할 수 있다.</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<dl>
+<dt>VMI의 적용 분야</dt>
+<dd>
+<ul>
+<li>VMI는 제조업체, 유통업체, 소매업체 등 다양한 산업에서 활용된다. 예를 들어, 대형 슈퍼마켓이나 전자상거래 플랫폼에서는 재고 관리를 효율적으로 하기 위해 VMI를 많이 사용한다.</li>
+<li>VMI 시스템은 고객과 공급업체 모두에게 이점을 제공하며, 재고 관리의 효율성을 높이고 공급망을 최적화하는 데 중요한 역할을 한다.</li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="sec-cmi" class="level3">
+<h3 class="anchored" data-anchor-id="sec-cmi">CMI</h3>
+<p><strong>Co-Managed Inventory (CMI)</strong>는 <strong>공동 관리 재고</strong> 시스템을 의미하며, 공급업체와 고객(혹은 소매업체)이 재고 관리를 <strong>공동으로 책임지는</strong> 방식이다. 이 시스템에서는 공급업체와 고객이 서로 협력하여 재고 수준을 유지하고, 수요를 예측하며, 주문 및 재고 관리의 효율성을 높이는 것을 목표로 한다.</p>
+<p>CMI의 핵심은 공급업체와 고객 간의 <strong>협력</strong>과 <strong>정보 공유</strong>이다. 이를 통해 양측은 재고 부족이나 과잉을 방지하고, 재고 비용을 최적화할 수 있다.</p>
+<dl>
+<dt>CMI의 주요 특징</dt>
+<dd>
+<ol type="1">
+<li><strong>공동 재고 관리</strong>: 공급업체와 고객이 재고를 공동으로 관리하며, 각자의 역할을 분담한다. 고객은 재고 상태와 수요 예측에 대한 정보를 제공하고, 공급업체는 재고 보충, 주문, 리드 타임 관리 등을 담당한다.</li>
+<li><strong>정보 공유</strong>: CMI 시스템에서는 재고 수준, 주문 상태, 수요 예측 등 중요한 정보를 공급업체와 고객이 실시간으로 공유한다. 이를 통해 양측은 보다 정확한 재고 관리와 생산 계획을 세울 수 있다.</li>
+<li><strong>수요 예측 및 주문 관리</strong>: 공급업체와 고객은 수요 변동을 예측하고, 이에 맞춰 재고를 조정한다. 이를 통해 불필요한 재고를 줄이고, 고객의 수요에 적시에 대응할 수 있다.</li>
+<li><strong>책임 분담</strong>: CMI에서는 고객과 공급업체가 서로 책임을 나눈다. 고객은 실제 판매나 사용 데이터를 제공하고, 공급업체는 재고를 보충하고 적정 수준의 재고를 유지한다. 이 과정에서 양측은 각자의 역할에 맞춰 효율적으로 협력한다.</li>
+</ol>
+</dd>
+<dt>CMI의 장점</dt>
+<dd>
+<ol type="1">
+<li><strong>재고 최적화</strong>: 공급업체와 고객이 공동으로 재고를 관리하므로 재고 부족이나 과잉이 발생할 가능성이 줄어든다. 이는 재고 회전율을 개선하고, 불필요한 재고 비용을 절감하는 데 도움이 된다.</li>
+<li><strong>주문 및 공급의 효율성 향상</strong>: 공급업체는 고객의 수요 예측 정보를 바탕으로 미리 재고를 준비할 수 있으며, 고객은 필요한 물품을 적시에 공급받을 수 있다. 이는 주문 주기와 리드 타임을 최적화하여 공급망을 효율적으로 운영할 수 있게 한다.</li>
+<li><strong>비용 절감</strong>: CMI 시스템은 재고를 적절히 유지하고, 수요 변동에 맞춰 주문을 조정함으로써 재고 비용과 관리 비용을 절감할 수 있다. 또한, 공급업체가 재고를 미리 준비하여 운송이나 생산 계획을 효율적으로 세울 수 있다.</li>
+<li><strong>고객 만족도 향상</strong>: CMI를 통해 공급업체는 고객의 수요를 더욱 정확히 예측하고, 적시에 제품을 공급할 수 있다. 이를 통해 고객은 제품을 제때 받을 수 있어, 고객 만족도가 높아진다.</li>
+<li><strong>리스크 관리 강화</strong>: 공급망 내에서 발생할 수 있는 수요 변동이나 공급 문제를 사전에 예측하고, 양측이 공동으로 대응할 수 있다. 이를 통해 공급망의 리스크를 감소시킬 수 있다.</li>
+</ol>
+</dd>
+<dt>CMI의 단점</dt>
+<dd>
+<ol type="1">
+<li><strong>정보 공유의 어려움</strong>: CMI 시스템에서 중요한 역할을 하는 것이 <strong>정확한 정보의 공유</strong>이다. 만약 고객이나 공급업체가 정보를 제대로 제공하지 않거나, 시스템을 잘 활용하지 못한다면, 재고 관리에 문제가 발생할 수 있다.</li>
+<li><strong>복잡한 관리</strong>: 공급업체와 고객이 서로 협력하여 재고를 관리하는 만큼, 두 측 간의 협의와 조정이 필요하다. 이는 관리가 복잡해지고, 의사결정 과정이 지연될 수 있다.</li>
+<li><strong>신뢰 문제</strong>: CMI는 공급업체와 고객 간의 높은 <strong>신뢰</strong>를 바탕으로 운영된다. 따라서 양측 간에 신뢰가 부족하면 시스템이 제대로 작동하지 않을 수 있다. 공급업체는 고객이 예측을 정확하게 제공할 수 있다는 신뢰가 있어야 하며, 고객은 공급업체가 적시에 제품을 공급할 수 있다는 신뢰를 가져야 한다.</li>
+<li><strong>초기 도입 비용</strong>: CMI 시스템을 도입하려면, 양측이 정보를 공유할 수 있는 <strong>IT 인프라</strong>를 구축해야 한다. 이 과정에서 초기 비용이 발생할 수 있으며, 시스템을 적절히 운영하기 위한 비용이 추가될 수 있다.</li>
+</ol>
+</dd>
+<dt>CMI의 예시</dt>
+<dd>
+<ul>
+<li><strong>소매업체와 공급업체 간의 협력</strong>: 대형 소매업체가 여러 공급업체와 CMI를 통해 협력하는 경우를 예로 들 수 있다. 소매업체는 판매 데이터를 공급업체와 공유하고, 공급업체는 이를 바탕으로 재고를 보충하거나 생산 계획을 세운다. 이는 소매업체가 고객의 수요에 맞는 제품을 적시에 공급받을 수 있게 하고, 공급업체는 효율적인 생산과 배송 계획을 세울 수 있도록 도와준다.</li>
+<li><strong>자동차 제조업체와 부품 공급업체 간의 협력</strong>: 자동차 제조업체가 부품 공급업체와 CMI 시스템을 도입한 경우, 부품 공급업체는 자동차 제조업체의 생산 계획과 수요 예측을 바탕으로 필요한 부품을 적시에 공급한다. 이 경우, 재고 수준을 최적화하여 불필요한 재고를 줄이고, 생산 지연을 방지할 수 있다.</li>
+</ul>
+</dd>
+</dl>
+<p>Co-Managed Inventory (CMI)는 공급업체와 고객 간의 협력과 정보 공유를 통해 재고 관리를 최적화하고 비용을 절감하는 방법이다. 이 시스템을 통해 양측은 재고 부족이나 과잉을 방지하고, 고객 만족도를 높이며, 공급망 리스크를 최소화할 수 있다. 하지만, 정보 공유의 정확성과 신뢰가 중요한 요소이며, 이를 관리하기 위한 추가 비용이나 시스템 구축이 필요할 수 있다.</p>
+<dl>
+<dt>VMI vs.&nbsp;CMI</dt>
+<dd>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 19%">
+<col style="width: 39%">
+<col style="width: 41%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>특징</strong></th>
+<th><strong>VMI (Vendor Managed Inventory)</strong></th>
+<th><strong>CMI (Co-Managed Inventory)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>재고 관리 책임</strong></td>
+<td>공급업체가 전담</td>
+<td>공급업체와 고객이 공동으로 관리</td>
+</tr>
+<tr class="even">
+<td><strong>정보 공유</strong></td>
+<td>고객은 판매 데이터를 공급업체에게 제공, 공급업체가 재고 보충</td>
+<td>고객과 공급업체가 정보를 실시간으로 공유하고, 재고를 함께 관리</td>
+</tr>
+<tr class="odd">
+<td><strong>주요 목적</strong></td>
+<td>공급업체가 고객의 재고를 최적화하고 관리</td>
+<td>고객과 공급업체가 협력하여 재고를 효율적으로 관리</td>
+</tr>
+<tr class="even">
+<td><strong>책임</strong></td>
+<td>공급업체가 주도, 고객은 수동적 역할</td>
+<td>고객과 공급업체가 공동으로 책임</td>
+</tr>
+<tr class="odd">
+<td><strong>주요 장점</strong></td>
+<td>고객의 재고 관리 부담이 줄어듦, 공급업체의 재고 보충이 효율적</td>
+<td>고객과 공급업체가 협력하여 재고를 최적화, 공급망 효율 증대</td>
+</tr>
+<tr class="even">
+<td><strong>단점</strong></td>
+<td>고객이 재고에 대한 완전한 제어권을 잃을 수 있음</td>
+<td>정보 공유와 협력의 효과적인 관리가 중요, 역할 분담에 신중함 필요</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<ul>
+<li><strong>VMI</strong>는 공급업체가 주도적으로 재고를 관리하는 방식으로, 고객은 공급업체의 재고 관리에 의존하게 된다. 이 시스템은 공급업체의 효율성을 강조하며, 고객은 재고 관리 부담을 덜 수 있다.</li>
+<li><strong>CMI</strong>는 고객과 공급업체가 공동으로 재고를 관리하는 시스템으로, 서로의 역할을 협력적으로 수행한다. 이 방식은 <strong>정보의 실시간 공유와 협력</strong>을 통해 공급망을 최적화하는 데 유리하다.</li>
+</ul>
+<p>따라서, 두 시스템은 서로 다른 방식으로 <strong>효율적인 재고 관리</strong>를 추구하며, 각 시스템은 <strong>기업의 운영 환경</strong>과 <strong>공급망의 특성</strong>에 따라 선택될 수 있다.</p>
+</section>
+<section id="sec-cpfr" class="level3">
+<h3 class="anchored" data-anchor-id="sec-cpfr">CPFR</h3>
+<p><strong>CPFR (Collaborative Planning, Forecasting, and Replenishment)</strong>는 <strong>협업적 계획, 예측, 보충</strong> 시스템을 의미한다. 이 시스템은 공급망 내의 여러 파트너들이 협력하여 <strong>수요 예측</strong>, <strong>생산 계획</strong>, <strong>재고 보충</strong>을 최적화하는 방식을 채택한다. CPFR의 목적은 공급업체와 고객이 협력하여 더 정확한 예측을 하고, 이를 바탕으로 재고를 효율적으로 관리하여 <strong>공급망 효율성</strong>을 극대화하는 것이다.</p>
+<dl>
+<dt>CPFR의 핵심 구성 요소</dt>
+<dd>
+<ol type="1">
+<li><strong>협업적 계획 (Collaborative Planning)</strong>: 공급업체와 고객이 <strong>공동으로 계획</strong>을 수립한다. 이 단계에서는 수요 예측, 생산 계획, 마케팅 전략 등을 공유하고 협의하여 서로의 목표를 일치시킨다. 고객과 공급업체는 시장 변화를 예측하고, 이를 반영한 공동 계획을 수립한다.</li>
+<li><strong>수요 예측 (Collaborative Forecasting)</strong>: 고객과 공급업체가 <strong>공동으로 수요 예측</strong>을 수립한다. 판매 데이터, 시장 동향 등을 공유하여 보다 정확한 예측을 만든다. 이렇게 생성된 예측은 고객과 공급업체 간의 협력에 기반을 두고 재고 관리를 최적화한다.</li>
+<li><strong>재고 보충 (Collaborative Replenishment)</strong>: 예측된 수요에 맞춰 <strong>재고 보충 계획</strong>을 수립한다. 고객은 판매 데이터를 제공하고, 공급업체는 이를 바탕으로 재고 수준을 모니터링하며, 필요 시 적시에 재고를 보충한다. 이렇게 하면 재고 부족이나 과잉 재고 문제를 방지할 수 있다.</li>
+<li><strong>이행 (Execution)</strong>: 계획된 수요 예측과 재고 보충을 바탕으로 실제 실행이 이루어진다. 공급업체는 고객의 수요를 반영하여 생산 및 배송 계획을 세우고, 고객은 그에 맞춰 주문을 진행한다. 이행 단계에서 실시간 정보 공유가 중요한 역할을 한다.</li>
+</ol>
+</dd>
+<dt>CPFR의 주요 목표</dt>
+<dd>
+<ul>
+<li><strong>수요 예측 정확도 향상</strong>: 고객과 공급업체가 협력하여 서로의 데이터를 공유함으로써 수요 예측을 더 정확하게 할 수 있다. 이를 통해 재고 부족이나 과잉을 방지하고, 효율적인 재고 관리가 가능하다.</li>
+<li><strong>공급망 효율성 증대</strong>: 재고를 최적화하고, 필요한 제품을 적시에 공급함으로써 <strong>비용 절감</strong>과 <strong>고객 만족도 향상</strong>을 달성한다.</li>
+<li><strong>협력적 관계 구축</strong>: 공급업체와 고객 간의 <strong>신뢰와 협력</strong>을 기반으로 장기적인 파트너십을 형성한다.</li>
+<li><strong>시장 반응 속도 향상</strong>: 예측된 수요에 맞춰 재고를 보충하므로 시장 변화에 빠르게 대응할 수 있다.</li>
+</ul>
+</dd>
+<dt>CPFR의 장점</dt>
+<dd>
+<ol type="1">
+<li><strong>정확한 수요 예측</strong>: 협업을 통해 각 파트너가 더 정확한 예측을 공유할 수 있기 때문에 수요 변동성을 최소화할 수 있다. 예측 정확도가 높아지면 재고 관리가 효율적으로 이루어진다.</li>
+<li><strong>비용 절감</strong>: 과잉 재고나 재고 부족을 방지하고, 적정 재고 수준을 유지함으로써 불필요한 비용을 줄일 수 있다. 또한 생산 계획과 배송 계획을 최적화하여 <strong>운송 비용</strong>이나 <strong>재고 유지 비용</strong>을 절감할 수 있다.</li>
+<li><strong>공급망 협력 강화</strong>: 공급업체와 고객 간의 지속적인 정보 공유와 협력으로 <strong>긴밀한 관계</strong>를 구축할 수 있다. 이는 장기적으로 상호 신뢰를 쌓고, 공급망의 안정성을 높이는 데 기여한다.</li>
+<li><strong>적시 공급</strong>: 수요 예측에 맞춘 재고 보충이 이루어지므로 <strong>필요한 제품을 적시에 공급</strong>할 수 있다. 이로 인해 고객의 요구를 신속하게 충족시킬 수 있으며, <strong>고객 만족도를 높일 수 있다.</strong></li>
+<li><strong>리드 타임 감소</strong>: 공급망의 협력과 계획을 통해 리드 타임을 줄일 수 있다. 공급업체는 고객의 수요를 미리 파악하고 준비할 수 있으므로, 공급 시간이 단축된다.</li>
+</ol>
+</dd>
+<dt>CPFR의 단점</dt>
+<dd>
+<ol type="1">
+<li><strong>정보 공유의 어려움</strong>: 공급업체와 고객 간에 정보를 <strong>투명하게 공유</strong>해야 하는데, 이 과정에서 <strong>데이터의 정확성</strong>이나 <strong>보안 문제</strong>가 발생할 수 있다. 또한, 민감한 정보를 공유하는 것에 대한 부담이 있을 수 있다.</li>
+<li><strong>초기 투자 비용</strong>: CPFR을 도입하려면 <strong>IT 시스템</strong>을 구축하고, 양측이 실시간으로 정보를 교환할 수 있는 환경을 마련해야 한다. 이 과정에서 <strong>초기 비용</strong>이 발생할 수 있다.</li>
+<li><strong>협력의 어려움</strong>: CPFR은 공급업체와 고객 간의 <strong>협력</strong>을 필요로 하며, 때로는 서로 다른 목표나 전략을 가지고 있어 협력이 원활하지 않을 수 있다. 이 경우 협의가 어려워질 수 있다.</li>
+<li><strong>리스크 분담</strong>: 예측에 대한 책임이 공동으로 이루어지기 때문에, 수요 예측이 틀리면 <strong>위험을 공동으로 분담</strong>해야 한다. 이는 어느 한쪽이 과도한 부담을 질 수 있음을 의미할 수 있다.</li>
+</ol>
+</dd>
+<dt>CPFR의 예시</dt>
+<dd>
+<ul>
+<li><strong>소매업체와 공급업체</strong>: 예를 들어, 대형 소매업체인 <strong>월마트</strong>와 공급업체 간의 CPFR 협업을 들 수 있다. 월마트는 판매 데이터를 공급업체와 실시간으로 공유하고, 공급업체는 이를 바탕으로 재고를 보충하는 방식이다. 월마트는 판매 트렌드와 프로모션 데이터를 제공하며, 공급업체는 이를 통해 재고 수준을 미리 조정하고, 적시에 필요한 제품을 공급한다.</li>
+<li><strong>전자기기 제조업체와 부품 공급업체</strong>: 전자기기 제조업체가 부품 공급업체와 CPFR 시스템을 도입한 경우, 제조업체는 부품의 수요 예측을 공급업체와 공유하고, 공급업체는 이를 기반으로 생산 계획을 수립하여 적시에 부품을 공급한다.</li>
+</ul>
+</dd>
+</dl>
+<p><strong>CPFR</strong>은 공급망 내의 여러 파트너들이 협력하여 수요 예측, 생산 계획, 재고 보충을 최적화하는 시스템이다. 이를 통해 공급망의 효율성을 높이고, 비용을 절감하며, <strong>고객 만족도를 향상</strong>시킬 수 있다. 다만, <strong>정보 공유</strong>와 <strong>협력</strong>의 원활한 진행이 중요하며, 초기 투자와 시스템 구축에 시간이 소요될 수 있다는 단점이 존재한다.</p>
+</section>
+<section id="sec-cock" class="level3">
+<h3 class="anchored" data-anchor-id="sec-cock">COCK</h3>
+<p><strong>코크</strong>(COCK) 시스템은 협력업체 간의 상호 협력과 정보 공유를 통해 <strong>공급망 전체의 효율성을 극대화</strong>하는 재고관리 시스템이다. COCK은 “Cooperation, Optimization, Communication, Knowledge-sharing”의 약자로, 협력과 최적화를 기반으로 공급망 전반을 관리하는 데 중점을 둔다.</p>
+<dl>
+<dt>주요 특징</dt>
+<dd>
+<ul>
+<li><strong>협력 중심 운영</strong><br>
+공급망에 참여하는 모든 협력업체가 정보를 공유하고 함께 의사결정한다.</li>
+<li><strong>실시간 데이터 교환</strong><br>
+IoT, 클라우드, ERP 등의 기술을 활용해 실시간으로 재고, 생산, 물류 데이터를 교환한다.</li>
+<li><strong>공급망 전체 최적화</strong><br>
+개별 기업이 아닌 공급망 전체를 하나의 시스템으로 보고, 비용 절감 및 효율 극대화를 목표로 한다.</li>
+<li><strong>예측 및 유연성 강화</strong><br>
+AI와 빅데이터 분석을 통해 수요를 예측하고, 시장 변화에 신속하게 대응할 수 있다.</li>
+</ul>
+</dd>
+<dt>운영 방식</dt>
+<dd>
+<ol type="1">
+<li><strong>데이터 통합</strong><br>
+협력업체 간의 생산, 재고, 물류 데이터를 클라우드 플랫폼에 통합하여 가시성을 확보한다.</li>
+<li><strong>공동 의사결정</strong><br>
+각 업체는 데이터를 바탕으로 공동으로 최적화된 생산 및 재고관리 방안을 설계한다.</li>
+<li><strong>지속적인 개선</strong><br>
+운영 데이터를 분석해 문제점을 식별하고, 지속적으로 프로세스를 개선한다.</li>
+</ol>
+</dd>
+<dt>장점</dt>
+<dd>
+<ul>
+<li>공급망 전체의 가시성을 높여 운영 효율을 극대화한다.</li>
+<li>리드 타임 단축과 재고 비용 절감 효과를 제공한다.</li>
+<li>협력업체 간의 신뢰 관계를 강화한다.</li>
+<li>불확실성에 유연하게 대응할 수 있는 시스템을 구축한다.</li>
+</ul>
+</dd>
+<dt>단점</dt>
+<dd>
+<ul>
+<li>초기 구축 비용이 높고 기술적 역량이 필요하다.</li>
+<li>협력업체 간의 이해관계 조율이 어려울 수 있다.</li>
+<li>데이터 공유에 대한 보안 문제가 발생할 가능성이 있다.</li>
+</ul>
+</dd>
+</dl>
+<p>코크 시스템은 특히 다수의 협력업체가 복잡하게 얽혀 있는 산업(예: 자동차, 전자제품)에서 효과적으로 활용되며, <strong>전체 공급망의 경쟁력을 높이는 데 핵심적인 역할</strong>을 한다.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="COCK 시스템과 비교">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+COCK 시스템과 비교
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>VMI(Vendor Managed Inventory)와 코크시스템(COCK System)의 차이, 활용포인트, 기대효과를 아래와 같이 설명한다.</p>
+<dl>
+<dt>VMI와 코크시스템의 차이</dt>
+<dd>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 42%">
+<col style="width: 40%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>구분</th>
+<th>VMI (Vendor Managed Inventory)</th>
+<th>코크시스템 (COCK System)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>정의</td>
+<td>공급업체가 고객사의 재고를 관리하고 보충하는 방식</td>
+<td>협력업체 간의 상호 이익을 극대화하는 재고관리 시스템</td>
+</tr>
+<tr class="even">
+<td>주요 목표</td>
+<td>재고 최적화 및 비용 절감</td>
+<td>협력업체 간의 정보 공유를 통한 공급망 최적화</td>
+</tr>
+<tr class="odd">
+<td>운영 주체</td>
+<td>공급업체</td>
+<td>협력업체 간 공동 운영</td>
+</tr>
+<tr class="even">
+<td>데이터 공유 방식</td>
+<td>고객사가 재고 데이터를 제공</td>
+<td>실시간으로 협력업체 간 데이터 공유</td>
+</tr>
+<tr class="odd">
+<td>관리 범위</td>
+<td>특정 고객사와의 관계에 중점</td>
+<td>전체 공급망을 통합적으로 관리</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<p>활용포인트는 다음과 같다.</p>
+<dl>
+<dt>VMI</dt>
+<dd>
+<ul>
+<li>고객사의 재고 부족 및 초과 문제 해결
+<ul>
+<li>공급업체와의 신뢰 관계를 기반으로 데이터 투명성 확보</li>
+<li>주로 단일 고객사와 장기적인 계약 관계에서 활용</li>
+</ul></li>
+</ul>
+</dd>
+<dt>코크시스템</dt>
+<dd>
+<ul>
+<li>다수의 협력업체가 참여하는 복잡한 공급망에서 효과적
+<ul>
+<li>실시간 데이터 교환 및 예측 기능 활용</li>
+<li>협력업체 간의 협력을 통해 전체 공급망 비용 최소화</li>
+</ul></li>
+</ul>
+</dd>
+</dl>
+<p>기대효과는 다음과 같다.</p>
+<dl>
+<dt>VMI</dt>
+<dd>
+<ul>
+<li>재고 회전율 향상
+<ul>
+<li>주문 처리 시간 단축</li>
+<li>공급업체와 고객사 간의 관계 강화</li>
+</ul></li>
+</ul>
+</dd>
+<dt>코크시스템</dt>
+<dd>
+<ul>
+<li>공급망 전체의 가시성 확보
+<ul>
+<li>리드 타임 단축 및 유연성 증가</li>
+<li>협력업체 간의 상호 이익 증대</li>
+</ul></li>
+</ul>
+</dd>
+</dl>
+</div>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation column-body">
+  <div class="nav-page nav-page-previous">
+      <a href="./0302물류관리.html" class="pagination-link" aria-label="물류관리">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">물류관리</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./0501생산계획수립.html" class="pagination-link" aria-label="생산계획 수립">
+        <span class="nav-page-text"><span class="chapter-title">생산계획 수립</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/yeonkyupark/PEPC/edit/main/0401재고관리.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div></div></footer></body></html>

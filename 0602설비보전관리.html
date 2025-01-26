@@ -1,0 +1,2359 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.39">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>설비보전 관리 – 공장관리기술사(2E)</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./0603자재취급및운반관리.html" rel="next">
+<link href="./0601설비계획.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-160d5d975b9dfffeaf699822bedbd9bf.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<meta name="mermaid-theme" content="neutral">
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./0601설비계획.html">06. 설비관리</a></li><li class="breadcrumb-item"><a href="./0602설비보전관리.html"><span class="chapter-title">설비보전 관리</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">공장관리기술사(2E)</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://yeonkyupark.github.io/" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-globe"></i></a>
+    <a href="https://www.instagram.com/yeonkyu.park/" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-instagram"></i></a>
+    <a href="https://github.com/yeonkyupark/PEPC" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">들어가는 글</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">01. 생산전략</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0101경쟁우위생산전략.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">경쟁우위 생산전략</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0102생산구조와방식.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">생산구조와 방식(Layout)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0103구매와외주전략.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">구매와 외주전략</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0104인력과직무설계.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">인력과 직무설계</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0105사업환경분석.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">사업환경 분석</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">02. 생산운영</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0201수요예측.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">수요예측</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0202프로세스진도관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">프로세스 진도관리</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">03. 물류관리</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0301공급망관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">공급망 관리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0302물류관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">물류관리</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">04. 재고관리</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0401재고관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">재고관리</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">05. 공정관리</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0501생산계획수립.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">생산계획 수립</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0502공정설계.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">공정설계</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0503작업계획수립.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">작업계획 수립</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0504표준작업관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">표준작업 관리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0505공정개선.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">공정개선</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">06. 설비관리</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0601설비계획.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">설비계획</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0602설비보전관리.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">설비보전 관리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0603자재취급및운반관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">자재취급 및 운반관리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0604환경관리및안전관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">환경 관리 및 안전 관리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0605시설및유틸리티관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">시설 및 유틸리티 관리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0606공장자동화기술.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">공장 자동화 기술</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">07. 작업관리</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0701작업방법및시간연구.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">작업방법 및 시간연구</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false">
+ <span class="menu-text">08. 생산성관리</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0801프로세스분석과개선.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">프로세스 분석과 개선</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0802생산성관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">생산성 관리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0803품질관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">품질관리</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false">
+ <span class="menu-text">09. 원가관리</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0901사업성분석.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">사업성분석</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0902원가관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">원가관리</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false">
+ <span class="menu-text">10. 경제성 공학</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1001가치공학.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">가치공학</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1002경영과학.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">경영과학</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false">
+ <span class="menu-text">11. 생산지원기술</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1101정보화활용기술.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">정보화 활용 기술</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1102제품개발기술.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">제품개발 기술</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1103서비스운영관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">서비스 운영관리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1104생산혁신기술.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">생산혁신기술</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1105신기술및동향.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">신기술및동향</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false">
+ <span class="menu-text">12. ISO</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1201ISO9001.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ISO9001</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1202ISO14001.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ISO14001</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1203ISO31000.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ISO31000</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1204ISO21500.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ISO21500</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">목차</h2>
+   
+  <ul>
+  <li><a href="#sec-pm" id="toc-sec-pm" class="nav-link active" data-scroll-target="#sec-pm">설비보전</a>
+  <ul>
+  <li><a href="#tpm전사적-생산보전" id="toc-tpm전사적-생산보전" class="nav-link" data-scroll-target="#tpm전사적-생산보전">TPM(전사적 생산보전)</a>
+  <ul class="collapse">
+  <li><a href="#tpm-8대-활동" id="toc-tpm-8대-활동" class="nav-link" data-scroll-target="#tpm-8대-활동">TPM 8대 활동</a></li>
+  </ul></li>
+  <li><a href="#tpm전사적-예방보전" id="toc-tpm전사적-예방보전" class="nav-link" data-scroll-target="#tpm전사적-예방보전">TPM(전사적 예방보전)</a>
+  <ul class="collapse">
+  <li><a href="#생산보전과-예방보전" id="toc-생산보전과-예방보전" class="nav-link" data-scroll-target="#생산보전과-예방보전">생산보전과 예방보전</a></li>
+  </ul></li>
+  <li><a href="#생산보전pm" id="toc-생산보전pm" class="nav-link" data-scroll-target="#생산보전pm">생산보전(PM)</a></li>
+  </ul></li>
+  <li><a href="#강제열화와-자연열화" id="toc-강제열화와-자연열화" class="nav-link" data-scroll-target="#강제열화와-자연열화">강제열화와 자연열화</a></li>
+  <li><a href="#돌발로스와-만성로스" id="toc-돌발로스와-만성로스" class="nav-link" data-scroll-target="#돌발로스와-만성로스">돌발로스와 만성로스</a></li>
+  <li><a href="#고장강도율" id="toc-고장강도율" class="nav-link" data-scroll-target="#고장강도율">고장강도율</a></li>
+  <li><a href="#자주보전-7단계" id="toc-자주보전-7단계" class="nav-link" data-scroll-target="#자주보전-7단계">자주보전 7단계</a></li>
+  <li><a href="#설비-6대-로스" id="toc-설비-6대-로스" class="nav-link" data-scroll-target="#설비-6대-로스">설비 6대 로스</a>
+  <ul>
+  <li><a href="#장치산업-8대-로스" id="toc-장치산업-8대-로스" class="nav-link" data-scroll-target="#장치산업-8대-로스">장치산업 8대 로스</a></li>
+  </ul></li>
+  <li><a href="#설비-보전-지표" id="toc-설비-보전-지표" class="nav-link" data-scroll-target="#설비-보전-지표">설비 보전 지표</a>
+  <ul>
+  <li><a href="#sec-mttr" id="toc-sec-mttr" class="nav-link" data-scroll-target="#sec-mttr">MTTR</a></li>
+  <li><a href="#sec-mtbf" id="toc-sec-mtbf" class="nav-link" data-scroll-target="#sec-mtbf">MTBF</a></li>
+  <li><a href="#sec-mttf" id="toc-sec-mttf" class="nav-link" data-scroll-target="#sec-mttf">MTTF</a></li>
+  <li><a href="#가용도" id="toc-가용도" class="nav-link" data-scroll-target="#가용도">가용도</a></li>
+  </ul></li>
+  <li><a href="#sec-bathtube" id="toc-sec-bathtube" class="nav-link" data-scroll-target="#sec-bathtube">욕조곡선</a>
+  <ul>
+  <li><a href="#sec-failure-rate" id="toc-sec-failure-rate" class="nav-link" data-scroll-target="#sec-failure-rate">고장률</a></li>
+  </ul></li>
+  <li><a href="#sec-rams" id="toc-sec-rams" class="nav-link" data-scroll-target="#sec-rams">RAMS</a>
+  <ul>
+  <li><a href="#측정-방법" id="toc-측정-방법" class="nav-link" data-scroll-target="#측정-방법">측정 방법</a></li>
+  </ul></li>
+  <li><a href="#설비-분석-도구" id="toc-설비-분석-도구" class="nav-link" data-scroll-target="#설비-분석-도구">설비 분석 도구</a>
+  <ul>
+  <li><a href="#sec-pm-analysis" id="toc-sec-pm-analysis" class="nav-link" data-scroll-target="#sec-pm-analysis">PM 분석</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/yeonkyupark/PEPC/edit/main/0602설비보전관리.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content column-body" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./0601설비계획.html">06. 설비관리</a></li><li class="breadcrumb-item"><a href="./0602설비보전관리.html"><span class="chapter-title">설비보전 관리</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-title">설비보전 관리</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta column-body">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="sec-pm" class="level2">
+<h2 class="anchored" data-anchor-id="sec-pm">설비보전</h2>
+<p>시대적 제조 산업 변화에 따라 노동 집약에서 고가 설비 산업 중심으로 변화되면서 설비 보전 활동이 중요하게 되었다. 1951년 미국 설비 보전 전문가 중심으로 시행하던 예방 보전(PM, preventive maintenance) 개념을 1971년 일본에서 도입하면 종합적 생산성 관리로 발전하였다.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+1["Preventive Maintenance&lt;br&gt;예방보전, 1951"]
+2["Productive Maintenance&lt;br&gt;생산보전, 1960대"]
+3["Total Productive Maintenance&lt;br&gt;종합적 생산보전, 1971"]
+4["Total Productivity Maintenance&lt;br&gt;종합적 생산성 관리, 1989"]
+
+1 --&gt; 2 --&gt; 3 --&gt; 4
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>예방보전과 종합적 생산보전, 그리고 종합적 생산성 관리를 요약하면 다음과 같다.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>구분</th>
+<th>Preventive Maintenance</th>
+<th>Total Productive Maintenance</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>추진조직</td>
+<td>보전 전문가</td>
+<td>중복 소집단</td>
+</tr>
+<tr class="even">
+<td>추진방식</td>
+<td>전문가 중심</td>
+<td>현장 사원 교육을 통한 현장 개선</td>
+</tr>
+<tr class="odd">
+<td>방법론</td>
+<td>전문가 지식</td>
+<td>현장 경험 + 비정화된 로드맵</td>
+</tr>
+<tr class="even">
+<td>추진영영</td>
+<td>자재/설비</td>
+<td>제조, 자재/설비</td>
+</tr>
+</tbody>
+</table>
+<dl>
+<dt>종합적 생산보전, Total Productive Maintenance</dt>
+<dd>
+<ul>
+<li>설비 효율을 최고로 하는 것(종합적 효율화)을 목표로 하여</li>
+<li>설비 생애를 대상으로 종합적 PM 시스템을 확립하고</li>
+<li>설비에 대한 계획부문, 사용부문, 보전부문 등 모든 부문에 걸쳐</li>
+<li>최고 경영자로부터 현장 작업자에게 이르기까지 전원이 참여하고</li>
+<li>중복 소집단 활동, 즉 소집단 자주 활동에 통해 PM을 추진하는 것</li>
+</ul>
+</dd>
+<dt>종합적 생산성 관리, Total Productivity Maintenance</dt>
+<dd>
+<ul>
+<li>생산시스템 효율 극한을 추구(종합적 효율화)하는 기업 체질 구축을 목료로 하여</li>
+<li>생산시스템 생애 전반을 대상으로 “재해 제로, 불량 제로, 고장 제로” 등 모든 로스를 미연에 방지하는 체제를 현장 현물에 구축하고</li>
+<li>생산 부분을 비롯한 개발, 영업, 관리 등 모든 부문에 걸쳐서</li>
+<li>최고 경영자로부터 현장 작업자에 이르기까지 전원이 참여하여</li>
+<li>중복 소집단 활동에 의해 로스 제로를 달성하는 것</li>
+</ul>
+</dd>
+</dl>
+<section id="tpm전사적-생산보전" class="level3">
+<h3 class="anchored" data-anchor-id="tpm전사적-생산보전">TPM(전사적 생산보전)</h3>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 127-4-5">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+기출: 127-4-5
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+<p><strong>TPM</strong>(Total Productive Maintenance)은 설비에 대한 보전 활동 전체 체계를 확립하고, 계확/사용/보전 부문에 있어 전체 인원이 참여하는 중복 소집단 활동을 통해 설비 효율을 최대화함을 목표로 한다.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+  subgraph sg1[TPM]
+    예방보전
+    제로지향
+    소집단활동
+  end
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<dl>
+<dt>예방보전(preventive maintenance)</dt>
+<dd>
+<ul>
+<li>예방 조건 확립(문제 파악, 미연에 방지)</li>
+<li>물리적, 심리적 결함 배제</li>
+<li>강제 열화 배제</li>
+<li>만성 불량 박멸</li>
+<li>고유 수명 연장</li>
+</ul>
+</dd>
+<dt>제로지향(zero defect)</dt>
+<dd>
+<ul>
+<li>경쟁사 수준과 관계없이 제로 지향으로 간다면 경쟁에서 승리</li>
+<li>경쟁사도 제로 지향이면 스피드가 승부 관건</li>
+</ul>
+</dd>
+<dt>소집단활동(small group activity)</dt>
+<dd>
+<ul>
+<li>전원 참여 경영</li>
+<li>조직 구성원 능력을 향상</li>
+<li>의욕을 갖도록 세포조직 활성화</li>
+<li>조직 성과 극대화</li>
+</ul>
+</dd>
+</dl>
+<p>TPM 장단점은 다음과 같다.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>장점</th>
+<th>단점</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>자주보전, 개별개선, 품질보전 활동을 통해 지속적인 효율 향상을 꾀하고 설비 고장이 줄어 들면서 제품 품질이 향상되며 근무 환경이 개선되어 종업원 만족도가 향상</td>
+<td>전체 최적화보다는 부분 최적화 관점에서 수행되고 있다는 점과 객관적인 데이터 분석보다는 현장 경험과 노하우를 바탕으로 문제를 해결하려는 경향</td>
+</tr>
+</tbody>
+</table>
+<section id="tpm-8대-활동" class="level4">
+<h4 class="anchored" data-anchor-id="tpm-8대-활동">TPM 8대 활동</h4>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/tpm_8_pillar.png" class="img-fluid figure-img"></p>
+<figcaption>TPM 8대 지주</figcaption>
+</figure>
+</div>
+</center>
+<p>초기 생산부분에 있어 TPM은 아래 5가지 활동을 중심으로 전개하였다.</p>
+<ul>
+<li>설비 효율화 개별 개선</li>
+<li>자주 보전 체계 구축</li>
+<li>보전 부문 계획 보전 체제 구축</li>
+<li>운전, 보전 교육 훈련</li>
+<li>제품 및 설비 초기 관리 체제 구축</li>
+</ul>
+<p>이후 생산 외 부문으로 확산되면서 아래 3가지 활동이 추가되었다.</p>
+<ul>
+<li>품질 보전 체제 구축</li>
+<li>관리 간접 부문 효율화 체제 구축</li>
+<li>안전, 위생과 환경 관리 체제 구축</li>
+</ul>
+<p>각 활동과 주요 내용은 다음과 같다.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 75%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>활동</th>
+<th>주요 내용</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>자주보전</td>
+<td>작업자 스스로 정해진 기준에 따라 설비 유지, 관리를 실시하기 위한 체제 구축</td>
+</tr>
+<tr class="even">
+<td>계획, 예지보전</td>
+<td>보전 부문을 중심으로 한 활동으로계획 보전 체계를 구축</td>
+</tr>
+<tr class="odd">
+<td>교육, 훈훈련</td>
+<td>TPM 활동을 수행하기 위해 필요한 지식, 기능, 태도를 습득</td>
+</tr>
+<tr class="even">
+<td>개별 개선</td>
+<td>현장 불합리 및 생산효율화를 저해하는 각종 로스를 제거하기 위한 소개선 및 테마 활동 <br>(고장로스, 준비교체/조정로스, 공구 교환 로스, 순간 정지/공전 로스, 속도 저하로스, 불량/수정로스, 초기 유동 로스)</td>
+</tr>
+<tr class="odd">
+<td>설비 초기 관리(MP)<br>초기유동 관리</td>
+<td>생산기술 부문을 중심으로 한 활동, 설비 도입 시기에 초기 트러블 발생을 방지하는 활동</td>
+</tr>
+<tr class="even">
+<td>품질관리</td>
+<td>만성 불량 zero 지향, 불량을 만들지 않는 조건 설정 및 조건 관리하는 활동</td>
+</tr>
+<tr class="odd">
+<td>사무간접 부분 효율화</td>
+<td>관리, 사무, 지원 부문에 있어 사무 효율화 개선과 사무 환경 개선을 추진하는 활동</td>
+</tr>
+<tr class="even">
+<td>안전 환경 보전</td>
+<td>안전 및 환경오염 위해 요소 박멸 및 안전 환경 시스템을 구축</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="tpm전사적-예방보전" class="level3">
+<h3 class="anchored" data-anchor-id="tpm전사적-예방보전">TPM(전사적 예방보전)</h3>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 124-1-10">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+기출: 124-1-10
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+<p>TPM(Total Preventive Maintenance, 전사적 예방보전)은 설비와 장비의 가용성을 극대화하고 생산성을 높이기 위해 전사적으로 추진하는 보전 활동이다. TPM은 설비의 고장과 불량을 예방하고, 설비 수명을 연장하는 것을 목표로 한다.</p>
+<dl>
+<dt>TPM의 특징</dt>
+<dd>
+<ul>
+<li><strong>전사적 참여</strong>: 경영진부터 현장 작업자까지 모든 구성원이 보전에 참여한다.<br>
+</li>
+<li><strong>예방 중심</strong>: 설비 고장을 사전에 예방하고 문제 발생을 최소화한다.<br>
+</li>
+<li><strong>자주 보전</strong>: 작업자가 일상적으로 설비를 점검하고 유지한다.<br>
+</li>
+<li><strong>설비 효율성 향상</strong>: 설비의 가동률과 생산성을 극대화한다.<br>
+</li>
+<li><strong>교육 및 훈련</strong>: 설비 보전 및 관리 기술에 대한 교육을 지속적으로 실시한다.</li>
+</ul>
+</dd>
+<dt>TPM의 효과</dt>
+<dd>
+<ul>
+<li>설비 가동률 향상<br>
+</li>
+<li>생산성 증가 및 품질 향상<br>
+</li>
+<li>설비 고장 및 가동 중단 시간 감소<br>
+</li>
+<li>설비 수명 연장 및 유지 비용 절감</li>
+</ul>
+</dd>
+</dl>
+<section id="생산보전과-예방보전" class="level4">
+<h4 class="anchored" data-anchor-id="생산보전과-예방보전">생산보전과 예방보전</h4>
+<p>전사적 생산보전과 전사적 예방보전 간 비교교는 아래와 같다.</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>TPM과 Total Preventive Maintenance 비교</caption>
+<colgroup>
+<col style="width: 14%">
+<col style="width: 47%">
+<col style="width: 38%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">비교항목</th>
+<th style="text-align: left;">Total_Productive_Maintenance</th>
+<th style="text-align: left;">Total_Preventive_Maintenance</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">목적</td>
+<td style="text-align: left;">설비의 종합적인 효율 향상과 생산성 극대화</td>
+<td style="text-align: left;">설비 고장 예방과 설비 수명 연장</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">주요 특징</td>
+<td style="text-align: left;">설비 효율성 극대화를 위한 8대 기둥 활동</td>
+<td style="text-align: left;">사전 점검 및 부품 교체를 통한 설비 유지</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">참여 범위</td>
+<td style="text-align: left;">전사적 참여(경영진부터 작업자까지)</td>
+<td style="text-align: left;">주로 설비 보전팀과 기술 전문가</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">중점 활동</td>
+<td style="text-align: left;">자주 보전, 개선 활동, 품질 보전 등</td>
+<td style="text-align: left;">정기 점검, 예지 보전, 예방 교체</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">설비 관리 방식</td>
+<td style="text-align: left;">설비 고장을 예방하는 동시에 설비 가동률을 최대화</td>
+<td style="text-align: left;">설비 고장 방지 및 안정적인 가동 유지</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">초점</td>
+<td style="text-align: left;">설비와 생산성을 동시에 개선</td>
+<td style="text-align: left;">설비의 장기적인 안정성 확보</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<dl>
+<dt>주요 차이점 요약</dt>
+<dd>
+<ul>
+<li>TPM은 설비 고장 방지뿐 아니라 생산성 향상까지 목표로 하며, 전사적 참여를 강조한다.</li>
+<li>Total Preventive Maintenance는 설비 고장을 사전에 예방하고, 설비의 수명을 연장하는 데 집중한다.</li>
+</ul>
+</dd>
+<dt>공통점</dt>
+<dd>
+<ul>
+<li>설비의 안정성과 효율성 향상을 목표로 한다.</li>
+<li>예방적 활동을 통해 설비 고장을 최소화한다.</li>
+<li>설비 유지 및 관리에 있어 체계적인 접근 방식을 따른다.</li>
+</ul>
+</dd>
+</dl>
+</section>
+</section>
+<section id="생산보전pm" class="level3">
+<h3 class="anchored" data-anchor-id="생산보전pm">생산보전(PM)</h3>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 97-4-3, 124-2-6">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+기출: 97-4-3, 124-2-6
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+<p><strong>생산보전</strong>(productive maintenance)은 설비 수명주기(life cycle)를 대상으로 하여 생산성을 높이기 위해 실시하는 가장 경제적인 보전활동이다. 생산보전은 설비가 언제라도 기능을 발휘할 수 있도록 하는 목적으로 최소 비용을 수단으로 수행하는 활동이다. 아래와 같은 수단을 통해 목적을 달성할 수 있다.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+  subgraph sg2[비계획보전]
+    비계획보전 --&gt; 긴급보전
+  end
+  subgraph sg1[계획보전]
+    direction LR 
+    subgraph sg11[유지활동]
+    direction LR
+      예방보전
+      사후보전
+    end
+    subgraph sg12[개선활동]
+    direction LR 
+      개량보전
+      보전예방
+    end 
+    계획보전 --&gt; 예방보전 &amp; 사후보전 &amp; 개량보전 &amp; 보전예방
+  end
+
+생산보전 --&gt; 계획보전 &amp; 비계획보전
+예방보전 --&gt; 1["정기보전(TBM)"] &amp; 2["예지보전(CBM)"] &amp; 3["일상보전"] &amp; 4["정기적인 분해 점검"]  
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<dl>
+<dt>계획보전(SM, scheduled/planned maintenance)</dt>
+<dd>
+<ul>
+<li>예방 보전을 위해 어떤 일정 기간을 정해서 정기적으로 기계 보수, 보전 작업을 실시</li>
+</ul>
+</dd>
+<dt>예방보전(PM, preventive maintenance)</dt>
+<dd>
+<ul>
+<li>점검 기간이나 설비 상태에 따라 보전 활동 실시</li>
+</ul>
+</dd>
+<dt>정기 보전(TBM, time based maintenance)</dt>
+<dd>
+<ul>
+<li>정기적인 점검과 수리로 고장을 미연에 방지해 설비 수명을 연장하는 활동</li>
+</ul>
+</dd>
+<dt>예지보전(PM, predictive maintenace 또는 CBM, condition based maintenance)</dt>
+<dd>
+<ul>
+<li>설비 상태에 따라 설비 보전 활동</li>
+</ul>
+</dd>
+<dt>사후보전(BM, break down maintenance)</dt>
+<dd>
+<ul>
+<li>설비나 장치가 기능저하 또는 기능정지(고장정지)된 뒤에 보수, 교체를 실시하는 것으로 예방보전(사전 처리)을 하기 보다도 사후 보전하는 편이 경제적인 기기에 대해 적용</li>
+</ul>
+</dd>
+<dt>개량보전(CM, corrective maintenance)</dt>
+<dd>
+<ul>
+<li>설비 신뢰성, 보전성, 안전성 등의 향상을 목적으로 현 설비의 열악한 부분을 계획적이고 적극적으로 개선하여 열화 및 고장을 감소시키도록 보전 및 수리가 쉽도록 하는 활동</li>
+</ul>
+</dd>
+<dt><font color="blue">보전예방(MP, maintenance prevention)</font></dt>
+<dd>
+<ul>
+<li>설비를 새로 계획, 설계하는 단계에서 보전 정보나 새로운 기술을 채용해서 신뢰성, 보전성, 경제성, 조작성, 안전성 등을 고려하여 보전비나 열화 손실이 적도록 처음부터 보전이 필요하지 않도록 설계하는 방법</li>
+</ul>
+</dd>
+<dt>TBM(Time-Based Maintenance)</dt>
+<dd>
+<ul>
+<li>TBM은 일정한 주기나 시간 간격을 기준으로 장비나 시스템을 정비하는 예방 유지보수 방식이다.</li>
+<li>주요 특징: 사용 시간이나 경과 시간을 기준으로 계획적으로 유지보수를 수행한다.
+<ul>
+<li>장점: 간단하고 예측 가능하며 유지보수 계획을 수립하기 쉽다.</li>
+<li>단점: 장비 상태와 관계없이 일정에 따라 유지보수를 진행하기 때문에 과도한 유지보수나 불필요한 작업이 발생할 수 있다.</li>
+</ul></li>
+</ul>
+</dd>
+<dt>CBM(Condition-Based Maintenance)</dt>
+<dd>
+<ul>
+<li>CBM은 장비의 상태를 실시간으로 모니터링하고, 상태 데이터에 기반하여 필요한 경우에만 유지보수를 수행하는 방식이다.</li>
+<li>주요 특징: 센서, 진동 분석, 열화상 검사 등 다양한 기술을 사용해 장비의 상태를 측정한다.
+<ul>
+<li>장점: 장비의 실제 상태에 따라 유지보수를 진행하기 때문에 불필요한 작업을 줄이고 비용을 절감할 수 있다.</li>
+<li>단점: 초기 도입 비용이 높고, 시스템의 복잡성이 증가할 수 있다.</li>
+</ul></li>
+</ul>
+</dd>
+<dt>TBM과 CBM 간 주요 차이점</dt>
+<dd>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 18%">
+<col style="width: 38%">
+<col style="width: 42%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>구분</th>
+<th>TBM (Time-Based Maintenance)</th>
+<th>CBM (Condition-Based Maintenance)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>기준</strong></td>
+<td>시간 기준</td>
+<td>장비 상태 기준</td>
+</tr>
+<tr class="even">
+<td><strong>효율성</strong></td>
+<td>장비 상태와 관계없이 정기 유지보수</td>
+<td>장비 상태에 맞춰 최적화된 유지보수</td>
+</tr>
+<tr class="odd">
+<td><strong>비용</strong></td>
+<td>초기 비용 낮음, 장기적으로 비효율</td>
+<td>초기 비용 높음, 장기적으로 비용 절감</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</section>
+</section>
+<section id="강제열화와-자연열화" class="level2">
+<h2 class="anchored" data-anchor-id="강제열화와-자연열화">강제열화와 자연열화</h2>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 97-1-10">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+기출: 97-1-10
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TB
+열화 --- 강제열화 &amp; 자연열화
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p><strong>강제열화</strong>는 설비에 대해서 당연 해야 할 일을 하지 않기 때문에, 즉 인위적으로 열화를 촉진되는 현상이다. 급유해야 할 개소에 급유를 하지 않는다든지 급유량이 기준에 못 미치는 등이 여기에 해당한다.</p>
+<p>이에 반해 <strong>자연열화</strong>는 설비를 올바르게 사용하고 있어도 시간과 함게 물리적으로 열화하여 초기 성능 대비 저하되는 현상이다.</p>
+</section>
+<section id="돌발로스와-만성로스" class="level2">
+<h2 class="anchored" data-anchor-id="돌발로스와-만성로스">돌발로스와 만성로스</h2>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 130-2-1">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+기출: 130-2-1
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrafuVlCTsZBDkuOC2Bim5EMCrgh-WDZXbNA&amp;s.png" class="img-fluid figure-img"></p>
+<figcaption>Visualizing the Effects of Chronic Versus Sporadic Losses in Manufacturing Industries – A Case Study</figcaption>
+</figure>
+</div>
+</center>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 42%">
+<col style="width: 44%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>구분</strong></th>
+<th><strong>돌발로스 (Sudden Loss)</strong></th>
+<th><strong>만성로스 (Chronic Loss)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>정의</strong></td>
+<td>예기치 않게 발생하는 고장이나 문제로 인한 손실</td>
+<td>지속적이고 반복적으로 발생하는 문제로 인한 손실</td>
+</tr>
+<tr class="even">
+<td><strong>특징</strong></td>
+<td>갑자기 발생하여 예측 불가능함</td>
+<td>지속적으로 문제 발생, 반복적이고 일정함</td>
+</tr>
+<tr class="odd">
+<td><strong>예시</strong></td>
+<td>전원 문제, 제어 시스템 오류, 외부 환경 변화 등</td>
+<td>설비 부품 마모, 설비 설계 문제 등</td>
+</tr>
+<tr class="even">
+<td><strong>개선 방법</strong></td>
+<td>- 예방 점검을 통해 고장을 미리 방지한다.</td>
+<td>- 설비 디자인을 개선하여 문제를 반복적으로 발생하지 않게 한다.</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>- 안전장치나 경고 시스템을 추가하여 빠르게 대응한다.</td>
+<td>- 정기적인 유지보수를 통해 성능 저하를 방지한다.</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>- 훈련과 교육을 통해 작업자들이 돌발 상황에 신속하게 대응하도록 한다.</td>
+<td>- 데이터를 분석하여 문제를 사전에 예방한다.</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td>- 낡은 부품이나 설비를 업그레이드하거나 교체한다.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="고장강도율" class="level2">
+<h2 class="anchored" data-anchor-id="고장강도율">고장강도율</h2>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 127-1-7">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+기출: 127-1-7
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+<p><strong>고장강도율</strong>은 시스템이나 장비의 고장 발생 빈도와 그에 따른 강도를 측정하는 지표로, 특정 기간 동안 고장이 발생하는 비율을 나타낸다. 이 개념은 시스템의 신뢰성, 안정성, 그리고 지속 가능한 운영에 중요한 요소로, 특히 제조업과 같은 산업 환경에서 중요한 역할을 한다. 고장강도율은 일반적으로 고장 수와 그로 인한 생산 차질 정도를 함께 고려하여 계산된다.</p>
+<dl>
+<dt>고장강도율의 주요 개념</dt>
+<dd>
+<ul>
+<li><strong>고장 강도</strong>: 시스템이나 장비에서 발생하는 고장이나 결함의 심각도를 나타내며, 이는 고장의 빈도나 영향을 기반으로 측정된다.</li>
+<li><strong>고장강도율</strong>: 일정 기간 동안 발생한 고장 사건의 수와 그로 인한 생산성 손실, 품질 저하 등을 종합적으로 고려한 지표이다. 즉, 고장강도율은 시스템의 안정성과 신뢰성에 대한 중요한 척도로 사용된다.</li>
+</ul>
+</dd>
+</dl>
+<p>고장강도율을 개선하려면 시스템의 신뢰성을 높이고, 고장 발생 빈도를 줄이기 위한 여러 가지 방법을 적용해야 한다. 이를 위한 주요 개선 방법은 다음과 같다.</p>
+<ol type="1">
+<li><strong>예방 유지보수 강화</strong>
+<ul>
+<li>정기적으로 시스템이나 장비의 상태를 점검하고, 잠재적인 고장 원인을 사전에 파악하여 수리하거나 교체한다. 이를 통해 예상치 못한 고장을 예방할 수 있다.</li>
+</ul></li>
+<li><strong>자동화 시스템 도입</strong>
+<ul>
+<li>자동화된 모니터링 시스템을 통해 장비의 상태를 실시간으로 추적하고, 고장이 발생할 가능성이 있는 부분을 미리 감지하여 조치를 취할 수 있다. 자동화된 유지보수 시스템은 고장강도율을 낮추는 데 큰 도움이 된다.</li>
+</ul></li>
+<li><strong>품질 관리 강화</strong>
+<ul>
+<li>생산 공정에서 발생할 수 있는 품질 문제를 줄이기 위해 품질 관리 시스템을 강화한다. 품질이 높아지면 불량품으로 인한 고장이나 문제가 줄어들어 고장강도율이 개선된다.</li>
+</ul></li>
+<li><strong>교육 및 훈련</strong>
+<ul>
+<li>작업자들에게 장비나 시스템의 정확한 사용 방법과 유지 관리 절차에 대한 교육을 제공하여 인적 오류로 인한 고장 발생을 줄인다. 이를 통해 고장 강도와 발생 빈도를 낮출 수 있다.</li>
+</ul></li>
+<li><strong>예비 부품 관리</strong>
+<ul>
+<li>고장이 발생할 때 즉시 교체할 수 있도록 예비 부품을 충분히 확보하고, 교체 시간이 최소화될 수 있도록 관리한다. 교체 시간 단축은 고장으로 인한 생산 차질을 줄이는 데 기여한다.</li>
+</ul></li>
+<li><strong>고장 데이터 분석 및 개선</strong>
+<ul>
+<li>고장 발생 데이터를 분석하여 고장이 자주 발생하는 원인과 패턴을 파악한다. 이를 통해 해당 문제를 해결하고 시스템을 개선하여 고장강도율을 낮출 수 있다.</li>
+</ul></li>
+</ol>
+<p>고장강도율을 개선하는 것은 생산성과 품질을 높이고, 시스템의 신뢰성을 향상시키는 중요한 과정이다. 이를 통해 기업은 안정적인 운영과 비용 절감을 동시에 달성할 수 있다.</p>
+</section>
+<section id="자주보전-7단계" class="level2">
+<h2 class="anchored" data-anchor-id="자주보전-7단계">자주보전 7단계</h2>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 97-2-3, 112-2-1, 115-3-3, 118-1-6">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+기출: 97-2-3, 112-2-1, 115-3-3, 118-1-6
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 4%">
+<col style="width: 18%">
+<col style="width: 65%">
+<col style="width: 11%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>단계</th>
+<th>명칭</th>
+<th>활동내용</th>
+<th><strong>육성 단계*</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1단계</td>
+<td>초기 청소</td>
+<td>설비 본체를 중심으로 먼지, 더러움을 완전히 없앤다.</td>
+<td>1단계</td>
+</tr>
+<tr class="even">
+<td>2단계</td>
+<td>발생원, 곤란부위 대책 수립</td>
+<td>먼저, 더러움 발생원, 비산 방지나 청소, 급유 곤란 부위를 개선하고 청소, 급유 시간 단축을 도모한다.</td>
+<td>1단계</td>
+</tr>
+<tr class="odd">
+<td>3단계</td>
+<td>청소/급유/점검 기준 작성</td>
+<td>단시간으로 청소/급유/점검을 확실히 할 수 있도록 행동 기준을 작성한다.</td>
+<td>2단계</td>
+</tr>
+<tr class="even">
+<td>4단계</td>
+<td><strong>총점검**</strong></td>
+<td>점검 매뉴얼에 의한 점검기능교육과 총 점검 실시에 의한 설비 미흡을 적출 및 복원한다.</td>
+<td>2단계</td>
+</tr>
+<tr class="odd">
+<td>5단계</td>
+<td>자주점검</td>
+<td>자주점검 체크 시트 작성, 실시로 오퍼레이션 신뢰성을 향상한다.</td>
+<td>3단계</td>
+</tr>
+<tr class="even">
+<td>6단계</td>
+<td>표준화</td>
+<td>MTBF 분석 기록을 확실하게 해석하여 설비 개선을 꾀한다.</td>
+<td>3단계</td>
+</tr>
+<tr class="odd">
+<td>7단계</td>
+<td>자주관리 확립</td>
+<td></td>
+<td>4단계</td>
+</tr>
+</tbody>
+</table>
+<dl>
+<dt>*설비에 강한 오퍼레이터 육성 단계</dt>
+<dd>
+<ol type="1">
+<li>단계: 오퍼레이터가 설비 개선 사고 방식을 익히는 단계</li>
+<li>단계: 오퍼레이터가 설비 기능 및 구조는 이해하는 단계</li>
+<li>단계: 오퍼레이터가 설비 정밀도와 제품 품질 간 관계를 이해하는 단계</li>
+<li>단계: 오퍼레이터가 설비 수리 가능한 단계</li>
+</ol>
+</dd>
+<dt>**총점검 전개 방법</dt>
+<dd>
+<ol type="1">
+<li>총점검 매뉴얼 준비 - 준비활동 및 총점검 과목 및 항목 설정</li>
+<li>총점검 매뉴얼에 대한 교육 실시 - 기계요소 총점검 대상 및 부위 작성</li>
+<li>총검검 매뉴얼 보완 - 담당설비별, 부품별 총점검 매뉴얼 내용 보완 작성</li>
+<li>총점검 체크시트 작성 - 담당설비별 총점검 실시를 위한 체크시트 작성</li>
+<li>총점검 실시와 미결함 적출 및 개선 - 청소/급유/점검 기준 및 점검표 보완</li>
+<li>점검 기능 체크 - 담당설비별 기계요소 기능 체크</li>
+</ol>
+</dd>
+</dl>
+</section>
+<section id="설비-6대-로스" class="level2">
+<h2 class="anchored" data-anchor-id="설비-6대-로스">설비 6대 로스</h2>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 100-4-5, 106-3-2, 118-1-11">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+기출: 100-4-5, 106-3-2, 118-1-11
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/ooe.png" class="img-fluid figure-img"></p>
+<figcaption>설비 6대 로스</figcaption>
+</figure>
+</div>
+</center>
+<dl>
+<dt>고장 로스</dt>
+<dd>
+<ul>
+<li>돌발적, 만성적으로 발생하는 고장에 의한 로스로서, 생산량을 감소시키고 불량 발생을 야기한다.</li>
+<li>대책: 강제 열화 예방, 기본조건 준수, 바른 사용조건 유지, 보전품질 향상, 응급조치 배제, 설비 약점 개선 등</li>
+</ul>
+</dd>
+<dt>준비작업/조정 로스</dt>
+<dd>
+<ul>
+<li>현 제품 생산종료시점에서부터 다음 제품으로 전환, 조정하고 완전한 양품이 되기까지의 시간적 로스를 의미한다.</li>
+<li>대책: 치공구, 교체부품 정밀도 유지, 기준 표준화 등</li>
+</ul>
+</dd>
+<dt>일시정지/공운전 로스</dt>
+<dd>
+<ul>
+<li>기능상 일시적인 오류로 인해 설비가 정지하거나 공전하는 경우를 말하며, 일시정지를 줄이기 위해서는 현상을 자세히 분석하고 사소한 결함을 철저히 배제하려는 노력과 함께 제로화해야 한다.</li>
+<li>대책: 현상을 명확히파악, 미결함 시정, 최적조건 파악 등</li>
+</ul>
+</dd>
+<dt>속도저하 로스</dt>
+<dd>
+<ul>
+<li>설계속도보다 낮은 속도로 운전하는 경우에 발생하는 로스로서, 6대 로스 가운데 효율에 미치는 영향이 크므로 원인에 대한 검토가 필요하다.</li>
+<li>대책: 표준 명확화 등</li>
+</ul>
+</dd>
+<dt>초기수율 로스</dt>
+<dd>
+<ul>
+<li>정기수리 후, 장시간 정지 후, 휴일 후, 점심시간 후 다시 시동 시 품질이 안정되어 양품이 생산되기까지의 시간적 로스와 그 동안에 발생하는 불량이나 재작업과 같은 불량 손실을 의미한다.</li>
+<li>대책: 작업조건 준수</li>
+</ul>
+</dd>
+<dt>불량/재작업 로스</dt>
+<dd>
+<ul>
+<li>불량이나 재작업에 따른 물량적 로스와 수정하여 양품으로 만들기 위한 시간적 로스로 정의할 수 있다.</li>
+<li>대책: 만성적인 불량 현상 명확화 등</li>
+</ul>
+</dd>
+</dl>
+<section id="장치산업-8대-로스" class="level3">
+<h3 class="anchored" data-anchor-id="장치산업-8대-로스">장치산업 8대 로스</h3>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 103-1-8">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+기출: 103-1-8
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+<p>장치산업 8대 로스는 다음과 같다.</p>
+<div class="cell" data-tbl-colwidths="[15,40,10,35]">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 40%">
+<col style="width: 10%">
+<col style="width: 35%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">로스.명칭</th>
+<th style="text-align: left;">정의</th>
+<th style="text-align: left;">단위</th>
+<th style="text-align: left;">사례</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">ShutDown</td>
+<td style="text-align: left;">연간보전계획에 의한 SD공사 및 정기정비 등에 의한 휴지시간 로스</td>
+<td style="text-align: left;">시간(일)</td>
+<td style="text-align: left;">SD공사, 정비정비, 법정검사, 자주검사, 일반보수공사 등</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">생산조정</td>
+<td style="text-align: left;">수급간계에 의한 생산계획상 조정 시간</td>
+<td style="text-align: left;">시간(일)</td>
+<td style="text-align: left;">생산조정정지, 재고조정정지 등</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">설비고장</td>
+<td style="text-align: left;">설비, 기기가 규정 성능을 잃어 돌발적으로 정지하는 로스 시간</td>
+<td style="text-align: left;">시간</td>
+<td style="text-align: left;">펌프고장, 베어링 파손, 축 부러짐 등</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">프로세스 고장</td>
+<td style="text-align: left;">공정 내에서 취급 물질의 화학적, 물리적인 물성 변화나 기타 조업 실수 등으로 플랜트가 정지하는 로스</td>
+<td style="text-align: left;">시간</td>
+<td style="text-align: left;">누설, 먼지, 막힘, 부식, 분진비산, 조작 실수 등</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">정상생산</td>
+<td style="text-align: left;">플랜트 Start, 정지 및 교체 때문에 발생하는 로스</td>
+<td style="text-align: left;">rate down</td>
+<td style="text-align: left;">Start 후 첫 동작, 정지 전 멈춤 동작, 품질교체에 따른 rate down</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">비정상생산</td>
+<td style="text-align: left;">플랜트 불량, 이상 때문에 생산 rate를 down시킨 성능 로스</td>
+<td style="text-align: left;">rate down</td>
+<td style="text-align: left;">저부하운전, 속도운전, 기준생산 rate 이하로 운전하는 경우</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">품질불량</td>
+<td style="text-align: left;">불량품을 만들어 내고 있는 로스와 폐각품 물적 로스, 2등급 이하 로스</td>
+<td style="text-align: left;">시간, ton, 금액</td>
+<td style="text-align: left;">품질표준에서 벗어난 제품을 만드어 냄에 의한 물량, 시간 로스</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">재가공</td>
+<td style="text-align: left;">공정 back에 의한 리사이클 로스</td>
+<td style="text-align: left;">시간, ton, 금액</td>
+<td style="text-align: left;">최종 공정에서 불량품을 원류 공정에 리사이클하여 합격품으로 변환</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+</section>
+<section id="설비-보전-지표" class="level2">
+<h2 class="anchored" data-anchor-id="설비-보전-지표">설비 보전 지표</h2>
+<p>대표적인 설비 보전 지표로 MTTR, MTBF, MTTF가 있다. 위 지표는 설비 보전 신뢰성 지표로 사용되고 설벼 효율을 극대화 하기 위한 척도로도 사용된다.</p>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://www.researchgate.net/publication/334205633/figure/fig5/AS:778549820682240@1562632150490/A-schematic-diagram-of-MTTF-MTTR-and-MTBF.ppm" class="img-fluid figure-img"></p>
+<figcaption>https://www.researchgate.net/figure/A-schematic-diagram-of-MTTF-MTTR-and-MTBF_fig5_334205633</figcaption>
+</figure>
+</div>
+</center>
+<section id="sec-mttr" class="level3">
+<h3 class="anchored" data-anchor-id="sec-mttr">MTTR</h3>
+<p><strong>MTTR</strong>(mean time to repair)는 평균 수리 시간(평균 고장/장애 복구 시간)으로서 설비 고장이 발생했을 때부터 다시 동작하는데까지 걸리는 시간이다.</p>
+<p><span class="math display">\[
+MTTR = \frac{설비 정지 총 시간}{설비 정지 횟수}
+\]</span></p>
+<p>MTTR은 설비가 정상동작하지 않는 시간 총합을 측정하고 총 건수로 나눈 값으로 현장에서는 설비 보전성 지료로 사용된다.</p>
+</section>
+<section id="sec-mtbf" class="level3">
+<h3 class="anchored" data-anchor-id="sec-mtbf">MTBF</h3>
+<p><strong>MTBF</strong>(mean time between failures)는 평균 무고장 시간으로 설비가 한번 고장이 발생한 뒤 같은 고장이 다시 발생할 때까지의 평균 시간이다.</p>
+<p><span class="math display">\[
+MTBF = \frac{정상가동총시간}{고장횟수}
+\]</span></p>
+<p>설비 고장에 대한 대응력을 확인할 수 있는 지표로 설비 신뢰정 지표로 사용된다. MTBF는 수리 가능한 설비에 대한 지표이며, 수리가 불가한 설비나 시스템인 경우 MTTF를 사용해야 한다.</p>
+</section>
+<section id="sec-mttf" class="level3">
+<h3 class="anchored" data-anchor-id="sec-mttf">MTTF</h3>
+<p><strong>MTTF</strong>(mean time to failures)는 수리하지 않은 부품이 사용되었을 때 시작 시점부터 고장 발생 시까지 시간을 의미한다.</p>
+<p><span class="math display">\[
+MTTF = 수리하지 \ 않은 \ 부품의 \ 사용 \ 시작부터 \ 고장까지 \ 시간
+\]</span></p>
+</section>
+<section id="가용도" class="level3">
+<h3 class="anchored" data-anchor-id="가용도">가용도</h3>
+<p>가용도는 다음과 같이 계산된다.</p>
+<p><span class="math display">\[
+가용도 = \frac{MTTF}{MTBF}
+\]</span></p>
+<div class="callout callout-style-default callout-important no-icon callout-titled" title="가용도 계산">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+가용도 계산
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>설비 부품 A가 10시간 만에 파손되어 설비 고장이 발생하였고, 부품 A를 교체하는데 1시간 소요되었다. 교체된 부품 A가 다시 10시간 후 파손되었을 때 가용도를 계산하시오.</p>
+<p>설비 보전 지표는 다음과 같다.</p>
+<ul>
+<li>MTTR: 1</li>
+<li>MTTF: 10</li>
+<li>MTBF: 11 (10+1)</li>
+</ul>
+<p>따라서 가용도는 다음과 같다.</p>
+<p><span class="math display">\[
+가용도 = \frac{MTTF}{MTBF} = 10/11 = 0.91
+\]</span></p>
+<p>해당 설비를 사용하는 작업장의 조업일수가 200일인 경우 200x0.09 = 18, 즉 18일은 비가동이라 볼 수 있다.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="신뢰성과 보전성">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+신뢰성과 보전성
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 127-1-10, 130-3-1">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+기출: 127-1-10, 130-3-1
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+<p><strong>Reliability(신뢰성)</strong>와 <strong>Maintainability(유지보수성)</strong>은 시스템이나 장비가 운영되는 동안 발생할 수 있는 문제를 다루는 중요한 개념이다. 이 두 개념은 서로 관련이 있지만, 각각 다른 측면에서 시스템의 성능과 효율성을 평가한다.</p>
+<p><strong>Reliability (신뢰성)</strong>은 시스템이나 장비가 고장 없이 정해진 시간 동안 정상적으로 작동하는 능력을 의미한다. 즉, 신뢰성은 장비가 고장 없이, 의도된 기능을 수행할 수 있는 확률이나 시간의 개념이다.</p>
+<dl>
+<dt>주요 특징</dt>
+<dd>
+<ul>
+<li><strong>고장 없이 동작하는 능력</strong>: 장비나 시스템이 일정 시간 동안 예상대로 작동하는 능력.</li>
+<li><strong>확률적인 개념</strong>: 신뢰성은 시스템의 고장이 발생할 확률을 기반으로 평가된다.</li>
+<li><strong>수명 주기 동안의 성능</strong>: 시스템이 고장 없이 얼마나 오랫동안 성능을 유지할 수 있는지와 관련이 있다.</li>
+<li><strong>고장률</strong>: 신뢰성은 종종 고장률(failure rate)을 통해 측정되며, 고장 없이 작동하는 시간이 길수록 신뢰성이 높다고 평가된다.</li>
+</ul>
+</dd>
+<dt>예시</dt>
+<dd>
+<ul>
+<li>1년 동안 평균적으로 10회 이하로 고장이 발생하는 기계는 높은 신뢰성을 가진다고 할 수 있다.</li>
+<li>자동차가 10만 km를 주행할 동안 엔진에 고장이 발생하지 않으면, 신뢰성이 높다고 평가된다.</li>
+</ul>
+</dd>
+</dl>
+<p><strong>Maintainability (유지보수성)</strong>은 시스템이나 장비가 고장 발생 후 복구되고 다시 정상적으로 작동할 수 있도록 수리되는 용이성이나 시간의 개념이다. 즉, 유지보수성은 시스템 고장 후 수리나 점검이 얼마나 쉬운지, 빠른 시간 안에 시스템을 원래 상태로 되돌릴 수 있는지를 나타낸다.</p>
+<dl>
+<dt>주요 특징</dt>
+<dd>
+<ul>
+<li><strong>수리 시간</strong>: 장비가 고장났을 때, 수리 작업이 완료되어 다시 정상적으로 작동할 수 있는 시간을 의미한다.</li>
+<li><strong>점검과 수리 용이성</strong>: 유지보수성은 시스템을 점검하고, 수리하거나 부품을 교체하는데 소요되는 시간과 노력에 영향을 미친다.</li>
+<li><strong>지속적인 성능 유지</strong>: 유지보수성이 좋은 시스템은 고장이 발생한 후에도 빠르게 회복되어 생산성을 유지할 수 있다.</li>
+<li><strong>기술적 지원과 접근성</strong>: 유지보수성이 높다면, 기술 지원과 부품 교체가 용이하고, 일반적인 수리 작업이 신속하게 이루어질 수 있다.</li>
+</ul>
+</dd>
+<dt>예시</dt>
+<dd>
+<ul>
+<li>한 기계가 고장이 나면, 부품 교체가 쉽고, 수리 작업이 2시간 이내에 완료될 수 있는 경우, 그 기계는 높은 유지보수성을 가진다고 할 수 있다.</li>
+<li>컴퓨터 시스템이 고장났을 때, 수리 과정이 복잡하지 않고 빠르게 회복된다면, 높은 유지보수성을 가진다고 평가할 수 있다.</li>
+</ul>
+</dd>
+</dl>
+<p><strong>Reliability와 Maintainability의 차이점</strong>은 다음과 같다.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 42%">
+<col style="width: 44%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>구분</th>
+<th>Reliability (신뢰성)</th>
+<th>Maintainability (유지보수성)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>정의</strong></td>
+<td>시스템이나 장비가 고장 없이 정상적으로 작동하는 능력</td>
+<td>고장 발생 후 시스템이 정상 상태로 돌아오기 위한 수리 용이성</td>
+</tr>
+<tr class="even">
+<td><strong>주요 측정 지표</strong></td>
+<td>고장 발생 확률, 고장률(failure rate), 수명</td>
+<td>수리 시간, 수리 용이성, 복구 시간</td>
+</tr>
+<tr class="odd">
+<td><strong>초점</strong></td>
+<td>시스템의 지속적인 성능 유지 (고장 없이 작동하는 능력)</td>
+<td>고장 후 복구의 용이성 (고장이 발생했을 때, 얼마나 빠르고 쉽게 복구할 수 있는지)</td>
+</tr>
+<tr class="even">
+<td><strong>주요 고려 요소</strong></td>
+<td>시스템의 설계, 품질, 내구성, 작동 환경</td>
+<td>수리 가능성, 부품의 가용성, 기술적 지원, 점검 절차</td>
+</tr>
+<tr class="odd">
+<td><strong>예시</strong></td>
+<td>시스템이 얼마나 오랜 시간 동안 고장 없이 작동하는가</td>
+<td>고장 발생 시, 얼마나 빠르고 쉽게 시스템을 복구할 수 있는가</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Reliability</strong>는 시스템의 고장 없이 작동하는 능력이며, 주로 시스템의 내구성과 품질을 반영한다. <strong>Maintainability</strong>는 고장이 발생한 후 시스템을 얼마나 쉽게 복구할 수 있는지와 관련이 있다.</p>
+<p>두 개념은 시스템의 장기적인 성능과 운영 효율성을 보장하는 중요한 요소로, 함께 최적화해야 한다.</p>
+<hr>
+<dl>
+<dt><strong>신뢰성 (Reliability)</strong></dt>
+<dd>
+<ul>
+<li><strong>정의</strong>: 설비가 고장 없이 정상적으로 작동할 수 있는 능력.</li>
+<li><strong>지표</strong></li>
+<li><strong>MTBF (Mean Time Between Failures)</strong>: 고장 사이의 평균 시간. MTBF가 높을수록 설비의 신뢰성이 높다고 할 수 있다.</li>
+<li><strong>신뢰도 함수 (Reliability Function, R(t))</strong>: 특정 시간 동안 설비가 고장 없이 작동할 확률을 나타내는 함수.</li>
+<li><strong>고장률 (Failure Rate, λ)</strong>: 단위 시간당 고장이 발생하는 비율. 고장률이 낮을수록 신뢰성이 높다.</li>
+</ul>
+</dd>
+<dt><strong>보전성 (Maintainability)</strong></dt>
+<dd>
+<ul>
+<li><strong>정의</strong>: 설비가 고장이 발생했을 때, 이를 빠르고 효율적으로 수리할 수 있는 능력.</li>
+<li><strong>지표</strong></li>
+<li><strong>MTTR (Mean Time To Repair)</strong>: 고장이 발생한 후 복구까지의 평균 시간. MTTR이 짧을수록 보전성이 높다고 할 수 있다.</li>
+<li><strong>MTTF (Mean Time To Failure)</strong>: 고장이 발생하기까지의 평균 시간. MTTF가 길수록 보전성이 높다고 볼 수 있다.</li>
+<li><strong>수리 가능성 (Repairability Index)</strong>: 설비가 고장이 발생했을 때, 얼마나 쉽게 수리할 수 있는지를 평가하는 지표. 부품의 접근성, 수리 절차의 복잡성 등이 포함된다.</li>
+</ul>
+</dd>
+<dt><strong>유용성 (Usability)</strong></dt>
+<dd>
+<ul>
+<li><strong>정의</strong>: 설비가 사용자가 의도한 목적에 맞게 얼마나 쉽게 사용될 수 있는지를 나타내는 특성.</li>
+<li><strong>지표</strong></li>
+<li><strong>사용성 테스트 (Usability Testing)</strong>: 실제 사용자가 설비를 사용하면서 직면하는 문제를 평가하는 테스트. 사용자 경험을 기반으로 개선할 점을 도출.</li>
+<li><strong>사용자 만족도 (User Satisfaction)</strong>: 설비 사용 후 사용자가 느끼는 만족도를 조사한 지표. 설비가 직관적이고 효율적이면 사용자 만족도가 높다.</li>
+<li><strong>작업 효율성 (Task Efficiency)</strong>: 사용자가 설비를 사용하여 주어진 작업을 얼마나 빠르고 정확하게 수행할 수 있는지. 높은 효율성은 유용성이 뛰어난 설비를 나타낸다.</li>
+</ul>
+</dd>
+</dl>
+</div>
+</div>
+</section>
+</section>
+<section id="sec-bathtube" class="level2">
+<h2 class="anchored" data-anchor-id="sec-bathtube">욕조곡선</h2>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 97-4-3, 118-1-13, 121-4-1">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+기출: 97-4-3, 118-1-13, 121-4-1
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://nrms.kisti.re.kr/bitextimages/TRKO201300024419/TRKO201300024419_129_image_89.jpg" class="img-fluid figure-img"></p>
+<figcaption>https://scienceon.kisti.re.kr/srch/selectPORSrchReport.do?cn=TRKO201300024419</figcaption>
+</figure>
+</div>
+</center>
+<p><strong>욕조곡선</strong>(bathtube curve), 신뢰도 곡선은 고장률이 시간 변화에 따라 높은 값에서 점차 낮은 값으로 감소하는 일정한 값을 얼마동안 유지한 후 점차 다시 높아지는 제품 수명을 나타내는 곡선이다. 신뢰도에서 고장률이 마치 욕조처럼 생겼다고 붙여진 명칭이다.</p>
+<dl>
+<dt>DFR, decrease failure rate</dt>
+<dd>
+<ul>
+<li>초기고장, 감소형</li>
+<li>품질관리 미비로 발생할 수 있는 고장으로 작업시작 전 점검, 시운전 등으로 사전 예방이 가능한 고장</li>
+<li>debugging 기간, burn-in 기간을 통해 결함 탐지 및 안정화</li>
+</ul>
+</dd>
+<dt>CFR, constant failure rate</dt>
+<dd>
+<ul>
+<li>우발고장, 일정형</li>
+<li>예측할 수 없는 경우 발생하는 고장으로 시운전이나 점검으로 예방이 불가</li>
+<li>낮은 안전계수, 사용자 과오 등</li>
+</ul>
+</dd>
+<dt>IFR, increase failure rate</dt>
+<dd>
+<ul>
+<li>마모고장, 증가형</li>
+<li>정치 일부분이 수명을 다하여 발생하는 고장</li>
+<li>부식, 마모, 불충분한 정비 등</li>
+</ul>
+</dd>
+</dl>
+<section id="sec-failure-rate" class="level3">
+<h3 class="anchored" data-anchor-id="sec-failure-rate">고장률</h3>
+<p><strong>고장률</strong>(failure rate)이란 어떤 시점까지 동작하여 온 품목이 계속되는 단위시간 내 고장을 일으키는 비율을 뜻한다. 평균 고장률은 총 고장횟수를 총 동작시간으로 나눈 값이다.</p>
+<p><span class="math display">\[
+평균고장률(\lambda) = \frac{r(총고장횟수)}{T(총동작시간)} = \frac{1}{MTBF}
+\]</span></p>
+<p>여기서 <strong><a href="#sec-mtbf" class="quarto-xref"><span>MTBF</span></a></strong>(Mean Time Between Failure)는 평균고장간격으로, 즉 수리할 수 있는 시스템 또는 설비에서 고장 발생 시점부터 다음 고장 발생 시점까지의 평균 시간이다.</p>
+</section>
+</section>
+<section id="sec-rams" class="level2">
+<h2 class="anchored" data-anchor-id="sec-rams">RAMS</h2>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 112-4-4">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+기출: 112-4-4
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+<p><strong>RAMS</strong>(Reliability, Availability, Maintainability, Safety)는 제품 신뢰성과 안전성 평가를 위한 지표이다. 제품이나 시스템의 신뢰성, 가용성, 유지보수성 그리고 안전성을 평가한다.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TB
+RAMS --- 신뢰성 &amp; 가용성 &amp; 유지보수성 &amp; 안전성
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<dl>
+<dt>신뢰성(reliability)</dt>
+<dd>
+<ul>
+<li>제품이 일정 기간 동안 얼마나 정상적으로 동작하는지를 나타내는 지표</li>
+<li>고장없이 예상대로 동작하는 능력</li>
+</ul>
+</dd>
+<dt>가용성(availability)</dt>
+<dd>
+<ul>
+<li>제품이나 시스템이 사용 가능한 상태에 있는 비율을 나타내는 지표</li>
+<li>장애로 인한 중단 시간을 최소화하여 시스템 가동 시간을 최대한 확보하는 것이 목표</li>
+</ul>
+</dd>
+<dt>유지보수성(maintainability)</dt>
+<dd>
+<ul>
+<li>제품이나 시스템이 고장 났을 때 빠르게 복구 또는 유지보수를 수행할 수 있는지를 나타내는 지표</li>
+<li>유지보수성이 높으면 고장 시간을 최소화하고 장애복구를 빠르게 수행 가능</li>
+</ul>
+</dd>
+<dt>안전성(safety)</dt>
+<dd>
+<ul>
+<li>제품이나 시스템을 사용하는 중 사용ㅈ바나 환경에 어떠한 유해한 영향도 미치지 않는 능력</li>
+<li>제품 사용자와 주변 환경을 보호하는 중요한 역할</li>
+</ul>
+</dd>
+</dl>
+<section id="측정-방법" class="level3">
+<h3 class="anchored" data-anchor-id="측정-방법">측정 방법</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 80%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>측정방법</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>신뢰성</td>
+<td>MTBF, 실페 확률(특정 기간 내 고장이 발생할 확률, 과거 데이터 및 통계 기반으로 계산)</td>
+</tr>
+<tr class="even">
+<td>가용성</td>
+<td>MTTR</td>
+</tr>
+<tr class="odd">
+<td>유지보수성</td>
+<td>복구 시간, 유지 보수 작업 복잡성, 필요한 기술 및 장비 등을 고려하여 평가</td>
+</tr>
+<tr class="even">
+<td>안전성</td>
+<td>HAZOP(hazard and operability study), FMEA(failure modes and effects analysis), FTA(fault tree analysis)</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="설비-분석-도구" class="level2">
+<h2 class="anchored" data-anchor-id="설비-분석-도구">설비 분석 도구</h2>
+<section id="sec-pm-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="sec-pm-analysis">PM 분석</h3>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 103-4-6">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+기출: 103-4-6
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+<p><strong>PM</strong>(phenomena mechanism) 분석은 설비 정지시간 감소나 불량 감소를 위하여 원인 분석 도구로 사용된다. 만성 불량 등 고질적인 문제에 대하여 물리적인 핼석을 통해 문제를 개선하는 기법이다. 분석 핵심은 불량이나 문제 발생 성립 조건을 찾는데 있으며 장기간 고도로 훈련된 사람만이 이를 구사할 수 있다는 단점이 있다.</p>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/pm.png" class="img-fluid figure-img"></p>
+<figcaption>PM분석</figcaption>
+</figure>
+</div>
+</center>
+<p>PM 분석은 다음과 같이 정리리할 수 있다.</p>
+<dl>
+<dt>P</dt>
+<dd>
+<ul>
+<li>phenomena, physical을 의미하며 현상을 물리적으로 해석하여</li>
+</ul>
+</dd>
+<dt>M</dt>
+<dd>
+<ul>
+<li>mechanism, 공정 및 설계 mechanism을 이해하고 현상 mechanism을 해석하여 4M(Man, Machine, Material, Method)과의 관련성을 추구하는 분석 기법이다.</li>
+</ul>
+</dd>
+</dl>
+<p>즉, PM이란 만성화된 문제 현상을 원리, 원칙에 입각하여 물리적으로해석하여 불량 원인을 근본적으로 제거하고 이상적인 mechanism을 밝혀 내는 사고 방법이다.</p>
+<p>PM 분석 절차는 다음과 같다.</p>
+<div class="cell" data-tbl-colwidths="[5,25,70]">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 5%">
+<col style="width: 25%">
+<col style="width: 70%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">단계</th>
+<th style="text-align: left;">구분</th>
+<th style="text-align: left;">실천사항</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">현상파악</td>
+<td style="text-align: left;">현상을 4W1H 관점에서 그 특성을 파악하여 현상을 세분화 한다(현상 특성 분석표 작성).</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">설비 구조의 가공원리 이해</td>
+<td style="text-align: left;">기계 각부분 구조를 도해하여 물건이 만들어지는 가공 원리를 인식한다(기계구조 그림, 가공 원리 도해).</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">현상의 물리적 해석</td>
+<td style="text-align: left;">현상을 물리적인 원리, 원칙으로 설명(PM 분석)</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">현상이 성립하는 조건 추출</td>
+<td style="text-align: left;">현상을 발생시키는 조건을 전개하여 추정되는 case를 모두 정리한다(PM 분석)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5</td>
+<td style="text-align: left;">설비,재료,방법 관련성 검토</td>
+<td style="text-align: left;">불합리 조건이 성립되기 위한 설비, 재료, 치공구, 가공조건과의 관련성을 검토하여 인과관계가 있다고 생각되는 요인을 list up한다.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">바람직한 모습</td>
+<td style="text-align: left;">진단 항목 추출과 바람직한 모습의 check진단 항목별 기준, 표준, 현물 등 바람직한 못브을 검토한다(진단 sheet).</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">7</td>
+<td style="text-align: left;">현장 진단</td>
+<td style="text-align: left;">바람지한 모습에서 벗어난 것이나 미결함 등의 불합리한 점을 list up한다. 바람직한 모습이 불명확한 것은 data 수집, test하여 확인한다.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">개선책 입안과 실시</td>
+<td style="text-align: left;">불합리 점에 대해 개선책 입안과 개선안을 실시한다(개별 대책 list up, 개선 sheet).</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation column-body">
+  <div class="nav-page nav-page-previous">
+      <a href="./0601설비계획.html" class="pagination-link" aria-label="설비계획">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">설비계획</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./0603자재취급및운반관리.html" class="pagination-link" aria-label="자재취급 및 운반관리">
+        <span class="nav-page-text"><span class="chapter-title">자재취급 및 운반관리</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/yeonkyupark/PEPC/edit/main/0602설비보전관리.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div></div></footer></body></html>

@@ -1,0 +1,1421 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.39">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>프로세스 분석과 개선 – 공장관리기술사(2E)</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./0802생산성관리.html" rel="next">
+<link href="./0701작업방법및시간연구.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-160d5d975b9dfffeaf699822bedbd9bf.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<meta name="mermaid-theme" content="neutral">
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./0801프로세스분석과개선.html">08. 생산성관리</a></li><li class="breadcrumb-item"><a href="./0801프로세스분석과개선.html"><span class="chapter-title">프로세스 분석과 개선</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">공장관리기술사(2E)</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://yeonkyupark.github.io/" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-globe"></i></a>
+    <a href="https://www.instagram.com/yeonkyu.park/" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-instagram"></i></a>
+    <a href="https://github.com/yeonkyupark/PEPC" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">들어가는 글</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">01. 생산전략</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0101경쟁우위생산전략.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">경쟁우위 생산전략</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0102생산구조와방식.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">생산구조와 방식(Layout)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0103구매와외주전략.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">구매와 외주전략</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0104인력과직무설계.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">인력과 직무설계</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0105사업환경분석.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">사업환경 분석</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">02. 생산운영</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0201수요예측.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">수요예측</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0202프로세스진도관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">프로세스 진도관리</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">03. 물류관리</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0301공급망관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">공급망 관리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0302물류관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">물류관리</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">04. 재고관리</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0401재고관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">재고관리</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">05. 공정관리</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0501생산계획수립.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">생산계획 수립</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0502공정설계.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">공정설계</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0503작업계획수립.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">작업계획 수립</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0504표준작업관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">표준작업 관리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0505공정개선.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">공정개선</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">06. 설비관리</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0601설비계획.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">설비계획</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0602설비보전관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">설비보전 관리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0603자재취급및운반관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">자재취급 및 운반관리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0604환경관리및안전관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">환경 관리 및 안전 관리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0605시설및유틸리티관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">시설 및 유틸리티 관리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0606공장자동화기술.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">공장 자동화 기술</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">07. 작업관리</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0701작업방법및시간연구.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">작업방법 및 시간연구</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true">
+ <span class="menu-text">08. 생산성관리</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0801프로세스분석과개선.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">프로세스 분석과 개선</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0802생산성관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">생산성 관리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0803품질관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">품질관리</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false">
+ <span class="menu-text">09. 원가관리</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0901사업성분석.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">사업성분석</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0902원가관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">원가관리</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false">
+ <span class="menu-text">10. 경제성 공학</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1001가치공학.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">가치공학</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1002경영과학.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">경영과학</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false">
+ <span class="menu-text">11. 생산지원기술</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1101정보화활용기술.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">정보화 활용 기술</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1102제품개발기술.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">제품개발 기술</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1103서비스운영관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">서비스 운영관리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1104생산혁신기술.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">생산혁신기술</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1105신기술및동향.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">신기술및동향</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false">
+ <span class="menu-text">12. ISO</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1201ISO9001.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ISO9001</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1202ISO14001.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ISO14001</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1203ISO31000.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ISO31000</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1204ISO21500.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ISO21500</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">목차</h2>
+   
+  <ul>
+  <li><a href="#공정기호" id="toc-공정기호" class="nav-link active" data-scroll-target="#공정기호">공정기호</a></li>
+  <li><a href="#sec-line-balancing" id="toc-sec-line-balancing" class="nav-link" data-scroll-target="#sec-line-balancing">라인 밸런싱</a></li>
+  <li><a href="#sec-exchange-die" id="toc-sec-exchange-die" class="nav-link" data-scroll-target="#sec-exchange-die">준비교체 개선활동</a>
+  <ul>
+  <li><a href="#준비교체-시간-단축-필요성" id="toc-준비교체-시간-단축-필요성" class="nav-link" data-scroll-target="#준비교체-시간-단축-필요성">준비교체 시간 단축 필요성</a></li>
+  <li><a href="#준비교체-3대-낭비" id="toc-준비교체-3대-낭비" class="nav-link" data-scroll-target="#준비교체-3대-낭비">준비교체 3대 낭비</a></li>
+  </ul></li>
+  <li><a href="#less-engineering" id="toc-less-engineering" class="nav-link" data-scroll-target="#less-engineering">Less Engineering</a>
+  <ul>
+  <li><a href="#less-engineering-유형" id="toc-less-engineering-유형" class="nav-link" data-scroll-target="#less-engineering-유형">Less Engineering 유형</a></li>
+  </ul></li>
+  <li><a href="#sec-5s" id="toc-sec-5s" class="nav-link" data-scroll-target="#sec-5s">3정 5S</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/yeonkyupark/PEPC/edit/main/0801프로세스분석과개선.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content column-body" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./0801프로세스분석과개선.html">08. 생산성관리</a></li><li class="breadcrumb-item"><a href="./0801프로세스분석과개선.html"><span class="chapter-title">프로세스 분석과 개선</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-title">프로세스 분석과 개선</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta column-body">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="공정기호" class="level2">
+<h2 class="anchored" data-anchor-id="공정기호">공정기호</h2>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 109-1-5, 121-3-4">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+기출: 109-1-5, 121-3-4
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+<p><strong>공정분석</strong>(Operations analysis)은 작업 효율성을 높이기 위해 생산 과정과 작업 흐름을 평가하는 과정이다.</p>
+<p>공정분석을 위해 사용되는 <strong>공정기호</strong>(Flowchart symbols)는 작업 흐름을 시각적으로 나타내기 위한 기호로, 각 단계 작업이나 활동을 명확하게 표현하는데 사용된다. 이러한 기호는 작업 분석, 개선 그리고 최적화 작업을 효과적으로 수행할 수 있게 도음을 준다.</p>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/flow_chart_symbols.png" class="img-fluid figure-img"></p>
+<figcaption>youtube.com/watch?v=RXpHGa9ToAE&amp;t</figcaption>
+</figure>
+</div>
+</center>
+</section>
+<section id="sec-line-balancing" class="level2">
+<h2 class="anchored" data-anchor-id="sec-line-balancing">라인 밸런싱</h2>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 112-2-6">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+기출: 112-2-6
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+<p>라인 밸런싱은 공정 분석에 있어 중요한 요소이다. 작업장 내 여러 작업 사이에 균형을 맞추는 활동이다. 이는 각 작업이 동일한 시간 동안 수행되도록 하여 전체 라인 효율성을 높이는데 목표를 두고 있다. 라인 밸런싱을 통해 생산 시간을 줄이고 병목 현상을 방지하며 자원 활용을 최적화할 수 있다.</p>
+<div class="callout callout-style-default callout-important no-icon callout-titled" title="라인 밸런스 계산">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+라인 밸런스 계산
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>1대씩 기계가 배치된 흐름공정 작업시간이 다음 표와 같을 경우, 일일 생산량이 15개/일 이상일때까지 기계를 추가로 배치하여 공정분할을 실시하고, 그 때 일일 생산량 및 라인 밸런스 효율을 구하시오(실제 가동시간 = 8시간/일).</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>공정</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>시간(분)</td>
+<td>30</td>
+<td>30</td>
+<td>42</td>
+<td>31</td>
+<td>32</td>
+<td>35</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><span class="math display">\[
+\frac{\text{가동시간 8시간 x 60분}}{15개} = 32(분)
+\]</span></p>
+<p>주어진 조건에서는 일 15개 생산을 위해서는 각 공정이 32분 이내가 되도록 공정을 설계해야 한다. 따라서 3, 6, 7번 공정은 추가 기계를 배치하여 32분 이내로 공정이 진행될 수 있도록 구성한다.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>공정</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>시간(분)</td>
+<td>30</td>
+<td>30</td>
+<td>21</td>
+<td>21</td>
+<td>31</td>
+<td>32</td>
+<td>18</td>
+<td>17</td>
+<td>18</td>
+</tr>
+</tbody>
+</table>
+<p>위 조건으로 라인 밸런스 효율을 계산하면 다음과 같다.</p>
+<p><span class="math display">\[
+E_b = \frac{\sum{T_i}}{n \times c_T} = \frac{236}{10 \times 32} \times 100 = 73.75(\%)
+\]</span></p>
+</div>
+</div>
+</section>
+<section id="sec-exchange-die" class="level2">
+<h2 class="anchored" data-anchor-id="sec-exchange-die">준비교체 개선활동</h2>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 97-1-1, 109-2-5, 130-2-2">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+기출: 97-1-1, 109-2-5, 130-2-2
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+<p><strong>준비교체 시간</strong>이란 현 제품 생산 종료 시점으로부터 다음 제품으로 교체/조정을 하여 완전히 양품이 생산되기까지의 시간을 말한다. 치공구 해체, 청소, 다음 제품에 사용할 치공구 준비, 금형류 준비, 세팅, 시가공, 조정, 측정 시간 등을 포함한다.</p>
+<section id="준비교체-시간-단축-필요성" class="level3">
+<h3 class="anchored" data-anchor-id="준비교체-시간-단축-필요성">준비교체 시간 단축 필요성</h3>
+<p>시장 요구에 맞춰 다품종화 되면서 가동률이 저하되는 추이를 보였다. 빈번한 기종 교체에 대응 및 준비 교체 시간 단축으로 가동률 향상을 위해 준비교체 시간 개선이 필요하게 되었다.</p>
+</section>
+<section id="준비교체-3대-낭비" class="level3">
+<h3 class="anchored" data-anchor-id="준비교체-3대-낭비">준비교체 3대 낭비</h3>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TB
+0[준비작업 낭비] --- 1[내준비교체&lt;br&gt;작업 낭비] &amp; 2[외준비교체&lt;br&gt;작업 낭비]
+1 --- 11[교환 낭비] &amp; 12[조정 낭비]
+2 --- 21[사전 준비 낭비] &amp; 22[후처리 낭비]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>내준비 시 <strong>교환 낭비</strong>, <strong>조정 낭비</strong>가, 외준비 시 <strong>준비 낭비</strong> 발생한다.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="준비시간">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+준비시간
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<dl>
+<dt>내준비 시간</dt>
+<dd>
+<ul>
+<li>현재 가공이 끝날 때부터 다음 가공을 위해 양품이 나올 때까지의 시간으로 기계가 가공물에 부가가치를 생성하지 않는 시간</li>
+</ul>
+</dd>
+<dt>외주비 시간</dt>
+<dd>
+<ul>
+<li>기계가 가동하고 있을 때 기계 밖에서 준비 교체를 위한 사전 준비, 후처리를 하는 시간</li>
+</ul>
+</dd>
+</dl>
+</div>
+</div>
+<dl>
+<dt>교환 낭비</dt>
+<dd>
+<ul>
+<li>치공구 교환, Press 금형/성형 등 금형 준비, Drill 등 교환</li>
+<li>조립라인의 조립품이나 부품 교체, 가공라인의 재료 교체 준비</li>
+</ul>
+</dd>
+<dt>조정 낭비</dt>
+<dd>
+<ul>
+<li>정밀 절살 가공이나 화확 장치 등에서 기준을 변경 및 조정하는 작업</li>
+<li>준비 작업자 테크릭을 발휘할 수 있는 조정 작업</li>
+</ul>
+</dd>
+<dt>준비 낭비</dt>
+<dd>
+<ul>
+<li>생산 시작 전에 여러 가지 준비 작업</li>
+<li>작업자나 기계 준비, 도면 확인, 청소 등 후처리를 포함</li>
+</ul>
+</dd>
+</dl>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/job_change.png" class="img-fluid figure-img"></p>
+<figcaption>https://www.youtube.com/watch?app=desktop&amp;v=8-kmV4wR2xo</figcaption>
+</figure>
+</div>
+</center>
+<dl>
+<dt>개선 절차</dt>
+<dd>
+<ol type="1">
+<li>현상 파악
+<ul>
+<li>가동 분석을 통해 현 실태를 파악하고 현재 실시하고 있는 방법을 분석한다.</li>
+</ul></li>
+<li>낭비제거
+<ul>
+<li>정리 정돈으로 상당한 시간을 줄일 수 있다.</li>
+</ul></li>
+<li>내/외 준비 분리
+<ul>
+<li>내준비, 외준비, 로스 분리를 명확힌 한다. 반드시 설비를 정지시키지 않아도 가능한 작업은 외 준비로 한다.</li>
+</ul></li>
+<li>내준비를 외준비화
+<ul>
+<li>내준비 작업을 개선하여 외준비화 한다.</li>
+</ul></li>
+<li>내준비 교체 개선
+<ul>
+<li>내준비 단축을 위해 지그 공구 부착, 제거 작업 간소화/표준화, 카세트 방식 도입, 빠른 장금장치를 이용한 체겨 간소화, 중개 지그 활용, 병행 작업 실시, 조정 작업 폐지 등을 시도한다.</li>
+</ul></li>
+<li>외준비 교체 개선
+<ul>
+<li>외준비 시간도 단축하여 준비교체 총 시간을 단축한다.</li>
+</ul></li>
+</ol>
+</dd>
+</dl>
+<p>준비교체 시간 단축은 로트 사이즈를 작게 하여 고객 요구에 맞는 생산 진행으로 재고를 줄이고 리드타임을 단축하여 시장 경쟁력을 향상시킬 수 있다.</p>
+<dl>
+<dt>단축효과</dt>
+<dd>
+<ul>
+<li><strong>재공품</strong>(WIP, Work In Process) 최소화 - 대기시간 단축</li>
+<li><strong>생산 소요시간</strong>(Lead time) 단축 - Lead time = 가공 + 정체시간</li>
+<li><strong>가동률 및 생산성</strong> 향상(준비 교체 유실 감소)</li>
+</ul>
+</dd>
+<dt>교체준비 시간 단축 추진 절차</dt>
+<dd>
+<ol type="1">
+<li>준비 시간 실태 파악</li>
+<li>준비 개선 추진팀 편성</li>
+<li>현장 관찰 및 가동 분석</li>
+<li>헛수고 없애기와 결론 발상법</li>
+<li>개선 실시 계획 작성</li>
+<li>개선 실시</li>
+<li>평가결과 횡전재</li>
+</ol>
+</dd>
+</dl>
+</section>
+</section>
+<section id="less-engineering" class="level2">
+<h2 class="anchored" data-anchor-id="less-engineering">Less Engineering</h2>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 97-1-2, 127-2-1">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+기출: 97-1-2, 127-2-1
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+<p>낭비를 발생시키는 구체적인 현상을 완전히 제거하고자 하는 관점에서 시작된 것으로 개선 4원칙 중 가장 효과적인 <strong>배제</strong>에 주안점을 두고 적은 비용으로 큰 영영 성과를 달성하고자 하는 방안이다.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="개선 4원칙(ECRS)">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+개선 4원칙(ECRS)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 130-1-12">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+기출: 130-1-12
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+<ol type="1">
+<li><strong>제거 (Eliminate)</strong>:
+<ul>
+<li>불필요한 재고를 줄이기 위해 적시 생산 시스템(JIT)을 도입한다.</li>
+<li>작업장에서 불필요한 이동을 줄이기 위해 작업 공간을 최적화한다.</li>
+<li>생산 과정에서 발생하는 비효율적인 단계를 제거한다.</li>
+</ul></li>
+<li><strong>병합 (Combine)</strong>:
+<ul>
+<li>유사한 작업을 한 번에 처리하도록 작업 순서를 병합한다.</li>
+<li>기계 및 장비를 다기능화하여 다양한 작업을 한 번에 처리한다.</li>
+</ul></li>
+<li><strong>재배치 (Rearrange)</strong>:
+<ul>
+<li>작업 순서를 분석하고 최적의 순서로 재배치하여 작업 시간을 단축한다.</li>
+<li>생산 라인을 재설계하여 물류 흐름을 개선한다.</li>
+</ul></li>
+<li><strong>단순화 (Simplify)</strong>:
+<ul>
+<li>복잡한 작업을 간소화하여 작업자의 업무 부담을 줄인다.</li>
+<li>표준 작업 절차를 도입하여 일관성을 높이고 오류를 줄인다.</li>
+</ul></li>
+</ol>
+<p>이렇게 하면 제조 공정의 효율성을 크게 향상시킬 수 있다.</p>
+</div>
+</div>
+<section id="less-engineering-유형" class="level3">
+<h3 class="anchored" data-anchor-id="less-engineering-유형">Less Engineering 유형</h3>
+<p>다음과 같은 유형이 있다.</p>
+<ul>
+<li>Walk Less - 보행 낭비 없애기</li>
+<li>Search Less - 찾는 낭비 없애기</li>
+<li>Air Less - 빈 공간 없애기</li>
+<li>Over stock Less - 과잉 재고 없애기</li>
+<li>Air Cut Less - 공구 절삭 낭비 없애기</li>
+<li>Conveyor Less - 불필요한 컨베이어 없애기</li>
+<li>Dust Less - 분진방지, 먼지 발생 원인 없애기</li>
+<li>Rough Motion Less - 불필요한 동작 없애기</li>
+</ul>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 23%">
+<col style="width: 76%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>구분</strong></th>
+<th><strong>예시</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Man</strong></td>
+<td>- <strong>Walk Less</strong>: 작업자의 낭비 보행을 없앤다.</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>- <strong>Search Less</strong>: 물품을 찾는 시간적 낭비를 없앤다.</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>- <strong>Rough Motion Less</strong>: 동작의 원칙에 벗어난 움직임을 없앤다.</td>
+</tr>
+<tr class="even">
+<td><strong>Machine</strong></td>
+<td>- <strong>Dust Less</strong>: 분진을 발생시키는 기계나 장비의 원인을 없앤다.</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>- <strong>Conveyor Less</strong>: 불필요한 컨베이어를 없앤다.</td>
+</tr>
+<tr class="even">
+<td><strong>Material</strong></td>
+<td>- <strong>Material Less</strong>: 원재료 사용의 낭비를 없앤다.</td>
+</tr>
+<tr class="odd">
+<td><strong>Method</strong></td>
+<td>- <strong>Air Less</strong>: 부가가치를 낳지 않는 공간을 없앤다.</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="sec-5s" class="level2">
+<h2 class="anchored" data-anchor-id="sec-5s">3정 5S</h2>
+<div class="caalout-tip" data-icon="false" title="기출: 118-1-12, 130-3-2">
+
+</div>
+<p><strong>3정(3定)과 5S</strong>는 모두 효율적인 작업 환경을 만들고, 생산성과 품질을 향상시키기 위한 관리 방법론이다. 특히 <strong>3정</strong>은 일본에서 개발된 <strong>5S</strong>의 기초가 되는 개념으로, <strong>정리</strong>, <strong>정돈</strong>, <strong>청소</strong>의 세 가지 원칙을 강조한다. <strong>5S</strong>는 여기에 두 가지 추가 원칙을 포함하여 더 체계적이고 구체적인 방법을 제시한다.</p>
+<dl>
+<dt>3정 (3定)</dt>
+<dd>
+<ul>
+<li><strong>정리(整理, Seiri)</strong>: 필요한 것과 불필요한 것을 구분하여 불필요한 물건을 제거하고, 작업 공간을 깔끔하게 유지한다.</li>
+<li><strong>정돈(整頓, Seiton)</strong>: 필요한 물건이나 도구는 쉽게 찾을 수 있도록 정리하여, 효율적인 작업이 가능하도록 한다. 작업에 필요한 모든 것이 제자리에 있어야 한다.</li>
+<li><strong>청소(清掃, Seiso)</strong>: 작업 환경과 기계, 장비를 청소하여 깨끗하고 안전한 작업 환경을 유지한다. 청소는 품질 관리와 안전성 향상에도 중요하다.</li>
+</ul>
+</dd>
+</dl>
+<p><strong>5S</strong>는 3정의 개념을 바탕으로 두 가지 추가 원칙을 더한 것으로, 더 체계적이고 구체적인 관리 방법을 제공한다. <strong>5S</strong>는 다음과 같은 다섯 가지 원칙으로 구성된다.</p>
+<dl>
+<dt>5S</dt>
+<dd>
+<ol type="1">
+<li><strong>정리 (Seiri, 整理)</strong>: 필요 없는 물건을 제거하고, 필요한 것만 남긴다.</li>
+<li><strong>정돈 (Seiton, 整頓)</strong>: 필요한 물건을 쉽게 찾을 수 있도록 정리하여, 작업 효율을 높인다.</li>
+<li><strong>청소 (Seiso, 清掃)</strong>: 작업 공간을 깨끗하게 유지하고, 기계나 도구가 오염되지 않도록 관리한다.</li>
+<li><strong>청결 (Seiketsu, 清潔)</strong>: 정리, 정돈, 청소가 일상적으로 잘 유지될 수 있도록 표준화하고 관리한다. 이는 일상적인 관리 및 점검을 통해 이루어진다.</li>
+<li><strong>습관 (Shitsuke, 躾)</strong>: 5S 활동을 지속적으로 유지하고 개선하려는 습관을 형성한다. 5S가 일상적으로 실천되도록 하고, 모든 직원이 이를 지키도록 한다.</li>
+</ol>
+</dd>
+<dt>5S 목적</dt>
+<dd>
+<ul>
+<li>코스트 감축</li>
+<li>능률 향상</li>
+<li>품질 향상</li>
+<li>고장 감축</li>
+<li>안전보장, 공해방지</li>
+<li>의욕 향상</li>
+</ul>
+</dd>
+<dt>5S 추진단계</dt>
+<dd>
+<ol type="1">
+<li>5S 추진체제 확립</li>
+<li>5S 추진계획입안</li>
+<li>5S 운동 선언</li>
+<li>사내 계몽 및 교육</li>
+<li>실시</li>
+<li>평가 및 유지</li>
+</ol>
+</dd>
+<dt>3정과 5S 관계</dt>
+<dd>
+<ul>
+<li><strong>3정</strong>은 5S의 기초가 되는 개념으로, 5S는 이를 더 확장하여 지속적이고 체계적인 관리 방법을 제시한다.</li>
+<li><strong>3정</strong>은 기본적인 정리, 정돈, 청소를 중심으로 한 관리 방법이고, <strong>5S</strong>는 이들 세 가지 원칙을 더 발전시켜 <strong>청결</strong>과 <strong>습관</strong>을 추가하여, 일상적으로 실천되고 유지되도록 한다.</li>
+</ul>
+</dd>
+<dt>3정과 5S의 장점</dt>
+<dd>
+<ul>
+<li><strong>효율성 향상</strong>: 불필요한 물건을 없애고, 작업 환경을 정리함으로써 시간과 자원을 절약할 수 있다.</li>
+<li><strong>안전성 강화</strong>: 깨끗하고 정돈된 작업 환경은 안전사고를 예방하고, 작업자의 안전을 보장한다.</li>
+<li><strong>품질 향상</strong>: 청결하고 정돈된 환경에서 작업을 수행하면, 제품 품질이 향상된다.</li>
+<li><strong>직원 참여</strong>: 5S는 직원들이 자발적으로 참여하고 지속적으로 개선하는 문화를 형성하게 도와준다.</li>
+</ul>
+</dd>
+</dl>
+<p><strong>3정</strong>과 <strong>5S</strong>는 조직 내에서 효과적인 생산성과 품질을 유지하고, 지속적인 개선을 이루는 데 중요한 역할을 한다.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation column-body">
+  <div class="nav-page nav-page-previous">
+      <a href="./0701작업방법및시간연구.html" class="pagination-link" aria-label="작업방법 및 시간연구">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">작업방법 및 시간연구</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./0802생산성관리.html" class="pagination-link" aria-label="생산성 관리">
+        <span class="nav-page-text"><span class="chapter-title">생산성 관리</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/yeonkyupark/PEPC/edit/main/0801프로세스분석과개선.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div></div></footer></body></html>
