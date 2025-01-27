@@ -459,7 +459,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#sec-equipment-layout-type" id="toc-sec-equipment-layout-type" class="nav-link" data-scroll-target="#sec-equipment-layout-type">배치 유형</a>
   <ul class="collapse">
   <li><a href="#sec-project-layout" id="toc-sec-project-layout" class="nav-link" data-scroll-target="#sec-project-layout">위치고정형 배치</a></li>
-  <li><a href="#sec-process-layuot" id="toc-sec-process-layuot" class="nav-link" data-scroll-target="#sec-process-layuot">공정별 배치</a></li>
+  <li><a href="#sec-process-layout" id="toc-sec-process-layout" class="nav-link" data-scroll-target="#sec-process-layout">공정별 배치</a></li>
   <li><a href="#sec-product-layout" id="toc-sec-product-layout" class="nav-link" data-scroll-target="#sec-product-layout">제품별 배치</a></li>
   <li><a href="#sec-group-layout" id="toc-sec-group-layout" class="nav-link" data-scroll-target="#sec-group-layout">그룹별 배치</a></li>
   <li><a href="#sec-cms" id="toc-sec-cms" class="nav-link" data-scroll-target="#sec-cms">CMS</a></li>
@@ -467,7 +467,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#sec-layout-analysis" id="toc-sec-layout-analysis" class="nav-link" data-scroll-target="#sec-layout-analysis">설비배치 분석 기법</a>
   <ul class="collapse">
   <li><a href="#sec-layout-analysis-computer" id="toc-sec-layout-analysis-computer" class="nav-link" data-scroll-target="#sec-layout-analysis-computer">컴퓨터를 활용한 분석</a></li>
-  <li><a href="#sec-slp" id="toc-sec-slp" class="nav-link" data-scroll-target="#sec-slp">체계적 설비 배치 (SLP)</a></li>
+  <li><a href="#sec-slp" id="toc-sec-slp" class="nav-link" data-scroll-target="#sec-slp">SLP</a></li>
   </ul></li>
   </ul></li>
   </ul>
@@ -538,6 +538,9 @@ end
 </div>
 </div>
 </div>
+<dl>
+<dt>설비배치 유형</dt>
+<dd>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 25%">
@@ -548,9 +551,9 @@ end
 <thead>
 <tr class="header">
 <th>특성</th>
-<th>제품별 배치</th>
-<th>공정별 배치</th>
-<th>위치고정형 배치</th>
+<th><a href="#sec-product-layout" class="quarto-xref"><span>제품별 배치</span></a></th>
+<th><a href="#sec-process-layout" class="quarto-xref"><span>공정별 배치</span></a></th>
+<th><a href="#sec-project-layout" class="quarto-xref"><span>위치고정형 배치</span></a></th>
 </tr>
 </thead>
 <tbody>
@@ -599,11 +602,13 @@ end
 <tr class="even">
 <td>주요관리사항</td>
 <td>라인 발란싱</td>
-<td>절비 배치</td>
+<td>설비 배치</td>
 <td>시방 변경 및 일정 관리</td>
 </tr>
 </tbody>
 </table>
+</dd>
+</dl>
 <section id="sec-equipment-layout-type" class="level3">
 <h3 class="anchored" data-anchor-id="sec-equipment-layout-type">배치 유형</h3>
 <p>설비 배치는 그 특성에 따라 위치고정형 배치, 공정별 배치, 제품별 배치, 그룹별 배치 등으로 나눌 수 있다.</p>
@@ -637,8 +642,8 @@ end
 </tbody>
 </table>
 </section>
-<section id="sec-process-layuot" class="level4">
-<h4 class="anchored" data-anchor-id="sec-process-layuot">공정별 배치</h4>
+<section id="sec-process-layout" class="level4">
+<h4 class="anchored" data-anchor-id="sec-process-layout">공정별 배치</h4>
 <p>동일한 기능을 자는 설비를 집단으로 배치하는 형태이다. <strong>기능별 배치</strong>라고도 하며 주로 가공 공정에 이용되며 <strong>다품종 소량생산</strong> 시스템에 적합하다. 부품이나 구성품을 표준화 하기 어렵고 범용설비를 이용하여 제품을 생산한다.</p>
 <table class="caption-top table">
 <colgroup>
@@ -724,14 +729,16 @@ end
 </div>
 </div>
 <section id="sec-gt-layout" class="level5">
-<h5 class="anchored" data-anchor-id="sec-gt-layout">셀형 배치 - GT</h5>
+<h5 class="anchored" data-anchor-id="sec-gt-layout">셀형 배치</h5>
+<center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://hbr.org/resources/images/article_assets/hbr/8407/84404_B.gif" class="img-fluid figure-img"></p>
 <figcaption>https://hbr.org/1984/07/group-technology-and-productivity</figcaption>
 </figure>
 </div>
-<p>“GT 배치” 또는 “그룹별 배치”라고 하며 작업장과 기계를 유사한 생산/가공 흐름을 갖는 제품들로그룹화하여 셀(cell) 단위로 배열하고 부품 분류별로 가공하는 형태이다. 금속가공 및 조립, 컴퓨터 칩 제조 및 조립 작업에 적용되며 유연성은 유지(공정별 배치 장점)하면서 효율성을 증대(제품별 배치 장점)시키려는 형태이다.</p>
+</center>
+<p><strong>GT 배치</strong> 또는 <strong>그룹별 배치</strong>라고 하며 작업장과 기계를 <strong>유사한 생산/가공 흐름을 갖는 제품들로 그룹화</strong>하여 셀(cell) 단위로 배열하고 부품 분류별로 가공하는 형태이다. 금속가공 및 조립, 컴퓨터 칩 제조 및 조립 작업에 적용되며 유연성은 유지(공정별 배치 장점)하면서 효율성을 증대(제품별 배치 장점)시키려는 형태이다.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 55%">
@@ -764,13 +771,15 @@ end
 </table>
 </section>
 <section id="sec-u-layout" class="level5">
-<h5 class="anchored" data-anchor-id="sec-u-layout">U자형 배치 - JIT</h5>
+<h5 class="anchored" data-anchor-id="sec-u-layout">U자형 배치</h5>
+<center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.mdpi.com/applsci/applsci-12-03375/article_deploy/html/images/applsci-12-03375-g001.png" class="img-fluid figure-img"></p>
 <figcaption>https://www.mdpi.com/2076-3417/12/7/3375</figcaption>
 </figure>
 </div>
+</center>
 <p>다양한 수요변화에 풀 시스템(pull system)을 전개하는 일본기업에서 흔히 U자형 조립라인을 사용한다. U자형 배치는 셀형배치와 같이 일본에서 작업단순화와 지속적 개선사상을 토대로 공정별로 배치를 개선한 것이다.</p>
 <p>U자형 배치 원칙은 다음과 같다.</p>
 <ul>
@@ -786,7 +795,10 @@ end
 <li>작업자 간 의사소통을 증진시킨다.</li>
 <li>작업 유연성을 증가시킨다.</li>
 </ul>
-<p><br></p>
+</section>
+</section>
+<section id="sec-cms" class="level4">
+<h4 class="anchored" data-anchor-id="sec-cms">CMS</h4>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 106-1-7, 118-2-6, 127-3-1">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -800,42 +812,15 @@ end
 
 </div>
 </div>
-</section>
-</section>
-<section id="sec-cms" class="level4">
-<h4 class="anchored" data-anchor-id="sec-cms">CMS</h4>
-<p><strong>CMS(Cell Manufacturing System)</strong>는 셀 제조 방식으로, 생산 공정에서 여러 작업을 하나의 작은 생산 단위인 ’셀’로 구성하여 각 셀에서 다양한 작업을 독립적으로 처리하는 방식을 의미한다. CMS는 생산 효율성 향상과 품질 개선을 목표로 하는 방식으로, 기존의 <strong>배치 생산 방식</strong>이나 <strong>작업 분담 방식을 개선하기 위해 등장했다</strong>.</p>
-<dl>
-<dt>CMS의 탄생 배경</dt>
-<dd>
+<p><strong>CMS(Cellular Manufacturing System)</strong>는 셀 제조 방식으로, 생산 공정에서 여러 작업을 하나의 작은 생산 단위인 ’셀’로 구성하여 각 셀에서 다양한 작업을 독립적으로 처리하는 방식을 의미한다. CMS는 생산 효율성 향상과 품질 개선을 목표로 하는 방식으로, 기존의 <strong>배치 생산 방식</strong>이나 <strong>작업 분담 방식을 개선하기 위해 등장했다</strong>.</p>
 <ol type="1">
-<li><strong>대량 생산의 한계</strong>
-<ul>
-<li><strong>대량 생산 시스템</strong>(Mass Production)은 20세기 초, 헨리 포드의 조립라인 방식에 의해 대표되는 방식으로, 효율성을 높이기 위해 설계되었다. 그러나 대량 생산은 대규모 생산에 유리하지만, 다양한 제품을 유연하게 생산하거나 생산 라인의 전환에 대응하기에는 한계가 있었다.</li>
-<li>또한 대량 생산 방식은 제품의 품질이나 낭비 문제(불필요한 이동, 대기 시간 등)가 발생할 수 있었다.</li>
-</ul></li>
-<li><strong>다양화된 소비자 요구</strong>
-<ul>
-<li>소비자 요구가 다양해짐에 따라, 기업은 제품의 맞춤화와 빠른 생산 전환이 필요해졌다. 이를 위해서는 생산 공정이 더 유연하고 효율적으로 변화해야 했다.</li>
-<li>다양한 모델이나 소량 생산이 증가하면서 기존의 대량 생산 방식은 유연성과 효율성에서 한계에 부딪혔다.</li>
-</ul></li>
-<li><strong>불필요한 이동과 대기 시간 문제</strong>
-<ul>
-<li>전통적인 생산 방식에서는 각 작업 단계가 분리되어 있거나 먼 거리에 있어 작업 간 이동이 많았다. 이로 인해 대기 시간과 이동 시간이 발생해 비효율성이 증가했다.</li>
-<li>이러한 문제를 해결하기 위해, <strong>셀이동형 생산방식(Cellular Manufacturing System)</strong>이 필요하게 되었다.</li>
-</ul></li>
-<li><strong>린 생산(Lean Production)의 도입</strong>
-<ul>
-<li>1980년대 <strong>도요타 생산 시스템(TPS)</strong>에서 발전한 <strong>린 생산(Lean Production)</strong> 방식은 낭비를 최소화하고, 유연하고 효율적인 생산 시스템을 구축하는 방법론으로 주목받았다.</li>
-<li>린 생산에서 강조되는 <strong>낭비 제거</strong>와 <strong>효율성</strong>은 CMS의 핵심 요소로 자리 잡았다. 특히, CMS는 <strong>셀 단위로 작업을 분할하고, 각 셀이 독립적으로 작업을 처리</strong>하여 공정 흐름을 개선하고, 작업자들이 다양한 기술을 수행할 수 있도록 하여 유연성을 높였다.</li>
-</ul></li>
-<li><strong>유연한 생산 시스템 필요성</strong>
-<ul>
-<li><strong>다품종 소량 생산</strong>이 대세로 자리 잡으면서 공정의 유연성이 매우 중요해졌다. 제품이 자주 변경되거나 수요가 예측 불가능할 경우, <strong>CMS</strong>는 빠르게 제품을 전환하고 생산 효율성을 극대화할 수 있는 방법이 되었다.</li>
-<li>CMS는 각 셀에서 다기능을 수행할 수 있는 팀워크와 전문성을 강조하고, <strong>소규모로 독립된 셀 내에서 효율적인 작업을 할 수 있도록 하여 유연성과 생산성을 동시에 높였다</strong>.</li>
-</ul></li>
+<li><strong>대량 생산의 한계</strong> - <strong>대량 생산 시스템</strong>(Mass Production)은 20세기 초, 헨리 포드의 조립라인 방식에 의해 대표되는 방식으로, 효율성을 높이기 위해 설계되었다. 그러나 대량 생산은 대규모 생산에 유리하지만, 다양한 제품을 유연하게 생산하거나 생산 라인의 전환에 대응하기에는 한계가 있었다. - 또한 대량 생산 방식은 제품의 품질이나 낭비 문제(불필요한 이동, 대기 시간 등)가 발생할 수 있었다.</li>
+<li><strong>다양화된 소비자 요구</strong> - 소비자 요구가 다양해짐에 따라, 기업은 제품의 맞춤화와 빠른 생산 전환이 필요해졌다. 이를 위해서는 생산 공정이 더 유연하고 효율적으로 변화해야 했다. - 다양한 모델이나 소량 생산이 증가하면서 기존의 대량 생산 방식은 유연성과 효율성에서 한계에 부딪혔다.</li>
+<li><strong>불필요한 이동과 대기 시간 문제</strong> - 전통적인 생산 방식에서는 각 작업 단계가 분리되어 있거나 먼 거리에 있어 작업 간 이동이 많았다. 이로 인해 대기 시간과 이동 시간이 발생해 비효율성이 증가했다. - 이러한 문제를 해결하기 위해, <strong>셀이동형 생산방식(Cellular Manufacturing System)</strong>이 필요하게 되었다.</li>
+<li><strong>린 생산(Lean Production)의 도입</strong> - 1980년대 <strong>도요타 생산 시스템(TPS)</strong>에서 발전한 <strong>린 생산(Lean Production)</strong> 방식은 낭비를 최소화하고, 유연하고 효율적인 생산 시스템을 구축하는 방법론으로 주목받았다. - 린 생산에서 강조되는 <strong>낭비 제거</strong>와 <strong>효율성</strong>은 CMS의 핵심 요소로 자리 잡았다. 특히, CMS는 <strong>셀 단위로 작업을 분할하고, 각 셀이 독립적으로 작업을 처리</strong>하여 공정 흐름을 개선하고, 작업자들이 다양한 기술을 수행할 수 있도록 하여 유연성을 높였다.</li>
+<li><strong>유연한 생산 시스템 필요성</strong> - <strong>다품종 소량 생산</strong>이 대세로 자리 잡으면서 공정의 유연성이 매우 중요해졌다. 제품이 자주 변경되거나 수요가 예측 불가능할 경우, <strong>CMS</strong>는 빠르게 제품을 전환하고 생산 효율성을 극대화할 수 있는 방법이 되었다. - CMS는 각 셀에서 다기능을 수행할 수 있는 팀워크와 전문성을 강조하고, <strong>소규모로 독립된 셀 내에서 효율적인 작업을 할 수 있도록 하여 유연성과 생산성을 동시에 높였다</strong>.</li>
 </ol>
-</dd>
+<dl>
 <dt>CMS의 등장과 핵심 특징</dt>
 <dd>
 <ul>
@@ -877,15 +862,20 @@ end
 </table>
 </div>
 </div>
-<p><strong>CMS(Cell Manufacturing System)</strong>와 <strong>컨베이어 생산방식</strong>은 각각 다른 생산 방식으로, 각각의 특성에 따라 장단점이 존재한다. 두 방식의 차이를 이해하는 것은 특정 생산 환경에 맞는 방식을 선택하는 데 중요한 요소가 된다.</p>
-<dl>
-<dt>컨베이어 생산방식 (Conveyor Production System)</dt>
-<dd>
-<ul>
-<li><strong>정의</strong>: 컨베이어 생산방식은 <strong>대량 생산 시스템</strong>으로, 작업이 연속적으로 이동하는 컨베이어 벨트를 따라 각 작업 단계가 순차적으로 이루어지는 방식이다. 주로 대량 생산에 적합한 방식이다.</li>
-</ul>
-</dd>
-</dl>
+<p><strong>CMS</strong>와 <strong>컨베이어 생산방식</strong>은 각각 다른 생산 방식으로, 각각의 특성에 따라 장단점이 존재한다. 두 방식의 차이를 이해하는 것은 특정 생산 환경에 맞는 방식을 선택하는 데 중요한 요소가 된다.</p>
+<div id="nte-conveyor" class="callout callout-style-default callout-note no-icon callout-titled" title="컨베이어 생산방식 (Conveyor Production System)">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note&nbsp;2.1 컨베이어 생산방식 (Conveyor Production System)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>컨베이어 생산방식은 <strong>대량 생산 시스템</strong>으로, 작업이 연속적으로 이동하는 컨베이어 벨트를 따라 각 작업 단계가 순차적으로 이루어지는 방식이다. 주로 대량 생산에 적합한 방식이다.</p>
+</div>
+</div>
 <p>CMS와 컨베이어 생산방식을 비교하면 다음과 같다.</p>
 <table class="caption-top table">
 <colgroup>
@@ -896,7 +886,7 @@ end
 <thead>
 <tr class="header">
 <th><strong>구분</strong></th>
-<th><strong>CMS (Cell Manufacturing System)</strong></th>
+<th><strong>CMS</strong></th>
 <th><strong>컨베이어 생산방식</strong></th>
 </tr>
 </thead>
@@ -940,7 +930,17 @@ end
 </table>
 <p><strong>CMS</strong>는 <strong>유연성</strong>이 뛰어나며 <strong>다품종 소량 생산</strong>에 적합하다. 작업자가 여러 가지 작업을 처리할 수 있고, <strong>품질 관리</strong>와 <strong>낭비 최소화</strong>에 유리하다. 하지만 <strong>초기 투자 비용</strong>이 크고, <strong>작업자 교육</strong>이 필요하며, <strong>공정 복잡성</strong>이 증가할 수 있다. 반면 <strong>컨베이어 생산방식</strong>은 <strong>대량 생산</strong>에 최적화되어 있으며, <strong>자동화</strong>가 용이하고, 일정한 제품을 대규모로 생산하는 데 효율적이다. 그러나 <strong>유연성</strong>이 부족하고, <strong>설비 변경</strong>이나 <strong>다양한 제품 생산</strong>에는 어려움이 있다.</p>
 <p>따라서, 생산 환경과 요구에 맞는 시스템을 선택하는 것이 중요하다.</p>
-<p><br></p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="기종장제">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+기종장제
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<hr>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 103-1-1">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -954,17 +954,7 @@ end
 
 </div>
 </div>
-<div class="callout callout-style-default callout-note no-icon callout-titled" title="기종장제">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-기종장제
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>기종장 제도는 Cell 방식에서 업그레이드된 방식으로 같은 셀 또는 기종별 팀이 구성되어 자재조달부터 검사, 물류, 계획 등을 자율적으로 결정하는 방식이다.</p>
+<p><strong>기종장 제도</strong>는 Cell 방식에서 업그레이드된 방식으로 같은 셀 또는 기종별 팀이 구성되어 자재조달부터 검사, 물류, 계획 등을 자율적으로 결정하는 방식이다.</p>
 <dl>
 <dt>기종장 제도 효과</dt>
 <dd>
@@ -1059,7 +1049,9 @@ end
 </ul>
 </dd>
 </dl>
-<p><br></p>
+</section>
+<section id="sec-slp" class="level4">
+<h4 class="anchored" data-anchor-id="sec-slp">SLP</h4>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 124-1-12">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1073,9 +1065,6 @@ end
 
 </div>
 </div>
-</section>
-<section id="sec-slp" class="level4">
-<h4 class="anchored" data-anchor-id="sec-slp">체계적 설비 배치 (SLP)</h4>
 <p><strong>SLP</strong>(체계적 설비 배치, Systematic Layout Planning)는 설비 배치 시 효율적인 질적요인을 분석하기 위해 머더(Richard Muther)가 소개한 기법이다.</p>
 <ul>
 <li>물자 흐름 및 상호 관계 검토 후 활동 내용 작성</li>
@@ -1095,12 +1084,14 @@ end
 </dd>
 </dl>
 <p>Muther는 6단계 절차를 이용하여 관계가 가장 빈번하고 논리적으로 밀접한 2개 영역을 파악했다.</p>
+<center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.researchgate.net/publication/321943344/figure/fig1/AS:573637008211979@1513777128863/Systematic-Layout-Planning-Procedure-12.png" class="img-fluid figure-img"></p>
 <figcaption>https://www.researchgate.net/figure/Systematic-Layout-Planning-Procedure-12_fig1_321943344</figcaption>
 </figure>
 </div>
+</center>
 <dl>
 <dt>Muther 6단계 SLP</dt>
 <dd>
@@ -1110,7 +1101,7 @@ end
 <li>공간 조건 설정
 <ul>
 <li>DOR, ENG, SEC, FOY, FIL, COP, STO 등</li>
-<li><a href="#sec-activity-releationship-chart" class="quarto-xref"><span>활동관련도(Activity Relationship Chart)</span></a>, 각 공정 관계를 한눈에 알아보기 쉽게 작성한 표<br>
+<li><a href="#sec-activity-releationship-chart" class="quarto-xref"><span>활동관련도</span></a>, 각 공정 관계를 한눈에 알아보기 쉽게 작성한 표<br>
 </li>
 </ul></li>
 <li>활동 관계도 작성
@@ -1134,7 +1125,8 @@ end
 </ol>
 </dd>
 </dl>
-<p><br></p>
+<section id="sec-activity-releationship-chart" class="level5">
+<h5 class="anchored" data-anchor-id="sec-activity-releationship-chart">활동관련도</h5>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 121-1-2">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1148,8 +1140,6 @@ end
 
 </div>
 </div>
-<section id="sec-activity-releationship-chart" class="level5">
-<h5 class="anchored" data-anchor-id="sec-activity-releationship-chart">활동관련도(Activity Relationship Chart)</h5>
 <p>공장 배치에서 <strong>활동관련도(Activity Relationship Chart, ARC)</strong>는 각 작업장이나 부서 간의 <strong>공간적 배치 필요성</strong>을 평가하는 도구다. 이를 통해 <strong>작업 흐름의 효율성</strong>을 극대화하고, 물류 및 생산 동선을 최적화한다.</p>
 <table class="caption-top table">
 <colgroup>
@@ -1196,35 +1186,35 @@ end
 <dt><strong>활동관련도의 5가지 근접도</strong></dt>
 <dd>
 <ol type="1">
-<li><strong>A (Absolutely Necessary, 절대적으로 필요)</strong>
+<li><strong>A</strong> (Absolutely Necessary, 절대적으로 필요)
 <ul>
 <li>두 작업장은 <strong>반드시 인접해야</strong> 하며, 떨어질 경우 심각한 비효율 발생.<br>
 </li>
 <li>예) 조립 라인과 부품 공급 구역, 용광로와 주조 구역.<br>
 </li>
 </ul></li>
-<li><strong>E (Especially Important, 특히 중요)</strong>
+<li><strong>E</strong> (Especially Important, 특히 중요)
 <ul>
 <li>인접하는 것이 <strong>매우 유리</strong>하며, 떨어질 경우 작업 효율이 크게 저하됨.<br>
 </li>
 <li>예) 가공 라인과 검사 구역, 포장 부서와 출하 구역.<br>
 </li>
 </ul></li>
-<li><strong>I (Important, 중요)</strong>
+<li><strong>I</strong> (Important, 중요)
 <ul>
 <li>인접하면 <strong>효율이 증가</strong>하지만, 떨어져 있어도 큰 문제가 되지 않음.<br>
 </li>
 <li>예) 사무실과 생산 관리실, 보관 창고와 생산 구역.<br>
 </li>
 </ul></li>
-<li><strong>O (Ordinary, 보통)</strong>
+<li><strong>O</strong> (Ordinary, 보통)
 <ul>
 <li>인접 여부가 <strong>큰 영향이 없으며</strong>, 공간 상황에 따라 배치 가능.<br>
 </li>
 <li>예) 직원 휴게실과 생산 현장, 기계 정비실과 생산 라인.<br>
 </li>
 </ul></li>
-<li><strong>U (Unimportant, 불필요)</strong>
+<li><strong>U</strong> (Unimportant, 불필요)
 <ul>
 <li>두 작업장은 <strong>서로 멀리 떨어져도 문제 없음</strong>.<br>
 </li>
