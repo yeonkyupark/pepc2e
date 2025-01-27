@@ -34,7 +34,7 @@ h1.unnumbered, h1.anchored, h2.anchored, h3.anchored{
 
 h4.anchored {
   position: relative;
-  color: #354649;
+  color: white;
   text-shadow: 0 -1px rgba(255,255,255,0.6);
 }
 
@@ -44,7 +44,7 @@ h1, .h1, h2, .h2 {
   background-color: #A3C6C4;
   border: 1px solid #fff;
   border-radius: 0 10px 0 10px;
-  box-shadow: inset 0 0 5px rgba(53, 86, 129, 0.5);
+  /*-- box-shadow: inset 0 0 5px rgba(53, 86, 129, 0.5); --*/
   padding: 10px 20px;
 }
 
@@ -53,7 +53,7 @@ h3, .h3{
   background-color: #6C7A89;
   border: 1px solid #fff;
   border-radius: 0 10px 0 10px;
-  box-shadow: inset 0 0 5px rgba(108, 122, 137, 0.5);
+  /*-- box-shadow: inset 0 0 5px rgba(108, 122, 137, 0.5); --*/
   padding: 8px 18px;
 }
 
@@ -62,16 +62,7 @@ h4, .h4 {
   background-color: #354649;
   border: 1px solid #fff;
   border-radius: 0 10px 0 10px;
-  box-shadow: inset 0 0 5px rgba(163, 198, 196, 0.5);
-  padding: 5px 15px;
-}
-
-h4, .h4 {
-  position: relative;
-  background-color: #E0E7E9;
-  border: 1px solid #fff;
-  border-radius: 0 10px 0 10px;
-  box-shadow: inset 0 0 5px rgba(224, 231, 233, 0.5);
+  /* box-shadow: inset 0 0 5px rgba(163, 198, 196, 0.5); */
   padding: 5px 15px;
 }
 
