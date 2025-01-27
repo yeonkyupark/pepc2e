@@ -1,4 +1,4 @@
-# 들어가는 글 {.unnumbered}
+# 00. 들어가는 글 {.unnumbered}
 
 ## 공장관리기술사
 
