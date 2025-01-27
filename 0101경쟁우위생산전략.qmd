@@ -20,12 +20,10 @@ format: html
 **기능전략**(Functions Strategy)
 : 연구개발, 구매, 생산, 물류, 영업 등 사업 경영 기능별 기본 전략이다. 사업전략 달성을 위해 각 사업 운영에 있어 세부적이고 효율적인 수행방법을 수립한다.
 
-<br>
+:::{.callout-note icon=false title="기업윤리"}
 
 :::{.callout-tip icon=false title="기출: 124-4-2"}
 :::
-
-:::{.callout-note icon=false title="기업윤리"}
 
 **기업윤리(Business Ethics)**는 기업이 사업을 운영하고 의사결정을 내릴 때 따르는 도덕적 기준과 행동 원칙을 의미한다. 이는 기업의 사회적 책임(CSR), 공정 거래, 이해관계자와의 신뢰 구축 등 다양한 영역에서 적용되며, 법률을 준수하는 것을 넘어 사회적 기대에 부응하는 행동을 포함한다.  
 
@@ -49,16 +47,15 @@ format: html
 
 
 ## 전략 수립 모델
+
 <center>
 ![경영전략 수립 절차](images/strategy_planning.png)
 </center>
 
-<br>
+### 경쟁우선순위 {#sec-qcdfs}
 
 :::{.callout-tip icon=false title="기출: 97-4-2, 100-1-7, 100-2-4, 124-4-3"}
 :::
-
-### 경쟁우선순위 {#sec-qcdfs}
 
 경쟁우선순위는 생산관리 목표로 볼 수 있다. 기업 생존 부등식에 따라 고객 만족과 효율적 생산을 목표로 전체 조직이 지향하는 방향을 나타낸다.
 
@@ -89,12 +86,11 @@ format: html
 
 이 다섯 가지 요소는 각 기업이 시장에서 경쟁할 때 어떤 요소를 우선시할지 결정하는 기준이 된다. 예를 들어, **고급 브랜드**는 주로 **품질**과 **서비스**에 집중할 수 있고, **가격 경쟁력**을 강조하는 기업은 **비용**과 **납기**를 중시할 수 있다.
 
-<br>
+
+### 본원적 경쟁전략 {#sec-porter-generic-strategies}
 
 :::{.callout-tip icon=false title="기출: 106-1-3"}
 :::
-
-### 본원적 경쟁전략 {#sec-porter-generic-strategies}
 
 <center>
 ![https://en.wikipedia.org/wiki/Porter%27s_generic_strategies](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Michael_Porter%27s_Three_Generic_Strategies.svg/1280px-Michael_Porter%27s_Three_Generic_Strategies.svg.png)
@@ -166,12 +162,10 @@ format: html
 
 생산전략이 수립되면 제품에 고객요구나 제품 수명주기 등에 따른 생산방식을 결정한다.
 
-<br>
+### 제품 납기에 따른 생산방식 {#sec-decoupling-strategy}
 
 :::{.callout-tip icon=false title="기출: 100-2-6, 106-2-4, 115-3-5, 121-4-5, 130-4-5"}
 :::
-
-### 제품 납기에 따른 생산방식 {#sec-decoupling-strategy}
 
 <center>
 ![https://www.researchgate.net/figure/Material-flow-decoupling-points-and-strategic-inventory_fig2_247628650](https://www.researchgate.net/profile/Martin-Christopher-2/publication/247628650/figure/fig2/AS:298253707956243@1448120633663/Material-flow-decoupling-points-and-strategic-inventory.png)
@@ -196,12 +190,11 @@ format: html
 - 해당 업체가 생산 제품별로 다르게선택할 수 있으며, 복수 생산 방식을 선택할 수 도 있고, 제품 수명주기상 어떤 위치에 있는가를 기준으로 시점에 따라 생산방식을 다르게 선택
 - 고객 요구를 다앙하고 유연한 생산 방식으로 충족
 
-<br>
+
+### 제품 수명주기에 따른 생산방식{#sec-product-lifecycle-stratey}
 
 :::{.callout-tip icon=false title="기출:100-3-2, 109-1-6, 118-1-3, 121-3-1"}
 :::
-
-### 제품 수명주기에 따른 생산방식{#sec-product-lifecycle-stratey}
 
 <center>
 ![https://altcraft.com/glossary/product-life-cycle](https://altcraft.com/uploads/product_life_cycle_stages_a68fe32579.png)
@@ -227,20 +220,17 @@ format: html
 : - 시장에서 도태되는 시기이다. 즉 기존제품에 대한 수요는 소멸되거나 또는 보다 품질이 우수하고값이 저렴한 제품으로 대체된다.
 - 매출과 이익은 기업이 궁극적으로 제품을 포기하기 전까지 계속적으로 감소하게 된다.
 
-<br>
+### 대량맞춤생산 {#sec-mass-customization}
 
 :::{.callout-tip icon=false title="기출: 106-2-4"}
 :::
 
-### 대량맞춤생산 {#sec-mass-customization}
-
 **대량맞춤생산**(Mass customization)은 개개 소비자가 다양하게 요구하는 대로 제품 서비스를 비교적 싼 가걱으로 제공하는 저가격, 고품질 고객화된 제품을 생산하는 것이다. 대량맞춤생산을 추구하는 전략 목표는 차별화된 제품을 싸게 공급하는 것으로 자동차 혼류생산이나 주문형 반도체, 주문배달파자등이 등이 있다. 최종 조립단계를 제외하 ㄴ나머지 생산과정은 모두 완료해 놓은 상태에서 고객 주문이 들어왔을 때 주문요구에 맞춰 최종 조립하여 완성된 제품을 제공하는 것을 연기(postpone)라 한다. Dell Computer는 부품업체 간 가상통합으로 다양한 고객 요구를 충족시켰다.
 
-<br>
+### 다품종 소량 생산 {#sec-small-various}
 
 :::{.callout-tip icon=false title="기출: 109-4-4"}
 :::
-### 다품종 소량 생산 {#sec-small-various}
 
 **다품종 소량생산**이란 같은 종류 제품이 드물고 수요량이 소량이며, 특히 주문에 의하여 제품을 생산하는 단속생산형태를 말한다. 이러한 생산형태는 생산계획과 통제가 제품별로 이루어지기 때문에 매우 복잡하며 일반적으로 중소기업에 유리하거나 익숙한 형태이다. 다품종 소량생산은 현재와 같이 시장이 세분화되고 시장규모 또한 갈수록 작아지는 경우에 매우 유리하다. 그러나 환경적인 요소 변화추세에 대응하기에 유리한 방법이지만 그 생산방식을 운영하는 데는 여러 가지 어려운 면들이 있기 때문에 생산방식을 도입할 때는 그 내용을 충분히 고려하여 적용하여야 한다.
 
@@ -262,13 +252,10 @@ format: html
 - 컴퓨터 기술 활용: CAM, MES 등으로 생산 과정 자동화 및 최적화
 - 공급망 관리 강화: 전체 공급망을 효과적으로 관리하여 불필요한 재고 감소, 효율적인 물류와 유통 실현
 
-
-<br>
+### 택트타임 생산방식 {#sec-takt-time}
 
 :::{.callout-tip icon=false title="기출: 106-4-3"}
 :::
-
-### 택트타임 생산방식 {#sec-takt-time}
 
 택트타임(Takt Time) 생산방식
 : > 생산 과정에서 "생산속도"를 측정하고 이를 통해 생산 활동을 조정하는 방식이다. 택트타임은 주어진 시간 동안 생산해야 할 제품 양을 결정하는 지표로 고객 수요를 충족하기 위한 이상적인 생산 속도를 의미한다. "Takt"는 독일어로 리듬 또는 박자를 뜻하고, 이는 마치 오케스트라에서 각 악기가 일정한 리듬을 따라 연주하는 것처럼 생산 과정도 일정한 리듬에 맞춰 이루어져야 한다는 의미를 담고 있다.
@@ -279,6 +266,7 @@ format: html
 - 고객 요구수량: 일정한 기간 동안 생산해야 할 제품 수(하루 고객이 요구하는 제품 개수)
 
 :::{.callout-important title="예시" icon=false}
+
 하루 8시간(480분) 근무하는 공장에서 고객이 240개 제품을 요구할 때, 택트타임을 계산하시오.
 
 $$
@@ -325,12 +313,11 @@ $$
 
 택트타임 생산방식과 같은 흐름생산에서 피치타임(Pitch Time)과 균형손실률은 생산 공정의 효율성을 평가하고 개선하기 위한 중요한 지표가 된다
 
-<br>
+:::{.callout-note icon=false title="피치타임(Pitch Time"}
 
 :::{.callout-tip icon=false title="기출: 124-1-7"}
 :::
 
-:::{.callout-note icon=false title="피치타임(Pitch Time"}
 
 **피치타임(Pitch Time)**은 일정한 시간 간격으로 생산되는 제품의 수량을 의미한다. 이는 공정이 일정한 리듬으로 운영되도록 하며, 생산 흐름의 안정성을 유지하는 데 기여한다.  
 
@@ -456,12 +443,10 @@ System Management - 실용적\
 3.  관련되는 요인의 원인과 결과를 밝힐 수 있다.
 4.  문제가 되는 변수와 제약요소와의 상호관계를 밝힐 수 있다.
 
-<br>
+### 생산시스템 {#sec-production-system-h3}
 
 :::{.callout-tip icon=false title="기출: 103-2-1"}
 :::
-
-### 생산시스템 {#sec-production-system-h3}
 
 **생산 시스템**은 생산 목표를 달성하기 위하여 여러 가지 자원을 투입하여 제품이나 서비스로 변환시키는 유기체이다. 생산 시스템은 입력(Input)을 변환(Process)하여 산출(Output)하는 과정으로 I/O 시스템이라고도 한다. 일반적인 구조는 다음과 같다.
 
@@ -489,12 +474,10 @@ System Management - 실용적\
 
 : - 시스템이 작동하는 외부 및 내부 환경을 의미한다. 환경은 시장 상황, 경쟁, 경제적 조건, 규제 및 법률, 기술 변화 등 외부 요인과, 조직의 문화, 기술 수준, 내부 자원의 상태 등 내부 요인까지 포함한다. 환경은 시스템의 운영과 결과에 영향을 미치며, 이를 적절히 반영해야 시스템이 지속 가능하고 경쟁력을 유지할 수 있다.
 
-<br>
+#### 의사결정 사항
 
 :::{.callout-tip icon=false title="기출: 127-2-6"}
 :::
-
-#### 의사결정 사항
 
 생산시스템의 구조와 운영에서 장기적 관점과 단기적 관점의 의사결정 사항은 각각 다른 목표와 전략을 반영한다. 이를 각각 설명하면 다음과 같다.
 
@@ -525,12 +508,10 @@ System Management - 실용적\
 
 장기적 관점의 의사결정은 전략적 목표를 달성하기 위한 기반을 마련하는 반면, 단기적 관점은 생산 활동을 효율적으로 수행하고 현재 상황에 맞는 문제를 해결하는 데 중점을 둔다.
 
-<br>
+#### 생산시스템 종류 {#sec-production-system-type}
 
 ::: {.callout-tip icon=false title="기출: 100-1-11, 124-1-11"}
 :::
-
-#### 생산시스템 종류 {#sec-production-system-type}
 
 ```{mermaid}
 flowchart TB
@@ -571,12 +552,10 @@ flowchart TB
 - 린 생산: 도요타 시스템
 - 다품종 유연 생산: FMS
 
-<br>
+#### 테일러 시스템 {#sec-tayor}
 
 :::{.callout-tip icon=false title="기출: 121-1-5"}
 :::
-
-#### 테일러 시스템 {#sec-tayor}
 
 테일러 시스템은 F.W. Taylor가 창안한 생산관리와 경영 전반에 걸친 시스템이다. 테일러 시스템의 핵심은 다음과 같다.
 
@@ -642,7 +621,7 @@ classDef transclass fill:#fcfcfc, stroke:#fcfcfc
 차별적 성과급 제도는 목표한 과업을 달성한 경우 작업자에게 성과급을 지급하고, 달성하지 못하는 경우 작업자에게 상대적으로 저임금을 지급했다. 현대에는 많이 상용화되어 있지만 당시에는 획기적인 방법이었다.
 :::
 
-##### 테일러 과학적 관리법(Scientific Management)
+##### 과학적 관리법
 
 **프레더릭 윈슬로 테일러(Frederick Winslow Taylor)**가 개발한 **과학적 관리법(Scientific Management)**은 **산업 현장의 생산성과 효율성을 극대화하기 위한 관리 기법**이다. 테일러는 **작업 방식의 표준화**와 **작업자의 능률 향상**을 통해 **생산성 향상**을 목표로 했다.  
 
@@ -680,12 +659,10 @@ classDef transclass fill:#fcfcfc, stroke:#fcfcfc
 
 테일러 과학적 관리법은 현대 관리학의 기초를 마련했으며, **효율성, 표준화, 생산성 향상**의 중요성을 부각시켰다. 하지만 **인간 중심의 관리 방식**과의 조화를 통해 보다 발전된 관리 기법으로 진화해 나가고 있다.
 
-<br>
+#### 포드 시스템 {#sec-ford}
 
 :::{.callout-tip icon=false title="기출: 103-4-50"}
 :::
-
-#### 포드 시스템 {#sec-ford}
 
 포드(Ford) 시스템은 H.Ford가 포드 자동차 회사에서 대량생산방식으로 확립한 자동차 이동 조립법으로 컨베이어 시스템이라 한다. 생산산을 표준화하고 컨베이어와 작업자를 **동시 관리** 했다. **고임금**과 **저가격**으로 사회에 봉사한다는 것을 목표로 했다.
 
@@ -727,13 +704,10 @@ classDef transclass fill:#fcfcfc, stroke:#fcfcfc
 +-------------
 -------------------------+----------------------------------------------------+
 
-<br>
+##### 포드와 테일러 대량생산 방식
 
 :::{.callout-tip icon=false title="기출: 127-1-1"}
 :::
-
-##### 포드와 테일러 대량생산 방식
-
 
 | 구분               | 테일러 시스템                               | 포드 시스템                                |
 |------------------|----------------------------------------|----------------------------------------|
@@ -746,7 +720,6 @@ classDef transclass fill:#fcfcfc, stroke:#fcfcfc
 | **장점**           | ① 생산관리의 시발점 <br> ② 공평한 보상체계 <br> ③ 간접조직 이용 | ① 대량생산체계 <br> ② 생산의 합리화 추구 <br> ③ 낮은 원가로 저렴하게 판매 <br> ④ 생활의 질 개선 |
 | **단점**           | ① 성과 중심의 관리 <br> ② 기준 설정의 한계 | ① 인간을 기계에 예속 <br> ② 과잉생산의 한계 |
 
-
 #### 도요타 시스템 {#sec-toyota}
 
 ![https://www.researchgate.net/figure/The-Toyota-Production-System-House_fig1_200552295](https://www.researchgate.net/profile/Jeffrey-Liker/publication/200552295/figure/fig1/AS:340308295471111@1458147228537/The-Toyota-Production-System-House.png)
@@ -755,12 +728,10 @@ classDef transclass fill:#fcfcfc, stroke:#fcfcfc
 
 하지만 판매력, 하청 관리력, 기술력, 생산 평준화가 가능한 체제, 생산관리 체제의 정비 등 여러 조건이 갖춰져야 원활한 TPS 운영이 가능하다. 간판방식이 하청업체에게 큰 부담으로 작용하여 재고를 떠 안기도 하며 도요타 생산은 전후 공정 생산평준화 등으로 작업자에게 과도한 노동강도, 압박을 주는 비인간적 공장으로 묘사되기도 했다.
 
-<br>
+##### 7대 낭비 {#sec-toyota-7-loss}
 
 ::: {.callout-tip icon=false title="기출: 118-1-7, 130-1-1"}
 :::
-
-##### 7대 낭비 {#sec-toyota-7-loss}
 
 도요타 생산 시스템(TPS)에서 강조하는 **7대 낭비(7 Wastes)**는 효율성을 높이고 불필요한 자원을 낭비하지 않도록 하기 위한 개념이다. 이 낭비들은 모두 **Muda**(무다)로 불리며, 조직의 생산성과 가치를 저하시킬 수 있다. 다음은 도요타에서 정의한 7대 낭비이다.
 
