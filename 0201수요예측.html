@@ -499,12 +499,6 @@ window.Quarto = {
   <li><a href="#sec-delayed-differentiation" id="toc-sec-delayed-differentiation" class="nav-link" data-scroll-target="#sec-delayed-differentiation">차별화 지연</a></li>
   <li><a href="#맞춤보충" id="toc-맞춤보충" class="nav-link" data-scroll-target="#맞춤보충">맞춤보충</a></li>
   </ul></li>
-  <li><a href="#sec-crm" id="toc-sec-crm" class="nav-link" data-scroll-target="#sec-crm">CRM</a>
-  <ul>
-  <li><a href="#crm-특징" id="toc-crm-특징" class="nav-link" data-scroll-target="#crm-특징">CRM 특징</a></li>
-  <li><a href="#crm-전제-조건" id="toc-crm-전제-조건" class="nav-link" data-scroll-target="#crm-전제-조건">CRM 전제 조건</a></li>
-  <li><a href="#crm-기대-효과" id="toc-crm-기대-효과" class="nav-link" data-scroll-target="#crm-기대-효과">CRM 기대 효과</a></li>
-  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/yeonkyupark/pepc2e/edit/main/0201수요예측.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
     </div>
@@ -530,6 +524,8 @@ window.Quarto = {
 </header>
 
 
+<section id="수요예측-기법" class="level2">
+<h2 class="anchored" data-anchor-id="수요예측-기법">수요예측 기법</h2>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 97-2-2, 97-4-6, 103-2-2, 106-3-5, 118-2-2">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -543,8 +539,6 @@ window.Quarto = {
 
 </div>
 </div>
-<section id="수요예측-기법" class="level2">
-<h2 class="anchored" data-anchor-id="수요예측-기법">수요예측 기법</h2>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
@@ -584,45 +578,83 @@ subgraph s2["   "]
 end
 
 예측기법 --- 10 &amp; 20
+
+style 20 fill:#d4f0d5
+style 10 fill:#ffe7d1
+style 예측기법 fill:#d0e8f1
 </pre>
 </div>
 <p></p></figure><p></p>
 </div>
 </div>
 </div>
-<dl>
-<dt>델파이법</dt>
-<dd>
-<blockquote class="blockquote">
-<p><strong>델파이법</strong>(Delphi)은 <font color="blue">익명 전문가 집단으로부터 합의</font>를 도출하는 과정이다. 통계적 모형을 개발하기 위한 과거 자료가 없거나 경영자가 경험이 없어서 판단 근거를 찾을 수 없을 때 사용한다. 장기 수요 예측이나 신제품 수요 예측에 사용할 수 있으며, 기술 예측에 있어 매우 효과적이다. 예측에 걸리는 시간이 상당히 길고 응답 내용에 책임감이 적으며, 전문가 집단에 제공할 설문지를 잘못 설계하면 잘못된 결론을 도출할 수도 있다. 새로운 제품 수요 변환점을 예측하는데 상당히 우수하다고 알려져 있다.</p>
-</blockquote>
-</dd>
-<dt>중역판단법(경영진 의견)</dt>
-<dd>
-<blockquote class="blockquote">
-<p>경영자 집단 의견과 경험을 집약하여 단일 예측치를 얻는 방법이다.</p>
-</blockquote>
-</dd>
-<dt>판매원 추정법(영업자 예측)</dt>
-<dd>
-<blockquote class="blockquote">
-<p>주기적으로판매원들이 수요 추정치를 작성하게 하고 이를 근거로 예측하는 방식이며, 구역별이나 지역별 판매 예측치를 쉽게 계산할 수 있고, 재고관리, 유통, 판매관리 등에 상당히 유용하다. 판매원 개인적 편견이 예측에 반영될 수 있으며, 이를 판매원 성과측정치로사용한다면 낮은 예측치가 될 가능성이 높다.</p>
-</blockquote>
-</dd>
-<dt>소비자 조사법</dt>
-<dd>
-<blockquote class="blockquote">
-<p>설문서 드응로 수집한 자료를 이용하여 고객 관심사에 대한 가설을 만들고 검증하는 체계적인 접근법이다. 시장조사법은 단기, 중기, 장기 수요 예측에 모두 사용할 수 있다. 시장 조사가 중요한 정보를 제공하기도 하지만 추정치를 결정할 권한을 가진 사람이 너무 많고 결과가 모호하다는 약점도 가지고 있다.</p>
-</blockquote>
-</dd>
-<dt>시계열분해법</dt>
-<dd>
-<blockquote class="blockquote">
-<p><strong>시계열 분석</strong>이란 시계열(연, 월, 주, 일 등 시간 간격)에 따라 제시된 <font color="blue">과거 자료(수요량, 매출액 등)로부터 그 추세나 경향을 파악</font>하여 장래 수요를 예측하는 것이다. 이 경우 과거 자료를 미래 예측 길잡이로 이용하는데 시간이 독립변수가 되며 수요량 또는 매출액은 종속변수가 된다. 따라서 시계열 분석 초점은 과거에 발생한 수요와 관련된 시계열성에 있다고 볼 수 있다. 분석 방법에 따라 단순이동평균법, 가중이동평균법, 지수평활법 등이 있다.</p>
-</blockquote>
-</dd>
-</dl>
-<p><br></p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="델파이법">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+델파이법
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>델파이법</strong>(Delphi)은 <strong>익명 전문가 집단으로부터 합의</strong>를 도출하는 과정이다. 통계적 모형을 개발하기 위한 과거 자료가 없거나 경영자가 경험이 없어서 판단 근거를 찾을 수 없을 때 사용한다. 장기 수요 예측이나 신제품 수요 예측에 사용할 수 있으며, 기술 예측에 있어 매우 효과적이다. 예측에 걸리는 시간이 상당히 길고 응답 내용에 책임감이 적으며, 전문가 집단에 제공할 설문지를 잘못 설계하면 잘못된 결론을 도출할 수도 있다. 새로운 제품 수요 변환점을 예측하는데 상당히 우수하다고 알려져 있다.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="중역판단법(경영진 의견">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+중역판단법(경영진 의견
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>경영자 집단 의견과 경험을 집약</strong>하여 단일 예측치를 얻는 방법이다.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="판매원 추정법(영업자 예측)">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+판매원 추정법(영업자 예측)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>주기적으로 <strong>판매원들이 수요 추정치를 작성</strong>하게 하고 이를 근거로 예측하는 방식이며, 구역별이나 지역별 판매 예측치를 쉽게 계산할 수 있고, 재고관리, 유통, 판매관리 등에 상당히 유용하다. 판매원 개인적 편견이 예측에 반영될 수 있으며, 이를 판매원 성과측정치로 사용한다면 낮은 예측치가 될 가능성이 높다.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="소비자 조사법">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+소비자 조사법
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>설문서 등으로 수집한 자료를 이용</strong>하여 고객 관심사에 대한 가설을 만들고 검증하는 체계적인 접근법이다. 시장조사법은 단기, 중기, 장기 수요 예측에 모두 사용할 수 있다. 시장 조사가 중요한 정보를 제공하기도 하지만 추정치를 결정할 권한을 가진 사람이 너무 많고 결과가 모호하다는 약점도 가지고 있다.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="시계열분해법">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+시계열분해법
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>시계열 분석</strong>이란 시계열(연, 월, 주, 일 등 시간 간격)에 따라 제시된 <strong>과거 자료(수요량, 매출액 등)로부터 그 추세나 경향을 파악</strong>하여 장래 수요를 예측하는 것이다. 이 경우 과거 자료를 미래 예측 길잡이로 이용하는데 시간이 독립변수가 되며 수요량 또는 매출액은 종속변수가 된다. 따라서 시계열 분석 초점은 과거에 발생한 수요와 관련된 시계열성에 있다고 볼 수 있다. 분석 방법에 따라 <strong>단순이동평균법</strong>, <strong>가중이동평균법</strong>, <strong>지수평활법</strong> 등이 있다.</p>
+</div>
+</div>
+<section id="시계열-분석" class="level4">
+<h4 class="anchored" data-anchor-id="시계열-분석">시계열 분석</h4>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 109-1-9, 124-4-4">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -636,8 +668,6 @@ end
 
 </div>
 </div>
-<section id="시계열-분석" class="level4">
-<h4 class="anchored" data-anchor-id="시계열-분석">시계열 분석</h4>
 <section id="수요변동-형태" class="level5">
 <h5 class="anchored" data-anchor-id="수요변동-형태">수요변동 형태</h5>
 <p>시계열 수요자료에서 관찰할 수 있는 수요 변동 형태는 과거 데이터를 분석해 미래 수요를 예측하는 데 중요한 역할을 한다. 이러한 변동 형태는 주로 네 가지로 구분된다.</p>
@@ -1293,131 +1323,6 @@ F_t = F_{t-1} + \alpha (A_{t-1} - F_{t-1}) = \alpha A_{t-1} + (1-\alpha)F_{t-1}
 <section id="맞춤보충" class="level3">
 <h3 class="anchored" data-anchor-id="맞춤보충">맞춤보충</h3>
 <p><strong>맞춤보충</strong>(Tailored sourcing)은 매일 제품 판매량을 확인해 잘 팔리는 상품은 더 많이 생산하고 안 팔리는 상품은 덜 생산하여 수요변동에 능동적으로 대처하여 납기준수 생삲율성을 성공적으로 이루는 방식이다.</p>
-<p><br></p>
-<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 97-1-8">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-기출: 97-1-8
-</div>
-</div>
-<div class="callout-body-container callout-body">
-
-</div>
-</div>
-</section>
-</section>
-<section id="sec-crm" class="level2">
-<h2 class="anchored" data-anchor-id="sec-crm">CRM</h2>
-<section id="crm-특징" class="level3">
-<h3 class="anchored" data-anchor-id="crm-특징">CRM 특징</h3>
-<p>CRM은 다음과 같은 특징이 있다.</p>
-<ul>
-<li>구매 고객 전체보다 개별 고객 특성 중시 (고객별 차별 대응)</li>
-<li>신규 고객 확보보다 기존 고객 유지 중시</li>
-<li>단기적 성과보다 고객과 장기적 관계 및 가치 중시</li>
-<li>매출보다 이익 중시</li>
-<li>고객과 기업, 양측 모두 만족 추구</li>
-</ul>
-</section>
-<section id="crm-전제-조건" class="level3">
-<h3 class="anchored" data-anchor-id="crm-전제-조건">CRM 전제 조건</h3>
-<dl>
-<dt>프로세스 통합</dt>
-<dd>
-<ul>
-<li>마켓팅, 판매, 고객 서비스 업무 영역을 통합하여 고객 접촉 단계에 상관없이 단일화된 메시지를 전달 할 수 있도록 구성되어야 함</li>
-</ul>
-</dd>
-<dt>정보 통합</dt>
-<dd>
-<ul>
-<li>댜앙한 고객 정보(고객 프로파일 정보, 상품 및 서비스 가입 정보, 서비스 요청 및 처리 이력 정보, 접촉 이력 정보, 빌링 및 납부 정보 등)를 통합하여 다양한 형태로 제공할 수 있어야 함</li>
-<li>데이터웨어 하우스, 데이터 마이닝 및 분석 도구와 전사적인 정보 공유 체제 확립</li>
-</ul>
-</dd>
-<dt>고객 관점(Channel) 통합</dt>
-<dd>
-<ul>
-<li>Call Center, 직접 방문 응대, 영업사원, 대리점, e-CRM(<span class="quarto-unresolved-ref">?nte-ecrm</span>) 등 다양한 고객 접점에서 동일한 고객에 대해 동일한 메시지를 전달할 수 있어야 함</li>
-</ul>
-</dd>
-<dt>내부 고객 관리</dt>
-<dd>
-<ul>
-<li>내부 구성원이 고객과의 접점에 위치해 있으므로 구성원들 만족 여부가 고객 충성도에 많은 영향을 미침</li>
-</ul>
-</dd>
-<dt>외부 고객 관리</dt>
-<dd>
-<ul>
-<li>우량 고객 선정 요소</li>
-<li>고객과 기업의 적합성, 고객 관계 지향 성향, 고객의 수익 기여도(현재 + 미래)</li>
-<li>CRM 고객 정보</li>
-<li>고객과 관계를 이해하는데 필요한 정보와 자료, 관계에 대한 기록으로 고객과의 관계를 개발, 변화 및 유지하는데 활용</li>
-<li>고객을 지속적으로 관찰/분석하는 과정(고객에 대한 360도 시각)</li>
-</ul>
-</dd>
-</dl>
-</section>
-<section id="crm-기대-효과" class="level3">
-<h3 class="anchored" data-anchor-id="crm-기대-효과">CRM 기대 효과</h3>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 22%">
-<col style="width: 77%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>업무 영역</th>
-<th>CRM 기대 효과</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>마케팅 기회 분석</td>
-<td><ul>
-<li><p>수익 및 고객 평생 가치(LTV) 증대</p></li>
-<li><p>신규 고객 유치 및 기존 고객 활성화</p></li>
-<li><p>고객 Life Cycle상 결정적 시점에 효과적 마케팅 활동</p></li>
-<li><p>평생 고객으로 가치를 창출할 수 있게 함</p></li>
-</ul></td>
-</tr>
-<tr class="even">
-<td>영업지원 활동</td>
-<td><ul>
-<li><p>시장에서의 경쟁력 있는 제품이 파악 및 신속한 대응 전략 수립</p></li>
-<li><p>시장에서 경쟁력 있는 제품 파악 및 신속한 대응 전략 수립</p></li>
-<li><p>수익성 높은 고객 분류와 Target Marketing</p></li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td>마케팅 관리</td>
-<td><ul>
-<li><p>시장 변화 및 고객 Needs에 맞는 상품 개발</p></li>
-<li><p>상품에 대한 시장 반응의 신속한 파악 및 보완</p></li>
-<li><p>고객 Need변화에 대한 신속한 파악 및 대응</p></li>
-</ul></td>
-</tr>
-<tr class="even">
-<td>고객 서비스</td>
-<td><ul>
-<li><p>고객 충성도(Loyalty), 유지율 및 고객 만족 증대</p></li>
-<li><p>고객 행위에 대한 이해</p></li>
-<li><p>Cross-Selling과 Up-selling 기회 증대 및 활용</p></li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td>고객 채널 관리</td>
-<td><ul>
-<li><p>고객 Needs에 맞춘 최적 채널 제공</p></li>
-<li><p>비용을 최소화할 수 있는 고객 유도</p></li>
-</ul></td>
-</tr>
-</tbody>
-</table>
 
 
 </section>
