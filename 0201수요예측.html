@@ -487,7 +487,7 @@ window.Quarto = {
   <ul>
   <li><a href="#시계열-분석" id="toc-시계열-분석" class="nav-link" data-scroll-target="#시계열-분석">시계열 분석</a></li>
   </ul></li>
-  <li><a href="#예측-오차" id="toc-예측-오차" class="nav-link" data-scroll-target="#예측-오차">예측 오차</a>
+  <li><a href="#예측오차" id="toc-예측오차" class="nav-link" data-scroll-target="#예측오차">예측오차</a>
   <ul>
   <li><a href="#sec-forecast-error-index" id="toc-sec-forecast-error-index" class="nav-link" data-scroll-target="#sec-forecast-error-index">예측오차 지표</a></li>
   <li><a href="#추적지표" id="toc-추적지표" class="nav-link" data-scroll-target="#추적지표">추적지표</a></li>
@@ -670,51 +670,69 @@ style 예측기법 fill:#d0e8f1
 </div>
 <section id="수요변동-형태" class="level5">
 <h5 class="anchored" data-anchor-id="수요변동-형태">수요변동 형태</h5>
-<p>시계열 수요자료에서 관찰할 수 있는 수요 변동 형태는 과거 데이터를 분석해 미래 수요를 예측하는 데 중요한 역할을 한다. 이러한 변동 형태는 주로 네 가지로 구분된다.</p>
-<dl>
-<dt>추세 (Trend)</dt>
-<dd>
-<ul>
-<li><strong>정의</strong>: 수요가 장기간에 걸쳐 일정한 방향으로 증가하거나 감소하는 패턴을 의미한다.<br>
-</li>
-<li><strong>특징</strong>: 시간이 지남에 따라 꾸준히 변화하며, 직선형 또는 곡선형으로 나타날 수 있다.<br>
-</li>
-<li><strong>예시</strong>: 기술 발전에 따라 스마트폰 판매량이 지속적으로 증가하는 경우.</li>
-</ul>
-</dd>
-<dt>계절성 (Seasonality)</dt>
-<dd>
-<ul>
-<li><strong>정의</strong>: 일정 주기로 반복되는 수요 변동 형태로, 주기적으로 수요가 높아지거나 낮아진다.<br>
-</li>
-<li><strong>특징</strong>: 연간, 분기별, 월별 등 특정 기간에 반복되는 패턴이 명확하게 나타난다.<br>
-</li>
-<li><strong>예시</strong>: 여름철 에어컨 판매 증가, 연말 쇼핑 시즌의 매출 급증.</li>
-</ul>
-</dd>
-<dt>주기적 변동 (Cyclic Variation)</dt>
-<dd>
-<ul>
-<li><strong>정의</strong>: 경제 환경이나 시장 변화에 따라 발생하는 장기적인 수요 변동을 의미한다.<br>
-</li>
-<li><strong>특징</strong>: 계절성과 달리 불규칙하고, 주기가 길며 경기 순환에 따라 발생하는 경우가 많다.<br>
-</li>
-<li><strong>예시</strong>: 경기 호황기와 불황기에 따른 자동차 판매량 변화.</li>
-</ul>
-</dd>
-<dt>불규칙 변동 (Irregular Variation)</dt>
-<dd>
-<ul>
-<li><strong>정의</strong>: 예측 불가능한 외부 요인(자연재해, 전쟁, 팬데믹 등)으로 인해 발생하는 비정상적인 수요 변동이다.<br>
-</li>
-<li><strong>특징</strong>: 갑작스럽고 예측이 어렵기 때문에 일반적인 패턴으로 설명되지 않는다.<br>
-</li>
-<li><strong>예시</strong>: 코로나19 팬데믹으로 인한 마스크 및 의료용품 수요 급증.</li>
-</ul>
-</dd>
-</dl>
+<p>시계열 수요 자료에서 관찰할 수 있는 수요 변동 형태는 과거 데이터를 분석해 미래 수요를 예측하는 데 중요한 역할을 한다. 이러한 변동 형태는 주로 네 가지로 구분된다.</p>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/time_series.png" height="400" class="figure-img"></p>
+<figcaption>Monthly Airline Passenger Numbers 1949-1960</figcaption>
+</figure>
+</div>
+</center>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/time_series_decomposed.png" height="400" class="figure-img"></p>
+<figcaption>시계열 분석 결과</figcaption>
+</figure>
+</div>
+</center>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 9%">
+<col style="width: 32%">
+<col style="width: 34%">
+<col style="width: 23%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>구분</strong></th>
+<th><strong>정의</strong></th>
+<th><strong>특징</strong></th>
+<th><strong>예시</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>추세 (Trend)</strong></td>
+<td>수요가 장기간에 걸쳐 일정한 방향으로 증가하거나 감소하는 패턴을 의미.</td>
+<td>시간이 지남에 따라 꾸준히 변화하며, 직선형 또는 곡선형으로 나타날 수 있음.</td>
+<td>기술 발전에 따라 스마트폰 판매량이 지속적으로 증가하는 경우.</td>
+</tr>
+<tr class="even">
+<td><strong>계절성 (Seasonality)</strong></td>
+<td>일정 주기로 반복되는 수요 변동 형태로, 주기적으로 수요가 높아지거나 낮아짐.</td>
+<td>연간, 분기별, 월별 등 특정 기간에 반복되는 패턴이 명확하게 나타남.</td>
+<td>여름철 에어컨 판매 증가, 연말 쇼핑 시즌의 매출 급증.</td>
+</tr>
+<tr class="odd">
+<td><strong>주기적 변동 (Cyclic Variation)</strong></td>
+<td>경제 환경이나 시장 변화에 따라 발생하는 장기적인 수요 변동을 의미.</td>
+<td>계절성과 달리 불규칙하고, 주기가 길며 경기 순환에 따라 발생하는 경우가 많음.</td>
+<td>경기 호황기와 불황기에 따른 자동차 판매량 변화.</td>
+</tr>
+<tr class="even">
+<td><strong>불규칙 변동 (Irregular Variation)</strong></td>
+<td>예측 불가능한 외부 요인으로 발생하는 비정상적인 수요 변동.</td>
+<td>갑작스럽고 예측이 어렵기 때문에 일반적인 패턴으로 설명되지 않음.</td>
+<td>코로나19 팬데믹으로 인한 마스크 및 의료용품 수요 급증.</td>
+</tr>
+</tbody>
+</table>
 <p>이러한 변동 형태를 파악하면 기업은 수요 예측을 보다 정확하게 수행하고, 재고 관리 및 생산 계획을 효율적으로 수립할 수 있다. 특히, 계절성과 추세는 예측 모델에서 중요한 요소로 반영된다.</p>
-<p><br></p>
+</section>
+<section id="수요-변동-공급-관리" class="level5">
+<h5 class="anchored" data-anchor-id="수요-변동-공급-관리">수요 변동 공급 관리</h5>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 106-3-6">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -728,57 +746,60 @@ style 예측기법 fill:#d0e8f1
 
 </div>
 </div>
-</section>
-<section id="수요-변동-공급-관리" class="level5">
-<h5 class="anchored" data-anchor-id="수요-변동-공급-관리">수요 변동 공급 관리</h5>
-<p>수요변동 요인 중 하나인 계절적 요인은 일정한 패턴을 갖고 변동한다. 예를 들면 냉난방 제품이나 계절식품 등이 있다. 계절적 요인은 1년 또는 1년 미만 주기로반복되는 변동으로 기후, 전통, 생활관습 등 여러 원인에 의해 발생한다. 계절 변동은 순환변동에 비해 규칙적이므로 예측하기가 상대적으로 용이하다. 이런 수요변동이 발생하게 되면 생산능력을 일정하게 유지할 수 없기 때문에 공급에 대한 문제가 발생할 수 있다. 물론 수요변동 폭이 작다면 잔업 및 특근이나 일용직 고용 등으로 대응할 수 있으나 품질이나 비용 상승 등과 같은 문제가 발생할 수 있다. 비수기 생산 능력을 활용하기 위한 대안품을 개발한다거나 일정한 생산량을 프로모션이나 가격 할인 등을 통해 비수기에 판촉활동을 하는 등 다양한 방안을 고려해 볼 수 있다.</p>
+<p>수요변동 요인 중 하나인 계절적 요인은 일정한 패턴을 갖고 변동한다. 예를 들면 냉난방 제품이나 계절식품 등이 있다. 계절적 요인은 1년 또는 1년 미만 주기로반복되는 변동으로 기후, 전통, 생활관습 등 여러 원인에 의해 발생한다.</p>
+<p>계절 변동은 순환변동에 비해 규칙적이므로 예측하기가 상대적으로 용이하다. 이런 수요변동이 발생하게 되면 생산능력을 일정하게 유지할 수 없기 때문에 공급에 대한 문제가 발생할 수 있다.</p>
+<p>물론 수요변동 폭이 작다면 잔업 및 특근이나 일용직 고용 등으로 대응할 수 있으나 품질이나 비용 상승 등과 같은 문제가 발생할 수 있다.</p>
+<p>비수기 생산 능력을 활용하기 위한 대안품을 개발한다거나 일정한 생산량을 프로모션이나 가격 할인 등을 통해 비수기에 판촉활동을 하는 등 다양한 방안을 고려해 볼 수 있다.</p>
 </section>
 <section id="이동평균법" class="level5">
 <h5 class="anchored" data-anchor-id="이동평균법">이동평균법</h5>
 <dl>
-<dt><strong>이동평균법</strong>(Moving average method)</dt>
+<dt>이동평균법(Moving average method)</dt>
 <dd>
 <blockquote class="blockquote">
 <p>전기수요법을 좀 더 발전시킨 것으로 과거 일정 기간 실적을 평균해서 예측하는 방법이다.</p>
 </blockquote>
 </dd>
-<dt>단순이동평균법</dt>
+<dt>단순이동평균법(Simple moving average method)</dt>
 <dd>
 <ul>
 <li>과거 여러 기간 실적치에 동일한 가중치를 부여하는 방법</li>
-<li>공식 <span class="math display">\[
-F_t = \frac{\sum{A_{t-i}}}{n}
-\]</span>
-<ul>
-<li>단, <span class="math inline">\(F_t = t\)</span>기간 예측치, <span class="math inline">\(A_{i-i} = (t-i)\)</span> 기간 실적치, n = 기간 수</li>
-</ul></li>
+<li>공식 <span id="eq-moving-average"><span class="math display">\[
+F_t = \frac{\sum_{i=1}^{n}{A_{t-i}}}{n}
+\tag{6.1}\]</span></span> <span class="math display">\[{단, \ F_t = t기간 예측치, \quad A_{i-i} = (t-i) 기간 실적치, \quad n = 기간 수}\]</span></li>
 </ul>
 </dd>
-<dt>가중이동평균법</dt>
+<dt>가중이동평균법(Weighted moving average method)</dt>
 <dd>
 <ul>
 <li>단순이동평균법에서 추세경향을 고려한 수요 예측기법</li>
-<li>공식 <span class="math display">\[
-\sum{w_i}=1일 \ 때, F_{t+1} = w_tA_t + w_{t-1}A_{t-1} + ... + w_{t-N}A_{t-N}
-\]</span></li>
+<li>공식 <span id="eq-weighted-moving-average"><span class="math display">\[
+F_{t+1} = w_tA_t + w_{t-1}A_{t-1} + ... + w_{t-N}A_{t-N}
+\tag{6.2}\]</span></span> <span class="math display">\[단, \ \sum_{i=1}^{n}{w_i} = 1\]</span></li>
 </ul>
 </dd>
 </dl>
 </section>
 <section id="지수평활법" class="level5">
 <h5 class="anchored" data-anchor-id="지수평활법">지수평활법</h5>
-<p>최소자승법이나 이동평균법에는 장기간 과거실적을 필요로 하지만 지수평활법은 최근 데이터만으로 예측이 가능한 장점이 있다.</p>
-<p>현 시점에 가까운 실측치에 큰 비중을 주면서 과거로 거슬러 올라갈수록 그 비중을 지수적으로 적게 주는 지수가중 이동평균법이다.</p>
-<p>차기 예측치 = 당기 예측치 + <span class="math inline">\(\alpha\)</span>(당기실적치 - 당기예측치)로 계산되면 공식은 아래와 같다.</p>
-<p><span class="math display">\[
+<dl>
+<dt>지수평활법(Exponential smoothing)</dt>
+<dd>
+<blockquote class="blockquote">
+<p>최소자승법이나 이동평균법에는 장기간 과거실적을 필요로 하지만 지수평활법(Exponential smoothing)은 최근 데이터만으로 예측이 가능한 장점이 있다. 현 시점에 가까운 실측치에 큰 비중을 주면서 과거로 거슬러 올라갈수록 그 비중을 지수적으로 적게 주는 지수가중 이동평균법이다.</p>
+</blockquote>
+</dd>
+</dl>
+<p>차기 예측치 = 당기 예측치 + <span class="math inline">\(\alpha\)</span>(당기실적치 - 당기예측치)로 계산되au 공식은 아래와 같다.</p>
+<p><span id="eq-exponential-smoothing"><span class="math display">\[
 F_t = F_{t-1} + \alpha (A_{t-1} - F_{t-1}) = \alpha A_{t-1} + (1-\alpha)F_{t-1}
-\]</span> 단, <span class="math inline">\(\alpha\)</span>는 지수평활계수로 <span class="math inline">\(0 &lt; \alpha &lt; 1\)</span> 범위를 갖는다.</p>
+\tag{6.3}\]</span></span> <span class="math display">\[단, \ \alpha는 \ 지수평활계수로 \ 0 &lt; \alpha &lt; 1\]</span></p>
 </section>
 </section>
 </section>
-<section id="예측-오차" class="level2">
-<h2 class="anchored" data-anchor-id="예측-오차">예측 오차</h2>
-<p>예측오차가 발생하는 원인은 다음과 같다.</p>
+<section id="예측오차" class="level2">
+<h2 class="anchored" data-anchor-id="예측오차">예측오차</h2>
+<p>예측오차(Forecast error)가 발생하는 원인은 다음과 같다.</p>
 <ul>
 <li>예측모형에 사용한 변수 처리를 적절하게 하지 못한 경우
 <ul>
@@ -792,46 +813,16 @@ F_t = F_{t-1} + \alpha (A_{t-1} - F_{t-1}) = \alpha A_{t-1} + (1-\alpha)F_{t-1}
 </ul>
 <section id="sec-forecast-error-index" class="level4">
 <h4 class="anchored" data-anchor-id="sec-forecast-error-index">예측오차 지표</h4>
-<dl>
-<dt>예측오차</dt>
-<dd>
-<ul>
-<li><span class="math inline">\(E_t = A_t - F_t\)</span></li>
-</ul>
-</dd>
-<dt>누적예측오차(RSFE, running sum of forcasting errors / CFE, cumulative sum of forecast errors)</dt>
-<dd>
-<ul>
-<li><span class="math inline">\(RSFE(or \ CFE) = \sum{E_t}\)</span></li>
-</ul>
-</dd>
-<dt>평균절대오차(MAD, mean absolute deviation</dt>
-<dd>
-<ul>
-<li><span class="math inline">\(MAE = \frac{\sum{|E_t|}}{n}\)</span></li>
-</ul>
-</dd>
-<dt>평균제곱오차(MSE, mean squared error)</dt>
-<dd>
-<ul>
-<li><span class="math inline">\(MSE = \frac{\sum{|(E_t)^2|}}{n-1}\)</span></li>
-</ul>
-</dd>
-<dt>평균절대백분율오차(MAPE, mean absolute percentage error)</dt>
-<dd>
-<ul>
-<li>MAPE = <span class="math inline">\(\frac{\sum{\frac{|E_t|}{A_t}}}{n} \times 100\)</span></li>
-</ul>
-</dd>
-<dt>추적지표(TS, tracking signal)</dt>
-<dd>
-<span class="math inline">\(TS = \frac{RSFE}{MAD}\)</span>
-</dd>
-</dl>
+<p><strong>예측오차</strong> <span class="math display">\[$E_t = A_t - F_t \ = \ \text{t시점 실적치} - \text{t시점 예측치}\]</span></p>
+<p><strong>누적예측오차</strong>(RSFE, running sum of forcasting errors / CFE, cumulative sum of forecast errors) <span class="math display">\[RSFE(or \ CFE) = \sum{E_t}\]</span></p>
+<p><strong>평균절대오차</strong>(MAD, mean absolute deviation <span class="math display">\[MAE = \frac{\sum{|E_t|}}{n}\]</span></p>
+<p><strong>평균제곱오차</strong>(MSE, mean squared error) <span class="math display">\[MSE = \frac{\sum{|(E_t)^2|}}{n-1}\]</span></p>
+<p><strong>평균절대백분율오차</strong>(MAPE, mean absolute percentage error) <span class="math display">\[ MAPE = \frac{\sum{\frac{|E_t|}{A_t}}}{n} \times 100\]</span></p>
+<p><strong>추적지표</strong>(TS, tracking signal) <span class="math display">\[TS = \frac{RSFE}{MAD}\]</span></p>
 </section>
 <section id="추적지표" class="level4">
 <h4 class="anchored" data-anchor-id="추적지표">추적지표</h4>
-<p><strong>추적지표</strong>(TS)는 <font color="blue">예측기법이 실제수요변화를 정확히 예측하고 있는지</font>를 나타내는 지표이다. 예측치가 실측치를 잘 따라가고 있으면 TS는 0에 가까운 값을 갖는다. 예측치가 실제치보다 낮은 경우 TS는 양수값을 갖게 되고 이는 과소예측을 의미한다. 반면 예측치가 실측치보다 높은 경우 TS는 음수값을 가지며 과다예측을 의미한다.</p>
+<p><strong>추적지표</strong>(TS)는 <strong>예측기법이 실제수요변화를 정확히 예측하고 있는지</strong>를 나타내는 지표이다. <strong>예측치가 실측치를 잘 따라가고 있으면 TS는 0에 가까운 값을 갖는다</strong>. 예측치가 실제치보다 낮은 경우 TS는 양수값을 갖게 되고 이는 과소예측을 의미한다. 반면 예측치가 실측치보다 높은 경우 TS는 음수값을 가지며 과다예측을 의미한다.</p>
 <div class="callout callout-style-default callout-important no-icon callout-titled" title="추적지표">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -909,6 +900,7 @@ F_t = F_{t-1} + \alpha (A_{t-1} - F_{t-1}) = \alpha A_{t-1} + (1-\alpha)F_{t-1}
 </table>
 </div>
 </div>
+<hr>
 <p>산식에 따라 계산하면 다음과 같다.</p>
 <div class="cell">
 <div class="cell-output-display">
@@ -1041,6 +1033,7 @@ F_t = F_{t-1} + \alpha (A_{t-1} - F_{t-1}) = \alpha A_{t-1} + (1-\alpha)F_{t-1}
 </table>
 </div>
 </div>
+<hr>
 <p>주어진 식에서 추적지표(TS) 계산을 위하여 아래 지표를 산출한다.</p>
 <div class="cell" data-tbl-colwidths="[20,10,10,10,10,10,10,10,10]">
 <div class="cell-output-display">
@@ -1147,7 +1140,10 @@ F_t = F_{t-1} + \alpha (A_{t-1} - F_{t-1}) = \alpha A_{t-1} + (1-\alpha)F_{t-1}
 <p>TS가 ±4MAD 내 관리되므로 예측모델이 유효하다고 판단할 수 있다.</p>
 </div>
 </div>
-<p><br></p>
+</section>
+</section>
+<section id="수요-불확실성-감소-방안" class="level2">
+<h2 class="anchored" data-anchor-id="수요-불확실성-감소-방안">수요 불확실성 감소 방안</h2>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 106-2-3">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1161,10 +1157,6 @@ F_t = F_{t-1} + \alpha (A_{t-1} - F_{t-1}) = \alpha A_{t-1} + (1-\alpha)F_{t-1}
 
 </div>
 </div>
-</section>
-</section>
-<section id="수요-불확실성-감소-방안" class="level2">
-<h2 class="anchored" data-anchor-id="수요-불확실성-감소-방안">수요 불확실성 감소 방안</h2>
 <section id="수요예측-개선" class="level3">
 <h3 class="anchored" data-anchor-id="수요예측-개선">수요예측 개선</h3>
 <p>예측에는 언제나 정도 차이가 있을 뿐 오차가 존재한다. 예측 정확성과 효율성을 유지하기 위해서는 오차를 효과적으로 통제할 수 있어야 한다.</p>
@@ -1203,7 +1195,9 @@ F_t = F_{t-1} + \alpha (A_{t-1} - F_{t-1}) = \alpha A_{t-1} + (1-\alpha)F_{t-1}
 </ul>
 </dd>
 </dl>
-<p><br></p>
+</section>
+<section id="sec-delayed-differentiation" class="level3">
+<h3 class="anchored" data-anchor-id="sec-delayed-differentiation">차별화 지연</h3>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 115-1-8">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1217,9 +1211,6 @@ F_t = F_{t-1} + \alpha (A_{t-1} - F_{t-1}) = \alpha A_{t-1} + (1-\alpha)F_{t-1}
 
 </div>
 </div>
-</section>
-<section id="sec-delayed-differentiation" class="level3">
-<h3 class="anchored" data-anchor-id="sec-delayed-differentiation">차별화 지연</h3>
 <p><strong>차별화 지연(Delayed Differentiation)</strong>은 제품이나 서비스에 있어 기본적인 형태를 먼저 생산한 후, 고객 요구에 맞게 최종 제품이나 서비스를 맞춤화하는 전략이다. 이는 생산 효율성을 높이고, 고객 수요에 맞는 개인화된 서비스를 제공하기 위해 사용된다. 차별화 지연은 <strong>모듀러 디자인(Modular Design)</strong> 또는 <strong>지연된 맞춤화</strong>라고도 불리며, 특정 시점까지는 표준화된 생산을 유지하고, 그 후에 고객 요구에 맞춰 차별화된 제품이나 서비스를 제공하는 방식을 의미한다.</p>
 <dl>
 <dt>차별화 지연의 주요 특징</dt>
