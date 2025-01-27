@@ -6,7 +6,7 @@ book:
   title: "공장관리기술사(2E)"
   author: "YK"
   date: last-modified
-  repo-url: https://github.com/yeonkyupark/PEPC 
+  repo-url: https://github.com/yeonkyupark/pepc2e 
   repo-branch: main
   repo-actions: [edit]
   favicon: logo.png
