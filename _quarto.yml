@@ -9,6 +9,7 @@ book:
   repo-url: https://github.com/yeonkyupark/PEPC 
   repo-branch: main
   repo-actions: [edit]
+  favicon: logo.png
   sidebar: 
     collapse-level: 1
     tools:
