@@ -95,7 +95,7 @@ format:
     grid:
       body-width: 900px
     theme: 
-      - cosmo
+      - lumen
       - custom.scss
     mermaid:
       theme: neutral
