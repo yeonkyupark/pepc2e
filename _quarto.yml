@@ -11,17 +11,15 @@ book:
   repo-actions: [edit]
   favicon: logo.png
   page-footer: 
-    left: "Copyright 2025 YK" 
-    right: 
-      - icon: globe
-        href: https://yeonkyupark.github.io/
+    left: "Copyright(c) 2025 YK" 
+    right: "Professional Engineer Plant Control"
   sidebar: 
-    collapse-level: 1
     tools:
-      - icon: globe
-        href: https://yeonkyupark.github.io/
       - icon: instagram
         href: https://www.instagram.com/yeonkyu.park/
+      - icon: globe
+        href: https://yeonkyupark.github.io/
+    collapse-level: 1
   chapters:
     - index.qmd
     - part: "01. 생산전략"
