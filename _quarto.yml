@@ -10,6 +10,11 @@ book:
   repo-branch: main
   repo-actions: [edit]
   favicon: logo.png
+  page-footer: 
+  left: "Copyright 2025 YK" 
+  right: 
+      - icon: globe
+        href: https://yeonkyupark.github.io/
   sidebar: 
     collapse-level: 1
     tools:
