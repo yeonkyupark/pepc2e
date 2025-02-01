@@ -503,7 +503,7 @@ window.Quarto = {
   <li><a href="#sec-production" id="toc-sec-production" class="nav-link" data-scroll-target="#sec-production">생산</a></li>
   <li><a href="#sec-system" id="toc-sec-system" class="nav-link" data-scroll-target="#sec-system">시스템</a>
   <ul class="collapse">
-  <li><a href="#시스템" id="toc-시스템" class="nav-link" data-scroll-target="#시스템">시스템</a></li>
+  <li><a href="#시스템-정의" id="toc-시스템-정의" class="nav-link" data-scroll-target="#시스템-정의">시스템 정의</a></li>
   <li><a href="#sec-system-thinking" id="toc-sec-system-thinking" class="nav-link" data-scroll-target="#sec-system-thinking">시스템 사고</a></li>
   <li><a href="#sec-system-approach" id="toc-sec-system-approach" class="nav-link" data-scroll-target="#sec-system-approach">시스템적 접근</a></li>
   </ul></li>
@@ -516,7 +516,7 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#sec-tayor" id="toc-sec-tayor" class="nav-link" data-scroll-target="#sec-tayor">테일러 시스템</a></li>
   <li><a href="#sec-ford" id="toc-sec-ford" class="nav-link" data-scroll-target="#sec-ford">포드 시스템</a></li>
-  <li><a href="#sec-toyota" id="toc-sec-toyota" class="nav-link" data-scroll-target="#sec-toyota">도요타 시스템</a></li>
+  <li><a href="#sec-tps" id="toc-sec-tps" class="nav-link" data-scroll-target="#sec-tps">도요타 시스템</a></li>
   </ul></li>
   </ul></li>
   <li><a href="#sec-factory-location" id="toc-sec-factory-location" class="nav-link" data-scroll-target="#sec-factory-location">공장입지</a>
@@ -1269,7 +1269,7 @@ window.Quarto = {
 <div class="callout-body-container callout-body">
 <p><strong>피치타임(Pitch Time)</strong>은 일정한 시간 간격으로 생산되는 제품의 수량을 의미한다. 이는 공정이 일정한 리듬으로 운영되도록 하며, 생산 흐름의 안정성을 유지하는 데 기여한다.</p>
 <p>피치타임 계산식은 다음과 같다.</p>
-<p><span id="eq-pitch-time"><span class="math display">\[피치타임 = \frac{Takt Time \times Pitch Quantity}{1} \tag{1.1}\]</span></span></p>
+<p><span id="eq-pitch-time"><span class="math display">\[피치타임 = \frac{Takt Time \times Pitch Quantity}{1} = \frac{\text{실가동 시간 x 가동률}}{\text{생산수량/수율}} \tag{1.1}\]</span></span></p>
 <ul>
 <li><strong>Takt Time</strong>: 고객의 수요에 맞춰 생산해야 하는 간격</li>
 <li><strong>Pitch Quantity</strong>: 한 번의 피치 동안 생산되는 제품의 수량</li>
@@ -1347,34 +1347,26 @@ window.Quarto = {
 </section>
 <section id="sec-system" class="level3">
 <h3 class="anchored" data-anchor-id="sec-system">시스템</h3>
-<section id="시스템" class="level4">
-<h4 class="anchored" data-anchor-id="시스템">시스템</h4>
+<section id="시스템-정의" class="level4">
+<h4 class="anchored" data-anchor-id="시스템-정의">시스템 정의</h4>
 <p><strong>시스템</strong>(system)은 각 구성요소들이 상호작용하거나 상호 의존하여 복잡하게 얽힌 통일된 하나의 집합체(unified whole)이다. 또는 이 용어는 복잡한 사회적 체계의 맥락에서 구조와 행동을 통제하는 규칙드의 집합체를 일컫기도 한다. <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
 <p>어떤 환경에서 주어진 목적을 달성하려는 서로 관련성을 가진 식별 가능한 여러 요소 집합으로 다음과 같은 특성을가진다.</p>
 <dl>
 <dt>집합성</dt>
 <dd>
-<blockquote class="blockquote">
 <p>두 개 이상의 식별 가능한 단위체로 구성된다.</p>
-</blockquote>
 </dd>
 <dt>상호관련성</dt>
 <dd>
-<blockquote class="blockquote">
 <p>단위체 간 서로 연관성이 있거나 상호관계, 상호작용을 한다.</p>
-</blockquote>
 </dd>
 <dt>목적추구성</dt>
 <dd>
-<blockquote class="blockquote">
 <p>목적을 추고하고 그것을 달성하기 위해 동작한다.</p>
-</blockquote>
 </dd>
 <dt>환경적응성</dt>
 <dd>
-<blockquote class="blockquote">
 <p>실시간으로 변화하는 환경에 적응해야 한다.</p>
-</blockquote>
 </dd>
 </dl>
 <p>시스템 유형은 다음 같다.</p>
@@ -1441,21 +1433,15 @@ window.Quarto = {
 <dl>
 <dt>System Philosophy - 철학적, 관념적, 이론적</dt>
 <dd>
-<blockquote class="blockquote">
 <p>어떤 현상/사물을 하나의 단일체로 인식하고 전반적 사항을 파악</p>
-</blockquote>
 </dd>
 <dt>System Analysis - 문제 해결 능력</dt>
 <dd>
-<blockquote class="blockquote">
 <p>체계적, 과학적인 문제해결 기법으로 목표달성과 자원의 효율적 활용을 추구</p>
-</blockquote>
 </dd>
 <dt>System Management - 실용적</dt>
 <dd>
-<blockquote class="blockquote">
 <p>능률적, 효율적인 시스템 설계와 운영(구성요소 기능의 유기적 조정과 통합)</p>
-</blockquote>
 </dd>
 </dl>
 <p>시스템적 접근 효과는 다음과 같다.</p>
@@ -1494,33 +1480,23 @@ window.Quarto = {
 <dl>
 <dt>투입 (Input)</dt>
 <dd>
-<ul>
-<li>생산 과정에서 사용되는 <strong>자원</strong>들을 말한다. 여기에는 원자재, 노동력, 자본, 에너지, 정보 등 모든 물리적, 인적 자원이 포함된다. 투입은 생산 과정의 시작을 의미하며, 이 자원들이 변환 과정을 거쳐 최종 제품이나 서비스로 바뀐다.</li>
-</ul>
+<p>생산 과정에서 사용되는 <strong>자원</strong>들을 말한다. 여기에는 원자재, 노동력, 자본, 에너지, 정보 등 모든 물리적, 인적 자원이 포함된다. 투입은 생산 과정의 시작을 의미하며, 이 자원들이 변환 과정을 거쳐 최종 제품이나 서비스로 바뀐다.</p>
 </dd>
 <dt>변환 (Process)</dt>
 <dd>
-<ul>
-<li>투입된 자원을 실제로 제품이나 서비스로 <strong>변환</strong>하는 과정이다. 이 과정은 물리적, 화학적, 기계적, 기술적 방법 등을 사용하여 원자재를 최종 제품으로 바꾸는 작업을 포함한다. 변환 과정은 품질 관리, 생산 계획, 작업 절차 등을 포함하며, 시스템의 효율성과 직결된다.</li>
-</ul>
+<p>투입된 자원을 실제로 제품이나 서비스로 <strong>변환</strong>하는 과정이다. 이 과정은 물리적, 화학적, 기계적, 기술적 방법 등을 사용하여 원자재를 최종 제품으로 바꾸는 작업을 포함한다. 변환 과정은 품질 관리, 생산 계획, 작업 절차 등을 포함하며, 시스템의 효율성과 직결된다.</p>
 </dd>
 <dt>산출 (Output)</dt>
 <dd>
-<ul>
-<li>변환 과정을 거쳐 생산된 최종 <strong>결과물</strong>이다. 이 결과물은 고객의 요구를 만족시키는 제품이나 서비스가 되어야 한다. 산출은 품질, 양, 시기 등을 고려하여 생산되어야 하며, 이는 결국 시장에 공급되는 형태로 나타난다.</li>
-</ul>
+<p>변환 과정을 거쳐 생산된 최종 <strong>결과물</strong>이다. 이 결과물은 고객의 요구를 만족시키는 제품이나 서비스가 되어야 한다. 산출은 품질, 양, 시기 등을 고려하여 생산되어야 하며, 이는 결국 시장에 공급되는 형태로 나타난다.</p>
 </dd>
 <dt>피드백 (Feedback)</dt>
 <dd>
-<ul>
-<li>생산시스템에서 발생한 결과를 바탕으로 향후 생산 활동을 개선하는 데 필요한 <strong>정보</strong>를 제공한다. 피드백은 시스템의 성과를 평가하고, 문제를 식별하며, 개선점을 찾아내는 중요한 역할을 한다. 예를 들어, 제품의 품질 문제가 발생했을 때, 이를 해결하기 위한 조치나 프로세스 개선이 필요할 수 있다.</li>
-</ul>
+<p>생산시스템에서 발생한 결과를 바탕으로 향후 생산 활동을 개선하는 데 필요한 <strong>정보</strong>를 제공한다. 피드백은 시스템의 성과를 평가하고, 문제를 식별하며, 개선점을 찾아내는 중요한 역할을 한다. 예를 들어, 제품의 품질 문제가 발생했을 때, 이를 해결하기 위한 조치나 프로세스 개선이 필요할 수 있다.</p>
 </dd>
 <dt>환경 (Environment)</dt>
 <dd>
-<ul>
-<li>시스템이 작동하는 <strong>외부 및 내부 환경</strong>을 의미한다. 환경은 시장 상황, 경쟁, 경제적 조건, 규제 및 법률, 기술 변화 등 외부 요인과, 조직의 문화, 기술 수준, 내부 자원의 상태 등 내부 요인까지 포함한다. 환경은 시스템의 운영과 결과에 영향을 미치며, 이를 적절히 반영해야 시스템이 지속 가능하고 경쟁력을 유지할 수 있다.</li>
-</ul>
+<p>시스템이 작동하는 <strong>외부 및 내부 환경</strong>을 의미한다. 환경은 시장 상황, 경쟁, 경제적 조건, 규제 및 법률, 기술 변화 등 외부 요인과, 조직의 문화, 기술 수준, 내부 자원의 상태 등 내부 요인까지 포함한다. 환경은 시스템의 운영과 결과에 영향을 미치며, 이를 적절히 반영해야 시스템이 지속 가능하고 경쟁력을 유지할 수 있다.</p>
 </dd>
 </dl>
 <section id="의사결정-사항" class="level4">
@@ -1637,45 +1613,31 @@ window.Quarto = {
 <dl>
 <dt>단속생산</dt>
 <dd>
-<ul>
-<li>생산 흐름이 불규칙한 형태로 주로 <strong>주문 생산</strong>에서 이루어진다.</li>
-</ul>
+<p>생산 흐름이 불규칙한 형태로 주로 <strong>주문 생산</strong>에서 이루어진다.</p>
 </dd>
 <dt>연속생산</dt>
 <dd>
-<ul>
-<li><strong>정유나 화학제품</strong>과 같이 정해진 품목을 고정된 플랜트 시설을 통해 연속적으로 대량 생산하는 방식이다.</li>
-</ul>
+<p><strong>정유나 화학제품</strong>과 같이 정해진 품목을 고정된 플랜트 시설을 통해 연속적으로 대량 생산하는 방식이다.</p>
 </dd>
 <dt>프로젝트(Project) 생산</dt>
 <dd>
-<ul>
-<li>1회성 생산으로 <strong>건물이나 교량, 선박</strong> 등 위치가 고정되어 장소에 제한을 받는 형태이다. 제품은 고정되어 있고 자재 및 공정이 시기별로 변경되면서 생산이 진행된다. 진도 관리를 위해 <a href="0202프로세스진도관리.html#sec-pert" class="quarto-xref"><span>PERT</span></a> / <a href="0202프로세스진도관리.html#sec-cpm" class="quarto-xref"><span>CPM</span></a> 등이 사용된다.</li>
-</ul>
+<p>1회성 생산으로 <strong>건물이나 교량, 선박</strong> 등 위치가 고정되어 장소에 제한을 받는 형태이다. 제품은 고정되어 있고 자재 및 공정이 시기별로 변경되면서 생산이 진행된다. 진도 관리를 위해 <a href="0202프로세스진도관리.html#sec-pert" class="quarto-xref"><span>PERT</span></a> / <a href="0202프로세스진도관리.html#sec-cpm" class="quarto-xref"><span>CPM</span></a> 등이 사용된다.</p>
 </dd>
 <dt>잡샵(Job Shop) 생산</dt>
 <dd>
-<ul>
-<li><strong>가구나 기계 장비</strong> 등 주문자 요구에 따라 생산하는 방식으로 소량생산하는 방식이다. 여러 종류 부품 가공이 이루어지므로 범용성이 있는 장비가 사용된다. 일정 관리를 위해 <a href="0501생산계획수립.html#sec-mrp" class="quarto-xref"><span>MRP(자재소요계획)</span></a> / <a href="0501생산계획수립.html#sec-crp" class="quarto-xref"><span>CRP</span></a> 등이 사용된다.</li>
-</ul>
+<p><strong>가구나 기계 장비</strong> 등 주문자 요구에 따라 생산하는 방식으로 소량생산하는 방식이다. 여러 종류 부품 가공이 이루어지므로 범용성이 있는 장비가 사용된다. 일정 관리를 위해 <a href="0501생산계획수립.html#sec-mrp" class="quarto-xref"><span>MRP(자재소요계획)</span></a> / <a href="0501생산계획수립.html#sec-crp" class="quarto-xref"><span>CRP</span></a> 등이 사용된다.</p>
 </dd>
 <dt>배치(Batch) 생산</dt>
 <dd>
-<ul>
-<li>다품종 소량생산인 잡샵 생산과 소품종 대량생산인 연속공정 중간 형태로 몇몇 표준화된 품목을 묶어 로트 단위로 단속적으로 생산하는 방식이다. <strong>제빵, 제화, 도자기</strong> 등의 제품 생산에 적합하다.</li>
-</ul>
+<p>다품종 소량생산인 잡샵 생산과 소품종 대량생산인 연속공정 중간 형태로 몇몇 표준화된 품목을 묶어 로트 단위로 단속적으로 생산하는 방식이다. <strong>제빵, 제화, 도자기</strong> 등의 제품 생산에 적합하다.</p>
 </dd>
 <dt>대량(Mass) 생산</dt>
 <dd>
-<ul>
-<li>라인생산이라고도 하며 소품종 대량생산을 위한 형태이다. 표준화된 자재와 부품이 고정된 작업순서에 따라 하나의 생산라인을 따라 이동하며 공정 처음부터 끝까지 중단없이 대량으로 제품을 효율적으로 생산한다. <strong>전자제품, 자동차</strong> 등이 해당한다.</li>
-</ul>
+<p>라인생산이라고도 하며 소품종 대량생산을 위한 형태이다. 표준화된 자재와 부품이 고정된 작업순서에 따라 하나의 생산라인을 따라 이동하며 공정 처음부터 끝까지 중단없이 대량으로 제품을 효율적으로 생산한다. <strong>전자제품, 자동차</strong> 등이 해당한다.</p>
 </dd>
 <dt>흐름(Process) 생산</dt>
 <dd>
-<ul>
-<li>표준화된 제품이 대량으로 고도로 자동화된 시설에서 연속적으로 제품을 생상하는 형태이다. 자본집약적 공정으로 가동률을 최대로, 재고수준을 최소로 유지하여 생산효율성 극대화를 목표로 한다. <strong>정류, 화학제품, 주료, 제철</strong> 등이 해당한다.</li>
-</ul>
+<p>표준화된 제품이 대량으로 고도로 자동화된 시설에서 연속적으로 제품을 생상하는 형태이다. 자본집약적 공정으로 가동률을 최대로, 재고수준을 최소로 유지하여 생산효율성 극대화를 목표로 한다. <strong>정류, 화학제품, 주료, 제철</strong> 등이 해당한다.</p>
 </dd>
 </dl>
 <p>생산시스템은 경쟁우위 요소와 생산목표에 따라 변천해 왔다.</p>
@@ -1723,7 +1685,7 @@ window.Quarto = {
 </ul>
 </div>
 </div>
-<p>19세기 말, 기업 규모 확대 및 노사 분규 중대에 따른 노동생상성 향상 문제가 나타났다. 노동 관리에 과학적 분석을 가하고 제도를 개선하여 대응하려 만든 관리법으로 작업 동작을 과학적으로 분석한 뒤 불필요한 동작을 최소화하고 표준 동작을 책정하고 조합하여 평균 작업시간을 산출했다. 그에 따른 목표를 세우고 과업 달성 여부에 따라 성과급 제도 등을 고안했다.</p>
+<p>19세기 말, 기업 규모 확대 및 노사 분규 중대에 따른 <strong>노동생상성 향상 문제</strong>가 나타났다. 노동 관리에 <strong>과학적 분석</strong>을 가하고 제도를 개선하여 대응하려 만든 관리법으로 <strong>작업 동작을 과학적으로 분석</strong>한 뒤 불필요한 동작을 최소화하고 표준 동작을 책정하고 조합하여 <strong>평균 작업시간을 산출</strong>했다. 그에 따른 목표를 세우고 과업 달성 여부에 따라 <strong>성과급 제도</strong> 등을 고안했다.</p>
 <p>테일러 시스템의 4가지 원리는 다음과 같다.</p>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="테일러 시스템 4가지 원리">
 <div class="callout-header d-flex align-content-center">
@@ -1783,27 +1745,19 @@ classDef transclass fill:#fcfcfc, stroke:#fcfcfc
 <dl>
 <dt>기획부 제도</dt>
 <dd>
-<blockquote class="blockquote">
 <p>각 기획부를 두어 작업자를 관리하여 작업자는 생산작업에 집중하도록 함</p>
-</blockquote>
 </dd>
 <dt>기능적 직장 제도</dt>
 <dd>
-<blockquote class="blockquote">
 <p>기능적 책임자가 작업자에게 분업적으로 지도하도록 함</p>
-</blockquote>
 </dd>
 <dt>작업지도표(카드) 제도</dt>
 <dd>
-<blockquote class="blockquote">
 <p>작업지시 시 주요 사항을 작업지도표(카드)에 기록하도록 함</p>
-</blockquote>
 </dd>
 <dt>차별적 성과급 제도</dt>
 <dd>
-<blockquote class="blockquote">
 <p>과업 성공 시 작업자에 대한 성과급 지급</p>
-</blockquote>
 </dd>
 </dl>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="차별적 성과급제">
@@ -1816,12 +1770,30 @@ classDef transclass fill:#fcfcfc, stroke:#fcfcfc
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>차별적 성과급 제도는 목표한 과업을 달성한 경우 작업자에게 성과급을 지급하고, 달성하지 못하는 경우 작업자에게 상대적으로 저임금을 지급했다. 현대에는 많이 상용화되어 있지만 당시에는 획기적인 방법이었다.</p>
+<p><strong>차별적 성과급 제도</strong>는 목표한 과업을 달성한 경우 작업자에게 성과급을 지급하고, 달성하지 못하는 경우 작업자에게 상대적으로 저임금을 지급했다. 현대에는 많이 상용화되어 있지만 당시에는 획기적인 방법이었다.</p>
 </div>
 </div>
 <section id="과학적-관리법" class="level5">
 <h5 class="anchored" data-anchor-id="과학적-관리법">과학적 관리법</h5>
-<p>프레더릭 윈슬로 테일러(Frederick Winslow Taylor)가 개발한 <strong>과학적 관리법(Scientific Management)</strong>은 <strong>산업 현장의 생산성과 효율성을 극대화하기 위한 관리 기법</strong>이다. 테일러는 <strong>작업 방식의 표준화</strong>와 <strong>작업자의 능률 향상</strong>을 통해 <strong>생산성 향상</strong>을 목표로 했다.</p>
+<p>프레더릭 윈슬로 테일러(Frederick Winslow Taylor)가 개발한 <strong>과학적 관리법(Scientific Management)</strong>은 <strong>산업 현장의 생산성과 효율성을 극대화하기 위한 관리 기법</strong>이다. 테일러는 <strong>작업 방식 표준화</strong>와 <strong>작업자 능률 향상</strong>을 통해 <strong>생산성 향상</strong>을 목표로 했다.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+
+10[작업방식 표준화]
+20[작업자 능률 향상]
+00[생산성 향상]
+
+10 &amp; 20 --- 00
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
 <p>핵심 개념은 다음과 같다.</p>
 <ol type="1">
 <li><strong>작업 분석 및 표준화</strong> - 작업을 세분화하고 <strong>시간 및 동작 연구(Time and Motion Study)</strong>를 통해 <strong>최적의 작업 방법</strong>을 찾는다.<br>
@@ -1890,7 +1862,7 @@ classDef transclass fill:#fcfcfc, stroke:#fcfcfc
 
 </div>
 </div>
-<p>포드(Ford) 시스템은 H.Ford가 포드 자동차 회사에서 대량생산방식으로 확립한 자동차 이동 조립법으로 컨베이어 시스템이라 한다. 생산산을 표준화하고 컨베이어와 작업자를 <strong>동시 관리</strong> 했다. <strong>고임금</strong>과 <strong>저가격</strong>으로 사회에 봉사한다는 것을 목표로 했다.</p>
+<p><strong>포드(Ford) 시스템</strong>은 H.Ford가 포드 자동차 회사에서 대량생산방식으로 확립한 자동차 이동 조립법으로 컨베이어 시스템이라 한다. 생산을 표준화하고 컨베이어와 작업자를 <strong>동시 관리</strong> 했다. <strong>고임금</strong>과 <strong>저가격</strong>으로 사회에 봉사한다는 것을 목표로 했다.</p>
 <p>디트로이트 공장에서 완성하였다고 하여 <strong>디트로이트 오토메이션</strong>(Detroit automation)이라 하며, 대량생산의 획기적인 계기가 되었다고 하여 <strong>대량생산 시스템</strong>이라고 한다.</p>
 <p>포드 시스템의 <strong>전제조건</strong>은 다음과 같다.</p>
 <ul>
@@ -1915,11 +1887,74 @@ classDef transclass fill:#fcfcfc, stroke:#fcfcfc
 </div>
 </div>
 <div class="callout-body-container callout-body">
+<p><strong>포드 시스템 생산 3S</strong>는 헨리 포드가 대량 생산 방식을 개발하면서 강조한 세 가지 핵심 요소를 의미한다. 이 개념은 <strong>효율적인 생산성 향상</strong>과 <strong>비용 절감</strong>을 목표로 하며, 포드의 자동차 생산 방식의 근간이 되었다.</p>
+<p>포드 시스템의 3S는 현대 생산 관리 기법의 기초를 형성한 개념으로, <strong>대량 생산의 효율성</strong>을 극대화하는 중요한 전략이다. 이 원칙들은 현재의 린 생산(Lean Production)이나 JIT(Just-in-Time) 시스템에도 깊은 영향을 미치고 있다.</p>
+<dl>
+<dt><font color="blue">Simple (단순화)</font></dt>
+<dd>
 <ul>
-<li>표준화 (standardization)</li>
-<li>전문화 (specialization)</li>
-<li>단순화 (simplification)</li>
+<li><strong>의미</strong>: 생산 공정, 설계, 작업 절차를 최대한 <strong>간소화</strong>하여 불필요한 복잡성을 제거하는 것</li>
+<li><strong>중요성</strong>: 복잡한 절차는 오류 가능성을 높이고 작업 시간을 증가시키므로, 단순화는 효율성을 극대화하는 핵심 전략</li>
+<li><strong>적용 사례</strong>:</li>
+<li>자동차 부품의 표준화 및 단순한 설계</li>
+<li>공정 단계 최소화로 작업 시간 단축</li>
 </ul>
+</dd>
+<dt><font color="blue">Standard (표준화)</font></dt>
+<dd>
+<ul>
+<li><strong>의미</strong>: 작업 방법, 공정, 부품 등을 <strong>표준화</strong>하여 누구나 같은 방식으로 일할 수 있도록 만드는 것</li>
+<li><strong>중요성</strong>: 일관된 품질 유지, 작업 효율성 향상, 교육 및 관리의 용이성 확보</li>
+<li><strong>적용 사례</strong>:</li>
+<li>부품 호환성 강화(모든 T형 포드 차량에 동일한 부품 사용)</li>
+<li>생산 라인에서 동일한 작업 절차를 따르는 표준 작업 지침 도입</li>
+</ul>
+</dd>
+<dt><font color="blue">Specialization (전문화)</font></dt>
+<dd>
+<ul>
+<li><strong>의미</strong>: 작업자에게 특정 작업을 <strong>전문화</strong>시켜 반복적으로 수행하게 하는 것</li>
+<li><strong>중요성</strong>: 작업 숙련도를 높여 생산 속도를 증가시키고, 품질 편차를 줄일 수 있음</li>
+<li><strong>적용 사례</strong>:</li>
+<li>포드의 <strong>컨베이어 벨트 시스템</strong>을 통해 각 작업자가 한 가지 작업에 집중</li>
+<li>반복 작업을 통한 생산성 극대화 및 시간 절약</li>
+</ul>
+</dd>
+<dt>3S의 효과</dt>
+<dd>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 38%">
+<col style="width: 40%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>요소</strong></th>
+<th style="text-align: left;"><strong>핵심 내용</strong></th>
+<th style="text-align: left;"><strong>기대 효과</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Simple (단순화)</td>
+<td style="text-align: left;">불필요한 공정 제거, 작업 절차 간소화</td>
+<td style="text-align: left;">작업 시간 단축, 오류 감소</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Standard (표준화)</td>
+<td style="text-align: left;">작업 방법과 부품의 표준화</td>
+<td style="text-align: left;">품질 일관성 확보, 관리 효율성 증가</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Specialization (전문화)</td>
+<td style="text-align: left;">작업자의 반복 숙련을 통한 전문성 강화</td>
+<td style="text-align: left;">생산성 향상, 작업 효율 극대화</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
 </div>
 </div>
 <p>포드 시스템의 장점과 단점은 다음과 같다.</p>
@@ -1968,64 +2003,68 @@ classDef transclass fill:#fcfcfc, stroke:#fcfcfc
 </div>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 8%">
-<col style="width: 37%">
-<col style="width: 53%">
+<col style="width: 7%">
+<col style="width: 33%">
+<col style="width: 48%">
+<col style="width: 10%">
 </colgroup>
-<thead>
-<tr class="header">
-<th>구분</th>
-<th>테일러 시스템</th>
-<th>포드 시스템</th>
-</tr>
-</thead>
 <tbody>
 <tr class="odd">
-<td><strong>제창자</strong></td>
-<td>F. W. Taylor</td>
-<td>H. Ford</td>
+<td rowspan="2"><h1 id="구분">구분</h1>
+<p><strong>제창자</strong></p></td>
+<td rowspan="2"><h1 id="테일러-시스템">테일러 시스템</h1>
+<p>F. W. Taylor</p></td>
+<td rowspan="2"><h1 id="포드-시스템">포드 시스템</h1>
+<p>H. Ford</p></td>
+<td></td>
 </tr>
 <tr class="even">
-<td><strong>일반 통칭</strong></td>
-<td>과업관리 (Task Management)</td>
-<td>동시관리 (Management by Synchronization)</td>
+<td></td>
 </tr>
 <tr class="odd">
-<td><strong>적용 목적</strong></td>
-<td>주로 개별생산의 공장, 특히 기계제작공장에서의 관리기술의 합리화가 목적</td>
-<td>연속생산의 능률 향상 및 관리의 합리화가 목적 (테일러 시스템의 결점 보완)</td>
+<td><strong>일반 통칭</strong></td>
+<td colspan="3"><font color="blue">과업관리</font> (Task Management) | <font color="blue">동시관리</font> (Management by Synchronization)</td>
 </tr>
 <tr class="even">
+<td><strong>적용 목적</strong></td>
+<td colspan="3">주로 개별생산의 공장, 특히 기계제작공장에서의 <font color="blue">관리기술의 합리화</font>가 목적 | <font color="blue">연속생산의 능률 향상 및 관리의 합리화</font>가 목적 (테일러 시스템의 결점 보완)</td>
+</tr>
+<tr class="odd">
 <td><strong>일관된 근본정신</strong></td>
 <td>고임금·저노무비의 원칙 (High Wage Labour Cost Principle)</td>
 <td>저가격·고임금의 원칙 (Low Price, High Wage Principle)</td>
+<td></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><strong>원리 (기본 이념)</strong></td>
 <td>① 최적 과업 결정 <br> ② 제 조건의 표준화 <br> ③ 성공에 대한 우대 <br> ④ 실패 시 노동자 손실</td>
 <td>최저 생산비로 사회에 봉사한다는 이념</td>
+<td></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><strong>수단·방법 (구체적 전제)</strong></td>
 <td>[과업관리 합리화를 위한 수단] <br> ① 기초적 시간연구 <br> ② 직능적 조직 <br> ③ 차별적 성과급제 <br> ④ 작업지도표 제도의 도입</td>
 <td>[동시관리 합리화를 위한 전제] <br> ① 생산의 표준화(제품의 단순화, 부분품의 규격화, 기계공구의 전문화, 작업의 단순화) <br> ② 이동조립법 <br> ③ 일급제 급여 <br> ④ 대량 소비시장의 존재</td>
+<td></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><strong>장점</strong></td>
 <td>① 생산관리의 시발점 <br> ② 공평한 보상체계 <br> ③ 간접조직 이용</td>
 <td>① 대량생산체계 <br> ② 생산의 합리화 추구 <br> ③ 낮은 원가로 저렴하게 판매 <br> ④ 생활의 질 개선</td>
+<td></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><strong>단점</strong></td>
 <td>① 성과 중심의 관리 <br> ② 기준 설정의 한계</td>
 <td>① 인간을 기계에 예속 <br> ② 과잉생산의 한계</td>
+<td></td>
 </tr>
 </tbody>
 </table>
 </section>
 </section>
-<section id="sec-toyota" class="level4">
-<h4 class="anchored" data-anchor-id="sec-toyota">도요타 시스템</h4>
+<section id="sec-tps" class="level4">
+<h4 class="anchored" data-anchor-id="sec-tps">도요타 시스템</h4>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2034,8 +2073,8 @@ classDef transclass fill:#fcfcfc, stroke:#fcfcfc
 </figure>
 </div>
 </center>
-<p>포드의 대량생산방식은 일본에서 적용할 수 없다는 도요타 자동차의 도요타 에이지, 오노 다이이치 판단에 따라 도요타만의 생산방식을 정립하였다. 도요타 생산 방식은 소로토 생산으로 생산현장 낭비를 제고하고 다품종 소량 생산체제를 지향한다. 이를 위해서 <a href="#sec-jit" class="quarto-xref"><span>JIT 생산</span></a>과 <a href="#sec-autonomation" class="quarto-xref"><span>인변 자동화</span></a>(Jidoka)라는 개념을 도출하여 생산기술 및 운영체제, 조직을 정비하였다. 1949년 도요타는 자동차 생산경쟁력이 없다고 판단하고 자동차 사업 매각까지 검토하였으나 기계공업의 근간인 자동차 사업 매각은 일본 내 경제에도 큰 부담이 될 것으로 판단한 정부의 구제지원을 받고 치열한 생존경쟁을 벌여야 하는 위기의식도 TPS 탄생 배경이라 할 수 있다.</p>
-<p>하지만 판매력, 하청 관리력, 기술력, 생산 평준화가 가능한 체제, 생산관리 체제의 정비 등 여러 조건이 갖춰져야 원활한 TPS 운영이 가능하다. 간판방식이 하청업체에게 큰 부담으로 작용하여 재고를 떠 안기도 하며 도요타 생산은 전후 공정 생산평준화 등으로 작업자에게 과도한 노동강도, 압박을 주는 비인간적 공장으로 묘사되기도 했다.</p>
+<p>포드의 대량생산방식은 일본에서 적용할 수 없다는 도요타 자동차의 도요타 에이지, 오노 다이이치 판단에 따라 도요타만의 생산방식을 정립하였다. 도요타 생산 방식은 <strong>소로토 생산</strong>으로 생산현장 <strong>낭비를 제거</strong>하고 <strong>다품종 소량 생산체제</strong>를 지향한다. 이를 위해서 <a href="#sec-jit" class="quarto-xref"><span>JIT 생산</span></a>과 <a href="#sec-autonomation" class="quarto-xref"><span>인변 자동화</span></a>(Jidoka)라는 개념을 도출하여 생산기술 및 운영체제, 조직을 정비하였다. 1949년 도요타는 자동차 생산경쟁력이 없다고 판단하고 자동차 사업 매각까지 검토하였으나 기계공업의 근간인 자동차 사업 매각은 일본 내 경제에도 큰 부담이 될 것으로 판단한 정부의 구제지원을 받고 치열한 생존경쟁을 벌여야 하는 위기의식도 TPS 탄생 배경이라 할 수 있다.</p>
+<p>하지만 판매력, 하청 관리력, 기술력, 생산 평준화가 가능한 체제, 생산관리 체제의 정비 등 여러 조건이 갖춰져야 원활한 TPS 운영이 가능하다. <strong>간판방식이 하청업체에게 큰 부담으로 작용</strong>하여 재고를 떠 안기도 하며 도요타 생산은 전후 공정 <strong>생산평준화 등으로 작업자에게 과도한 노동강도, 압박을 주는 비인간적 공장</strong>으로 묘사되기도 했다.</p>
 <section id="sec-toyota-7-waste" class="level5">
 <h5 class="anchored" data-anchor-id="sec-toyota-7-waste">7대 낭비</h5>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 118-1-7, 130-1-1">
@@ -2051,14 +2090,14 @@ classDef transclass fill:#fcfcfc, stroke:#fcfcfc
 
 </div>
 </div>
-<p>도요타 생산 시스템(TPS)에서 강조하는 <strong>7대 낭비(7 Wastes)</strong>는 효율성을 높이고 불필요한 자원을 낭비하지 않도록 하기 위한 개념이다. 이 낭비들은 모두 <strong>Muda</strong>(무다)로 불리며, 조직의 생산성과 가치를 저하시킬 수 있다. 다음은 도요타에서 정의한 7대 낭비이다.</p>
+<p>도요타 생산 시스템(TPS)에서 강조하는 <strong>7대 낭비</strong>(7 Wastes)는 효율성을 높이고 불필요한 자원을 낭비하지 않도록 하기 위한 개념이다. 이 낭비들은 모두 <strong>Muda</strong>(무다)로 불리며, 조직의 생산성과 가치를 저하시킬 수 있다. 다음은 도요타에서 정의한 7대 낭비이다.</p>
 <div id="nte-7-waste" class="callout callout-style-default callout-note no-icon callout-titled" title="도요타 7대 낭비">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note&nbsp;1.1 도요타 7대 낭비
+Note&nbsp;4.1 도요타 7대 낭비
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -2184,7 +2223,7 @@ classDef transclass fill:#fcfcfc, stroke:#fcfcfc
 </figure>
 </div>
 </center>
-<p>TPS에서 자동화(Autonomation, automation + autonomy)는 성력화에 그치는 것이 아니라, 간단한 감지장치를 붙여 공정 이상을 자동으로감지하여 생산을 정지하는 것을 말한다. 일반 자동화와 차이는 다음과 같다.</p>
+<p>TPS에서 자동화(Autonomation, automation + autonomy)는 성력화에 그치는 것이 아니라, 간단한 감지장치를 붙여 공정 이상을 자동으로 감지하여 생산을 정지하는 것을 말한다. 일반 자동화와 차이는 다음과 같다.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 14%">
@@ -2285,6 +2324,7 @@ classDef transclass fill:#fcfcfc, stroke:#fcfcfc
 </section>
 <section id="sec-factory-location" class="level2">
 <h2 class="anchored" data-anchor-id="sec-factory-location">공장입지</h2>
+<p><strong>공장입지</strong>란 생산을 위한 건물과 설비를 위치시킬 지역을 결정하는 것으로 <strong>예상투자수익률을 최대화할 수 있는 지역</strong>을 결정하게 된다.</p>
 <section id="sec-factory-location-requirement" class="level3">
 <h3 class="anchored" data-anchor-id="sec-factory-location-requirement">입지 조건</h3>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 103-1-9, 112-1-13">
@@ -2300,7 +2340,7 @@ classDef transclass fill:#fcfcfc, stroke:#fcfcfc
 
 </div>
 </div>
-<p>공장 입지란 생산을 위한 건물과 설비를 위치시킬 지역을 결정하는 것으로 예상투자수익률을 최대화할 수 있는 지역을 결정하게 된다. 일반적인 <strong>공장입지 선정 요인</strong>은 다음과 같다.</p>
+<p>일반적인 <strong>공장입지 선정 요인</strong>은 다음과 같다.</p>
 <dl>
 <dt>공장입지 선정 요인</dt>
 <dd>
@@ -2735,7 +2775,7 @@ classDef transclass fill:#fcfcfc, stroke:#fcfcfc
 </div>
 </div>
 <p><strong>CSR</strong>(Corporate Social Responsibility, 기업의 사회적 책임)은 기업이 생산 및 영업활동을 하면서 환경경영, 윤리경영, 사회공헌과 노동자를 비롯한 지역사회 등 사회 전체에 이익을 동시에 추구하며, 그에 따라 의사 결정 및 활동을 하는 것을 말한다.</p>
-<p>기업의 사회적 책임 피라미드(Pyramid of CSR)는 미국 조지아 대학 아치 캐럴교수가 1991년 발표한 내용으로 <strong>경제적 책임</strong>, <strong>법적 책임</strong>, <strong>윤리적 책임</strong>, <strong>자선적 책임</strong>으로 이루어진다.</p>
+<p><strong>기업의 사회적 책임 피라미드</strong>(Pyramid of CSR)는 미국 조지아 대학 아치 캐럴교수가 1991년 발표한 내용으로 <strong>경제적 책임</strong>, <strong>법적 책임</strong>, <strong>윤리적 책임</strong>, <strong>자선적 책임</strong>으로 이루어진다.</p>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
