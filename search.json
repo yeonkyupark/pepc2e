@@ -264,7 +264,7 @@
     "href": "0105사업환경분석.html",
     "title": "사업환경 분석",
     "section": "",
-    "text": "5-Forces Model\n마이클 포터가 제안한 시장 진입에 있어 산업을 분석하기 위해 제안한 모델이다. 다음 5가지 관점에서 업계 구조 및 시장 매력도를 평가하는 도구이다.\n산업 경쟁을 결정하는 요인을 파악하고 경쟁 강도와 그에 따른 잠재적 수익성을 파악함이 목적이다.",
+    "text": "5-Forces Model\n마이클 포터(Michael Porter)의 5 Forces Model은 기업의 산업 내 경쟁 환경을 분석하고, 기업의 수익성에 영향을 미치는 다섯 가지 힘을 식별하는 전략적 도구이다. 이 모델은 기업이 시장에서의 경쟁 강도를 평가하고, 효과적인 전략 수립을 돕기 위해 고안되었다.",
     "crumbs": [
       "01. 생산전략",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>사업환경 분석</span>"
@@ -275,7 +275,51 @@
     "href": "0105사업환경분석.html#sec-5force",
     "title": "사업환경 분석",
     "section": "",
-    "text": "기출: 100-1-2, 118-1-1\n\n\n\n\n\n\n\n\n\n\nhttps://en.wikipedia.org/wiki/Porter%27s_five_forces_analysis\n\n\n\n\n\n\n기존 기업간 경쟁\n\n\n동종 업계 경쟁 상황을 분석한다.\n\n\n신규 진입자 위협\n\n\n신규 진입 가능성을 분석한다. 진입 장벽이 낮은 경우 경쟁이 치열해 질 수 있다.\n\n\n대체제 위협\n\n\n제품 PLC 단계 중 성숙기에서는 대체재가 나타날 수 있다. 예를 드면 CD플레이어가 MP3플레이어로, 데스크탑PC가 노트PC로 대체 되면서 시장 상황에 변화를 가져 왔다. 진입하려난 시장의 대체제를 분석하는 것은 중요한 일이다.\n\n\n공급자 교섭력\n\n\n자재 공급이 유일 공급자만 존재하다면 생산 전략에 영향을 미치게 된다. 또한 공급자와의 신뢰 관계 구축을 통해 시장 경쟁에 유리한 위치를 점할 수 있다.\n\n\n구매자 교섭력\n\n\n생산하는 제품이 B2B 제품인지 B2C 제품인지, 소비 시장이 집중화 되어 있는지 일반 오픈 마켓인지 분석을 해야 한다.\n\n\n\n\n\n\n\n\n\n5-Forces Model 분석 예제\n\n\n\n삼성전자의 스마트폰을 5 Forces Model로 분석하면 아래와 같을 것이다.\n\n기존 경쟁간 경쟁\n\n원가우위 전략의 샤오미와 차별화 전략의 애플\n\n신규 진입자 위협\n\n원가 우위 전략으로 신규 진출한 OPPO, vivo\n\n대체제 위협\n\n스마트폰 대체를 위한 웨어러블 디바이스(Google Glass, Apple Vision Pro, 스마트 워치/링 등)\n\n공급자 교섭력\n\n모바일 AP를 제공하는 퀄컴과 LSI\n\n구매자 교섭력\n\nB2B 시장인 통신사업자와 자급제를 위한 일반 소비자",
+    "text": "기출: 100-1-2, 118-1-1\n\n\n\n\n\n\n\n\n\n\nhttps://en.wikipedia.org/wiki/Porter%27s_five_forces_analysis\n\n\n\n\n\n산업 내 경쟁 강도 (Rivalry Among Existing Competitors)\n\n기업 간의 경쟁 수준을 나타낸다.\n경쟁이 치열할수록 가격 인하, 마진 축소, 높은 마케팅 비용 등이 발생하여 수익성 악화 가능성이 높아진다.\n\n\n영향 요소\n\n\n시장 성장률\n\n경쟁 기업 수 및 규모\n\n제품 차별화 수준\n\n고정비 비율\n\n\n\n잠재적 진입자의 위협 (Threat of New Entrants)\n\n새로운 경쟁자가 시장에 진입할 가능성과 그로 인한 기존 기업의 수익성 변화 위험을 의미한다.\n진입 장벽이 낮으면 경쟁이 심화되고, 반대로 높으면 기존 기업이 우위를 유지하기 쉽다.\n\n영향 요소:\n\n초기 투자 비용\n\n규모의 경제\n\n법적 규제\n\n브랜드 인지도\n\n대체재의 위협 (Threat of Substitutes)\n\n기존 제품이나 서비스의 수요를 대체할 수 있는 다른 제품의 존재 여부가 수익성에 미치는 영향을 분석한다.\n대체재가 많을수록 가격 인하 압력이 증가한다.\n\n영향 요소:\n\n대체재의 가격 대비 성능\n\n전환 비용(소비자가 대체재로 변경하는 데 드는 비용)\n\n대체재의 품질 및 접근성\n\n공급자의 교섭력 (Bargaining Power of Suppliers)\n\n원자재, 부품, 서비스 등의 공급자가 가격, 품질, 공급 조건에 대해 행사할 수 있는 영향력이다.\n공급자의 힘이 강하면 비용 상승과 이익 압박으로 이어진다.\n\n영향 요소:\n\n공급자 수의 제한성\n\n대체 가능한 공급자 존재 여부\n\n공급 품목의 중요성\n\n구매자의 교섭력 (Bargaining Power of Buyers)\n\n제품이나 서비스를 구매하는 소비자 또는 기업이 가격, 품질, 서비스 조건에 대해 영향을 미칠 수 있는 힘이다.\n구매자의 힘이 강하면 가격 인하 및 품질 개선 요구가 커진다.\n\n영향 요소:\n\n구매자의 정보력\n\n대량 구매 여부\n\n제품의 표준화 정도",
+    "crumbs": [
+      "01. 생산전략",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>사업환경 분석</span>"
+    ]
+  },
+  {
+    "objectID": "0105사업환경분석.html#forces-model-구조",
+    "href": "0105사업환경분석.html#forces-model-구조",
+    "title": "사업환경 분석",
+    "section": "🔍 5 Forces Model 구조",
+    "text": "🔍 5 Forces Model 구조\n                    [ 잠재적 진입자의 위협 ]\n                             ↑\n[ 공급자의 교섭력 ] ← [ 산업 내 경쟁 강도 ] → [ 구매자의 교섭력 ]\n                             ↓\n                    [ 대체재의 위협 ]",
+    "crumbs": [
+      "01. 생산전략",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>사업환경 분석</span>"
+    ]
+  },
+  {
+    "objectID": "0105사업환경분석.html#forces-model의-활용",
+    "href": "0105사업환경분석.html#forces-model의-활용",
+    "title": "사업환경 분석",
+    "section": "✅ 5 Forces Model의 활용",
+    "text": "✅ 5 Forces Model의 활용\n\n산업 분석: 특정 산업의 수익성 및 성장 가능성 평가\n\n경쟁 전략 수립: 경쟁 우위 확보를 위한 전략 도출\n\n위기 대응: 경쟁 환경 변화에 따른 리스크 관리",
+    "crumbs": [
+      "01. 생산전략",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>사업환경 분석</span>"
+    ]
+  },
+  {
+    "objectID": "0105사업환경분석.html#장점과-한계",
+    "href": "0105사업환경분석.html#장점과-한계",
+    "title": "사업환경 분석",
+    "section": "📊 장점과 한계",
+    "text": "📊 장점과 한계\n\n\n\n\n\n\n\n장점\n한계\n\n\n\n\n산업 구조와 경쟁 환경을 체계적으로 분석 가능\n빠르게 변화하는 시장에서는 유연성이 부족함\n\n\n경쟁 요인 파악을 통해 전략적 의사결정 지원\n기업 내부 역량 및 기술 혁신 요소는 충분히 반영하지 못함\n\n\n수익성 분석을 통한 사업 진출 또는 철수 결정 도움\n산업 경계가 모호한 현대 시장에서는 적용이 어려울 수 있음",
+    "crumbs": [
+      "01. 생산전략",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>사업환경 분석</span>"
+    ]
+  },
+  {
+    "objectID": "0105사업환경분석.html#결론",
+    "href": "0105사업환경분석.html#결론",
+    "title": "사업환경 분석",
+    "section": "🚀 결론",
+    "text": "🚀 결론\n마이클 포터의 5 Forces Model은 기업이 경쟁 환경을 이해하고, 시장 내에서 경쟁 우위를 확보하기 위한 중요한 전략 도구이다. 다만, 급변하는 산업 트렌드와 기술 변화에 맞춰 추가적인 분석 도구와 함께 활용하는 것이 효과적이다.\n\n\n\n\n\n\n5-Forces Model 분석 예제\n\n\n\n삼성전자의 스마트폰을 5 Forces Model로 분석하면 아래와 같을 것이다.\n\n기존 경쟁간 경쟁\n\n원가우위 전략의 샤오미와 차별화 전략의 애플\n\n신규 진입자 위협\n\n원가 우위 전략으로 신규 진출한 OPPO, vivo\n\n대체제 위협\n\n스마트폰 대체를 위한 웨어러블 디바이스(Google Glass, Apple Vision Pro, 스마트 워치/링 등)\n\n공급자 교섭력\n\n모바일 AP를 제공하는 퀄컴과 LSI\n\n구매자 교섭력\n\nB2B 시장인 통신사업자와 자급제를 위한 일반 소비자",
     "crumbs": [
       "01. 생산전략",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>사업환경 분석</span>"
