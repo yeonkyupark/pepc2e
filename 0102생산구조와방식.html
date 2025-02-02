@@ -822,12 +822,12 @@ style 0 fill:#fee
 <p></p><figure class="figure"><p></p>
 <div>
 <pre class="mermaid mermaid-js">flowchart TB
-00["CMS 등장 배경"]
-10["대량생산 한계"]
-20["다양화된 소비자 요구"]
-30["이동과 대기 낭비"]
-40["린 생산 도입"]
-50["유연생산 필요"]
+00["CMS 등장 배경")
+10("대량생산 한계")
+20("다양화된 소비자 요구")
+30("이동과 대기 낭비")
+40("린 생산 도입")
+50("유연생산 필요")
 
 00 --- 10 &amp; 20 &amp; 30 &amp; 40 &amp; 50
 </pre>
@@ -863,16 +863,25 @@ style 0 fill:#fee
 <li>CMS는 각 셀에서 다기능을 수행할 수 있는 팀워크와 전문성을 강조하고, <strong>소규모로 독립된 셀 내에서 효율적인 작업을 할 수 있도록 하여 유연성과 생산성을 동시에 높였다</strong>.</li>
 </ul></li>
 </ol>
-<pre class="mermaid"><code>%%| fig-cap: "CMS 핵심 특징"
-
-flowchart TB
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TB
 00["CMS 핵심 특징"]
-10["셀 이동형 구조"]
-20["다기능 작업자"]
-30["낭비 제거"]
-40["품질 향상"]
+10("셀 이동형 구조")
+20("다기능 작업자")
+30("낭비 제거")
+40("품질 향상")
 
-00 --- 10 &amp; 20 &amp; 30 &amp; 40</code></pre>
+00 --- 10 &amp; 20 &amp; 30 &amp; 40
+</pre>
+</div>
+<p></p><figcaption> CMS 핵심 특징</figcaption> </figure><p></p>
+</div>
+</div>
+</div>
 <dl>
 <dt>CMS의 등장과 핵심 특징</dt>
 <dd>
@@ -1047,12 +1056,14 @@ end
 subgraph clp["  "]
 direction LR
 20[전산배치기법]
-21[구성방식] --- CORELAP &amp; ALDEP &amp; PLANET
-22[개선방식] --- CRAFT &amp; COFAD
+21[구성방식] --- 211(CORELAP) &amp; 212(ALDEP) &amp; 213(PLANET)
+22[개선방식] --- 221(CRAFT) &amp; 222(COFAD)
 20 --- 21 &amp; 22
 end 
 
-설비배치 --- SLP &amp; 20
+00["설비배치 분석기법"] --- SLP &amp; 20
+
+style SLP fill:#eef
 </pre>
 </div>
 <p></p></figure><p></p>
