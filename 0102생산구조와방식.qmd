@@ -11,7 +11,12 @@ format: html
 설비 배치는 설비 내에서 경제적 활동을 위해 물리적으로 설비를 배치하는 의사결정이다. 설비 배치 대상은 공간을 필요로 하는 모든 자원(작업자, 기계, 작업장, 부서, 통로, 창고 등)이 된다.
 
 ::: {#fig-equipment-layout-analysis}
+설비배치 유형 및 분석 기법
+:::
+
 ```{mermaid}
+%%| fig-cap: "설비배치 유형 및 분석 기법"
+
 flowchart LR
 설비배치 --- 유형 & 분석기법
 subgraph 1["  "]
@@ -32,8 +37,6 @@ end
 style 1 fill:#eef
 style 0 fill:#fee
 ```
-설비배치 유형 및 분석 기법
-:::
 
 설비배치 유형
 : 
