@@ -6,7 +6,7 @@ format: html
 :::{.callout-tip icon=false title="기출: 124-1-13"}
 :::
 
-## 물류 5대 기능
+## 물류 5대 기능 {#sec-logistic-5-functions}
 
 ```{mermaid}
 flowchart TD
