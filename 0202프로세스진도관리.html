@@ -789,7 +789,7 @@ window.Quarto = {
 <pre class="mermaid mermaid-js">  flowchart TB
   subgraph AOA
     1((1)) -- A --&gt; 3((3))
-    2((2)) -- B --&gt; 3((3)) -- C --&gt; 4((4))
+    2((2)) -- B --&gt; 3((3)) -- C  --&gt; 4((4))
   end
   
   subgraph AON
@@ -891,71 +891,84 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<div class="cell">
-<div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 33%">
+<col style="width: 27%">
+<col style="width: 25%">
+</colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;">활동</th>
-<th style="text-align: right;">기대시간(일)</th>
-<th style="text-align: left;">선행활동</th>
+<th><strong>활동</strong></th>
+<th><strong>내용</strong></th>
+<th><strong>기대시간(일)</strong></th>
+<th><strong>선행활동</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">A 제품전략 결정</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: left;">-</td>
+<td>A</td>
+<td>제품전략 결정</td>
+<td>1</td>
+<td>-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">B 입지선정</td>
-<td style="text-align: right;">7</td>
-<td style="text-align: left;">-</td>
+<td>B</td>
+<td>입지선정</td>
+<td>7</td>
+<td>-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">C 제조설비선정</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: left;">A</td>
+<td>C</td>
+<td>제조설비선정</td>
+<td>3</td>
+<td>A</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">D 배치결정</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: left;">C</td>
+<td>D</td>
+<td>배치결정</td>
+<td>4</td>
+<td>C</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">E 전기, 수도시설 설치</td>
-<td style="text-align: right;">11</td>
-<td style="text-align: left;">C</td>
+<td>E</td>
+<td>전기, 수도시설 설치</td>
+<td>11</td>
+<td>C</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">F 직원 모집</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: left;">B, C</td>
+<td>F</td>
+<td>직원 모집</td>
+<td>4</td>
+<td>B, C</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">G 설비 설치</td>
-<td style="text-align: right;">5</td>
-<td style="text-align: left;">D</td>
+<td>G</td>
+<td>설비 설치</td>
+<td>5</td>
+<td>D</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">H 사무동 등 인테리어 공사</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: left;">E, F</td>
+<td>H</td>
+<td>사무동 등 인테리어 공사</td>
+<td>2</td>
+<td>E, F</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">I 정보시스템 설치</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: left;">E, G</td>
+<td>I</td>
+<td>정보시스템 설치</td>
+<td>4</td>
+<td>E, G</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">J 종업원 교육</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: left;">H, I</td>
+<td>J</td>
+<td>종업원 교육</td>
+<td>2</td>
+<td>H, I</td>
 </tr>
 </tbody>
 </table>
-</div>
-</div>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
@@ -1069,88 +1082,94 @@ window.Quarto = {
 </div>
 </div>
 <p>위 AON을 표로 정리하면 다음과 같다.</p>
-<div class="cell">
-<div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
+<p>주어진 데이터를 기반으로 <strong>기대시간</strong>과 <strong>분산</strong>이 포함된 표를 작성하면 다음과 같다.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 13%">
+</colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: right;">선행단계</th>
-<th style="text-align: right;">후행단계</th>
-<th style="text-align: right;">낙관치(a)</th>
-<th style="text-align: right;">정상치(m)</th>
-<th style="text-align: right;">비관치(b)</th>
-<th style="text-align: right;">기대시간</th>
-<th style="text-align: right;">분산</th>
+<th><strong>선행단계</strong></th>
+<th><strong>후행단계</strong></th>
+<th><strong>낙관치(a)</strong></th>
+<th><strong>정상치(m)</strong></th>
+<th><strong>비관치(b)</strong></th>
+<th><strong>기대시간</strong></th>
+<th><strong>분산</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">5</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">0.11</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>4</td>
+<td>0.11</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">6</td>
-<td style="text-align: right;">8</td>
-<td style="text-align: right;">6</td>
-<td style="text-align: right;">0.44</td>
+<td>1</td>
+<td>3</td>
+<td>4</td>
+<td>6</td>
+<td>8</td>
+<td>6</td>
+<td>0.44</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">5</td>
-<td style="text-align: right;">6</td>
-<td style="text-align: right;">5</td>
-<td style="text-align: right;">0.11</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>5</td>
+<td>0.11</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">5</td>
-<td style="text-align: right;">7</td>
-<td style="text-align: right;">9</td>
-<td style="text-align: right;">7</td>
-<td style="text-align: right;">0.11</td>
+<td>2</td>
+<td>4</td>
+<td>5</td>
+<td>7</td>
+<td>9</td>
+<td>7</td>
+<td>0.11</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">5</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">6</td>
-<td style="text-align: right;">9</td>
-<td style="text-align: right;">6</td>
-<td style="text-align: right;">1.00</td>
+<td>3</td>
+<td>5</td>
+<td>3</td>
+<td>6</td>
+<td>9</td>
+<td>6</td>
+<td>1.00</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">6</td>
-<td style="text-align: right;">7</td>
-<td style="text-align: right;">8</td>
-<td style="text-align: right;">15</td>
-<td style="text-align: right;">9</td>
-<td style="text-align: right;">1.78</td>
+<td>4</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+<td>15</td>
+<td>9</td>
+<td>1.78</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">5</td>
-<td style="text-align: right;">6</td>
-<td style="text-align: right;">6</td>
-<td style="text-align: right;">8</td>
-<td style="text-align: right;">16</td>
-<td style="text-align: right;">9</td>
-<td style="text-align: right;">2.78</td>
+<td>5</td>
+<td>6</td>
+<td>6</td>
+<td>8</td>
+<td>16</td>
+<td>9</td>
+<td>2.78</td>
 </tr>
 </tbody>
 </table>
-</div>
-</div>
 <p><span class="math display">\[
 기대분산(t_e) = \frac{a + 4m + b}{6},  \quad 분산(\sigma^2) = (\frac{b-a}{6})^2
 \]</span></p>
@@ -1407,16 +1426,53 @@ I --&gt; J
 </tbody>
 </table>
 <hr>
-<dl>
-<dt>AOA</dt>
-<dd>
-<img src="images/124-3-2-01.png" class="img-fluid">
-</dd>
-<dt>AON</dt>
-<dd>
-<img src="images/124-3-2-02.png" class="img-fluid">
-</dd>
-</dl>
+<p><strong>AOA</strong></p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">graph LR
+    1((시작)) ==&gt;|"A (3일)"| 2((A 완료))
+    2 ==&gt;|"B (6일)"| 3((B 완료))
+    3 ==&gt;|"C (12일)"| 4((C 완료))
+    4 ==&gt;|"D (2일)"| 5((D 완료))
+    
+    1 --&gt;|"E (6일)"| 6((E 완료))
+    6 --&gt;|"F (10일)"| 7((F 완료))
+    7 --&gt;|"G (5일)"| 8((G 완료))
+    
+    5 ==&gt;|"H (1일)"| 9((종료))
+    8 --&gt;|"H (1일)"| 9
+
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p><strong>AON</strong></p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">graph LR
+    A["A (3일)"] ==&gt; B["B (6일)"]
+    B ==&gt; C["C (12일)"]
+    C ==&gt; D["D (2일)"]
+    
+    E["E (6일)"] --&gt; F["F (10일)"]
+    F --&gt; G["G (5일)"]
+    
+    D ==&gt; H["H (1일)"]
+    G --&gt; H
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
 <p>총완료시간은 A(3) → B(6) → C(12) → D(2) → H(1) = 24(일)이다.</p>
 </div>
 </div>
@@ -1424,16 +1480,14 @@ I --&gt; J
 </section>
 <section id="주요-기법" class="level3">
 <h3 class="anchored" data-anchor-id="주요-기법">주요 기법</h3>
+<p>진도관리를 위한 네트워크 주요 기법은 PERT, CPM, CCPM 등이 있다.</p>
 <section id="sec-pert" class="level4">
 <h4 class="anchored" data-anchor-id="sec-pert">PERT</h4>
-<p><strong>PERT</strong>(program evaluation and review technique, 프로그램 평기 검토 기법)은 1958년 미국 해군에서 Polaris missile 프로젝트 일정 계획 및 통제를 위한 관리 기법으로 개발되었으며, 시간을 가장 중요한 요소로 통제하는 프로젝트 관리 방법이다. 연구 개발 프로세스에서 프로젝트 진행 상황을 통계 방법을 활용하여 파악하고 이를 통해 일정 계획 및 통제 수단으로 활용되었다. 과거 경험이 없는 불확실한 대상이나 여러 가지 유형의 프로그램 연구 개발에 적합하다.</p>
-<p><br></p>
-<section id="장단점" class="level5">
-<h5 class="anchored" data-anchor-id="장단점">장단점</h5>
+<p><strong>PERT</strong>(program evaluation and review technique, 프로그램 평가 검토 기법)은 <font color="#0000CD">1958년 미국 해군에서 Polaris missile 프로젝트 일정 계획 및 통제를 위한 관리 기법</font>으로 개발되었으며, <font color="#0000CD">시간을 가장 중요한 요소로 통제</font>하는 프로젝트 관리 방법이다. 연구 개발 프로세스에서 프로젝트 진행 상황을 통계 방법을 활용하여 파악하고 이를 통해 일정 계획 및 통제 수단으로 활용되었다. <font color="#0000CD">과거 경험이 없는 불확실한 대상</font>이나 여러 가지 유형의 프로그램 연구 개발에 적합하다.</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 39%">
-<col style="width: 60%">
+<col style="width: 50%">
+<col style="width: 50%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -1443,52 +1497,54 @@ I --&gt; J
 </thead>
 <tbody>
 <tr class="odd">
-<td>프로젝트 완료 시간을 예측하고 전체 프로세스를 관리할 수 있다.</td>
-<td>주관적인 판단에 의해 결정된 활동 예상 시간을 바탕으로 프로젝트 완료 예상 시점 혹은 기간을 결정하기 때문에 판단하는 사람의 주관적인 요소에 따라 예측 결과가 크게 달라질 수 있다.</td>
+<td><font color="#0000CD">프로젝트 완료 시간을 예측</font>하고 전체 프로세스를 관리할 수 있다.</td>
+<td><font color="red">주관적인 판단에 의해 결정된 활동 예상 시간</font>을 바탕으로 프로젝트 완료 예상 시점 혹은 기간을 결정하기 때문에 판단자의 주관적인 요소에 따라 예측 결과가 달라질 수 있다.</td>
 </tr>
 <tr class="even">
-<td>확률적으로 계산한 것이기 때문에 예측한 시간에 비해 더 빨리 프로젝트를 완료할 수도 있다.</td>
-<td>활동에 소요되는 예상 시간이 적절하게 예측되었다 하더라도 PERT에서는 소요시간을 확률적으로 고려하게 되는데 실제 확률분포와 베타분포의 correlation이 낮으면 낮을수록 PERT에서 예측한 결과와 실제 소요 시간 오차는 커질 수 있다.</td>
+<td>확률적으로 계산한 것이기 때문에 <font color="#0000CD">예측한 시간에 비해 더 빨리 프로젝트를 완료</font>할 수도 있다.</td>
+<td>활동 소요 시간이 적절하게 예측되었더라도 PERT에서는 소요 시간을 확률적으로 고려하게 된다. 실제 확률분포와 베타분포의 상관관계가 낮을수록 <font color="red">예측한 결과와 실제 소요 시간 오차는 커질 수</font> 있다.</td>
 </tr>
 <tr class="odd">
-<td>주공정이 아니면서 여유시간이 있는 활동을 완료한 이후 잉여 시간이나 자원을 주공정에 투입함으로써 실제 프로젝트 완료 기간을 단축시킬 수도 있다.</td>
-<td>다른 프로젝트 진행 경로에 존재하는 활동이 연기될 경우 이에 따라 주공정 자체가 변화하게 되는데, 이런 상황이 발생할 경우 PERT에서 예측한 소요 시간은 실제 예측 시간보다 더 짧아진다는 단점이 있다.</td>
+<td>주공정이 아니면서 여유시간이 있는 활동을 완료한 이후 <font color="#0000CD">잉여 시간이나 자원을 주공정에 투입함</font>으로써 프로젝트 완료 기간을 단축시킬 수 있다.</td>
+<td>다른 프로젝트 경로에 있는 활동이 연기될 경우 주공정 자체가 변할 수 있으며, 이로 인해 PERT에서 <font color="red">예측한 소요 시간은 실제 예측 시간보다 더 짧아진다</font>는 단점이 있다.</td>
 </tr>
 </tbody>
 </table>
-<p><br></p>
-</section>
-<section id="네트워크-구성-절차" class="level5">
-<h5 class="anchored" data-anchor-id="네트워크-구성-절차">네트워크 구성 절차</h5>
-<ol type="1">
-<li>프로젝트 수행 시 필수적인 과정과 활동 선정</li>
-<li>각각 관리점과 활동 순서를 결정</li>
-<li>결정된 순서를 고려하여 네트워크 개략도 작성</li>
-<li>각 과정에 소요되는 시간 예측</li>
-<li>소요시간 정보를고려하여 주공정(critical path) 결정</li>
-<li>프로젝트 진행에 따라 PERT Chart 업데이트</li>
-</ol>
-<dl>
-<dt>프로젝트 수행 시 필수적인 과정과 활동 선정</dt>
-<dd>
+<p><strong>네트워크 구성 절차</strong>는 다음과 같다.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">graph TD
+    classDef uniformStyle fill:#E3F2FD,stroke:#90CAF9,stroke-width:2px,font-size:14px
+
+    A[프로젝트 수행 시 &lt;br&gt;필수적인 과정과 활동 선정]:::uniformStyle --&gt; 
+    B[각각 관리점과 활동 순서를 결정]:::uniformStyle --&gt; 
+    C[결정된 순서를 고려하여 &lt;br&gt;네트워크 개략도 작성]:::uniformStyle --&gt; 
+    D[각 과정에 소요되는 시간 예측]:::uniformStyle --&gt; 
+    E["소요시간 정보를 고려하여 &lt;br&gt;주공정(critical path) 결정"]:::uniformStyle --&gt; 
+    F[프로젝트 진행에 따라 &lt;br&gt;PERT Chart 업데이트]:::uniformStyle
+
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p><strong>1. 프로젝트 수행 시 필수적인 과정과 활동 선정</strong></p>
 <ul>
 <li>활동은 프로젝트를 완수하는데 필요한 업무이고 주요 관리점은 활동 시작과 끝 지점으로 정의된다.</li>
 </ul>
-</dd>
-<dt>각각 관리점과 활동 순서를 결정</dt>
-<dd>
+<p><strong>2. 각각 관리점과 활동 순서를 결정</strong></p>
 <ul>
 <li>활동과 관리점 순서를 결정한다.</li>
 </ul>
-</dd>
-<dt>결정된 순서를 고려하여 네트워크 개략도 작성</dt>
-<dd>
+<p><strong>3. 결정된 순서를 고려하여 네트워크 개략도 작성</strong></p>
 <ul>
 <li>활동을 정해진 순서에 따라 수직적, 병렬적으로 배치하여 활동 간 연관성과 순서를 나타내는 망 조직 선도(network diagram, AOA 또는 AON) 작성한다.</li>
 </ul>
-</dd>
-<dt>각 과정에 소요되는 시간 예측</dt>
-<dd>
+<p><strong>4. 각 과정에 소요되는 시간 예측</strong></p>
 <ul>
 <li>시간적 불확실성을 감소시키기 위해 세 종류 시간을 정의하고 이를 통해 예상 시간을 계산한다.
 <ul>
@@ -1499,12 +1555,10 @@ I --&gt; J
 </ul></li>
 <li>위 3가지 시간을 활용하여 평균 소요 시간(<span class="math inline">\(T_E\)</span>) 및 분산산을 확률적으로 예측(베타 분포를 따른다고 가정)
 <ul>
-<li><span class="math inline">\(T_E = mean \ value \ \frac{a + 4b + c}{6}, \quad \sigma^2=(\frac{c-a}{6})^2\)</span></li>
+<li><span class="math display">\[T_E = mean \ value \ \frac{a + 4b + c}{6}, \quad \sigma^2=(\frac{c-a}{6})^2\]</span></li>
 </ul></li>
 </ul>
-</dd>
-<dt>소요시간 정보를 고려하여 주공정(critical path) 결정</dt>
-<dd>
+<p><strong>5. 소요시간 정보를 고려하여 주공정(critical path) 결정</strong></p>
 <ul>
 <li>위 단계에서 예측한 예상소요시간을 고려하여 프로젝트를 가장 짧은 시간에 완료할 수 있는 주공정 결정</li>
 <li>주공정은 각 활동에 소요되는 시간을 연속적으로 더해 프로젝트를 진행하는데 있어 가장 긴 경로로 결정</li>
@@ -1516,19 +1570,23 @@ I --&gt; J
 <li>Latest Finish Time(LF), 가장 늦게 해당 확동을 완수할 수 있는 시점으로 <code>LS + 활동 소요 시간</code>으로 계산</li>
 </ul></li>
 </ul>
-</dd>
-<dt>프로젝트 진행에 따라 PERT Chart 업데이트</dt>
-<dd>
+<p><strong>6. 프로젝트 진행에 따라 PERT Chart 업데이트</strong></p>
 <ul>
-<li>주 공정이 결정되면 프로젝트 완료 일자가 결정되고 실제 프로젝트를 진행</li>
+<li>주 공정이 결정되면 프로젝트 완료 일자가 결정되고 실제 프로젝트를 진행
+<ul>
 <li>예상 소요 시간을 실제 소요 시간으로 업데이트하고 추가적으로 요구되는 활용 혹은 제외 가능한 활동 등을 고려하여 PERT Chart를 새로운 상황에 맞게 지속적으로 업데이트 수행</li>
+</ul></li>
 </ul>
-</dd>
-</dl>
-<p><br></p>
-</section>
-<section id="pertcost" class="level5">
-<h5 class="anchored" data-anchor-id="pertcost">PERT/COST</h5>
+<div id="nte-pert-cost" class="callout callout-style-default callout-note no-icon callout-titled" title="PERT/COST">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note&nbsp;7.1 PERT/COST
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>PERT/COST는 프로젝트가 최소비용으로 완료될 수 있도록 일정 계획을 수립하는 기법이다.</p>
 <p>프로젝트 비용은 직접 비용과 간접 비용으로 구성된다. 직접 비용은 각 활동 완료에 소요되는 비용을 뜻하며, 간접 비용은 프로젝트 완료 시간이 길어짐에 따라 증가하는 비용을 뜻한다. 예를 들면 이자, 설비 사용료, 보험료와 같은 간접 경비가 이에 속한다.</p>
 <p>일반적으로 프로젝트 기간이 길어지면 직접 비용 감소하지만 간접비용은 증가하게 된다. 반대로 프로젝트 일정을 단축하게 되면 그 만큼 직접 비용이 발생하게 된다.</p>
@@ -1540,20 +1598,18 @@ I --&gt; J
 <li>각 공정 추정 시간치(<span class="math inline">\(t_e\)</span>)와 단계 시간(<span class="math inline">\(T_e, \ TL, \ S\)</span>)을 구하여 프로젝트 일정 계획을 수립</li>
 <li>각 활동 일정 계획이 수립되면 비용 견적과 예산화(budgeting) 수행</li>
 </ol>
-<p><br></p>
-</section>
+</div>
+</div>
 </section>
 <section id="sec-cpm" class="level4">
 <h4 class="anchored" data-anchor-id="sec-cpm">CPM</h4>
 <p><strong>CPM</strong>(critical path method)은 프로젝트에 있어 각 활동 시작과 종료 시점을 나타내는 방법으로 프로젝트를 완수하는데 필요한 활동과 각 활동 완수 시 소요되는 시간을 모두 알고 있는 상태에서 진행 순서를 최적으로 도출해 내는 관리 기법이다.</p>
 <p>1957년 미국 Remington-Rand 사 J.E. Kelly와 Du Pont 사 M.R. Walker에 의해 개발된 기법으로 Dupont 사에서 화공 플랜트 장비를 위해 가동 중단 시간과 정비, 정비 후 재가동 시간을 효율적으로 관리하기 위해 개발한 프로젝트 관리 기법이다. <a href="#sec-pert" class="quarto-xref"><span>PERT</span></a>가 주로 불확실성 하에서 프로젝트를 관리하는 기법인데 반해 CPM은 과거 경험했던 공법, 기술, 또는 상업적 프로젝트에 응용되는 계획 관리기술이다.</p>
-<p><br></p>
-<section id="장단점-1" class="level5">
-<h5 class="anchored" data-anchor-id="장단점-1">장단점</h5>
+<p>CPM 장단점은 다음과 같다.</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 47%">
-<col style="width: 52%">
+<col style="width: 50%">
+<col style="width: 50%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -1563,15 +1619,12 @@ I --&gt; J
 </thead>
 <tbody>
 <tr class="odd">
-<td>프로젝트 진행상황을 시각적으로 표현할 수 있으며 프로젝트를 완수하는데 필요한 시간을 비교적 정확하게 예측할 수 있다. 또한 어떤 활동이 프로젝트 진행 일정 및 다른 활동 완수에 영향을 미치는지 분석이 가능하다.</td>
-<td>기법은 복잡하지만 변화 가능성이 적은 프로젝트를 수행할 때 프로젝트 완수 시간 불확실성을 해소하기 위해 개발되었기 때문에 프로젝트 수행 방법이나 과정이 달라지기 쉬운 경우에는 CPM 기법을 통한 예측 활용성은 제한적일 수 밖에 없다.</td>
+<td>프로젝트 진행상황을 <font color="#0000CD">시각적으로 표현</font>할 수 있으며 프로젝트를 완수하는데 <font color="#0000CD">필요한 시간을 비교적 정확하게 예측</font>할 수 있다. 또한 어떤 활동이 프로젝트 진행 일정 및 다른 활동 완수에 영향을 미치는지 분석이 가능하다.</td>
+<td>기법은 복잡하지만 변화 가능성이 적은 프로젝트를 수행할 때 프로젝트 완수 시간 불확실성을 해소하기 위해 개발되었기 때문에 <font color="red">프로젝트 수행 방법이나 과정이 달라지기 쉬운 경우에는 CPM 기법을 통한 예측 활용성은 제한적</font>일 수 밖에 없다.</td>
 </tr>
 </tbody>
 </table>
-<p><br></p>
-</section>
-<section id="진행-순서" class="level5">
-<h5 class="anchored" data-anchor-id="진행-순서">진행 순서</h5>
+<p><strong>진행 순서</strong></p>
 <ol type="1">
 <li>개별 활동 명시</li>
 <li>각 활동 순서 결정</li>
@@ -1583,7 +1636,6 @@ I --&gt; J
 </ul></li>
 <li>프로젝트 진행에 따라 CPM diagram 업데이트</li>
 </ol>
-<p><br></p>
 <div class="callout callout-style-default callout-important no-icon callout-titled" title="네트워크 기법">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1743,34 +1795,29 @@ I --&gt; J
 </tr>
 </tbody>
 </table>
-<dl>
-<dt>단축 전략</dt>
-<dd>
+<p><strong>단축 전략</strong></p>
 <ul>
 <li><strong>B 활동 단축</strong>: 단축 비용 증가분이 가장 낮은 B 활동을 1일 단축한다.</li>
 </ul>
-</dd>
-<dt>결과 계산</dt>
-<dd>
+<p><strong>결과 계산</strong></p>
 <ol type="1">
 <li><strong>총 프로젝트 소요 시간</strong><br>
 기존 완료 시간 15일 → 단축 후 14일</li>
 <li><strong>총 프로젝트 비용</strong><br>
 기존 비용 2400만 원 + B 활동 단축 비용 200만 원 = 2600만원</li>
 </ol>
-</dd>
-<dt>결과</dt>
-<dd>
+<p><strong>결과</strong></p>
 <ul>
 <li><strong>총 프로젝트 소요 시간</strong>: 14일<br>
 </li>
-<li><strong>총 프로젝트 비용</strong>: 2600만 원</li>
+<li><strong>총 프로젝트 비용</strong>: 2600만 원<br>
+</li>
 </ul>
-</dd>
-</dl>
 </div>
 </div>
-<p><br></p>
+</section>
+<section id="sec-ccm" class="level4">
+<h4 class="anchored" data-anchor-id="sec-ccm">CCM</h4>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 115-1-3">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1784,11 +1831,7 @@ I --&gt; J
 
 </div>
 </div>
-</section>
-</section>
-<section id="sec-ccm" class="level4">
-<h4 class="anchored" data-anchor-id="sec-ccm">CCM</h4>
-<p><strong>CCM</strong>(critical chain method) 또는 CCPM (critical chain project management)은 TOC 제약 이론을 기반으로 한 프로젝트 관리 기법이다.</p>
+<p><strong>CCM</strong>(critical chain method) 또는 CCPM (critical chain project management)은 <font color="blue">TOC 제약 이론을 기반</font>으로 한 프로젝트 관리 기법이다.</p>
 <p>제품 Life cycle이 날로 짧아지고 고객 요구가 다양해 짐에 따라 신제품 개발, 신규 사업 추진 등 급변하는 사업 환경에 대응하기 위해서 프로젝트성 업무가 급증하는 추세이다. 프로젝트는 과제 특성상 완료 시간이 불확실하여 계획 단계에서 준수 확룔을 높이기 위해 안전 여유를 감안하여 예상 소요 시간을 길게 수립한다. 프로제특 관리자는 제한된 자원, 즉 인력, 비용, 시간 등으로 여러 프로젝트를 동시에 관리하여 프로젝트를 기한 내 원활히 수행하기 위한 효과적인 관리기법이 필요하게 되었다.</p>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="예상 기간 장기화 문제 원인">
 <div class="callout-header d-flex align-content-center">
@@ -1801,38 +1844,52 @@ I --&gt; J
 </div>
 <div class="callout-body-container callout-body">
 <dl>
-<dt>안전여유</dt>
+<dt><strong>안전여유</strong></dt>
 <dd>
-<p>납기를 어기지 않기 위해 실제 예상일정보다 여유 시간을 추가하여 계획 수립</p>
+<ul>
+<li>납기를 어기지 않기 위해 실제 예상일정보다 여유 시간을 추가하여 계획 수립</li>
+</ul>
 </dd>
-<dt>자기방어</dt>
+<dt><strong>자기방어</strong></dt>
 <dd>
-<p>작업을 일찍 완료하게 되면 다른 작업을 할당받게 되어 작업 완료를 숨기는 현상상</p>
+<ul>
+<li>작업을 일찍 완료하게 되면 다른 작업을 할당받게 되어 작업 완료를 숨기는 현상상</li>
+</ul>
 </dd>
-<dt>학생증후군</dt>
+<dt><strong>학생증후군</strong></dt>
 <dd>
-<p>과제 또는 시험 기간이 충분하더라도 마감 시간에 맞춰 시작하려는 현상</p>
+<ul>
+<li>과제 또는 시험 기간이 충분하더라도 마감 시간에 맞춰 시작하려는 현상</li>
+</ul>
 </dd>
-<dt>파킨슨 법칙</dt>
+<dt><strong>파킨슨 법칙</strong></dt>
 <dd>
-<p>과제가 일찍 완료될 수 있더라도 마감일자까지 과제를 진행함</p>
+<ul>
+<li>과제가 일찍 완료될 수 있더라도 마감일자까지 과제를 진행함</li>
+</ul>
 </dd>
-<dt>Multi-tasking</dt>
+<dt><strong>Multi-tasking</strong></dt>
 <dd>
-<p>여러 작업을 동시에 진행하는 상황에서 단일 작업을 순차적으로 진행하는 것보다 시간 소요가 더 많이 발생하는 경우</p>
+<ul>
+<li>여러 작업을 동시에 진행하는 상황에서 단일 작업을 순차적으로 진행하는 것보다 시간 소요가 더 많이 발생하는 경우</li>
+</ul>
 </dd>
-<dt>후행공정</dt>
+<dt><strong>후행공정</strong></dt>
 <dd>
-<p>후속 작업이 준비되어 있지 않으면 준비 일정 단축이 어려움</p>
+<ul>
+<li>후속 작업이 준비되어 있지 않으면 준비 일정 단축이 어려움</li>
+</ul>
 </dd>
-<dt>자원병목</dt>
+<dt><strong>자원병목</strong></dt>
 <dd>
-<p>희소 자원 가용성 문제로 일정 지연 발생 가능</p>
+<ul>
+<li>희소 자원 가용성 문제로 일정 지연 발생 가능</li>
+</ul>
 </dd>
 </dl>
 </div>
 </div>
-<p>CCM 목표는 프로젝트 기간 단축과 예상 기간 준수이다. 작업 기반 버퍼로 네트워크 경로 상 개별 활동 일정을 미시적으로 관리하는 대시 모든 작업 체인을 따라 자원 가용성 및 종속성을 고려하고 보호하기 위해 체인에 있는 전반적인 모든 활동 버퍼를 관리하는데 중점을 둔다. 암시적인 개별 작업 버퍼를 제거하고 일정 위험을 낮춤으로써 보다 효율성 있게 프로젝트를 관리할 수 있다.</p>
+<p>CCM 목표는 프로젝트 기간 단축과 예상 기간 준수이다. 작업 기반 버퍼로 네트워크 경로 상 개별 활동 일정을 미시적으로 관리하는 대신 모든 작업 체인에 따라 자원 가용성 및 종속성을 고려하고 보호하기 위해 <font color="blue">체인에 있는 전반적인 모든 활동 버퍼를 관리</font>하는데 중점을 둔다. <font color="blue">암시적인 개별 작업 버퍼를 제거</font>하고 일정 위험을 낮춤으로써 보다 효율성 있게 프로젝트를 관리할 수 있다.</p>
 <p>일정 단축 기법은 다음과 같다.</p>
 <dl>
 <dt>크래싱(crashing)</dt>
@@ -1850,7 +1907,6 @@ I --&gt; J
 </ul>
 </dd>
 </dl>
-<p><br></p>
 <section id="ccm-관리-버퍼" class="level5">
 <h5 class="anchored" data-anchor-id="ccm-관리-버퍼">CCM 관리 버퍼</h5>
 <p>CCM에서 관리하는 버퍼는 다음과 같다.</p>
@@ -1986,20 +2042,18 @@ I --&gt; J
 </tr>
 </tbody>
 </table>
-<p><br></p>
 </section>
 </section>
 </section>
 <section id="pert-vs.-cpm" class="level3">
 <h3 class="anchored" data-anchor-id="pert-vs.-cpm">PERT vs.&nbsp;CPM</h3>
-<center>
+<p>아래는 PERT와 CPM 비교 내용이다.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://itwiki.kr/images/a/a3/PERT_CPM.png" class="img-fluid figure-img"></p>
 <figcaption>https://itwiki.kr/w/PERT/CPM</figcaption>
 </figure>
 </div>
-</center>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 16%">
@@ -2113,7 +2167,6 @@ I --&gt; J
 </ul>
 </dd>
 </dl>
-<p><br></p>
 <section id="pertcpm-전개-단계" class="level4">
 <h4 class="anchored" data-anchor-id="pertcpm-전개-단계">PERT/CPM 전개 단계</h4>
 <div class="cell" data-layout-align="default">
@@ -2138,11 +2191,11 @@ I --&gt; J
 </div>
 </div>
 </div>
-<p><br></p>
 </section>
 </section>
 <section id="cpm-vs.-ccm" class="level3">
 <h3 class="anchored" data-anchor-id="cpm-vs.-ccm">CPM vs.&nbsp;CCM</h3>
+<p>아래는 CPM과 CCM 비교 내용이다.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://edward-designer.com/web/wp-content/uploads/2016/03/ccm-vs-cpm.jpg" class="img-fluid figure-img"></p>
