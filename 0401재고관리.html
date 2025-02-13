@@ -505,7 +505,7 @@ window.Quarto = {
   <li><a href="#정량발주방식과-정기발주방식" id="toc-정량발주방식과-정기발주방식" class="nav-link" data-scroll-target="#정량발주방식과-정기발주방식">정량발주방식과 정기발주방식</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#재고-비용-및-재고-성과-척도" id="toc-재고-비용-및-재고-성과-척도" class="nav-link" data-scroll-target="#재고-비용-및-재고-성과-척도">재고 비용 및 재고 성과 척도</a>
+  <li><a href="#sec-inventory-cost-kpi" id="toc-sec-inventory-cost-kpi" class="nav-link" data-scroll-target="#sec-inventory-cost-kpi">재고 비용 및 재고 성과 척도</a>
   <ul>
   <li><a href="#재고-관리-척도" id="toc-재고-관리-척도" class="nav-link" data-scroll-target="#재고-관리-척도">재고 관리 척도</a></li>
   </ul></li>
@@ -767,12 +767,19 @@ style 재고관리 fill:#EEF
 </ul>
 </dd>
 </dl>
+<p>보다 자세한 내용은 <a href="#sec-inventory-cost-kpi" class="quarto-xref"><span>재고 비용 및 재고 성과 척도</span></a>를 참고한다.</p>
 </section>
 <section id="수요-종류" class="level3">
 <h3 class="anchored" data-anchor-id="수요-종류">수요 종류</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/demand_type.png" class="img-fluid figure-img"></p>
+<figcaption>수요 종류</figcaption>
+</figure>
+</div>
 <p>수요는 크게 독립수요와 종속수요로 구분된다.</p>
 <dl>
-<dt>독립수요</dt>
+<dt>독립수요 (Independent demand)</dt>
 <dd>
 <ul>
 <li>완제품이나 예비부품/서비스부품에 대한 수요와 같이 다른 품목 수요에 의존하지 않고 기업 외부 시장 조건에 따라 결정되는 수요 형태</li>
@@ -780,7 +787,7 @@ style 재고관리 fill:#EEF
 <li>재고관리에 있어 <strong>보충</strong>(replenishment) 개념이 사용되고, 재고가 줄게 되면 수요 대비를 위해 재고를 보충</li>
 </ul>
 </dd>
-<dt>종속수요</dt>
+<dt>종속수요 (Dependent demand)</dt>
 <dd>
 <ul>
 <li>최종제품 생산에 소요되는 각종 원자재, 부분품, 구성품 등과 같이 모품목 수요에 따라 종속되어 있는 품목 수요 형태</li>
@@ -789,11 +796,14 @@ style 재고관리 fill:#EEF
 <li>자전거(독립수요) 생산 시, 핸들, 프레임, 바퀴, 타이어 등이 종속수요가 됨</li>
 </ul></li>
 <li>재고관리에 있어 <strong>소요</strong>(requirement) 개념이 사용되고 원자재나 부분품이 쓰이는 상위단계 품목 또는 최종품목 필요에 따라 주문</li>
-<li>종속수요품목 재고 관리 시스템, MRP 시스템</li>
+<li>종속수요품목 재고 관리 시스템, <a href="0501생산계획수립.html#sec-mrp" class="quarto-xref"><span>MRP(자재소요계획)</span></a> 시스템</li>
 </ul>
 </dd>
 </dl>
-<p><br></p>
+</section>
+</section>
+<section id="재고관리-모형" class="level2">
+<h2 class="anchored" data-anchor-id="재고관리-모형">재고관리 모형</h2>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 109-4-6">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -807,10 +817,6 @@ style 재고관리 fill:#EEF
 
 </div>
 </div>
-</section>
-</section>
-<section id="재고관리-모형" class="level2">
-<h2 class="anchored" data-anchor-id="재고관리-모형">재고관리 모형</h2>
 <p>재고관리 모형은 수용 특성에 따라 <strong>확정적 재고관리 모형</strong>과 <strong>확률적 재고관리 모형</strong>으로 나눌 수 있다. 또한 특수한 경우 사용할 수 있는 <strong>단일기간 재고관리 모형</strong>이나 <strong>ABC 재고관리 모형</strong>도 있다.</p>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
@@ -889,81 +895,12 @@ end
 <dt>주요 용어 설명</dt>
 <dd>
 <ul>
-<li><p>기호 및 설명</p>
-<div class="cell" data-tbl-colwidths="[20,80]">
-<div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
-<colgroup>
-<col style="width: 20%">
-<col style="width: 80%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">기호</th>
-<th style="text-align: left;">설명</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">TC</td>
-<td style="text-align: left;">연간 재고관련 총 비용</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">D</td>
-<td style="text-align: left;">연간 수요량</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Q</td>
-<td style="text-align: left;">1회 주문량</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">EOQ 또는 Q*</td>
-<td style="text-align: left;">경제적 주문량 (최적 주문량)</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">C</td>
-<td style="text-align: left;">단위당 구입가격(생산인 경우 생산 비용)</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">S</td>
-<td style="text-align: left;">1회 주문비용 또는 준비비용</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">H</td>
-<td style="text-align: left;">연간 단위당 재고유지비용, 1단위를 1년간 재고로 유지하는데 소요되는 비용, 보통 단위당 가입가격의 몇 %로 산정, H = C x 몇 %</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">d</td>
-<td style="text-align: left;">일일 평균 수요</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">L</td>
-<td style="text-align: left;">조달 기간</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">R</td>
-<td style="text-align: left;">재주문점</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">N*</td>
-<td style="text-align: left;">연가 최적 주문 횟수</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">T*</td>
-<td style="text-align: left;">연간 최적 주문 주기</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">P</td>
-<td style="text-align: left;">연간생산율</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div></li>
+<li>기호 및 설명 | 기호 | 설명 | |——|——| | TC | 연간 재고관련 총 비용 | | D | 연간 수요량 | | Q | 1회 주문량 | | EOQ 또는 Q* | 경제적 주문량 (최적 주문량) | | C | 단위당 구입가격(생산인 경우 생산 비용) | | S | 1회 주문비용 또는 준비비용 | | H | 연간 단위당 재고유지비용, 1단위를 1년간 재고로 유지하는데 소요되는 비용, 보통 단위당 구입가격의 몇 %로 산정, H = C × 몇 % | | d | 일일 평균 수요 | | L | 조달 기간 | | R | 재주문점 | | N* | 연간 최적 주문 횟수 | | T* | 연간 최적 주문 주기 | | P | 연간 생산율 |</li>
 </ul>
 </dd>
 </dl>
-<p><br></p>
+<section id="경제적-주문량-모형eoq" class="level5">
+<h5 class="anchored" data-anchor-id="경제적-주문량-모형eoq">경제적 주문량 모형(EOQ)</h5>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 115-4-2">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -977,8 +914,6 @@ end
 
 </div>
 </div>
-<section id="경제적-주문량-모형eoq" class="level5">
-<h5 class="anchored" data-anchor-id="경제적-주문량-모형eoq">경제적 주문량 모형(EOQ)</h5>
 <p>주문량에 따른 특징은 다음과 같다.</p>
 <div class="cell" data-tbl-colwidths="[50,50]">
 <div class="cell-output-display">
@@ -1579,8 +1514,8 @@ EOQ 항목 계산
 </section>
 </section>
 </section>
-<section id="재고-비용-및-재고-성과-척도" class="level2">
-<h2 class="anchored" data-anchor-id="재고-비용-및-재고-성과-척도">재고 비용 및 재고 성과 척도</h2>
+<section id="sec-inventory-cost-kpi" class="level2">
+<h2 class="anchored" data-anchor-id="sec-inventory-cost-kpi">재고 비용 및 재고 성과 척도</h2>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
