@@ -485,10 +485,11 @@ window.Quarto = {
   <ul>
   <li><a href="#sec-invenory-management" id="toc-sec-invenory-management" class="nav-link active" data-scroll-target="#sec-invenory-management">재고관리</a>
   <ul>
+  <li><a href="#재고관리-개요" id="toc-재고관리-개요" class="nav-link" data-scroll-target="#재고관리-개요">재고관리 개요</a></li>
   <li><a href="#재고-기능" id="toc-재고-기능" class="nav-link" data-scroll-target="#재고-기능">재고 기능</a></li>
   <li><a href="#재고-삭감-효과" id="toc-재고-삭감-효과" class="nav-link" data-scroll-target="#재고-삭감-효과">재고 삭감 효과</a></li>
   <li><a href="#재고-종류" id="toc-재고-종류" class="nav-link" data-scroll-target="#재고-종류">재고 종류</a></li>
-  <li><a href="#재고-비용" id="toc-재고-비용" class="nav-link" data-scroll-target="#재고-비용">재고 비용</a></li>
+  <li><a href="#sec-inventory-cost" id="toc-sec-inventory-cost" class="nav-link" data-scroll-target="#sec-inventory-cost">재고 비용</a></li>
   <li><a href="#재고-수준-적정성-평가" id="toc-재고-수준-적정성-평가" class="nav-link" data-scroll-target="#재고-수준-적정성-평가">재고 수준 적정성 평가</a></li>
   <li><a href="#수요-종류" id="toc-수요-종류" class="nav-link" data-scroll-target="#수요-종류">수요 종류</a></li>
   </ul></li>
@@ -551,7 +552,7 @@ window.Quarto = {
 1 --- 구매관리 &amp; 외주관리 &amp; 협력사관리
 재고관리 --- 소요관리 &amp; 저장관리 &amp; 분배관리
 
-style 재고관리 stroke:#00F
+style 재고관리 fill:#EEF 
 </pre>
 </div>
 <p></p></figure><p></p>
@@ -573,11 +574,11 @@ style 재고관리 stroke:#00F
 </div>
 <section id="sec-invenory-management" class="level2">
 <h2 class="anchored" data-anchor-id="sec-invenory-management">재고관리</h2>
-<p><strong>재고</strong>란 조직에서 <font color="blue>판매를 목적으로 보관중인 물품이나 자원</font>으로, 많이 보유하면 빠르게 시장에 대응할 수 있고 재고주문비용이나 생산준비비용이 절감되지만, 재고 저장 비용이나 이자비용, 기회비용이 증가하는 문제점이 발생한다.
-
-### 재고관리 개요 
-
-**재고관리**는 기업에서 재고 수준을 어떻게 유지할 것인지, 언제 보충할 것인지(주문시점/생산시점), 주문량을 얼마로 할 것인지(1회 주문량/생산량) 등을 결정하여 <font color=" blue="">관련 비용을 최소화하면서 고객 서비스 수준을 향상시키는 활동</font>이다.</p>
+<p><strong>재고</strong>란 조직에서 <font color="blue">판매를 목적으로 보관중인 물품이나 자원</font>으로, 많이 보유하면 빠르게 시장에 대응할 수 있고 재고주문비용이나 생산준비비용이 절감되지만, 재고 저장 비용이나 이자비용, 기회비용이 증가하는 문제점이 발생한다.</p>
+<section id="재고관리-개요" class="level3">
+<h3 class="anchored" data-anchor-id="재고관리-개요">재고관리 개요</h3>
+<p><strong>재고관리</strong>는 기업에서 재고 수준을 어떻게 유지할 것인지, 언제 보충할 것인지(주문시점/생산시점), 주문량을 얼마로 할 것인지(1회 주문량/생산량) 등을 결정하여 <font color="blue">관련 비용을 최소화하면서 고객 서비스 수준을 향상시키는 활동</font>이다.</p>
+</section>
 <section id="재고-기능" class="level3">
 <h3 class="anchored" data-anchor-id="재고-기능">재고 기능</h3>
 <p>재고는 생산과 소비 사이에서 균형을 맞추는 중요한 역할을 한다. 주요 기능은 다음과 같다.</p>
@@ -585,16 +586,13 @@ style 재고관리 stroke:#00F
 <dt>재고의 기능</dt>
 <dd>
 <ol type="1">
-<li><strong>수요와 공급의 불일치 완화</strong><br>
-</li>
-</ol>
+<li><strong>수요와 공급의 불일치 완화</strong>
 <ul>
 <li>생산 속도와 고객 수요가 일치하지 않을 경우, 재고는 이를 조율하는 역할을 한다.<br>
 </li>
 <li>예) 계절별 수요 변동에 대비해 상품을 미리 생산해두는 경우.<br>
 </li>
-</ul>
-<ol start="2" type="1">
+</ul></li>
 <li><strong>생산의 안정성 확보</strong>
 <ul>
 <li>생산 라인의 중단 없이 지속적인 생산이 가능하도록 원자재 및 부품을 비축한다.<br>
@@ -658,8 +656,10 @@ style 재고관리 stroke:#00F
 </ol>
 </dd>
 </dl>
-<p>재고는 생산과 소비를 조율하는 필수 요소지만, 과도한 재고는 비용 부담으로 작용한다. 도요타 생산방식(TPS)에서 강조하는 <strong>적시 생산(JIT, Just-In-Time)</strong>은 필요한 시점에 필요한 만큼만 생산하여 <strong>재고 삭감을 통한 경영 효율화</strong>를 실현하는 대표적인 사례다.</p>
-<p><br></p>
+<p>재고는 생산과 소비를 조율하는 필수 요소지만, 과도한 재고는 비용 부담으로 작용한다. 도요타 생산방식(TPS)에서 강조하는 <a href="0101경쟁우위생산전략.html#sec-jit" class="quarto-xref"><span>JIT 생산</span></a>은 필요한 시점에 필요한 만큼만 생산하여 <strong>재고 삭감을 통한 경영 효율화</strong>를 실현하는 대표적인 사례다.</p>
+</section>
+<section id="재고-종류" class="level3">
+<h3 class="anchored" data-anchor-id="재고-종류">재고 종류</h3>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 121-3-2">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -673,15 +673,12 @@ style 재고관리 stroke:#00F
 
 </div>
 </div>
-</section>
-<section id="재고-종류" class="level3">
-<h3 class="anchored" data-anchor-id="재고-종류">재고 종류</h3>
 <p>재고는 사용 목적에 따라 다음과 같이 분류된다.</p>
 <dl>
 <dt>안전재고(Safety Inventory)</dt>
 <dd>
 <ul>
-<li>완충재고라고도 하며, 고객 서비스 차질과 부품 부족으로 인한 기회비용을 예방하기 위하여 비축하는 재고</li>
+<li><strong>완충재고</strong>라고도 하며, <font color="blue">고객 서비스 차질과 부품 부족으로 인한 <strong>기회비용을 예방</strong>하기 위하여 비축</font>하는 재고</li>
 <li>제품수요, 리드타임, 부품공급 등 불확실성에 대처하기 위한 것</li>
 <li>수요예측을 개선하며, 구매 또는 생산할 품목 리드타임을 줄여서 그 기간 동안 수요 불확실성을 감소</li>
 <li>공급 불확실성 감소</li>
@@ -691,8 +688,8 @@ style 재고관리 stroke:#00F
 <dt>예상재고(Anticipation stock)</dt>
 <dd>
 <ul>
-<li>계절재고라고도 하며, 사업상 직면하게 되는 불규칙한 수요와 공급에 대응하기 위한 재고</li>
-<li>수요 절정기에 생산수준을 많이 높이지 않기 위하여 수요가 적은 기간 동안 재고를 비축하거나 부품 납품 업체가 파악이나 생산능력 제한 때문에 위협을 받을 경우 비축한 재고</li>
+<li><strong>계절재고</strong>라고도 하며, <font color="blue">사업상 직면하게 되는 <strong>불규칙한 수요와 공급에 대응</strong>하기 위한 재고</font></li>
+<li>수요 절정기에 생산수준을 많이 높이지 않기 위하여 수요가 적은 기간 동안 재고를 비축하거나 부품 납품 업체가 파업이나 생산능력 제한 때문에 위협을 받을 경우 비축한 재고</li>
 <li>수요율과 산출률을 일치시키는 것, 그러나 수요 변동이 심하면 생산을 조절하기 어려우므로 수요를 평준화 하는 것이 바람직</li>
 <li>수요 평준화 방안으로, 비수기에 가격을 인하하고 비수기에 판매 촉진을 강화하며, 기존 제품과 수요 사이클이 정반대가 되는 신제품을 제품 라인에 추가하는 방법</li>
 </ul>
@@ -700,13 +697,13 @@ style 재고관리 stroke:#00F
 <dt>수송재고</dt>
 <dd>
 <ul>
-<li>물품 대금은 지급하였으나 아직 입고되지 않은 상태, 즉 수송 중인 상태인 재고</li>
+<li>물품 대금은 지급하였으나 아직 입고되지 않은 상태, 즉 <font color="blue">수송 중인 상태</font>인 재고</li>
 </ul>
 </dd>
 <dt>주기재고(Cycle Inventory)</dt>
 <dd>
 <ul>
-<li>연간 주문횟수를 줄여서 비용을 절감하려면 일회 주문량이 늘어나는데, 이로 인해 발생하는 재고</li>
+<li>연간 주문횟수를 줄여서 비용을 절감하려면 <font color="blue">일회 주문량이 늘어나는데, 이로 인해 발생하는 재고</font></li>
 <li>주문을 얼마나 자주 하고 한 번에 얼마나 할 것인가를 결정하는 것을 크기 결정이라 함</li>
 <li>외주 또는 생산 로트 사이즈(발주량 Q)를 줄이면 주기재고를 줄일 수 있다. 로트사이즈를 소형화하면 그에 반비례하여 발주(작업준비) 횟수가 많아지므로 발주비(작업준비비)가 증대함</li>
 <li>소로트화를 위해서는 먼저 발주(작업준비) 과정을 개선하여 발주와 작업준비에 소비되는 시간과 비용을 최소화해야 함</li>
@@ -714,58 +711,52 @@ style 재고관리 stroke:#00F
 </dd>
 </dl>
 </section>
-<section id="재고-비용" class="level3">
-<h3 class="anchored" data-anchor-id="재고-비용">재고 비용</h3>
+<section id="sec-inventory-cost" class="level3">
+<h3 class="anchored" data-anchor-id="sec-inventory-cost">재고 비용</h3>
 <p>재고 보유 시 다음과 같은 관련 비용이 발생한다.</p>
 <dl>
 <dt>재고유지비(inventory holding cost)</dt>
 <dd>
 <ul>
-<li>재고를 보유함으로써 발생하는 비용으로, 자본비용, 저장비, 냉동비 등이 해당한다.</li>
+<li>재고를 보유함으로써 발생하는 비용으로, 자본비용, 저장비, 냉동비 등이 해당</li>
 </ul>
 </dd>
 <dt>재고주문비(ordering cost)</dt>
 <dd>
 <ul>
-<li>재고 보충이나 신규로 주문할 때 소요되는 비용으로, 재고입고 비용, 검사 비용 등이 해당한다(고정비 성격).</li>
+<li>재고 보충이나 신규로 주문할 때 소요되는 비용으로, 재고입고 비용, 검사 비용 등이 해당(고정비 성격)</li>
 </ul>
 </dd>
 <dt>생산준비비</dt>
 <dd>
 <ul>
-<li>재고를 자체적으로 제작할 경우 제조하기 위해 생산 라인을 준비하는데 소요되는 비용으로, 설비 및 장치 변경 비용, 유휴시간 비용 등이 해당한다(고정비 성격).</li>
+<li>재고를 자체적으로 제작할 경우 제조하기 위해 생산 라인을 준비하는데 소요되는 비용으로, 설비 및 장치 변경 비용, 유휴시간 비용 등이 해당(고정비 성격)</li>
 </ul>
 </dd>
 <dt>재고부족비(inventory shortage cost)</dt>
 <dd>
 <ul>
-<li>재고가 부족하여 고객 주문에 대응하지 못할 때 발생하는 비용으로, 품절비용(stockout cost, 기회비용), 추후납품비용(제품인도 지연에 따른 벌과금, 생산독촉비용, 신용 상신, 신뢰도 하락 등)이 해당한다(주관적 평가).</li>
+<li>재고가 부족하여 고객 주문에 대응하지 못할 때 발생하는 비용으로, 품절비용(stockout cost, 기회비용), 추후납품비용(제품인도 지연에 따른 벌과금, 생산독촉비용, 신용 상신, 신뢰도 하락 등)이 해당(주관적 평가)</li>
 </ul>
 </dd>
 </dl>
-<p><br></p>
 </section>
 <section id="재고-수준-적정성-평가" class="level3">
 <h3 class="anchored" data-anchor-id="재고-수준-적정성-평가">재고 수준 적정성 평가</h3>
 <p>재고 수준 적정성 평가, 즉 성과 척도 방법은 다음과 같다.</p>
+<p>평균총재고가치 : - 보유하고 있는 모든 재고 단가와 수량을 곱하여 재고 가치를 합한 것으로, 시계열 분석이나 경쟁사 대비 분석을 사용</p>
 <dl>
-<dt>평균총재고가치</dt>
-<dd>
-<ul>
-<li>보유하고 있는 모든 재고 단가와 수량을 곱하여 재고 가치를 합한 것으로, 시계열 분석이나 경쟁사 대비 분석을 사용한다.</li>
-</ul>
-</dd>
 <dt>공급일수/공급주수</dt>
 <dd>
 <ul>
-<li>현재 보유하고 있는 재고가 언제 매출이 되는지 계산한 값으로 재고재산 회전일수/회전주수이다(기업이 보유한 평균 재고량과 판매수준 비율).</li>
+<li>현재 보유하고 있는 재고가 언제 매출이 되는지 계산한 값으로 재고재산 회전일수/회전주수(기업이 보유한 평균 재고량과 판매수준 비율)</li>
 <li><span class="math inline">\(공급일수 = \frac{평균총재고}{연간매출원가 (또는 연간매출액)} \times 기간\)</span></li>
 </ul>
 </dd>
 <dt>재고자산회전율</dt>
 <dd>
 <ul>
-<li>매출원가를 평균재고자산으로 나눈 것으로 재고잔산 회전속도를 나타낸다.</li>
+<li>매출원가를 평균재고자산으로 나눈 것으로 재고잔산 회전속도 의미</li>
 <li><span class="math inline">\(재고회전율 = \frac{매출비용}{평균재고 \times 단위당 원가}\)</span></li>
 </ul>
 </dd>
@@ -776,7 +767,6 @@ style 재고관리 stroke:#00F
 </ul>
 </dd>
 </dl>
-<p><br></p>
 </section>
 <section id="수요-종류" class="level3">
 <h3 class="anchored" data-anchor-id="수요-종류">수요 종류</h3>
