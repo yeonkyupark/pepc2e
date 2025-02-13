@@ -898,8 +898,8 @@ end
 <li><p>기호 및 설명</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
+<col style="width: 20%">
+<col style="width: 80%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -981,50 +981,40 @@ end
 </div>
 </div>
 <p>주문량에 따른 특징은 다음과 같다.</p>
-<div class="cell" data-tbl-colwidths="[50,50]">
-<div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
+<table class="caption-top table">
 <thead>
 <tr class="header">
-<th style="text-align: left;">주문량이.적을.경우</th>
-<th style="text-align: left;">주문량이.많을.경우</th>
+<th>주문량이 적을 경우</th>
+<th>주문량이 많을 경우</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">평균재고 감소</td>
-<td style="text-align: left;">평균재고 증가</td>
+<td>평균재고 감소</td>
+<td>평균재고 증가</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">재고 유지비용 감소</td>
-<td style="text-align: left;">재고유지비용 감소</td>
+<td>재고 유지비용 감소</td>
+<td>재고 유지비용 증가</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">연간 주문횟수 증가</td>
-<td style="text-align: left;">연간 주문 횟수 감소</td>
+<td>연간 주문횟수 증가</td>
+<td>연간 주문 횟수 감소</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">연간 주문비용 증가</td>
-<td style="text-align: left;">연간 주문비용 감소</td>
+<td>연간 주문비용 증가</td>
+<td>연간 주문비용 감소</td>
 </tr>
 </tbody>
 </table>
-</div>
-</div>
 <p>이상적인 주문량, 즉 최적주문량은 주문비용과 재고유지비용이 적정한 수준에서 결정된 수량이다.</p>
-<p><strong>경제적 주문량</strong>(EOQ,economic order quantity) 모형이란 가장 단순한 형태를 갖는 재고 모형으로 연간 재고유지비용과 연간 주문비용의 합을 최소화하는 1회 주문량(EOQ 또는 Q*)을 구하는 것으로 이 때 주문량 크기를 경제적 로트 사이즈(ELS, economic lot size)라고도 한다.</p>
-<center>
+<p><strong>경제적 주문량</strong>(EOQ,economic order quantity) 모형이란 가장 단순한 형태를 갖는 재고 모형으로 연간 재고유지비용과 연간 주문비용의 합을 최소화하는 <font color="blue">1회 주문량(EOQ 또는 Q*)을 구하는 것</font>으로 이 때 주문량 크기를 <font color="blue">경제적 로트 사이즈(ELS, economic lot size)</font>라고도 한다.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/eoq.png" class="img-fluid figure-img"></p>
 <figcaption>경제적 주문량</figcaption>
 </figure>
 </div>
-</center>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 50%">
@@ -1063,17 +1053,16 @@ end
 </tr>
 </tbody>
 </table>
-<p><br></p>
 <dl>
-<dt>모형이 성립하기 위한 전제조건</dt>
+<dt><font color="blue">모형이 성립하기 위한 전제조건</font></dt>
 <dd>
 <ol type="1">
-<li><strong>수요가 일정하고 예측 가능하다</strong>: 수요는 일정한 속도로 지속적으로 발생하며, 예측 가능한 형태로 변화한다.</li>
-<li><strong>주문 시 비용은 일정하다</strong>: 각 주문에 대해 발생하는 고정적인 비용이 존재하며, 주문당 비용은 일정하다.</li>
-<li><strong>재고 유지 비용이 일정하다</strong>: 재고를 보유하는 동안 발생하는 비용(저장비용 등)은 일정하며, 보유 재고의 양에 비례한다.</li>
-<li><strong>주문 리드 타임이 일정하다</strong>: 주문을 하고 실제로 물품이 도착하는데 걸리는 시간이 일정하다.</li>
-<li><strong>주문은 한 번에 이루어진다</strong>: 주문은 한 번에 이루어지며, 연속적인 소규모 주문이 아니라 한 번의 주문으로 전체 수요를 충족시킬 수 있다.</li>
-<li><strong>재고가 소진되기 전에 항상 새로운 주문이 이루어진다</strong>: 주문이 이루어질 때 재고가 충분히 남아 있도록 계획되며, 재고가 부족하지 않게 주문이 이루어진다.</li>
+<li><strong>수요가 일정하고 예측 가능하다</strong> 수요는 일정한 속도로 지속적으로 발생하며, 예측 가능한 형태로 변화한다.</li>
+<li><strong>주문 시 비용은 일정하다</strong> 각 주문에 대해 발생하는 고정적인 비용이 존재하며, 주문당 비용은 일정하다.</li>
+<li><strong>재고 유지 비용이 일정하다</strong> 재고를 보유하는 동안 발생하는 비용(저장비용 등)은 일정하며, 보유 재고의 양에 비례한다.</li>
+<li><strong>주문 리드 타임이 일정하다</strong> 주문을 하고 실제로 물품이 도착하는데 걸리는 시간이 일정하다.</li>
+<li><strong>주문은 한 번에 이루어진다</strong> 주문은 한 번에 이루어지며, 연속적인 소규모 주문이 아니라 한 번의 주문으로 전체 수요를 충족시킬 수 있다.</li>
+<li><strong>재고가 소진되기 전에 항상 새로운 주문이 이루어진다</strong> 주문이 이루어질 때 재고가 충분히 남아 있도록 계획되며, 재고가 부족하지 않게 주문이 이루어진다.</li>
 </ol>
 </dd>
 </dl>
@@ -1102,7 +1091,9 @@ EOQ 항목 계산
 \]</span></p>
 </div>
 </div>
-<p><br></p>
+</section>
+<section id="경제적-생산량-모형epq" class="level5">
+<h5 class="anchored" data-anchor-id="경제적-생산량-모형epq">경제적 생산량 모형(EPQ)</h5>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 124-3-3">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1116,10 +1107,7 @@ EOQ 항목 계산
 
 </div>
 </div>
-</section>
-<section id="경제적-생산량-모형epq" class="level5">
-<h5 class="anchored" data-anchor-id="경제적-생산량-모형epq">경제적 생산량 모형(EPQ)</h5>
-<p><strong>경제적 생산량</strong>(EPQ, economic production quantity) 모형이란 생산이 진행되는 동안 생산된 제품이 재고에 더해짐과 동시에 소비가 일어나서 재고가 감소하는 경우 최적 1회 생산량을 결정하는 모형이다. 자체 생산, 조달하는 물품의 총 재고비용이 최소가 되는 1회당 경제적 생산량으로 기본 EOQ와 유사하지만 주문비용 대신 작업 준비 비용을 대체하여 사용하다는 점이 다르다.</p>
+<p><strong>경제적 생산량</strong>(EPQ, economic production quantity) 모형이란 생산이 진행되는 동안 생산된 제품이 재고에 더해짐과 동시에 소비가 일어나서 재고가 감소하는 경우 최적 <font color="blue">1회 생산량을 결정</font>하는 모형이다. 자체 생산, 조달하는 물품의 총 재고비용이 최소가 되는 1회당 경제적 생산량으로 기본 EOQ와 유사하지만 <font color="blue">주문비용 대신 작업 준비 비용을 대체</font>하여 사용하다는 점이 다르다.</p>
 <dl>
 <dt>EPQ 모델 가정</dt>
 <dd>
