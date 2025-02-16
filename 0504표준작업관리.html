@@ -535,14 +535,23 @@ window.Quarto = {
 
 </div>
 </div>
-<p><code>표준시간</code>(ST, standard time)이란 - 표준 작업환경에서 - 표준작업방법으로 - 숙련된 작업자가 - 보통의 노력으로 - 성실하게 작업을 실시하는데 필요한 시간을 말한다.</p>
+<p><code>표준시간</code>(ST, standard time)이란</p>
+<ul>
+<li>표준 작업환경에서</li>
+<li>표준 작업방법으로</li>
+<li>숙련된 작업자가</li>
+<li>보통의 노력으로</li>
+<li>성실하게 작업을 실시하는데</li>
+</ul>
+<p>필요한 시간을 말한다.</p>
 <p>표준시간은 <code>정미작업시간</code>(NT, normal time)과 <code>여유시간</code>(AT, allowance time)으로 구성된다.</p>
-<p>정미(작업)시간은 <code>레이팅</code>(rating 또는 normalizing, 정상화)을 반영한다. 여기서 레이팅이란 관측대상 작업속도와 정상적인 속도를 비교, 판단하여 관측시간치를 수정하는 것이다. 레이팅은 시간분석자 자격요건 일환으로 여러 가지가 개발되어 운용되고 있다.</p>
+<p><strong>정미(작업)시간</strong>은 <code>레이팅</code>(rating 또는 normalizing, 정상화)을 반영한다. 여기서 레이팅이란 관측대상 작업속도와 정상적인 속도를 비교, 판단하여 관측시간치를 수정하는 것이다. 레이팅은 시간분석자 자격요건 일환으로 여러 가지가 개발되어 운용되고 있다.</p>
 <p><span class="math display">\[
 표준시간(ST) = 정미시간(NT) + 여유시간(AT) = 관측시간 \times(1+레이팅) + 여유시간
 \]</span></p>
 <section id="sec-rating" class="level3">
 <h3 class="anchored" data-anchor-id="sec-rating">레이팅</h3>
+<p>레이팅 기법은 다음과 같다.</p>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 127-1-13">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -565,6 +574,49 @@ window.Quarto = {
 </ul>
 </dd>
 </dl>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="`Westinghouse 레이팅` 계수(Westinghouse Rating Factor)를 구하기 위한 작업수행도 평가항목">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<code>Westinghouse 레이팅</code> 계수(Westinghouse Rating Factor)를 구하기 위한 작업수행도 평가항목
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Westinghouse 레이팅 계수(Westinghouse Rating Factor)는 작업자의 수행 능력을 평가하기 위해 아래의 네 가지 항목을 기준으로 한다.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 58%">
+<col style="width: 41%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>평가 항목</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>숙련도(Skill)</strong></td>
+<td>작업자가 작업을 얼마나 능숙하게 수행하는지를 평가함. 작업의 일관성과 효율성을 중심으로 판단함</td>
+</tr>
+<tr class="even">
+<td><strong>노력도(Effort)</strong></td>
+<td>작업자가 작업 수행에 기울이는 집중도와 성실성을 평가함. 작업 속도 및 생산성을 반영함</td>
+</tr>
+<tr class="odd">
+<td><strong>작업조건(Conditions)</strong></td>
+<td>작업 환경이 수행도에 미치는 영향을 평가함. 예: 조명, 소음, 온도 등 작업 환경 요소</td>
+</tr>
+<tr class="even">
+<td><strong>일치성(Consistency)</strong></td>
+<td>작업자가 작업을 얼마나 일정하고 반복적으로 수행하는지를 평가함. 작업 속도의 안정성과 변동성을 포함함</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <div class="callout callout-style-default callout-important no-icon callout-titled" title="평준화법을 이용한 작업시간 산출">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -576,40 +628,30 @@ window.Quarto = {
 </div>
 <div class="callout-body-container callout-body">
 <p>관측시간 대표치가 0.5분이고, 평준화 등급이 아래와 같이 계산되었을 때 정미시간을 계산하시오.</p>
-<div class="cell" data-tbl-colwidths="[25,25,25,25]">
-<div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
-<colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-</colgroup>
+<table class="caption-top table">
 <thead>
 <tr class="header">
-<th style="text-align: left;">숙련도</th>
-<th style="text-align: left;">노력도</th>
-<th style="text-align: left;">작업조건</th>
-<th style="text-align: left;">일치성</th>
+<th>숙련도</th>
+<th>노력도</th>
+<th>작업조건</th>
+<th>일치성</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">B</td>
-<td style="text-align: left;">C</td>
-<td style="text-align: left;">C</td>
-<td style="text-align: left;">C</td>
+<td><strong>B</strong></td>
+<td><strong>C</strong></td>
+<td><strong>C</strong></td>
+<td><strong>C</strong></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">0.08</td>
-<td style="text-align: left;">0.02</td>
-<td style="text-align: left;">0.02</td>
-<td style="text-align: left;">0.01</td>
+<td><strong>0.08</strong></td>
+<td><strong>0.02</strong></td>
+<td><strong>0.02</strong></td>
+<td><strong>0.01</strong></td>
 </tr>
 </tbody>
 </table>
-</div>
-</div>
 <hr>
 <p><span class="math display">\[
 정미시간(NT) = 관측시간 대표치 \times (1 + 평준화계수합) = 0.5 \times (1 + 0.13) = 0.565
@@ -658,27 +700,6 @@ window.Quarto = {
 <li>시간연구자 레이팅 훈련용으로 널리 사용되는 SAM(society for advancement of management) 레이팅 필름에 의한 공정한 1일 작업량을 선정하는 방법</li>
 </ul>
 </dd>
-<dt><code>Westinghouse 레이팅</code> 계수(Westinghouse Rating Factor)를 구하기 위한 작업수행도 평가항목</dt>
-<dd>
-<ol type="1">
-<li><strong>작업 속도 (Work Speed)</strong>
-<ul>
-<li>작업자가 주어진 시간을 기준으로 얼마나 빠르게 작업을 수행했는지를 평가한다. 빠른 작업 속도는 높은 레이팅 계수에 기여한한다.</li>
-</ul></li>
-<li><strong>작업의 정확성 (Work Accuracy)</strong>
-<ul>
-<li>작업이 정확하고 품질이 유지되었는지 평가한다. 정확한 작업은 높은 평가를 받을 수 있다.</li>
-</ul></li>
-<li><strong>작업의 일관성 (Work Consistency)</strong>
-<ul>
-<li>동일한 작업을 여러 번 수행했을 때 그 결과가 일관되게 유지되는지를 평가한다. 일관성 있는 작업은 높은 레이팅 계수를 이끌어낸다.</li>
-</ul></li>
-<li><strong>작업의 노력도 (Work Effort)</strong>
-<ul>
-<li>작업자가 작업을 수행하는 데 투입한 물리적 또는 정신적 노력을 평가한다. 더 많은 노력이 투입된 작업은 높은 레이팅 계수를 받을 수 있다.</li>
-</ul></li>
-</ol>
-</dd>
 </dl>
 </section>
 <section id="sec-allowance-time" class="level3">
@@ -705,21 +726,35 @@ window.Quarto = {
 <pre class="mermaid mermaid-js">flowchart LR
 
 00["여유"]
-01["일반여유"]
+
+subgraph s2[특수여유]
+direction LR
 02["특수여유"]
-03["장려여유"]
-11["개인여유(용무여유)"]
-12["피로여유"]
-13["작업여유"]
-14["관리여유(직장여유)"]
 21["기계간섭여유"]
 22["조여유"]
 23["소로트여유"]
 24["긴사이클여유"]
+end
 
-00 --- 01 &amp; 02 &amp; 03
-01 --- 11 &amp; 12 &amp; 13 &amp; 14
+subgraph s3[장려여유]
+direction LR
+03["장려여유"]
+end
+
+subgraph s1[일반여유]
+direction LR
+01["일반여유"]
+11["개인여유(용무여유)"]
+12["피로여유"]
+13["작업여유"]
+14["관리여유(직장여유)"]
+end
+
+
 02 --- 21 &amp; 22 &amp; 23 &amp; 24
+01 --- 11 &amp; 12 &amp; 13 &amp; 14
+00 --- 03 &amp; 02 &amp; 01
+
 </pre>
 </div>
 <p></p></figure><p></p>
@@ -763,14 +798,14 @@ window.Quarto = {
 <dt><code>외경법</code></dt>
 <dd>
 <ul>
-<li>정미시간에 대한 비율을 여유율로 사용함</li>
+<li><strong>정미시간에 대한 비율</strong>을 여유율로 사용함</li>
 <li><span class="math inline">\(여유율(A) = (여유시간/정미시간)\times100 = (AT/NT)\times100(\%)\)</span></li>
 </ul>
 </dd>
 <dt><code>내경법</code></dt>
 <dd>
 <ul>
-<li>실동시간에 대한 비율을 여유율로 사용함</li>
+<li><strong>실동시간에 대한 비율</strong>을 여유율로 사용함</li>
 <li><span class="math inline">\(여유율(A) = (여유시간/실동시간)\times100 = \frac{여유시간}{(정미시간+여유시간)}\times100 = \frac{AT}{NT+AT}\times100(\%)\)</span></li>
 </ul>
 </dd>
@@ -865,15 +900,11 @@ window.Quarto = {
 <dl>
 <dt>공적표준</dt>
 <dd>
-<blockquote class="blockquote">
-<p>국제표준화기구(ISO), 국제전기표준회의(IEC), 국제전기통합연합(ITU) 등 국제 기관이 제정하는 표준</p>
-</blockquote>
+국제표준화기구(ISO), 국제전기표준회의(IEC), 국제전기통합연합(ITU) 등 국제 기관이 제정하는 표준
 </dd>
 <dt>사실상 표준</dt>
 <dd>
-<blockquote class="blockquote">
-<p>관습, 관례, 제품이나 체계가 시장이나 일반 대중에게 독점적 지위를 가짐으로써 생성된 표준</p>
-</blockquote>
+관습, 관례, 제품이나 체계가 시장이나 일반 대중에게 독점적 지위를 가짐으로써 생성된 표준
 </dd>
 </dl>
 <table class="caption-top table">
