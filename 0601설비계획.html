@@ -479,7 +479,7 @@ window.Quarto = {
     <h2 id="toc-title">목차</h2>
    
   <ul>
-  <li><a href="#설비종합효율" id="toc-설비종합효율" class="nav-link active" data-scroll-target="#설비종합효율">설비종합효율</a>
+  <li><a href="#sec-oee" id="toc-sec-oee" class="nav-link active" data-scroll-target="#sec-oee">설비종합효율</a>
   <ul>
   <li><a href="#관련-용어" id="toc-관련-용어" class="nav-link" data-scroll-target="#관련-용어">관련 용어</a></li>
   <li><a href="#ooe-산출" id="toc-ooe-산출" class="nav-link" data-scroll-target="#ooe-산출">OOE 산출</a></li>
@@ -514,8 +514,8 @@ window.Quarto = {
 </header>
 
 
-<section id="설비종합효율" class="level2">
-<h2 class="anchored" data-anchor-id="설비종합효율">설비종합효율</h2>
+<section id="sec-oee" class="level2">
+<h2 class="anchored" data-anchor-id="sec-oee">설비종합효율</h2>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 97-3-2, 109-3-5, 127-3-3">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -529,48 +529,44 @@ window.Quarto = {
 
 </div>
 </div>
-<p><strong>설비종합효율</strong>(Overall Equipment Effectiveness, OEE)은 실행 예정 기간 동안 제조 작업이 최대 잠재력과 비교하여 얼마나 잘 활용되는지(시설, 시간 및 재료)를 측정한 값이다. 이는 실제로 생산적인 제조 시간 비율을 식별한다. 100% OEE는 최대 속도(100% 성능)로 중단 없이(100% 가용성) 좋은 부품만 생산(100% 품질)한다는 의미이다. <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p><strong>설비종합효율</strong>(Overall Equipment Effectiveness, OEE)은 실행 예정 기간 동안 제조 작업이 <font color="blue">최대 잠재력과 비교하여 얼마나 잘 활용되는지</font>(시설, 시간 및 재료)를 측정한 값이다. 이는 실제로 <font color="blue">생산적인 제조 시간 비율</font>을 식별한다. 100% OEE는 최대 속도(100% 성능)로 중단 없이(100% 가용성) 좋은 부품만 생산(100% 품질)한다는 의미이다. <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 <section id="관련-용어" class="level3">
 <h3 class="anchored" data-anchor-id="관련-용어">관련 용어</h3>
+<p>조업시간 : - 1일 근무시간을 기초로 하루 시업 시간과 종업 시간 사이 총시간으로 휴식, 식사, 수주물량 부족 등 <strong>계획 정지시간을 포함</strong></p>
 <dl>
-<dt>조업시간</dt>
-<dd>
-<ul>
-<li>1일 근무시간을 기초로 하루 시업 시간과 종업 시간 사이 총시간으로 휴식, 식사, 수주물량 부족 등 <strong>계획 정지시간을 포함</strong>한다.</li>
-</ul>
-</dd>
 <dt>부하시간</dt>
 <dd>
 <ul>
-<li>조업시간에 기업이 인정하는 식사시간, 휴식시간을 제외하고 설비가 실제 가동되어야 할 시간이다.</li>
+<li>조업시간에 기업이 인정하는 식사시간, 휴식시간을 제외하고 설비가 실제 가동되어야 할 시간</li>
 <li><span class="math inline">\(부하시간 = 조업시간 - 계획정지시간\)</span></li>
 </ul>
 </dd>
 <dt>가동시간</dt>
 <dd>
 <ul>
-<li>설비 부하시간에서 정지시간을 제외한 시간으로 설비가 실제 가동한 시간이다. 정지시간이란 비계획적으로 설비가 일정시간(예 5분) 이상 가동하지 않는 시간이다.</li>
+<li>설비 부하시간에서 정지시간을 제외한 시간으로 설비가 실제 가동한 시간</li>
+<li>정지시간이란 비계획적으로 설비가 일정시간(예 5분) 이상 가동하지 않는 시간</li>
 <li><span class="math inline">\(가동시간 = 부하시간 - 정지시간\)</span></li>
 </ul>
 </dd>
 <dt>실가동시간</dt>
 <dd>
 <ul>
-<li>설비가 현재 성능으로 얼마나 제품 생산에 기여했는지를 나타내는 시간이다.</li>
+<li>설비가 현재 성능으로 얼마나 제품 생산에 기여했는지를 나타내는 시간</li>
 <li><span class="math inline">\(실가동시간 = 생산량 \times 실제 cycle time\)</span></li>
 </ul>
 </dd>
 <dt>성능가동시간</dt>
 <dd>
 <ul>
-<li>설비 도입 시 표준 성능으로 얼마나 제품을 생산 가능한지를 나타내는 시간이다.</li>
+<li>설비 도입 시 표준 성능으로 얼마나 제품을 생산 가능한지를 나타내는 시간</li>
 <li><span class="math inline">\(성능가동시간 = 생산량 \times 이론 cycle time\)</span></li>
 </ul>
 </dd>
 <dt>가치가동시간</dt>
 <dd>
 <ul>
-<li>설비 도입 시 성은으로 얼마나 양품을 생산했는지를 나타내는 시간이다.</li>
+<li>설비 도입 시 성은으로 얼마나 양품을 생산했는지를 나타내는 시간</li>
 <li><span class="math inline">\(가치가동시간 = 양품수 \times 이론 cycle time\)</span></li>
 </ul>
 </dd>
@@ -579,7 +575,7 @@ window.Quarto = {
 <section id="ooe-산출" class="level3">
 <h3 class="anchored" data-anchor-id="ooe-산출">OOE 산출</h3>
 <p>설비종합효율은 기업에서 규정한 부하시간 중 설비 고유 성능을 가지고 부가가치를 만들어 낸 시간 비율을 뜻한다.</p>
-<p><span class="math display">\[설비종합설비 = 시간 가동률 \times 성능 \times 가동률 양품률\]</span></p>
+<p><span class="math display">\[\text{설비종합설비 = 시간 가동률 \times 성능 \times 가동률 양품률}\]</span></p>
 <dl>
 <dt>시간가동률</dt>
 <dd>
