@@ -488,6 +488,8 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="sec-work-priority" class="level2">
+<h2 class="anchored" data-anchor-id="sec-work-priority">작업순서</h2>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 97-1-12, 106-2-6, 121-3-6">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -501,8 +503,6 @@ ul.task-list li input[type="checkbox"] {
 
 </div>
 </div>
-<section id="sec-work-priority" class="level2">
-<h2 class="anchored" data-anchor-id="sec-work-priority">작업순서</h2>
 <p>주문생산은 다양한 일감이 상이한 순서로 작업하므로 작업순서 결정과 부하 결정문제가 생산성에 영향을 미친다. 통상 공장에서는 작업 순서가 동일할 경우를 대비하여 서너개의 작업 우선순위 규칙(Priority rule), 작업배정규칙(Dispatching rule)을 함께 사용한다.</p>
 <p>우선순위 규칙 평가 기준은 다음과 같다.</p>
 <ul>
@@ -549,7 +549,7 @@ ul.task-list li input[type="checkbox"] {
 </table>
 <p>작업순서 결정하는 방법은 크게 지역특성을 고려한 방법과 전체특성을 고려한 방법이 있다. <strong>지역특성 순위규칙</strong>(local sequencing rule)은 현재 작업장에서 주어진 상황을 고려하여 작업순서를 결정하는 방식이고 <strong>전체특성 순위규칙</strong>(global sequencing rule)은 후속 잔여 작업장 특성까지 고려하여 작업우선순위를 결정하는 방식이다.</p>
 <section id="단일설비-기준" class="level3">
-<h3 class="anchored" data-anchor-id="단일설비-기준">단일설비 기준</h3>
+<h3 class="anchored">단일설비 기준</h3>
 <p><font color="blue"><strong>단일 설비 일정 계획 기준</strong></font> 다음과 같은 작업 순서 결정 방식이 있다.</p>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
@@ -608,77 +608,64 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<div class="cell">
-<div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
+<table class="caption-top table">
+<caption>주문 우선순위 분석표<br>
+—-</caption>
 <colgroup>
-<col style="width: 12%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 12%">
 <col style="width: 8%">
+<col style="width: 12%">
+<col style="width: 15%">
 <col style="width: 14%">
-<col style="width: 8%">
+<col style="width: 13%">
+<col style="width: 9%">
+<col style="width: 13%">
+<col style="width: 13%">
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;">주문제품</th>
-<th style="text-align: left;">주문도착순서</th>
-<th style="text-align: left;">잔여처리일수</th>
-<th style="text-align: left;">잔여납기일수</th>
-<th style="text-align: left;">잔여공정수</th>
-<th style="text-align: left;">CR</th>
-<th style="text-align: left;">여유납기일수</th>
-<th style="text-align: left;">STP/OP</th>
+<th>주문제품</th>
+<th>주문도착순서</th>
+<th>잔여처리일수(C)</th>
+<th>잔여납기일수(B)</th>
+<th>잔여공정수(D)</th>
+<th>CR (C/B)</th>
+<th>여유납기일수(C-B)</th>
+<th>STP/OP (CR/D)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">수식</td>
-<td style="text-align: left;">A</td>
-<td style="text-align: left;">B</td>
-<td style="text-align: left;">C</td>
-<td style="text-align: left;">D</td>
-<td style="text-align: left;">E = C/B</td>
-<td style="text-align: left;">F = C-B</td>
-<td style="text-align: left;">G = F/D</td>
+<td><strong>가: 책장</strong></td>
+<td>1</td>
+<td>10</td>
+<td>25</td>
+<td>6</td>
+<td>2.5</td>
+<td>15</td>
+<td>2.5</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">가: 책장</td>
-<td style="text-align: left;">1</td>
-<td style="text-align: left;">10</td>
-<td style="text-align: left;">25</td>
-<td style="text-align: left;">6</td>
-<td style="text-align: left;">2.5</td>
-<td style="text-align: left;">15</td>
-<td style="text-align: left;">2.5</td>
+<td><strong>나: 책상</strong></td>
+<td>2</td>
+<td>20</td>
+<td>22</td>
+<td>4</td>
+<td>1.1</td>
+<td>2</td>
+<td>0.5</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">나: 책상</td>
-<td style="text-align: left;">2</td>
-<td style="text-align: left;">20</td>
-<td style="text-align: left;">22</td>
-<td style="text-align: left;">4</td>
-<td style="text-align: left;">1.1</td>
-<td style="text-align: left;">2</td>
-<td style="text-align: left;">0.5</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">다: 테이블</td>
-<td style="text-align: left;">3</td>
-<td style="text-align: left;">15</td>
-<td style="text-align: left;">21</td>
-<td style="text-align: left;">2</td>
-<td style="text-align: left;">1.4</td>
-<td style="text-align: left;">6</td>
-<td style="text-align: left;">3</td>
+<td><strong>다: 테이블</strong></td>
+<td>3</td>
+<td>15</td>
+<td>21</td>
+<td>2</td>
+<td>1.4</td>
+<td>6</td>
+<td>3.0</td>
 </tr>
 </tbody>
 </table>
-</div>
-</div>
-<hr>
 <dl>
 <dt>선착우선(FCFS)</dt>
 <dd>
@@ -780,63 +767,66 @@ ul.task-list li input[type="checkbox"] {
 <li>평균 진행시간 최소 및 평균 납기 지연 최소의 규칙을 판정하시오.</li>
 </ol>
 <hr>
-<div class="cell">
-<div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
-<caption>우선순위 규칙에 따른 작업 평가</caption>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section"></h2>
+<table class="caption-top table">
+<caption>우선순위 규칙별 작업 평가</caption>
 <colgroup>
-<col style="width: 17%">
+<col style="width: 23%">
+<col style="width: 27%">
+<col style="width: 19%">
+<col style="width: 15%">
 <col style="width: 13%">
-<col style="width: 31%">
-<col style="width: 28%">
-<col style="width: 8%">
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;">우선순위_규칙</th>
-<th style="text-align: left;">작업순서</th>
-<th style="text-align: left;">평균_진행시간</th>
-<th style="text-align: left;">평균_납기</th>
-<th style="text-align: right;">지연일수</th>
+<th>우선순위 규칙</th>
+<th>작업순서</th>
+<th>평균 진행시간</th>
+<th>평균 납기</th>
+<th>지연일수</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">(1) 선착순</td>
-<td style="text-align: left;">A－B－C－D－E</td>
-<td style="text-align: left;">(10＋25＋37＋51＋67) / 5 = 38.0</td>
-<td style="text-align: left;">(0＋0＋8＋21＋22) / 5 = 10.2</td>
-<td style="text-align: right;">10.2</td>
+<td><strong>(1) 선착순</strong></td>
+<td>A－B－C－D－E</td>
+<td>(10＋25＋37＋51＋67) / 5 = 38.0</td>
+<td>(0＋0＋8＋21＋22) / 5 = 10.2</td>
+<td>10.2</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">(2) 최소 작업시간</td>
-<td style="text-align: left;">A－C－D－B－E</td>
-<td style="text-align: left;">(10＋22＋36＋51＋67) / 5 = 37.2</td>
-<td style="text-align: left;">(0＋0＋6＋26＋22) / 5 = 10.8</td>
-<td style="text-align: right;">10.8</td>
+<td><strong>(2) 최소 작업시간</strong></td>
+<td>A－C－D－B－E</td>
+<td>(10＋22＋36＋51＋67) / 5 = 37.2</td>
+<td>(0＋0＋6＋26＋22) / 5 = 10.8</td>
+<td>10.8</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">(3) 최소 납기</td>
-<td style="text-align: left;">A－B－C－D－E</td>
-<td style="text-align: left;">(10＋25＋37＋51＋67) / 5 = 38.0</td>
-<td style="text-align: left;">(0＋0＋8＋21＋22) / 5 = 10.2</td>
-<td style="text-align: right;">10.2</td>
+<td><strong>(3) 최소 납기</strong></td>
+<td>A－B－C－D－E</td>
+<td>(10＋25＋37＋51＋67) / 5 = 38.0</td>
+<td>(0＋0＋8＋21＋22) / 5 = 10.2</td>
+<td>10.2</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">(4) 최소 여유시</td>
-<td style="text-align: left;">A－B－D－C－E</td>
-<td style="text-align: left;">(10＋25＋39＋51＋67) / 5 = 38.4</td>
-<td style="text-align: left;">(0＋0＋9＋22＋22) / 5 = 10.6</td>
-<td style="text-align: right;">10.6</td>
+<td><strong>(4) 최소 여유시</strong></td>
+<td>A－B－D－C－E</td>
+<td>(10＋25＋39＋51＋67) / 5 = 38.4</td>
+<td>(0＋0＋9＋22＋22) / 5 = 10.6</td>
+<td>10.6</td>
 </tr>
 </tbody>
 </table>
-</div>
-</div>
+</section>
 </div>
 </div>
 <p><font color="blue"><strong>n개 작업을 2대 기계에서 작업할 경우</strong></font> 우선 순위 규칙은 <a href="#sec-johnson-rule" class="quarto-xref"><span>존슨법</span></a>(Johnson’s rule)을 적용할 수 있다.</p>
-<p><br></p>
+</section>
+<section id="다중설비-기준" class="level3">
+<h3 class="anchored" data-anchor-id="다중설비-기준">다중설비 기준</h3>
+<section id="sec-johnson-rule" class="level4">
+<h4 class="anchored" data-anchor-id="sec-johnson-rule">존슨법</h4>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 100-3-5, 103-1-11">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -850,11 +840,6 @@ ul.task-list li input[type="checkbox"] {
 
 </div>
 </div>
-</section>
-<section id="다중설비-기준" class="level3">
-<h3 class="anchored" data-anchor-id="다중설비-기준">다중설비 기준</h3>
-<section id="sec-johnson-rule" class="level4">
-<h4 class="anchored" data-anchor-id="sec-johnson-rule">존슨법</h4>
 <p>존슨법은 두 개 사업장을 거치는 경우 또는 2대 기계에서 작업을 할 경우 우선순위를 결정하는 방법이다.</p>
 <p>다음과 같은 가정과 기준으로 수행한다.</p>
 <ul>
@@ -872,55 +857,52 @@ ul.task-list li input[type="checkbox"] {
 <li>작업장별 작업 시간치를 표에 기입</li>
 <li>작업장 1, 2에 관계없이 처리시간이 가장 짧은 작업(<strong>최소 작업시간</strong>) 선택
 <ul>
-<li><font color="blue">가장 짧은 처리 시간이 작업장1에서 발생하면 그 작업을 가장 앞 순위에 놓고, 작업장2에서 발생하면 가장 뒤 순위에 놓음</font></li>
+<li><font color="blue">가장 짧은 처리 시간이 작업장1에서 발생하면 그 작업을 가장 앞 순위에 놓고,</font></li>
+<li><font color="blue">작업장2에서 발생하면 가장 뒤 순위에 놓음</font></li>
 </ul></li>
 <li>2.에서 순위가 결정된 작업은 고려 대상에서 제외</li>
 <li>모든 작업 순서가 결정될 때까지 2와 3을 반복</li>
 </ol>
-<div class="cell">
-<div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
+<table class="caption-top table">
 <thead>
 <tr class="header">
-<th style="text-align: left;">작업</th>
-<th style="text-align: right;">작업1(일)</th>
-<th style="text-align: right;">작업2(일)</th>
+<th>작업</th>
+<th>작업 1(일)</th>
+<th>작업 2(일)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">A</td>
-<td style="text-align: right;">5</td>
-<td style="text-align: right;">4</td>
+<td><strong>A</strong></td>
+<td>5</td>
+<td>4</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">B</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">3</td>
+<td><strong>B</strong></td>
+<td>2</td>
+<td>3</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">C</td>
-<td style="text-align: right;">6</td>
-<td style="text-align: right;">5</td>
+<td><strong>C</strong></td>
+<td>6</td>
+<td>5</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">D</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">4</td>
+<td><strong>D</strong></td>
+<td>3</td>
+<td>4</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">E</td>
-<td style="text-align: right;">6</td>
-<td style="text-align: right;">7</td>
+<td><strong>E</strong></td>
+<td>6</td>
+<td>7</td>
 </tr>
 </tbody>
 </table>
-</div>
-</div>
 <p>존슨법 규칙에 따라 작업 순서는 [B-D-E-C-A]로 결정된다. 작업순서에 따른 작업시간과 유휴 시간은 다음과 같다.</p>
 <ul>
-<li>작업장1: B(2) + D(3) + E(6) +C6) + A(5) = 22(일)</li>
-<li>작업장2: 유휴(2) + B(3) + D(4) + 유휴(2) + E(7) + C(5) + A(4) = 27(일)</li>
+<li>작업장1 B(2) + D(3) + E(6) +C6) + A(5) = 22(일)</li>
+<li>작업장2 유휴(2) + B(3) + D(4) + 유휴(2) + E(7) + C(5) + A(4) = 27(일)</li>
 </ul>
 <p>작업장1은 22일만에 작업 완료되지만 작업장2가 27일 완료되므로 5일간의 유휴시간이 발생한다. 작업장2는 작업장1에서 완료되어야 진행할 수 있어 4일간의 유휴일이 발생한다.</p>
 </section>
@@ -937,112 +919,104 @@ Petrov방법
 </div>
 <div class="callout-body-container callout-body">
 <p>A, B, C3대의 기계를 거쳐야 하는 5개 작업(J1 ~ J5)의 기계별 가공시간이 다음 표와 같을 때 Petrov방법을 사용하여 총 처리시간을 최소화(SPT법)하는 가공순서와 이때의 총 처리시간을 구하시오.</p>
-<div class="cell">
-<div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
+<table class="caption-top table">
 <thead>
 <tr class="header">
-<th style="text-align: left;">구분</th>
-<th style="text-align: right;">A</th>
-<th style="text-align: right;">B</th>
-<th style="text-align: right;">C</th>
+<th>구분</th>
+<th>A</th>
+<th>B</th>
+<th>C</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">J1</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">1</td>
+<td><strong>J1</strong></td>
+<td>4</td>
+<td>2</td>
+<td>1</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">J2</td>
-<td style="text-align: right;">7</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">1</td>
+<td><strong>J2</strong></td>
+<td>7</td>
+<td>1</td>
+<td>1</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">J3</td>
-<td style="text-align: right;">5</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">3</td>
+<td><strong>J3</strong></td>
+<td>5</td>
+<td>2</td>
+<td>3</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">J4</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">9</td>
+<td><strong>J4</strong></td>
+<td>3</td>
+<td>0</td>
+<td>9</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">J5</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">2</td>
+<td><strong>J5</strong></td>
+<td>3</td>
+<td>2</td>
+<td>2</td>
 </tr>
 </tbody>
 </table>
-</div>
-</div>
 <p>Petrov방법은 존슨규칙을 확장한 방법으로 여러 개 작업을 여려 개 작업장에서 이루어지는 경우 우선순위를 결정한다.</p>
 <p>위 문제처럼 작업장이 3개, A,B,C인 경우 A-B를 합쳐서 가상 작업장 하나를, B-C를 합쳐서 가상 작업장 하나를 만들어 존슨규칙을 적용한다. 참고로, 작업장이 A,B,C,D 4개로 구성된 경우 A-B, C-D를 각각 합쳐서 2개 가상 작업장을 만들어 존슨규칙을 적용한다.</p>
-<div class="cell">
-<div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
+<table class="caption-top table">
 <thead>
 <tr class="header">
-<th style="text-align: left;">구분</th>
-<th style="text-align: right;">A</th>
-<th style="text-align: right;">B</th>
-<th style="text-align: right;">C</th>
-<th style="text-align: right;">A-B</th>
-<th style="text-align: right;">B-C</th>
+<th>구분</th>
+<th>A</th>
+<th>B</th>
+<th>C</th>
+<th>A-B</th>
+<th>B-C</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">J1</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">6</td>
-<td style="text-align: right;">3</td>
+<td><strong>J1</strong></td>
+<td>4</td>
+<td>2</td>
+<td>1</td>
+<td>6</td>
+<td>3</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">J2</td>
-<td style="text-align: right;">7</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">8</td>
-<td style="text-align: right;">2</td>
+<td><strong>J2</strong></td>
+<td>7</td>
+<td>1</td>
+<td>1</td>
+<td>8</td>
+<td>2</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">J3</td>
-<td style="text-align: right;">5</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">7</td>
-<td style="text-align: right;">5</td>
+<td><strong>J3</strong></td>
+<td>5</td>
+<td>2</td>
+<td>3</td>
+<td>7</td>
+<td>5</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">J4</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">9</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">9</td>
+<td><strong>J4</strong></td>
+<td>3</td>
+<td>0</td>
+<td>9</td>
+<td>3</td>
+<td>9</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">J5</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">5</td>
-<td style="text-align: right;">4</td>
+<td><strong>J5</strong></td>
+<td>3</td>
+<td>2</td>
+<td>2</td>
+<td>5</td>
+<td>4</td>
 </tr>
 </tbody>
 </table>
-</div>
-</div>
 <p>A-B, B-C 작업장을 기준으로 작업 순서를 결정하면 다음과 같다.</p>
 <ul>
 <li>J4 → J3 → J5 → J1 → J2
