@@ -507,11 +507,11 @@ window.Quarto = {
   <li><a href="#능력비율cr-capacity-ratio" id="toc-능력비율cr-capacity-ratio" class="nav-link" data-scroll-target="#능력비율cr-capacity-ratio">능력비율(CR, capacity ratio)</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#sec-mps" id="toc-sec-mps" class="nav-link" data-scroll-target="#sec-mps">MPS(기준일정계획)</a>
+  <li><a href="#sec-mps" id="toc-sec-mps" class="nav-link" data-scroll-target="#sec-mps">MPS</a>
   <ul>
   <li><a href="#sec-rccp" id="toc-sec-rccp" class="nav-link" data-scroll-target="#sec-rccp">RCCP</a></li>
   </ul></li>
-  <li><a href="#sec-mrp" id="toc-sec-mrp" class="nav-link" data-scroll-target="#sec-mrp">MRP(자재소요계획)</a>
+  <li><a href="#sec-mrp" id="toc-sec-mrp" class="nav-link" data-scroll-target="#sec-mrp">MRP</a>
   <ul>
   <li><a href="#sec-crp" id="toc-sec-crp" class="nav-link" data-scroll-target="#sec-crp">CRP</a></li>
   <li><a href="#mrp-입력물" id="toc-mrp-입력물" class="nav-link" data-scroll-target="#mrp-입력물">MRP 입력물</a></li>
@@ -585,9 +585,9 @@ window.Quarto = {
 <ul>
 <li><a href="#sec-app" class="quarto-xref"><span>APP</span></a>, aggregate production planning</li>
 <li><a href="#sec-rrp" class="quarto-xref"><span>RRP</span></a>, resource requirements planning</li>
-<li><a href="#sec-mps" class="quarto-xref"><span>MPS(기준일정계획)</span></a>, master production schedule</li>
+<li><a href="#sec-mps" class="quarto-xref"><span>MPS</span></a>, master production schedule</li>
 <li><a href="#sec-rccp" class="quarto-xref"><span>RCCP</span></a>, rough cut capability planning</li>
-<li><a href="#sec-mrp" class="quarto-xref"><span>MRP(자재소요계획)</span></a>, material requirements planning</li>
+<li><a href="#sec-mrp" class="quarto-xref"><span>MRP</span></a>, material requirements planning</li>
 <li><a href="#sec-crp" class="quarto-xref"><span>CRP</span></a>, capacity requirements planning</li>
 </ul>
 </div>
@@ -891,20 +891,27 @@ window.Quarto = {
 <div>
 <pre class="mermaid mermaid-js">flowchart LR
 00[총괄생산계획 전략]
+
+subgraph s01[공급능력에 의한 전략]
+direction LR
 01[공급능력에 의한 전략]
 10[추종 전략]
 20[평준화 전략]
 30[혼합 전략]
-
 10 --- 101["고용수준 변동 전략"] &amp; 102["생산율 변동 전략"]
 20 --- 201["재고수준 변동 전략"]
+end
 
+subgraph s02[수요변동동에 의한 전략]
+direction LR
 02[수요변동에 의한 전략]
 21[가격 조정]
 22[광고에 의한 수요조정]
 23[추후 납품을 통한 수요조정]
 24[새로운 수요 창출]
+end
 
+01 --- 10 &amp; 20 &amp; 30
 02 --- 21 &amp; 22 &amp; 23 &amp; 24
 
 00 --- 01 &amp; 02
@@ -1069,10 +1076,14 @@ RRP는 주로 <strong>생산 계획</strong>을 바탕으로 필요한 자원을
 </dd>
 </dl>
 <ol type="1">
-<li><strong>자원 부족 방지</strong> 필요한 자원이 부족하지 않도록 미리 계획하여 생산 과정에 차질이 없게 한다.</li>
-<li><strong>자원 과잉 방지</strong> 과잉 자원을 예측하고 불필요한 비용을 절감할 수 있도록 한다.</li>
-<li><strong>자원 최적화</strong> 생산 활동에 필요한 자원을 효율적으로 배분하고, 자원의 낭비를 줄인다.</li>
-<li><strong>생산 계획과 자원 계획의 일치</strong> 생산 계획을 수립할 때 필요한 자원의 수요를 정확히 예측하고, 그에 맞춰 자원을 조달할 수 있도록 한다.</li>
+<li><strong>자원 부족 방지</strong><br>
+필요한 자원이 부족하지 않도록 미리 계획하여 생산 과정에 차질이 없게 한다.</li>
+<li><strong>자원 과잉 방지</strong><br>
+과잉 자원을 예측하고 불필요한 비용을 절감할 수 있도록 한다.</li>
+<li><strong>자원 최적화</strong><br>
+생산 활동에 필요한 자원을 효율적으로 배분하고, 자원의 낭비를 줄인다.</li>
+<li><strong>생산 계획과 자원 계획의 일치</strong><br>
+생산 계획을 수립할 때 필요한 자원의 수요를 정확히 예측하고, 그에 맞춰 자원을 조달할 수 있도록 한다.</li>
 </ol>
 <dl>
 <dt>RRP의 주요 요소</dt>
@@ -1081,53 +1092,73 @@ RRP는 다양한 자원에 대한 요구 사항을 계획하고 관리하는 과
 </dd>
 </dl>
 <ol type="1">
-<li><p><strong>자원 수요 예측</strong> 생산 계획에 따라 <strong>어떤 자원이 언제 필요한지</strong> 예측한다. 예를 들어, 특정 제품을 생산하려면 어떤 원자재가 필요하고, 그 원자재가 언제 조달되어야 하는지를 파악한다.</p></li>
-<li><p><strong>자원 가용성 분석</strong> 현재 보유한 자원과 필요한 자원을 비교하여 <strong>자원의 가용성</strong>을 파악한다. 예를 들어, 현재 재고로 충분히 대응할 수 있는지, 아니면 추가로 자원을 확보해야 하는지를 결정한다.</p></li>
-<li><p><strong>자원 조달 계획</strong> 자원이 부족할 경우 이를 확보할 방법을 계획한다. 외부 공급업체와의 협력을 통해 자원을 조달하거나, 생산 능력을 확장할 필요가 있을 수 있다.</p></li>
-<li><p><strong>자원 할당 및 조정</strong> 생산 일정에 맞춰 자원을 <strong>효율적으로 배분</strong>하고, 필요한 자원이 적시에 준비될 수 있도록 조정한다.</p></li>
+<li><strong>자원 수요 예측</strong><br>
+생산 계획에 따라 <strong>어떤 자원이 언제 필요한지</strong> 예측한다. 예를 들어, 특정 제품을 생산하려면 어떤 원자재가 필요하고, 그 원자재가 언제 조달되어야 하는지를 파악한다.</li>
+<li><strong>자원 가용성 분석</strong><br>
+현재 보유한 자원과 필요한 자원을 비교하여 <strong>자원의 가용성</strong>을 파악한다. 예를 들어, 현재 재고로 충분히 대응할 수 있는지, 아니면 추가로 자원을 확보해야 하는지를 결정한다.</li>
+<li><strong>자원 조달 계획</strong><br>
+자원이 부족할 경우 이를 확보할 방법을 계획한다. 외부 공급업체와의 협력을 통해 자원을 조달하거나, 생산 능력을 확장할 필요가 있을 수 있다.</li>
+<li><strong>자원 할당 및 조정</strong><br>
+생산 일정에 맞춰 자원을 <strong>효율적으로 배분</strong>하고, 필요한 자원이 적시에 준비될 수 있도록 조정한다.</li>
 </ol>
 <dl>
 <dt>RRP와 관련된 시스템</dt>
 <dd>
-RRP는 종종 더 큰 <strong>ERP (Enterprise Resource Planning)</strong> 시스템의 일부로 사용된다. ERP 시스템은 기업의 전반적인 자원 관리와 운영을 지원하며, RRP는 그 중 하나로 <strong>자원의 수요 예측</strong>과 <strong>조달 계획</strong>을 담당한다. 또한, <strong><a href="#sec-mrp" class="quarto-xref"><span>MRP(자재소요계획)</span></a> (Material Requirements Planning)</strong>와 밀접하게 연결되어 있다. MRP는 주로 <strong>재료</strong>에 대한 계획에 집중하지만, RRP는 <strong>자원 전체</strong>를 포함한다.
+RRP는 종종 더 큰 <strong>ERP (Enterprise Resource Planning)</strong> 시스템의 일부로 사용된다. ERP 시스템은 기업의 전반적인 자원 관리와 운영을 지원하며, RRP는 그 중 하나로 <strong>자원의 수요 예측</strong>과 <strong>조달 계획</strong>을 담당한다. 또한, <strong><a href="#sec-mrp" class="quarto-xref"><span>MRP</span></a> (Material Requirements Planning)</strong>와 밀접하게 연결되어 있다. MRP는 주로 <strong>재료</strong>에 대한 계획에 집중하지만, RRP는 <strong>자원 전체</strong>를 포함한다.
 </dd>
 <dt>RRP의 프로세스</dt>
 <dd>
 <ol type="1">
-<li><strong>생산 계획 수립</strong>: 먼저 <strong>생산 계획</strong>이 수립된다. 이 계획에는 <strong>어떤 제품</strong>을 <strong>어떤 수량</strong>만큼 생산할 것인지가 포함된다.</li>
-<li><strong>자원 요구 사항 정의</strong>: 생산 계획에 기반하여, 생산에 필요한 자원을 구체적으로 파악한다. 여기에는 <strong>인력</strong>, <strong>기계</strong>, <strong>원자재</strong> 등이 포함된다.</li>
-<li><strong>자원 수요 예측 및 계획</strong>: 자원 요구 사항을 기반으로 자원에 대한 <strong>수요 예측</strong>을 세운다. 예를 들어, 특정 기계나 노동력, 원자재의 수요가 언제, 얼마나 필요할지 예측한다.</li>
-<li><strong>자원 확보 및 조정</strong>: 예측된 자원을 확보하고, 가용 자원과 비교하여 부족한 자원을 확보하거나 과잉 자원을 조정한다.</li>
-<li><strong>자원 할당 및 실행</strong>: 확보된 자원을 생산 일정에 맞춰 할당하고, 생산 활동이 원활하게 진행될 수 있도록 관리한다.</li>
+<li><strong>생산 계획 수립</strong><br>
+먼저 <strong>생산 계획</strong>이 수립된다. 이 계획에는 <strong>어떤 제품</strong>을 <strong>어떤 수량</strong>만큼 생산할 것인지가 포함된다.</li>
+<li><strong>자원 요구 사항 정의</strong><br>
+생산 계획에 기반하여, 생산에 필요한 자원을 구체적으로 파악한다. 여기에는 <strong>인력</strong>, <strong>기계</strong>, <strong>원자재</strong> 등이 포함된다.</li>
+<li><strong>자원 수요 예측 및 계획</strong><br>
+자원 요구 사항을 기반으로 자원에 대한 <strong>수요 예측</strong>을 세운다. 예를 들어, 특정 기계나 노동력, 원자재의 수요가 언제, 얼마나 필요할지 예측한다.</li>
+<li><strong>자원 확보 및 조정</strong><br>
+예측된 자원을 확보하고, 가용 자원과 비교하여 부족한 자원을 확보하거나 과잉 자원을 조정한다.</li>
+<li><strong>자원 할당 및 실행</strong><br>
+확보된 자원을 생산 일정에 맞춰 할당하고, 생산 활동이 원활하게 진행될 수 있도록 관리한다.</li>
 </ol>
 </dd>
 <dt>RRP의 장점</dt>
 <dd>
 <ol type="1">
-<li><strong>효율적인 자원 관리</strong>: 생산에 필요한 자원을 적시에 적절하게 확보하고, 자원의 낭비를 줄일 수 있다.</li>
-<li><strong>비용 절감</strong>: 자원 과잉 또는 부족으로 인한 <strong>비용 낭비</strong>를 줄이고, 자원을 효율적으로 관리함으로써 비용을 절감할 수 있다.</li>
-<li><strong>생산 일정 준수</strong>: 자원을 미리 계획하고 준비함으로써 생산 일정이 <strong>지연되지 않도록</strong> 할 수 있다.</li>
-<li><strong>업무의 효율성 향상</strong>: 자원 요구 사항을 체계적으로 관리하고 최적화하여 업무의 <strong>효율성을 높일 수 있다</strong>.</li>
+<li><strong>효율적인 자원 관리</strong><br>
+생산에 필요한 자원을 적시에 적절하게 확보하고, 자원의 낭비를 줄일 수 있다.</li>
+<li><strong>비용 절감</strong><br>
+자원 과잉 또는 부족으로 인한 <strong>비용 낭비</strong>를 줄이고, 자원을 효율적으로 관리함으로써 비용을 절감할 수 있다.</li>
+<li><strong>생산 일정 준수</strong><br>
+자원을 미리 계획하고 준비함으로써 생산 일정이 <strong>지연되지 않도록</strong> 할 수 있다.</li>
+<li><strong>업무의 효율성 향상</strong><br>
+자원 요구 사항을 체계적으로 관리하고 최적화하여 업무의 <strong>효율성을 높일 수 있다</strong>.</li>
 </ol>
 </dd>
 <dt>RRP의 단점</dt>
 <dd>
 <ol type="1">
-<li><strong>정확한 수요 예측 어려움</strong>: RRP는 <strong>정확한 수요 예측</strong>에 의존한다. 하지만 수요 예측이 틀릴 경우 자원 관리에 어려움이 발생할 수 있다.</li>
-<li><strong>시스템 구축 비용</strong>: RRP 시스템을 도입하려면 <strong>고도화된 IT 시스템</strong>과 데이터 관리가 필요하며, 초기 구축 비용이 발생할 수 있다.</li>
-<li><strong>유연성 부족</strong>: 자원 계획이 <strong>고정적</strong>일 수 있어 급격한 수요 변화나 생산 일정 변경에 즉각적으로 대응하기 어려울 수 있다.</li>
+<li><strong>정확한 수요 예측 어려움</strong><br>
+RRP는 <strong>정확한 수요 예측</strong>에 의존한다. 하지만 수요 예측이 틀릴 경우 자원 관리에 어려움이 발생할 수 있다.</li>
+<li><strong>시스템 구축 비용</strong><br>
+RRP 시스템을 도입하려면 <strong>고도화된 IT 시스템</strong>과 데이터 관리가 필요하며, 초기 구축 비용이 발생할 수 있다.</li>
+<li><strong>유연성 부족</strong><br>
+자원 계획이 <strong>고정적</strong>일 수 있어 급격한 수요 변화나 생산 일정 변경에 즉각적으로 대응하기 어려울 수 있다.</li>
 </ol>
 </dd>
 <dt>RRP의 예시</dt>
 <dd>
 <ol type="1">
-<li><strong>자동차 제조업체</strong>: 자동차를 제조하는 회사에서는 특정 모델을 생산하기 위해 <strong>부품</strong>, <strong>인력</strong>, <strong>설비</strong> 등을 계획해야 한다. 예를 들어, 특정 모델을 생산하기 위해 필요한 부품이 부족하다면, RRP를 통해 필요한 자원을 사전에 조달하고 생산 일정에 맞게 할당한다.</li>
-<li><strong>전자제품 제조업체</strong>: 전자기기 제조업체는 다양한 부품과 자원을 사용하여 제품을 생산한다. 이 경우, RRP 시스템을 통해 각 부품의 수급과 <strong>생산 능력</strong>을 정확하게 예측하여 생산 계획을 최적화한다.</li>
+<li><strong>자동차 제조업체</strong><br>
+자동차를 제조하는 회사에서는 특정 모델을 생산하기 위해 <strong>부품</strong>, <strong>인력</strong>, <strong>설비</strong> 등을 계획해야 한다. 예를 들어, 특정 모델을 생산하기 위해 필요한 부품이 부족하다면, RRP를 통해 필요한 자원을 사전에 조달하고 생산 일정에 맞게 할당한다.</li>
+<li><strong>전자제품 제조업체</strong><br>
+전자기기 제조업체는 다양한 부품과 자원을 사용하여 제품을 생산한다. 이 경우, RRP 시스템을 통해 각 부품의 수급과 <strong>생산 능력</strong>을 정확하게 예측하여 생산 계획을 최적화한다.</li>
 </ol>
 </dd>
 </dl>
 <p><strong>RRP (Resource Requirements Planning)</strong>는 자원 계획과 관리를 통해 생산 활동에 필요한 자원의 부족과 과잉을 방지하고, 효율적인 자원 관리를 통해 <strong>비용 절감</strong>과 <strong>생산 일정 준수</strong>를 달성하려는 중요한 시스템이다. 이를 통해 기업은 자원을 <strong>최적화</strong>하고, <strong>생산성</strong>을 높일 수 있다. 그러나 수요 예측의 정확성에 의존하고 있기 때문에 예측이 부정확할 경우 어려움이 있을 수 있다.</p>
-<p><br></p>
+</section>
+<section id="sec-productibility-strategy" class="level3">
+<h3 class="anchored" data-anchor-id="sec-productibility-strategy">생산능력 결정 전략</h3>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 100-2-5, 112-3-4">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1141,25 +1172,23 @@ RRP는 종종 더 큰 <strong>ERP (Enterprise Resource Planning)</strong> 시스
 
 </div>
 </div>
-</section>
-<section id="sec-productibility-strategy" class="level3">
-<h3 class="anchored" data-anchor-id="sec-productibility-strategy">생산능력 결정 전략</h3>
 <p>생산시스템을 신설, 확장 시 생산능력을 결정하게 된다. 생산능력 결정 시 여유 능력 크기는 얼마로 할 것인가? 증설 시기는 언제로, 규모는 얼마로 할 것인가 등을 검토해야 한다.</p>
 <p>생산능력이란 제조환경에서 일저 기간 동안 생산할 수 있는 최대 산출량을 의미한다. 일반적으로 시간당 단위 또는 일일 단위로 측정되며, 공장이나 설비 최대 출력 수준을 나타낸다. 생산능력은 생산 계획, 자원 할당, 재고 관리 등에 중요한 역할을 한다. 또한 생산능력을 초과하지 않도록 관리하는 것이 중요하다. 그렇지 않으면 생산 지연이 발생하거나 품질이 저하될 수 있다.</p>
 <dl>
 <dt>생산능력 척도(분류)</dt>
 <dd>
 <ul>
-<li><strong><code>설계능력</code></strong>: 현재 제품 설계, 제품 혼합, 생산 정책, 인력, 시설 및 장비를 가지고 공정에서 일정 기간 동안에 가능한 최대 생산량</li>
-<li><strong><code>유효능력</code></strong>: 주어진 여건(제품 혼합, 기계 보전, 점심시간, 휴식시간, 일정계획 어려움, 품질요소 등) 하에서 일정기간 동안에 가능한 최대생산량</li>
-<li><strong><code>실제능력</code></strong>: 일정기간 동안 실제로 달성한 생산량</li>
+<li><strong>설계능력</strong><br>
+현재 제품 설계, 제품 혼합, 생산 정책, 인력, 시설 및 장비를 가지고 공정에서 일정 기간 동안에 가능한 최대 생산량</li>
+<li><strong>유효능력</strong> 주어진 여건(제품 혼합, 기계 보전, 점심시간, 휴식시간, 일정계획 어려움, 품질요소 등) 하에서 일정기간 동안에 가능한 최대생산량</li>
+<li><strong>실제능력</strong> 일정기간 동안 실제로 달성한 생산량</li>
 </ul>
 </dd>
 <dt>유효성 평가(측정 방법)</dt>
 <dd>
 <ul>
-<li><code>이용률</code> = 실제능력/설계능력</li>
-<li><code>효율</code> = 실제능력/유효능력</li>
+<li>이용률 = 실제능력/설계능력</li>
+<li>효율 = 실제능력/유효능력</li>
 </ul>
 </dd>
 </dl>
@@ -1187,20 +1216,27 @@ RRP는 종종 더 큰 <strong>ERP (Enterprise Resource Planning)</strong> 시스
 <dt>영향요인</dt>
 <dd>
 <ul>
-<li><strong>시설요인</strong>(Pysical Factors), 공정 및 시설 입지, 공정설계 및 건물, 시설 및 설비 배치, 공장 환경, 운반시설 등</li>
-<li><strong>제품 및 서비스 요인</strong>(Proudct/Service Factors), 제품 및 서비스 설계, 단순화/표준화, 품목 최적 구성, 품질 요인, 원자재 구성 및 소요량 등</li>
-<li><strong>공정요인</strong>(Process Factors), 공정 및및 설비 생산량, 공정 및 설비 븡력</li>
-<li><strong>인력력요인</strong>(Human Factors), 직무설계, 직무내용, 작업방법, 작업강도, 작업환경, 교육 및 경험, 동기부여, 보상 등</li>
-<li>시스템 가동 상의 요인, 설비보전, 일정관리,품질관리 등 생산 시스템 관리 기준</li>
+<li><strong>시설요인</strong>(Pysical Factors)<br>
+공정 및 시설 입지, 공정설계 및 건물, 시설 및 설비 배치, 공장 환경, 운반시설 등</li>
+<li><strong>제품 및 서비스 요인</strong>(Proudct/Service Factors)<br>
+제품 및 서비스 설계, 단순화/표준화, 품목 최적 구성, 품질 요인, 원자재 구성 및 소요량 등</li>
+<li><strong>공정요인</strong>(Process Factors)<br>
+공정 및및 설비 생산량, 공정 및 설비 븡력</li>
+<li><strong>인력력요인</strong>(Human Factors)<br>
+직무설계, 직무내용, 작업방법, 작업강도, 작업환경, 교육 및 경험, 동기부여, 보상 등</li>
+<li>기타 요인<br>
+시스템 가동 상의 요인, 설비보전, 일정관리,품질관리 등 생산 시스템 관리 기준</li>
 </ul>
 </dd>
 <dt>제약요인</dt>
 <dd>
 <ul>
-<li>시장</li>
+<li>시장
+<ul>
 <li>원자재</li>
 <li>자금</li>
 <li>노동력</li>
+</ul></li>
 </ul>
 </dd>
 </dl>
@@ -1209,7 +1245,8 @@ RRP는 종종 더 큰 <strong>ERP (Enterprise Resource Planning)</strong> 시스
 <dt>단기 생산능력 계획</dt>
 <dd>
 <ul>
-<li>가격조정</li>
+<li>가격조정
+<ul>
 <li>정비 계획 조정</li>
 <li>생산성 향상 방안</li>
 <li>납기 연기</li>
@@ -1217,14 +1254,20 @@ RRP는 종종 더 큰 <strong>ERP (Enterprise Resource Planning)</strong> 시스
 <li>종업원 교육</li>
 <li>고용수준 가동률 변동</li>
 <li>고융수준 변동</li>
+</ul></li>
 </ul>
 </dd>
 <dt>장기 생산능력 계획</dt>
 <dd>
 <ul>
-<li><strong>공격전략</strong> - 장기적인 시장 확보 및 시장점유율 향상, 여유능력으로 불확실한 수요에 대한 대응이 가능하며 납기지연이 줄어 들어 고객에게 신뢰감을 주어 안정적인 구매자 확보 가능</li>
-<li><strong>방어전략</strong> - 생산능력 효율 향상으로 투자에대한 수익률 향상, 장기적으로 시장점유율을 잠식당할 위험 존재</li>
-<li><strong>평균전략</strong> - 약간의 초과 능력과 수요 부족을 허용하는 생산계획이 바람직</li>
+<li><strong>공격전략</strong><br>
+장기적인 시장 확보 및 시장점유율 향상, 여유능력으로 불확실한 수요에 대한 대응이 가능하며 납기지연이 줄어 들어 고객에게 신뢰감을 주어 안정적인 구매자 확보 가능
+<ul>
+<li><strong>방어전략</strong><br>
+생산능력 효율 향상으로 투자에대한 수익률 향상, 장기적으로 시장점유율을 잠식당할 위험 존재</li>
+</ul></li>
+<li><strong>평균전략</strong><br>
+약간의 초과 능력과 수요 부족을 허용하는 생산계획이 바람직</li>
 </ul>
 </dd>
 </dl>
@@ -1233,14 +1276,13 @@ RRP는 종종 더 큰 <strong>ERP (Enterprise Resource Planning)</strong> 시스
 <dt>대규모 접근법</dt>
 <dd>
 <ul>
-<li>규모의 경제로 연간 생산 소비를 감소시킬 수 있으나 고정비 부담이 크고 수요 변동이나 제품 믹스 시 유여넛이 떨어진다</li>
+<li>규모의 경제로 연간 생산 소비를 감소시킬 수 있으나 고정비 부담이 크고 수요 변동이나 제품 믹스 시 유연성이 떨어진다</li>
 </ul>
 </dd>
 <dt>점진적 접근법</dt>
 <dd>
 <ul>
-<li>단계적으로 작은 단위로 확장하는 것으로 소요자금이 적게 들며 유연성이 큼
-<ul>
+<li>단계적으로 작은 단위로 확장하는 것으로 소요자금이 적게 들며 유연성이 큼</li>
 <li>필요 생산용량 추정</li>
 <li>예측된 수요와 현재 용량 간 차이 계산</li>
 <li>대안 개발</li>
@@ -1249,14 +1291,15 @@ RRP는 종종 더 큰 <strong>ERP (Enterprise Resource Planning)</strong> 시스
 <li>정성적 평가 - 수요, 경쟁자 반응, 기술 변화, 비용 추정치 등 불확실성</li>
 <li>정량적 평가 - 현금 흐름</li>
 </ul></li>
-</ul></li>
 </ul>
 </dd>
 <dt>생산시설에 대한 의사결정 절차</dt>
 <dd>
 <ul>
-<li>시설 규모 결정 - 최적 규모 설정</li>
-<li>입지 설정 - 관련된 모든 비용 합이 최소가 되도록 결정</li>
+<li>시설 규모 결정: 최적 규모 설정
+<ul>
+<li>입지 설정: 관련된 모든 비용 합이 최소가 되도록 결정</li>
+</ul></li>
 </ul>
 </dd>
 </dl>
@@ -1267,9 +1310,11 @@ RRP는 종종 더 큰 <strong>ERP (Enterprise Resource Planning)</strong> 시스
 <dt>여유능력 결정(Sizing Capacity Cushion)</dt>
 <dd>
 <ul>
-<li><strong>여유능력</strong>(capacity cushion)은 기대를 초과하는 잉여 능력으로 최적 여유 능력은 산업 분야별 차이가 있다.</li>
+<li><strong>여유능력</strong>(capacity cushion)은 기대를 초과하는 잉여 능력으로 최적 여유 능력은 산업 분야별 차이가 있다.
+<ul>
 <li>충분한 여유능력은 수요가 증가하는 추세에 있거나 불확실한 경우 또는 안정적인 공급을 요하는 경우에 필요하다.</li>
 <li>지나친 여유능력은 과대한 유지비용으로 수익률을 저하시킬 수 있다.</li>
+</ul></li>
 </ul>
 </dd>
 <dt>확장 시기와 규모(Timing and sizing Expansion)</dt>
@@ -1297,9 +1342,11 @@ RRP는 종종 더 큰 <strong>ERP (Enterprise Resource Planning)</strong> 시스
 <dt>기대 가치 유지 전략(Expected Capacity Strategy)</dt>
 <dd>
 <ul>
-<li>기대 수요에 근접한 능력 유지(사전/사후 절충형)</li>
+<li>기대 수요에 근접한 능력 유지(사전/사후 절충형)
+<ul>
 <li>사전 확장, 사후 증설 전략을 절충한 접근 방식으로 가급적 기대 수요에 근접한 능력을 유지하려는 전략</li>
-<li>이 경우 충분한 능력을 갖지 못한 가능성만큼(잉여) 능력을 가질 가능성을 만들어 손실을 상쇄하는 전략이다.</li>
+<li>이 경우 충분한 능력을 갖지 못한 가능성만큼(잉여) 능력을 가질 가능성을 만들어 손실을 상쇄하는 전략</li>
+</ul></li>
 </ul>
 </dd>
 </dl>
@@ -1381,7 +1428,11 @@ RRP는 종종 더 큰 <strong>ERP (Enterprise Resource Planning)</strong> 시스
 </ul>
 </dd>
 </dl>
-<p><br></p>
+</section>
+</section>
+</section>
+<section id="sec-mps" class="level2">
+<h2 class="anchored" data-anchor-id="sec-mps">MPS</h2>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 112-3-1">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1395,18 +1446,13 @@ RRP는 종종 더 큰 <strong>ERP (Enterprise Resource Planning)</strong> 시스
 
 </div>
 </div>
-</section>
-</section>
-</section>
-<section id="sec-mps" class="level2">
-<h2 class="anchored" data-anchor-id="sec-mps">MPS(기준일정계획)</h2>
-<p><strong>기준일정계획</strong>(MPS, master production schedule)이란 생산시스템에서 생산되는 <strong>개별 최종품목</strong>에 대한 <strong>단기생산계획</strong>으로 주단위로 총괄수요를 분해한 개별품목 수요에 대한 충족계획이다.</p>
+<p><strong>기준(주)일정계획</strong>(MPS, master production schedule)이란 생산시스템에서 생산되는 <strong>개별 최종품목</strong>에 대한 <strong>단기생산계획</strong>으로 주단위로 총괄수요를 분해한 개별품목 수요에 대한 충족계획이다.</p>
 <dl>
 <dt>MPS 수립 목표</dt>
 <dd>
 <ul>
-<li>납기준수 - 고객과 약속한 일정에 맞출 수 있는지 일정 수립 → 생산 신속성</li>
-<li>생산비용 최소화 - 생산설비에 대한 과중한 부하 또는 적정한 생산 능력 효율적 활용 → 생산비용 최소화</li>
+<li>납기준수: 고객과 약속한 일정에 맞출 수 있는지 일정 수립 → 생산 신속성</li>
+<li>생산비용 최소화: 생산설비에 대한 과중한 부하 또는 적정한 생산 능력 효율적 활용 → 생산비용 최소화</li>
 </ul>
 </dd>
 <dt>MPS 시간 구역</dt>
@@ -1455,82 +1501,78 @@ MPS 작성
 </div>
 <div class="callout-body-container callout-body">
 <p>제품 Lot 사이즈는 200개, 리드타임은 1주, 안전재고는 없고 현재고가 60개일 때 MPS는 다음과 같이 작성할 수 있다.</p>
-<div class="cell">
-<div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
+<table class="caption-top table">
 <thead>
 <tr class="header">
-<th style="text-align: left;">주별</th>
-<th style="text-align: right;">1주</th>
-<th style="text-align: right;">2주</th>
-<th style="text-align: right;">3주</th>
-<th style="text-align: right;">4주</th>
-<th style="text-align: right;">5주</th>
-<th style="text-align: right;">6주</th>
-<th style="text-align: right;">7주</th>
-<th style="text-align: right;">8주</th>
+<th>주별</th>
+<th>1주</th>
+<th>2주</th>
+<th>3주</th>
+<th>4주</th>
+<th>5주</th>
+<th>6주</th>
+<th>7주</th>
+<th>8주</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">수요 예측치</td>
-<td style="text-align: right;">40</td>
-<td style="text-align: right;">50</td>
-<td style="text-align: right;">60</td>
-<td style="text-align: right;">60</td>
-<td style="text-align: right;">70</td>
-<td style="text-align: right;">70</td>
-<td style="text-align: right;">70</td>
-<td style="text-align: right;">90</td>
+<td><strong>수요 예측치</strong></td>
+<td>40</td>
+<td>50</td>
+<td>60</td>
+<td>60</td>
+<td>70</td>
+<td>70</td>
+<td>70</td>
+<td>90</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">확정된 주문량</td>
-<td style="text-align: right;">55</td>
-<td style="text-align: right;">45</td>
-<td style="text-align: right;">20</td>
-<td style="text-align: right;">15</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
+<td><strong>확정된 주문량</strong></td>
+<td>55</td>
+<td>45</td>
+<td>20</td>
+<td>15</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">예측 보유재고</td>
-<td style="text-align: right;">5</td>
-<td style="text-align: right;">155</td>
-<td style="text-align: right;">95</td>
-<td style="text-align: right;">35</td>
-<td style="text-align: right;">165</td>
-<td style="text-align: right;">95</td>
-<td style="text-align: right;">25</td>
-<td style="text-align: right;">135</td>
+<td><strong>예측 보유재고</strong></td>
+<td>5</td>
+<td>155</td>
+<td>95</td>
+<td>35</td>
+<td>165</td>
+<td>95</td>
+<td>25</td>
+<td>135</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">MPS</td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;">200</td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;">200</td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;">200</td>
+<td><strong>MPS</strong></td>
+<td>-</td>
+<td>200</td>
+<td>-</td>
+<td>-</td>
+<td>200</td>
+<td>-</td>
+<td>-</td>
+<td>200</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">MPS 생산</td>
-<td style="text-align: right;">200</td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;">200</td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;">200</td>
-<td style="text-align: right;"></td>
+<td><strong>MPS 생산</strong></td>
+<td>200</td>
+<td>-</td>
+<td>-</td>
+<td>200</td>
+<td>-</td>
+<td>-</td>
+<td>200</td>
+<td>-</td>
 </tr>
 </tbody>
 </table>
-</div>
-</div>
 <dl>
 <dt>1주차 경우</dt>
 <dd>
@@ -1558,93 +1600,89 @@ ATP 계산
 </div>
 <div class="callout-body-container callout-body">
 <p>리드타임 2주, Lot 크기 100개, 현재고 80개일 때, ATP 계산 산식(<a href="#eq-atp" class="quarto-xref"><span>11.1</span></a>)에 따라 ATP를 계산하면 다음과 같다.</p>
-<div class="cell">
-<div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
+<table class="caption-top table">
 <thead>
 <tr class="header">
-<th style="text-align: left;">주별</th>
-<th style="text-align: right;">1주</th>
-<th style="text-align: right;">2주</th>
-<th style="text-align: right;">3주</th>
-<th style="text-align: right;">4주</th>
-<th style="text-align: right;">5주</th>
-<th style="text-align: right;">6주</th>
-<th style="text-align: right;">7주</th>
-<th style="text-align: right;">8주</th>
+<th>주별</th>
+<th>1주</th>
+<th>2주</th>
+<th>3주</th>
+<th>4주</th>
+<th>5주</th>
+<th>6주</th>
+<th>7주</th>
+<th>8주</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">수요 예측치</td>
-<td style="text-align: right;">20</td>
-<td style="text-align: right;">50</td>
-<td style="text-align: right;">40</td>
-<td style="text-align: right;">40</td>
-<td style="text-align: right;">80</td>
-<td style="text-align: right;">80</td>
-<td style="text-align: right;">80</td>
-<td style="text-align: right;">40</td>
+<td><strong>수요 예측치</strong></td>
+<td>20</td>
+<td>50</td>
+<td>40</td>
+<td>40</td>
+<td>80</td>
+<td>80</td>
+<td>80</td>
+<td>40</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">확정된 주문량</td>
-<td style="text-align: right;">25</td>
-<td style="text-align: right;">35</td>
-<td style="text-align: right;">20</td>
-<td style="text-align: right;">10</td>
-<td style="text-align: right;">5</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
+<td><strong>확정된 주문량</strong></td>
+<td>25</td>
+<td>35</td>
+<td>20</td>
+<td>10</td>
+<td>5</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">예측 보유재고</td>
-<td style="text-align: right;">55</td>
-<td style="text-align: right;">5</td>
-<td style="text-align: right;">65</td>
-<td style="text-align: right;">25</td>
-<td style="text-align: right;">45</td>
-<td style="text-align: right;">65</td>
-<td style="text-align: right;">85</td>
-<td style="text-align: right;">45</td>
+<td><strong>예측 보유재고</strong></td>
+<td>55</td>
+<td>5</td>
+<td>65</td>
+<td>25</td>
+<td>45</td>
+<td>65</td>
+<td>85</td>
+<td>45</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">MPS</td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;">100</td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;">100</td>
-<td style="text-align: right;">100</td>
-<td style="text-align: right;">100</td>
-<td style="text-align: right;"></td>
+<td><strong>MPS</strong></td>
+<td>-</td>
+<td>-</td>
+<td>100</td>
+<td>-</td>
+<td>100</td>
+<td>100</td>
+<td>100</td>
+<td>-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">MPS 생산</td>
-<td style="text-align: right;">100</td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;">100</td>
-<td style="text-align: right;">100</td>
-<td style="text-align: right;">100</td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
+<td><strong>MPS 생산</strong></td>
+<td>100</td>
+<td>-</td>
+<td>100</td>
+<td>100</td>
+<td>100</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">ATP</td>
-<td style="text-align: right;">20</td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;">70</td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;">95</td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
+<td><strong>ATP</strong></td>
+<td>20</td>
+<td>-</td>
+<td>70</td>
+<td>-</td>
+<td>95</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
 </tr>
 </tbody>
 </table>
-</div>
-</div>
 <dl>
 <dt>첫째 주</dt>
 <dd>
@@ -1669,14 +1707,12 @@ ATP 계산
 </div>
 <section id="sec-rccp" class="level3">
 <h3 class="anchored" data-anchor-id="sec-rccp">RCCP</h3>
-<center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.allics.be/wp-content/uploads/RCCP-Graph-1280x571.png.webp" class="img-fluid figure-img"></p>
 <figcaption>https://www.allics.be/blog/rough-cut-capacity-plan/</figcaption>
 </figure>
 </div>
-</center>
 <p><strong>RCCP</strong>(개략적 생산능력계획, rough-cut capacity planning)은 MPS 실행에 소요되는 생산능력을 추정하여 이를 효과적으로 확보하기 위한 개략적인 계획 활동을 의미한다. RCCP 목적은 생산 소요계획과 가용 생산이 일치하도록 하여 특정 자원 과대 또는 과부하가 걸리지 않도록 한다.</p>
 <dl>
 <dt>종합계수법</dt>
@@ -1699,6 +1735,10 @@ ATP 계산
 </ul>
 </dd>
 </dl>
+</section>
+</section>
+<section id="sec-mrp" class="level2">
+<h2 class="anchored" data-anchor-id="sec-mrp">MRP</h2>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 103-1-9, 124-3-4, 130-1-2">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1712,11 +1752,7 @@ ATP 계산
 
 </div>
 </div>
-</section>
-</section>
-<section id="sec-mrp" class="level2">
-<h2 class="anchored" data-anchor-id="sec-mrp">MRP(자재소요계획)</h2>
-<p>MRP(Material Requirements Planning)는 제조업에서 원자재 및 부품의 수요를 계획하고 관리하는 시스템이다. 제품 생산에 필요한 자재를 적시에 확보함으로써 생산 일정이 원활하게 진행되도록 돕는다. MRP는 최종 제품의 생산 일정과 제품 구조(BOM, Bill of Materials)를 기반으로 각 부품 및 자재의 수요를 역산하여 계획을 수립한다.</p>
+<p>MRP(자재소요계획, Material Requirements Planning)는 제조업에서 원자재 및 부품의 수요를 계획하고 관리하는 시스템이다. 제품 생산에 필요한 자재를 적시에 확보함으로써 생산 일정이 원활하게 진행되도록 돕는다. MRP는 최종 제품의 생산 일정과 제품 구조(BOM, Bill of Materials)를 기반으로 각 부품 및 자재의 수요를 역산하여 계획을 수립한다.</p>
 <dl>
 <dt>MRP의 목적</dt>
 <dd>
@@ -1727,7 +1763,8 @@ ATP 계산
 </ul>
 </dd>
 </dl>
-<p><br></p>
+<section id="sec-crp" class="level3">
+<h3 class="anchored" data-anchor-id="sec-crp">CRP</h3>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 112-1-12">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1741,8 +1778,6 @@ ATP 계산
 
 </div>
 </div>
-<section id="sec-crp" class="level3">
-<h3 class="anchored" data-anchor-id="sec-crp">CRP</h3>
 <p><strong>CRP</strong>(Capacity Requirements Planning)는 생산 계획 과정에서 필요한 자원 용량을 분석하고 조정하여 생산 목표를 달성할 수 있도록 지원하는 시스템이다. 이 시스템은 <font color="blue">생산 계획과 자원의 용량 사이의 균형을 맞추는 데 중요한 역할</font>을 한다. CRP는 주로 제조업체에서 사용되며, 생산 공정에 필요한 기계, 인력, 원자재 등의 자원의 용량을 예측하고 조정하는 데 초점을 맞춘다.</p>
 <dl>
 <dt>CRP 주요 목적</dt>
@@ -1771,36 +1806,32 @@ ATP 계산
 </ol>
 </dd>
 </dl>
-<div class="cell">
-<div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
+<table class="caption-top table">
 <colgroup>
-<col style="width: 40%">
-<col style="width: 59%">
+<col style="width: 48%">
+<col style="width: 51%">
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;">장점</th>
-<th style="text-align: left;">단점</th>
+<th>장점</th>
+<th>단점</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">효율적인 자원 관리:자원의 부족이나 과잉 문제를 미리 예측하고 조정함으로써 생산성이 높아진다.</td>
-<td style="text-align: left;">고급 데이터 요구:정확한 자원 계획을 위해서는 정확한 데이터와 예측이 필요하며, 데이터가 부족하거나 부정확하면 계획에 차질이 생길 수 있다.</td>
+<td><strong>효율적인 자원 관리</strong>: 자원의 부족이나 과잉 문제를 미리 예측하고 조정함으로써 생산성이 높아짐</td>
+<td><strong>고급 데이터 요구</strong>: 정확한 자원 계획을 위해 정확한 데이터와 예측이 필요하며, 데이터가 부족하거나 부정확하면 계획에 차질이 생김</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">생산 일정 정확도 향상:자원의 용량을 정확히 파악하여 생산 일정을 더 효율적으로 조정할 수 있다.</td>
-<td style="text-align: left;">복잡성:대규모 생산 환경에서는 수많은 자원과 작업이 관련되어 있어 CRP를 제대로 운영하려면 복잡한 계산과 관리가 필요하다.</td>
+<td><strong>생산 일정 정확도 향상</strong>: 자원의 용량을 정확히 파악하여 생산 일정을 더 효율적으로 조정할 수 있음</td>
+<td><strong>복잡성</strong>: 대규모 생산 환경에서는 수많은 자원과 작업이 관련되어 있어 CRP를 제대로 운영하려면 복잡한 계산과 관리가 필요함</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">비용 절감:자원의 과잉이나 부족을 미리 예방함으로써 불필요한 비용을 절감할 수 있다.</td>
-<td style="text-align: left;"></td>
+<td><strong>비용 절감</strong>: 자원의 과잉이나 부족을 미리 예방함으로써 불필요한 비용을 절감할 수 있음</td>
+<td>-</td>
 </tr>
 </tbody>
 </table>
-</div>
-</div>
 <p>CRP는 MPS와 MRP와 함께 사용되는 중요한 생산관리 도구로, 생산 자원을 효율적으로 배분하고 생산 목표를 달성하는데 중요한 역할을 한다.</p>
 </section>
 <section id="mrp-입력물" class="level3">
@@ -1810,7 +1841,7 @@ ATP 계산
 <dt>MPS</dt>
 <dd>
 <ul>
-<li><a href="#sec-mps" class="quarto-xref"><span>MPS(기준일정계획)</span></a> 참고</li>
+<li><a href="#sec-mps" class="quarto-xref"><span>MPS</span></a> 참고</li>
 <li>최종 제품 생산 일정 및 생산량을 계획하는 일정표</li>
 </ul>
 </dd>
@@ -1836,24 +1867,38 @@ ATP 계산
 <li>주문 일정 작성: 리드 타임을 고려하여 자재를 언제 주문하거나 생산해야 하는지를 계획한다.</li>
 </ul>
 </dd>
-<dt>MRP의 장점</dt>
-<dd>
-<ul>
-<li>생산 효율성 향상: 필요한 자재를 적시에 조달해 생산 과정의 병목 현상을 방지한다.</li>
-<li>재고 비용 절감: 과잉 재고를 방지하고, 필요한 자재만 확보하여 재고 비용을 최소화한다.</li>
-<li>납기 준수 향상: 제품 생산 및 납품 일정을 보다 정확하게 계획할 수 있다.</li>
-</ul>
-</dd>
-<dt>MRP의 한계</dt>
-<dd>
-<ul>
-<li>데이터 정확성 필요: BOM, 재고 기록 등이 정확하지 않으면 계획이 어긋날 수 있다.</li>
-<li>복잡성: 많은 품목과 생산 단계가 얽혀 있어 관리 및 유지보수가 어렵다.</li>
-<li>유연성 부족: 수요 변동이나 생산 일정 변화에 대한 즉각적인 대응이 어렵다.</li>
-<li>리드 타임 의존성: 자재 조달 시간이 길어지면 전체 생산 일정이 지연될 수 있다.</li>
-</ul>
-</dd>
 </dl>
+<table class="caption-top table">
+<caption>MRP 장점과 한계</caption>
+<colgroup>
+<col style="width: 48%">
+<col style="width: 51%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>장점</th>
+<th>한계</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>생산 효율성 향상</strong>: 필요한 자재를 적시에 조달해 생산 과정의 병목 현상을 방지함</td>
+<td><strong>데이터 정확성 필요</strong>: BOM, 재고 기록 등이 정확하지 않으면 계획이 어긋날 수 있음</td>
+</tr>
+<tr class="even">
+<td><strong>재고 비용 절감</strong>: 과잉 재고를 방지하고, 필요한 자재만 확보하여 재고 비용을 최소화함</td>
+<td><strong>복잡성</strong>: 많은 품목과 생산 단계가 얽혀 있어 관리 및 유지보수가 어려움</td>
+</tr>
+<tr class="odd">
+<td><strong>납기 준수 향상</strong>: 제품 생산 및 납품 일정을 보다 정확하게 계획할 수 있음</td>
+<td><strong>유연성 부족</strong>: 수요 변동이나 생산 일정 변화에 대한 즉각적인 대응이 어려움</td>
+</tr>
+<tr class="even">
+<td>-</td>
+<td><strong>리드 타임 의존성</strong>: 자재 조달 시간이 길어지면 전체 생산 일정이 지연될 수 있음</td>
+</tr>
+</tbody>
+</table>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="MRP vs MRP II vs ERP">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1934,14 +1979,15 @@ MRP vs MRP II vs ERP
 <ul>
 <li><strong>MRP</strong>는 주로 생산에 필요한 자재 관리에 집중하며, <strong>MRP II</strong>는 이를 확장해 <strong>생산 계획 및 자원 전반을 관리</strong>한다.<br>
 </li>
-<li><strong>ERP</strong>는 기업 전체의 자원을 통합적으로 관리하여 부서 간 정보 공유와 업무 흐름을 최적화하는 시스템이다.<br>
-이러한 시스템의 진화는 생산성과 효율성을 높이는 데 중요한 역할을 한다.</li>
+<li><strong>ERP</strong>는 기업 전체의 자원을 통합적으로 관리하여 부서 간 정보 공유와 업무 흐름을 최적화하는 시스템이다.</li>
 </ul>
+<p>이러한 시스템의 진화는 생산성과 효율성을 높이는 데 중요한 역할을 한다.</p>
 </div>
 </div>
 </section>
 <section id="mrp-산출물" class="level3">
 <h3 class="anchored" data-anchor-id="mrp-산출물">MRP 산출물</h3>
+<p>MRP 산출물은 다음과 같다.</p>
 <ol type="1">
 <li><strong>자재 소요량 계획 (Material Requirements Plan)</strong>
 <ul>
