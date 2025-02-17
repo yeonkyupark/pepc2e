@@ -555,7 +555,7 @@ window.Quarto = {
 <div>
 <p></p><figure class="figure"><p></p>
 <div>
-<pre class="mermaid mermaid-js">flowchart LR
+<pre class="mermaid mermaid-js">flowchart TD
 1["**Preventive** Maintenance&lt;br&gt;예방보전, 1951"]
 2["**Productive* Maintenance&lt;br&gt;생산보전, 1960대"]
 3["**Total Productive** Maintenance&lt;br&gt;종합적 생산보전, 1971"]
@@ -735,6 +735,7 @@ window.Quarto = {
 <figcaption>TPM 8대 지주</figcaption>
 </figure>
 </div>
+<p>TMS 활동 기반이 되는 5S는 <a href="0801프로세스분석과개선.html#sec-5s" class="quarto-xref"><span>3정 5S</span></a> 내용을 참고한다.</p>
 <p>초기 생산부분에 있어 TPM은 아래 5가지 활동을 중심으로 전개하였다.</p>
 <ul>
 <li>설비 효율화 개별 개선</li>
@@ -772,7 +773,7 @@ window.Quarto = {
 <td>보전 부문을 중심으로 한 활동으로계획 보전 체계를 구축</td>
 </tr>
 <tr class="odd">
-<td>교육, 훈훈련</td>
+<td>교육, 훈련</td>
 <td>TPM 활동을 수행하기 위해 필요한 지식, 기능, 태도를 습득</td>
 </tr>
 <tr class="even">
@@ -1102,8 +1103,44 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<p><strong>강제열화</strong>는 설비에 대해서 당연 해야 할 일을 하지 않기 때문에, 즉 인위적으로 열화를 촉진되는 현상이다. 급유해야 할 개소에 급유를 하지 않는다든지 급유량이 기준에 못 미치는 등이 여기에 해당한다.</p>
-<p>이에 반해 <strong>자연열화</strong>는 설비를 올바르게 사용하고 있어도 시간과 함게 물리적으로 열화하여 초기 성능 대비 저하되는 현상이다.</p>
+<table class="caption-top table">
+<caption>강제열화(Forced Deterioration)와 자연열화(Natural Deterioration)</caption>
+<colgroup>
+<col style="width: 8%">
+<col style="width: 45%">
+<col style="width: 45%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>구분</th>
+<th>강제열화(Forced Deterioration)</th>
+<th>자연열화(Natural Deterioration)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>정의</strong></td>
+<td>부적절한 사용, 유지보수 부족, 조작 실수 등으로 인해 설비가 정상적인 수명보다 빨리 열화되는 현상</td>
+<td>시간이 지남에 따라 자연적인 마모, 부식, 피로 등의 요인으로 설비가 점진적으로 열화되는 현상</td>
+</tr>
+<tr class="even">
+<td><strong>원인</strong></td>
+<td>잘못된 조작, 유지보수 미흡, 과부하 운전, 오염물 누적, 윤활 부족 등</td>
+<td>재료의 노후화, 금속 피로, 부식, 열화, 환경적 요인(온도, 습도 등)</td>
+</tr>
+<tr class="odd">
+<td><strong>예방 방법</strong></td>
+<td>적절한 교육, 정기 점검, 올바른 조작 방법 준수, 윤활 및 청소 강화</td>
+<td>예방 보전(Preventive Maintenance), 정기적인 부품 교체, 환경 관리</td>
+</tr>
+<tr class="even">
+<td><strong>예시</strong></td>
+<td>• 기계 과부하로 인한 조기 마모<br>• 윤활 부족으로 인한 베어링 손상<br>• 부적절한 조작으로 인한 부품 파손</td>
+<td>• 장기간 사용에 따른 금속 부품 피로<br>• 플라스틱 부품의 자연적인 경화 및 균열<br>• 공기 중 습기로 인한 내부 부식</td>
+</tr>
+</tbody>
+</table>
+<p>강제열화는 관리 부주의로 인해 발생하는 경우가 많으므로, 올바른 운영 및 유지보수를 통해 예방이 가능하다. 반면 자연열화는 피할 수 없지만, 예방 보전(Preventive Maintenance)과 예지 보전(Predictive Maintenance) 등을 통해 진행 속도를 늦출 수 있다.</p>
 </section>
 <section id="돌발로스와-만성로스" class="level2">
 <h2 class="anchored" data-anchor-id="돌발로스와-만성로스">돌발로스와 만성로스</h2>
@@ -1267,7 +1304,7 @@ window.Quarto = {
 <th>단계</th>
 <th>명칭</th>
 <th>활동내용</th>
-<th>육성 단계[^growthsteps]</th>
+<th>육성 단계 [^1]</th>
 </tr>
 </thead>
 <tbody>
@@ -1291,7 +1328,7 @@ window.Quarto = {
 </tr>
 <tr class="even">
 <td>4단계</td>
-<td>총점검[^overallcheck]</td>
+<td>총점검 [^2]</td>
 <td>점검 매뉴얼에 의한 점검기능교육과 총 점검 실시에 의한 설비 미흡을 적출 및 복원한다.</td>
 <td>2단계</td>
 </tr>
@@ -1316,7 +1353,7 @@ window.Quarto = {
 </tbody>
 </table>
 <dl>
-<dt>[^growthsteps]: 설비에 강한 오퍼레이터 육성 단계</dt>
+<dt>[^1]: 설비에 강한 오퍼레이터 육성 단계</dt>
 <dd>
 <ol type="1">
 <li>단계: 오퍼레이터가 설비 개선 사고 방식을 익히는 단계</li>
@@ -1325,7 +1362,7 @@ window.Quarto = {
 <li>단계: 오퍼레이터가 설비 수리 가능한 단계</li>
 </ol>
 </dd>
-<dt>[^overallcheck]: 총점검 전개 방법</dt>
+<dt>[^2]: 총점검 전개 방법</dt>
 <dd>
 <ol type="1">
 <li>총점검 매뉴얼 준비 - 준비활동 및 총점검 과목 및 항목 설정</li>
