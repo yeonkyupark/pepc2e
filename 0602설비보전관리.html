@@ -1305,7 +1305,7 @@ window.Quarto = {
 <th>단계</th>
 <th>명칭</th>
 <th>활동내용</th>
-<th>육성 단계 <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></th>
+<th>육성 단계 <span class="math inline">\(^{주1}\)</span></th>
 </tr>
 </thead>
 <tbody>
@@ -1329,7 +1329,7 @@ window.Quarto = {
 </tr>
 <tr class="even">
 <td>4단계</td>
-<td>총점검 <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></td>
+<td>총점검 <span class="math inline">\(^{주2}\)</span></td>
 <td>점검 매뉴얼에 의한 점검기능교육과 총 점검 실시에 의한 설비 미흡을 적출 및 복원한다.</td>
 <td>2단계</td>
 </tr>
@@ -1353,6 +1353,18 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
+<p>주1: 설비에 강한 오퍼레이터 육성 단계<br>
+1. 1단계: 오퍼레이터가 설비 개선 사고 방식을 익히는 단계<br>
+2. 2단계: 오퍼레이터가 설비 기능 및 구조를 이해하는 단계<br>
+3. 3단계: 오퍼레이터가 설비 정밀도와 제품 품질 간 관계를 이해하는 단계<br>
+4. 4단계: 오퍼레이터가 설비 수리 가능한 단계</p>
+<p>주2: 총점검 전개 방법<br>
+1. 총점검 매뉴얼 준비 - 준비활동 및 총점검 과목 및 항목 설정<br>
+2. 총점검 매뉴얼에 대한 교육 실시 - 기계요소 총점검 대상 및 부위 작성<br>
+3. 총점검 매뉴얼 보완 - 담당설비별, 부품별 총점검 매뉴얼 내용 보완 작성<br>
+4. 총점검 체크시트 작성 - 담당설비별 총점검 실시를 위한 체크시트 작성<br>
+5. 총점검 실시와 미결함 적출 및 개선 - 청소/급유/점검 기준 및 점검표 보완<br>
+6. 점검 기능 체크 - 담당설비별 기계요소 기능 체크</p>
 </div>
 </section>
 <section id="설비-6대-로스" class="level2">
@@ -1436,89 +1448,96 @@ window.Quarto = {
 </div>
 </div>
 <p>장치산업 8대 로스는 다음과 같다.</p>
-<div class="cell" data-tbl-colwidths="[15,40,10,35]">
-<div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
+<table class="caption-top table">
+<caption>로스(loss) 유형과 정의</caption>
 <colgroup>
-<col style="width: 15%">
+<col style="width: 11%">
 <col style="width: 40%">
-<col style="width: 10%">
+<col style="width: 12%">
 <col style="width: 35%">
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;">로스.명칭</th>
-<th style="text-align: left;">정의</th>
-<th style="text-align: left;">단위</th>
-<th style="text-align: left;">사례</th>
+<th>로스 명칭</th>
+<th>정의</th>
+<th>단위</th>
+<th>사례</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">ShutDown</td>
-<td style="text-align: left;">연간보전계획에 의한 SD공사 및 정기정비 등에 의한 휴지시간 로스</td>
-<td style="text-align: left;">시간(일)</td>
-<td style="text-align: left;">SD공사, 정비정비, 법정검사, 자주검사, 일반보수공사 등</td>
+<td><strong>ShutDown</strong></td>
+<td>연간 보전계획에 의한 SD 공사 및 정기정비 등에 의한 휴지시간 로스</td>
+<td>시간(일)</td>
+<td>SD 공사, 정기정비, 법정검사, 자주검사, 일반보수공사 등</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">생산조정</td>
-<td style="text-align: left;">수급간계에 의한 생산계획상 조정 시간</td>
-<td style="text-align: left;">시간(일)</td>
-<td style="text-align: left;">생산조정정지, 재고조정정지 등</td>
+<td><strong>생산조정</strong></td>
+<td>수급 관계에 의한 생산계획상 조정 시간</td>
+<td>시간(일)</td>
+<td>생산조정정지, 재고조정정지 등</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">설비고장</td>
-<td style="text-align: left;">설비, 기기가 규정 성능을 잃어 돌발적으로 정지하는 로스 시간</td>
-<td style="text-align: left;">시간</td>
-<td style="text-align: left;">펌프고장, 베어링 파손, 축 부러짐 등</td>
+<td><strong>설비고장</strong></td>
+<td>설비, 기기가 규정 성능을 잃어 돌발적으로 정지하는 로스 시간</td>
+<td>시간</td>
+<td>펌프 고장, 베어링 파손, 축 부러짐 등</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">프로세스 고장</td>
-<td style="text-align: left;">공정 내에서 취급 물질의 화학적, 물리적인 물성 변화나 기타 조업 실수 등으로 플랜트가 정지하는 로스</td>
-<td style="text-align: left;">시간</td>
-<td style="text-align: left;">누설, 먼지, 막힘, 부식, 분진비산, 조작 실수 등</td>
+<td><strong>프로세스 고장</strong></td>
+<td>공정 내 화학적·물리적 물성 변화나 조업 실수 등으로 플랜트 정지</td>
+<td>시간</td>
+<td>누설, 먼지, 막힘, 부식, 분진비산, 조작 실수 등</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">정상생산</td>
-<td style="text-align: left;">플랜트 Start, 정지 및 교체 때문에 발생하는 로스</td>
-<td style="text-align: left;">rate down</td>
-<td style="text-align: left;">Start 후 첫 동작, 정지 전 멈춤 동작, 품질교체에 따른 rate down</td>
+<td><strong>정상생산</strong></td>
+<td>플랜트 Start, 정지 및 교체 때문에 발생하는 로스</td>
+<td>rate down</td>
+<td>Start 후 첫 동작, 정지 전 멈춤 동작, 품질 교체에 따른 rate down</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">비정상생산</td>
-<td style="text-align: left;">플랜트 불량, 이상 때문에 생산 rate를 down시킨 성능 로스</td>
-<td style="text-align: left;">rate down</td>
-<td style="text-align: left;">저부하운전, 속도운전, 기준생산 rate 이하로 운전하는 경우</td>
+<td><strong>비정상생산</strong></td>
+<td>플랜트 불량, 이상으로 생산 rate를 낮추는 성능 로스</td>
+<td>rate down</td>
+<td>저부하운전, 속도운전, 기준 생산 rate 이하 운전 등</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">품질불량</td>
-<td style="text-align: left;">불량품을 만들어 내고 있는 로스와 폐각품 물적 로스, 2등급 이하 로스</td>
-<td style="text-align: left;">시간, ton, 금액</td>
-<td style="text-align: left;">품질표준에서 벗어난 제품을 만드어 냄에 의한 물량, 시간 로스</td>
+<td><strong>품질불량</strong></td>
+<td>불량품 및 폐각품(2등급 이하 포함)으로 인한 물적·시간적 로스</td>
+<td>시간, ton, 금액</td>
+<td>품질표준에서 벗어난 제품으로 인한 물량 및 시간 로스</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">재가공</td>
-<td style="text-align: left;">공정 back에 의한 리사이클 로스</td>
-<td style="text-align: left;">시간, ton, 금액</td>
-<td style="text-align: left;">최종 공정에서 불량품을 원류 공정에 리사이클하여 합격품으로 변환</td>
+<td><strong>재가공</strong></td>
+<td>공정 back에 의한 리사이클 로스</td>
+<td>시간, ton, 금액</td>
+<td>최종 공정에서 불량품을 원류 공정에 리사이클해 합격품으로 전환</td>
 </tr>
 </tbody>
 </table>
-</div>
-</div>
+<dl>
+<dt>특징</dt>
+<dd>
+<ul>
+<li>각 로스는 <strong>정의, 단위, 사례</strong>로 구분해 관리함<br>
+</li>
+<li><strong>시간 기반 로스</strong>와 <strong>rate 기반 성능 로스</strong>를 구분해 분석함<br>
+</li>
+<li><strong>품질 로스</strong>는 단순 불량뿐 아니라 재가공까지 포함해 손실을 파악함</li>
+</ul>
+</dd>
+</dl>
 </section>
 </section>
 <section id="설비-보전-지표" class="level2">
 <h2 class="anchored" data-anchor-id="설비-보전-지표">설비 보전 지표</h2>
 <p>대표적인 설비 보전 지표로 MTTR, MTBF, MTTF가 있다. 위 지표는 설비 보전 신뢰성 지표로 사용되고 설벼 효율을 극대화 하기 위한 척도로도 사용된다.</p>
-<center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.researchgate.net/publication/334205633/figure/fig5/AS:778549820682240@1562632150490/A-schematic-diagram-of-MTTF-MTTR-and-MTBF.ppm" class="img-fluid figure-img"></p>
 <figcaption>https://www.researchgate.net/figure/A-schematic-diagram-of-MTTF-MTTR-and-MTBF_fig5_334205633</figcaption>
 </figure>
 </div>
-</center>
 <section id="sec-mttr" class="level3">
 <h3 class="anchored" data-anchor-id="sec-mttr">MTTR</h3>
 <p><strong>MTTR</strong>(mean time to repair)는 평균 수리 시간(평균 고장/장애 복구 시간)으로서 설비 고장이 발생했을 때부터 다시 동작하는데까지 걸리는 시간이다.</p>
@@ -1582,6 +1601,7 @@ MTTF = 수리하지 \ 않은 \ 부품의 \ 사용 \ 시작부터 \ 고장까지 
 </div>
 </div>
 <div class="callout-body-container callout-body">
+<hr>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 127-1-10, 130-3-1">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1601,17 +1621,17 @@ MTTF = 수리하지 \ 않은 \ 부품의 \ 사용 \ 시작부터 \ 고장까지 
 <dt>주요 특징</dt>
 <dd>
 <ul>
-<li><strong>고장 없이 동작하는 능력</strong>: 장비나 시스템이 일정 시간 동안 예상대로 작동하는 능력.</li>
-<li><strong>확률적인 개념</strong>: 신뢰성은 시스템의 고장이 발생할 확률을 기반으로 평가된다.</li>
-<li><strong>수명 주기 동안의 성능</strong>: 시스템이 고장 없이 얼마나 오랫동안 성능을 유지할 수 있는지와 관련이 있다.</li>
-<li><strong>고장률</strong>: 신뢰성은 종종 고장률(failure rate)을 통해 측정되며, 고장 없이 작동하는 시간이 길수록 신뢰성이 높다고 평가된다.</li>
+<li><strong>고장 없이 동작하는 능력</strong>: 장비나 시스템이 일정 시간 동안 예상대로 작동하는 능력</li>
+<li><strong>확률적인 개념</strong>: 신뢰성은 시스템의 고장이 발생할 확률을 기반으로 평가</li>
+<li><strong>수명 주기 동안의 성능</strong>: 시스템이 고장 없이 얼마나 오랫동안 성능을 유지할 수 있는지와 관련</li>
+<li><strong>고장률</strong>: 신뢰성은 종종 고장률(failure rate)을 통해 측정되며, 고장 없이 작동하는 시간이 길수록 신뢰성이 높다고 평가</li>
 </ul>
 </dd>
 <dt>예시</dt>
 <dd>
 <ul>
-<li>1년 동안 평균적으로 10회 이하로 고장이 발생하는 기계는 높은 신뢰성을 가진다고 할 수 있다.</li>
-<li>자동차가 10만 km를 주행할 동안 엔진에 고장이 발생하지 않으면, 신뢰성이 높다고 평가된다.</li>
+<li>1년 동안 평균적으로 10회 이하로 고장이 발생하는 기계는 높은 신뢰성을 가진다고 평가</li>
+<li>자동차가 10만 km를 주행할 동안 엔진에 고장이 발생하지 않으면, 신뢰성이 높다고 평가</li>
 </ul>
 </dd>
 </dl>
@@ -1620,17 +1640,17 @@ MTTF = 수리하지 \ 않은 \ 부품의 \ 사용 \ 시작부터 \ 고장까지 
 <dt>주요 특징</dt>
 <dd>
 <ul>
-<li><strong>수리 시간</strong>: 장비가 고장났을 때, 수리 작업이 완료되어 다시 정상적으로 작동할 수 있는 시간을 의미한다.</li>
-<li><strong>점검과 수리 용이성</strong>: 유지보수성은 시스템을 점검하고, 수리하거나 부품을 교체하는데 소요되는 시간과 노력에 영향을 미친다.</li>
-<li><strong>지속적인 성능 유지</strong>: 유지보수성이 좋은 시스템은 고장이 발생한 후에도 빠르게 회복되어 생산성을 유지할 수 있다.</li>
-<li><strong>기술적 지원과 접근성</strong>: 유지보수성이 높다면, 기술 지원과 부품 교체가 용이하고, 일반적인 수리 작업이 신속하게 이루어질 수 있다.</li>
+<li><strong>수리 시간</strong>: 장비가 고장났을 때, 수리 작업이 완료되어 다시 정상적으로 작동할 수 있는 시간을 의미</li>
+<li><strong>점검과 수리 용이성</strong>: 유지보수성은 시스템을 점검하고, 수리하거나 부품을 교체하는데 소요되는 시간과 노력에 영향</li>
+<li><strong>지속적인 성능 유지</strong>: 유지보수성이 좋은 시스템은 고장이 발생한 후에도 빠르게 회복되어 생산성을 유지</li>
+<li><strong>기술적 지원과 접근성</strong>: 유지보수성이 높다면, 기술 지원과 부품 교체가 용이하고, 일반적인 수리 작업이 신속</li>
 </ul>
 </dd>
 <dt>예시</dt>
 <dd>
 <ul>
-<li>한 기계가 고장이 나면, 부품 교체가 쉽고, 수리 작업이 2시간 이내에 완료될 수 있는 경우, 그 기계는 높은 유지보수성을 가진다고 할 수 있다.</li>
-<li>컴퓨터 시스템이 고장났을 때, 수리 과정이 복잡하지 않고 빠르게 회복된다면, 높은 유지보수성을 가진다고 평가할 수 있다.</li>
+<li>한 기계가 고장이 나면, 부품 교체가 쉽고, 수리 작업이 2시간 이내에 완료될 수 있는 경우, 그 기계는 높은 유지보수성을 가진다고 평가</li>
+<li>컴퓨터 시스템이 고장났을 때, 수리 과정이 복잡하지 않고 빠르게 회복된다면, 높은 유지보수성을 가진다고 평가</li>
 </ul>
 </dd>
 </dl>
@@ -1684,30 +1704,36 @@ MTTF = 수리하지 \ 않은 \ 부품의 \ 사용 \ 시작부터 \ 고장까지 
 <dd>
 <ul>
 <li><strong>정의</strong>: 설비가 고장 없이 정상적으로 작동할 수 있는 능력.</li>
-<li><strong>지표</strong></li>
-<li><strong>MTBF (Mean Time Between Failures)</strong>: 고장 사이의 평균 시간. MTBF가 높을수록 설비의 신뢰성이 높다고 할 수 있다.</li>
-<li><strong>신뢰도 함수 (Reliability Function, R(t))</strong>: 특정 시간 동안 설비가 고장 없이 작동할 확률을 나타내는 함수.</li>
-<li><strong>고장률 (Failure Rate, λ)</strong>: 단위 시간당 고장이 발생하는 비율. 고장률이 낮을수록 신뢰성이 높다.</li>
+<li><strong>지표</strong>
+<ul>
+<li><strong>MTBF (Mean Time Between Failures)</strong>: 고장 사이의 평균 시간. MTBF가 높을수록 설비의 신뢰성이 높음</li>
+<li><strong>신뢰도 함수 (Reliability Function, R(t))</strong>: 특정 시간 동안 설비가 고장 없이 작동할 확률을 나타내는 함수</li>
+<li><strong>고장률 (Failure Rate, λ)</strong>: 단위 시간당 고장이 발생하는 비율. 고장률이 낮을수록 신뢰성이 높음</li>
+</ul></li>
 </ul>
 </dd>
 <dt><strong>보전성 (Maintainability)</strong></dt>
 <dd>
 <ul>
 <li><strong>정의</strong>: 설비가 고장이 발생했을 때, 이를 빠르고 효율적으로 수리할 수 있는 능력.</li>
-<li><strong>지표</strong></li>
-<li><strong>MTTR (Mean Time To Repair)</strong>: 고장이 발생한 후 복구까지의 평균 시간. MTTR이 짧을수록 보전성이 높다고 할 수 있다.</li>
-<li><strong>MTTF (Mean Time To Failure)</strong>: 고장이 발생하기까지의 평균 시간. MTTF가 길수록 보전성이 높다고 볼 수 있다.</li>
-<li><strong>수리 가능성 (Repairability Index)</strong>: 설비가 고장이 발생했을 때, 얼마나 쉽게 수리할 수 있는지를 평가하는 지표. 부품의 접근성, 수리 절차의 복잡성 등이 포함된다.</li>
+<li><strong>지표</strong>
+<ul>
+<li><strong>MTTR (Mean Time To Repair)</strong>: 고장이 발생한 후 복구까지의 평균 시간. MTTR이 짧을수록 보전성이 높음</li>
+<li><strong>MTTF (Mean Time To Failure)</strong>: 고장이 발생하기까지의 평균 시간. MTTF가 길수록 보전성이 높음</li>
+<li><strong>수리 가능성 (Repairability Index)</strong>: 설비가 고장이 발생했을 때, 얼마나 쉽게 수리할 수 있는지를 평가하는 지표로 부품의 접근성, 수리 절차의 복잡성 등이 포함</li>
+</ul></li>
 </ul>
 </dd>
 <dt><strong>유용성 (Usability)</strong></dt>
 <dd>
 <ul>
 <li><strong>정의</strong>: 설비가 사용자가 의도한 목적에 맞게 얼마나 쉽게 사용될 수 있는지를 나타내는 특성.</li>
-<li><strong>지표</strong></li>
-<li><strong>사용성 테스트 (Usability Testing)</strong>: 실제 사용자가 설비를 사용하면서 직면하는 문제를 평가하는 테스트. 사용자 경험을 기반으로 개선할 점을 도출.</li>
-<li><strong>사용자 만족도 (User Satisfaction)</strong>: 설비 사용 후 사용자가 느끼는 만족도를 조사한 지표. 설비가 직관적이고 효율적이면 사용자 만족도가 높다.</li>
-<li><strong>작업 효율성 (Task Efficiency)</strong>: 사용자가 설비를 사용하여 주어진 작업을 얼마나 빠르고 정확하게 수행할 수 있는지. 높은 효율성은 유용성이 뛰어난 설비를 나타낸다.</li>
+<li><strong>지표</strong>
+<ul>
+<li><strong>사용성 테스트 (Usability Testing)</strong>: 실제 사용자가 설비를 사용하면서 직면하는 문제를 평가하는 테스트, 사용자 경험을 기반으로 개선할 점을 도출</li>
+<li><strong>사용자 만족도 (User Satisfaction)</strong>: 설비 사용 후 사용자가 느끼는 만족도를 조사한 지표, 설비가 직관적이고 효율적이면 사용자 만족도가 높음</li>
+<li><strong>작업 효율성 (Task Efficiency)</strong>: 사용자가 설비를 사용하여 주어진 작업을 얼마나 빠르고 정확하게 수행할 수 있는지, 높은 효율성은 유용성이 뛰어난 설비 판단</li>
+</ul></li>
 </ul>
 </dd>
 </dl>
@@ -1730,14 +1756,12 @@ MTTF = 수리하지 \ 않은 \ 부품의 \ 사용 \ 시작부터 \ 고장까지 
 
 </div>
 </div>
-<center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://nrms.kisti.re.kr/bitextimages/TRKO201300024419/TRKO201300024419_129_image_89.jpg" class="img-fluid figure-img"></p>
 <figcaption>https://scienceon.kisti.re.kr/srch/selectPORSrchReport.do?cn=TRKO201300024419</figcaption>
 </figure>
 </div>
-</center>
 <p><strong>욕조곡선</strong>(bathtube curve), 신뢰도 곡선은 고장률이 시간 변화에 따라 높은 값에서 점차 낮은 값으로 감소하는 일정한 값을 얼마동안 유지한 후 점차 다시 높아지는 제품 수명을 나타내는 곡선이다. 신뢰도에서 고장률이 마치 욕조처럼 생겼다고 붙여진 명칭이다.</p>
 <dl>
 <dt>DFR, decrease failure rate</dt>
@@ -1910,86 +1934,78 @@ RAMS --- 신뢰성 &amp; 가용성 &amp; 유지보수성 &amp; 안전성
 </dl>
 <p>즉, PM이란 만성화된 문제 현상을 원리, 원칙에 입각하여 물리적으로해석하여 불량 원인을 근본적으로 제거하고 이상적인 mechanism을 밝혀 내는 사고 방법이다.</p>
 <p>PM 분석 절차는 다음과 같다.</p>
-<div class="cell" data-tbl-colwidths="[5,25,70]">
-<div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
+<table class="caption-top table">
+<caption>설비 문제 해결 8단계 절차</caption>
 <colgroup>
-<col style="width: 5%">
-<col style="width: 25%">
-<col style="width: 70%">
+<col style="width: 4%">
+<col style="width: 22%">
+<col style="width: 73%">
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: right;">단계</th>
-<th style="text-align: left;">구분</th>
-<th style="text-align: left;">실천사항</th>
+<th>단계</th>
+<th>구분</th>
+<th>실천사항</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: right;">1</td>
-<td style="text-align: left;">현상파악</td>
-<td style="text-align: left;">현상을 4W1H 관점에서 그 특성을 파악하여 현상을 세분화 한다(현상 특성 분석표 작성).</td>
+<td>1</td>
+<td><strong>현상파악</strong></td>
+<td>현상을 4W1H 관점에서 특성을 파악하여 세분화함 <em>(현상 특성 분석표 작성)</em></td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">2</td>
-<td style="text-align: left;">설비 구조의 가공원리 이해</td>
-<td style="text-align: left;">기계 각부분 구조를 도해하여 물건이 만들어지는 가공 원리를 인식한다(기계구조 그림, 가공 원리 도해).</td>
+<td>2</td>
+<td><strong>설비 구조의 가공원리 이해</strong></td>
+<td>기계 각 부분 구조를 도해해 물건이 만들어지는 가공 원리를 인식함 <em>(기계 구조 그림, 가공 원리 도해)</em></td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">3</td>
-<td style="text-align: left;">현상의 물리적 해석</td>
-<td style="text-align: left;">현상을 물리적인 원리, 원칙으로 설명(PM 분석)</td>
+<td>3</td>
+<td><strong>현상의 물리적 해석</strong></td>
+<td>현상을 물리적인 원리와 원칙으로 설명함 <em>(PM 분석)</em></td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">4</td>
-<td style="text-align: left;">현상이 성립하는 조건 추출</td>
-<td style="text-align: left;">현상을 발생시키는 조건을 전개하여 추정되는 case를 모두 정리한다(PM 분석)</td>
+<td>4</td>
+<td><strong>현상이 성립하는 조건 추출</strong></td>
+<td>현상 발생 조건을 전개하여 모든 추정 case를 정리함 <em>(PM 분석)</em></td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">5</td>
-<td style="text-align: left;">설비,재료,방법 관련성 검토</td>
-<td style="text-align: left;">불합리 조건이 성립되기 위한 설비, 재료, 치공구, 가공조건과의 관련성을 검토하여 인과관계가 있다고 생각되는 요인을 list up한다.</td>
+<td>5</td>
+<td><strong>설비, 재료, 방법 관련성 검토</strong></td>
+<td>설비, 재료, 치공구, 가공조건과의 관련성을 검토해 인과관계 요인을 리스트업함</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">6</td>
-<td style="text-align: left;">바람직한 모습</td>
-<td style="text-align: left;">진단 항목 추출과 바람직한 모습의 check진단 항목별 기준, 표준, 현물 등 바람직한 못브을 검토한다(진단 sheet).</td>
+<td>6</td>
+<td><strong>바람직한 모습</strong></td>
+<td>진단 항목을 추출하고, 항목별 기준·표준·현물을 검토해 바람직한 모습을 설정함 <em>(진단 sheet 작성)</em></td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">7</td>
-<td style="text-align: left;">현장 진단</td>
-<td style="text-align: left;">바람지한 모습에서 벗어난 것이나 미결함 등의 불합리한 점을 list up한다. 바람직한 모습이 불명확한 것은 data 수집, test하여 확인한다.</td>
+<td>7</td>
+<td><strong>현장 진단</strong></td>
+<td>바람직한 모습에서 벗어난 불합리 점을 리스트업하고, 미결함은 데이터 수집·테스트로 확인함</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">8</td>
-<td style="text-align: left;">개선책 입안과 실시</td>
-<td style="text-align: left;">불합리 점에 대해 개선책 입안과 개선안을 실시한다(개별 대책 list up, 개선 sheet).</td>
+<td>8</td>
+<td><strong>개선책 입안과 실시</strong></td>
+<td>불합리 점에 대한 개선책을 입안하고 실시함 <em>(개별 대책 리스트, 개선 sheet 작성)</em></td>
 </tr>
 </tbody>
 </table>
-</div>
-</div>
+<dl>
+<dt>특징</dt>
+<dd>
+<ul>
+<li><strong>원인 분석부터 현장 개선까지</strong> 전 과정을 단계별로 체계화함<br>
+</li>
+<li><strong>PM 분석(Physical Mechanism 분석)</strong>을 통해 물리적 관점에서 현상을 이해하고 원인을 추출함<br>
+</li>
+<li><strong>진단 Sheet</strong>와 <strong>개선 Sheet</strong> 등 문서화로 체계적 관리를 유도함</li>
+</ul>
+</dd>
+</dl>
 
 
 </section>
-</section>
-<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn1"><p>설비에 강한 오퍼레이터 육성 단계<br>
-1. 1단계: 오퍼레이터가 설비 개선 사고 방식을 익히는 단계<br>
-2. 2단계: 오퍼레이터가 설비 기능 및 구조를 이해하는 단계<br>
-3. 3단계: 오퍼레이터가 설비 정밀도와 제품 품질 간 관계를 이해하는 단계<br>
-4. 4단계: 오퍼레이터가 설비 수리 가능한 단계<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>총점검 전개 방법<br>
-1. 총점검 매뉴얼 준비 - 준비활동 및 총점검 과목 및 항목 설정<br>
-2. 총점검 매뉴얼에 대한 교육 실시 - 기계요소 총점검 대상 및 부위 작성<br>
-3. 총점검 매뉴얼 보완 - 담당설비별, 부품별 총점검 매뉴얼 내용 보완 작성<br>
-4. 총점검 체크시트 작성 - 담당설비별 총점검 실시를 위한 체크시트 작성<br>
-5. 총점검 실시와 미결함 적출 및 개선 - 청소/급유/점검 기준 및 점검표 보완<br>
-6. 점검 기능 체크 - 담당설비별 기계요소 기능 체크<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
 </section>
 
 </main> <!-- /main -->
