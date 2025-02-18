@@ -485,15 +485,8 @@ window.Quarto = {
   <ul>
   <li><a href="#공정기호" id="toc-공정기호" class="nav-link active" data-scroll-target="#공정기호">공정기호</a></li>
   <li><a href="#sec-line-balancing" id="toc-sec-line-balancing" class="nav-link" data-scroll-target="#sec-line-balancing">라인 밸런싱</a></li>
-  <li><a href="#sec-exchange-die" id="toc-sec-exchange-die" class="nav-link" data-scroll-target="#sec-exchange-die">준비교체 개선활동</a>
-  <ul>
-  <li><a href="#준비교체-시간-단축-필요성" id="toc-준비교체-시간-단축-필요성" class="nav-link" data-scroll-target="#준비교체-시간-단축-필요성">준비교체 시간 단축 필요성</a></li>
-  <li><a href="#준비교체-3대-낭비" id="toc-준비교체-3대-낭비" class="nav-link" data-scroll-target="#준비교체-3대-낭비">준비교체 3대 낭비</a></li>
-  </ul></li>
-  <li><a href="#less-engineering" id="toc-less-engineering" class="nav-link" data-scroll-target="#less-engineering">Less Engineering</a>
-  <ul>
-  <li><a href="#less-engineering-유형" id="toc-less-engineering-유형" class="nav-link" data-scroll-target="#less-engineering-유형">Less Engineering 유형</a></li>
-  </ul></li>
+  <li><a href="#sec-exchange-die" id="toc-sec-exchange-die" class="nav-link" data-scroll-target="#sec-exchange-die">준비교체 개선활동</a></li>
+  <li><a href="#less-engineering" id="toc-less-engineering" class="nav-link" data-scroll-target="#less-engineering">Less Engineering</a></li>
   <li><a href="#sec-5s" id="toc-sec-5s" class="nav-link" data-scroll-target="#sec-5s">3정 5S</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/yeonkyupark/pepc2e/edit/main/0801프로세스분석과개선.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
@@ -537,14 +530,19 @@ window.Quarto = {
 </div>
 <p><strong>공정분석</strong>(Operations analysis)은 작업 효율성을 높이기 위해 생산 과정과 작업 흐름을 평가하는 과정이다.</p>
 <p>공정분석을 위해 사용되는 <strong>공정기호</strong>(Flowchart symbols)는 작업 흐름을 시각적으로 나타내기 위한 기호로, 각 단계 작업이나 활동을 명확하게 표현하는데 사용된다. 이러한 기호는 작업 분석, 개선 그리고 최적화 작업을 효과적으로 수행할 수 있게 도음을 준다.</p>
-<center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/flow_chart_symbols.png" class="img-fluid figure-img"></p>
 <figcaption>youtube.com/watch?v=RXpHGa9ToAE&amp;t</figcaption>
 </figure>
 </div>
-</center>
+<p>아래는 공정기호를 이용한 공정도표 작성 예제이다.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/process_flow_chart.png" class="img-fluid figure-img"></p>
+<figcaption>http://business.chosun.ac.kr</figcaption>
+</figure>
+</div>
 </section>
 <section id="sec-line-balancing" class="level2">
 <h2 class="anchored" data-anchor-id="sec-line-balancing">라인 밸런싱</h2>
@@ -655,12 +653,13 @@ E_b = \frac{\sum{T_i}}{n \times c_T} = \frac{236}{10 \times 32} \times 100 = 73.
 </div>
 </div>
 <p><strong>준비교체 시간</strong>이란 현 제품 생산 종료 시점으로부터 다음 제품으로 교체/조정을 하여 완전히 양품이 생산되기까지의 시간을 말한다. 치공구 해체, 청소, 다음 제품에 사용할 치공구 준비, 금형류 준비, 세팅, 시가공, 조정, 측정 시간 등을 포함한다.</p>
-<section id="준비교체-시간-단축-필요성" class="level3">
-<h3 class="anchored" data-anchor-id="준비교체-시간-단축-필요성">준비교체 시간 단축 필요성</h3>
-<p>시장 요구에 맞춰 다품종화 되면서 가동률이 저하되는 추이를 보였다. 빈번한 기종 교체에 대응 및 준비 교체 시간 단축으로 가동률 향상을 위해 준비교체 시간 개선이 필요하게 되었다.</p>
-</section>
-<section id="준비교체-3대-낭비" class="level3">
-<h3 class="anchored" data-anchor-id="준비교체-3대-낭비">준비교체 3대 낭비</h3>
+<dl>
+<dt>준비교체 시간 단축 필요성</dt>
+<dd>
+시장 요구에 맞춰 다품종화 되면서 가동률이 저하되는 추이를 보였다. 빈번한 기종 교체에 대응 및 준비 교체 시간 단축으로 가동률 향상을 위해 준비교체 시간 개선이 필요하게 되었다.
+</dd>
+</dl>
+<p>준비교체시 발생하는 3대 낭비는 다음과 같다.</p>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
@@ -668,15 +667,38 @@ E_b = \frac{\sum{T_i}}{n \times c_T} = \frac{236}{10 \times 32} \times 100 = 73.
 <div>
 <pre class="mermaid mermaid-js">flowchart TB
 0[준비작업 낭비] --- 1[내준비교체&lt;br&gt;작업 낭비] &amp; 2[외준비교체&lt;br&gt;작업 낭비]
-1 --- 11[교환 낭비] &amp; 12[조정 낭비]
-2 --- 21[사전 준비 낭비] &amp; 22[후처리 낭비]
+1 --- 11[**교환 낭비**] &amp; 12[**조정 낭비**]
+2 --- 21[사전 **준비 낭비**] &amp; 22[후처리 낭비]
 </pre>
 </div>
-<p></p></figure><p></p>
+<p></p><figcaption> 준비교체 낭비</figcaption> </figure><p></p>
 </div>
 </div>
 </div>
 <p>내준비 시 <strong>교환 낭비</strong>, <strong>조정 낭비</strong>가, 외준비 시 <strong>준비 낭비</strong> 발생한다.</p>
+<dl>
+<dt>교환 낭비</dt>
+<dd>
+<ul>
+<li>치공구 교환, Press 금형/성형 등 금형 준비, Drill 등 교환</li>
+<li>조립라인의 조립품이나 부품 교체, 가공라인의 재료 교체 준비</li>
+</ul>
+</dd>
+<dt>조정 낭비</dt>
+<dd>
+<ul>
+<li>정밀 절살 가공이나 화확 장치 등에서 기준을 변경 및 조정하는 작업</li>
+<li>준비 작업자 테크릭을 발휘할 수 있는 조정 작업</li>
+</ul>
+</dd>
+<dt>준비 낭비</dt>
+<dd>
+<ul>
+<li>생산 시작 전에 여러 가지 준비 작업</li>
+<li>작업자나 기계 준비, 도면 확인, 청소 등 후처리를 포함</li>
+</ul>
+</dd>
+</dl>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="준비시간">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -703,37 +725,12 @@ E_b = \frac{\sum{T_i}}{n \times c_T} = \frac{236}{10 \times 32} \times 100 = 73.
 </dl>
 </div>
 </div>
-<dl>
-<dt>교환 낭비</dt>
-<dd>
-<ul>
-<li>치공구 교환, Press 금형/성형 등 금형 준비, Drill 등 교환</li>
-<li>조립라인의 조립품이나 부품 교체, 가공라인의 재료 교체 준비</li>
-</ul>
-</dd>
-<dt>조정 낭비</dt>
-<dd>
-<ul>
-<li>정밀 절살 가공이나 화확 장치 등에서 기준을 변경 및 조정하는 작업</li>
-<li>준비 작업자 테크릭을 발휘할 수 있는 조정 작업</li>
-</ul>
-</dd>
-<dt>준비 낭비</dt>
-<dd>
-<ul>
-<li>생산 시작 전에 여러 가지 준비 작업</li>
-<li>작업자나 기계 준비, 도면 확인, 청소 등 후처리를 포함</li>
-</ul>
-</dd>
-</dl>
-<center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/job_change.png" class="img-fluid figure-img"></p>
 <figcaption>https://www.youtube.com/watch?app=desktop&amp;v=8-kmV4wR2xo</figcaption>
 </figure>
 </div>
-</center>
 <dl>
 <dt>개선 절차</dt>
 <dd>
@@ -789,7 +786,6 @@ E_b = \frac{\sum{T_i}}{n \times c_T} = \frac{236}{10 \times 32} \times 100 = 73.
 </dd>
 </dl>
 </section>
-</section>
 <section id="less-engineering" class="level2">
 <h2 class="anchored" data-anchor-id="less-engineering">Less Engineering</h2>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 97-1-2, 127-2-1">
@@ -816,6 +812,7 @@ E_b = \frac{\sum{T_i}}{n \times c_T} = \frac{236}{10 \times 32} \times 100 = 73.
 </div>
 </div>
 <div class="callout-body-container callout-body">
+<hr>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 130-1-12">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -855,18 +852,16 @@ E_b = \frac{\sum{T_i}}{n \times c_T} = \frac{236}{10 \times 32} \times 100 = 73.
 <p>이렇게 하면 제조 공정의 효율성을 크게 향상시킬 수 있다.</p>
 </div>
 </div>
-<section id="less-engineering-유형" class="level3">
-<h3 class="anchored" data-anchor-id="less-engineering-유형">Less Engineering 유형</h3>
 <p>다음과 같은 유형이 있다.</p>
 <ul>
-<li>Walk Less - 보행 낭비 없애기</li>
-<li>Search Less - 찾는 낭비 없애기</li>
-<li>Air Less - 빈 공간 없애기</li>
-<li>Over stock Less - 과잉 재고 없애기</li>
-<li>Air Cut Less - 공구 절삭 낭비 없애기</li>
-<li>Conveyor Less - 불필요한 컨베이어 없애기</li>
-<li>Dust Less - 분진방지, 먼지 발생 원인 없애기</li>
-<li>Rough Motion Less - 불필요한 동작 없애기</li>
+<li><strong>Walk Less</strong> - 보행 낭비 없애기</li>
+<li><strong>Search Less</strong> - 찾는 낭비 없애기</li>
+<li><strong>Air Less</strong> - 빈 공간 없애기</li>
+<li><strong>Over stock Less</strong> - 과잉 재고 없애기</li>
+<li><strong>Air Cut Less</strong> - 공구 절삭 낭비 없애기</li>
+<li><strong>Conveyor Less</strong> - 불필요한 컨베이어 없애기</li>
+<li><strong>Dust Less</strong> - 분진방지, 먼지 발생 원인 없애기</li>
+<li><strong>Rough Motion Less</strong> - 불필요한 동작 없애기</li>
 </ul>
 <table class="caption-top table">
 <colgroup>
@@ -910,7 +905,6 @@ E_b = \frac{\sum{T_i}}{n \times c_T} = \frac{236}{10 \times 32} \times 100 = 73.
 </tr>
 </tbody>
 </table>
-</section>
 </section>
 <section id="sec-5s" class="level2">
 <h2 class="anchored" data-anchor-id="sec-5s">3정 5S</h2>
