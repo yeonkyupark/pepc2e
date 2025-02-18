@@ -483,18 +483,19 @@ window.Quarto = {
     <h2 id="toc-title">목차</h2>
    
   <ul>
-  <li><a href="#동작경제원칙" id="toc-동작경제원칙" class="nav-link active" data-scroll-target="#동작경제원칙">동작경제원칙</a>
-  <ul>
-  <li><a href="#신체-사용에-관한-원칙" id="toc-신체-사용에-관한-원칙" class="nav-link" data-scroll-target="#신체-사용에-관한-원칙">신체 사용에 관한 원칙</a></li>
-  <li><a href="#작업역-배치에-관한-원칙" id="toc-작업역-배치에-관한-원칙" class="nav-link" data-scroll-target="#작업역-배치에-관한-원칙">작업역 배치에 관한 원칙</a></li>
-  <li><a href="#공그-및-설비-설계에-관한-원칙" id="toc-공그-및-설비-설계에-관한-원칙" class="nav-link" data-scroll-target="#공그-및-설비-설계에-관한-원칙">공그 및 설비 설계에 관한 원칙</a></li>
-  </ul></li>
+  <li><a href="#동작경제원칙" id="toc-동작경제원칙" class="nav-link active" data-scroll-target="#동작경제원칙">동작경제원칙</a></li>
   <li><a href="#작업시간-산정" id="toc-작업시간-산정" class="nav-link" data-scroll-target="#작업시간-산정">작업시간 산정</a>
   <ul>
+  <li><a href="#직접-관측법" id="toc-직접-관측법" class="nav-link" data-scroll-target="#직접-관측법">직접 관측법</a>
+  <ul class="collapse">
   <li><a href="#sec-time-study" id="toc-sec-time-study" class="nav-link" data-scroll-target="#sec-time-study">시간연구법</a></li>
-  <li><a href="#sec-pts" id="toc-sec-pts" class="nav-link" data-scroll-target="#sec-pts">PTS</a></li>
   <li><a href="#sec-work-sampling" id="toc-sec-work-sampling" class="nav-link" data-scroll-target="#sec-work-sampling">워크 샘플링</a></li>
+  </ul></li>
+  <li><a href="#sec-pts" id="toc-sec-pts" class="nav-link" data-scroll-target="#sec-pts">PTS</a>
+  <ul class="collapse">
   <li><a href="#sec-work-factor" id="toc-sec-work-factor" class="nav-link" data-scroll-target="#sec-work-factor">WF</a></li>
+  <li><a href="#sec-modapts" id="toc-sec-modapts" class="nav-link" data-scroll-target="#sec-modapts">MODAPTS</a></li>
+  </ul></li>
   </ul></li>
   <li><a href="#sec-learning-curve" id="toc-sec-learning-curve" class="nav-link" data-scroll-target="#sec-learning-curve">학습곡선</a></li>
   </ul>
@@ -525,29 +526,37 @@ window.Quarto = {
 <section id="동작경제원칙" class="level2">
 <h2 class="anchored" data-anchor-id="동작경제원칙">동작경제원칙</h2>
 <p><strong>동작경제원칙</strong>(Principle of motion economy)은 작업 효율성을 향상시키기 위해 인간 동작을 최소화하고 최적화하는 원칙이다. 주로 산업공학, 작업설계 및 생산성 향상 분야에서 사용되며 사람 동작을 더 빠르고 효율적으로 만들기 위해 다양한 기술적, 물리적 방법을 제시한다.</p>
-<p>이 원칙은 Frank B. Gilbreth와 Lillina M. Gilbreth 부부가 20세기 초에 개발한 동작연구(Motion study)에서 유래했다. 사람 동작을 분석하고 불필요한 동작을 제거함으로써 작업 효율을 높이고 피로도를 줄이며 생산성을 향상시키는 ㅂ아법을 제시했다.</p>
+<p>이 원칙은 <strong>Frank B. Gilbreth와 Lillina M. Gilbreth 부부</strong>가 20세기 초에 개발한 <strong>동작연구(Motion study)에서 유래</strong>했다. 사람 동작을 분석하고 불필요한 동작을 제거함으로써 작업 효율을 높이고 피로도를 줄이며 생산성을 향상시키는 방법을 제시했다.</p>
 <dl>
 <dt>동작경제원칙 핵심 요소</dt>
 <dd>
 <ul>
-<li>동작 간소화: 동작을 수행하는데 필요한 동작 수를 줄인다. 즉 한번에 두개 이상 동작을 동시에 하거나 불필요한 동작을 피할 수 있도록 설계한다.</li>
-<li>동작 효율성: 동작은 최대한 자연스럽고 효율적으로 이루어져야 하며, 불필요하게 힘을 주거나 긴 시간을 소요하는 동작은 피해야 한다.</li>
-<li>동작 표준화: 사람마다 작업 동작에 차이가 있을 수 있는데, 가장 효율적으로 표준화된 동작 방법을 설정하여 모든 작업자가 동일한 방식으로 작업을 수행하게 한다.</li>
-<li>동작 순서화: 작업을 할 대 동작 순서를 논리적이고 일관되게 배치하여 작업자가 불필요하게 멈추거나 돌아가지 않도록 한다.</li>
-<li>도구와 장비 최적화: 작업에 필요한 도구와 장비는 손쉽게 접근할 수 있도록 배치하며, 불필요한 움직임을 최소화하는 디자인을 적용한다.</li>
+<li>동작 간소화<br>
+동작을 수행하는데 필요한 동작 수를 줄인다. 즉 한번에 두개 이상 동작을 동시에 하거나 불필요한 동작을 피할 수 있도록 설계한다.</li>
+<li>동작 효율성<br>
+동작은 최대한 자연스럽고 효율적으로 이루어져야 하며, 불필요하게 힘을 주거나 긴 시간을 소요하는 동작은 피해야 한다.</li>
+<li>동작 표준화 사람마다 작업 동작에 차이가 있을 수 있는데, 가장 효율적으로 표준화된 동작 방법을 설정하여 모든 작업자가 동일한 방식으로 작업을 수행하게 한다.</li>
+<li>동작 순서화<br>
+작업을 할 대 동작 순서를 논리적이고 일관되게 배치하여 작업자가 불필요하게 멈추거나 돌아가지 않도록 한다.</li>
+<li>도구와 장비 최적화<br>
+작업에 필요한 도구와 장비는 손쉽게 접근할 수 있도록 배치하며, 불필요한 움직임을 최소화하는 디자인을 적용한다.</li>
 </ul>
 </dd>
 <dt>동작경제원칙 장점</dt>
 <dd>
 <ul>
-<li>생산성 향상: 불필요한 동작을 줄이고 효율적인 작업 흐름을 만들어 생산성을 높일 수 있다.</li>
-<li>피로감 감소: 불필요한 움직임을 최소화하면 작업자 피로도가 줄어들어 더 우래 작업이 가능하다.</li>
-<li>비용 절감: 작업 시간이 단축되고, 인력 효율성이 높아져 인건비나 운영 비용이 절감될 수 있다.</li>
-<li>안전성 향상: 효율적인 동작 설계를 통해 작업 중 사고나 부상 위험을 줄일 수 있다.</li>
+<li>생산성 향상<br>
+불필요한 동작을 줄이고 효율적인 작업 흐름을 만들어 생산성을 높일 수 있다.</li>
+<li>피로감 감소<br>
+불필요한 움직임을 최소화하면 작업자 피로도가 줄어들어 더 우래 작업이 가능하다.</li>
+<li>비용 절감<br>
+작업 시간이 단축되고, 인력 효율성이 높아져 인건비나 운영 비용이 절감될 수 있다.</li>
+<li>안전성 향상<br>
+효율적인 동작 설계를 통해 작업 중 사고나 부상 위험을 줄일 수 있다.</li>
 </ul>
 </dd>
 </dl>
-<p>F.B. Gilbreth가 처음 사용하고 반즈(R.M. Banrnes)가 개량 보와한 동작경제 3원칙은 다음과 같다.</p>
+<p>F.B. Gilbreth가 처음 사용하고 <strong>반즈(R.M. Banrnes)가 개량 보완한 동작경제 3원칙</strong>은 다음과 같다.</p>
 <dl>
 <dt>동작경제 3원칙</dt>
 <dd>
@@ -558,8 +567,6 @@ window.Quarto = {
 </ol>
 </dd>
 </dl>
-<section id="신체-사용에-관한-원칙" class="level3">
-<h3 class="anchored" data-anchor-id="신체-사용에-관한-원칙">신체 사용에 관한 원칙</h3>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 109-1-2">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -573,7 +580,9 @@ window.Quarto = {
 
 </div>
 </div>
-<p>신체 사용에 있어 다음과 같은 원칙이 있다.</p>
+<dl>
+<dt>신체 사용에 관한 원칙</dt>
+<dd>
 <ol type="1">
 <li>양손은 동시에 동작을 시작하고 또 끝마쳐야 한다.</li>
 <li>휴식시간 이외에 양손이 동시에 노는 시간이 있어서는 안 된다.</li>
@@ -586,9 +595,9 @@ window.Quarto = {
 <li>탄도동작(ballistic movement)은 제한되거나 통제된 동작보다 더 신속, 정확, 용이하다.</li>
 <li>눈을 주시시키는 동작 또는 이동시키는 동작은 되도록 적게 하여야 한다.</li>
 </ol>
-</section>
-<section id="작업역-배치에-관한-원칙" class="level3">
-<h3 class="anchored" data-anchor-id="작업역-배치에-관한-원칙">작업역 배치에 관한 원칙</h3>
+</dd>
+<dt>작업역 배치에 관한 원칙</dt>
+<dd>
 <ol type="1">
 <li>모든 공구와 재료는 일정한 위치에 정돈되어야 한다.</li>
 <li>공구와 재료는 작업이 용이하도록 작업자의 주위에 있어야 한다.</li>
@@ -599,9 +608,9 @@ window.Quarto = {
 <li>의자와 작업대의 모양과 높이는 각 작업자에게 알맞도록 설계되어야 한다.</li>
 <li>작업자가 좋은 자세를 취할 수 있는 모양, 높이의 의자를 지급해야 한다.</li>
 </ol>
-</section>
-<section id="공그-및-설비-설계에-관한-원칙" class="level3">
-<h3 class="anchored" data-anchor-id="공그-및-설비-설계에-관한-원칙">공그 및 설비 설계에 관한 원칙</h3>
+</dd>
+<dt>공구 및 설비 설계에 관한 원칙</dt>
+<dd>
 <ol type="1">
 <li>치구, 고정장치나 발을 사용함으로써 손의 작업을 보존하고 손은 다른 동작을 담당하도록 하면 편리하다.</li>
 <li>공구류는 될 수 있는 대로 두 가지 이상의 기능을 조합한 것을 사용하여야 한다.</li>
@@ -610,10 +619,12 @@ window.Quarto = {
 <li>각종 손잡이는 손에 가장 알맞게 고안함으로써 피로를 감소시킬 수 있다.</li>
 <li>각종 레버나 핸들은 작업자가 최소의 움직임으로 사용할 수 있는 위치에 있어야 한다.</li>
 </ol>
-</section>
+</dd>
+</dl>
 </section>
 <section id="작업시간-산정" class="level2">
 <h2 class="anchored" data-anchor-id="작업시간-산정">작업시간 산정</h2>
+<p>작업시간을 산정하는 방법에는 통계적인 방법, 관측을 통한 방법, 그리고 기존 자료를 활용한 합성법이 있다.</p>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
@@ -629,18 +640,18 @@ window.Quarto = {
 12[실적 자료법]
 
 21[직접 관측법]
-211["시간연구법(Stop watch)"]
-212["작업표본 분석법(Work sampling)"]
+211["**시간연구법(Stop watch)**"]
+212["**작업표본 분석법&lt;br&gt;(Work sampling)**"]
 22[간접 관측법]
 221[미세동작 연구법]
 222[동작궤적 분석법]
 
-31["기정시간 표준법(PTS)"]
-311["작업요소시간 표준법(Work factor)"]
+31["**기정시간 표준법&lt;br&gt;(PTS)**"]
+311["**작업요소시간 표준법&lt;br&gt;(Work factor)**"]
 312["방법시간 표준법(MTM)"] --- 혼다
 32[표준시간 자료법] ---- D
-313["MODAPTS"] --- D[도요다]
-321["컴퓨터 시뮬레이션 기법(CAPES"]
+313["**MODAPTS**"] --- D[도요다]
+321["컴퓨터 시뮬레이션 기법(CAPES)"]
 
 00 --- 01 &amp; 02 &amp; 03
 
@@ -658,9 +669,12 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<section id="sec-time-study" class="level3">
-<h3 class="anchored" data-anchor-id="sec-time-study">시간연구법</h3>
-<p>19세기말 Frederick Winslow Taylor가 공식 도입한 방법으로 어떤 업무를 한 작업자가 여러번 수행하는 것을 관찰하여 표준시간을 정하는 방식이다.</p>
+<section id="직접-관측법" class="level3">
+<h3 class="anchored" data-anchor-id="직접-관측법">직접 관측법</h3>
+<p>작업자를 직접 관측하여 표준 시간을 산정하는 방식이다. 대표적으로 시간연구법과 워크 샘플링법이 있다.</p>
+<section id="sec-time-study" class="level4">
+<h4 class="anchored" data-anchor-id="sec-time-study">시간연구법</h4>
+<p>19세기말 Frederick Winslow <strong>Taylor</strong>가 공식 도입한 방법으로 어떤 업무를 <font color="blue">한 작업자가 여러 번 수행하는 것을 관찰하여 표준시간을 정하는 방식</font>이다.</p>
 <dl>
 <dt>절차</dt>
 <dd>
@@ -678,7 +692,7 @@ window.Quarto = {
 \]</span></p>
 <p>여기서,</p>
 <ul>
-<li><span class="math inline">\(z\)</span> = 목표 신뢰도를 달성하기 위한 표준편차 수</li>
+<li><span class="math inline">\(z\)</span> = 목표 신뢰도를 달성하기 위한 표준편차(신뢰도 목표)</li>
 <li><span class="math inline">\(s\)</span> = 표본 표준편차</li>
 <li><span class="math inline">\(a\)</span> = 정확도 목표</li>
 <li><span class="math inline">\(\bar{x}\)</span> = 표본평균</li>
@@ -702,6 +716,85 @@ window.Quarto = {
 </div>
 </div>
 </section>
+<section id="sec-work-sampling" class="level4">
+<h4 class="anchored" data-anchor-id="sec-work-sampling">워크 샘플링</h4>
+<p><strong>워크샘플링</strong>(work sampling)법은 확률을 기반으로 최소한 샘픙을 순간적으로 관측하여, 관측 대상으로 하는 현장 전체 모습을 실용상 만족할만한 신뢰구간과 정확도를 가지고추정하는 작업측정 기법이다.</p>
+<table class="caption-top table">
+<caption>작업 관측법의 장단점</caption>
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>구분</strong></th>
+<th><strong>장점</strong></th>
+<th><strong>단점</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>훈련 및 비용</strong></td>
+<td>실시 절차가 복잡하지 않아 고도 훈련이 필요 없음</td>
+<td>작업을 요소별로 분할해 관측할 수 없음</td>
+</tr>
+<tr class="even">
+<td><strong>비용</strong></td>
+<td>시간 연구법에 비해 비용이 저렴함</td>
+<td>관측 결과의 오차가 시간 연구법보다 큼</td>
+</tr>
+<tr class="odd">
+<td><strong>심리적 영향</strong></td>
+<td>작업자에게 심리적 압박을 배제할 수 있음</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>작업 관측법은 <strong>간단한 절차와 낮은 비용</strong>, 그리고 <strong>작업자의 심리적 부담 감소</strong>라는 장점을 가지지만, <strong>세부 분석 부족 및 오차 발생 가능성</strong>이 단점으로 지적된다.</p>
+<dl>
+<dt>워크샘플 표준시간 선정 절차</dt>
+<dd>
+<ol type="1">
+<li>관측 대상과 목적을 정한다.</li>
+<li>특정 활동 발생률(유휴율 내지 가동률)을 추정한다.</li>
+<li>관측에서 요구되는 신뢰수준과 정확도(오차율)를 정한다.</li>
+<li>관측이 행해질 관측시간을 랜덤으로 정한다.</li>
+<li>조사기간 중 두세 차례에 걸쳐 필요한 관측 수를 재계산하여 조정한다.</li>
+<li>관측겨로가에 의해서 정상시간과 표준시간을 산성한다.</li>
+</ol>
+</dd>
+<dt>워크샘플링 표준시간 계산 방법</dt>
+<dd>
+<ol type="1">
+<li>관측수(N) 결정, <span class="math inline">\(N = (\frac{K}{S})^2\frac{1-p}{p}\)</span>
+<ul>
+<li>N: 랜덤 관측 횟수(샘플 크기)</li>
+<li>K: 신뢰수준에 따라 정해지는 표준편차 배수</li>
+<li>S: p에 대한 상대적 정도(허용오차)</li>
+<li>p: 구하는 비율(발생률)</li>
+</ul></li>
+<li>표준시간 산정
+<ul>
+<li><span class="math inline">\(정상시간(단위당)=\frac{총관측시간x발생률x수행도평가(레이팅)}{생산량}\)</span></li>
+<li>여기서 여유시간을 가산하여 단위당 표준시간 산정
+<ul>
+<li>표준시간 = 정상시간(1+여유률)</li>
+<li>표준시간 = 정상시간 x <span class="math inline">\((frac{1}{1-여유율})\)</span></li>
+</ul></li>
+</ul></li>
+</ol>
+</dd>
+<dt>워크샘플링 적용 대상</dt>
+<dd>
+<ul>
+<li>시간연구법으로 적용하기 어려운 비반복적인 업무에 효과적</li>
+<li>기계수리, 세탁, 토목공사 등과 같은 업무에 활용</li>
+</ul>
+</dd>
+</dl>
+</section>
+</section>
 <section id="sec-pts" class="level3">
 <h3 class="anchored" data-anchor-id="sec-pts">PTS</h3>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 109-2-2">
@@ -717,7 +810,7 @@ window.Quarto = {
 
 </div>
 </div>
-<p><strong>PTS</strong>(predetermined time standard)는 이미 작성된 작업요소들을 이용하여 표준시간을 계산하는 방식이다. 1940년대 말 Method Engineering Council이 개발한 방법시간측정(MTM, Methods-time measurement)을 주로 사용했다.</p>
+<p><strong>PTS</strong>(predetermined time standard)는 <font color="blue">이미 작성된 작업요소들을 이용하여 표준시간을 계산하는 방식</font>이다. 1940년대 말 Method Engineering Council이 개발한 방법시간측정(MTM, Methods-time measurement)을 주로 사용했다.</p>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
@@ -758,8 +851,8 @@ MTA --- WF --- MTM --- BMT --- RWF --- MODAPTS
 </thead>
 <tbody>
 <tr class="odd">
-<td>간접 측정방법으로 작업자 불편 제거</td>
-<td>회사 설정에 가장 적합한 PTS 시스템 선택이 곤란</td>
+<td><strong>간접 측정방법으로 작업자 불편 제거</strong></td>
+<td><strong>회사 설정에 가장 적합한 PTS 시스템 선택이 곤란</strong></td>
 </tr>
 <tr class="even">
 <td>스톱워치 미사용으로 별도 레이팅 불필요</td>
@@ -835,87 +928,8 @@ MTA --- WF --- MTM --- BMT --- RWF --- MODAPTS
 </tr>
 </tbody>
 </table>
-<p><code>MODAPTS</code>(Modular Arrangement of Predetermined Time Standards) 시스템은 작업자의 신체 동작을 분석하여 작업 시간을 측정하고 표준을 설정하는 방법이다. MODAPTS에서 신체 동작은 여러 기본 단위로 나누어지며, 주요 동작 3가지는 다음과 같다.</p>
-<ol type="1">
-<li><strong>Reach (리치)</strong>:
-<ul>
-<li><strong>설명</strong>: 작업자가 물체를 잡기 위해 팔을 뻗는 동작입니다. 이 동작은 작업자가 물체를 가져오기 위해 팔을 앞으로 뻗을 때의 시간을 측정하는 데 사용된다.</li>
-<li><strong>예시</strong>: 작업자가 테이블 위의 물건을 집기 위해 팔을 뻗을 때의 동작.</li>
-</ul></li>
-<li><strong>Grasp (그랩)</strong>:
-<ul>
-<li><strong>설명</strong>: 물체를 손으로 잡는 동작입니다. 이 동작은 물체를 손으로 쥐는 데 소요되는 시간을 측정한다.</li>
-<li><strong>예시</strong>: 작업자가 도구를 손에 쥐거나 물건을 집을 때의 동작.</li>
-</ul></li>
-<li><strong>Move (무브)</strong>:
-<ul>
-<li><strong>설명</strong>: 물체를 이동시키는 동작입니다. 이는 물체를 한 장소에서 다른 장소로 옮기는 데 드는 시간을 측정한다.</li>
-<li><strong>예시</strong>: 작업자가 물건을 한 곳에서 다른 곳으로 옮기는 동작.</li>
-</ul></li>
-</ol>
-</section>
-<section id="sec-work-sampling" class="level3">
-<h3 class="anchored" data-anchor-id="sec-work-sampling">워크 샘플링</h3>
-<p><strong>워크샘플링</strong>(work sampling)법은 확률을 기반으로 최소한 샘픙을 순간적으로 관측하여, 관측 대상으로 하는 현장 전체 모습을 실용상 만족할만한 신뢰구간과 정확도를 가지고추정하는 작업측정 기법이다.</p>
-<dl>
-<dt>장점</dt>
-<dd>
-<ul>
-<li>내용이나 실시 절차가 복잡하지 않기 때문에 관측 담당자에 대한 고도 훈련이 필요치 않다.</li>
-<li>비용면에서도 시간 연구법에 비해 저렴하다.</li>
-<li>작업자에게 주는 심리적 압박을 배제할 수 있다.</li>
-</ul>
-</dd>
-<dt>단점</dt>
-<dd>
-<ul>
-<li>작업을 요소별로 분할해서 관측할 수 없다.</li>
-<li>관측결과 오차가 시간연구법보다 크다.</li>
-</ul>
-</dd>
-<dt>워크샘플 표준시간 선정 절차</dt>
-<dd>
-<ol type="1">
-<li>관측 대상과 목적을 정한다.</li>
-<li>특정 활동 발생률(유휴율 내지 가동률)을 추정한다.</li>
-<li>관측에서 요구되는 신뢰수준과 정확도(오차율)를 정한다.</li>
-<li>관측이 행해질 관측시간을 랜덤으로 정한다.</li>
-<li>조사기간 중 두세 차례에 걸쳐 필요한 관측 수를 재계산하여 조정한다.</li>
-<li>관측겨로가에 의해서 정상시간과 표준시간을 산성한다.</li>
-</ol>
-</dd>
-<dt>워크샘플링 표준시간 계산 방법</dt>
-<dd>
-<ol type="1">
-<li>관측수(N) 결정, <span class="math inline">\(N = (\frac{K}{S})^2\frac{1-p}{p}\)</span>
-<ul>
-<li>N: 랜덤 관측 횟수(샘플 크기)</li>
-<li>K: 신뢰수준에 따라 정해지는 표준편차 배수</li>
-<li>S: p에 대한 상대적 정도(허용오차)</li>
-<li>p: 구하는 비율(발생률)</li>
-</ul></li>
-<li>표준시간 산정
-<ul>
-<li><span class="math inline">\(정상시간(단위당)=\frac{총관측시간x발생률x수행도평가(레이팅)}{생산량}\)</span></li>
-<li>여기서 여유시간을 가산하여 단위당 표준시간 산정
-<ul>
-<li>표준시간 = 정상시간(1+여유률)</li>
-<li>표준시간 = 정상시간 x <span class="math inline">\((frac{1}{1-여유율})\)</span></li>
-</ul></li>
-</ul></li>
-</ol>
-</dd>
-<dt>워크샘플링 적용 대상</dt>
-<dd>
-<ul>
-<li>시간연구법으로 적용하기 어려운 비반복적인 업무에 효과적</li>
-<li>기계수리, 세탁, 토목공사 등과 같은 업무에 활용</li>
-</ul>
-</dd>
-</dl>
-</section>
-<section id="sec-work-factor" class="level3">
-<h3 class="anchored" data-anchor-id="sec-work-factor">WF</h3>
+<section id="sec-work-factor" class="level4">
+<h4 class="anchored" data-anchor-id="sec-work-factor">WF</h4>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 103-3-1, 127-1-12">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1077,6 +1091,28 @@ WF --- 11[사용되는 신체부위] &amp; 12[이동거리] &amp; 13[동작 또�
 </dd>
 </dl>
 </section>
+<section id="sec-modapts" class="level4">
+<h4 class="anchored" data-anchor-id="sec-modapts">MODAPTS</h4>
+<p><code>MODAPTS</code>(Modular Arrangement of Predetermined Time Standards) 시스템은 작업자의 신체 동작을 분석하여 작업 시간을 측정하고 표준을 설정하는 방법이다. MODAPTS에서 신체 동작은 여러 기본 단위로 나누어지며, 주요 동작 3가지는 다음과 같다.</p>
+<ol type="1">
+<li><strong>Reach (리치)</strong>:
+<ul>
+<li><strong>설명</strong>: 작업자가 물체를 잡기 위해 팔을 뻗는 동작입니다. 이 동작은 작업자가 물체를 가져오기 위해 팔을 앞으로 뻗을 때의 시간을 측정하는 데 사용된다.</li>
+<li><strong>예시</strong>: 작업자가 테이블 위의 물건을 집기 위해 팔을 뻗을 때의 동작.</li>
+</ul></li>
+<li><strong>Grasp (그랩)</strong>:
+<ul>
+<li><strong>설명</strong>: 물체를 손으로 잡는 동작입니다. 이 동작은 물체를 손으로 쥐는 데 소요되는 시간을 측정한다.</li>
+<li><strong>예시</strong>: 작업자가 도구를 손에 쥐거나 물건을 집을 때의 동작.</li>
+</ul></li>
+<li><strong>Move (무브)</strong>:
+<ul>
+<li><strong>설명</strong>: 물체를 이동시키는 동작입니다. 이는 물체를 한 장소에서 다른 장소로 옮기는 데 드는 시간을 측정한다.</li>
+<li><strong>예시</strong>: 작업자가 물건을 한 곳에서 다른 곳으로 옮기는 동작.</li>
+</ul></li>
+</ol>
+</section>
+</section>
 </section>
 <section id="sec-learning-curve" class="level2">
 <h2 class="anchored" data-anchor-id="sec-learning-curve">학습곡선</h2>
@@ -1093,8 +1129,8 @@ WF --- 11[사용되는 신체부위] &amp; 12[이동거리] &amp; 13[동작 또�
 
 </div>
 </div>
-<p>작업을 반복함에 다라 작업 소요시간 즉, 공수(Man hour)가 체감되는데 이와 같은 현상을 공수 체감 현상이라고 한다. 이 공수 체감 현상 내지 능률 개선율을 그래프나 수식으로 나타낸 것을 <strong>학습곡선</strong>(Learning curve)이라고 한다. 학습현상 혹은 학습효과란 동일한 업무를 반복적으로 수행함에 따라 숙련도가 증가되어 단위당 작업시간이 감소하여 단위당 원가가 감소하는 현상을 말한다.</p>
-<p>학습효과는 생산량이 2배 증가함에 따른 단위당 노동시간 감소를 뜻하며, 학습률이 80%라면 학습효과는 20%가 된다. 즉, 첫 번째 단위 생산에 100시간 노동이 필요하다고 가정하면 2번째 단위 생산에서는 80시간이 필요하고, 4번째 단위 생산에서는 64시간이 소요된다. 따라서 n번째 단위를 생산하는데 소요되는 시간은 첫 번째 단위 생산하는데 소요되는 시간과 지수함수 관계를 갖게 된다.</p>
+<p>작업을 반복함에 따라 작업 소요시간 즉, 공수(Man hour)가 체감되는데, 이와 같은 현상을 공수 체감 현상이라고 한다. 이 공수 체감 현상 내지 능률 개선율을 그래프나 수식으로 나타낸 것을 <strong>학습곡선</strong>(Learning curve)이라고 한다. 학습현상 혹은 학습효과란 동일한 업무를 반복적으로 수행함에 따라 숙련도가 증가되어 단위당 작업시간이 감소하여 단위당 원가가 감소하는 현상을 말한다.</p>
+<p><strong>학습효과</strong>는 <font color="blue">생산량이 2배 증가함에 따른 단위당 노동시간 감소를 뜻</font>하며, 학습률이 80%라면 학습효과는 20%가 된다. 즉, 첫 번째 단위 생산에 100시간 노동이 필요하다고 가정하면 2번째 단위 생산에서는 80시간이 필요하고, 4번째 단위 생산에서는 64시간이 소요된다. 따라서 n번째 단위를 생산하는데 소요되는 시간은 첫 번째 단위 생산하는데 소요되는 시간과 지수함수 관계를 갖게 된다.</p>
 <p>학습률에 따른 평균원가 변화 수식은 다음과 같다.</p>
 <p><span class="math display">\[
 Y_n = Y_1 \times n^R
@@ -1106,37 +1142,39 @@ Y_n = Y_1 \times n^R
 <li>R: <span class="math inline">\(\frac{log^b}{log^2}\)</span></li>
 <li>b: 학습률</li>
 </ul>
-<div class="cell">
-<div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
-<caption>학습곡선 장점과 단점</caption>
+<table class="caption-top table">
+<caption>학습곡선 효과의 장단점</caption>
 <colgroup>
-<col style="width: 38%">
-<col style="width: 61%">
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;">장점</th>
-<th style="text-align: left;">단점</th>
+<th><strong>구분</strong></th>
+<th><strong>장점</strong></th>
+<th><strong>단점</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">비용 절감: 반복 작업에서 시간과 자원 사용을 줄여 비용을 절감할 수 있다.</td>
-<td style="text-align: left;">초기 투자 필요: 초기에는 시간이 많이 소요되거나 비용이 증가할 수 있다.</td>
+<td><strong>비용 측면</strong></td>
+<td>반복 작업을 통해 시간과 자원 사용을 절감하여 비용 절감</td>
+<td>초기 투자 시 많은 시간과 비용이 소요될 수 있음</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">생산성 향상: 반복 작업에서 효율성을 극대화하여 생산성을 높일 수 있다.</td>
-<td style="text-align: left;">기술 습득 한계: 일정 수준 이후에는 더 이상의 효율 향상이 어렵거나 느려질 수 있다.</td>
+<td><strong>생산성 측면</strong></td>
+<td>반복 작업으로 효율성을 극대화해 생산성 향상</td>
+<td>일정 수준 이후 추가적인 효율 향상이 어렵거나 느려질 수 있음</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">경쟁력 강화: 기술이 향상됨에 따라 시장에서 경쟁력을 가질 수 있다.</td>
-<td style="text-align: left;">과도한 의존성: 특정 작업에 대해 숙련도가 높아진다고 해서 다른 새로운 작업에서 동일한 수준의 효율성을 얻을 수 없다.</td>
+<td><strong>경쟁력 측면</strong></td>
+<td>기술 향상으로 시장에서 경쟁력 확보</td>
+<td>특정 작업에 대한 숙련도가 타 작업에 쉽게 적용되지 않아 과도한 의존성 발생</td>
 </tr>
 </tbody>
 </table>
-</div>
-</div>
+<p>학습곡선 효과는 <strong>비용 절감, 생산성 향상, 경쟁력 강화</strong> 등의 장점을 제공하지만, <strong>초기 비용 부담, 기술 습득의 한계, 과도한 의존성</strong> 등의 단점도 수반한다.</p>
 <div class="callout callout-style-default callout-important no-icon callout-titled" title="1호기 공수가 10시간일 때 학습률이 80%인 경우">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1147,41 +1185,53 @@ Y_n = Y_1 \times n^R
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<div class="cell">
-<div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
+<table class="caption-top table">
+<caption>학습곡선(러닝 커브) 예제</caption>
+<colgroup>
+<col style="width: 25%">
+<col style="width: 44%">
+<col style="width: 29%">
+</colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: right;">누적생산량</th>
-<th style="text-align: right;">단위당.평균.노동시간</th>
-<th style="text-align: right;">총노동시간</th>
+<th><strong>누적 생산량</strong></th>
+<th><strong>단위당 평균 노동시간(시간)</strong></th>
+<th><strong>총 노동시간(시간)</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">10.00</td>
-<td style="text-align: right;">10.00</td>
+<td>1</td>
+<td>10.00</td>
+<td>10.00</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">8.00</td>
-<td style="text-align: right;">16.00</td>
+<td>2</td>
+<td>8.00</td>
+<td>16.00</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">6.40</td>
-<td style="text-align: right;">25.60</td>
+<td>4</td>
+<td>6.40</td>
+<td>25.60</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">8</td>
-<td style="text-align: right;">5.12</td>
-<td style="text-align: right;">40.96</td>
+<td>8</td>
+<td>5.12</td>
+<td>40.96</td>
 </tr>
 </tbody>
 </table>
-</div>
-</div>
+<ul>
+<li><strong>학습률(Learning Rate)</strong><br>
+단위당 평균 노동시간이 누적 생산량이 2배가 될 때마다 일정 비율로 감소함<br>
+예제에서는 1단위에서 2단위로 생산할 때 노동시간이 80%로 감소(10.00 → 8.00)<br>
+</li>
+<li><strong>누적평균시간법</strong>을 통해 평균 노동시간 및 총 노동시간을 구함<br>
+</li>
+<li>생산량이 증가할수록 단위당 노동시간이 감소하는 <strong>학습곡선 효과(Learning Curve Effect)</strong>를 보여줌<br>
+</li>
+</ul>
 </div>
 </div>
 <dl>
@@ -1196,10 +1246,10 @@ Y_n = Y_1 \times n^R
 <dt>학습곡선 제약</dt>
 <dd>
 <ul>
-<li>학습률은 기업, 작업 형태, 작업자에 따라 상이하다. 그러므로 실증조사가 필요하다.</li>
-<li>시간추정치는 첫 단위 생산시간에 크게 의존하므로 이의 결정에 신중을 기해야 한다.</li>
-<li>노동집약적 산업에 유효하다.</li>
-<li>다품종 소량생산에는 불리하다.</li>
+<li>학습률은 기업, 작업 형태, 작업자에 따라 상이하므로 실증조사가 필요</li>
+<li>시간추정치는 첫 단위 생산시간에 크게 의존하므로 이의 결정에 신중을 기해야 함</li>
+<li>노동집약적 산업에 유효</li>
+<li>다품종 소량생산에는 불리</li>
 </ul>
 </dd>
 </dl>
