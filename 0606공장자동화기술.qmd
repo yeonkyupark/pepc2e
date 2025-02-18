@@ -149,11 +149,11 @@ LCA | FA | FMS | CIM | Smart Factory
 FMS의 주요 특징   
 : 
 1. **유연성(Flexibility)**  
-    - 제품의 종류와 사양이 달라져도 기계 및 설비의 변경 없이 생산이 가능하다.  
-    - 다양한 제품을 **동시에** 또는 **순차적으로** 생산할 수 있다.  
+  - 제품의 종류와 사양이 달라져도 기계 및 설비의 변경 없이 생산이 가능하다.  
+  - 다양한 제품을 **동시에** 또는 **순차적으로** 생산할 수 있다.  
 2. **자동화(Automation)**  
-    - CNC(Computer Numerical Control) 기계, 로봇, AGV(Automated Guided Vehicle, 무인 운반차) 등으로 구성되어 있다.  
-    - 작업 변경이나 설비 조정이 자동으로 이루어진다.  
+        - CNC(Computer Numerical Control) 기계, 로봇, AGV(Automated Guided Vehicle, 무인 운반차) 등으로 구성되어 있다.  
+        - 작업 변경이나 설비 조정이 자동으로 이루어진다.  
 3. **통합 시스템(Integration)**  
     - 생산 계획, 재고 관리, 품질 검사 등이 통합된 **컴퓨터 시스템(CIM, Computer Integrated Manufacturing)**으로 제어된다.  
 4. **효율성 및 생산성 향상**  
