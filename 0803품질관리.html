@@ -957,34 +957,45 @@ end
 <dt>관리한계 (Control Limits)</dt>
 <dd>
 <ul>
-<li><strong>정의</strong> 관리한계는 <strong>통계적 품질 관리</strong>(Statistical Quality Control, SQC)에서 사용되며, 공정의 변동성을 측정하기 위해 설정된 한계 값이다. 관리한계는 공정이 통계적으로 안정적인지 여부를 평가하는 기준으로, <strong>공정 내 변동</strong>을 기준으로 설정된다.</li>
-<li><strong>목적</strong> 관리한계는 공정이 자연적인 변동(우연적 변동) 내에서 운영되고 있는지 확인하기 위해 사용된다. 관리한계는 <strong>공정의 안정성</strong>을 파악하기 위한 도구이다.</li>
-<li><strong>계산 방법</strong> 관리한계는 <strong>공정의 표준편차</strong>(σ)나 <strong>범위</strong>(Range) 등을 기반으로 설정된다. 일반적으로, 공정의 평균에서 ±3σ를 기준으로 설정한다. 이를 통해 공정의 데이터가 <strong>3시그마</strong> 범위 내에 분포하는지 확인한다.
+<li><strong>정의</strong><br>
+관리한계는 <strong>통계적 품질 관리</strong>(Statistical Quality Control, SQC)에서 사용되며, 공정의 변동성을 측정하기 위해 설정된 한계 값이다. 관리한계는 공정이 통계적으로 안정적인지 여부를 평가하는 기준으로, <strong>공정 내 변동</strong>을 기준으로 설정된다.</li>
+<li><strong>목적</strong><br>
+관리한계는 공정이 자연적인 변동(우연적 변동) 내에서 운영되고 있는지 확인하기 위해 사용된다. 관리한계는 <strong>공정의 안정성</strong>을 파악하기 위한 도구이다.</li>
+<li><strong>계산 방법</strong><br>
+관리한계는 <strong>공정의 표준편차</strong>(σ)나 <strong>범위</strong>(Range) 등을 기반으로 설정된다. 일반적으로, 공정의 평균에서 ±3σ를 기준으로 설정한다. 이를 통해 공정의 데이터가 <strong>3시그마</strong> 범위 내에 분포하는지 확인한다.
 <ul>
 <li><strong>상한 관리한계 (UCL)</strong>: 평균 + 3σ</li>
 <li><strong>하한 관리한계 (LCL)</strong>: 평균 - 3σ</li>
 </ul></li>
-<li><strong>의미</strong> 관리한계 밖으로 벗어난 값은 공정이 비정상적이라는 신호로 해석되며, 이는 공정에 문제가 있거나 특수 원인(비정상적인 요인)이 존재할 수 있음을 나타낸다.</li>
-<li><strong>용도</strong> 관리한계는 <strong>품질 관리 도표</strong>(예: 관리도, Control Chart)에 표시되어, 공정의 상태를 실시간으로 모니터링하는 데 사용된다.</li>
+<li><strong>의미</strong><br>
+관리한계 밖으로 벗어난 값은 공정이 비정상적이라는 신호로 해석되며, 이는 공정에 문제가 있거나 특수 원인(비정상적인 요인)이 존재할 수 있음을 나타낸다.</li>
+<li><strong>용도</strong><br>
+관리한계는 <strong>품질 관리 도표</strong>(예: 관리도, Control Chart)에 표시되어, 공정의 상태를 실시간으로 모니터링하는 데 사용된다.</li>
 </ul>
 </dd>
 <dt>규격한계 (Specification Limits)</dt>
 <dd>
 <ul>
-<li><strong>정의</strong> 규격한계는 제품이나 서비스가 충족해야 하는 <strong>품질 기준</strong>을 정의한 한계 값이다. 이는 <strong>고객의 요구사항</strong> 또는 <strong>제품의 설계 규격</strong>에 기반한 한계이다.</li>
-<li><strong>목적</strong> 규격한계는 제품이 고객의 요구를 만족하는지 여부를 평가하기 위해 설정된다. 규격한계는 제품이 <strong>허용 가능한 품질 수준</strong> 내에서 생산되는지를 확인하는 데 사용된다.</li>
-<li><strong>계산 방법</strong> 규격한계는 제품의 설계 사양에 따라 설정되며, 주로 <strong>상한 규격(USL, Upper Specification Limit)</strong>과 <strong>하한 규격(LSL, Lower Specification Limit)</strong>으로 정의된다.
+<li><strong>정의</strong><br>
+규격한계는 제품이나 서비스가 충족해야 하는 <strong>품질 기준</strong>을 정의한 한계 값이다. 이는 <strong>고객의 요구사항</strong> 또는 <strong>제품의 설계 규격</strong>에 기반한 한계이다.</li>
+<li><strong>목적</strong><br>
+규격한계는 제품이 고객의 요구를 만족하는지 여부를 평가하기 위해 설정된다. 규격한계는 제품이 <strong>허용 가능한 품질 수준</strong> 내에서 생산되는지를 확인하는 데 사용된다.</li>
+<li><strong>계산 방법</strong><br>
+규격한계는 제품의 설계 사양에 따라 설정되며, 주로 <strong>상한 규격(USL, Upper Specification Limit)</strong>과 <strong>하한 규격(LSL, Lower Specification Limit)</strong>으로 정의된다.
 <ul>
 <li><strong>상한 규격 (USL)</strong>: 제품의 허용 가능한 최대값</li>
 <li><strong>하한 규격 (LSL)</strong>: 제품의 허용 가능한 최소값</li>
 </ul></li>
-<li><strong>의미</strong> 제품이 규격한계를 벗어나면 품질이 불량하거나, 고객의 요구사항을 충족하지 못한다고 판단된다.</li>
-<li><strong>용도</strong> 규격한계는 제품이 설계된 품질 기준을 충족하는지 여부를 확인하는 데 사용된다. 고객이 원하는 품질 수준에 맞는 제품을 생산하는 것이 중요하다.</li>
+<li><strong>의미</strong><br>
+제품이 규격한계를 벗어나면 품질이 불량하거나, 고객의 요구사항을 충족하지 못한다고 판단된다.</li>
+<li><strong>용도</strong><br>
+규격한계는 제품이 설계된 품질 기준을 충족하는지 여부를 확인하는 데 사용된다. 고객이 원하는 품질 수준에 맞는 제품을 생산하는 것이 중요하다.</li>
 </ul>
 </dd>
 </dl>
 <p>관리한계와 규격한계의 차이점는 다음과 같다.</p>
 <table class="caption-top table">
+<caption>관리한계와 규격한계 비교</caption>
 <colgroup>
 <col style="width: 16%">
 <col style="width: 39%">
@@ -1030,10 +1041,12 @@ end
 </tr>
 </tbody>
 </table>
-<p><strong>관리한계</strong>는 공정 안정성과 변동을 평가하는 데 중점을 둔다. 공정이 일정한 범위 내에서 변동하는지 모니터링하고, 비정상적인 변동이 발생하면 문제를 해결하기 위한 조치를 취한다. <strong>규격한계</strong>는 제품이 고객 요구를 충족하는지 여부를 확인하는 데 사용된다. 제품이 규격한계를 벗어나면 품질 문제로 간주하고, 불량품으로 처리된다.</p>
+<p><strong>관리한계</strong>는 공정 안정성과 변동을 평가하는 데 중점을 둔다. 공정이 일정한 범위 내에서 변동하는지 모니터링하고, 비정상적인 변동이 발생하면 문제를 해결하기 위한 조치를 취한다.<br>
+<strong>규격한계</strong>는 제품이 고객 요구를 충족하는지 여부를 확인하는 데 사용된다. 제품이 규격한계를 벗어나면 품질 문제로 간주하고, 불량품으로 처리된다.</p>
 <p>따라서, <strong>관리한계</strong>는 공정 내 변동에 관한 기준이고, <strong>규격한계</strong>는 제품의 품질에 관한 기준이라고 할 수 있다.</p>
 <p>관리도에서 비관리상태로 판정하는 8가지 현상은 다음과 같다.</p>
 <table class="caption-top table">
+<caption>비관리상태 판정 기준</caption>
 <thead>
 <tr class="header">
 <th>현상</th>
@@ -1151,7 +1164,7 @@ end
 
 </div>
 </div>
-<p><strong>공정능력지수</strong>(Process Capability Index)는 산포와 규격 간 상대적 크기를 나타내는 지표이다.</p>
+<p><strong>공정능력지수</strong>(Process Capability Index)는 <font color="blue">산포와 규격 간 상대적 크기를 나타내는 지표</font>이다.</p>
 <dl>
 <dt>산포</dt>
 <dd>
@@ -1177,8 +1190,10 @@ C_pk = (1-k)C_p, \quad k = |\frac{\frac{USL+LSL}{2}-\bar{x}}{\frac{USL-LSL}{2}}|
 <dt><strong>공정능력지수 (Cp)</strong></dt>
 <dd>
 <ul>
-<li><strong>정의</strong>: Cp는 공정의 품질이 설계 사양 범위 내에서 얼마나 일관되게 유지되는지를 나타내는 지표다. 공정이 사양의 상한선(USL)과 하한선(LSL) 사이에 얼마나 잘 맞는지, 즉 공정의 폭을 측정한다.</li>
-<li><strong>계산 방법</strong>: Cp는 공정의 허용 범위(USL - LSL)와 공정의 표준편차(σ)를 비교하여 계산한다. 계산식은 다음과 같다. <span class="math display">\[C_p = \frac{USL - LSL}{6\sigma}\]</span> 여기서,
+<li><strong>정의</strong><br>
+Cp는 공정의 품질이 설계 사양 범위 내에서 얼마나 일관되게 유지되는지를 나타내는 지표다. 공정이 사양의 상한선(USL)과 하한선(LSL) 사이에 얼마나 잘 맞는지, 즉 공정의 폭을 측정한다.</li>
+<li><strong>계산 방법</strong><br>
+Cp는 공정의 허용 범위(USL - LSL)와 공정의 표준편차(σ)를 비교하여 계산한다. 계산식은 다음과 같다. <span class="math display">\[C_p = \frac{USL - LSL}{6\sigma}\]</span> 여기서,
 <ul>
 <li><strong>USL</strong>(Upper Specification Limit): 상한 규격<br>
 </li>
@@ -1186,15 +1201,19 @@ C_pk = (1-k)C_p, \quad k = |\frac{\frac{USL+LSL}{2}-\bar{x}}{\frac{USL-LSL}{2}}|
 </li>
 <li><strong>σ</strong>: 공정의 표준편차</li>
 </ul></li>
-<li><strong>의미</strong>: Cp 값이 클수록 공정이 더 넓은 규격 범위 내에서 변동이 적고 안정적이라는 의미다. 일반적으로 Cp가 1.33 이상이면 공정이 충분히 능력이 있다고 평가된다.</li>
-<li><strong>한계</strong>: Cp는 공정이 중심을 얼마나 잘 맞추는지에 대한 정보를 제공하지 않는다. 공정이 규격 범위 내에 있지만, 중심이 맞지 않는 경우에는 문제가 될 수 있다.</li>
+<li><strong>의미</strong><br>
+Cp 값이 클수록 공정이 더 넓은 규격 범위 내에서 변동이 적고 안정적이라는 의미다. 일반적으로 Cp가 1.33 이상이면 공정이 충분히 능력이 있다고 평가된다.</li>
+<li><strong>한계</strong><br>
+Cp는 공정이 중심을 얼마나 잘 맞추는지에 대한 정보를 제공하지 않는다. 공정이 규격 범위 내에 있지만, 중심이 맞지 않는 경우에는 문제가 될 수 있다.</li>
 </ul>
 </dd>
 <dt><strong>최소공정능력지수 (Cpk)</strong></dt>
 <dd>
 <ul>
-<li><strong>정의</strong>: Cpk는 공정이 규격 범위의 중심에서 얼마나 일관되게 유지되는지, 즉 공정이 얼마나 잘 집중되고 있는지를 나타내는 지표다. 공정이 규격 중심에 얼마나 근접해 있는지를 평가한다.</li>
-<li><strong>계산 방법</strong>: Cpk는 공정 중심에서 규격 상한선 또는 하한선까지의 거리와 공정의 표준편차를 비교하여 계산한다. 계산식은 다음과 같다. <span class="math display">\[C_{pk} = \min \left( \frac{USL - \mu}{3\sigma}, \frac{\mu - LSL}{3\sigma} \right)\]</span> 여기서,
+<li><strong>정의</strong><br>
+Cpk는 공정이 규격 범위의 중심에서 얼마나 일관되게 유지되는지, 즉 공정이 얼마나 잘 집중되고 있는지를 나타내는 지표다. 공정이 규격 중심에 얼마나 근접해 있는지를 평가한다.</li>
+<li><strong>계산 방법</strong><br>
+Cpk는 공정 중심에서 규격 상한선 또는 하한선까지의 거리와 공정의 표준편차를 비교하여 계산한다. 계산식은 다음과 같다. <span class="math display">\[C_{pk} = \min \left( \frac{USL - \mu}{3\sigma}, \frac{\mu - LSL}{3\sigma} \right)\]</span> 여기서,
 <ul>
 <li><strong>μ</strong>: 공정의 평균<br>
 </li>
@@ -1204,13 +1223,16 @@ C_pk = (1-k)C_p, \quad k = |\frac{\frac{USL+LSL}{2}-\bar{x}}{\frac{USL-LSL}{2}}|
 </li>
 <li><strong>σ</strong>: 공정의 표준편차</li>
 </ul></li>
-<li><strong>의미</strong>: Cpk는 공정이 규격 범위 내에서 얼마나 잘 맞춰져 있는지, 즉 공정의 중심이 규격의 중간과 얼마나 일치하는지를 평가한다. Cpk 값이 클수록 공정이 규격 범위 내에서 더 집중적으로 수행되고 있다는 의미다.</li>
-<li><strong>한계</strong>: Cpk는 공정 중심이 규격의 중간에 가깝더라도 공정의 변동이 커지면 낮게 나올 수 있다. 따라서 공정의 중심과 변동성을 모두 고려하는 지표다.</li>
+<li><strong>의미</strong><br>
+Cpk는 공정이 규격 범위 내에서 얼마나 잘 맞춰져 있는지, 즉 공정의 중심이 규격의 중간과 얼마나 일치하는지를 평가한다. Cpk 값이 클수록 공정이 규격 범위 내에서 더 집중적으로 수행되고 있다는 의미다.</li>
+<li><strong>한계</strong><br>
+Cpk는 공정 중심이 규격의 중간에 가깝더라도 공정의 변동이 커지면 낮게 나올 수 있다. 따라서 공정의 중심과 변동성을 모두 고려하는 지표다.</li>
 </ul>
 </dd>
 </dl>
 <p><strong>Cp와 Cpk의 차이점</strong>은 다음과 같다.</p>
 <table class="caption-top table">
+<caption>Cp와 Cpk 비교</caption>
 <colgroup>
 <col style="width: 17%">
 <col style="width: 41%">
@@ -1545,7 +1567,7 @@ UCL = \bar{u} + 3\sqrt{\frac{\bar{u}}{n}} = 2.92 + 3\sqrt{\frac{2.92}{1.7}} = 6.
 </div>
 <p><strong>신뢰성</strong>(reliability)은 부분품, 장치, 기기, 시스템이 주어진 어떤 조건 아래에서 의도했던 기능을 수행하는 확률, 즉 “고장나지 않을 확률”을 의미한다. 따라서 신뢰성은 시간 변화에 따른 동적인 품질이다. 신뢰성 평가척도로는 신뢰도, 평균고장간격, 평균고장시간 등이 있다.</p>
 <p><strong>신뢰도</strong>는 신뢰성에 대한 양적 표시로 임무기간 중 일어나는 단위시간당 고장회수로 나타내는 것이 일반적이며 이를 시간 함수로 볼 때 R(t)로 나타낸다. 이것은 제품이 t 시간 동안 고장이 나지 않는 확률이다. 즉, 제품을 사용하기 시작해서 어느 시점까지 전체 몇 %가 고장나지 않고 남아 있는가 하는 잔존률에 해당한다.</p>
-<p><strong>신뢰성관리</strong>는 성능과 신리ㅗ성, 보전성 그리고 가동성이 높은 제품을 경제적으로 제조하기 위해서 제품 개발로부터 설계, 제조, 사용 및 보전에 이르기까지 제품 전 생명 주기(life cycle)에 걸쳐 미리 설정된 신뢰성 계획에 따라 제품 신뢰성을 확보하고 유지하기 위한 종합적인 관리활동을 가리킨다.이를 위하여 신뢰성을 정량적으로 측정할 수 있는 척도를 설정하고 이를 바탕으로 불량원인을 발견하고고장 원인을 찾아내서 개선하여 가능한 그 영향을 줄이거나 제거시키고자 하는 활동이다.</p>
+<p><strong>신뢰성관리</strong>는 성능과 신뢰성, 보전성 그리고 가동성이 높은 제품을 경제적으로 제조하기 위해서 제품 개발로부터 설계, 제조, 사용 및 보전에 이르기까지 제품 전 생명 주기(life cycle)에 걸쳐 미리 설정된 신뢰성 계획에 따라 제품 신뢰성을 확보하고 유지하기 위한 종합적인 관리활동을 가리킨다.이를 위하여 신뢰성을 정량적으로 측정할 수 있는 척도를 설정하고 이를 바탕으로 불량원인을 발견하고고장 원인을 찾아내서 개선하여 가능한 그 영향을 줄이거나 제거시키고자 하는 활동이다.</p>
 <p>품질경영적 관점에서 볼 때 신뢰성은 품질특성 중 하나이고 품질보증 기능을 한다. 따라서 신뢰성관리는 품질경영과 함께 상호 유기적인 관계에서 전개되어야 한다.</p>
 <p>신뢰성은 고유신뢰성과 사용신뢰성으로 구분할 수 있다.</p>
 <dl>
@@ -1781,11 +1803,11 @@ UCL = \bar{u} + 3\sqrt{\frac{\bar{u}}{n}} = 2.92 + 3\sqrt{\frac{2.92}{1.7}} = 6.
 <dt>측정오차</dt>
 <dd>
 <ol type="1">
-<li>정확성(Bias): 동일한 계측기로 동일한 시료를 측정한 경우, 측정치 평균과 기준값(참값) 간 차이로 정확성, 치우침, 편의라고도 한다. <br><img src="https://sixsigmastudyguide.com/wp-content/uploads/2021/04/msa4.png" class="img-fluid" alt="https://sixsigmastudyguide.com/measurement-systems-analysis/"></li>
-<li>반복성(Repeatability): 동일한 측정자가 동일한 시료로 여러 번 측정하여 얻은 데이터 산포 크기를 의미하며 산포 크기가 작을수록 반복성이 좋다고 한다. 정밀도라고도한다. <br><img src="https://sixsigmastudyguide.com/wp-content/uploads/2021/04/msa7.png" class="img-fluid" alt="https://sixsigmastudyguide.com/measurement-systems-analysis/"></li>
-<li>재현성(Reproductibility): 서로 다른 측정자가 동일한 기계로 동일 시료를 측정하였을 때, 얻은 측정치 변동값(평균값 차이)으로서 측정자 간 데이터 값 차이를 의미한다. <br><img src="https://sixsigmastudyguide.com/wp-content/uploads/2021/04/msa8.png" class="img-fluid" alt="https://sixsigmastudyguide.com/measurement-systems-analysis/"></li>
-<li>안전성(Stability): 동일한 측정시스템으로일정한 시료를 정기적으로측정했을 때 얻은 측정치 변동(평균값 차이)을 말한다. <br><img src="https://sixsigmastudyguide.com/wp-content/uploads/2021/04/msa6.png" class="img-fluid" alt="https://sixsigmastudyguide.com/measurement-systems-analysis/"></li>
-<li>직진성(Linearity): 계측기 작동범위 내에서 발생하는 참값과 측정값 간 차이, 즉 편기값들 차이로서 측정 일관성을 평가하는데 사용한다. 직진선에 대한 적합성 여부는 회귀직선 결정계수로 판단하며, 선형성이라고도 한다. <br><img src="https://sixsigmastudyguide.com/wp-content/uploads/2021/04/msa5.png" class="img-fluid" alt="https://sixsigmastudyguide.com/measurement-systems-analysis/"></li>
+<li><strong>정확성(Bias)</strong> 동일한 계측기로 동일한 시료를 측정한 경우, 측정치 평균과 기준값(참값) 간 차이로 정확성, 치우침, 편의라고도 한다. <br><img src="https://sixsigmastudyguide.com/wp-content/uploads/2021/04/msa4.png" class="img-fluid" alt="https://sixsigmastudyguide.com/measurement-systems-analysis/"></li>
+<li><strong>반복성(Repeatability)</strong> 동일한 측정자가 동일한 시료로 여러 번 측정하여 얻은 데이터 산포 크기를 의미하며 산포 크기가 작을수록 반복성이 좋다고 한다. 정밀도라고도 한다. <br><img src="https://sixsigmastudyguide.com/wp-content/uploads/2021/04/msa7.png" class="img-fluid" alt="https://sixsigmastudyguide.com/measurement-systems-analysis/"></li>
+<li><strong>재현성(Reproductibility)</strong> 서로 다른 측정자가 동일한 기계로 동일 시료를 측정하였을 때, 얻은 측정치 변동값(평균값 차이)으로서 측정자 간 데이터 값 차이를 의미한다. <br><img src="https://sixsigmastudyguide.com/wp-content/uploads/2021/04/msa8.png" class="img-fluid" alt="https://sixsigmastudyguide.com/measurement-systems-analysis/"></li>
+<li><strong>안전성(Stability)</strong> 동일한 측정시스템으로일정한 시료를 정기적으로측정했을 때 얻은 측정치 변동(평균값 차이)을 말한다. <br><img src="https://sixsigmastudyguide.com/wp-content/uploads/2021/04/msa6.png" class="img-fluid" alt="https://sixsigmastudyguide.com/measurement-systems-analysis/"></li>
+<li><strong>직진성(Linearity)</strong> 계측기 작동범위 내에서 발생하는 참값과 측정값 간 차이, 즉 편기값들 차이로서 측정 일관성을 평가하는데 사용한다. 직진선에 대한 적합성 여부는 회귀직선 결정계수로 판단하며, 선형성이라고도 한다. <br><img src="https://sixsigmastudyguide.com/wp-content/uploads/2021/04/msa5.png" class="img-fluid" alt="https://sixsigmastudyguide.com/measurement-systems-analysis/"></li>
 </ol>
 </dd>
 </dl>
