@@ -506,7 +506,7 @@ window.Quarto = {
   </ul></li>
   <li><a href="#참고사항" id="toc-참고사항" class="nav-link" data-scroll-target="#참고사항">참고사항</a>
   <ul>
-  <li><a href="#프로젝트와-프로세스스-차이" id="toc-프로젝트와-프로세스스-차이" class="nav-link" data-scroll-target="#프로젝트와-프로세스스-차이">프로젝트와 프로세스스 차이</a></li>
+  <li><a href="#프로젝트와-프로세스-차이" id="toc-프로젝트와-프로세스-차이" class="nav-link" data-scroll-target="#프로젝트와-프로세스-차이">프로젝트와 프로세스 차이</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/yeonkyupark/pepc2e/edit/main/0202프로세스진도관리.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
@@ -1594,7 +1594,7 @@ Note&nbsp;7.1 PERT/COST
 </thead>
 <tbody>
 <tr class="odd">
-<td>프로젝트 진행상황을 <font color="#0000CD">시각적으로 표현</font>할 수 있으며 프로젝트를 완수하는데 <font color="#0000CD">필요한 시간을 비교적 정확하게 예측</font>할 수 있다. 또한 어떤 활동이 프로젝트 진행 일정 및 다른 활동 완수에 영향을 미치는지 분석이 가능하다.</td>
+<td>프로젝트 진행상황을 <font color="blue">시각적으로 표현</font>할 수 있으며 프로젝트를 완수하는데 <font color="blue">필요한 시간을 비교적 정확하게 예측</font>할 수 있다. 또한 어떤 활동이 프로젝트 진행 일정 및 다른 활동 완수에 영향을 미치는지 분석이 가능하다.</td>
 <td>기법은 복잡하지만 변화 가능성이 적은 프로젝트를 수행할 때 프로젝트 완수 시간 불확실성을 해소하기 위해 개발되었기 때문에 <font color="red">프로젝트 수행 방법이나 과정이 달라지기 쉬운 경우에는 CPM 기법을 통한 예측 활용성은 제한적</font>일 수 밖에 없다.</td>
 </tr>
 </tbody>
@@ -1607,12 +1607,10 @@ Note&nbsp;7.1 PERT/COST
 <li>각 활동 순서 결정</li>
 <li>결정된 순서를 고려하여 네트워크 개략도 작성</li>
 <li>각 과정에 소요되는 시간 예측</li>
-<li>소요 시간 정보를 고려하여 주공정(critical path) 결정</li>
-</ol>
+<li>소요 시간 정보를 고려하여 주공정(critical path) 결정
 <ul>
 <li>활동 네트워크 상 가장 오래 걸리는 공정 경로</li>
-</ul>
-<ol start="6" type="1">
+</ul></li>
 <li>프로젝트 진행에 따라 CPM diagram 업데이트</li>
 </ol>
 </dd>
@@ -1776,24 +1774,31 @@ Note&nbsp;7.1 PERT/COST
 </tr>
 </tbody>
 </table>
-<p><strong>단축 전략</strong></p>
+<dl>
+<dt><strong>단축 전략</strong></dt>
+<dd>
 <ul>
 <li><strong>B 활동 단축</strong>: 단축 비용 증가분이 가장 낮은 B 활동을 1일 단축한다.</li>
 </ul>
-<p><strong>결과 계산</strong></p>
+</dd>
+<dt><strong>결과 계산</strong></dt>
+<dd>
 <ol type="1">
 <li><strong>총 프로젝트 소요 시간</strong><br>
 기존 완료 시간 15일 → 단축 후 14일</li>
 <li><strong>총 프로젝트 비용</strong><br>
 기존 비용 2400만 원 + B 활동 단축 비용 200만 원 = 2600만원</li>
 </ol>
-<p><strong>결과</strong></p>
+</dd>
+<dt><strong>결과</strong></dt>
+<dd>
 <ul>
 <li><strong>총 프로젝트 소요 시간</strong>: 14일<br>
 </li>
-<li><strong>총 프로젝트 비용</strong>: 2600만 원<br>
-</li>
+<li><strong>총 프로젝트 비용</strong>: 2600만 원</li>
 </ul>
+</dd>
+</dl>
 </div>
 </div>
 </section>
@@ -1813,7 +1818,7 @@ Note&nbsp;7.1 PERT/COST
 </div>
 </div>
 <p><strong>CCM</strong>(critical chain method) 또는 CCPM (critical chain project management)은 <font color="blue">TOC 제약 이론을 기반</font>으로 한 프로젝트 관리 기법이다.</p>
-<p>제품 Life cycle이 날로 짧아지고 고객 요구가 다양해 짐에 따라 신제품 개발, 신규 사업 추진 등 급변하는 사업 환경에 대응하기 위해서 프로젝트성 업무가 급증하는 추세이다. 프로젝트는 과제 특성상 완료 시간이 불확실하여 계획 단계에서 준수 확룔을 높이기 위해 안전 여유를 감안하여 예상 소요 시간을 길게 수립한다. 프로제특 관리자는 제한된 자원, 즉 인력, 비용, 시간 등으로 여러 프로젝트를 동시에 관리하여 프로젝트를 기한 내 원활히 수행하기 위한 효과적인 관리기법이 필요하게 되었다.</p>
+<p>제품 Life cycle이 날로 짧아지고 고객 요구가 다양해 짐에 따라 신제품 개발, 신규 사업 추진 등 급변하는 사업 환경에 대응하기 위해서 프로젝트성 업무가 급증하는 추세이다. 프로젝트는 과제 특성상 <font color="red">완료 시간이 불확실하여 계획 단계에서 준수 확룔을 높이기 위해 안전 여유를 감안하여 예상 소요 시간을 길게 수립</font>한다. 프로제특 관리자는 제한된 자원, 즉 인력, 비용, 시간 등으로 여러 프로젝트를 동시에 관리하여 프로젝트를 기한 내 원활히 수행하기 위한 효과적인 관리기법이 필요하게 되었다.</p>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="예상 기간 장기화 문제 원인">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1870,7 +1875,7 @@ Note&nbsp;7.1 PERT/COST
 </dl>
 </div>
 </div>
-<p>CCM 목표는 프로젝트 기간 단축과 예상 기간 준수이다. 작업 기반 버퍼로 네트워크 경로 상 개별 활동 일정을 미시적으로 관리하는 대신 모든 작업 체인에 따라 자원 가용성 및 종속성을 고려하고 보호하기 위해 <font color="blue">체인에 있는 전반적인 모든 활동 버퍼를 관리</font>하는데 중점을 둔다. <font color="blue">암시적인 개별 작업 버퍼를 제거</font>하고 일정 위험을 낮춤으로써 보다 효율성 있게 프로젝트를 관리할 수 있다.</p>
+<p>CCM 목표는 <font color="blue">프로젝트 기간 단축과 예상 기간 준수</font>이다. 작업 기반 버퍼로 네트워크 경로 상 개별 활동 일정을 미시적으로 관리하는 대신 모든 작업 체인에 따라 자원 가용성 및 종속성을 고려하고 보호하기 위해 <font color="blue">체인에 있는 전반적인 모든 활동 버퍼를 관리</font>하는데 중점을 둔다. <font color="blue">암시적인 개별 작업 버퍼를 제거</font>하고 일정 위험을 낮춤으로써 보다 효율성 있게 프로젝트를 관리할 수 있다.</p>
 <p>일정 단축 기법은 다음과 같다.</p>
 <dl>
 <dt>크래싱(crashing)</dt>
@@ -1901,7 +1906,7 @@ Note&nbsp;7.1 PERT/COST
 <dt>프로젝트 버퍼(project buffer)</dt>
 <dd>
 <ul>
-<li>critical chain 활동 상에서 확보한 버퍼를 chain chain 끝에 두어 관리</li>
+<li>critical chain 활동 상에서 확보한 버퍼를 chain 끝에 두어 관리</li>
 <li>안전영역, 모니터링 (버퍼 감시) 영역, 행동 영역(버퍼 통제)으로 나누어 관리</li>
 </ul>
 </dd>
@@ -1919,7 +1924,6 @@ Note&nbsp;7.1 PERT/COST
 </ul>
 </dd>
 </dl>
-<p><br></p>
 </section>
 <section id="추진-절차" class="level5">
 <h5 class="anchored" data-anchor-id="추진-절차">추진 절차</h5>
@@ -1977,7 +1981,6 @@ Note&nbsp;7.1 PERT/COST
 </ul>
 </dd>
 </dl>
-<p><br></p>
 </section>
 <section id="일정-수립-절차" class="level5">
 <h5 class="anchored" data-anchor-id="일정-수립-절차">일정 수립 절차</h5>
@@ -2226,8 +2229,8 @@ Note&nbsp;7.1 PERT/COST
 </section>
 <section id="참고사항" class="level2">
 <h2 class="anchored" data-anchor-id="참고사항">참고사항</h2>
-<section id="프로젝트와-프로세스스-차이" class="level3">
-<h3 class="anchored" data-anchor-id="프로젝트와-프로세스스-차이">프로젝트와 프로세스스 차이</h3>
+<section id="프로젝트와-프로세스-차이" class="level3">
+<h3 class="anchored" data-anchor-id="프로젝트와-프로세스-차이">프로젝트와 프로세스 차이</h3>
 <table class="caption-top table">
 <caption>프로젝트와 프로세스 차이</caption>
 <colgroup>
