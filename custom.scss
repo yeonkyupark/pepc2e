@@ -27,11 +27,6 @@ div.quarto-title-meta-contents{
 }
 --*/
 
-// figure.figure {
-//   border-style: solid;
-//   border-color: #D7D7D7
-// }
-
 figcaption {
   text-align: center;
 }
@@ -40,6 +35,7 @@ table.caption-top.table {
   margin-bottom: 24px;
 }
 
+/*--
 h2.anchored{
     padding-top: 12px;
     padding-left: 12px;
@@ -62,7 +58,105 @@ h4.anchored {
     border-top-left-radius: 12px;
     background-color: rgba(31, 125, 230, .2);
 }
-
+--*/
 td {
   font-size: 14px;
+}
+
+h1 {
+    font-size: 36px;
+    line-height: 40px;
+}
+
+h2 {
+    font-size: 30px;
+    line-height: 40px;
+}
+
+h3 {
+    font-size: 24px;
+    line-height: 40px;
+}
+
+h4 {
+    font-size: 18px;
+    line-height: 34px;
+}
+
+h1.title {
+	margin: 1em 0 0.5em 0;
+	font-weight: 600;
+	font-family: 'Titillium Web', sans-serif;
+	position: relative;  
+	// font-size: 36px;
+	// line-height: 40px;
+	padding: 15px 15px 15px 15px;
+	color: #355681;
+	// background: #355681;
+	background: rgba(53,86,129, 0.1);
+	box-shadow: 
+		inset 0 0 0 1px rgba(53,86,129, 0.4), 
+		inset 0 0 5px rgba(53,86,129, 0.5);
+		// inset -285px 0 35px white;
+	border-radius: 0 10px 0 10px;
+	//background: #fff url(../images/bartoszkosowski.jpg) no-repeat center left;
+}
+
+h1 {
+	margin: 1em 0 0.5em 0;
+	font-weight: 600;
+	font-family: 'Titillium Web', sans-serif;
+	position: relative;  
+	// font-size: 36px;
+	// line-height: 40px;
+	padding: 15px 15px 15px 15px;
+	color: #355681;
+	box-shadow: 
+		inset 0 0 0 1px rgba(53,86,129, 0.4), 
+		inset 0 0 5px rgba(53,86,129, 0.5),
+		inset -285px 0 35px white;
+	border-radius: 0 10px 0 10px;
+	//background: #fff url(../images/bartoszkosowski.jpg) no-repeat center left;
+}
+
+h2.anchored {
+	margin: 1em 0 0.5em 0;
+	font-weight: normal;
+	position: relative;
+	text-shadow: 0 -1px rgba(0,0,0,0.6);
+	// font-size: 28px;
+	// line-height: 40px;
+	background: #355681;
+	background: rgba(53,86,129, 0.8);
+	border: 1px solid #fff;
+	padding: 5px 15px;
+	color: white;
+	border-radius: 0 10px 0 10px;
+	box-shadow: inset 0 0 5px rgba(53,86,129, 0.5);
+	font-family: 'Muli', sans-serif;
+}
+
+h3.anchored {
+	margin: 1em 0 0.5em 0;
+	font-weight: 600;
+	font-family: 'Titillium Web', sans-serif;
+	position: relative;
+	// text-shadow: 0 -1px 1px rgba(0,0,0,0.4);
+	// font-size: 22px;
+	// line-height: 40px;
+	color: #355681;
+	text-transform: uppercase;
+	border-bottom: 1px solid rgba(53,86,129, 0.3);
+}
+
+h4.anchored {
+	margin: 1em 0 0.5em 0;
+	font-weight: 600;
+	font-family: 'Titillium Web', sans-serif;
+	position: relative;
+	// font-size: 18px;
+	// line-height: 20px;
+	color: #788699;
+	font-family: 'Muli', sans-serif;
+	border-bottom: 1px solid rgba(53,86,129, 0.3);
 }
