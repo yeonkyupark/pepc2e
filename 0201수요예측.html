@@ -1048,20 +1048,20 @@ F_t = F_{t-1} + \alpha (A_{t-1} - F_{t-1}) = \alpha A_{t-1} + (1-\alpha)F_{t-1}
 <section id="sec-forecast-error-index" class="level4">
 <h4 class="anchored" data-anchor-id="sec-forecast-error-index">예측오차 지표</h4>
 <p><strong>예측오차</strong></p>
-<p><span class="math display">\[E_t = A_t - F_t \ = \ \text{(t시점 실적치)} - \text{(t시점 예측치)}\]</span></p>
+<p><span id="eq-e"><span class="math display">\[E_t = A_t - F_t \ = \ \text{(t시점 실적치)} - \text{(t시점 예측치)} \tag{6.4}\]</span></span></p>
 <p><strong>평균절대편차</strong>(MAD, Mean Absolute Deviation)</p>
-<p><span class="math display">\[
+<p><span id="eq-mad"><span class="math display">\[
 MAD = \frac{\sum_{t=1}^{n}(A_t - F_t)}{n}
-\]</span></p>
-<p><strong>누적예측오차</strong>(RSFE, running sum of forcasting errors / CFE, cumulative sum of forecast errors) <span class="math display">\[RSFE(or \ CFE) = \sum{E_t}\]</span></p>
+\tag{6.5}\]</span></span></p>
+<p><strong>누적예측오차</strong>(RSFE, running sum of forcasting errors / CFE, cumulative sum of forecast errors) <span id="eq-rsfe"><span class="math display">\[RSFE(or \ CFE) = \sum{E_t} \tag{6.6}\]</span></span></p>
 <p><strong>평균절대오차</strong>(MAD, mean absolute deviation)</p>
-<p><span class="math display">\[MAE = \frac{\sum{|E_t|}}{n}\]</span></p>
+<p><span id="eq-mae"><span class="math display">\[MAE = \frac{\sum{|E_t|}}{n} \tag{6.7}\]</span></span></p>
 <p><strong>평균제곱오차</strong>(MSE, mean squared error)</p>
-<p><span class="math display">\[MSE = \frac{\sum{|(E_t)^2|}}{n-1}\]</span></p>
+<p><span id="eq-mse"><span class="math display">\[MSE = \frac{\sum{|(E_t)^2|}}{n-1} \tag{6.8}\]</span></span></p>
 <p><strong>평균절대백분율오차</strong>(MAPE, mean absolute percentage error)</p>
-<p><span class="math display">\[ MAPE = \frac{\sum{\frac{|E_t|}{A_t}}}{n} \times 100\]</span></p>
+<p><span id="eq-mape"><span class="math display">\[ MAPE = \frac{\sum{\frac{|E_t|}{A_t}}}{n} \times 100 \tag{6.9}\]</span></span></p>
 <p><strong>추적지표</strong>(TS, tracking signal)</p>
-<p><span class="math display">\[TS = \frac{RSFE}{MAD}\]</span></p>
+<p><span id="eq-ts"><span class="math display">\[TS = \frac{RSFE}{MAD} \tag{6.10}\]</span></span></p>
 </section>
 <section id="추적지표" class="level4">
 <h4 class="anchored" data-anchor-id="추적지표">추적지표</h4>
