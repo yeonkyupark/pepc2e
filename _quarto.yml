@@ -111,6 +111,7 @@ crossref:
   tbl-title: 표
   exm-title: 예제
   eq-title: 수식
+  eq-prefix: "수식"
   def-title: 정의
   def-prefix: "정의:"
   title-delim: " "
