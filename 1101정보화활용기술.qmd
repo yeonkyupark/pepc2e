@@ -519,7 +519,7 @@ RFID의 주요 응용 분야
 RFID는 물류, 헬스케어, 교통 등 다양한 분야에서 **효율적인 관리**와 **자동화**를 가능하게 하는 혁신적인 기술이다. 다만, 초기 비용과 보안 문제 등의 한계가 있으므로, 이를 고려한 **적절한 활용**이 필요하다.
 
 
-### IoT(Internet of Things)
+### IoT(Internet of Things) {#sec-iot}
 
 :::{.callout-tip icon=false title="기출 106-1-1"}
 :::
