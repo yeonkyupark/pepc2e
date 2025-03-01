@@ -482,14 +482,10 @@ window.Quarto = {
   <li><a href="#sec-oee" id="toc-sec-oee" class="nav-link active" data-scroll-target="#sec-oee">설비종합효율</a>
   <ul>
   <li><a href="#관련-용어" id="toc-관련-용어" class="nav-link" data-scroll-target="#관련-용어">관련 용어</a></li>
-  <li><a href="#ooe-산출" id="toc-ooe-산출" class="nav-link" data-scroll-target="#ooe-산출">OOE 산출</a></li>
+  <li><a href="#sec-oee-calculation" id="toc-sec-oee-calculation" class="nav-link" data-scroll-target="#sec-oee-calculation">설비종합효율 계산</a></li>
   </ul></li>
-  <li><a href="#sec-mapi" id="toc-sec-mapi" class="nav-link" data-scroll-target="#sec-mapi">MAPI</a>
-  <ul>
-  <li><a href="#구-mapi-방식" id="toc-구-mapi-방식" class="nav-link" data-scroll-target="#구-mapi-방식">구 MAPI 방식</a></li>
-  <li><a href="#신-mapi-방식" id="toc-신-mapi-방식" class="nav-link" data-scroll-target="#신-mapi-방식">신 MAPI 방식</a></li>
-  </ul></li>
-  <li><a href="#참고자료" id="toc-참고자료" class="nav-link" data-scroll-target="#참고자료">참고자료</a>
+  <li><a href="#sec-mapi" id="toc-sec-mapi" class="nav-link" data-scroll-target="#sec-mapi">MAPI</a></li>
+  <li><a href="#sec-ref-0601" id="toc-sec-ref-0601" class="nav-link" data-scroll-target="#sec-ref-0601">참고자료</a>
   <ul>
   <li><a href="#효율성과-효과성" id="toc-효율성과-효과성" class="nav-link" data-scroll-target="#효율성과-효과성">효율성과 효과성</a></li>
   </ul></li>
@@ -536,85 +532,84 @@ window.Quarto = {
 <p><strong>설비종합효율</strong>(Overall Equipment Effectiveness, OEE)은 실행 예정 기간 동안 제조 작업이 <font color="blue">최대 잠재력과 비교하여 얼마나 잘 활용되는지</font>(시설, 시간 및 재료)를 측정한 값이다. 이는 실제로 <font color="blue">생산적인 제조 시간 비율</font>을 식별한다. 100% OEE는 최대 속도(100% 성능)로 중단 없이(100% 가용성) 좋은 부품만 생산(100% 품질)한다는 의미이다. <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 <section id="관련-용어" class="level3">
 <h3 class="anchored" data-anchor-id="관련-용어">관련 용어</h3>
-<p>조업시간 : - 1일 근무시간을 기초로 하루 시업 시간과 종업 시간 사이 총시간으로 휴식, 식사, 수주물량 부족 등 <strong>계획 정지시간을 포함</strong></p>
 <dl>
-<dt>부하시간</dt>
+<dt>조업시간 (time available, calendar time)</dt>
 <dd>
 <ul>
-<li>조업시간에 기업이 인정하는 식사시간, 휴식시간을 제외하고 설비가 실제 가동되어야 할 시간</li>
-<li><span class="math inline">\(부하시간 = 조업시간 - 계획정지시간\)</span></li>
+<li>1일 근무시간을 기초로 하루 시업 시간과 종업 시간 사이 총시간으로 휴식, 식사, 수주물량 부족 등 <font color="blue">계획 정지시간을 포함</font></li>
 </ul>
 </dd>
-<dt>가동시간</dt>
+<dt>부하시간 (planned runtime)</dt>
+<dd>
+<ul>
+<li>조업시간에 기업이 인정하는 식사시간, 휴식시간을 제외하고 설비가 실제 가동되어야 할 시간 <span id="eq-planned-runtime"><span class="math display">\[부하시간 = 조업시간 - 계획정지시간 \tag{16.1}\]</span></span></li>
+</ul>
+</dd>
+<dt>가동시간 (production time)</dt>
 <dd>
 <ul>
 <li>설비 부하시간에서 정지시간을 제외한 시간으로 설비가 실제 가동한 시간</li>
-<li>정지시간이란 비계획적으로 설비가 일정시간(예 5분) 이상 가동하지 않는 시간</li>
-<li><span class="math inline">\(가동시간 = 부하시간 - 정지시간\)</span></li>
+<li>정지시간이란 비계획적으로 설비가 일정시간(예 5분) 이상 가동하지 않는 시간 <span id="eq-production-time"><span class="math display">\[가동시간 = 부하시간 - 정지시간 \tag{16.2}\]</span></span></li>
 </ul>
 </dd>
-<dt>실가동시간</dt>
+<dt>실가동시간 (net production time)</dt>
 <dd>
 <ul>
-<li>설비가 현재 성능으로 얼마나 제품 생산에 기여했는지를 나타내는 시간</li>
-<li><span class="math inline">\(실가동시간 = 생산량 \times 실제 cycle time\)</span></li>
+<li>설비가 현재 성능으로 얼마나 제품 생산에 기여했는지를 나타내는 시간 <span id="eq-net-production-time"><span class="math display">\[실가동시간 = 생산량 \times 실제 cycle time \tag{16.3}\]</span></span></li>
 </ul>
 </dd>
-<dt>성능가동시간</dt>
+<dt>성능가동시간 (usable production time)</dt>
 <dd>
 <ul>
-<li>설비 도입 시 표준 성능으로 얼마나 제품을 생산 가능한지를 나타내는 시간</li>
-<li><span class="math inline">\(성능가동시간 = 생산량 \times 이론 cycle time\)</span></li>
+<li>설비 도입 시 표준 성능으로 얼마나 제품을 생산 가능한지를 나타내는 시간 <span id="eq-usable-production-time"><span class="math display">\[성능가동시간 = 생산량 \times 이론 cycle time \tag{16.4}\]</span></span></li>
 </ul>
 </dd>
-<dt>가치가동시간</dt>
+<dt>가치가동시간 (net productive time)</dt>
 <dd>
 <ul>
-<li>설비 도입 시 성은으로 얼마나 양품을 생산했는지를 나타내는 시간</li>
-<li><span class="math inline">\(가치가동시간 = 양품수 \times 이론 cycle time\)</span></li>
+<li>설비 도입 시 성은으로 얼마나 양품을 생산했는지를 나타내는 시간 <span id="eq-net-productive-time"><span class="math display">\[가치가동시간 = 양품수 \times 이론 cycle time \tag{16.5}\]</span></span></li>
 </ul>
 </dd>
 </dl>
 </section>
-<section id="ooe-산출" class="level3">
-<h3 class="anchored" data-anchor-id="ooe-산출">OOE 산출</h3>
-<p>설비종합효율은 기업에서 규정한 부하시간 중 설비 고유 성능을 가지고 부가가치를 만들어 낸 시간 비율을 뜻한다.</p>
-<p><span class="math display">\[설비종합설비 = 시간 \ 가동률 \times 성능 \times 가동률 \ 양품률\]</span></p>
+<section id="sec-oee-calculation" class="level3">
+<h3 class="anchored" data-anchor-id="sec-oee-calculation">설비종합효율 계산</h3>
+<p><strong>설비종합효율</strong>(<strong>OEE</strong>, Overall Equipmnet Effectiveness)은 기업에서 규정한 <font color="blue">부하시간 중 설비 고유 성능을 가지고 부가가치를 만들어 낸 시간 비율</font>을 뜻한다.</p>
+<p><span id="eq-oee"><span class="math display">\[설비종합설비 = 시간 \ 가동률 \times 성능 \times 가동률 \ 양품률 \tag{16.6}\]</span></span></p>
 <dl>
 <dt>시간가동률</dt>
 <dd>
 <ul>
-<li>부하시간 중 설비 고장정지, 기종변경, 자재 품절, 유실 시간 등을 제외한 가동시간과 부하시간 간 비율로 설비가 정지 없이 가돋되고 있는가를 나타내는 지표이다.</li>
-<li><span class="math inline">\(시간가동률 = \frac{부하시간 - 정지시간}{부하시간} \times 100\)</span></li>
+<li>부하시간 중 설비 고장정지, 기종변경, 자재 품절, 유실 시간 등을 제외한 가동시간과 부하시간 간 비율로 설비가 정지 없이 가돋되고 있는가를 나타내는 지표<br>
+<span id="eq-oee-time-rate"><span class="math display">\[시간가동률 = \frac{부하시간 - 정지시간}{부하시간} \times 100 \tag{16.7}\]</span></span></li>
 </ul>
 </dd>
 <dt>정미가동률</dt>
 <dd>
 <ul>
-<li>실제 생산 시간 대비 가동시간 비율이다.</li>
-<li><span class="math inline">\(정미가동률 = \frac{생산량 \times 실제 cycle time}{부하시간 - 정지시간} \times 100\)</span></li>
+<li>실제 생산 시간 대비 가동시간 비율<br>
+<span id="eq-oee-production-rate"><span class="math display">\[정미가동률 = \frac{생산량 \times 실제 cycle time}{부하시간 - 정지시간} \times 100 \tag{16.8}\]</span></span></li>
 </ul>
 </dd>
 <dt>속도가동률</dt>
 <dd>
 <ul>
-<li>이론 cycle time 대비 실제 cycle time비율이다.</li>
-<li><span class="math inline">\(속도가동률 = \frac{이론 cycle time}{실제 cycle time} \times 100\)</span></li>
+<li>이론 cycle time 대비 실제 cycle time 비율<br>
+<span id="eq-oee-speed-rate"><span class="math display">\[속도가동률 = \frac{이론 cycle time}{실제 cycle time} \times 100 \tag{16.9}\]</span></span></li>
 </ul>
 </dd>
 <dt>성능가동률</dt>
 <dd>
 <ul>
-<li>가동시간 중 설비 목표 성능을 바뤼한 시간 비율이다.</li>
-<li><span class="math inline">\(성능가동률 = \frac{생산량 \times 이론 cycle time}{가동시간} \times 100\)</span></li>
-<li><span class="math inline">\(성능가동률 = 정미가동률 \times 속도가동률 = \frac{생산량 \times 실제 cycle time}{부하시간 - 정지시간} \times \frac{이론 cycle time}{실제 cycle time}\)</span></li>
+<li>가동시간 중 설비 목표 성능을 바뤼한 시간 비율<br>
+<span id="eq-oee-performance-rate-1"><span class="math display">\[성능가동률 = \frac{생산량 \times 이론 cycle time}{가동시간} \times 100 \tag{16.10}\]</span></span> <span id="eq-oee-performance-rate-2"><span class="math display">\[성능가동률 = 정미가동률 \times 속도가동률 = \frac{생산량 \times 실제 cycle time}{부하시간 - 정지시간} \times \frac{이론 cycle time}{실제 cycle time} \tag{16.11}\]</span></span></li>
 </ul>
 </dd>
 <dt>양품률</dt>
 <dd>
 <ul>
-<li>전체 생산 수량에서 양품 비율을 나타낸다.</li>
-<li><span class="math inline">\(양품률 = \frac{생산수량 - 불량수량}{생산수량} \times 100\)</span></li>
+<li>전체 생산 수량에서 양품 비율<br>
+<span id="eq-oee-good-rate"><span class="math display">\[양품률 = \frac{생산수량 - 불량수량}{생산수량} \times 100 \tag{16.12}\]</span></span></li>
 </ul>
 </dd>
 </dl>
@@ -690,7 +685,16 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>프레스 가공업체의 프레스 설비에 대하여 1주간의 설비가동현황은 다음과 같다. ∙ 근무시간：500분 ∙ 계획 휴지시간：50분 ∙ 고장, 준비에 의한 고장시간：50분 ∙ 이론 Cycle 시간：0.5분/개 ∙ 실제 cycle 시간：0.8분/개 ∙ 총생산량：400개 ∙ 불량품：10개</p>
+<p>프레스 가공업체의 프레스 설비에 대하여 1주간의 설비가동현황은 다음과 같다.</p>
+<ul>
+<li>근무시간：500분</li>
+<li>계획 휴지시간：50분</li>
+<li>고장, 준비에 의한 고장시간：50분</li>
+<li>이론 Cycle 시간：0.5분/개</li>
+<li>실제 cycle 시간：0.8분/개</li>
+<li>총생산량：400개</li>
+<li>불량품：10개</li>
+</ul>
 <hr>
 <p>시간가동률은 실제로 가동한 시간과 이론적으로 가동할 수 있는 시간의 비율을 의미한다. 계산 공식은 다음과 같다:</p>
 <p><span class="math display">\[
@@ -876,72 +880,86 @@ window.Quarto = {
 </section>
 <section id="sec-mapi" class="level2">
 <h2 class="anchored" data-anchor-id="sec-mapi">MAPI</h2>
-<p><strong>MAPI</strong>(Machinery and Allied Product Institute) 방식은 미국 기계공업협회(MAPI)에서 설비투자를 합리적으로 관리하기 위해 G.Terborgh 지도로 설비 고안된 설비 갱신 시 경제적으로 수행하기 위한 계산 방식이다. 보유하고 있는 기계 설비를 지금 신설비로 교체한다든가, 어느 기간(가령 1연간) 연기할 것인가 등 경제적인 결정을 하기 위한 척도를 갖추는 것이 목적이다.</p>
-<section id="구-mapi-방식" class="level3">
-<h3 class="anchored" data-anchor-id="구-mapi-방식">구 MAPI 방식</h3>
-<p>1949년, 설비 대체 문제의 과학적인 해결 방법을 찾아내기 위하여 고안된 것으로 신/구 두 설비 간 최소비용점을 산정하여 비교 대조하는 비용 계산 방식이다. 비용의 연간 환산치를 이용하여 총비용의 연간 환산치가 최소가 되는 것과 같은 사용 년수(이른바 경비적 수명)를 결정하는 것도 포함하고, 교체가 유리한가, 불리한가를 판단하는 것을 목적으로 한다.</p>
-<p>설비 갱신 분석에 사용되는 용어는 다음과 같다.</p>
+<p><strong>MAPI</strong>(Machinery and Allied Products Institute) 방식은 <font color="blue">설비 교체의 경제적 타당성을 분석</font>하는 방법으로, 기존 설비를 유지하는 것이 더 경제적인지 또는 새로운 설비로 교체하는 것이 더 유리한지를 평가하는 데 사용된다. 이를 통해 기업은 <font color="blue">최적의 설비 교체 시점</font>을 결정할 수 있다.</p>
 <dl>
-<dt>현설비(defencer)</dt>
+<dt>MAPI 방식의 주요 개념</dt>
 <dd>
-<ul>
-<li>노후화, 진부화로 갱신 대상이 되는 현 기계설비</li>
-</ul>
+<ol type="1">
+<li><strong>연간 총 비용 비교</strong><br>
+기존 설비 유지 비용(수리, 유지보수, 에너지 소비, 가동 중단 비용)과 신규 설비 도입 비용(구매, 설치, 운영 비용)을 비교</li>
+</ol>
 </dd>
-<dt>도전설비(challenger)</dt>
+</dl>
+<ol start="2" type="1">
+<li><p><strong>경제적 수명 분석</strong><br>
+설비의 경제적 수명을 계산하여 <font color="blue">운영 비용이 증가하는 시점</font>을 분석</p></li>
+<li><p><strong>손익분기점 분석</strong><br>
+기존 설비를 유지할 때의 총 비용과 신설비 도입 후 절감되는 비용이 <font color="blue">언제 균형을 이루는지(BEP, Break-even Point)</font> 분석</p></li>
+<li><p><strong>감가상각 및 세금 효과 고려</strong><br>
+신설비의 감가상각 비용과 세금 혜택을 반영하여 경제적 효과를 평가</p></li>
+<li><p><strong>생산성 향상 효과 분석</strong><br>
+신설비가 기존 설비 대비 <font color="blue">생산성을 얼마나 증가시키는지</font> 평가</p></li>
+</ol>
+<table class="caption-top table">
+<caption>구 MAPI 방식 vs.&nbsp;신 MAPI 방식</caption>
+<colgroup>
+<col style="width: 20%">
+<col style="width: 30%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>비교 항목</th>
+<th>구 MAPI 방식</th>
+<th>신 MAPI 방식</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>비용 분석 방식</strong></td>
+<td>연간 총 비용 비교</td>
+<td>연간 총 비용 + 미래 기대 비용 고려</td>
+</tr>
+<tr class="even">
+<td><strong>경제적 수명 분석</strong></td>
+<td>기존 설비의 평균 수명만 고려</td>
+<td>생산성 변화, 감가상각, 유지보수 증가율까지 반영</td>
+</tr>
+<tr class="odd">
+<td><strong>손익분기점 계산</strong></td>
+<td>단순한 비용 균형 분석</td>
+<td>시간 가치(TVM, Time Value of Money) 적용</td>
+</tr>
+<tr class="even">
+<td><strong>감가상각 고려 여부</strong></td>
+<td>일부 반영</td>
+<td>완전 반영하여 세금 혜택 분석 가능</td>
+</tr>
+<tr class="odd">
+<td><strong>의사 결정 기준</strong></td>
+<td>유지비용과 교체비용 단순 비교</td>
+<td>생산성 향상 효과와 장기적인 비용 절감까지 고려</td>
+</tr>
+</tbody>
+</table>
+<dl>
+<dt>신 MAPI 방식의 장점</dt>
 <dd>
 <ul>
-<li>현설비와 비교 대상이 되는 그 때 가장 좋은 신기계설비</li>
-</ul>
-</dd>
-<dt>조업 열성(operating inferiority)</dt>
-<dd>
-<ul>
-<li>현설비가 그 때 가장 좋은 도전설비에 비하여 성능상 열성 때문에 발생하는 경제적 가치 손실 총액</li>
-</ul>
-</dd>
-<dt>종합평균 연부담액</dt>
-<dd>
-<ul>
-<li>수익률과 사용기간이 결정되었을 때 자본액 평균 부담액과 조업 열성 평균 부담액의 합</li>
-</ul>
-</dd>
-<dt>조정 평균치</dt>
-<dd>
-<ul>
-<li>평균 연부담액을 산출할 때에 수익률을 고려한 평균치를 사용하는데 이때 평균치, 즉 장래 발생 비용을 현가로 평가 후 이에 자본 회수 계수를 곱한 평균치</li>
-</ul>
-</dd>
-<dt>종합 최소 부담액(adverse minimum)</dt>
-<dd>
-<ul>
-<li>자본액의 평균 연부담액은 사용기간이 길수록 적고 짧을수록 크므로 양자 합이 최소가 되는 점에서 최소 부담액이 됨</li>
-</ul>
-</dd>
-<dt>설비 1차 갱신, 2차 갱신</dt>
-<dd>
-<ul>
-<li>기업 외부로부터 신설비 구입의 경우(1차 갱신), 기업 내부의 설비로부터 행하는 갱신(2차 갱신)</li>
+<li>미래 비용까지 고려한 정밀 분석 가능<br>
+</li>
+<li>시간 가치(TVM)를 적용하여 보다 현실적인 교체 시점 도출<br>
+</li>
+<li>감가상각과 세금 혜택을 포함한 종합적인 경제성 평가 가능<br>
+</li>
+<li>설비의 유지보수 증가율과 생산성 변화를 반영하여 최적의 교체 타이밍 결정</li>
 </ul>
 </dd>
 </dl>
-<p>MAPI 3가지 가정은 다음과 같다.</p>
-<ol type="1">
-<li>설비 열성 변화율은 현존 설비와 대체설비 모두 동일하다.</li>
-<li>설비 조업 열성은 사용기간에 비례하여 증가한다.</li>
-<li>설치 처분가격은 정률로 감소한다.</li>
-</ol>
-<p>산출방법은 정밀법과 간이법이 있다. <strong>정밀법</strong>은 현 설비와 계산지섬에 존재하는 최선의 대체 신설비에 관하여 종합 최소 부담액을 구하여 이 값이 작은 설비를 선택한다(종합 최소 부담액은 종합 연간 부담액이 최소가 되는 사용기간의 연 부담액). <strong>간이법</strong>은 조정 평균치 대신에 산술평균치를 사용한다.</p>
+<p>신 MAPI 방식은 기존 방식보다 <font color="blue">보다 종합적이고 정밀한 분석을 통해 최적의 설비 교체 시점을 결정할 수 있는 장점</font>이 있다.</p>
 </section>
-<section id="신-mapi-방식" class="level3">
-<h3 class="anchored" data-anchor-id="신-mapi-방식">신 MAPI 방식</h3>
-<p>1958년, 선비투자를 실시하는 경우와 실시하지 않는 경우에 있어서 조업 효과 차를 산정하여 이것을 필요 투자액에 대비시킨 투자이익률을 설비 효과 판정 척도로 삼고 그것에 의해 대체적인 설비 계획안 실시의 긴요성을 평가, 판정하는 계산 방식이다.</p>
-<p>보유설비와 신설비 원가를 비교해서 낮게 나온 쪽을 채용한다고 하는 원가 비교법과는 달리, 교체 대상이 되고 있는 새로운 설비에 대해 장차 나타날 것으로 예상되는 새로운 설비까지 고려한다고 하는 방법이다. 교체를 위한 추가 투자의 투자이익률로 투자의 경제적 효과를 판정한다는 점에서 수익성 계산의 일종으로 볼 수 있다.</p>
-<p>신 MAPI 방식에서는 향후 1연간 신규설비비용과 투자이익(수익 - 조업 비용 차이)를 조사하는 것만으로 1년 후 가치로 환산하는 것으로 끝내고 있으나 유리한 투자안이 많을 때 자금 제약을 고려해서 우선순위를 결정하는 것을 목적으로 하고 있다.</p>
-</section>
-</section>
-<section id="참고자료" class="level2">
-<h2 class="anchored" data-anchor-id="참고자료">참고자료</h2>
+<section id="sec-ref-0601" class="level2">
+<h2 class="anchored" data-anchor-id="sec-ref-0601">참고자료</h2>
 <section id="효율성과-효과성" class="level3">
 <h3 class="anchored" data-anchor-id="효율성과-효과성">효율성과 효과성</h3>
 <div class="callout callout-style-default callout-tip callout-titled" title="기출 103-1-5">
@@ -961,13 +979,13 @@ window.Quarto = {
 <dt>효율성(efficiency)</dt>
 <dd>
 <ul>
-<li>최소한 자원으로 주어진 목표를 달성하는 것으로, 생산성 측면에서 산출(output)이 목표라면 최소한 투입(input)으로 산츨을 빨리 이루어내는 것을 효율적이라 한다.</li>
+<li><font color="blue">최소한 자원으로 주어진 목표를 달성하는 것</font>으로, 생산성 측면에서 산출(output)이 목표라면 최소한 투입(input)으로 산츨을 빨리 이루어내는 것을 효율적이라 한다.</li>
 </ul>
 </dd>
 <dt>효과성(effectiveness)</dt>
 <dd>
 <ul>
-<li>목표에 직접 영향을 미치는 핵심적인 부분을 잘 해내는 것으로, 생산성 측면에서 산출(output)이 목표라면 투입(input)에 상관없이 산출을 이루어내면 그것을 효과적이라 한다.</li>
+<li><font color="blue">목표에 직접 영향을 미치는 핵심적인 부분을 잘 해내는 것</font>으로, 생산성 측면에서 산출(output)이 목표라면 투입(input)에 상관없이 산출을 이루어내면 그것을 효과적이라 한다.</li>
 </ul>
 </dd>
 </dl>
