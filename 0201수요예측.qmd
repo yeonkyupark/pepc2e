@@ -288,39 +288,39 @@ $$단, \ \alpha는 \ 지수평활계수로 \ 0 < \alpha < 1$$
 
 **예측오차**
 
-$$E_t = A_t - F_t \ = \ \text{(t시점 실적치)} - \text{(t시점 예측치)}$$
+$$E_t = A_t - F_t \ = \ \text{(t시점 실적치)} - \text{(t시점 예측치)}$$ {#eq-e}
 
 **평균절대편차**(MAD, Mean Absolute Deviation)
 
 $$
 MAD = \frac{\sum_{t=1}^{n}(A_t - F_t)}{n}
-$$
+$$ {#eq-mad}
 
 
 **누적예측오차**(RSFE, running sum of forcasting errors / CFE, cumulative sum of forecast errors)
-$$RSFE(or \ CFE) = \sum{E_t}$$
+$$RSFE(or \ CFE) = \sum{E_t}$$ {#eq-rsfe}
 
 
 **평균절대오차**(MAD, mean absolute deviation)
 
-$$MAE = \frac{\sum{|E_t|}}{n}$$
+$$MAE = \frac{\sum{|E_t|}}{n}$$ {#eq-mae}
 
 
 
 **평균제곱오차**(MSE, mean squared error)
 
-$$MSE = \frac{\sum{|(E_t)^2|}}{n-1}$$
+$$MSE = \frac{\sum{|(E_t)^2|}}{n-1}$$ {#eq-mse}
 
 
 
 **평균절대백분율오차**(MAPE, mean absolute percentage error)
 
-$$ MAPE = \frac{\sum{\frac{|E_t|}{A_t}}}{n} \times 100$$
+$$ MAPE = \frac{\sum{\frac{|E_t|}{A_t}}}{n} \times 100$$ {#eq-mape}
 
 
 **추적지표**(TS, tracking signal)
 
-$$TS = \frac{RSFE}{MAD}$$
+$$TS = \frac{RSFE}{MAD}$$ {#eq-ts}
 
 #### 추적지표
 
