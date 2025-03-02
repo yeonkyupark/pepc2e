@@ -103,6 +103,7 @@ format:
     mermaid:
       theme: neutral
     include-in-header: adsense.html
+    include-after-body: adsense-body.html
 
 execute:
   freeze: auto
