@@ -780,10 +780,15 @@ end
 <span id="eq-work-sampling-n"><span class="math display">\[N = (\frac{K}{S})^2\frac{1-p}{p} \tag{22.2}\]</span></span></li>
 </ol>
 <p>여기서<br>
-- N: 랜덤 관측 횟수(샘플 크기) - K: 신뢰수준에 따라 정해지는 표준편차 배수 - S: p에 대한 상대적 정도(허용오차) - p: 구하는 비율(발생률) 2. 표준시간 산정 <span id="eq-work-sampling-st"><span class="math display">\[정상시간(단위당)=\frac{총관측시간x발생률x수행도평가(레이팅)}{생산량} \tag{22.3}\]</span></span></p>
-<p>여기서 여유시간을 가산하여 단위당 표준시간 산정<br>
-- 표준시간 = 정상시간(1+여유률) - 표준시간 = 정상시간 x <span class="math inline">\((frac{1}{1-여유율})\)</span></p>
+- N: 랜덤 관측 횟수(샘플 크기) - K: 신뢰수준에 따라 정해지는 표준편차 배수 - S: p에 대한 상대적 정도(허용오차) - p: 구하는 비율(발생률)</p>
 </dd>
+</dl>
+<ol start="2" type="1">
+<li>표준시간 산정 <span id="eq-work-sampling-st"><span class="math display">\[정상시간(단위당)=\frac{\text{총관측시간 x 발생률 x 수행도평가(레이팅)}}{생산량} \tag{22.3}\]</span></span></li>
+</ol>
+<pre><code>여기서 여유시간을 가산하여 단위당 표준시간 산정  
+- 표준시간 = 정상시간(1+여유률) 또는 정상시간 x $(frac{1}{1-여유율})$</code></pre>
+<dl>
 <dt>워크샘플링 적용 대상</dt>
 <dd>
 <ul>
