@@ -1147,21 +1147,21 @@ WF --- 11[사용되는 신체부위] &amp; 12[이동거리] &amp; 13[동작 또�
 
 </div>
 </div>
-<p>작업을 반복함에 따라 작업 소요시간 즉, 공수(Man hour)가 체감되는데, 이와 같은 현상을 공수 체감 현상이라고 한다. 이 공수 체감 현상 내지 능률 개선율을 그래프나 수식으로 나타낸 것을 <strong>학습곡선</strong>(Learning curve)이라고 한다. 학습현상 혹은 학습효과란 동일한 업무를 반복적으로 수행함에 따라 숙련도가 증가되어 단위당 작업시간이 감소하여 단위당 원가가 감소하는 현상을 말한다.</p>
+<p><font color="blue">작업을 반복함에 따라 작업 소요시간 즉, 공수(Man hour)가 체감</font>되는데, 이와 같은 현상을 <strong>공수 체감 현상</strong>이라고 한다. 이 <font color="blue">공수 체감 현상 내지 능률 개선율을 그래프나 수식으로 나타낸 것</font>을 <strong>학습곡선</strong>(Learning curve)이라고 한다. 학습현상 혹은 학습효과란 동일한 업무를 반복적으로 수행함에 따라 숙련도가 증가되어 단위당 작업시간이 감소하여 단위당 원가가 감소하는 현상을 말한다.</p>
 <p><strong>학습효과</strong>는 <font color="blue">생산량이 2배 증가함에 따른 단위당 노동시간 감소를 뜻</font>하며, 학습률이 80%라면 학습효과는 20%가 된다. 즉, 첫 번째 단위 생산에 100시간 노동이 필요하다고 가정하면 2번째 단위 생산에서는 80시간이 필요하고, 4번째 단위 생산에서는 64시간이 소요된다. 따라서 n번째 단위를 생산하는데 소요되는 시간은 첫 번째 단위 생산하는데 소요되는 시간과 지수함수 관계를 갖게 된다.</p>
 <p>학습률에 따른 평균원가 변화 수식은 다음과 같다.</p>
-<p><span class="math display">\[
+<p><span id="eq-learning-rate"><span class="math display">\[
 Y_n = Y_1 \times n^R
-\]</span></p>
+\tag{22.4}\]</span></span></p>
 <ul>
 <li><span class="math inline">\(Y_n\)</span>: n번째 생산에 소요되는 공수</li>
 <li><span class="math inline">\(Y_1\)</span>: 첫 번째 생산단위 공수</li>
-<li>n: n번째 시점 생산량</li>
-<li>R: <span class="math inline">\(\frac{log^b}{log^2}\)</span></li>
-<li>b: 학습률</li>
+<li><span class="math inline">\(n\)</span>: n번째 시점 생산량</li>
+<li><span class="math inline">\(R\)</span>: <span class="math inline">\(\frac{log^b}{log^2}\)</span></li>
+<li><span class="math inline">\(b\)</span>: 학습률</li>
 </ul>
 <table class="caption-top table">
-<caption>학습곡선 효과의 장단점</caption>
+<caption>학습곡선 효과 장점과 단점</caption>
 <colgroup>
 <col style="width: 33%">
 <col style="width: 33%">
@@ -1192,7 +1192,7 @@ Y_n = Y_1 \times n^R
 </tr>
 </tbody>
 </table>
-<p>학습곡선 효과는 <strong>비용 절감, 생산성 향상, 경쟁력 강화</strong> 등의 장점을 제공하지만, <strong>초기 비용 부담, 기술 습득의 한계, 과도한 의존성</strong> 등의 단점도 수반한다.</p>
+<p>학습곡선 효과는 <font color="blue">비용 절감, 생산성 향상, 경쟁력 강화</font> 등의 장점을 제공하지만, <font color="red">초기 비용 부담, 기술 습득의 한계, 과도한 의존성</font> 등의 단점도 수반한다.</p>
 <div class="callout callout-style-default callout-important no-icon callout-titled" title="1호기 공수가 10시간일 때 학습률이 80%인 경우">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1241,10 +1241,13 @@ Y_n = Y_1 \times n^R
 </tbody>
 </table>
 <ul>
-<li><strong>학습률(Learning Rate)</strong><br>
-단위당 평균 노동시간이 누적 생산량이 2배가 될 때마다 일정 비율로 감소함<br>
-예제에서는 1단위에서 2단위로 생산할 때 노동시간이 80%로 감소(10.00 → 8.00)<br>
+<li><strong>학습률</strong>(Learning Rate)
+<ul>
+<li>단위당 평균 노동시간이 누적 생산량이 2배가 될 때마다 일정 비율로 감소함<br>
 </li>
+<li>예제에서는 1단위에서 2단위로 생산할 때 노동시간이 80%로 감소(10.00 → 8.00)<br>
+</li>
+</ul></li>
 <li><strong>누적평균시간법</strong>을 통해 평균 노동시간 및 총 노동시간을 구함<br>
 </li>
 <li>생산량이 증가할수록 단위당 노동시간이 감소하는 <strong>학습곡선 효과(Learning Curve Effect)</strong>를 보여줌<br>
