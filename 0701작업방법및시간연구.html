@@ -683,7 +683,7 @@ end
 <p>작업자를 직접 관측하여 표준 시간을 산정하는 방식이다. 대표적으로 <strong>시간연구법</strong>과 <strong>워크 샘플링법</strong>이 있다.</p>
 <section id="sec-time-study" class="level4">
 <h4 class="anchored" data-anchor-id="sec-time-study">시간연구법</h4>
-<p><strong>시간연구법</strong>(Time study)은 19세기말 Frederick Winslow <strong>Taylor</strong>가 공식 도입한 방법으로 어떤 업무를 <font color="blue">한 작업자가 여러 번 수행하는 것을 관찰하여 표준시간을 정하는 방식</font>이다.</p>
+<p><strong>시간연구법</strong>(time study, stop watch)은 19세기말 Frederick Winslow <strong>Taylor</strong>가 공식 도입한 방법으로 어떤 업무를 <font color="blue">한 작업자가 여러 번 수행하는 것을 관찰하여 표준시간을 정하는 방식</font>이다.</p>
 <dl>
 <dt>절차</dt>
 <dd>
@@ -796,7 +796,7 @@ end
 <ul>
 <li>여기서 여유시간을 가산하여 단위당 표준시간 산정<br>
 </li>
-<li>표준시간 = 정상시간(1+여유률) 또는 정상시간 x <span class="math inline">\((\frac{1}{1-여유율})\)</span></li>
+<li>표준시간 = 정상시간(1+여유률), 또는 정상시간 x <span class="math inline">\((\frac{1}{1-여유율})\)</span></li>
 </ul></li>
 </ol>
 <dl>
@@ -987,7 +987,7 @@ MTA --- WF --- MTM --- BMT --- RWF --- MODAPTS
 </ul></li>
 <li><strong>동작 곤란성</strong>
 <ul>
-<li>일정한 정지(D), 방향 조절(S), 주의(P), 방향변경(U)</li>
+<li><font color="blue">일정한 정지(D), 방향 조절(S), 주의(P), 방향변경(U)</font></li>
 </ul></li>
 </ul>
 </dd>
@@ -1071,29 +1071,12 @@ MTA --- WF --- MTM --- BMT --- RWF --- MODAPTS
 </tr>
 </tbody>
 </table>
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart TB
-00[WF 동작시간 표준] --- 01[WF 동작분석]
-01 --- 기초동작 &amp; WF
-기초동작 --- 11[사용되는 신체부위] &amp; 12[이동거리] &amp; 13[동작 또는 저항] &amp; 14[동작 곤란성]
-01 --- 기초동작 &amp; WF
-WF --- 11[사용되는 신체부위] &amp; 12[이동거리] &amp; 13[동작 또는 저항] &amp; 14[동작 곤란성]
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
 <dl>
 <dt>사용방법</dt>
 <dd>
 <ul>
 <li>표준요소 10가지로 구분 실시</li>
-<li>구분된 표준 요서별로 사용 신체 부위, 이동거리, 중량 또는 저항과 동작 곤란성 요소를 조사하여 WF(W, S, P, U, D 순으로) 기록</li>
+<li>구분된 표준 요소별로 <font color="blue">사용 신체 부위, 이동거리, 중량 또는 저항과 동작 곤란성 요소</font>를 조사하여 WF(<strong>W, S, P, U, D 순으로</strong>) 기록</li>
 </ul>
 </dd>
 <dt>WF법 표준시간 설정절차</dt>
@@ -1163,9 +1146,9 @@ Y_n = Y_1 \times n^R
 <table class="caption-top table">
 <caption>학습곡선 효과 장점과 단점</caption>
 <colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
+<col style="width: 10%">
+<col style="width: 40%">
+<col style="width: 50%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -1259,17 +1242,20 @@ Y_n = Y_1 \times n^R
 <dt>학습곡선의 활용 사례</dt>
 <dd>
 <ul>
-<li>제조업체: 대량 생산 시 초기에는 시간이 많이 걸리지만, 생산이 증가함에 따라 생산 시간과 비용을 절감하는 데 활용</li>
-<li>서비스 산업: 고객 서비스나 유지보수 작업에서 반복적으로 일을 처리하면서 효율성을 증가시키는 데 사용</li>
-<li>기술 개발: 새로운 기술이나 시스템을 배울 때 학습곡선을 분석하여 개발 속도나 비용 절감을 예측</li>
+<li>제조업체<br>
+대량 생산 시 초기에는 시간이 많이 걸리지만, 생산이 증가함에 따라 생산 시간과 비용을 절감하는 데 활용</li>
+<li>서비스 산업<br>
+고객 서비스나 유지보수 작업에서 반복적으로 일을 처리하면서 효율성을 증가시키는 데 사용</li>
+<li>기술 개발<br>
+새로운 기술이나 시스템을 배울 때 학습곡선을 분석하여 개발 속도나 비용 절감을 예측</li>
 </ul>
 </dd>
 <dt>학습곡선 제약</dt>
 <dd>
 <ul>
 <li>학습률은 기업, 작업 형태, 작업자에 따라 상이하므로 실증조사가 필요</li>
-<li>시간추정치는 첫 단위 생산시간에 크게 의존하므로 이의 결정에 신중을 기해야 함</li>
-<li>노동집약적 산업에 유효</li>
+<li>시간추정치는 <strong>첫 단위 생산시간에 크게 의존</strong>하므로 이의 결정에 신중을 기해야 함</li>
+<li><strong>노동집약적</strong> 산업에 유효</li>
 <li>다품종 소량생산에는 불리</li>
 </ul>
 </dd>
