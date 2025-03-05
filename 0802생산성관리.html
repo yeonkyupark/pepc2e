@@ -487,9 +487,11 @@ window.Quarto = {
   <ul>
   <li><a href="#생산성-지표" id="toc-생산성-지표" class="nav-link active" data-scroll-target="#생산성-지표">생산성 지표</a>
   <ul>
+  <li><a href="#주요-kpi" id="toc-주요-kpi" class="nav-link" data-scroll-target="#주요-kpi">주요 KPI</a></li>
+  <li><a href="#생산성" id="toc-생산성" class="nav-link" data-scroll-target="#생산성">생산성</a></li>
+  <li><a href="#부가가치" id="toc-부가가치" class="nav-link" data-scroll-target="#부가가치">부가가치</a></li>
   <li><a href="#노동-생산성" id="toc-노동-생산성" class="nav-link" data-scroll-target="#노동-생산성">노동 생산성</a></li>
   <li><a href="#노동-생산성-지표" id="toc-노동-생산성-지표" class="nav-link" data-scroll-target="#노동-생산성-지표">노동 생산성 지표</a></li>
-  <li><a href="#부가가치" id="toc-부가가치" class="nav-link" data-scroll-target="#부가가치">부가가치</a></li>
   <li><a href="#총자본-투자율과-자본집약도" id="toc-총자본-투자율과-자본집약도" class="nav-link" data-scroll-target="#총자본-투자율과-자본집약도">총자본 투자율과 자본집약도</a></li>
   <li><a href="#설비투자효율과-노동장비율" id="toc-설비투자효율과-노동장비율" class="nav-link" data-scroll-target="#설비투자효율과-노동장비율">설비투자효율과 노동장비율</a></li>
   <li><a href="#부가가치율" id="toc-부가가치율" class="nav-link" data-scroll-target="#부가가치율">부가가치율</a></li>
@@ -541,12 +543,14 @@ window.Quarto = {
 
 </div>
 </div>
+<section id="주요-kpi" class="level3">
+<h3 class="anchored" data-anchor-id="주요-kpi">주요 KPI</h3>
 <p>제조기업에서 중요시 되고 있는 KPI는 다음과 같다.</p>
 <dl>
 <dt>생산성 관련</dt>
 <dd>
 <ul>
-<li><strong>OEE(Overall Equipment Effectiveness, 설비 종합 효율)</strong>: 설비의 가동률, 성능, 품질을 종합적으로 평가<br>
+<li><a href="0601설비계획.html#sec-oee" class="quarto-xref"><span>설비종합효율</span></a>(Overall Equipment Effectiveness, 설비 종합 효율): 설비의 가동률, 성능, 품질을 종합적으로 평가<br>
 </li>
 <li><strong>Cycle Time(사이클 타임)</strong>: 제품 하나를 생산하는 데 걸리는 시간<br>
 </li>
@@ -614,6 +618,9 @@ window.Quarto = {
 
 </div>
 </div>
+</section>
+<section id="생산성" class="level3">
+<h3 class="anchored" data-anchor-id="생산성">생산성</h3>
 <dl>
 <dt>생산성(Productivity)</dt>
 <dd>
@@ -702,23 +709,105 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-<p>부가가치 산출은 다음과 같이 공제법 또는 가산법이 있다.</p>
+</section>
+<section id="부가가치" class="level3">
+<h3 class="anchored" data-anchor-id="부가가치">부가가치</h3>
+<p><strong>부가가치</strong>는 <font color="blue">생산 과정에서 새롭게 창출된 가치</font>로, 기업이 투입한 원재료와 중간재에 노동과 자본을 결합하여 만들어낸 최종 산출물의 가치를 의미한다. 경제학적으로는 <font color="blue">기업이 생산한 총생산액에서 외부에서 구매한 중간재(원재료, 부품, 에너지 등)의 비용을 제외한 값</font>으로 계산된다.</p>
 <dl>
-<dt>공제법</dt>
+<dt>부가가치의 구성 요소</dt>
 <dd>
 <ul>
-<li>매출액에서 외부구입가치가 차지하는 비중을 공제하여 계산</li>
-<li>순매출액 - (원재료비 + 지불경비 + 감가상각비 + 기초재고액 - 기말재고액) + 부가가치 조정액</li>
+<li><strong>인건비</strong>: 근로자에게 지급하는 임금과 복리후생 비용<br>
+</li>
+<li><strong>이윤(영업이익)</strong>: 기업이 최종적으로 얻는 이익<br>
+</li>
+<li><strong>감가상각비</strong>: 설비 및 장비의 사용에 따른 가치 감소분<br>
+</li>
+<li><strong>이자비용</strong>: 차입금에 대한 이자 지급액<br>
+</li>
+<li><strong>세금</strong>: 정부에 납부하는 법인세, 부가가치세 등</li>
 </ul>
 </dd>
-<dt>가산법</dt>
+<dt>부가가치의 계산 방법</dt>
+<dd>
+<ol type="1">
+<li><strong>생산물가치 방식</strong><br>
+<span class="math inline">\(\text{부가가치} = \text{총생산액} - \text{중간재 비용}\)</span><br>
+기업이 생산한 제품과 서비스의 총가치에서 외부에서 구입한 원재료 및 중간재의 비용을 차감하는 방식이다.<br>
+</li>
+<li><strong>소득 분배 방식</strong><br>
+<span class="math inline">\(\text{부가가치} = \text{임금} + \text{이윤} + \text{이자} + \text{세금} + \text{감가상각비}\)</span><br>
+생산 과정에서 창출된 부가가치를 노동(임금), 자본(이자 및 이윤), 정부(세금) 등에 분배하는 방식으로 계산한다.<br>
+</li>
+<li><strong>부가가치세 방식</strong><br>
+<span class="math inline">\(text{부가가치} = \text{판매액} - \text{매입액}\)</span><br>
+기업이 고객에게 판매한 상품·서비스의 총 매출액에서 원재료·중간재 등 외부에서 구입한 비용을 차감하는 방식이다.<br>
+</li>
+<li><strong>공제법</strong><br>
+<span class="math inline">\(\text{순매출액 - (원재료비 + 지불경비 + 감가상각비 + 기초재고액 - 기말재고액) + 부가가치 조정액}\)</span><br>
+매출액에서 외부구입가치가 차지하는 비중을 공제하여 계산한다.</li>
+<li><strong>가산법</strong> <span class="math inline">\(인건비(노동) + 임차료(건물, 설비) + 감가상각비 + 세금과 공과(정부, 지자체) + 순금융비용(자본) + 경상이익\)</span><br>
+일명 한국은행방식이라고도 하며 부가가치는 경상이익, 인건비, 순금용비용, 임차료, 조세공과 및 감가상각비로 구성되고, 손익계산서 및 제조원가 명세서에 나타난 해당 항목을 이용하여 산출한다.</li>
+</ol>
+</dd>
+<dt>부가가치의 중요성</dt>
 <dd>
 <ul>
-<li>일명 한국은행방식이라고도 하며 부가가치는 경상이익, 인건비, 순금용비용, 임차료, 조세공과 및 감가상각비로 구성되고, 손익계산서 및 제조원가 명세서에 나타난 해당 항목을 이용하여 산출</li>
-<li>인건비(노동) + 임차료(건물, 설비) + 감가상각비 + 세금과 공과(정부, 지자체) + 순금융비용(자본) + 경상이익</li>
+<li><strong>경제 성장의 핵심 지표</strong>: 한 국가의 경제 규모를 측정하는 GDP(국내총생산)는 부가가치의 합계로 계산됨<br>
+</li>
+<li><strong>기업의 생산성 평가 기준</strong>: 부가가치가 높을수록 기업이 효율적으로 운영되고 있음을 의미함<br>
+</li>
+<li><strong>소득 분배 및 국가 재정 기반</strong>: 노동자에게 임금으로, 기업에게 이윤으로, 정부에게 세금으로 배분됨</li>
 </ul>
 </dd>
 </dl>
+<p><strong>부가가치</strong>란 생산과정을 통해 순수하게 창조된 창조 가치로 부가가치 정의는 크게 생산측면과 분배측면으로 나뉜다.</p>
+<dl>
+<dt>생산측면(공제법)</dt>
+<dd>
+<ul>
+<li>기업이 산출한 총 생산물 가치에서 외부로부터 구입하여 투입된 중간 제 가액을 참감한 가치</li>
+</ul>
+</dd>
+<dt>분배측면(한국은행식, 가산법)</dt>
+<dd>
+<ul>
+<li>기업 생산활동에서 창출한 가치로서 그 가치 창출에 참여한 생산 요소 제공자에게 그 댓가로 분배하는 것</li>
+</ul>
+</dd>
+</dl>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 35%">
+<col style="width: 45%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>구분</th>
+<th>공제법</th>
+<th>가산법</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>산출방법</td>
+<td>매출액에서 외부 구입가치가 차지하는 비중을 공제하여 계산</td>
+<td>부가가치는 경상이익, 인건비, 순금융비용, 임차료, 조세공과 및 감가상각비로구성되고, 손익계산서 및 제조원가 명세서에 나타난 해당 항목을 이용하여 산출</td>
+</tr>
+<tr class="even">
+<td>장점</td>
+<td>목표 관리나 경영계획에 활용하기 알맞음</td>
+<td>통계 작성이 수월하며 능률적이고 부가가치 구성요소를 합산하여 산출하므로 그 구성을 쉽게 할 수 있음</td>
+</tr>
+<tr class="odd">
+<td>단점</td>
+<td>계산 결과가 실제보다 다소 과대평가될 수 있으며, 매출액에 대응하는 외부 구입가치를 정확히 계산하기 어려움</td>
+<td>매출이나 생산액을 근거로 하지 않기 때문에 경영활동에 대한 종합적인 평가가 어려움, 비부가가치 구성항목 절감 노력이 부가가치를 만들게 되는데 이에 대한 분석이나 검토가 없는 것이 단점, 또한 자본 수익이나 영업 외 수익까지 부가가치로 판단</td>
+</tr>
+</tbody>
+</table>
+</section>
 <section id="노동-생산성" class="level3">
 <h3 class="anchored" data-anchor-id="노동-생산성">노동 생산성</h3>
 <p><strong>노동 생산성</strong>은 생산금액을 노동시간으로 나눈 값이다. 산출된 생산물 양과 지출된 노동 양 간 비율로 노동의 질적 수준을 나타낸다.</p>
@@ -802,101 +891,46 @@ end
 </div>
 </div>
 </section>
-<section id="부가가치" class="level3">
-<h3 class="anchored" data-anchor-id="부가가치">부가가치</h3>
-<p><strong>부가가치</strong>란 생산과정을 통해 순수하게 창조된 창조 가치로 부가가치 정의는 크게 생산측면과 분배측면으로 나뉜다.</p>
-<dl>
-<dt>생산측면(공제법)</dt>
-<dd>
-<ul>
-<li>기업이 산출한 총 생산물 가치에서 외부로부터 구입하여 투입된 중간 제 가액을 참감한 가치</li>
-</ul>
-</dd>
-<dt>분배측면(한국은행식, 가산법)</dt>
-<dd>
-<ul>
-<li>기업 생산활동에서 창출한 가치로서 그 가치 창출에 참여한 생산 요소 제공자에게 그 댓가로 분배하는 것</li>
-</ul>
-</dd>
-</dl>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 20%">
-<col style="width: 35%">
-<col style="width: 45%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>구분</th>
-<th>공제법</th>
-<th>가산법</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>산출방법</td>
-<td>매출액에서 외부 구입가치가 차지하는 비중을 공제하여 계산</td>
-<td>부가가치는 경상이익, 인건비, 순금융비용, 임차료, 조세공과 및 감가상각비로구성되고, 손익계산서 및 제조원가 명세서에 나타난 해당 항목을 이용하여산출</td>
-</tr>
-<tr class="even">
-<td>장점</td>
-<td>목표 관리나 경영계획에 활용하기 알맞음</td>
-<td>통계 작성이 수월하며 능률적이고 부가가치 구성요소를 합산하여 산출하므로 그 구성을 쉽게 할 수 있음</td>
-</tr>
-<tr class="odd">
-<td>단점</td>
-<td>계산 결과가 실제보다 다소 과대평가될 수 있으며, 매출액에 대응하는 외부 구입가치를 정확히 계산하기 어려움</td>
-<td>매출이나 생산액을 근거로 하지 않기 때문에 경영활동에 대한 종합적인 평가가 어려움, 비부가가치 구성항목 절감 노력이 부가가치를 만들게 되는데 이에 대한 분석이나 검토가 없는 것이 단점, 또한 자본 수익이나 영업 외 수익까지 부가가치로 판단</td>
-</tr>
-</tbody>
-</table>
-</section>
 <section id="총자본-투자율과-자본집약도" class="level3">
 <h3 class="anchored" data-anchor-id="총자본-투자율과-자본집약도">총자본 투자율과 자본집약도</h3>
+<p>투입 자본에 대한 부가가치 비율이므로 높을수록 좋은 의미를 가지게 되며, 자본장비율은 일반적으로 기술이 진보하면서 자본장비율이 증가하면 생산성이 증가하게 되므로 이 지표도 높을수록 좋은 의미를 지닌다. 하지만 무조건 자본장비율이 높다고 생산성에 비례하여 증가하는 것은 아니다.</p>
 <dl>
 <dt>총자본 투자율</dt>
 <dd>
-<ul>
-<li>기업에 투하된 총 자본으로 얼마만큼의 부가가치를 산출하였는가에 대한 비율</li>
-</ul>
+기업에 투하된 총 자본으로 얼마만큼의 부가가치를 산출하였는가에 대한 비율
 </dd>
 <dt>자본집약도</dt>
 <dd>
-<ul>
-<li>종업원 1인에 대해 얼마만틈의 자본이 집중되어 있는가를 보여주는 척도, <strong>자본장비율</strong>이라고도 함</li>
-</ul>
+종업원 1인에 대해 얼마만틈의 자본이 집중되어 있는가를 보여주는 척도, <strong>자본장비율</strong>이라고도 함
 </dd>
 </dl>
-<p>투입 자본에 대한 부가가치 비율이므로 높을수록 좋은 의미를 가지게 되며, 자본장비율은 일반적으로 기술이 진보하면서 자본장비율이 증가하면 생산성이 증가하게 되므로 이 지표도 높을수록 좋은 의미를 지닌다. 하지만 무조건 자본장비율이 높다고 생산성에 비례하여 증가하는 것은 아니다.</p>
+<p>참고로 위 지표로 노동생산성을 다음과 같이 계산할 수 있다.</p>
 <p><span class="math display">\[\text{노동생산성(1인당 부가가치) = 총자본 투자효율 × 자본집약도}\]</span></p>
 </section>
 <section id="설비투자효율과-노동장비율" class="level3">
 <h3 class="anchored" data-anchor-id="설비투자효율과-노동장비율">설비투자효율과 노동장비율</h3>
+<p>설비투자효율이 높을수록 같은 자산으로 많은 부가가치를 산출한다는 의미이며, 노동 장비율도 일반적으로 성장률이 높을수록 높게 나타난다.</p>
 <dl>
 <dt>설비투자효율</dt>
 <dd>
-<ul>
-<li>투자한 설비자산으로 얼마만큼의 부가가치를 산출하였는가에 대한 비율</li>
-</ul>
+투자한 설비자산으로 얼마만큼의 부가가치를 산출하였는가에 대한 비율
 </dd>
 <dt>노동장비율</dt>
 <dd>
-<ul>
-<li>생산과정에서 종업원 1인이 보유하고 있는 장비를 가치로 환산한 값</li>
-</ul>
+생산과정에서 종업원 1인이 보유하고 있는 장비를 가치로 환산한 값
 </dd>
 </dl>
-<p>설비투자효율이 높을수록 같은 자산으로 많은 부가가치를 산출한다는 의미이며, 노동 장비율도 일반적으로 성장률이 높을수록 높게 나타난다.</p>
+<p>참고로 위 지표로 노동생산성을 다음과 같이 계산할 수 있다.</p>
 <p><span class="math display">\[\text{노동생산성(1인당 부가가치) = 설비투자효율 × 노동장비율}\]</span></p>
 </section>
 <section id="부가가치율" class="level3">
 <h3 class="anchored" data-anchor-id="부가가치율">부가가치율</h3>
-<p>소득률이라고도 하며 매출액 중에서 부가가치가 차지하는 비율이다.</p>
+<p><strong>소득률</strong>이라고도 하며 <font color="blue">매출액 중에서 부가가치가 차지하는 비율</font>이다.</p>
 <p>부가가치율이 높을수록 경영효율이 좋다. 원가관리에 경쟁력이 있는 업종의 부가가치율은 낮고, 특허나 첨단 기술이 지배하는 업종의 부가가칠율은 높다. 업종 평균에 비해 낮다면 기술력 또는 원가 관리에 문제가 있음을 암시한다.</p>
 </section>
 <section id="노동소득분배율" class="level3">
 <h3 class="anchored" data-anchor-id="노동소득분배율">노동소득분배율</h3>
-<p>기업이 창출한 부가가치 중 노동 소득에 분배된 비욜루서 부가가치 중 인건비 비중을 의미한다.</p>
+<p><strong>노동소득비율</strong>은 <font color="blue">기업이 창출한 부가가치 중 노동 소득에 분배된 비율로서 부가가치 중 인건비 비중을 의미한다.</font></p><font color="blue">
 <p>산업별 기업 규모별로 평균 노동소득비율과 기업 노동소득분배율을 비교하여 적정 인건비 산정 준거자료로 활용한다.</p>
 <div class="callout callout-style-default callout-important no-icon callout-titled" title="생산성">
 <div class="callout-header d-flex align-content-center">
@@ -964,8 +998,8 @@ end
 </ul>
 </div>
 </div>
-</section>
-</section>
+</font></section><font color="blue">
+</font></section><font color="blue">
 <section id="재해지수" class="level2">
 <h2 class="anchored" data-anchor-id="재해지수">재해지수</h2>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 100-4-2, 115-2-2, 124-1-4">
@@ -981,14 +1015,14 @@ end
 
 </div>
 </div>
-<p><strong>재해지수</strong>란 산업재해 발생 빈도와 발생 재해 크기를 통계적으로 고찰한 수치를 의미한다. 대표적인 지수로 도수율(빈도율), 강도율, 천인률 등이 있다.</p>
-<p>종합재해지수(FSI, frequency severity indeicator)는 도수율과 강도율을 이용한 통계지수로 기업 간 재해지수를 종합적으로비교하기 위해 사용된다.</p>
+<p><strong>재해지수</strong>란 <font color="blue">산업재해 발생 빈도와 발생 재해 크기를 통계적으로 고찰한 수치</font>를 의미한다. 대표적인 지수로 <strong>도수율(빈도율), 강도율, 연천인률</strong> 등이 있다.</p>
+<p><strong>종합재해지수</strong>(FSI, frequency severity indeicator)는 도수율과 강도율을 이용한 통계지수로 기업 간 재해지수를 종합적으로비교하기 위해 사용된다.</p>
 <p><span class="math display">\[
 종합재해지수 = \sqrt{도수율 \times 강도율}
 \]</span></p>
 <section id="도수율" class="level3">
 <h3 class="anchored" data-anchor-id="도수율">도수율</h3>
-<p><strong>도수율</strong>(frequency rate of injury)는 재해 빈도율이라고도 하며 산업재해발생 빈도를 나타내는 지표이다. 백만 시간당 재해 발생건수(빈도)를 나타낸다. 재해 발생 정도를 나타내는 국제적 표준척도로서 사용된다.</p>
+<p><strong>도수율</strong>(frequency rate of injury)는 <font color="blue">재해 빈도율이라고도 하며 산업재해발생 빈도를 나타내는 지표</font>이다. 백만 시간당 재해 발생건수(빈도)를 나타낸다. 재해 발생 정도를 나타내는 국제적 표준척도로서 사용된다.</p>
 <p><span class="math display">\[
 도수율 = \frac{재해건수}{연노동시간수} \times 1,000,000
 \]</span></p>
@@ -1012,7 +1046,7 @@ end
 </section>
 <section id="강도율" class="level3">
 <h3 class="anchored" data-anchor-id="강도율">강도율</h3>
-<p><strong>강도율</strong>(severity rate of injury)은 산업재해에 의해 휴업에 따른 노동 손실 정도를 나타내는 지표로 천 시간당 상해로 인해 상실된 노동 손실 일수를 나타낸다.</p>
+<p><strong>강도율</strong>(severity rate of injury)은 <font color="blue">산업재해에 의해 휴업에 따른 노동 손실 정도를 나타내는 지표</font>로 천 시간당 상해로 인해 상실된 노동 손실 일수를 나타낸다.</p>
 <p><span class="math display">\[
 강도율 = \frac{근로손실일수}{연근로시간수} \times 1,000
 \]</span></p>
@@ -1067,9 +1101,9 @@ end
 </section>
 <section id="연천인율" class="level3">
 <h3 class="anchored" data-anchor-id="연천인율">연천인율</h3>
-<p><strong>연천인율</strong>은 1000명을 기준으로 재해발생 건수 비율을 나타낸다.</p>
+<p><strong>연천인율</strong>은 <font color="blue">1000명을 기준으로 재해발생 건수 비율</font>을 나타낸다.</p>
 <p><span class="math display">\[
-연천인율 = \frac{연간 \ 재해건수}{연평균 \ 근로자 \ 수} \times 1,000 또는 2.4 \times 도수율(8시간, \ 300일 \ 기준)
+연천인율 = \frac{연간 \ 재해건수}{연평균 \ 근로자 \ 수} \times 1,000 \ 또는 \ 2.4 \times 도수율(8시간, \ 300일 \ 기준)
 \]</span></p>
 <div class="callout callout-style-default callout-important no-icon callout-titled" title="도수율과 강도율">
 <div class="callout-header d-flex align-content-center">
@@ -1104,7 +1138,7 @@ end
 </section>
 </section>
 
-</main> <!-- /main -->
+</font></main><font color="blue"> <!-- /main -->
 <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8759553852956796" crossorigin="anonymous"></script>
 <!-- display-horizontal -->
 <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8759553852956796" data-ad-slot="1446193043" data-ad-format="auto" data-full-width-responsive="true"></ins>
@@ -1540,7 +1574,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>
   </div>
 </nav>
-</div> <!-- /content -->
+</font></div><font color="blue"> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
@@ -1558,4 +1592,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-</body></html>
+</font></body></html>
