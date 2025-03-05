@@ -488,8 +488,12 @@ window.Quarto = {
   <li><a href="#공정기호" id="toc-공정기호" class="nav-link active" data-scroll-target="#공정기호">공정기호</a></li>
   <li><a href="#sec-line-balancing" id="toc-sec-line-balancing" class="nav-link" data-scroll-target="#sec-line-balancing">라인 밸런싱</a></li>
   <li><a href="#sec-exchange-die" id="toc-sec-exchange-die" class="nav-link" data-scroll-target="#sec-exchange-die">준비교체 개선활동</a></li>
-  <li><a href="#less-engineering" id="toc-less-engineering" class="nav-link" data-scroll-target="#less-engineering">Less Engineering</a></li>
-  <li><a href="#sec-5s" id="toc-sec-5s" class="nav-link" data-scroll-target="#sec-5s">3정 5S</a></li>
+  <li><a href="#sec-less-engineering" id="toc-sec-less-engineering" class="nav-link" data-scroll-target="#sec-less-engineering">Less Engineering</a></li>
+  <li><a href="#정-5s" id="toc-정-5s" class="nav-link" data-scroll-target="#정-5s">3정 5S</a>
+  <ul>
+  <li><a href="#sec-3stable" id="toc-sec-3stable" class="nav-link" data-scroll-target="#sec-3stable">3정(三定)</a></li>
+  <li><a href="#sec-5s" id="toc-sec-5s" class="nav-link" data-scroll-target="#sec-5s">5S 활동</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/yeonkyupark/pepc2e/edit/main/0801프로세스분석과개선.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
     </div>
@@ -535,14 +539,14 @@ window.Quarto = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/flow_chart_symbols.png" class="img-fluid figure-img"></p>
-<figcaption>youtube.com/watch?v=RXpHGa9ToAE&amp;t</figcaption>
+<figcaption>공정기호<br>youtube.com/watch?v=RXpHGa9ToAE&amp;t</figcaption>
 </figure>
 </div>
 <p>아래는 공정기호를 이용한 공정도표 작성 예제이다.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/process_flow_chart.png" class="img-fluid figure-img"></p>
-<figcaption>http://business.chosun.ac.kr</figcaption>
+<figcaption>공정도표<br>http://business.chosun.ac.kr</figcaption>
 </figure>
 </div>
 </section>
@@ -561,7 +565,16 @@ window.Quarto = {
 
 </div>
 </div>
-<p>라인 밸런싱은 공정 분석에 있어 중요한 요소이다. 작업장 내 여러 작업 사이에 균형을 맞추는 활동이다. 이는 각 작업이 동일한 시간 동안 수행되도록 하여 전체 라인 효율성을 높이는데 목표를 두고 있다. 라인 밸런싱을 통해 생산 시간을 줄이고 병목 현상을 방지하며 자원 활용을 최적화할 수 있다.</p>
+<p><strong>라인 밸런싱</strong>은 공정 분석에 있어 중요한 요소이다. <font color="blue">작업장 내 여러 작업 사이에 균형을 맞추는 활동</font>이다. 이는 각 작업이 동일한 시간 동안 수행되도록 하여 전체 라인 효율성을 높이는데 목표를 두고 있다. 라인 밸런싱을 통해 <font color="blue">생산 시간을 줄이고 병목 현상을 방지하며 자원 활용을 최적화</font>할 수 있다.</p>
+<p>라인 밸런스 효율은 다음과 같이 계산할 수 있다.</p>
+<p><span id="eq-line-balance"><span class="math display">\[
+E_b = \frac{\sum{T_i}}{n \times c_T}
+\tag{23.1}\]</span></span></p>
+<ul>
+<li><span class="math inline">\(\sum{T_i}\)</span>: 각 공정 작업시간 합계</li>
+<li><span class="math inline">\(n\)</span>: 공정 수</li>
+<li><span class="math inline">\(c_T\)</span>: 공정 중 최대 작업시간</li>
+</ul>
 <div class="callout callout-style-default callout-important no-icon callout-titled" title="라인 밸런스 계산">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -598,10 +611,11 @@ window.Quarto = {
 </tbody>
 </table>
 <hr>
+<p>주어진 공정에서 제품 1개를 생산하는데 필요한 작업 시간은 다음과 같다.</p>
 <p><span class="math display">\[
 \frac{\text{가동시간 8시간 x 60분}}{15개} = 32(분)
 \]</span></p>
-<p>주어진 조건에서는 일 15개 생산을 위해서는 각 공정이 32분 이내가 되도록 공정을 설계해야 한다. 따라서 3, 6, 7번 공정은 추가 기계를 배치하여 32분 이내로 공정이 진행될 수 있도록 구성한다.</p>
+<p>일 15개 생산을 위해서는 각 공정이 32분 이내가 되도록 공정을 설계해야 한다. 따라서 3, 6, 7번 공정은 추가 기계를 배치하여 32분 이내로 공정이 진행될 수 있도록 구성한다.</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -632,7 +646,7 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-<p>위 조건으로 라인 밸런스 효율을 계산하면 다음과 같다.</p>
+<p>위 조건으로 라인 밸런스 효율을 계산(<a href="#eq-line-balance" class="quarto-xref">수식&nbsp;<span>23.1</span></a>)하면 다음과 같다.</p>
 <p><span class="math display">\[
 E_b = \frac{\sum{T_i}}{n \times c_T} = \frac{236}{10 \times 32} \times 100 = 73.75(\%)
 \]</span></p>
@@ -654,7 +668,7 @@ E_b = \frac{\sum{T_i}}{n \times c_T} = \frac{236}{10 \times 32} \times 100 = 73.
 
 </div>
 </div>
-<p><strong>준비교체 시간</strong>이란 현 제품 생산 종료 시점으로부터 다음 제품으로 교체/조정을 하여 완전히 양품이 생산되기까지의 시간을 말한다. 치공구 해체, 청소, 다음 제품에 사용할 치공구 준비, 금형류 준비, 세팅, 시가공, 조정, 측정 시간 등을 포함한다.</p>
+<p><strong>준비교체 시간</strong>이란 <font color="blue">현 제품 생산 종료 시점으로부터 다음 제품으로 교체/조정을 하여 완전히 양품이 생산되기까지의 시간</font>을 말한다. 치공구 해체, 청소, 다음 제품에 사용할 치공구 준비, 금형류 준비, 세팅, 시가공, 조정, 측정 시간 등을 포함한다.</p>
 <dl>
 <dt>준비교체 시간 단축 필요성</dt>
 <dd>
@@ -729,8 +743,8 @@ E_b = \frac{\sum{T_i}}{n \times c_T} = \frac{236}{10 \times 32} \times 100 = 73.
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/job_change.png" class="img-fluid figure-img"></p>
-<figcaption>https://www.youtube.com/watch?app=desktop&amp;v=8-kmV4wR2xo</figcaption>
+<p><img src="images/die_exchange.png" class="img-fluid figure-img"></p>
+<figcaption>준비교체 시간 개선</figcaption>
 </figure>
 </div>
 <dl>
@@ -741,23 +755,20 @@ E_b = \frac{\sum{T_i}}{n \times c_T} = \frac{236}{10 \times 32} \times 100 = 73.
 <ul>
 <li>가동 분석을 통해 현 실태를 파악하고 현재 실시하고 있는 방법을 분석한다.</li>
 </ul></li>
-<li>낭비제거
-<ul>
-<li>정리 정돈으로 상당한 시간을 줄일 수 있다.</li>
-</ul></li>
 <li>내/외 준비 분리
 <ul>
 <li>내준비, 외준비, 로스 분리를 명확힌 한다. 반드시 설비를 정지시키지 않아도 가능한 작업은 외 준비로 한다.</li>
 </ul></li>
+<li>낭비제거
+<ul>
+<li>정리 정돈으로 상당한 시간을 줄일 수 있다.</li>
+</ul></li>
 <li>내준비를 외준비화
 <ul>
 <li>내준비 작업을 개선하여 외준비화 한다.</li>
-</ul></li>
-<li>내준비 교체 개선
-<ul>
 <li>내준비 단축을 위해 지그 공구 부착, 제거 작업 간소화/표준화, 카세트 방식 도입, 빠른 장금장치를 이용한 체겨 간소화, 중개 지그 활용, 병행 작업 실시, 조정 작업 폐지 등을 시도한다.</li>
 </ul></li>
-<li>외준비 교체 개선
+<li>외준비 교체 및 지속적 개선
 <ul>
 <li>외준비 시간도 단축하여 준비교체 총 시간을 단축한다.</li>
 </ul></li>
@@ -787,9 +798,65 @@ E_b = \frac{\sum{T_i}}{n \times c_T} = \frac{236}{10 \times 32} \times 100 = 73.
 </ol>
 </dd>
 </dl>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="SMED">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+SMED
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>SMED</strong>(Single Minute Exchange of Die)느 제조 공정에서 <font color="blue">교체준비(Changeover) 시간을 한 자릿수(Single Minute, 10분 미만)로 단축</font>하는 기법으로, 시게오 시구니(Shigeo Shingo)가 개발한 Lean Manufacturing 기법 중 하나이다.</p>
+<dl>
+<dt>SMED의 핵심 개념</dt>
+<dd>
+<ul>
+<li><strong>내부 설정(Internal Setup)과 외부 설정(External Setup) 구분</strong><br>
+기계가 멈춰야 수행할 수 있는 작업(내부 설정)과 기계가 가동 중에도 수행할 수 있는 작업(외부 설정)을 분리하여 내부 설정을 최소화함<br>
+</li>
+<li><strong>외부 설정의 최대 활용</strong><br>
+외부 설정으로 가능한 작업을 사전에 준비하여 교체 시간이 줄어들도록 개선<br>
+</li>
+<li><strong>내부 설정을 외부 설정으로 변환</strong><br>
+장비의 개조나 표준화 작업을 통해 내부 설정을 외부 설정으로 바꾸어 가동 중에도 교체 준비가 가능하도록 함<br>
+</li>
+<li><strong>교체 작업의 간소화 및 표준화</strong><br>
+고정 장치(Quick Change Fixtures), 표준 툴, 컬러 코딩 등을 활용하여 교체 과정을 단순화</li>
+</ul>
+</dd>
+<dt>SMED 도입 효과</dt>
+<dd>
+<ul>
+<li><strong>가동률 향상</strong><br>
+비가동 시간을 줄여 생산성을 높임<br>
+</li>
+<li><strong>유연한 생산 대응</strong><br>
+제품 교체 시간이 짧아지므로 다품종 소량 생산이 용이함<br>
+</li>
+<li><strong>재고 감소</strong><br>
+생산 배치 크기를 줄일 수 있어 불필요한 재고가 감소함<br>
+</li>
+<li><strong>원가 절감</strong><br>
+생산 효율이 향상되어 비용 절감 효과가 발생</li>
+</ul>
+</dd>
+</dl>
+<p>SMED 적용 단계 (<a href="#sec-exchange-die" class="quarto-xref"><span>준비교체 개선활동</span></a>) 1. <strong>현재 공정 분석</strong><br>
+- 교체 작업의 모든 단계를 기록하고 내부/외부 설정을 구분<br>
+2. <strong>외부 설정으로 변환 가능 여부 검토</strong><br>
+- 내부 설정 중 가동 중에도 가능한 작업을 외부 설정으로 전환<br>
+3. <strong>내부 설정 단축</strong><br>
+- 표준화, 툴 개선, 자동화 등을 활용하여 내부 설정 시간을 줄임<br>
+4. <strong>절차 단순화 및 표준화</strong><br>
+- 교체 작업을 단순화하고 표준화하여 반복적으로 최적화</p>
+<p>SMED를 성공적으로 도입하면 <font color="blue">리드 타임 단축, 낭비 최소화, 생산 유연성 증가</font> 등의 효과를 기대할 수 있다.</p>
+</div>
+</div>
 </section>
-<section id="less-engineering" class="level2">
-<h2 class="anchored" data-anchor-id="less-engineering">Less Engineering</h2>
+<section id="sec-less-engineering" class="level2">
+<h2 class="anchored" data-anchor-id="sec-less-engineering">Less Engineering</h2>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 97-1-2, 127-2-1">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -803,7 +870,58 @@ E_b = \frac{\sum{T_i}}{n \times c_T} = \frac{236}{10 \times 32} \times 100 = 73.
 
 </div>
 </div>
-<p>낭비를 발생시키는 구체적인 현상을 완전히 제거하고자 하는 관점에서 시작된 것으로 개선 4원칙 중 가장 효과적인 <strong>배제</strong>에 주안점을 두고 적은 비용으로 큰 영영 성과를 달성하고자 하는 방안이다.</p>
+<p>Less Engineering은 <font color="blue">불필요한 엔지니어링 작업을 최소화하고, 꼭 필요한 기술적 개선에 집중하는 접근 방식</font>이다. Lean Manufacturing과 Agile 개발 원칙에서 파생된 개념으로, 복잡성을 줄이고 낭비를 최소화하여 효율적인 제품 개발 및 생산을 목표로 한다.</p>
+<dl>
+<dt>핵심 원칙</dt>
+<dd>
+<ul>
+<li><strong>필요한 것만 설계</strong><br>
+과도한 기능이나 불필요한 설계를 배제하고, 최소한의 엔지니어링으로 목표 달성<br>
+</li>
+<li><strong>단순한 해결책 우선</strong><br>
+복잡한 설계보다 검증된 간단한 솔루션을 먼저 고려<br>
+</li>
+<li><strong>반복적 개선(Iterative Improvement)</strong><br>
+한 번에 완벽한 설계를 만들려 하지 않고, 지속적인 피드백을 통해 점진적 개선<br>
+</li>
+<li><strong>표준화된 설계 활용</strong><br>
+기존의 표준 부품과 검증된 설계를 적극 활용하여 개발 속도를 높이고 오류를 줄임<br>
+</li>
+<li><strong>필요한 부분에만 엔지니어링 자원 집중</strong><br>
+가치가 높은 영역에 엔지니어링 리소스를 집중 배치</li>
+</ul>
+</dd>
+<dt>적용 효과</dt>
+<dd>
+<ul>
+<li><dl>
+<dt><strong>개발 속도 향상</strong></dt>
+<dd>
+불필요한 작업을 줄여 제품 개발 및 개선 시간을 단축
+</dd>
+</dl></li>
+<li><dl>
+<dt><strong>비용 절감</strong></dt>
+<dd>
+불필요한 연구, 개발, 프로토타이핑 비용 절감
+</dd>
+</dl></li>
+<li><dl>
+<dt><strong>유지보수 용이</strong></dt>
+<dd>
+단순한 설계는 문제 해결과 유지보수를 쉽게 함
+</dd>
+</dl></li>
+<li><dl>
+<dt><strong>생산 효율 향상</strong></dt>
+<dd>
+제조 공정에서도 불필요한 복잡성을 제거하여 생산성을 높임
+</dd>
+</dl></li>
+</ul>
+</dd>
+</dl>
+<p>Less Engineering은 <font color="blue">“적을수록 더 좋다(Less is More)”</font>는 원칙을 따르며, Lean Thinking과 Agile 개발 방식에서 중요한 역할을 한다.</p>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="개선 4원칙(ECRS)">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -851,7 +969,6 @@ E_b = \frac{\sum{T_i}}{n \times c_T} = \frac{236}{10 \times 32} \times 100 = 73.
 <li>표준 작업 절차를 도입하여 일관성을 높이고 오류를 줄인다.</li>
 </ul></li>
 </ol>
-<p>이렇게 하면 제조 공정의 효율성을 크게 향상시킬 수 있다.</p>
 </div>
 </div>
 <p>다음과 같은 유형이 있다.</p>
@@ -866,6 +983,7 @@ E_b = \frac{\sum{T_i}}{n \times c_T} = \frac{236}{10 \times 32} \times 100 = 73.
 <li><strong>Rough Motion Less</strong> - 불필요한 동작 없애기</li>
 </ul>
 <table class="caption-top table">
+<caption>4M과 Less Engineering</caption>
 <colgroup>
 <col style="width: 23%">
 <col style="width: 76%">
@@ -907,77 +1025,156 @@ E_b = \frac{\sum{T_i}}{n \times c_T} = \frac{236}{10 \times 32} \times 100 = 73.
 </tr>
 </tbody>
 </table>
+<table class="caption-top table">
+<caption>Less Engineering 사례 Less Engineering은 <strong>불필요한 엔지니어링을 줄이고 핵심 요소에 집중하여 효율성을 극대화하는 전략</strong>이다.</caption>
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>사례</th>
+<th>설명</th>
+<th>효과</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>MVP 개발 (Minimum Viable Product)</strong></td>
+<td>제품의 핵심 기능만 포함하여 시장 반응을 테스트한 후 점진적으로 개선</td>
+<td>개발 비용 절감, 빠른 시장 출시</td>
+</tr>
+<tr class="even">
+<td><strong>자동차 플랫폼 공유</strong></td>
+<td>동일한 차체(플랫폼)를 여러 모델에서 활용하여 개발 비용 절감</td>
+<td>생산 효율성 증가, 품질 향상</td>
+</tr>
+<tr class="odd">
+<td><strong>Lean 생산 방식 (Toyota)</strong></td>
+<td>불필요한 설계 요소를 제거하고 단순한 공정으로 제품 생산</td>
+<td>낭비 최소화, 생산 속도 향상</td>
+</tr>
+<tr class="even">
+<td><strong>스타트업의 반자동 공정 활용</strong></td>
+<td>완전 자동화 대신 사람이 개입할 수 있는 반자동 시스템 도입</td>
+<td>초기 투자 비용 절감, 유연한 운영</td>
+</tr>
+<tr class="odd">
+<td><strong>애자일 개발 방식</strong></td>
+<td>소프트웨어를 한 번에 완성하지 않고 반복적인 개선 과정을 통해 최적화</td>
+<td>빠른 피드백 반영, 유지보수 용이</td>
+</tr>
+</tbody>
+</table>
 </section>
-<section id="sec-5s" class="level2">
-<h2 class="anchored" data-anchor-id="sec-5s">3정 5S</h2>
+<section id="정-5s" class="level2">
+<h2 class="anchored" data-anchor-id="정-5s">3정 5S</h2>
 <div class="caalout-tip" data-icon="false" title="기출: 118-1-12, 130-3-2">
 
 </div>
-<p><strong>3정(3定)과 5S</strong>는 모두 효율적인 작업 환경을 만들고, 생산성과 품질을 향상시키기 위한 관리 방법론이다. 특히 <strong>3정</strong>은 일본에서 개발된 <strong>5S</strong>의 기초가 되는 개념으로, <strong>정리</strong>, <strong>정돈</strong>, <strong>청소</strong>의 세 가지 원칙을 강조한다. <strong>5S</strong>는 여기에 두 가지 추가 원칙을 포함하여 더 체계적이고 구체적인 방법을 제시한다.</p>
+<p><strong>3정 5S</strong>는 제조업 및 생산 관리에서 <font color="blue">작업 환경을 정리하고 효율성을 극대화하는 기본 개념</font>으로, <strong>정리(整理), 정돈(整頓), 청소(清掃), 청결(清潔), 습관(習慣)</strong>을 강조하는 관리 기법이다.</p>
+<section id="sec-3stable" class="level3">
+<h3 class="anchored" data-anchor-id="sec-3stable">3정(三定)</h3>
+<p><font color="blue">“정해진 것을, 정해진 위치에, 정해진 양만큼 둔다”</font>는 원칙으로, 업무 효율성을 높이고 낭비를 줄이기 위해 사용됨.</p>
+<table class="caption-top table">
+<caption>3정(三定)</caption>
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>구분</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>정품(定品, 정해진 물건)</strong></td>
+<td>필요한 물건만 사용하고 불필요한 것을 제거</td>
+</tr>
+<tr class="even">
+<td><strong>정위치(定位置, 정해진 위치)</strong></td>
+<td>물건을 사용하기 쉽도록 일정한 위치에 배치</td>
+</tr>
+<tr class="odd">
+<td><strong>정량(定量, 정해진 수량)</strong></td>
+<td>필요한 만큼만 보관하여 과잉 재고나 부족 문제 방지</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="sec-5s" class="level3">
+<h3 class="anchored" data-anchor-id="sec-5s">5S 활동</h3>
+<p>일본에서 시작된 작업장 정리·정돈 기법으로, <font color="blue">낭비를 없애고 생산성을 향상</font>시키는 데 초점을 둔다.</p>
+<table class="caption-top table">
+<caption>5S 활동</caption>
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>구분</th>
+<th>일본어</th>
+<th>의미</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>정리(整理)</strong></td>
+<td>せいり (Seiri)</td>
+<td>불필요한 것 제거</td>
+<td>작업 공간에서 필요 없는 물건을 제거</td>
+</tr>
+<tr class="even">
+<td><strong>정돈(整頓)</strong></td>
+<td>せいとん (Seiton)</td>
+<td>필요한 것 정리</td>
+<td>필요한 물건을 사용하기 쉽게 정리·배치</td>
+</tr>
+<tr class="odd">
+<td><strong>청소(清掃)</strong></td>
+<td>せいそう (Seisou)</td>
+<td>깨끗하게 유지</td>
+<td>작업장을 청결하게 유지하고 점검</td>
+</tr>
+<tr class="even">
+<td><strong>청결(清潔)</strong></td>
+<td>せいけつ (Seiketsu)</td>
+<td>위생적인 환경</td>
+<td>정리·정돈·청소를 습관화하여 유지</td>
+</tr>
+<tr class="odd">
+<td><strong>습관(習慣)</strong></td>
+<td>しゅうかん (Shuukan)</td>
+<td>지속적 실천</td>
+<td>5S 활동을 반복하여 문화로 정착</td>
+</tr>
+</tbody>
+</table>
 <dl>
-<dt>3정 (3定)</dt>
+<dt><strong>3정 5S의 효과</strong></dt>
 <dd>
 <ul>
-<li><strong>정리(整理, Seiri)</strong>: 필요한 것과 불필요한 것을 구분하여 불필요한 물건을 제거하고, 작업 공간을 깔끔하게 유지한다.</li>
-<li><strong>정돈(整頓, Seiton)</strong>: 필요한 물건이나 도구는 쉽게 찾을 수 있도록 정리하여, 효율적인 작업이 가능하도록 한다. 작업에 필요한 모든 것이 제자리에 있어야 한다.</li>
-<li><strong>청소(清掃, Seiso)</strong>: 작업 환경과 기계, 장비를 청소하여 깨끗하고 안전한 작업 환경을 유지한다. 청소는 품질 관리와 안전성 향상에도 중요하다.</li>
+<li><strong>작업 효율성 향상</strong>: 필요한 물건을 빠르게 찾을 수 있어 생산성 증가<br>
+</li>
+<li><strong>안전한 작업 환경 조성</strong>: 정리·정돈을 통해 사고 위험 감소<br>
+</li>
+<li><strong>낭비 최소화</strong>: 불필요한 물건 제거로 공간과 비용 절감<br>
+</li>
+<li><strong>품질 향상</strong>: 깨끗한 환경 유지로 제품 품질 안정</li>
 </ul>
 </dd>
 </dl>
-<p><strong>5S</strong>는 3정의 개념을 바탕으로 두 가지 추가 원칙을 더한 것으로, 더 체계적이고 구체적인 관리 방법을 제공한다. <strong>5S</strong>는 다음과 같은 다섯 가지 원칙으로 구성된다.</p>
-<dl>
-<dt>5S</dt>
-<dd>
-<ol type="1">
-<li><strong>정리 (Seiri, 整理)</strong>: 필요 없는 물건을 제거하고, 필요한 것만 남긴다.</li>
-<li><strong>정돈 (Seiton, 整頓)</strong>: 필요한 물건을 쉽게 찾을 수 있도록 정리하여, 작업 효율을 높인다.</li>
-<li><strong>청소 (Seiso, 清掃)</strong>: 작업 공간을 깨끗하게 유지하고, 기계나 도구가 오염되지 않도록 관리한다.</li>
-<li><strong>청결 (Seiketsu, 清潔)</strong>: 정리, 정돈, 청소가 일상적으로 잘 유지될 수 있도록 표준화하고 관리한다. 이는 일상적인 관리 및 점검을 통해 이루어진다.</li>
-<li><strong>습관 (Shitsuke, 躾)</strong>: 5S 활동을 지속적으로 유지하고 개선하려는 습관을 형성한다. 5S가 일상적으로 실천되도록 하고, 모든 직원이 이를 지키도록 한다.</li>
-</ol>
-</dd>
-<dt>5S 목적</dt>
-<dd>
-<ul>
-<li>코스트 감축</li>
-<li>능률 향상</li>
-<li>품질 향상</li>
-<li>고장 감축</li>
-<li>안전보장, 공해방지</li>
-<li>의욕 향상</li>
-</ul>
-</dd>
-<dt>5S 추진단계</dt>
-<dd>
-<ol type="1">
-<li>5S 추진체제 확립</li>
-<li>5S 추진계획입안</li>
-<li>5S 운동 선언</li>
-<li>사내 계몽 및 교육</li>
-<li>실시</li>
-<li>평가 및 유지</li>
-</ol>
-</dd>
-<dt>3정과 5S 관계</dt>
-<dd>
-<ul>
-<li><strong>3정</strong>은 5S의 기초가 되는 개념으로, 5S는 이를 더 확장하여 지속적이고 체계적인 관리 방법을 제시한다.</li>
-<li><strong>3정</strong>은 기본적인 정리, 정돈, 청소를 중심으로 한 관리 방법이고, <strong>5S</strong>는 이들 세 가지 원칙을 더 발전시켜 <strong>청결</strong>과 <strong>습관</strong>을 추가하여, 일상적으로 실천되고 유지되도록 한다.</li>
-</ul>
-</dd>
-<dt>3정과 5S의 장점</dt>
-<dd>
-<ul>
-<li><strong>효율성 향상</strong>: 불필요한 물건을 없애고, 작업 환경을 정리함으로써 시간과 자원을 절약할 수 있다.</li>
-<li><strong>안전성 강화</strong>: 깨끗하고 정돈된 작업 환경은 안전사고를 예방하고, 작업자의 안전을 보장한다.</li>
-<li><strong>품질 향상</strong>: 청결하고 정돈된 환경에서 작업을 수행하면, 제품 품질이 향상된다.</li>
-<li><strong>직원 참여</strong>: 5S는 직원들이 자발적으로 참여하고 지속적으로 개선하는 문화를 형성하게 도와준다.</li>
-</ul>
-</dd>
-</dl>
-<p><strong>3정</strong>과 <strong>5S</strong>는 조직 내에서 효과적인 생산성과 품질을 유지하고, 지속적인 개선을 이루는 데 중요한 역할을 한다.</p>
+<p>3정 5S는 <font color="blue">공장뿐만 아니라 사무실, 창고, 서비스 업종 등 다양한 분야에서 활용</font>되며, 지속적인 실천이 중요한 관리 기법이다.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
