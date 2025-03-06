@@ -1226,11 +1226,16 @@ Cpk는 공정이 규격 범위의 중심에서 얼마나 일관되게 유지되�
 <li><p><strong>계산 방법</strong><br>
 Cpk는 공정 중심에서 규격 상한선 또는 하한선까지의 거리와 공정의 표준편차를 비교하여 계산한다. 계산식은 다음과 같다.</p>
 <p><span class="math display">\[C_{pk} = \min \left( \frac{USL - \mu}{3\sigma}, \frac{\mu - LSL}{3\sigma} \right)\]</span></p>
-<p>여기서,<br>
-- <strong>μ</strong>: 공정의 평균<br>
-- <strong>USL</strong>: 상한 규격<br>
-- <strong>LSL</strong>: 하한 규격<br>
-- <strong>σ</strong>: 공정의 표준편차</p></li>
+<p>여기서,</p>
+<ul>
+<li><strong>μ</strong>: 공정의 평균<br>
+</li>
+<li><strong>USL</strong>: 상한 규격<br>
+</li>
+<li><strong>LSL</strong>: 하한 규격<br>
+</li>
+<li><strong>σ</strong>: 공정의 표준편차</li>
+</ul></li>
 <li><p><strong>의미</strong><br>
 Cpk는 공정이 규격 범위 내에서 얼마나 잘 맞춰져 있는지, 즉 공정의 중심이 규격의 중간과 얼마나 일치하는지를 평가한다. Cpk 값이 클수록 공정이 규격 범위 내에서 더 집중적으로 수행되고 있다는 의미다.</p></li>
 <li><p><strong>한계</strong><br>
@@ -1882,13 +1887,16 @@ UCL = \bar{u} + 3\sqrt{\frac{\bar{u}}{n}} = 2.92 + 3\sqrt{\frac{2.92}{1.7}} = 6.
 <dd>
 <ol type="1">
 <li><strong>정확성(Bias)</strong><br>
-동일한 계측기로 동일한 시료를 측정한 경우, 측정치 평균과 기준값(참값) 간 차이로 정확성, 치우침, 편의라고도 한다. 온도계가 실제보다 항상 2°C 높게 측정되는 경우가 해당된다.<br>
+동일한 계측기로 동일한 시료를 측정한 경우, 측정치 평균과 기준값(참값) 간 차이로 정확성, 치우침, 편의라고도 한다.<br>
+온도계가 실제보다 항상 2°C 높게 측정되는 경우가 해당된다.<br>
 <img src="https://sixsigmastudyguide.com/wp-content/uploads/2021/04/msa4.png" class="img-fluid" alt="https://sixsigmastudyguide.com/measurement-systems-analysis/"></li>
 <li><strong>직진성(Linearity)</strong><br>
-계측기 작동범위 내에서 발생하는 참값과 측정값 간 차이, 즉 편기값들 차이로서 측정 일관성을 평가하는데 사용한다. 직진선에 대한 적합성 여부는 회귀직선 결정계수로 판단하며, 선형성이라고도 한다. 저온에서는 정확하지만 고온에서는 편향이 커지는 온도 센서 경우가 해당된다.<br>
+계측기 작동범위 내에서 발생하는 참값과 측정값 간 차이, 즉 편기값들 차이로서 측정 일관성을 평가하는데 사용한다. 직진선에 대한 적합성 여부는 회귀직선 결정계수로 판단하며, 선형성이라고도 한다.<br>
+저온에서는 정확하지만 고온에서는 편향이 커지는 온도 센서 경우가 해당된다.<br>
 <img src="https://sixsigmastudyguide.com/wp-content/uploads/2021/04/msa5.png" class="img-fluid" alt="https://sixsigmastudyguide.com/measurement-systems-analysis/"></li>
 <li><strong>안전성(Stability)</strong><br>
-동일한 측정시스템으로일정한 시료를 정기적으로측정했을 때 얻은 측정치 변동(평균값 차이)을 말한다. 하루 동안 반복 측정 시 결과가 점차 변하는 저울 경우가 해당된다.<br>
+동일한 측정시스템으로일정한 시료를 정기적으로측정했을 때 얻은 측정치 변동(평균값 차이)을 말한다.<br>
+하루 동안 반복 측정 시 결과가 점차 변하는 저울 경우가 해당된다.<br>
 <img src="https://sixsigmastudyguide.com/wp-content/uploads/2021/04/msa6.png" class="img-fluid" alt="https://sixsigmastudyguide.com/measurement-systems-analysis/"></li>
 </ol>
 </dd>
@@ -1896,11 +1904,13 @@ UCL = \bar{u} + 3\sqrt{\frac{\bar{u}}{n}} = 2.92 + 3\sqrt{\frac{2.92}{1.7}} = 6.
 <dd>
 <ol type="1">
 <li><strong>반복성(Repeatability)</strong><br>
-동일한 측정자가 동일한 시료로 여러 번 측정하여 얻은 데이터 산포 크기를 의미하며 산포 크기가 작을수록 반복성이 좋다고 하며 정밀도라고도 한다. 동일한 제품을 같은 캘리퍼스로 여러 번 측정할 때 값이 들쭉날쭉한 경우가 해당된다.<br>
+동일한 측정자가 동일한 시료로 여러 번 측정하여 얻은 데이터 산포 크기를 의미하며 산포 크기가 작을수록 반복성이 좋다고 하며 정밀도라고도 한다.<br>
+동일한 제품을 같은 캘리퍼스로 여러 번 측정할 때 값이 들쭉날쭉한 경우가 해당된다.<br>
 <img src="https://sixsigmastudyguide.com/wp-content/uploads/2021/04/msa7.png" class="img-fluid" alt="https://sixsigmastudyguide.com/measurement-systems-analysis/"><br>
 </li>
 <li><strong>재현성(Reproductibility)</strong><br>
-서로 다른 측정자가 동일한 기계로 동일 시료를 측정하였을 때, 얻은 측정치 변동값(평균값 차이)으로서 측정자 간 데이터 값 차이를 의미한다. A 작업자와 B 작업자가 같은 제품을 같은 캘리퍼스로 측정했을 때 결과가 다르게 나오는 경우가 해당된다.<br>
+서로 다른 측정자가 동일한 기계로 동일 시료를 측정하였을 때, 얻은 측정치 변동값(평균값 차이)으로서 측정자 간 데이터 값 차이를 의미한다.<br>
+A 작업자와 B 작업자가 같은 제품을 같은 캘리퍼스로 측정했을 때 결과가 다르게 나오는 경우가 해당된다.<br>
 <img src="https://sixsigmastudyguide.com/wp-content/uploads/2021/04/msa8.png" class="img-fluid" alt="https://sixsigmastudyguide.com/measurement-systems-analysis/"></li>
 </ol>
 </dd>
