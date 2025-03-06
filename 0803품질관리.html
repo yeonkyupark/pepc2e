@@ -505,15 +505,18 @@ window.Quarto = {
   <li><a href="#aql" id="toc-aql" class="nav-link" data-scroll-target="#aql">AQL</a></li>
   <li><a href="#sec-q-cost" id="toc-sec-q-cost" class="nav-link" data-scroll-target="#sec-q-cost">품질비용</a></li>
   <li><a href="#sec-msa" id="toc-sec-msa" class="nav-link" data-scroll-target="#sec-msa">측정시스템분석 오차</a></li>
-  <li><a href="#측정시스템-분석-오차" id="toc-측정시스템-분석-오차" class="nav-link" data-scroll-target="#측정시스템-분석-오차">측정시스템 분석 오차</a></li>
-  <li><a href="#품질평가" id="toc-품질평가" class="nav-link" data-scroll-target="#품질평가">품질평가</a>
+  <li><a href="#sec-quality-evaluation" id="toc-sec-quality-evaluation" class="nav-link" data-scroll-target="#sec-quality-evaluation">품질평가</a>
   <ul>
   <li><a href="#sec-mbnqa" id="toc-sec-mbnqa" class="nav-link" data-scroll-target="#sec-mbnqa">MBNQA</a></li>
   </ul></li>
   <li><a href="#품질관리-도구" id="toc-품질관리-도구" class="nav-link" data-scroll-target="#품질관리-도구">품질관리 도구</a>
   <ul>
-  <li><a href="#qc-7가지-도구" id="toc-qc-7가지-도구" class="nav-link" data-scroll-target="#qc-7가지-도구">QC 7가지 도구</a></li>
-  <li><a href="#신-qc-7가지-도구" id="toc-신-qc-7가지-도구" class="nav-link" data-scroll-target="#신-qc-7가지-도구">신 QC 7가지 도구</a></li>
+  <li><a href="#sec-qc-7-tools" id="toc-sec-qc-7-tools" class="nav-link" data-scroll-target="#sec-qc-7-tools">QC 7가지 도구</a></li>
+  <li><a href="#sec-new-qc-7-tools" id="toc-sec-new-qc-7-tools" class="nav-link" data-scroll-target="#sec-new-qc-7-tools">신 QC 7가지 도구</a></li>
+  </ul></li>
+  <li><a href="#sec-ref-0803" id="toc-sec-ref-0803" class="nav-link" data-scroll-target="#sec-ref-0803">참고자료</a>
+  <ul>
+  <li><a href="#sec-pdca" id="toc-sec-pdca" class="nav-link" data-scroll-target="#sec-pdca">PDAC</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/yeonkyupark/pepc2e/edit/main/0803품질관리.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
@@ -638,11 +641,11 @@ window.Quarto = {
 <dt>TQM의 주요 도구</dt>
 <dd>
 <ol type="1">
-<li><strong>PDCA 사이클</strong><br>
+<li><a href="#sec-pdca" class="quarto-xref"><span>PDAC</span></a> 사이클<br>
 Plan(계획), Do(실행), Check(검토), Act(조치)로 구성된 품질 개선의 기본 프레임워크이다.</li>
-<li><strong>6시그마</strong><br>
+<li><a href="1104생산혁신기술.html#sec-six-sigma" class="quarto-xref"><span>6시그마</span></a><br>
 결함률을 최소화하기 위한 품질 관리 방법론이다.</li>
-<li><strong>품질 관리 7가지 도구(Q7)</strong><br>
+<li><a href="#sec-qc-7-tools" class="quarto-xref"><span>QC 7가지 도구</span></a> (<a href="#sec-new-qc-7-tools" class="quarto-xref"><span>신 QC 7가지 도구</span></a> 참고)<br>
 - 체크시트<br>
 - 히스토그램<br>
 - 파레토 차트<br>
@@ -1200,10 +1203,15 @@ Cp는 공정의 품질이 설계 사양 범위 내에서 얼마나 일관되게 
 <li><strong>계산 방법</strong><br>
 Cp는 공정의 허용 범위(USL - LSL)와 공정의 표준편차(σ)를 비교하여 계산한다. 계산식은 다음과 같다.<br>
 <span class="math display">\[C_p = \frac{USL - LSL}{6\sigma}\]</span><br>
-여기서,<br>
-- <strong>USL</strong>(Upper Specification Limit): 상한 규격<br>
-- <strong>LSL</strong>(Lower Specification Limit): 하한 규격<br>
-- <strong>σ</strong>: 공정의 표준편차</li>
+여기서,
+<ul>
+<li><strong>USL</strong>(Upper Specification Limit): 상한 규격<br>
+</li>
+<li><strong>LSL</strong>(Lower Specification Limit): 하한 규격<br>
+</li>
+<li><strong>σ</strong>: 공정의 표준편차<br>
+</li>
+</ul></li>
 <li><strong>의미</strong><br>
 Cp 값이 클수록 공정이 더 넓은 규격 범위 내에서 변동이 적고 안정적이라는 의미다. 일반적으로 Cp가 1.33 이상이면 공정이 충분히 능력이 있다고 평가된다.</li>
 <li><strong>한계</strong><br>
@@ -1218,11 +1226,16 @@ Cpk는 공정이 규격 범위의 중심에서 얼마나 일관되게 유지되�
 <li><strong>계산 방법</strong><br>
 Cpk는 공정 중심에서 규격 상한선 또는 하한선까지의 거리와 공정의 표준편차를 비교하여 계산한다. 계산식은 다음과 같다.<br>
 <span class="math display">\[C_{pk} = \min \left( \frac{USL - \mu}{3\sigma}, \frac{\mu - LSL}{3\sigma} \right)\]</span><br>
-여기서,<br>
-- <strong>μ</strong>: 공정의 평균<br>
-- <strong>USL</strong>: 상한 규격<br>
-- <strong>LSL</strong>: 하한 규격<br>
-- <strong>σ</strong>: 공정의 표준편차</li>
+여기서,
+<ul>
+<li><strong>μ</strong>: 공정의 평균<br>
+</li>
+<li><strong>USL</strong>: 상한 규격<br>
+</li>
+<li><strong>LSL</strong>: 하한 규격<br>
+</li>
+<li><strong>σ</strong>: 공정의 표준편차</li>
+</ul></li>
 <li><strong>의미</strong><br>
 Cpk는 공정이 규격 범위 내에서 얼마나 잘 맞춰져 있는지, 즉 공정의 중심이 규격의 중간과 얼마나 일치하는지를 평가한다. Cpk 값이 클수록 공정이 규격 범위 내에서 더 집중적으로 수행되고 있다는 의미다.</li>
 <li><strong>한계</strong><br>
@@ -1887,19 +1900,17 @@ UCL = \bar{u} + 3\sqrt{\frac{\bar{u}}{n}} = 2.92 + 3\sqrt{\frac{2.92}{1.7}} = 6.
 </dl>
 <p>정밀도(Precision) 관련 오차: 동일한 조건에서 반복 측정했을 때 측정값이 얼마나 일관되게 나오는지 1. <strong>반복성(Repeatability)</strong><br>
 동일한 측정자가 동일한 시료로 여러 번 측정하여 얻은 데이터 산포 크기를 의미하며 산포 크기가 작을수록 반복성이 좋다고 하며 정밀도라고도 한다. 동일한 제품을 같은 캘리퍼스로 여러 번 측정할 때 값이 들쭉날쭉한 경우가 해당된다.<br>
-<img src="https://sixsigmastudyguide.com/wp-content/uploads/2021/04/msa7.png" class="img-fluid" alt="https://sixsigmastudyguide.com/measurement-systems-analysis/"> 1. <strong>재현성(Reproductibility)</strong><br>
+<img src="https://sixsigmastudyguide.com/wp-content/uploads/2021/04/msa7.png" class="img-fluid" alt="https://sixsigmastudyguide.com/measurement-systems-analysis/"><br>
+1. <strong>재현성(Reproductibility)</strong><br>
 서로 다른 측정자가 동일한 기계로 동일 시료를 측정하였을 때, 얻은 측정치 변동값(평균값 차이)으로서 측정자 간 데이터 값 차이를 의미한다. A 작업자와 B 작업자가 같은 제품을 같은 캘리퍼스로 측정했을 때 결과가 다르게 나오는 경우가 해당된다.<br>
 <img src="https://sixsigmastudyguide.com/wp-content/uploads/2021/04/msa8.png" class="img-fluid" alt="https://sixsigmastudyguide.com/measurement-systems-analysis/"></p>
-</section>
-<section id="측정시스템-분석-오차" class="level2">
-<h2 class="anchored" data-anchor-id="측정시스템-분석-오차">측정시스템 분석 오차</h2>
 <p>측정 시스템 분석(Measurement System Analysis, MSA)에서 오차란, 측정 과정에서 발생하는 불확실성을 의미하며, 이를 통해 측정 시스템의 신뢰성을 평가할 수 있다. 측정 시스템 오차는 크게 <strong>정확도(Accuracy) 관련 오차</strong>와 <strong>정밀도(Precision) 관련 오차</strong>로 나뉜다.</p>
 <table class="caption-top table">
 <caption>측정 시스템 오차의 시각적 비교</caption>
 <colgroup>
-<col style="width: 37%">
 <col style="width: 20%">
-<col style="width: 41%">
+<col style="width: 50%">
+<col style="width: 30%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -1943,8 +1954,8 @@ UCL = \bar{u} + 3\sqrt{\frac{\bar{u}}{n}} = 2.92 + 3\sqrt{\frac{2.92}{1.7}} = 6.
 </dd>
 </dl>
 </section>
-<section id="품질평가" class="level2">
-<h2 class="anchored" data-anchor-id="품질평가">품질평가</h2>
+<section id="sec-quality-evaluation" class="level2">
+<h2 class="anchored" data-anchor-id="sec-quality-evaluation">품질평가</h2>
 <section id="sec-mbnqa" class="level3">
 <h3 class="anchored" data-anchor-id="sec-mbnqa">MBNQA</h3>
 <div class="quarto-figure quarto-figure-center">
@@ -1954,9 +1965,6 @@ UCL = \bar{u} + 3\sqrt{\frac{\bar{u}}{n}} = 2.92 + 3\sqrt{\frac{2.92}{1.7}} = 6.
 </figure>
 </div>
 <p><strong>MBNQA(말콤 볼드리지 국가 품질상)</strong>는 미국에서 조직의 품질 경영과 성과 우수성을 평가하는 대표적인 상이다. 평가 기준은 7개 범주로 구성되며, 각 범주는 조직의 경쟁력과 지속 가능성을 높이는 데 중점을 둔다.</p>
-<dl>
-<dt>MBNQA 평가 범주</dt>
-<dd>
 <p>1 <strong>리더십(Leadership)</strong><br>
 - 조직의 비전, 가치 및 윤리를 설정하고, 조직의 방향을 주도하는 경영진의 역할을 평가한다.<br>
 - 경영자가 조직 문화 형성, 거버넌스, 사회적 책임 수행에 어떻게 기여하는지를 중시한다.</p>
@@ -1976,15 +1984,13 @@ UCL = \bar{u} + 3\sqrt{\frac{\bar{u}}{n}} = 2.92 + 3\sqrt{\frac{2.92}{1.7}} = 6.
 <p>7 <strong>성과(Results)</strong><br>
 - 재무 성과, 고객 만족도, 시장 점유율, 직원 만족도 등 조직의 전반적인 성과를 평가한다.<br>
 - 조직의 전략과 운영이 실제로 어떤 결과를 창출했는지를 구체적으로 분석한다.</p>
-</dd>
-</dl>
 <p>MBNQA의 7개 범주는 조직 전반의 <strong>전략, 실행 및 결과</strong>를 체계적으로 평가하여 <strong>경쟁력 강화와 지속 가능한 성장</strong>을 도모한다. 이를 통해 조직은 품질 혁신을 달성하고, 글로벌 시장에서 경쟁 우위를 확보할 수 있다.</p>
 </section>
 </section>
 <section id="품질관리-도구" class="level2">
 <h2 class="anchored" data-anchor-id="품질관리-도구">품질관리 도구</h2>
-<section id="qc-7가지-도구" class="level3">
-<h3 class="anchored" data-anchor-id="qc-7가지-도구">QC 7가지 도구</h3>
+<section id="sec-qc-7-tools" class="level3">
+<h3 class="anchored" data-anchor-id="sec-qc-7-tools">QC 7가지 도구</h3>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 127-1-2">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -2051,8 +2057,8 @@ UCL = \bar{u} + 3\sqrt{\frac{\bar{u}}{n}} = 2.92 + 3\sqrt{\frac{2.92}{1.7}} = 6.
 </tbody>
 </table>
 </section>
-<section id="신-qc-7가지-도구" class="level3">
-<h3 class="anchored" data-anchor-id="신-qc-7가지-도구">신 QC 7가지 도구</h3>
+<section id="sec-new-qc-7-tools" class="level3">
+<h3 class="anchored" data-anchor-id="sec-new-qc-7-tools">신 QC 7가지 도구</h3>
 <table class="caption-top table">
 <caption>신 QC 7가지 도구</caption>
 <colgroup>
@@ -2096,6 +2102,90 @@ UCL = \bar{u} + 3\sqrt{\frac{\bar{u}}{n}} = 2.92 + 3\sqrt{\frac{2.92}{1.7}} = 6.
 </tr>
 </tbody>
 </table>
+</section>
+</section>
+<section id="sec-ref-0803" class="level2">
+<h2 class="anchored" data-anchor-id="sec-ref-0803">참고자료</h2>
+<section id="sec-pdca" class="level3">
+<h3 class="anchored" data-anchor-id="sec-pdca">PDAC</h3>
+<p><strong>PDCA</strong> 사이클은 지속적인 개선을 위한 대표적인 경영 기법으로, <strong>Plan(계획) → Do(실행) → Check(검토) → Act(조치)</strong>의 4단계를 반복하여 품질을 개선하는 프로세스이다. 주로 제조업, 서비스업, 경영 관리 등 다양한 분야에서 활용된다.</p>
+<dl>
+<dt>PDCA 사이클의 4단계</dt>
+<dd>
+<ol type="1">
+<li><strong>Plan(계획)</strong>
+<ul>
+<li>목표 설정 및 문제 정의<br>
+</li>
+<li>현재 상태 분석 및 개선 계획 수립<br>
+</li>
+<li>실행을 위한 세부 절차와 일정 결정</li>
+</ul></li>
+<li><strong>Do(실행)</strong>
+<ul>
+<li>계획된 내용을 실제로 수행<br>
+</li>
+<li>개선안을 소규모로 테스트(파일럿 실행)<br>
+</li>
+<li>예상치 못한 문제점 및 변수 확인</li>
+</ul></li>
+<li><strong>Check(검토)</strong>
+<ul>
+<li>실행 결과를 측정하고 평가<br>
+</li>
+<li>목표와 비교하여 차이 분석<br>
+</li>
+<li>실패 원인 파악 및 개선점 도출</li>
+</ul></li>
+<li><strong>Act(조치)</strong>
+<ul>
+<li>성공적인 개선안 정착 및 표준화<br>
+</li>
+<li>문제점이 있으면 다시 PDCA 반복<br>
+</li>
+<li>개선된 내용을 다른 프로세스에 적용</li>
+</ul></li>
+</ol>
+</dd>
+<dt>PDCA 사이클의 특징</dt>
+<dd>
+<ul>
+<li><strong>지속적인 개선(Cycle 반복)</strong>: 한 번의 실행이 아니라 지속적으로 반복하여 점진적 개선을 달성<br>
+</li>
+<li><strong>데이터 기반 접근</strong>: 계획 및 검토 단계에서 데이터를 활용하여 객관적 평가 진행<br>
+</li>
+<li><strong>문제 해결 및 예방</strong>: 실행 후 검토와 조치를 통해 동일한 문제가 재발하지 않도록 예방</li>
+</ul>
+</dd>
+</dl>
+<table class="caption-top table">
+<caption>PDCA 사이클의 활용 예시</caption>
+<thead>
+<tr class="header">
+<th>적용 분야</th>
+<th>예시</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>제조업</td>
+<td>불량률 감소를 위한 공정 개선</td>
+</tr>
+<tr class="even">
+<td>서비스업</td>
+<td>고객 불만 분석 및 서비스 품질 향상</td>
+</tr>
+<tr class="odd">
+<td>경영 관리</td>
+<td>조직의 업무 효율성 개선</td>
+</tr>
+<tr class="even">
+<td>프로젝트 관리</td>
+<td>일정 지연 원인 분석 및 개선 조치</td>
+</tr>
+</tbody>
+</table>
+<p>PDCA 사이클은 단순하면서도 강력한 품질 개선 도구로, 기업과 조직의 경쟁력을 높이는 핵심 방법론 중 하나이다.</p>
 
 
 </section>
