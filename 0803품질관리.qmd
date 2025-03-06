@@ -657,7 +657,7 @@ flowchart LR
        ![https://sixsigmastudyguide.com/measurement-systems-analysis/](https://sixsigmastudyguide.com/wp-content/uploads/2021/04/msa6.png)  
   
 정밀도(Precision) 관련 오차: 동일한 조건에서 반복 측정했을 때 측정값이 얼마나 일관되게 나오는지
-    1. **반복성(Repeatability)**  
+:   1. **반복성(Repeatability)**  
        동일한 측정자가 동일한 시료로 여러 번 측정하여 얻은 데이터 산포 크기를 의미하며 산포 크기가 작을수록 반복성이 좋다고 하며 정밀도라고도 한다. 동일한 제품을 같은 캘리퍼스로 여러 번 측정할 때 값이 들쭉날쭉한 경우가 해당된다.  
        ![https://sixsigmastudyguide.com/measurement-systems-analysis/](https://sixsigmastudyguide.com/wp-content/uploads/2021/04/msa7.png)  
     1. **재현성(Reproductibility)**  
