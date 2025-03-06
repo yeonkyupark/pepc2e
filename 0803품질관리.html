@@ -498,10 +498,14 @@ window.Quarto = {
   </ul></li>
   <li><a href="#sec-cpk" id="toc-sec-cpk" class="nav-link" data-scroll-target="#sec-cpk">공정능력지수</a></li>
   <li><a href="#품질경영-4대-절대-조건" id="toc-품질경영-4대-절대-조건" class="nav-link" data-scroll-target="#품질경영-4대-절대-조건">품질경영 4대 절대 조건</a></li>
-  <li><a href="#신뢰성-관리" id="toc-신뢰성-관리" class="nav-link" data-scroll-target="#신뢰성-관리">신뢰성 관리</a></li>
+  <li><a href="#신뢰성-관리" id="toc-신뢰성-관리" class="nav-link" data-scroll-target="#신뢰성-관리">신뢰성 관리</a>
+  <ul>
+  <li><a href="#신뢰성-설계" id="toc-신뢰성-설계" class="nav-link" data-scroll-target="#신뢰성-설계">신뢰성 설계</a></li>
+  </ul></li>
   <li><a href="#aql" id="toc-aql" class="nav-link" data-scroll-target="#aql">AQL</a></li>
-  <li><a href="#품질비용" id="toc-품질비용" class="nav-link" data-scroll-target="#품질비용">품질비용</a></li>
-  <li><a href="#측정시스템-측정오차-유형" id="toc-측정시스템-측정오차-유형" class="nav-link" data-scroll-target="#측정시스템-측정오차-유형">측정시스템 측정오차 유형</a></li>
+  <li><a href="#sec-q-cost" id="toc-sec-q-cost" class="nav-link" data-scroll-target="#sec-q-cost">품질비용</a></li>
+  <li><a href="#sec-msa" id="toc-sec-msa" class="nav-link" data-scroll-target="#sec-msa">측정시스템분석 오차</a></li>
+  <li><a href="#측정시스템-분석-오차" id="toc-측정시스템-분석-오차" class="nav-link" data-scroll-target="#측정시스템-분석-오차">측정시스템 분석 오차</a></li>
   <li><a href="#품질평가" id="toc-품질평가" class="nav-link" data-scroll-target="#품질평가">품질평가</a>
   <ul>
   <li><a href="#sec-mbnqa" id="toc-sec-mbnqa" class="nav-link" data-scroll-target="#sec-mbnqa">MBNQA</a></li>
@@ -1127,6 +1131,7 @@ end
 </div>
 <div class="callout-body-container callout-body">
 <p>제품규격이 <span class="math inline">\(750 \pm40mm\)</span>이고, 측정결과 k=16, n=5, <span class="math inline">\(\sum{\bar{X}}=12,137.8\)</span>, <span class="math inline">\(\sum{R}=628\)</span> n=5일 때, <span class="math inline">\(A\)</span> = 1.342, <span class="math inline">\(A_2\)</span>=0.577, <span class="math inline">\(D_2\)</span>=4.918, <span class="math inline">\(D_4\)</span>=2.114, <span class="math inline">\(d_2\)</span>=2.326</p>
+<hr>
 <dl>
 <dt><span class="math inline">\(\bar{X}\)</span> 관리도</dt>
 <dd>
@@ -1179,12 +1184,12 @@ end
 </ul>
 </dd>
 </dl>
-<p><span class="math display">\[
+<p><span id="eq-cp"><span class="math display">\[
 C_p = \frac{USL - LSL}{6\sigma}
-\]</span></p>
-<p><span class="math display">\[
+\tag{25.1}\]</span></span></p>
+<p><span id="eq-cpk"><span class="math display">\[
 C_pk = (1-k)C_p, \quad k = |\frac{\frac{USL+LSL}{2}-\bar{x}}{\frac{USL-LSL}{2}}|
-\]</span></p>
+\tag{25.2}\]</span></span></p>
 <p><strong>공정능력지수(Cp)</strong>와 <strong>최소공정능력지수(Cpk)</strong>는 모두 생산 공정의 품질 수준을 평가하는 지표이지만, 측정하는 방식과 의미에서 차이가 있다. 아래에서 두 지표를 비교하여 설명한다.</p>
 <dl>
 <dt><strong>공정능력지수 (Cp)</strong></dt>
@@ -1193,14 +1198,12 @@ C_pk = (1-k)C_p, \quad k = |\frac{\frac{USL+LSL}{2}-\bar{x}}{\frac{USL-LSL}{2}}|
 <li><strong>정의</strong><br>
 Cp는 공정의 품질이 설계 사양 범위 내에서 얼마나 일관되게 유지되는지를 나타내는 지표다. 공정이 사양의 상한선(USL)과 하한선(LSL) 사이에 얼마나 잘 맞는지, 즉 공정의 폭을 측정한다.</li>
 <li><strong>계산 방법</strong><br>
-Cp는 공정의 허용 범위(USL - LSL)와 공정의 표준편차(σ)를 비교하여 계산한다. 계산식은 다음과 같다. <span class="math display">\[C_p = \frac{USL - LSL}{6\sigma}\]</span> 여기서,
-<ul>
-<li><strong>USL</strong>(Upper Specification Limit): 상한 규격<br>
-</li>
-<li><strong>LSL</strong>(Lower Specification Limit): 하한 규격<br>
-</li>
-<li><strong>σ</strong>: 공정의 표준편차</li>
-</ul></li>
+Cp는 공정의 허용 범위(USL - LSL)와 공정의 표준편차(σ)를 비교하여 계산한다. 계산식은 다음과 같다.<br>
+<span class="math display">\[C_p = \frac{USL - LSL}{6\sigma}\]</span><br>
+여기서,<br>
+- <strong>USL</strong>(Upper Specification Limit): 상한 규격<br>
+- <strong>LSL</strong>(Lower Specification Limit): 하한 규격<br>
+- <strong>σ</strong>: 공정의 표준편차</li>
 <li><strong>의미</strong><br>
 Cp 값이 클수록 공정이 더 넓은 규격 범위 내에서 변동이 적고 안정적이라는 의미다. 일반적으로 Cp가 1.33 이상이면 공정이 충분히 능력이 있다고 평가된다.</li>
 <li><strong>한계</strong><br>
@@ -1213,16 +1216,13 @@ Cp는 공정이 중심을 얼마나 잘 맞추는지에 대한 정보를 제공�
 <li><strong>정의</strong><br>
 Cpk는 공정이 규격 범위의 중심에서 얼마나 일관되게 유지되는지, 즉 공정이 얼마나 잘 집중되고 있는지를 나타내는 지표다. 공정이 규격 중심에 얼마나 근접해 있는지를 평가한다.</li>
 <li><strong>계산 방법</strong><br>
-Cpk는 공정 중심에서 규격 상한선 또는 하한선까지의 거리와 공정의 표준편차를 비교하여 계산한다. 계산식은 다음과 같다. <span class="math display">\[C_{pk} = \min \left( \frac{USL - \mu}{3\sigma}, \frac{\mu - LSL}{3\sigma} \right)\]</span> 여기서,
-<ul>
-<li><strong>μ</strong>: 공정의 평균<br>
-</li>
-<li><strong>USL</strong>: 상한 규격<br>
-</li>
-<li><strong>LSL</strong>: 하한 규격<br>
-</li>
-<li><strong>σ</strong>: 공정의 표준편차</li>
-</ul></li>
+Cpk는 공정 중심에서 규격 상한선 또는 하한선까지의 거리와 공정의 표준편차를 비교하여 계산한다. 계산식은 다음과 같다.<br>
+<span class="math display">\[C_{pk} = \min \left( \frac{USL - \mu}{3\sigma}, \frac{\mu - LSL}{3\sigma} \right)\]</span><br>
+여기서,<br>
+- <strong>μ</strong>: 공정의 평균<br>
+- <strong>USL</strong>: 상한 규격<br>
+- <strong>LSL</strong>: 하한 규격<br>
+- <strong>σ</strong>: 공정의 표준편차</li>
 <li><strong>의미</strong><br>
 Cpk는 공정이 규격 범위 내에서 얼마나 잘 맞춰져 있는지, 즉 공정의 중심이 규격의 중간과 얼마나 일치하는지를 평가한다. Cpk 값이 클수록 공정이 규격 범위 내에서 더 집중적으로 수행되고 있다는 의미다.</li>
 <li><strong>한계</strong><br>
@@ -1285,6 +1285,7 @@ Cpk는 공정 중심이 규격의 중간에 가깝더라도 공정의 변동이 
 </div>
 <div class="callout-body-container callout-body">
 <p>제품규격이 <span class="math inline">\(750 \pm40mm\)</span>이고, 측정결과 k=16, n=5, <span class="math inline">\(\sum\bar{X}=12,137.8\)</span>, <span class="math inline">\(\sum{R}=628\)</span> n=5일 때, <span class="math inline">\(A\)</span> = 1.342, <span class="math inline">\(A_2\)</span>=0.577, <span class="math inline">\(D_2\)</span>=4.918, <span class="math inline">\(D_4\)</span>=2.114, <span class="math inline">\(d_2\)</span>=2.326</p>
+<hr>
 <p><span class="math inline">\(\bar{\bar{x}}\)</span> = 12137.8/16 = 758.61이고 M = (790+710)/2 = 750이므로 산포가 USL측으로 치우침이 있다. 따라서 <span class="math inline">\(C_{pk}\)</span>를 계산한다.</p>
 <p><span class="math display">\[
 C_{pk} = (1-k)C_p = (1 - 0.21) \times \frac{790-710}{6 \times \frac{\bar{R}}{d_2}} = 0.62
@@ -1517,26 +1518,26 @@ UCL = \bar{u} + 3\sqrt{\frac{\bar{u}}{n}} = 2.92 + 3\sqrt{\frac{2.92}{1.7}} = 6.
 
 </div>
 </div>
-<p>P.B. Crosby 품질경영 4대 절대조건(Absolute of Quality Management)은 필립 Crosby가 품질관리 이론을 정립하면서 제시한 품질경영 핵심 원치이다. 품질은 “결함 없는 제품”이라는 개념으로 정의하며, 이를 다성하기 위한 4가지 절대 조건을 제시했다. 이 네가지 절대 조건은 품지 경영 실행과 평가를 위한 기본적인 원칙을 제공한다.</p>
+<p>P.B. Crosby 품질경영 4대 절대조건(Absolute of Quality Management)은 필립 Crosby가 품질관리 이론을 정립하면서 제시한 품질경영 핵심 원치이다. <font color="blue">품질은 “결함 없는 제품”이라는 개념으로 정의</font>하며, 이를 다성하기 위한 <strong>4가지 절대 조건</strong>을 제시했다. 이 네가지 절대 조건은 품지 경영 실행과 평가를 위한 기본적인 원칙을 제공한다.</p>
 <dl>
 <dt>품질은 적합성(conformance to requirements)이다.</dt>
 <dd>
 <ul>
-<li>품질이란 “고객 요구 사항과 사양에 부합하는지 여부”를 의미한다. 품질은 단순히 제품이나 서비스 특성이 아니라 <strong>고객 요구와 기대를 정확히 충족시키는 것</strong>이 핵심이다. 이는 품질을 결함없는 상태로 정의하는 개념과 연결된다.</li>
+<li>품질이란 “고객 요구 사항과 사양에 부합하는지 여부”를 의미한다. 품질은 단순히 제품이나 서비스 특성이 아니라 <font color="blue">고객 요구와 기대를 정확히 충족시키는 것</font>이 핵심이다. 이는 품질을 결함없는 상태로 정의하는 개념과 연결된다.</li>
 <li>품지은 “적합성”, 즉 고객 요구를 충족하는 정도로 정의하며, 이를 기반으로 품질을평가한다.</li>
 </ul>
 </dd>
 <dt>품질은 예방해야 한다.</dt>
 <dd>
 <ul>
-<li>품질을 향상시키는 가장 좋은 방법은 “<strong>문제를 사전에 예방하는 것</strong>”이다. Crosby는 품질이 결함을 피하는 데 집중해야 하며, 결함이 발생한 후 이를 수정하는 것보다는 결함이 발생하지 않도록 예방하는 데 초점을 맞춰야 한다고 강조했다.</li>
-<li>이 원칙은 품질 관리가 단순히 문제를 해결하는 것이 아니라, <strong>초기 설계와 개발 단계에서부터 품질을 고려하여 잠재적 결함을 방지</strong>하는 데 중점을 두어야 한다는 것을 의미한다.</li>
+<li>품질을 향상시키는 가장 좋은 방법은 “<font color="blue">문제를 사전에 예방하는 것</font>”이다. Crosby는 품질이 결함을 피하는 데 집중해야 하며, 결함이 발생한 후 이를 수정하는 것보다는 결함이 발생하지 않도록 예방하는 데 초점을 맞춰야 한다고 강조했다.</li>
+<li>이 원칙은 품질 관리가 단순히 문제를 해결하는 것이 아니라, <font color="blue">초기 설계와 개발 단계에서부터 품질을 고려하여 잠재적 결함을 방지</font>하는 데 중점을 두어야 한다는 것을 의미한다.</li>
 </ul>
 </dd>
 <dt>품질 측정은 “결함 없음”이다.</dt>
 <dd>
 <ul>
-<li>Crosby는 품질을 측정하는 방법을 “<strong>결함 없음(zero defects)</strong>” 으로 정의했다. 즉, 품질을 평가할 때 결함이 하나도 없다는 상태를 목표로 해야 한다는 것이다. 이때 결함이란 고객의 요구를 충족하지 못한 부분을 의미한다.</li>
+<li>Crosby는 품질을 측정하는 방법을 “<font color="blue">결함 없음(zero defects)</font>” 으로 정의했다. 즉, 품질을 평가할 때 결함이 하나도 없다는 상태를 목표로 해야 한다는 것이다. 이때 결함이란 고객의 요구를 충족하지 못한 부분을 의미한다.</li>
 <li>품질 관리는 “결함이 없다”고 판단될 때까지 개선하고, 이를 목표로 삼아야 한다. 결함 없는 상태가 품질의 지표이며, 결함이 없는 상태를 지향해야 한다는 점이 핵심이다.</li>
 </ul>
 </dd>
@@ -1544,7 +1545,7 @@ UCL = \bar{u} + 3\sqrt{\frac{\bar{u}}{n}} = 2.92 + 3\sqrt{\frac{2.92}{1.7}} = 6.
 <dd>
 <ul>
 <li>Crosby는 품질 개선을 위해서는 결함을 없애는 데 드는 비용이 결국 가장 적게 든다고 주장했다. 즉, 품질 관리에서의 비용은 결함을 발견하고 수정하는 비용보다, 초기 단계에서 결함을 예방하고 품질을 보장하는 데 드는 비용이 훨씬 더 경제적이라고 본 것이다.</li>
-<li>품질을 유지하는 데 드는 비용을 “결함을 예방하는 데 드는 비용” 으로 정의하며, 문제를 나중에 해결하려는 것보다 초기부터 품질을 관리하는 것이 장기적으로 훨씬 비용 효율적이라는 것을 강조했다.</li>
+<li>품질을 유지하는 데 드는 비용을 “<font color="blue">결함을 예방하는 데 드는 비용</font>” 으로 정의하며, 문제를 나중에 해결하려는 것보다 초기부터 품질을 관리하는 것이 장기적으로 훨씬 비용 효율적이라는 것을 강조했다.</li>
 </ul>
 </dd>
 </dl>
@@ -1565,7 +1566,7 @@ UCL = \bar{u} + 3\sqrt{\frac{\bar{u}}{n}} = 2.92 + 3\sqrt{\frac{2.92}{1.7}} = 6.
 
 </div>
 </div>
-<p><strong>신뢰성</strong>(reliability)은 부분품, 장치, 기기, 시스템이 주어진 어떤 조건 아래에서 의도했던 기능을 수행하는 확률, 즉 “고장나지 않을 확률”을 의미한다. 따라서 신뢰성은 시간 변화에 따른 동적인 품질이다. 신뢰성 평가척도로는 신뢰도, 평균고장간격, 평균고장시간 등이 있다.</p>
+<p><strong>신뢰성</strong>(reliability)은 부분품, 장치, 기기, 시스템이 <font color="blue">주어진 어떤 조건 아래에서 의도했던 기능을 수행하는 확률</font>, 즉 “고장나지 않을 확률”을 의미한다. 따라서 신뢰성은 시간 변화에 따른 동적인 품질이다. 신뢰성 평가척도로는 <strong>신뢰도, 평균고장간격, 평균고장시간</strong> 등이 있다.</p>
 <p><strong>신뢰도</strong>는 신뢰성에 대한 양적 표시로 임무기간 중 일어나는 단위시간당 고장회수로 나타내는 것이 일반적이며 이를 시간 함수로 볼 때 R(t)로 나타낸다. 이것은 제품이 t 시간 동안 고장이 나지 않는 확률이다. 즉, 제품을 사용하기 시작해서 어느 시점까지 전체 몇 %가 고장나지 않고 남아 있는가 하는 잔존률에 해당한다.</p>
 <p><strong>신뢰성관리</strong>는 성능과 신뢰성, 보전성 그리고 가동성이 높은 제품을 경제적으로 제조하기 위해서 제품 개발로부터 설계, 제조, 사용 및 보전에 이르기까지 제품 전 생명 주기(life cycle)에 걸쳐 미리 설정된 신뢰성 계획에 따라 제품 신뢰성을 확보하고 유지하기 위한 종합적인 관리활동을 가리킨다.이를 위하여 신뢰성을 정량적으로 측정할 수 있는 척도를 설정하고 이를 바탕으로 불량원인을 발견하고고장 원인을 찾아내서 개선하여 가능한 그 영향을 줄이거나 제거시키고자 하는 활동이다.</p>
 <p>품질경영적 관점에서 볼 때 신뢰성은 품질특성 중 하나이고 품질보증 기능을 한다. 따라서 신뢰성관리는 품질경영과 함께 상호 유기적인 관계에서 전개되어야 한다.</p>
@@ -1621,6 +1622,8 @@ UCL = \bar{u} + 3\sqrt{\frac{\bar{u}}{n}} = 2.92 + 3\sqrt{\frac{2.92}{1.7}} = 6.
 </div>
 </div>
 </div>
+<section id="신뢰성-설계" class="level3">
+<h3 class="anchored" data-anchor-id="신뢰성-설계">신뢰성 설계</h3>
 <p>신뢰성 설계 3요소는 <strong>고유 기술적 요소</strong>, <strong>소리 통계적 요소</strong>, <strong>관리 기술적 요소</strong>이다.</p>
 <dl>
 <dt>고유 기술적 요소</dt>
@@ -1669,6 +1672,7 @@ UCL = \bar{u} + 3\sqrt{\frac{\bar{u}}{n}} = 2.92 + 3\sqrt{\frac{2.92}{1.7}} = 6.
 </dd>
 </dl>
 </section>
+</section>
 <section id="aql" class="level2">
 <h2 class="anchored" data-anchor-id="aql">AQL</h2>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 109-1-10">
@@ -1684,13 +1688,79 @@ UCL = \bar{u} + 3\sqrt{\frac{\bar{u}}{n}} = 2.92 + 3\sqrt{\frac{2.92}{1.7}} = 6.
 
 </div>
 </div>
-<p><strong>AQL</strong>(Acceptable quality level)은 합격판정 샘플링검사에서 공정평균 품질수준으로 구매자가 만족할 수 있는 최대 불량률을 뜻하며, 흔히 합격품질지수라고 부른다. 이 때 로트 합격확률은 보통 95% 수준이다.</p>
-<p><strong>AOQL</strong>(Average outgoing quality limit)은 AOQ가 최대가 되는 출하품질을 뜻한다. 즉, 입고 제품 최대불량률(%)을 나타낸다.</p>
-<p>AOL은 투입되는 원자재 품질, 로트가 합격할 확률, 포본 및 로트 크기에 따라 달라질 수 있다. 입고되는 원자재 품질이 아주 우수하면 출검 품질도 우수하나 원자재 품질이 불량하면 로트 전체가 기각되기에 불량 부품이 통과되지 않기 때문에 이 경우에도 출검 품질은 우수하게 된다. 입고되는 원자재 품질이 아주 좋지도 아주 나쁘지도 않으면 출검 품질이 더 나빠지고 출검 수준 불량률이 평균 출검품질한계라고 알려지 최대값에 근접하게 된다.</p>
-<p>일반적으로 로트 크기를 N, 로트 불량률을 p라고 할 때, AOQ 값은 p값이 커짐에 따라 증가하게 되나 어느 수준을 지나게 되면 불합격될 가능성이 높아져 AOQ는 오히려 감소하게 된다.</p>
+<p><strong>AQL</strong>(Acceptable quality level)은 <font color="blue">합격판정 샘플링검사에서 공정평균 품질수준으로 구매자가 만족할 수 있는 최대 불량률</font>을 뜻하며, 흔히 <strong>합격품질지수</strong>라고 부른다. 이 때 로트 합격확률은 보통 95% 수준이다.</p>
+<p><strong>AOQL</strong>(Average outgoing quality limit)은 <font color="blue">AQL이 최대가 되는 출하품질</font>을 뜻한다. 즉, 입고 제품 최대불량률(%)을 나타낸다.</p>
+<table class="caption-top table">
+<caption>AQL과 AOQL 비교</caption>
+<colgroup>
+<col style="width: 10%">
+<col style="width: 42%">
+<col style="width: 46%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>구분</th>
+<th>AQL (Acceptance Quality Limit)</th>
+<th>AOQL (Average Outgoing Quality Limit)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>의미</td>
+<td>허용 가능한 최대 불량률</td>
+<td>출하되는 제품의 평균 최대 불량률</td>
+</tr>
+<tr class="even">
+<td>목적</td>
+<td>샘플링 검사에서 합격 여부를 결정하는 기준</td>
+<td>전체 검사 및 선별 과정 후 출하 품질을 평가하는 기준</td>
+</tr>
+<tr class="odd">
+<td>적용 시점</td>
+<td>샘플링 검사 단계</td>
+<td>출하 단계 (검사 후)</td>
+</tr>
+<tr class="even">
+<td>검사 방식</td>
+<td>샘플에서 불량률이 AQL 이하이면 로트(생산 단위)를 합격</td>
+<td>전체 검사 후 재검 및 선별을 거친 후 최악의 경우를 가정한 평균 불량률</td>
+</tr>
+<tr class="odd">
+<td>보완 조치</td>
+<td>샘플이 AQL 기준을 초과하면 전체 로트를 불합격 처리하거나 100% 검사</td>
+<td>AOQL은 불합격 로트가 선별 과정을 거쳐 출하되므로 최종 불량률이 낮아짐</td>
+</tr>
+<tr class="even">
+<td>공식</td>
+<td>AQL은 기준 불량률 자체를 의미</td>
+<td>AOQL = 전체 출하품에서 발생할 수 있는 최대 평균 불량률</td>
+</tr>
+</tbody>
+</table>
+<dl>
+<dt>예시</dt>
+<dd>
+<ol type="1">
+<li><strong>AQL (허용 가능한 품질 한계)</strong>
+<ul>
+<li>한 박스(1,000개)에서 10개(1%)까지는 불량이 있어도 허용<br>
+</li>
+<li>샘플링 검사에서 불량이 1% 이하이면 합격, 초과하면 불합격<br>
+</li>
+</ul></li>
+<li><strong>AOQL (평균 출하 품질 한계)</strong>
+<ul>
+<li>샘플링 검사 후 <font color="blue">불합격된 제품을 추가로 100% 검사하여 선별</font><br>
+</li>
+<li>최종 출하되는 제품에서 나올 수 있는 불량률의 최대 평균값</li>
+</ul></li>
+</ol>
+</dd>
+</dl>
+<p>즉, AQL은 검사에서 합격할 수 있는 최대 허용 불량률이고, AOQL은 최종 출하되는 제품에서 발생할 수 있는 최대 평균 불량률을 의미한다.</p>
 </section>
-<section id="품질비용" class="level2">
-<h2 class="anchored" data-anchor-id="품질비용">품질비용</h2>
+<section id="sec-q-cost" class="level2">
+<h2 class="anchored" data-anchor-id="sec-q-cost">품질비용</h2>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 112-4-1, 118-4-2, 127-3-2">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1704,7 +1774,7 @@ UCL = \bar{u} + 3\sqrt{\frac{\bar{u}}{n}} = 2.92 + 3\sqrt{\frac{2.92}{1.7}} = 6.
 
 </div>
 </div>
-<p><strong>품질비용</strong>(Quality Costs, Q-cost)은 제품이나 서비스 품질을 유지하거나 향상시키기 위해 발생하는 모든 비용을 의미한다. 품질비용은 보통 4가지 주요 카테고리로 분류되며, 각 카테고리에서 발생하는 비용은 다음과 같다.</p>
+<p><strong>품질비용</strong>(Quality Costs, Q-cost)은 <font color="blue">제품이나 서비스 품질을 유지하거나 향상시키기 위해 발생하는 모든 비용</font>을 의미한다. 품질비용은 보통 4가지 주요 카테고리로 분류되며, 각 카테고리에서 발생하는 비용은 다음과 같다.</p>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
@@ -1783,8 +1853,8 @@ UCL = \bar{u} + 3\sqrt{\frac{\bar{u}}{n}} = 2.92 + 3\sqrt{\frac{2.92}{1.7}} = 6.
 </dl>
 <p>이 네 가지 품질비용 카테고리는 제품이나 서비스 품질 향상을 위해 적절한 관리와 투자로 문제를 최소화하는 데 중요한 역할을 한다.</p>
 </section>
-<section id="측정시스템-측정오차-유형" class="level2">
-<h2 class="anchored" data-anchor-id="측정시스템-측정오차-유형">측정시스템 측정오차 유형</h2>
+<section id="sec-msa" class="level2">
+<h2 class="anchored" data-anchor-id="sec-msa">측정시스템분석 오차</h2>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 115-1-13, 130-3-6">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1798,22 +1868,78 @@ UCL = \bar{u} + 3\sqrt{\frac{\bar{u}}{n}} = 2.92 + 3\sqrt{\frac{2.92}{1.7}} = 6.
 
 </div>
 </div>
-<p>측정시스템에서 측정오차 유형에는 5가지가 있다.</p>
+<p>측정시스템에서 측정오차 유형에는 정확도 관련 오차 3가지, 정밀도 관련 오차 2가지가 있다.</p>
 <dl>
-<dt>측정오차</dt>
+<dt>정확도(Accuracy) 관련 오차: 측정값이 실제 참값(True Value)과 얼마나 가까운지</dt>
 <dd>
 <ol type="1">
 <li><strong>정확성(Bias)</strong><br>
-동일한 계측기로 동일한 시료를 측정한 경우, 측정치 평균과 기준값(참값) 간 차이로 정확성, 치우침, 편의라고도 한다. <br><img src="https://sixsigmastudyguide.com/wp-content/uploads/2021/04/msa4.png" class="img-fluid" alt="https://sixsigmastudyguide.com/measurement-systems-analysis/"></li>
-<li><strong>반복성(Repeatability)</strong><br>
-동일한 측정자가 동일한 시료로 여러 번 측정하여 얻은 데이터 산포 크기를 의미하며 산포 크기가 작을수록 반복성이 좋다고 한다. 정밀도라고도 한다. <br> <img src="https://sixsigmastudyguide.com/wp-content/uploads/2021/04/msa7.png" class="img-fluid" alt="https://sixsigmastudyguide.com/measurement-systems-analysis/"></li>
-<li><strong>재현성(Reproductibility)</strong><br>
-서로 다른 측정자가 동일한 기계로 동일 시료를 측정하였을 때, 얻은 측정치 변동값(평균값 차이)으로서 측정자 간 데이터 값 차이를 의미한다. <br> <img src="https://sixsigmastudyguide.com/wp-content/uploads/2021/04/msa8.png" class="img-fluid" alt="https://sixsigmastudyguide.com/measurement-systems-analysis/"></li>
-<li><strong>안전성(Stability)</strong><br>
-동일한 측정시스템으로일정한 시료를 정기적으로측정했을 때 얻은 측정치 변동(평균값 차이)을 말한다. <br> <img src="https://sixsigmastudyguide.com/wp-content/uploads/2021/04/msa6.png" class="img-fluid" alt="https://sixsigmastudyguide.com/measurement-systems-analysis/"></li>
+동일한 계측기로 동일한 시료를 측정한 경우, 측정치 평균과 기준값(참값) 간 차이로 정확성, 치우침, 편의라고도 한다. 온도계가 실제보다 항상 2°C 높게 측정되는 경우가 해당된다.<br>
+<img src="https://sixsigmastudyguide.com/wp-content/uploads/2021/04/msa4.png" class="img-fluid" alt="https://sixsigmastudyguide.com/measurement-systems-analysis/"></li>
 <li><strong>직진성(Linearity)</strong><br>
-계측기 작동범위 내에서 발생하는 참값과 측정값 간 차이, 즉 편기값들 차이로서 측정 일관성을 평가하는데 사용한다. 직진선에 대한 적합성 여부는 회귀직선 결정계수로 판단하며, 선형성이라고도 한다. <br> <img src="https://sixsigmastudyguide.com/wp-content/uploads/2021/04/msa5.png" class="img-fluid" alt="https://sixsigmastudyguide.com/measurement-systems-analysis/"></li>
+계측기 작동범위 내에서 발생하는 참값과 측정값 간 차이, 즉 편기값들 차이로서 측정 일관성을 평가하는데 사용한다. 직진선에 대한 적합성 여부는 회귀직선 결정계수로 판단하며, 선형성이라고도 한다. 저온에서는 정확하지만 고온에서는 편향이 커지는 온도 센서 경우가 해당된다.<br>
+<img src="https://sixsigmastudyguide.com/wp-content/uploads/2021/04/msa5.png" class="img-fluid" alt="https://sixsigmastudyguide.com/measurement-systems-analysis/"></li>
+<li><strong>안전성(Stability)</strong><br>
+동일한 측정시스템으로일정한 시료를 정기적으로측정했을 때 얻은 측정치 변동(평균값 차이)을 말한다. 하루 동안 반복 측정 시 결과가 점차 변하는 저울 경우가 해당된다.<br>
+<img src="https://sixsigmastudyguide.com/wp-content/uploads/2021/04/msa6.png" class="img-fluid" alt="https://sixsigmastudyguide.com/measurement-systems-analysis/"></li>
 </ol>
+</dd>
+</dl>
+<p>정밀도(Precision) 관련 오차: 동일한 조건에서 반복 측정했을 때 측정값이 얼마나 일관되게 나오는지 1. <strong>반복성(Repeatability)</strong><br>
+동일한 측정자가 동일한 시료로 여러 번 측정하여 얻은 데이터 산포 크기를 의미하며 산포 크기가 작을수록 반복성이 좋다고 하며 정밀도라고도 한다. 동일한 제품을 같은 캘리퍼스로 여러 번 측정할 때 값이 들쭉날쭉한 경우가 해당된다.<br>
+<img src="https://sixsigmastudyguide.com/wp-content/uploads/2021/04/msa7.png" class="img-fluid" alt="https://sixsigmastudyguide.com/measurement-systems-analysis/"> 1. <strong>재현성(Reproductibility)</strong><br>
+서로 다른 측정자가 동일한 기계로 동일 시료를 측정하였을 때, 얻은 측정치 변동값(평균값 차이)으로서 측정자 간 데이터 값 차이를 의미한다. A 작업자와 B 작업자가 같은 제품을 같은 캘리퍼스로 측정했을 때 결과가 다르게 나오는 경우가 해당된다.<br>
+<img src="https://sixsigmastudyguide.com/wp-content/uploads/2021/04/msa8.png" class="img-fluid" alt="https://sixsigmastudyguide.com/measurement-systems-analysis/"></p>
+</section>
+<section id="측정시스템-분석-오차" class="level2">
+<h2 class="anchored" data-anchor-id="측정시스템-분석-오차">측정시스템 분석 오차</h2>
+<p>측정 시스템 분석(Measurement System Analysis, MSA)에서 오차란, 측정 과정에서 발생하는 불확실성을 의미하며, 이를 통해 측정 시스템의 신뢰성을 평가할 수 있다. 측정 시스템 오차는 크게 <strong>정확도(Accuracy) 관련 오차</strong>와 <strong>정밀도(Precision) 관련 오차</strong>로 나뉜다.</p>
+<table class="caption-top table">
+<caption>측정 시스템 오차의 시각적 비교</caption>
+<colgroup>
+<col style="width: 37%">
+<col style="width: 20%">
+<col style="width: 41%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>오차 유형</th>
+<th>설명</th>
+<th>시각적 개념</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>편향(Bias)</td>
+<td>실제 값과 평균 측정값 사이의 차이</td>
+<td>과녁의 중심에서 벗어난 그룹</td>
+</tr>
+<tr class="even">
+<td>선형성(Linearity)</td>
+<td>측정 범위에 따라 편향이 달라짐</td>
+<td>특정 구간에서만 편향 발생</td>
+</tr>
+<tr class="odd">
+<td>안정성(Stability)</td>
+<td>시간에 따른 측정값 변화</td>
+<td>시간 경과에 따라 점점 다른 값</td>
+</tr>
+<tr class="even">
+<td>반복성(Repeatability)</td>
+<td>같은 측정자가 반복 측정할 때 값이 일관되지 않음</td>
+<td>과녁 한 곳에 모이지 않는 분산된 패턴</td>
+</tr>
+<tr class="odd">
+<td>재현성(Reproducibility)</td>
+<td>측정자 또는 장비가 다를 때 값이 달라짐</td>
+<td>측정자마다 다른 그룹 패턴</td>
+</tr>
+</tbody>
+</table>
+<dl>
+<dt>측정 시스템 분석의 중요성</dt>
+<dd>
+측정 시스템의 오차를 분석하면, <font color="blue">공정의 품질을 제대로 평가할 수 있는지 확인할 수 있으며</font>, 신뢰할 수 없는 측정 시스템을 개선하는 데 도움을 준다. <font color="blue">측정 오차를 줄이기 위해 보정, 측정 환경 개선, 측정자 교육 등의 조치가 필요</font>하다.
 </dd>
 </dl>
 </section>
@@ -1821,71 +1947,35 @@ UCL = \bar{u} + 3\sqrt{\frac{\bar{u}}{n}} = 2.92 + 3\sqrt{\frac{2.92}{1.7}} = 6.
 <h2 class="anchored" data-anchor-id="품질평가">품질평가</h2>
 <section id="sec-mbnqa" class="level3">
 <h3 class="anchored" data-anchor-id="sec-mbnqa">MBNQA</h3>
-<center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.jksqm.org/upload/thumbnails/jksqm-44-2-277f1.gif" class="img-fluid figure-img"></p>
 <figcaption>https://www.jksqm.org/journal/Figure.php?xn=jksqm-44-2-277.xml&amp;id=</figcaption>
 </figure>
 </div>
-</center>
 <p><strong>MBNQA(말콤 볼드리지 국가 품질상)</strong>는 미국에서 조직의 품질 경영과 성과 우수성을 평가하는 대표적인 상이다. 평가 기준은 7개 범주로 구성되며, 각 범주는 조직의 경쟁력과 지속 가능성을 높이는 데 중점을 둔다.</p>
 <dl>
-<dt>1 <strong>리더십(Leadership)</strong></dt>
+<dt>MBNQA 평가 범주</dt>
 <dd>
-<ul>
-<li>조직의 비전, 가치 및 윤리를 설정하고, 조직의 방향을 주도하는 경영진의 역할을 평가한다.<br>
-</li>
-<li>경영자가 조직 문화 형성, 거버넌스, 사회적 책임 수행에 어떻게 기여하는지를 중시한다.</li>
-</ul>
-</dd>
-<dt>2 <strong>전략 기획(Strategy Planning)</strong></dt>
-<dd>
-<ul>
-<li>조직의 전략 수립 및 실행 과정을 평가한다.<br>
-</li>
-<li>중장기 목표 설정, 리스크 관리, 자원 배분 등을 통해 조직의 경쟁력을 확보하는 방법을 분석한다.</li>
-</ul>
-</dd>
-<dt>3 <strong>고객 중심(Customer Focus)</strong></dt>
-<dd>
-<ul>
-<li>고객의 요구와 기대를 파악하고 이를 반영하는 고객 중심 경영을 평가한다.<br>
-</li>
-<li>고객 만족, 충성도 및 고객과의 관계 유지 전략을 중시한다.</li>
-</ul>
-</dd>
-<dt>4 <strong>측정, 분석 및 지식 관리(Measurement, Analysis, and Knowledge Management)</strong></dt>
-<dd>
-<ul>
-<li>성과 측정, 분석 및 조직 내 지식 관리를 평가한다.</li>
-<li>데이터 기반 의사결정, 정보의 정확성, 조직 전반의 학습 및 혁신을 촉진하는 시스템을 강조한다.</li>
-</ul>
-</dd>
-<dt>5 <strong>인적 자원(Workforce Focus)</strong></dt>
-<dd>
-<ul>
-<li>인재 개발, 동기 부여, 복지 및 근무 환경을 평가한다.<br>
-</li>
-<li>조직 구성원의 역량 강화와 만족도를 높이기 위한 프로그램을 중요하게 다룬다.</li>
-</ul>
-</dd>
-<dt>6 <strong>운영 프로세스(Operation Focus)</strong></dt>
-<dd>
-<ul>
-<li>조직의 핵심 운영 프로세스와 혁신 활동을 평가한다.
-<ul>
-<li>프로세스 효율성, 생산성, 공급망 관리 및 지속적인 개선 노력이 포함된다.</li>
-</ul></li>
-</ul>
-</dd>
-<dt>7 <strong>성과(Results)</strong></dt>
-<dd>
-<ul>
-<li>재무 성과, 고객 만족도, 시장 점유율, 직원 만족도 등 조직의 전반적인 성과를 평가한다.<br>
-</li>
-<li>조직의 전략과 운영이 실제로 어떤 결과를 창출했는지를 구체적으로 분석한다.</li>
-</ul>
+<p>1 <strong>리더십(Leadership)</strong><br>
+- 조직의 비전, 가치 및 윤리를 설정하고, 조직의 방향을 주도하는 경영진의 역할을 평가한다.<br>
+- 경영자가 조직 문화 형성, 거버넌스, 사회적 책임 수행에 어떻게 기여하는지를 중시한다.</p>
+<p>2 <strong>전략 기획(Strategy Planning)</strong><br>
+- 조직의 전략 수립 및 실행 과정을 평가한다.<br>
+- 중장기 목표 설정, 리스크 관리, 자원 배분 등을 통해 조직의 경쟁력을 확보하는 방법을 분석한다.</p>
+<p>3 <strong>고객 중심(Customer Focus)</strong><br>
+- 고객의 요구와 기대를 파악하고 이를 반영하는 고객 중심 경영을 평가한다.<br>
+- 고객 만족, 충성도 및 고객과의 관계 유지 전략을 중시한다.</p>
+<p>4 <strong>측정, 분석 및 지식 관리(Measurement, Analysis, and Knowledge Management)</strong><br>
+- 성과 측정, 분석 및 조직 내 지식 관리를 평가한다. - 데이터 기반 의사결정, 정보의 정확성, 조직 전반의 학습 및 혁신을 촉진하는 시스템을 강조한다.</p>
+<p>5 <strong>인적 자원(Workforce Focus)</strong><br>
+- 인재 개발, 동기 부여, 복지 및 근무 환경을 평가한다.<br>
+- 조직 구성원의 역량 강화와 만족도를 높이기 위한 프로그램을 중요하게 다룬다.</p>
+<p>6 <strong>운영 프로세스(Operation Focus)</strong><br>
+- 조직의 핵심 운영 프로세스와 혁신 활동을 평가한다. - 프로세스 효율성, 생산성, 공급망 관리 및 지속적인 개선 노력이 포함된다.</p>
+<p>7 <strong>성과(Results)</strong><br>
+- 재무 성과, 고객 만족도, 시장 점유율, 직원 만족도 등 조직의 전반적인 성과를 평가한다.<br>
+- 조직의 전략과 운영이 실제로 어떤 결과를 창출했는지를 구체적으로 분석한다.</p>
 </dd>
 </dl>
 <p>MBNQA의 7개 범주는 조직 전반의 <strong>전략, 실행 및 결과</strong>를 체계적으로 평가하여 <strong>경쟁력 강화와 지속 가능한 성장</strong>을 도모한다. 이를 통해 조직은 품질 혁신을 달성하고, 글로벌 시장에서 경쟁 우위를 확보할 수 있다.</p>
@@ -1909,6 +1999,7 @@ UCL = \bar{u} + 3\sqrt{\frac{\bar{u}}{n}} = 2.92 + 3\sqrt{\frac{2.92}{1.7}} = 6.
 </div>
 </div>
 <table class="caption-top table">
+<caption>QC 7가지 도구</caption>
 <colgroup>
 <col style="width: 8%">
 <col style="width: 46%">
@@ -1963,6 +2054,7 @@ UCL = \bar{u} + 3\sqrt{\frac{\bar{u}}{n}} = 2.92 + 3\sqrt{\frac{2.92}{1.7}} = 6.
 <section id="신-qc-7가지-도구" class="level3">
 <h3 class="anchored" data-anchor-id="신-qc-7가지-도구">신 QC 7가지 도구</h3>
 <table class="caption-top table">
+<caption>신 QC 7가지 도구</caption>
 <colgroup>
 <col style="width: 22%">
 <col style="width: 77%">
