@@ -485,17 +485,17 @@ window.Quarto = {
     <h2 id="toc-title">목차</h2>
    
   <ul>
-  <li><a href="#제품개발-과정" id="toc-제품개발-과정" class="nav-link active" data-scroll-target="#제품개발-과정">제품개발 과정</a></li>
-  <li><a href="#제품설계" id="toc-제품설계" class="nav-link" data-scroll-target="#제품설계">제품설계</a>
+  <li><a href="#sec-product-development-process" id="toc-sec-product-development-process" class="nav-link active" data-scroll-target="#sec-product-development-process">제품개발 과정</a></li>
+  <li><a href="#sec-product-design" id="toc-sec-product-design" class="nav-link" data-scroll-target="#sec-product-design">제품설계</a>
   <ul>
   <li><a href="#sec-concurrent-engineering" id="toc-sec-concurrent-engineering" class="nav-link" data-scroll-target="#sec-concurrent-engineering">동시공학</a></li>
   <li><a href="#sec-modular-design" id="toc-sec-modular-design" class="nav-link" data-scroll-target="#sec-modular-design">모듈러 설계</a></li>
-  <li><a href="#신뢰도-설계기법" id="toc-신뢰도-설계기법" class="nav-link" data-scroll-target="#신뢰도-설계기법">신뢰도 설계기법</a></li>
-  <li><a href="#dfmdesign-for-manufacturability" id="toc-dfmdesign-for-manufacturability" class="nav-link" data-scroll-target="#dfmdesign-for-manufacturability">DFM(Design For Manufacturability)</a></li>
+  <li><a href="#sec-reliability-design" id="toc-sec-reliability-design" class="nav-link" data-scroll-target="#sec-reliability-design">신뢰도 설계기법</a></li>
+  <li><a href="#sec-dfm" id="toc-sec-dfm" class="nav-link" data-scroll-target="#sec-dfm">DFM</a></li>
   <li><a href="#sec-kano-model" id="toc-sec-kano-model" class="nav-link" data-scroll-target="#sec-kano-model">카노(Kano) 모델</a></li>
   <li><a href="#sec-qfd" id="toc-sec-qfd" class="nav-link" data-scroll-target="#sec-qfd">품질기능전개(QFD)</a></li>
-  <li><a href="#dfssdesign-for-six-sigma" id="toc-dfssdesign-for-six-sigma" class="nav-link" data-scroll-target="#dfssdesign-for-six-sigma">DFSS(Design For Six Sigma)</a></li>
-  <li><a href="#강건설계" id="toc-강건설계" class="nav-link" data-scroll-target="#강건설계">강건설계</a>
+  <li><a href="#sec-dfss" id="toc-sec-dfss" class="nav-link" data-scroll-target="#sec-dfss">DFSS</a></li>
+  <li><a href="#sec-robust-design" id="toc-sec-robust-design" class="nav-link" data-scroll-target="#sec-robust-design">강건설계</a>
   <ul class="collapse">
   <li><a href="#품질-정의" id="toc-품질-정의" class="nav-link" data-scroll-target="#품질-정의">품질 정의</a></li>
   <li><a href="#품질손실함수" id="toc-품질손실함수" class="nav-link" data-scroll-target="#품질손실함수">품질손실함수</a></li>
@@ -503,10 +503,10 @@ window.Quarto = {
   <li><a href="#품질에-영향을-주는-인자" id="toc-품질에-영향을-주는-인자" class="nav-link" data-scroll-target="#품질에-영향을-주는-인자">품질에 영향을 주는 인자</a></li>
   </ul></li>
   <li><a href="#친환경설계" id="toc-친환경설계" class="nav-link" data-scroll-target="#친환경설계">친환경설계</a></li>
-  <li><a href="#역공학" id="toc-역공학" class="nav-link" data-scroll-target="#역공학">역공학</a></li>
-  <li><a href="#vrp" id="toc-vrp" class="nav-link" data-scroll-target="#vrp">VRP</a></li>
+  <li><a href="#sec-reverse-engineering" id="toc-sec-reverse-engineering" class="nav-link" data-scroll-target="#sec-reverse-engineering">역공학</a></li>
+  <li><a href="#sec-vrp" id="toc-sec-vrp" class="nav-link" data-scroll-target="#sec-vrp">VRP</a></li>
   </ul></li>
-  <li><a href="#sec-11-ref" id="toc-sec-11-ref" class="nav-link" data-scroll-target="#sec-11-ref">참고자료</a>
+  <li><a href="#sec-ref-1102" id="toc-sec-ref-1102" class="nav-link" data-scroll-target="#sec-ref-1102">참고자료</a>
   <ul>
   <li><a href="#sec-design-thinking" id="toc-sec-design-thinking" class="nav-link" data-scroll-target="#sec-design-thinking">디자인 사고</a></li>
   <li><a href="#sec-bpr" id="toc-sec-bpr" class="nav-link" data-scroll-target="#sec-bpr">BPR</a></li>
@@ -536,8 +536,6 @@ window.Quarto = {
 </header>
 
 
-<section id="제품개발-과정" class="level2">
-<h2 class="anchored" data-anchor-id="제품개발-과정">제품개발 과정</h2>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기술: 100-3-4, 109-4-2, 130-4-5">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -551,14 +549,14 @@ window.Quarto = {
 
 </div>
 </div>
-<center>
+<section id="sec-product-development-process" class="level2">
+<h2 class="anchored" data-anchor-id="sec-product-development-process">제품개발 과정</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/product_development_process.png" class="img-fluid figure-img"></p>
 <figcaption>제품개발 과정</figcaption>
 </figure>
 </div>
-</center>
 <p>제품 선정 단계에서는 타당성 조사가 이루어지면 마케팅 부서에서 담당한다. 제품선정 과정 산출물로 <strong>성능명세서</strong>가 개발되며 예비제품설계 입력이 된다. 성능명세서가 최종 제품설계 단계에서 설계 기술자에게 보내지면 예비적인 <strong>기술명세서</strong>와 세부적인 <strong>설계명세서</strong>가 개발된다.</p>
 <dl>
 <dt><strong>제품 개발 과정</strong></dt>
@@ -568,25 +566,35 @@ window.Quarto = {
 <ul>
 <li><strong>목표</strong>: 시장의 니즈와 트렌드를 분석해 참신한 제품 아이디어를 창출.<br>
 </li>
-<li><strong>활동</strong>:<br>
-- 시장 조사 및 고객 피드백 분석<br>
-- 경쟁사 제품 벤치마킹<br>
-- 브레인스토밍 및 워크숍 진행<br>
-- 기술 개발 동향 및 신기술 검토<br>
+<li><strong>활동</strong>:
+<ul>
+<li>시장 조사 및 고객 피드백 분석<br>
 </li>
+<li>경쟁사 제품 벤치마킹<br>
+</li>
+<li>브레인스토밍 및 워크숍 진행<br>
+</li>
+<li>기술 개발 동향 및 신기술 검토<br>
+</li>
+</ul></li>
 <li><strong>결과물</strong>: 여러 개의 제품 아이디어 리스트<br>
 </li>
 </ul></li>
 <li><strong>제품 선정(Idea Screening)</strong>
 <ul>
-<li><strong>목표</strong>: 도출된 아이디어 중 <strong>기술적, 상업적으로 실현 가능성이 높은</strong> 아이디어를 선별.<br>
+<li><strong>목표</strong>: 도출된 아이디어 중 <font color="blue">기술적, 상업적으로 실현 가능성이 높은</font> 아이디어를 선별.<br>
 </li>
-<li><strong>활동</strong>:<br>
-- 시장성, 수익성 분석<br>
-- 기술적 구현 가능성 평가<br>
-- 리스크 분석 및 비용 추정<br>
-- 내부 역량 및 자원 평가<br>
+<li><strong>활동</strong>:
+<ul>
+<li>시장성, 수익성 분석<br>
 </li>
+<li>기술적 구현 가능성 평가<br>
+</li>
+<li>리스크 분석 및 비용 추정<br>
+</li>
+<li>내부 역량 및 자원 평가<br>
+</li>
+</ul></li>
 <li><strong>결과물</strong>: 개발할 최종 제품 아이디어 1~2개 선정<br>
 </li>
 </ul></li>
@@ -594,12 +602,17 @@ window.Quarto = {
 <ul>
 <li><strong>목표</strong>: 제품의 기본 설계 및 구조를 구체화하고, 기능을 정의.<br>
 </li>
-<li><strong>활동</strong>:<br>
-- 제품 스케치 및 CAD 모델링<br>
-- 주요 기능 및 사양 정의<br>
-- 소재 및 부품 선정<br>
-- 설계 시뮬레이션 및 초기 검토<br>
+<li><strong>활동</strong>:
+<ul>
+<li>제품 스케치 및 CAD 모델링<br>
 </li>
+<li>주요 기능 및 사양 정의<br>
+</li>
+<li>소재 및 부품 선정<br>
+</li>
+<li>설계 시뮬레이션 및 초기 검토<br>
+</li>
+</ul></li>
 <li><strong>결과물</strong>: 예비 설계도 및 기본 사양서<br>
 </li>
 </ul></li>
@@ -607,11 +620,15 @@ window.Quarto = {
 <ul>
 <li><strong>목표</strong>: 예비 설계를 바탕으로 <strong>시제품(프로토타입)</strong>을 제작해 실제 구현 가능성을 검증.<br>
 </li>
-<li><strong>활동</strong>:<br>
-- 3D 프린팅 및 소규모 부품 가공<br>
-- 초기 작동 테스트 및 피드백 수집<br>
-- 디자인 및 기능 수정<br>
+<li><strong>활동</strong>:
+<ul>
+<li>3D 프린팅 및 소규모 부품 가공<br>
 </li>
+<li>초기 작동 테스트 및 피드백 수집<br>
+</li>
+<li>디자인 및 기능 수정<br>
+</li>
+</ul></li>
 <li><strong>결과물</strong>: 1차 시제품 및 작동 여부 평가 결과<br>
 </li>
 </ul></li>
@@ -619,12 +636,17 @@ window.Quarto = {
 <ul>
 <li><strong>목표</strong>: 프로토타입을 시장에 제한적으로 공개해 고객 반응 및 시장성을 테스트.<br>
 </li>
-<li><strong>활동</strong>:<br>
-- 파일럿 테스트(소규모 생산 후 테스트)<br>
-- 포커스 그룹 인터뷰(FGI)<br>
-- 베타 테스트 및 설문 조사<br>
-- 고객 피드백 반영<br>
+<li><strong>활동</strong>:
+<ul>
+<li>파일럿 테스트(소규모 생산 후 테스트)<br>
 </li>
+<li>포커스 그룹 인터뷰(FGI)<br>
+</li>
+<li>베타 테스트 및 설문 조사<br>
+</li>
+<li>고객 피드백 반영<br>
+</li>
+</ul></li>
 <li><strong>결과물</strong>: 시장 반응 분석 및 제품 개선 사항 도출<br>
 </li>
 </ul></li>
@@ -632,11 +654,15 @@ window.Quarto = {
 <ul>
 <li><strong>목표</strong>: 시장 시험 결과를 반영해 <strong>최종 제품 설계</strong>를 확정하고, 생산 준비를 완료.<br>
 </li>
-<li><strong>활동</strong>:<br>
-- 세부 설계 조정 및 재료 확정<br>
-- 제조 공정 설계 및 양산 준비<br>
-- 품질 및 안전 기준 충족 여부 확인<br>
+<li><strong>활동</strong>:
+<ul>
+<li>세부 설계 조정 및 재료 확정<br>
 </li>
+<li>제조 공정 설계 및 양산 준비<br>
+</li>
+<li>품질 및 안전 기준 충족 여부 확인<br>
+</li>
+</ul></li>
 <li><strong>결과물</strong>: 최종 설계도 및 제조 공정 매뉴얼<br>
 </li>
 </ul></li>
@@ -644,23 +670,26 @@ window.Quarto = {
 <ul>
 <li><strong>목표</strong>: 대량 생산 체계를 구축하고, 제품을 본격적으로 시장에 출시.<br>
 </li>
-<li><strong>활동</strong>:<br>
-- 생산 라인 구축 및 시범 생산<br>
-- 초기 생산 물량 확보<br>
-- 마케팅 및 홍보 캠페인 실시<br>
-- 제품 출시 및 유통망 확보<br>
+<li><strong>활동</strong>:
+<ul>
+<li>생산 라인 구축 및 시범 생산<br>
 </li>
+<li>초기 생산 물량 확보<br>
+</li>
+<li>마케팅 및 홍보 캠페인 실시<br>
+</li>
+<li>제품 출시 및 유통망 확보<br>
+</li>
+</ul></li>
 <li><strong>결과물</strong>: 신제품 대량 생산 및 시장 출시</li>
 </ul></li>
 </ol>
 </dd>
 </dl>
-<p>이 과정은 <strong>단계별로 리스크를 줄이며 점진적으로 제품을 완성</strong>하는 방식이다. 각 단계에서 <strong>고객 피드백과 시장 검증</strong>을 반복해, 성공 가능성이 높은 제품을 최종적으로 개발하게 된다.</p>
+<p>이 과정은 <font color="blue">단계별로 리스크를 줄이며 점진적으로 제품을 완성</font>하는 방식이다. 각 단계에서 <strong>고객 피드백과 시장 검증</strong>을 반복해, 성공 가능성이 높은 제품을 최종적으로 개발하게 된다.</p>
 </section>
-<section id="제품설계" class="level2">
-<h2 class="anchored" data-anchor-id="제품설계">제품설계</h2>
-<section id="sec-concurrent-engineering" class="level3">
-<h3 class="anchored" data-anchor-id="sec-concurrent-engineering">동시공학</h3>
+<section id="sec-product-design" class="level2">
+<h2 class="anchored" data-anchor-id="sec-product-design">제품설계</h2>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 97-1-6, 100-1-8, 118-1-5, 124-2-2">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -674,36 +703,36 @@ window.Quarto = {
 
 </div>
 </div>
-<center>
+<section id="sec-concurrent-engineering" class="level3">
+<h3 class="anchored" data-anchor-id="sec-concurrent-engineering">동시공학</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Waterfall_vs_iterative.JPG/1080px-Waterfall_vs_iterative.JPG" class="img-fluid figure-img"></p>
-<figcaption>https://en.wikipedia.org/wiki/Concurrent_engineering</figcaption>
+<figcaption>순차공학과 동시공학, https://en.wikipedia.org/wiki/Concurrent_engineering</figcaption>
 </figure>
 </div>
-</center>
-<p><strong>동시공학</strong>(CE, Concurrent Engineering)은 설계에 관련된 모든 부서와 관계자를 처음부터 설계과정에 참여시킴으로써 설계를 보다 효과적으로 수행하고자 하는 개념이다.</p>
+<p><strong>동시공학</strong>(CE, Concurrent Engineering)은 <font color="blue">설계에 관련된 모든 부서와 관계자를 처음부터 설계과정에 참여</font>시킴으로써 설계를 보다 효과적으로 수행하고자 하는 개념이다.</p>
 <p>ITI(Industrial Technology Institute) 스톨(1988)은 CE를 다음 “4C”로 설명하였다.</p>
 <dl>
-<dt>동시성(Concurrence)</dt>
+<dt><strong>동시성</strong>(Concurrence)</dt>
 <dd>
 <ul>
 <li>제품 설계와 공정 설계가 동시에 이루어진다.</li>
 </ul>
 </dd>
-<dt>제약성(Constraints)</dt>
+<dt><strong>제약성</strong>(Constraints)</dt>
 <dd>
 <ul>
 <li>공정은 제품 설계에 제약을 준다.</li>
 </ul>
 </dd>
-<dt>협조성(Coordination)</dt>
+<dt><strong>협조성</strong>(Coordination)</dt>
 <dd>
 <ul>
 <li>최선 품질과 비용, 그리고 납기일을 달성하기 위해서는 제품과 공정이 서로 협조해야 한다.</li>
 </ul>
 </dd>
-<dt>합의성(Consensus)</dt>
+<dt><strong>합의성</strong>(Consensus)</dt>
 <dd>
 <ul>
 <li>CE팀 모든 구성원들 합의 하에 의사결정을 내려야 한다.</li>
@@ -727,19 +756,19 @@ window.Quarto = {
 <dt>동시공학 구성요소</dt>
 <dd>
 <ol type="1">
-<li>조직환경
+<li><strong>조직 환경</strong>
 <ul>
 <li>기존 기능 분담에 의한 단계적 조직체계를 바꾸어 기능 교차에 의한 매트릭스 조직 또는 팀 활동을 골자로 하는 조직론적 접근이 중요하다.</li>
 </ul></li>
-<li>시스템 환경
+<li><strong>시스템 환경</strong>
 <ul>
 <li>동시공학을 지원하기 위해서는 HW적 시스템 환경용소로 원격화상회의, 컴퓨터 통신망, 인공지능/전문가 시스템, 조기 프로토타입 시스템 등이 있다.</li>
 </ul></li>
-<li>접근 방법론
+<li><strong>접근 방법론</strong>
 <ul>
 <li>데이터베이스, 제품 데이터 모델, 체계적인 의사소통, 지식 기반 접근법 등 기술적 접근법에 대한 연구가 필수적이다.</li>
 </ul></li>
-<li>주요 응용분야
+<li><strong>주요 응용분야</strong>
 <ul>
 <li>환경과 방법론을 제품과 기업 특성이나 제품 개발 과정에 일부 단계에 맞추어 여러 가지로 특화된 공용 시스템을 개발할 수 있다.</li>
 </ul></li>
@@ -781,10 +810,11 @@ window.Quarto = {
 </dd>
 </dl>
 <table class="caption-top table">
+<caption>동시공학과 순차공학</caption>
 <colgroup>
-<col style="width: 25%">
-<col style="width: 37%">
-<col style="width: 37%">
+<col style="width: 20%">
+<col style="width: 40%">
+<col style="width: 40%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -823,13 +853,10 @@ window.Quarto = {
 </table>
 </div>
 </div>
-</section>
-<section id="sec-modular-design" class="level3">
-<h3 class="anchored" data-anchor-id="sec-modular-design">모듈러 설계</h3>
-<div class="callout callout-style-default callout-tip callout-titled" title="기출: 97-1-4, 115-3-6">
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 97-1-4, 115-3-6">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
-<i class="callout-icon"></i>
+<i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 기출: 97-1-4, 115-3-6
@@ -839,17 +866,19 @@ window.Quarto = {
 
 </div>
 </div>
-<center>
+</section>
+<section id="sec-modular-design" class="level3">
+<h3 class="anchored" data-anchor-id="sec-modular-design">모듈러 설계</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Framework_Laptop_-_the_Design_Museum.jpg/330px-Framework_Laptop_-_the_Design_Museum.jpg" class="img-fluid figure-img"></p>
-<figcaption>https://en.wikipedia.org/wiki/Modular_design</figcaption>
+<figcaption>모듈러 설계, https://en.wikipedia.org/wiki/Modular_design</figcaption>
 </figure>
 </div>
-</center>
-<p><strong>모듈러 설계</strong>(Modular Design)는 호환성 있는 표준 모듈을 여러 가지로 다르게 결합하여 제품 다양성과 생산원가 절감, 두 가지를 동시에달성하기 위한 젤품설계 기법이다. 여기서 <strong>모듈</strong>(Module)이란 다수 부품으로 구성되어 있는 표준화된 중간 조립품을 말한다. 모듈러 설계에서는 서로 다른 모듈이 결합되어 제품 하나가 구성되므로 제품 기본 단위는 모듈이 된다.</p>
+<p><strong>모듈러 설계</strong>(Modular Design)는 <font color="blue">호환성 있는 표준 모듈을 여러 가지로 다르게 결합하여 제품 다양성과 생산원가 절감, 두 가지를 동시에 달성하기 위한 제제품설계 기법</font>이다. 여기서 <strong>모듈</strong>(Module)이란 <font color="blue">다수 부품으로 구성되어 있는 표준화된 중간 조립품</font>을 말한다. 모듈러 설계에서는 서로 다른 모듈이 결합되어 제품 하나가 구성되므로 제품 기본 단위는 모듈이 된다.</p>
 <p>모듈러 설계는 재고관리, 구매관리, 생산관리 등 경영활동에 있어 복잡성을 줄이는 효과가 있다. 모듈러 설계 시 장단점은 다음과 같다.</p>
 <table class="caption-top table">
+<caption>모듈러 설계 장점과 단점</caption>
 <colgroup>
 <col style="width: 50%">
 <col style="width: 50%">
@@ -947,12 +976,9 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>표준 부품 조합으로 조립품 다양화를 경제적으로 도모하는 <strong>생산방식</strong>이다. 즉 다양하게 결합할 수 있는 부분품을 설계, 제조하여 최소 종류 부분품으로 최다 종류 제품을 생산하는 방식이다. 전통적인 대량생산에서는 부분품 호환성(interchangeability)을 주요 요건으로하여 단일제품을 대량생산하였지만, 모듈러 생산에서는 부분품 호환성을 다른 품종에까지 확장시킨다는 점에서 차이가 있다. 모듈러 생산 본질은 초대한 결할될 수 있는 부품을 설계, 개발, 생삼함이다. 제품 가짓수는 수요 다양성과 규모의 경제, 그리고 한계이익 등을 고려하여 적절한 제품 구성(Adequate Product Mix)을 도모할 수 있는 범위 내에서 결정한다.</p>
+<p><font color="blue">표준 부품 조합으로 조립품 다양화를 경제적으로 도모하는 <strong>생산방식</strong></font>이다. 즉 다양하게 결합할 수 있는 부분품을 설계, 제조하여 최소 종류 부분품으로 최다 종류 제품을 생산하는 방식이다. 전통적인 대량생산에서는 부분품 호환성(interchangeability)을 주요 요건으로 하여 단일제품을 대량생산하였지만, 모듈러 생산에서는 부분품 호환성을 다른 품종에까지 확장시킨다는 점에서 차이가 있다. 모듈러 생산 본질은 초대한 결할될 수 있는 부품을 설계, 개발, 생삼함이다. 제품 가짓수는 수요 다양성과 규모의 경제, 그리고 한계이익 등을 고려하여 적절한 제품 구성(Adequate Product Mix)을 도모할 수 있는 범위 내에서 결정한다.</p>
 </div>
 </div>
-</section>
-<section id="신뢰도-설계기법" class="level3">
-<h3 class="anchored" data-anchor-id="신뢰도-설계기법">신뢰도 설계기법</h3>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 100-1-9, 106-1-2, 109-4-4, 127-1-11">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -966,6 +992,9 @@ window.Quarto = {
 
 </div>
 </div>
+</section>
+<section id="sec-reliability-design" class="level3">
+<h3 class="anchored" data-anchor-id="sec-reliability-design">신뢰도 설계기법</h3>
 <p><strong>신뢰도</strong>(Reliability)는 부품, 장치, 기기 및 시스템이 주어진 사용 조건에서 주어진 일정 기간 동안 의도한 기능을 수행하는 확률을 뜻한다.</p>
 <dl>
 <dt>신뢰도 구성요소</dt>
@@ -1017,15 +1046,14 @@ window.Quarto = {
 <dt>용장성(Redundancy)</dt>
 <dd>
 <ul>
-<li>많은 부품으로 구성되어 있는 기기 장치는 부품 하나가 고장나더라도 전체 기능이 정지될 수 있어 여분 회로나 구성품으로전체 기능 정지를 방지하도록 설계</li>
-<li>대기용장방식: 동종 기기를 복수로 설치하여 작동 중 1대가 고장 나면 곧 예비기기가 작동</li>
-<li>병렬용장방식: 여러 대를 동시에 가동시켜서그중 1대가 고장 나더라도 전체에 지장이 없도록 하는 것</li>
+<li>많은 부품으로 구성되어 있는 기기 장치는 부품 하나가 고장나더라도 전체 기능이 정지될 수 있어 여분 회로나 구성품으로전체 기능 정지를 방지하도록 설계
+<ul>
+<li><strong>대기용장방식</strong>: 동종 기기를 복수로 설치하여 작동 중 1대가 고장 나면 곧 예비기기가 작동</li>
+<li><strong>병렬용장방식</strong>: 여러 대를 동시에 가동시켜서그중 1대가 고장 나더라도 전체에 지장이 없도록 하는 것</li>
+</ul></li>
 </ul>
 </dd>
 </dl>
-</section>
-<section id="dfmdesign-for-manufacturability" class="level3">
-<h3 class="anchored" data-anchor-id="dfmdesign-for-manufacturability">DFM(Design For Manufacturability)</h3>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 124-1-5">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1039,26 +1067,39 @@ window.Quarto = {
 
 </div>
 </div>
-<p><strong>DFM(Design For Manufacturability)</strong>는 제품의 설계 단계에서부터 제조와 관련된 요소들을 고려하여, 제품을 효율적으로 생산할 수 있도록 설계하는 접근 방식을 말한다. 이 개념은 제품이 설계될 때부터 제조 비용을 최소화하고 생산 시간을 단축시키며, 품질을 높이는 것을 목표로 한다. DFM은 제조 공정에서 발생할 수 있는 문제를 미리 예측하고 이를 설계에 반영함으로써, 제품의 생산성을 향상시킨다.</p>
+</section>
+<section id="sec-dfm" class="level3">
+<h3 class="anchored" data-anchor-id="sec-dfm">DFM</h3>
+<p><strong>DFM(Design For Manufacturability)</strong>는 <font color="blue">제품의 설계 단계에서부터 제조와 관련된 요소들을 고려하여, 제품을 효율적으로 생산할 수 있도록 설계하는 접근 방식</font>을 말한다. 이 개념은 제품이 설계될 때부터 제조 비용을 최소화하고 생산 시간을 단축시키며, 품질을 높이는 것을 목표로 한다. DFM은 제조 공정에서 발생할 수 있는 문제를 미리 예측하고 이를 설계에 반영함으로써, 제품의 생산성을 향상시킨다.</p>
 <dl>
 <dt>DFM의 주요 목표</dt>
 <dd>
 <ol type="1">
-<li><strong>제조 비용 절감</strong>: 제품을 설계할 때 제조 비용을 최소화하기 위해 효율적인 공정과 자재를 선택한다.</li>
-<li><strong>생산 시간 단축</strong>: 제품을 빠르고 효율적으로 생산할 수 있도록 설계한다.</li>
-<li><strong>품질 향상</strong>: 설계 단계에서부터 제조 품질을 고려하여, 결함을 최소화하고 생산성이 높은 제품을 만든다.</li>
-<li><strong>제조 공정 최적화</strong>: 설계에서부터 제조 공정에 대한 최적화를 고려하여, 생산 공정에서 발생할 수 있는 문제를 줄인다.</li>
+<li><strong>제조 비용 절감</strong><br>
+제품을 설계할 때 제조 비용을 최소화하기 위해 효율적인 공정과 자재를 선택한다.</li>
+<li><strong>생산 시간 단축</strong><br>
+제품을 빠르고 효율적으로 생산할 수 있도록 설계한다.</li>
+<li><strong>품질 향상</strong><br>
+설계 단계에서부터 제조 품질을 고려하여, 결함을 최소화하고 생산성이 높은 제품을 만든다.</li>
+<li><strong>제조 공정 최적화</strong><br>
+설계에서부터 제조 공정에 대한 최적화를 고려하여, 생산 공정에서 발생할 수 있는 문제를 줄인다.</li>
 </ol>
 </dd>
 <dt>DFM의 핵심 요소</dt>
 <dd>
 <ol type="1">
-<li><strong>간단한 설계</strong>: 제품 설계를 단순화하여 제조 과정에서 발생할 수 있는 복잡성이나 오류를 줄인다.</li>
-<li><strong>표준화된 부품 사용</strong>: 표준화된 부품을 사용하여 조립 시간을 단축하고 비용을 절감한다.</li>
-<li><strong>조립 용이성</strong>: 제품의 조립을 용이하게 설계하여 조립 공정에서의 오류를 줄이고 비용을 절감한다.</li>
-<li><strong>자동화 고려</strong>: 제조 공정에서 자동화가 가능하도록 설계하여 효율성을 높인다.</li>
-<li><strong>재료의 최적화</strong>: 제품의 재료 선택을 신중하게 하여 불필요한 비용을 줄이고, 생산 과정에서의 품질을 유지한다.</li>
-<li><strong>공차 관리</strong>: 공차를 최적화하여 제조에서 발생할 수 있는 품질 변동을 최소화한다.</li>
+<li><strong>간단한 설계</strong><br>
+제품 설계를 단순화하여 제조 과정에서 발생할 수 있는 복잡성이나 오류를 줄인다.</li>
+<li><strong>표준화된 부품 사용</strong><br>
+표준화된 부품을 사용하여 조립 시간을 단축하고 비용을 절감한다.</li>
+<li><strong>조립 용이성</strong><br>
+제품의 조립을 용이하게 설계하여 조립 공정에서의 오류를 줄이고 비용을 절감한다.</li>
+<li><strong>자동화 고려</strong><br>
+제조 공정에서 자동화가 가능하도록 설계하여 효율성을 높인다.</li>
+<li><strong>재료의 최적화</strong><br>
+제품의 재료 선택을 신중하게 하여 불필요한 비용을 줄이고, 생산 과정에서의 품질을 유지한다.</li>
+<li><strong>공차 관리</strong><br>
+공차를 최적화하여 제조에서 발생할 수 있는 품질 변동을 최소화한다.</li>
 </ol>
 </dd>
 <dt>DFM의 이점</dt>
@@ -1073,16 +1114,16 @@ window.Quarto = {
 <dt>DFM의 적용 예시</dt>
 <dd>
 <ol type="1">
-<li><strong>부품 단순화</strong>: 복잡한 부품을 여러 개의 간단한 부품으로 나누어 조립과 생산을 단순화한다.</li>
-<li><strong>표준화된 조립 공정</strong>: 제품의 조립 과정을 표준화하여 작업자가 쉽게 이해하고 빠르게 조립할 수 있도록 한다.</li>
-<li><strong>모듈화</strong>: 제품을 모듈화하여 여러 제품을 동일한 부품으로 생산할 수 있도록 한다. 이를 통해 부품 생산과 조립의 효율성을 높인다.</li>
+<li><strong>부품 단순화</strong><br>
+복잡한 부품을 여러 개의 간단한 부품으로 나누어 조립과 생산을 단순화한다.</li>
+<li><strong>표준화된 조립 공정</strong><br>
+제품의 조립 과정을 표준화하여 작업자가 쉽게 이해하고 빠르게 조립할 수 있도록 한다.</li>
+<li><strong>모듈화</strong><br>
+제품을 모듈화하여 여러 제품을 동일한 부품으로 생산할 수 있도록 한다. 이를 통해 부품 생산과 조립의 효율성을 높인다.</li>
 </ol>
 </dd>
 </dl>
 <p>DFM은 제품 설계에서부터 제조 과정까지 전반적인 효율성을 높이는 중요한 접근 방식이다. 제품을 설계할 때부터 제조를 고려하면, 비용 절감, 품질 향상, 생산 시간 단축 등 여러 가지 이점을 얻을 수 있다. DFM은 제조업체와 설계자 간의 협력을 통해 더 나은 제품을 더 효율적으로 생산할 수 있도록 돕는다.</p>
-</section>
-<section id="sec-kano-model" class="level3">
-<h3 class="anchored" data-anchor-id="sec-kano-model">카노(Kano) 모델</h3>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 100-2-3, 124-1-6">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1096,11 +1137,14 @@ window.Quarto = {
 
 </div>
 </div>
-<p>카노 모델은 카노 노리아키(狩野紀昭)에 의해 1980년대에 연구된 제품 개발을 논하는 상품기획이론이다. 어떤 상품을 기획할 때 각각의 구성요소에 대해 소비자가 기대하는 것의 충족, 불충족이라는 객관적 관계와 소비자의 만족, 불만족이라는 주관적 관계 사이의 상호관계를 통해 5가지 품질요소로 구분하여 설명한다. 카노 노리아키는 일본 도쿄 리카대학의 교수이다.[^1]</p>
+</section>
+<section id="sec-kano-model" class="level3">
+<h3 class="anchored" data-anchor-id="sec-kano-model">카노(Kano) 모델</h3>
+<p><strong>카노모델</strong>은 카노 노리아키(狩野紀昭)에 의해 1980년대에 연구된 제품 개발을 논하는 상품기획이론이다. 어떤 상품을 기획할 때 각각의 구성요소에 대해 소비자가 기대하는 것의 <strong>충족</strong>, <strong>불충족</strong>이라는 객관적 관계와 소비자의 <strong>만족</strong>, <strong>불만족</strong>이라는 주관적 관계 사이의 상호관계를 통해 <font color="blue">5가지 품질요소</font>로 구분하여 설명한다.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/1/14/Kano_Model.gif" class="img-fluid figure-img"></p>
-<figcaption>https://ko.wikipedia.org/wiki/카노_모델</figcaption>
+<figcaption>카노모델, https://ko.wikipedia.org/wiki/카노_모델</figcaption>
 </figure>
 </div>
 <dl>
@@ -1121,10 +1165,11 @@ window.Quarto = {
 </dd>
 </dl>
 <table class="caption-top table">
+<caption>카노모델 예시</caption>
 <colgroup>
-<col style="width: 47%">
-<col style="width: 26%">
-<col style="width: 26%">
+<col style="width: 20%">
+<col style="width: 40%">
+<col style="width: 40%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -1161,10 +1206,7 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-<p>카노 모델을 활용하면 고객이 어떤 요소를 중요하게 여기는지를 분석하여, <strong>필수 요소를 충족하고, 성능 요소를 개선하며, 매력적 요소를 추가하는 전략</strong>을 세울 수 있다.</p>
-</section>
-<section id="sec-qfd" class="level3">
-<h3 class="anchored" data-anchor-id="sec-qfd">품질기능전개(QFD)</h3>
+<p>카노 모델을 활용하면 고객이 어떤 요소를 중요하게 여기는지를 분석하여, <font color="blue">필수 요소를 충족하고, 성능 요소를 개선하며, 매력적 요소를 추가하는 전략</font>을 세울 수 있다.</p>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 121-4-3">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1178,17 +1220,20 @@ window.Quarto = {
 
 </div>
 </div>
+</section>
+<section id="sec-qfd" class="level3">
+<h3 class="anchored" data-anchor-id="sec-qfd">품질기능전개(QFD)</h3>
 <p><strong>품질기능전개</strong>(QFD,Quality function deployment)는 고객의 목소리(VOC)를 제품 엔지니어링 특성으로 변환하기 위해 1966년 일본에서 개발된 방법이다. <strong>품질의 집</strong>(HOQ, House of quality)은 QFD를 구현하기 위한 기본 도구이다. <a href="#sec-kano-model" class="quarto-xref"><span>카노(Kano) 모델</span></a>을 이용한 분석을 통해 QFD 매트릭스를 만들 수 있다.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/A1_House_of_Quality.png/800px-A1_House_of_Quality.png" class="img-fluid figure-img"></p>
-<figcaption>Source: https://en.wikipedia.org/wiki/Quality_function_deployment</figcaption>
+<figcaption>품질의 집, https://en.wikipedia.org/wiki/Quality_function_deployment</figcaption>
 </figure>
 </div>
 <p>품질기능전개(QFD)는 고객의 요구사항을 제품 설계나 생산 과정에 반영하는 방법론이다. 품질의 집(House of Quality)은 QFD의 첫 번째 단계로, 고객의 요구사항을 제품의 기술적 요구사항으로 변환하는 구조화된 도구이다. 이 과정에서 고객의 목소리(Voice of the Customer, VOC)를 효과적으로 반영하여 품질을 향상시킬 수 있다.</p>
 <p>스마트폰의 신제품 개발을 예로 들어 품질기능전개에서 품질의 집을 어떻게 활용하는지 설명하겠다.</p>
 <ol type="1">
-<li><strong>고객의 요구사항 수집</strong>
+<li><p><strong>고객의 요구사항 수집</strong></p>
 <ul>
 <li><strong>디자인</strong>: 세련되고 가벼운 디자인</li>
 <li><strong>배터리 수명</strong>: 긴 배터리 사용 시간</li>
@@ -1196,7 +1241,7 @@ window.Quarto = {
 <li><strong>가격</strong>: 합리적인 가격</li>
 <li><strong>화면 크기</strong>: 적당한 크기와 해상도</li>
 </ul></li>
-<li><strong>기술적 요구사항 도출</strong>, 고객의 요구사항을 기술적인 측면에서 변환해야 한다. 예를 들어:
+<li><p><strong>기술적 요구사항 도출</strong>, 고객의 요구사항을 기술적인 측면에서 변환해야 한다. 예를 들어:</p>
 <ul>
 <li><strong>디자인</strong>: 알루미늄 합금 바디, 초박형 디자인</li>
 <li><strong>배터리 수명</strong>: 대용량 배터리 (5000mAh 이상)</li>
@@ -1204,10 +1249,14 @@ window.Quarto = {
 <li><strong>가격</strong>: 원가 절감을 위한 최적화된 부품 조합</li>
 <li><strong>화면 크기</strong>: 6.5인치 OLED 디스플레이</li>
 </ul></li>
-<li><strong>품질의 집(House of Quality) 구성</strong>, 품질의 집은 각 요구사항이 어떻게 기술적 요구사항으로 변환되는지 보여주는 도표이다. 이 도표는 고객의 요구와 기술적 요구가 어떻게 관련되는지 시각적으로 표현한다. 아래는 품질의 집 예시이다.</li>
+<li><p><strong>품질의 집(House of Quality) 구성</strong>, 품질의 집은 각 요구사항이 어떻게 기술적 요구사항으로 변환되는지 보여주는 도표이다. 이 도표는 고객의 요구와 기술적 요구가 어떻게 관련되는지 시각적으로 표현한다. 아래는 품질의 집 예시이다.</p></li>
+<li><p><strong>우선순위 결정</strong><br>
+품질의 집을 통해 각 기술적 요구사항의 중요도를 파악하고, 이를 바탕으로 제품 설계에 우선순위를 매긴다. 예를 들어, 고객이 “배터리 수명”을 가장 중요하게 생각한다고 하면, 대용량 배터리를 우선적으로 고려할 수 있다.</p></li>
 </ol>
+<dl>
+<dt><strong>품질의 집 예시</strong></dt>
+<dd>
 <table class="caption-top table">
-<caption>품질의 집</caption>
 <thead>
 <tr class="header">
 <th>고객 요구사항</th>
@@ -1261,18 +1310,19 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-<p><strong>주요 항목 설명</strong><br>
-- <strong>O</strong>: 고객의 요구사항과 기술적 요구사항 간에 강한 관련성이 있음을 나타낸다. 예를 들어, “디자인” 요구사항은 “디자인” 기술적 요구사항과 밀접한 관련이 있다.<br>
-- <strong>배터리 수명</strong>은 “배터리” 기술적 요구사항에 주로 영향을 미친다.<br>
-- <strong>카메라 성능</strong>은 카메라 성능에 관련된 기술적 요구사항과 밀접한 관계가 있다.</p>
-<ol start="4" type="1">
-<li><strong>우선순위 결정</strong><br>
-품질의 집을 통해 각 기술적 요구사항의 중요도를 파악하고, 이를 바탕으로 제품 설계에 우선순위를 매긴다. 예를 들어, 고객이 “배터리 수명”을 가장 중요하게 생각한다고 하면, 대용량 배터리를 우선적으로 고려할 수 있다.</li>
-</ol>
+</dd>
+<dt>주요 항목 설명</dt>
+<dd>
+<ul>
+<li><strong>O</strong>: 고객의 요구사항과 기술적 요구사항 간에 강한 관련성이 있음을 나타낸다. 예를 들어, “디자인” 요구사항은 “디자인” 기술적 요구사항과 밀접한 관련이 있다.<br>
+</li>
+<li><strong>배터리 수명</strong>은 “배터리” 기술적 요구사항에 주로 영향을 미친다.<br>
+</li>
+<li><strong>카메라 성능</strong>은 카메라 성능에 관련된 기술적 요구사항과 밀접한 관계가 있다.</li>
+</ul>
+</dd>
+</dl>
 <p>품질의 집을 통해 고객의 요구를 기술적으로 구체화하고, 이를 바탕으로 신제품 개발을 진행하면 고객의 만족도를 극대화할 수 있다. 품질기능전개(QFD)는 신제품 개발에서 중요한 역할을 하며, 품질의 집은 이를 실행하는 핵심 도구이다.</p>
-</section>
-<section id="dfssdesign-for-six-sigma" class="level3">
-<h3 class="anchored" data-anchor-id="dfssdesign-for-six-sigma">DFSS(Design For Six Sigma)</h3>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 115-1-4, 130-3-5">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1286,7 +1336,10 @@ window.Quarto = {
 
 </div>
 </div>
-<p><strong>DFSS</strong>(Design For Six Sigma)는 제품이나 서비스를 설계하는 초기 단계부터 Six Sigma의 원칙을 적용하여 품질을 최적화하고 결함을 최소화하는 방법론이다. DFSS는 Six Sigma의 한 방법론으로, 제품이나 프로세스를 개선하는 기존 접근법인 <strong>DMAIC(Define, Measure, Analyze, Improve, Control)</strong>와는 달리 <strong>새로운 제품이나 프로세스를 설계하는 과정</strong>(DMADV)에서 품질을 보장하는 데 중점을 둔다.</p>
+</section>
+<section id="sec-dfss" class="level3">
+<h3 class="anchored" data-anchor-id="sec-dfss">DFSS</h3>
+<p><strong>DFSS</strong>(Design For Six Sigma)는 제품이나 서비스를 설계하는 초기 단계부터 Six Sigma의 원칙을 적용하여 품질을 최적화하고 결함을 최소화하는 방법론이다. DFSS는 Six Sigma의 한 방법론으로, <font color="blue">제품이나 프로세스를 개선</font>하는 기존 접근법인 <strong>DMAIC</strong>(Define, Measure, Analyze, Improve, Control)와는 달리 <font color="blue">새로운 제품이나 프로세스를 설계하는 과정</font>(<strong>DMADV</strong>, Define, Measure, Analyze, Design, Verify)에서 품질을 보장하는 데 중점을 둔다.</p>
 <dl>
 <dt>DFSS의 목표</dt>
 <dd>
@@ -1350,27 +1403,33 @@ end
 <dt>DMADV (Define, Measure, Analyze, Design, Verify)</dt>
 <dd>
 <ul>
-<li>Define (정의): 프로젝트 목표와 고객 요구 사항을 정의하고, 성공적인 제품 또는 서비스 설계를 위한 목표를 설정한다.</li>
-<li>Measure (측정): 고객 요구사항을 충족시키기 위한 성과 지표를 정의하고, 해당 요구를 만족시킬 수 있는 측정 가능한 특성들을 파악한다.</li>
-<li>Analyze (분석): 설계 옵션을 분석하고, 최적 설계를 위한 다양한 대안들을 평가한다. 기술적, 경제적, 시장적 측면을 고려한다.</li>
-<li>Design (설계): 실제 제품이나 서비스 설계를 진행한다. 이 단계에서는 제품 설계가 고객 요구 사항과 품질 목표를 충족하도록 세부 사항을 결정한다.</li>
-<li>Verify (검증): 설계가 실제로 고객 요구를 충족하는지 확인하고, 필요한 경우 추가적인 수정과 개선을 통해 제품을 검증한다.</li>
+<li><strong>Define (정의)</strong><br>
+프로젝트 목표와 고객 요구 사항을 정의하고, 성공적인 제품 또는 서비스 설계를 위한 목표를 설정한다.</li>
+<li><strong>Measure (측정)</strong><br>
+고객 요구사항을 충족시키기 위한 성과 지표를 정의하고, 해당 요구를 만족시킬 수 있는 측정 가능한 특성들을 파악한다.</li>
+<li><strong>Analyze (분석)</strong><br>
+설계 옵션을 분석하고, 최적 설계를 위한 다양한 대안들을 평가한다. 기술적, 경제적, 시장적 측면을 고려한다.</li>
+<li><strong>Design (설계)</strong><br>
+실제 제품이나 서비스 설계를 진행한다. 이 단계에서는 제품 설계가 고객 요구 사항과 품질 목표를 충족하도록 세부 사항을 결정한다.</li>
+<li><strong>Verify (검증)</strong><br>
+설계가 실제로 고객 요구를 충족하는지 확인하고, 필요한 경우 추가적인 수정과 개선을 통해 제품을 검증한다.</li>
 </ul>
 </dd>
 <dt>IDOV (Identify, Design, Optimize, Validate)</dt>
 <dd>
 <ul>
 <li>이 방법은 DFSS의 또 다른 접근 방식으로, IDOV는 특히 제품 설계에 필요한 각 단계를 좀 더 구체적으로 정의한다.</li>
-<li>Identify: 고객 요구 사항과 기대를 파악한다.</li>
-<li>Design: 그 요구를 충족할 수 있는 제품 설계를 한다.</li>
-<li>Optimize: 설계를 최적화하여 성능과 품질을 극대화한다.</li>
-<li>Validate: 최종 설계가 실제 환경에서 잘 작동하는지 검증한다.</li>
+<li><strong>Identify</strong><br>
+고객 요구 사항과 기대를 파악한다.</li>
+<li><strong>Design</strong><br>
+그 요구를 충족할 수 있는 제품 설계를 한다.</li>
+<li><strong>Optimize</strong><br>
+설계를 최적화하여 성능과 품질을 극대화한다.</li>
+<li><strong>Validate</strong><br>
+최종 설계가 실제 환경에서 잘 작동하는지 검증한다.</li>
 </ul>
 </dd>
 </dl>
-</section>
-<section id="강건설계" class="level3">
-<h3 class="anchored" data-anchor-id="강건설계">강건설계</h3>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 100-1-11, 106-1-13, 112-3-2, 115-2-1, 118-1-4">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1384,7 +1443,10 @@ end
 
 </div>
 </div>
-<p><strong>강건설계</strong>(Robust Design)는 다구찌 실험설계라고도 하며, 일본 다구찌 바사가 구현한 제품 품질 개선 기법으로 제어 가능한 인자로 제어 불가능한 노이즈(Noise, 환경잡음인자)에 강건하게 설계하는 방법이다.</p>
+</section>
+<section id="sec-robust-design" class="level3">
+<h3 class="anchored" data-anchor-id="sec-robust-design">강건설계</h3>
+<p><strong>강건설계</strong>(Robust Design)는 다구찌 실험설계라고도 하며, 일본 다구찌 바사가 구현한 제품 품질 개선 기법으로 <font color="blue">제어 가능한 인자로 제어 불가능한 노이즈(Noise, 환경잡음인자)에 강건하게 설계</font>하는 방법이다.</p>
 <section id="품질-정의" class="level4">
 <h4 class="anchored" data-anchor-id="품질-정의">품질 정의</h4>
 <dl>
@@ -1398,18 +1460,16 @@ end
 </section>
 <section id="품질손실함수" class="level4">
 <h4 class="anchored" data-anchor-id="품질손실함수">품질손실함수</h4>
-<center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/taguchi_loss_function.png" class="img-fluid figure-img"></p>
 <figcaption>품질손실함수</figcaption>
 </figure>
 </div>
-</center>
 <p>다구찌 품질공학에서 품질 손실 함수는 품질을 경제적으로 측정하기 위한 수단이다. 다구찌는 품질 손실을 <strong>“기준값에서 벗어난 정도”</strong>로 정의하고, 이 손실이 고객에게 얼마나 불편을 주는지와 연결지었다. 품질 손실 함수는 다음과 같이 표현된다.</p>
-<p><span class="math display">\[
+<p><span id="eq-loss-function"><span class="math display">\[
 L(y) = k(y-T)^2
-\]</span></p>
+\tag{31.1}\]</span></span></p>
 <ul>
 <li>L(y): 손실함수</li>
 <li>y: 제품 실제 성능</li>
@@ -1486,10 +1546,6 @@ L(y) = k(y-T)^2
 </ul>
 </dd>
 </dl>
-</section>
-</section>
-<section id="친환경설계" class="level3">
-<h3 class="anchored" data-anchor-id="친환경설계">친환경설계</h3>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 103-1-7">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1503,7 +1559,11 @@ L(y) = k(y-T)^2
 
 </div>
 </div>
-<p><strong>친환경설계</strong>(DFE, design for environment)는 제품 전 수명주기, 모든 분야에서 환경, 안전, 보건에 맞게 설계를 수행하는 기법이다. 재생된 부품을 이용하도록 제품을 설계하거나 소비자가 사용 후 회사가 제품을 수거하여 사용 가능한 부품을 쉽게 재활용할 수 있도록 제품을 설계한다.</p>
+</section>
+</section>
+<section id="친환경설계" class="level3">
+<h3 class="anchored" data-anchor-id="친환경설계">친환경설계</h3>
+<p><strong>친환경설계</strong>(DFE, design for environment)는 <font color="blue">제품 전 수명주기, 모든 분야에서 환경, 안전, 보건에 맞게 설계</font>를 수행하는 기법이다. 재생된 부품을 이용하도록 제품을 설계하거나 소비자가 사용 후 회사가 제품을 수거하여 사용 가능한 부품을 쉽게 재활용할 수 있도록 제품을 설계한다.</p>
 <dl>
 <dt>특징</dt>
 <dd>
@@ -1516,9 +1576,6 @@ L(y) = k(y-T)^2
 </dd>
 </dl>
 <p>제품에 대한 환경 전과정 영향평가(<strong>LCA</strong>, life cycle assessment)<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>와 총비용분석(<strong>TCA</strong>, total cost analysis)을 기초로 분해를 고려한 설계(<strong>DfD</strong>, design for disassembly)와 재활용을 고려한 설계(<strong>DfR</strong>, design for recycling), 회수 및 재사용을 고려한 설계(<strong>DfR</strong>, design for resue) 등을 주된 내용으로 하는 제품 설계기법이다.</p>
-</section>
-<section id="역공학" class="level3">
-<h3 class="anchored" data-anchor-id="역공학">역공학</h3>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 115-1-5">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1532,16 +1589,24 @@ L(y) = k(y-T)^2
 
 </div>
 </div>
-<p><strong>역공학</strong>(Reverse Engineering)은 기존의 제품이나 시스템을 분석하여 그 구조, 동작 원리, 설계 등을 이해하고 이를 바탕으로 원래 설계나 소프트웨어, 하드웨어 등을 재구성하는 과정을 의미한다. 역공학은 주로 기존 제품 기능을 분석하고, 그 제품을 개선하거나, 호환성 있는 제품을 만들기 위해 사용된다.</p>
+</section>
+<section id="sec-reverse-engineering" class="level3">
+<h3 class="anchored" data-anchor-id="sec-reverse-engineering">역공학</h3>
+<p><strong>역공학</strong>(Reverse Engineering)은 <font color="blue">기존의 제품이나 시스템을 분석하여 그 구조, 동작 원리, 설계 등을 이해하고 이를 바탕으로 원래 설계나 소프트웨어, 하드웨어 등을 재구성하는 과정</font>을 의미한다. 역공학은 주로 기존 제품 기능을 분석하고, 그 제품을 개선하거나, 호환성 있는 제품을 만들기 위해 사용된다.</p>
 <dl>
 <dt>역공학의 주요 목적</dt>
 <dd>
 <ul>
-<li>기존 제품 분석: 제품이나 시스템을 분해하고 분석하여 그 구조와 동작 원리를 이해하는 데 목적이 있다.</li>
-<li>호환성 확보: 특정 제품이나 기술에 대한 호환성을 확보하기 위해 역공학을 사용하여 새로운 제품이나 시스템을 개발한다.</li>
-<li>개선 및 최적화: 기존 제품 성능이나 기능을 향상시키기 위해 역공학을 통해 설계를 분석하고 개선한다.</li>
-<li>복제 및 모방: 경쟁 제품을 분석하여 유사한 제품을 설계하거나, 기존 제품 기능을 모방하여 새로운 제품을 개발하는 데 사용된다.</li>
-<li>보안 및 취약점 분석: 소프트웨어나 하드웨어 시스템 보안 취약점을 분석하여 이를 개선하거나 해킹 방어를 위한 연구에 사용된다.</li>
+<li><strong>기존 제품 분석</strong><br>
+제품이나 시스템을 분해하고 분석하여 그 구조와 동작 원리를 이해하는 데 목적이 있다.</li>
+<li><strong>호환성 확보</strong><br>
+특정 제품이나 기술에 대한 호환성을 확보하기 위해 역공학을 사용하여 새로운 제품이나 시스템을 개발한다.</li>
+<li><strong>개선 및 최적화</strong><br>
+기존 제품 성능이나 기능을 향상시키기 위해 역공학을 통해 설계를 분석하고 개선한다.</li>
+<li><strong>복제 및 모방</strong><br>
+경쟁 제품을 분석하여 유사한 제품을 설계하거나, 기존 제품 기능을 모방하여 새로운 제품을 개발하는 데 사용된다.</li>
+<li><strong>보안 및 취약점 분석</strong><br>
+소프트웨어나 하드웨어 시스템 보안 취약점을 분석하여 이를 개선하거나 해킹 방어를 위한 연구에 사용된다.</li>
 </ul>
 </dd>
 <dt>역공학의 주요 적용 분야</dt>
@@ -1602,25 +1667,29 @@ L(y) = k(y-T)^2
 <dt>역공학의 장점</dt>
 <dd>
 <ul>
-<li>기존 기술 분석: 기존 제품이나 시스템 작동 원리나 성능을 분석하여 새로운 제품이나 시스템 개발에 필요한 정보를 제공한다.</li>
-<li>기술적 혁신: 기존 제품 한계를 이해하고 이를 개선하여 더 나은 기술을 개발할 수 있는 기회를 제공한다.</li>
-<li>호환성 향상: 다양한 시스템이나 제품 간 호환성을 높이는 데 유용하다.</li>
-<li>보안 개선: 보안 취약점을 찾아내어 시스템을 강화할 수 있다.</li>
+<li>기존 기술 분석<br>
+기존 제품이나 시스템 작동 원리나 성능을 분석하여 새로운 제품이나 시스템 개발에 필요한 정보를 제공한다.</li>
+<li>기술적 혁신<br>
+기존 제품 한계를 이해하고 이를 개선하여 더 나은 기술을 개발할 수 있는 기회를 제공한다.</li>
+<li>호환성 향상<br>
+다양한 시스템이나 제품 간 호환성을 높이는 데 유용하다.</li>
+<li>보안 개선<br>
+보안 취약점을 찾아내어 시스템을 강화할 수 있다.</li>
 </ul>
 </dd>
 <dt>역공학의 한계</dt>
 <dd>
 <ul>
-<li>법적 문제: 기존 제품이나 소프트웨어에 대한 저작권이나 특허권이 있을 경우, 역공학이 법적 문제를 일으킬 수 있다. 특히 소프트웨어 역공학은 저작권법에 의해 제한될 수 있다.</li>
-<li>윤리적 문제: 경쟁 제품을 분석하고 이를 모방하는 과정에서 윤리적 논란이 발생할 수 있다.</li>
-<li>시간과 비용: 제품을 분해하고 분석하는 데 많은 시간과 비용이 소요될 수 있다.</li>
+<li>법적 문제<br>
+기존 제품이나 소프트웨어에 대한 저작권이나 특허권이 있을 경우, 역공학이 법적 문제를 일으킬 수 있다. 특히 소프트웨어 역공학은 저작권법에 의해 제한될 수 있다.</li>
+<li>윤리적 문제<br>
+경쟁 제품을 분석하고 이를 모방하는 과정에서 윤리적 논란이 발생할 수 있다.</li>
+<li>시간과 비용<br>
+제품을 분해하고 분석하는 데 많은 시간과 비용이 소요될 수 있다.</li>
 </ul>
 </dd>
 </dl>
 <p>역공학은 기존 제품이나 시스템 동작 원리와 설계를 분석하여 이를 개선하거나 새로운 제품을 개발하는 데 중요한 기술이다. 다양한 산업에서 널리 활용되고 있지만 법적 및 윤리적 문제에 대한 고려가 필요하다. 역공학을 통해 기술혁신과 경쟁력을 강화할 수 있으며, 새로운 시장 기회를 창출하는 데 중요한 역할을 할 수 있다.</p>
-</section>
-<section id="vrp" class="level3">
-<h3 class="anchored" data-anchor-id="vrp">VRP</h3>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 115-3-1">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1634,6 +1703,9 @@ L(y) = k(y-T)^2
 
 </div>
 </div>
+</section>
+<section id="sec-vrp" class="level3">
+<h3 class="anchored" data-anchor-id="sec-vrp">VRP</h3>
 <p><strong>VRP (Variety Reduction Program)</strong>은 주로 제조업과 물류 분야에서 사용되는 개념으로, 제품이나 서비스의 <strong>다양성</strong>을 줄이는 <strong>효율화 전략</strong>이다. 이 프로그램 목적은 <strong>불필요한 제품 변형</strong>이나 <strong>옵션</strong>을 제거하거나 축소하여 생산성을 높이고, <strong>비용 절감</strong>, <strong>재고 관리 효율화</strong>, <strong>공정 단순화</strong> 등을 달성하는 것이다.</p>
 <dl>
 <dt>VRP의 주요 목적과 장점</dt>
@@ -1664,10 +1736,14 @@ L(y) = k(y-T)^2
 <dt>VRP 구현 방법</dt>
 <dd>
 <ul>
-<li><strong>제품 표준화</strong>: 다양한 제품을 유사한 형태로 통합하거나, 일부 옵션을 제거하여 제품의 종류를 줄인다.</li>
-<li><strong>부품 표준화</strong>: 부품이나 부자재를 표준화하여, 여러 제품에서 동일한 부품을 사용할 수 있도록 한다.</li>
-<li><strong>프로세스 최적화</strong>: 생산 과정에서 불필요한 단계를 제거하거나 통합하여 효율적인 생산 라인을 구축한다.</li>
-<li><strong>고객 맞춤화 축소</strong>: 고객의 다양한 요구를 수용하는 대신, 일정한 범위 내에서 선택을 제공하여 맞춤화를 줄인다.</li>
+<li><strong>제품 표준화</strong><br>
+다양한 제품을 유사한 형태로 통합하거나, 일부 옵션을 제거하여 제품의 종류를 줄인다.</li>
+<li><strong>부품 표준화</strong><br>
+부품이나 부자재를 표준화하여, 여러 제품에서 동일한 부품을 사용할 수 있도록 한다.</li>
+<li><strong>프로세스 최적화</strong><br>
+생산 과정에서 불필요한 단계를 제거하거나 통합하여 효율적인 생산 라인을 구축한다.</li>
+<li><strong>고객 맞춤화 축소</strong><br>
+고객의 다양한 요구를 수용하는 대신, 일정한 범위 내에서 선택을 제공하여 맞춤화를 줄인다.</li>
 </ul>
 </dd>
 <dt>VRP 예시</dt>
@@ -1679,7 +1755,7 @@ L(y) = k(y-T)^2
 </dd>
 </dl>
 <p>VRP는 기업 <strong>자원 배분</strong>를 효율적으로 하여 경쟁력을 강화하는 데 중요한 역할을 하며, <strong>고객 기본 요구</strong>를 만족시키면서 불필요한 다양성을 없애는 전략이다.</p>
-<p>VRP 5대 개념은 고정봐 변동, 편성 조합, 다기능 집약, 범위, 그리고 계열이다. 이는 다양한 고객 니즈에 효과적으로 대응하기 위해제품, 부품, 설비, 공정 등 공용화 제품수 삭감 및 단순화 모듈 등에 대해 대폭적인 원가절감을 도모할 수 있다.</p>
+<p>VRP 5대 개념은 고정과 변동, 편성 조합, 다기능 집약, 범위, 그리고 계열이다. 이는 다양한 고객 니즈에 효과적으로 대응하기 위해제품, 부품, 설비, 공정 등 공용화 제품수 삭감 및 단순화 모듈 등에 대해 대폭적인 원가절감을 도모할 수 있다.</p>
 <dl>
 <dt>VRP 5대 개념</dt>
 <dd>
@@ -1714,10 +1790,8 @@ L(y) = k(y-T)^2
 </dl>
 </section>
 </section>
-<section id="sec-11-ref" class="level2">
-<h2 class="anchored" data-anchor-id="sec-11-ref">참고자료</h2>
-<section id="sec-design-thinking" class="level3">
-<h3 class="anchored" data-anchor-id="sec-design-thinking">디자인 사고</h3>
+<section id="sec-ref-1102" class="level2">
+<h2 class="anchored" data-anchor-id="sec-ref-1102">참고자료</h2>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출 112-1-6">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1731,7 +1805,9 @@ L(y) = k(y-T)^2
 
 </div>
 </div>
-<p><strong>디자인 사고</strong>(Design Thinking)는 문제 해결을 위한 창의적이고 사용자 중심의 접근 방법이다. 이는 사용자의 니즈와 문제를 깊이 이해하고, 다양한 아이디어를 생성하여 실험하고, 최종적으로 혁신적인 해결책을 도출하는 과정이다. 디자인 사고는 주로 다음과 같은 5단계로 진행된다.</p>
+<section id="sec-design-thinking" class="level3">
+<h3 class="anchored" data-anchor-id="sec-design-thinking">디자인 사고</h3>
+<p><strong>디자인 사고</strong>(Design Thinking)는 <font color="blue">문제 해결을 위한 창의적이고 사용자 중심의 접근 방법</font>이다. 이는 사용자의 니즈와 문제를 깊이 이해하고, 다양한 아이디어를 생성하여 실험하고, 최종적으로 혁신적인 해결책을 도출하는 과정이다. 디자인 사고는 주로 다음과 같은 5단계로 진행된다.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://images.squarespace-cdn.com/content/v1/5d6700e799e03b0001e82f2b/1626883822809-VNM8FIOPSX147NBK8SZ2/DesignThinkingProcessChart.png?format=1500w" class="img-fluid figure-img"></p>
@@ -1742,18 +1818,20 @@ L(y) = k(y-T)^2
 <dt>디자인 사고 5단계</dt>
 <dd>
 <ol type="1">
-<li>공감하다: 사용자의 경험과 감정을 이해하기 위해 인터뷰, 관찰 등의 방법을 사용하여 문제를 깊이 탐색하다.</li>
-<li>문제를 정의하다: 수집한 데이터를 바탕으로 핵심 문제를 명확히 정의하다.</li>
-<li>아이디어를 내다: 다양한 관점에서 문제 해결을 위한 창의적인 아이디어를 도출하다.</li>
-<li>프로토타입을 만들다: 아이디어를 구체적인 형태로 만들어 실험해 보고, 개선점을 찾다.</li>
-<li>테스트하다: 프로토타입을 사용자와 함께 테스트하여, 피드백을 받고 최적의 해결책을 찾아내다.</li>
+<li><strong>공감하다</strong><br>
+사용자의 경험과 감정을 이해하기 위해 인터뷰, 관찰 등의 방법을 사용하여 문제를 깊이 탐색하다.</li>
+<li><strong>문제를 정의하다</strong><br>
+수집한 데이터를 바탕으로 핵심 문제를 명확히 정의하다.</li>
+<li><strong>아이디어를 내다</strong><br>
+다양한 관점에서 문제 해결을 위한 창의적인 아이디어를 도출하다.</li>
+<li><strong>프로토타입을 만들다</strong><br>
+아이디어를 구체적인 형태로 만들어 실험해 보고, 개선점을 찾다.</li>
+<li><strong>테스트하다</strong><br>
+프로토타입을 사용자와 함께 테스트하여, 피드백을 받고 최적의 해결책을 찾아내다.</li>
 </ol>
 </dd>
 </dl>
 <p>디자인 사고는 반복적인 과정으로 문제 해결을 위해 지속적으로 피드백을 반영하고 개선해 나가는 점이 특징이다.</p>
-</section>
-<section id="sec-bpr" class="level3">
-<h3 class="anchored" data-anchor-id="sec-bpr">BPR</h3>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출 112-1-3">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1767,29 +1845,41 @@ L(y) = k(y-T)^2
 
 </div>
 </div>
-<p><strong>BPR (Business Process Reengineering)</strong>은 기업의 비즈니스 프로세스를 근본적으로 재설계하여 효율성을 극대화하고 성과를 개선하는 관리 혁신 방법론이다. BPR은 기존의 업무 프로세스를 분석하고, 불필요한 단계를 제거하거나 새로운 방식으로 재설계하여 조직의 성과를 획기적으로 향상시키는 데 중점을 둔다.</p>
+</section>
+<section id="sec-bpr" class="level3">
+<h3 class="anchored" data-anchor-id="sec-bpr">BPR</h3>
+<p><strong>BPR (Business Process Reengineering)</strong>은 <font color="blue">기업의 비즈니스 프로세스를 근본적으로 재설계하여 효율성을 극대화하고 성과를 개선하는 관리 혁신 방법론</font>이다. BPR은 기존의 업무 프로세스를 분석하고, 불필요한 단계를 제거하거나 새로운 방식으로 재설계하여 조직의 성과를 획기적으로 향상시키는 데 중점을 둔다.</p>
 <dl>
-<dt>BPR의 주요 개념</dt>
+<dt>BPR 주요 개념</dt>
 <dd>
 <ul>
-<li>근본적인 재설계: 기존의 프로세스를 완전히 새롭게 바꾸는 것을 의미한다. 단순히 기존 프로세스를 개선하는 것이 아니라, 필요 없는 단계를 제거하고 프로세스를 근본적으로 변화시킨다.</li>
-<li>프로세스 중심 접근법: BPR은 조직의 업무를 특정 기능이나 부서 중심이 아닌 전체 비즈니스 프로세스를 중심으로 바라본다. 고객 만족도를 높이고, 효율성을 극대화하기 위해 전체적인 업무 흐름을 재설계한다.</li>
-<li>IT 기술의 활용: BPR에서는 정보기술(IT)을 활용하여 프로세스를 자동화하거나 디지털화하여 효율성을 향상시킨다. 기존의 수작업이나 비효율적인 시스템을 IT 시스템으로 대체하거나 개선한다.</li>
-<li>고객 중심의 재설계: 고객의 요구를 우선시하여 업무 프로세스를 설계하고, 고객에게 더 나은 가치를 제공할 수 있도록 한다.</li>
+<li><strong>근본적인 재설계</strong><br>
+기존의 프로세스를 완전히 새롭게 바꾸는 것을 의미한다. 단순히 기존 프로세스를 개선하는 것이 아니라, 필요 없는 단계를 제거하고 프로세스를 근본적으로 변화시킨다.</li>
+<li><strong>프로세스 중심 접근법</strong><br>
+BPR은 조직의 업무를 특정 기능이나 부서 중심이 아닌 전체 비즈니스 프로세스를 중심으로 바라본다. 고객 만족도를 높이고, 효율성을 극대화하기 위해 전체적인 업무 흐름을 재설계한다.</li>
+<li><strong>IT 기술의 활용</strong><br>
+BPR에서는 정보기술(IT)을 활용하여 프로세스를 자동화하거나 디지털화하여 효율성을 향상시킨다. 기존의 수작업이나 비효율적인 시스템을 IT 시스템으로 대체하거나 개선한다.</li>
+<li><strong>고객 중심의 재설계</strong><br>
+고객의 요구를 우선시하여 업무 프로세스를 설계하고, 고객에게 더 나은 가치를 제공할 수 있도록 한다.</li>
 </ul>
 </dd>
 <dt>BPR의 주요 단계</dt>
 <dd>
 <ul>
-<li>프로세스 분석: 현재 진행되고 있는 비즈니스 프로세스를 분석하고, 비효율적인 부분이나 문제점을 파악한다.</li>
-<li>목표 설정: BPR을 통해 달성하고자 하는 목표를 설정한다. 예를 들어, 비용 절감, 시간 단축, 품질 개선 등 명확한 목표를 정의한다.</li>
-<li>재설계: 기존의 프로세스를 근본적으로 재설계하여 불필요한 단계나 중복을 제거하고, 새로운 방법이나 기술을 적용하여 효율성을 높인다.</li>
-<li>실행 및 관리: 새로운 프로세스를 실행하고, 성과를 모니터링하여 개선할 부분을 지속적으로 관리한다.</li>
+<li><strong>프로세스 분석</strong><br>
+현재 진행되고 있는 비즈니스 프로세스를 분석하고, 비효율적인 부분이나 문제점을 파악한다.</li>
+<li><strong>목표 설정</strong><br>
+BPR을 통해 달성하고자 하는 목표를 설정한다. 예를 들어, 비용 절감, 시간 단축, 품질 개선 등 명확한 목표를 정의한다.</li>
+<li><strong>재설계</strong><br>
+기존의 프로세스를 근본적으로 재설계하여 불필요한 단계나 중복을 제거하고, 새로운 방법이나 기술을 적용하여 효율성을 높인다.</li>
+<li><strong>실행 및 관리</strong><br>
+새로운 프로세스를 실행하고, 성과를 모니터링하여 개선할 부분을 지속적으로 관리한다.</li>
 </ul>
 </dd>
 </dl>
 <p>BPR 장점과 단점은 다음과 같다.</p>
 <table class="caption-top table">
+<caption>BPR 장점과 단점</caption>
 <colgroup>
 <col style="width: 52%">
 <col style="width: 47%">
@@ -1819,13 +1909,13 @@ L(y) = k(y-T)^2
 </tr>
 </tbody>
 </table>
-<p>BPR을 성공적으로 수행하기 위해서는 <strong>변화 관리, 체계적인 계획 수립, 조직 구성원의 적극적인 참여</strong>가 필수적이다.</p>
+<p>BPR을 성공적으로 수행하기 위해서는 <font color="blue">변화 관리, 체계적인 계획 수립, 조직 구성원의 적극적인 참여</font>가 필수적이다.</p>
 <dl>
 <dt>BPR의 적용 사례</dt>
 <dd>
 <ul>
-<li>제조업: 제조업체들이 생산 프로세스를 재설계하여 생산성을 향상시키고, 생산 비용을 절감한 사례가 많다. 예를 들어, <strong>하니웰(Honeywell)</strong>은 BPR을 통해 생산 라인을 재설계하여 대규모 비용 절감을 달성했다.</li>
-<li>서비스업: 서비스 산업에서는 고객 서비스 개선과 프로세스 자동화를 통해 고객 만족도를 높이는 데 BPR을 활용한다. <strong>뱅크 오브 아메리카(Bank of America)</strong>는 고객 응대 프로세스를 재설계하여 서비스 시간을 단축하고 고객 만족도를 증가시켰다.</li>
+<li><strong>제조업</strong>: 제조업체들이 생산 프로세스를 재설계하여 생산성을 향상시키고, 생산 비용을 절감한 사례가 많다. 예를 들어, <strong>하니웰(Honeywell)</strong>은 BPR을 통해 생산 라인을 재설계하여 대규모 비용 절감을 달성했다.</li>
+<li><strong>서비스업</strong>: 서비스 산업에서는 고객 서비스 개선과 프로세스 자동화를 통해 고객 만족도를 높이는 데 BPR을 활용한다. <strong>뱅크 오브 아메리카(Bank of America)</strong>는 고객 응대 프로세스를 재설계하여 서비스 시간을 단축하고 고객 만족도를 증가시켰다.</li>
 </ul>
 </dd>
 </dl>
