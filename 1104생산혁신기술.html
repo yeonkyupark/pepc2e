@@ -489,7 +489,7 @@ window.Quarto = {
   <li><a href="#칸판-운영-규칙" id="toc-칸판-운영-규칙" class="nav-link" data-scroll-target="#칸판-운영-규칙">칸판 운영 규칙</a></li>
   <li><a href="#칸반-운영-조건" id="toc-칸반-운영-조건" class="nav-link" data-scroll-target="#칸반-운영-조건">칸반 운영 조건</a></li>
   </ul></li>
-  <li><a href="#jit-ⅱ" id="toc-jit-ⅱ" class="nav-link" data-scroll-target="#jit-ⅱ">JIT Ⅱ</a></li>
+  <li><a href="#sec-jit2" id="toc-sec-jit2" class="nav-link" data-scroll-target="#sec-jit2">JIT Ⅱ</a></li>
   <li><a href="#sec-toc" id="toc-sec-toc" class="nav-link" data-scroll-target="#sec-toc">TOC</a>
   <ul>
   <li><a href="#toc-개념" id="toc-toc-개념" class="nav-link" data-scroll-target="#toc-개념">TOC 개념</a>
@@ -501,8 +501,8 @@ window.Quarto = {
   <li><a href="#sec-ccpm" id="toc-sec-ccpm" class="nav-link" data-scroll-target="#sec-ccpm">CCPM</a></li>
   <li><a href="#sec-throughput-accounting" id="toc-sec-throughput-accounting" class="nav-link" data-scroll-target="#sec-throughput-accounting">Throughput Accounting</a></li>
   <li><a href="#thinking-process" id="toc-thinking-process" class="nav-link" data-scroll-target="#thinking-process">Thinking Process</a></li>
-  <li><a href="#mta" id="toc-mta" class="nav-link" data-scroll-target="#mta">MTA</a></li>
-  <li><a href="#otp" id="toc-otp" class="nav-link" data-scroll-target="#otp">OTP</a></li>
+  <li><a href="#sec-mta" id="toc-sec-mta" class="nav-link" data-scroll-target="#sec-mta">MTA</a></li>
+  <li><a href="#sec-otp" id="toc-sec-otp" class="nav-link" data-scroll-target="#sec-otp">OTP</a></li>
   <li><a href="#sec-aps" id="toc-sec-aps" class="nav-link" data-scroll-target="#sec-aps">APS</a></li>
   </ul></li>
   <li><a href="#sec-lean-six-sigma" id="toc-sec-lean-six-sigma" class="nav-link" data-scroll-target="#sec-lean-six-sigma">린 6시그마</a>
@@ -512,7 +512,11 @@ window.Quarto = {
   <li><a href="#sec-lean-thinking" id="toc-sec-lean-thinking" class="nav-link" data-scroll-target="#sec-lean-thinking">Lean thinking</a></li>
   <li><a href="#sec-vsm" id="toc-sec-vsm" class="nav-link" data-scroll-target="#sec-vsm">가치흐름도(VSM)</a></li>
   </ul></li>
-  <li><a href="#triz" id="toc-triz" class="nav-link" data-scroll-target="#triz">TRIZ</a></li>
+  <li><a href="#sec-triz" id="toc-sec-triz" class="nav-link" data-scroll-target="#sec-triz">TRIZ</a></li>
+  <li><a href="#sec-ref-1104" id="toc-sec-ref-1104" class="nav-link" data-scroll-target="#sec-ref-1104">참고자료</a>
+  <ul>
+  <li><a href="#sec-ctp" id="toc-sec-ctp" class="nav-link" data-scroll-target="#sec-ctp">CTP</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/yeonkyupark/pepc2e/edit/main/1104생산혁신기술.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
     </div>
@@ -538,8 +542,6 @@ window.Quarto = {
 </header>
 
 
-<section id="sec-kanban" class="level2">
-<h2 class="anchored" data-anchor-id="sec-kanban">칸판 생산방식</h2>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 97-1-5, 109-1-4">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -553,20 +555,37 @@ window.Quarto = {
 
 </div>
 </div>
+<section id="sec-kanban" class="level2">
+<h2 class="anchored" data-anchor-id="sec-kanban">칸판 생산방식</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Kanban_principles.svg/1920px-Kanban_principles.svg.png" class="img-fluid figure-img"></p>
 <figcaption>https://en.wikipedia.org/wiki/Kanban</figcaption>
 </figure>
 </div>
-<p><strong>칸판</strong>(Kanban, 또는 간판으로 읽음)생산 방식은 “필요한 것은 필요한 때에 필요한 만큼만”이라는 JIT(Just In Time) 사상을 실현하기 위해 도요타에서 창안 되었다. JIT 생산에 있어 정보 시스템 역할을 한다. 즉 어떤 제품이나 부품이 언제 얼마나 필요한가를 알려주는 기능이다.</p>
+<p><strong>칸판</strong>(Kanban, 또는 간판으로 읽음)생산 방식은 “필요한 것은 필요한 때에 필요한 만큼만”이라는 JIT(Just In Time) 사상을 실현하기 위해 도요타에서 창안 되었다. <a href="0101경쟁우위생산전략.html#sec-jit" class="quarto-xref"><span>JIT 생산</span></a>에 있어 정보 시스템 역할을 한다. 즉 어떤 제품이나 부품이 언제 얼마나 필요한가를 알려주는 기능이다.</p>
 <dl>
 <dt>간판 기능을 통해 얻을 수 있는 이점</dt>
 <dd>
 <ul>
-<li>재고 최소화: 불필요한 재고를 줄여 자원 낭비를 방지하고 재고 회전율을 높일 수 있다.</li>
-<li>효율적인 생산 관리: 각 공정에서 필요한 자재나 부품이 정확한 양만큼 제때에 공급되어 생산 효율성을 극대화활 수 있다.</li>
-<li>유연한 생산: 수요 변화에 맞춰 생산량을 조절할 수 있어, 변동성이 큰 시장 환경에 빠르게 대응할 수 있다.</li>
+<li><dl>
+<dt>재고 최소화</dt>
+<dd>
+불필요한 재고를 줄여 자원 낭비를 방지하고 재고 회전율을 높일 수 있다.
+</dd>
+</dl></li>
+<li><dl>
+<dt>효율적인 생산 관리</dt>
+<dd>
+각 공정에서 필요한 자재나 부품이 정확한 양만큼 제때에 공급되어 생산 효율성을 극대화활 수 있다.
+</dd>
+</dl></li>
+<li><dl>
+<dt>유연한 생산</dt>
+<dd>
+수요 변화에 맞춰 생산량을 조절할 수 있어, 변동성이 큰 시장 환경에 빠르게 대응할 수 있다.
+</dd>
+</dl></li>
 </ul>
 </dd>
 </dl>
@@ -576,7 +595,27 @@ window.Quarto = {
 <dl>
 <dt>주요 기능</dt>
 <dd>
-<font color="blue">1. 재고 관리 및 생산 조정</font> - 필요한 물품 수량과 재고 수준을 실시간으로 파악하여 재고가 부족하지 않도록 저정하는 역할 - 부품이나 자재가 필요할 때 즉각적으로 다음 단계 생산 라인에 재료를 요청하는 신호 역할을 하며, 생산이 지연되지 않도록 함 - 과인생산이나 재고광잉을 방지하고 JIT원칙에 맞게 생산이 이루어지도록 함 <font color="blue">2. 생산 흐름 원활한 제어</font> - 생산 라인 상에서 부품이나 제품이 이동하는 경로를 제어하며, 각 공정에서 필요한 부품을 적시에 공급하도록 함 - 생산 라인 각 공정은 정해진 양만큼 자재를 일정한 주기로 받게 되어 과도한 자재가 쌓이지 않으며 생산 흐름이 원활하게 이루어짐 - 공정 간 혼잡이나 지연을 방지 <font color="blue">3. 통신 및 신호 역할</font> - 생산과 물류 간 소통을 돕는 중용한 신호로 작용 - 각 작업자나 생산 라인에서는 간판을 통해 부품 요청이 필요할 때 이를 다른 공정이나 공급자에게 전달 - 정보 전달이 지체되지 않고 실시간으로 이루어져 적시적소에 필요한 부품이 공급될 수 있음 - 불필요한 정보 전달 지연이나 오류를 줄일 수 있음
+<ol type="1">
+<li><font color="blue">재고 관리 및 생산 조정</font>
+<ul>
+<li>필요한 물품 수량과 재고 수준을 실시간으로 파악하여 재고가 부족하지 않도록 저정하는 역할</li>
+<li>부품이나 자재가 필요할 때 즉각적으로 다음 단계 생산 라인에 재료를 요청하는 신호 역할을 하며, 생산이 지연되지 않도록 함</li>
+<li>과인생산이나 재고광잉을 방지하고 JIT원칙에 맞게 생산이 이루어지도록 함</li>
+</ul></li>
+<li><font color="blue">생산 흐름 원활한 제어</font>
+<ul>
+<li>생산 라인 상에서 부품이나 제품이 이동하는 경로를 제어하며, 각 공정에서 필요한 부품을 적시에 공급하도록 함</li>
+<li>생산 라인 각 공정은 정해진 양만큼 자재를 일정한 주기로 받게 되어 과도한 자재가 쌓이지 않으며 생산 흐름이 원활하게 이루어짐</li>
+<li>공정 간 혼잡이나 지연을 방지</li>
+</ul></li>
+<li><font color="blue">통신 및 신호 역할</font>
+<ul>
+<li>생산과 물류 간 소통을 돕는 중용한 신호로 작용</li>
+<li>각 작업자나 생산 라인에서는 간판을 통해 부품 요청이 필요할 때 이를 다른 공정이나 공급자에게 전달</li>
+<li>정보 전달이 지체되지 않고 실시간으로 이루어져 적시적소에 필요한 부품이 공급될 수 있음</li>
+<li>불필요한 정보 전달 지연이나 오류를 줄일 수 있음</li>
+</ul></li>
+</ol>
 </dd>
 </dl>
 </section>
@@ -621,9 +660,9 @@ window.Quarto = {
 <section id="칸판-용기-수-산정" class="level3">
 <h3 class="anchored" data-anchor-id="칸판-용기-수-산정">칸판 용기 수 산정</h3>
 <p>Kanban 시스템에서 용기 수량을 계산하는 식은 다음과 같다.</p>
-<p><span class="math display">\[
+<p><span id="eq-number-kanban"><span class="math display">\[
 \text{용기 수량} = \frac{\text{수요량} \times \text{리드 타임} + \text{안전 재고}}{\text{용기당 수량}}
-\]</span></p>
+\tag{33.1}\]</span></span></p>
 <dl>
 <dt>여기서</dt>
 <dd>
@@ -679,10 +718,6 @@ window.Quarto = {
 </ol>
 </div>
 </div>
-</section>
-</section>
-<section id="jit-ⅱ" class="level2">
-<h2 class="anchored" data-anchor-id="jit-ⅱ">JIT Ⅱ</h2>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 106-1-4, 112-1-8">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -696,13 +731,14 @@ window.Quarto = {
 
 </div>
 </div>
+</section>
+</section>
+<section id="sec-jit2" class="level2">
+<h2 class="anchored" data-anchor-id="sec-jit2">JIT Ⅱ</h2>
 <p><strong>JIT Ⅱ</strong>는 원 재료나 부품 등을 납품하는 회사 직원이 <font color="blue">발주회사에 파견 근무하면서 필요한 자재와 부품 등을 적시에 공급하는 생산관리 시스템</font>을 말한다. 1986년 미국 오디오 부품업체 보스(BOSE)사에 의해처음 등장했다.</p>
-<p>납품회사로부터 필요한 때에 필요한 만큼 자재만 공급받음으로써 재고를 최소한으로 줄이는 JIT(Just In Time, <a href="#sec-kanban" class="quarto-xref"><span>칸판 생산방식</span></a>) 시스템과 다른점은 자재 및 부품 공잡자, 즉 납품회사 직원이 발주회사에 상주하면서 구매, 납품 업무를 대행하여 두 회사 모두 업무 효율성을 높임으로써 서로 윈윈할 수 있는 상호협력 시스템이라는 점이다. JIT 경우 발주업체 재고를 줄일 수 있는 반면 납품업체가 재고 부담을 떠안게 되는 단점이 있다.</p>
+<p>납품회사로부터 필요한 때에 필요한 만큼 자재만 공급받음으로써 재고를 최소한으로 줄이는 <a href="0101경쟁우위생산전략.html#sec-jit" class="quarto-xref"><span>JIT 생산</span></a>(Just In Time, <a href="#sec-kanban" class="quarto-xref"><span>칸판 생산방식</span></a>) 시스템과 다른점은 자재 및 부품 공잡자, 즉 납품회사 직원이 발주회사에 상주하면서 구매, 납품 업무를 대행하여 두 회사 모두 업무 효율성을 높임으로써 서로 윈윈할 수 있는 상호협력 시스템이라는 점이다. JIT 경우 발주업체 재고를 줄일 수 있는 반면 납품업체가 재고 부담을 떠안게 되는 단점이 있다.</p>
 <p>JIT Ⅱ 시스템은 리드타임을 줄여 시장 변화에 따르게 대처할 수 있고 품질향상과 원가절감이라는 효과가 있다. 납품회사와 발주회사는 신제품 개발을 동시에 수행하고, 자재 및 생산계획을 함게 세우고, 품질개선을 위한 노력도 함께 한다. 또 운송업체 직원 역시 발주회사에 상주함으로써 물류통제를 시행하는 경우도 있다.</p>
 <p>발주회사 입장에서는 구매에 신경 쓰지 않아도 되기 때문에 구매인력을 감축할수 있고, 부품 수급가격 인하 또는 동결 효과를 얻을 수 있다. 납품회사 입자에서는 발주회사와 장기계약을 통해 동반성장 효과를 얻고 수익 또한 향상시킬 수 있다.</p>
-</section>
-<section id="sec-toc" class="level2">
-<h2 class="anchored" data-anchor-id="sec-toc">TOC</h2>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 100-3-6">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -716,6 +752,9 @@ window.Quarto = {
 
 </div>
 </div>
+</section>
+<section id="sec-toc" class="level2">
+<h2 class="anchored" data-anchor-id="sec-toc">TOC</h2>
 <p>TOC는 Theory of Constraints 약자로 시스템이 목표를 달성하는데 가장 방해가 되는 요소인 <strong>제약</strong>(constraint)을 효율적으로 관리하는 방법이다<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
 <dl>
 <dt>능력제약(capacity constraint)</dt>
@@ -786,10 +825,6 @@ window.Quarto = {
 <li>제약 능력을 확장한다.</li>
 <li>타성에 젖지 말고 1단계로 돌아간다.</li>
 </ol>
-</section>
-</section>
-<section id="sec-dbr" class="level3">
-<h3 class="anchored" data-anchor-id="sec-dbr">DBR</h3>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 112-4-3, 121-1-12">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -803,14 +838,16 @@ window.Quarto = {
 
 </div>
 </div>
-<center>
+</section>
+</section>
+<section id="sec-dbr" class="level3">
+<h3 class="anchored" data-anchor-id="sec-dbr">DBR</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://upload.wikimedia.org/wikipedia/de/7/75/Herbie_in_a_queue.png" class="img-fluid figure-img"></p>
 <figcaption>https://de.m.wikipedia.org/wiki/Drum-Buffer-Rope</figcaption>
 </figure>
 </div>
-</center>
 <p><strong>DBR</strong>(Drum-Buffer-Rope)은 내부 물리적인 제약일 때, 제약 자원을 최대한 활용하기 위한 생산일정 수립 방법이다.</p>
 <dl>
 <dt>드럼(Drum)</dt>
@@ -862,9 +899,6 @@ window.Quarto = {
 </dl>
 <p>많은 공장에서는 3단계까지만 적용하더라도 생산량이 늘어난다. 대부분 공장은 생산능력이 실제 알고 있는 것보다 더 크며 단지 능력이 허비되는 것이 잘 드러나지 않아 모르고 있을 뿐이다. 이와같은 병목 활용법은 이런 사실을 알려 주고 설비투자를 감소시킬 수 있다.</p>
 <p>DBR은 병목공정을 최대한 활용할 수 있는 스케줄링 방법과 버퍼관리 방법을 제공한다. DBR은 납기 단축과 재고감축을 동시에달성하려는 일에 획기적인 성과를 달성한다. 병목공정에 초점을 맞추므로 시간이 적게 걸리고 비용도 적게 된다.</p>
-</section>
-<section id="sec-ccpm" class="level3">
-<h3 class="anchored" data-anchor-id="sec-ccpm">CCPM</h3>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 106-1-6, 124-4-1">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -878,6 +912,9 @@ window.Quarto = {
 
 </div>
 </div>
+</section>
+<section id="sec-ccpm" class="level3">
+<h3 class="anchored" data-anchor-id="sec-ccpm">CCPM</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://salesprocessengineering.net/wp-content/clip_image012.gif" class="img-fluid figure-img"></p>
@@ -912,9 +949,12 @@ window.Quarto = {
 <dt>CCPM은 애로사슬 작업을 완료시키는데 집중한다.</dt>
 <dd>
 <ul>
-<li>그리고 이를 실행하면서 일정을 통제하기 위한 버퍼관리(buffer management)를 준비해 두고 있다. 버퍼는 여유시간을 한 데 모아놓은 것을 지칭한다.</li>
+<li>그리고 이를 실행하면서 일정을 통제하기 위한 버퍼관리(buffer management)를 준비해 두고 있다.</li>
 </ul>
 </dd>
+</dl>
+<p>버퍼는 여유시간을 한 데 모아놓은 것을 지칭한다.</p>
+<dl>
 <dt>공급 버퍼 (Feeding Buffer)</dt>
 <dd>
 <ul>
@@ -989,9 +1029,6 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-</section>
-<section id="sec-throughput-accounting" class="level3">
-<h3 class="anchored" data-anchor-id="sec-throughput-accounting">Throughput Accounting</h3>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 115-1-6, 124-3-1">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1005,6 +1042,9 @@ window.Quarto = {
 
 </div>
 </div>
+</section>
+<section id="sec-throughput-accounting" class="level3">
+<h3 class="anchored" data-anchor-id="sec-throughput-accounting">Throughput Accounting</h3>
 <p><strong>쓰루풋 회계</strong>(TA, throughput accounting)는 다음 3가지 관점, 쓰루풋(throughput), 재고/투자(inventory/invenstment), 그리고 운영비용(operating expense)에서 판단한다.</p>
 <dl>
 <dt>Throughput(쓰루풋)</dt>
@@ -1107,12 +1147,168 @@ window.Quarto = {
 </dd>
 </dl>
 </section>
-<section id="mta" class="level3">
-<h3 class="anchored" data-anchor-id="mta">MTA</h3>
-<p>일반적으로 수주생산이 바람직하지만 어쩔 수 없이 재고생산(MTS, make to stock)이 필요한 경우가 있다. 성수기를 대비하여 미리 생산하는 경우와 고객 요구 납기가 공급리드타임보다 짧은 경우 고객 요구납기를 충족할 수 있는 전략적 위치에 품묵을 재고 생산함으로써 고객에게 모든 제품을 완전하고 즉각적으로 제공하며 고객은 그런 완전한 가용성에 대한 실제 가치를 인식해야 한다. 이를 위해 100% 재고 가용성을 보장하면서 과잉재고를 줄이는 방법으로 재고버퍼(stock buffer)를 운영하는 방법이 <strong>MTA</strong>(make to availability)이다.</p>
+<section id="sec-mta" class="level3">
+<h3 class="anchored" data-anchor-id="sec-mta">MTA</h3>
+<p>MTA(Make to Availability)는 <strong>제약이론(TOC: Theory of Constraints)</strong>에서 제안한 생산 전략으로, 특정 제품을 고객 주문 전에 미리 생산하여 <font color="blue">시장 수요를 충족할 수 있도록 가용 재고를 유지하는 방식</font>이다. TOC의 창시자인 엘리 골드랫(Eliyahu M. Goldratt)이 개발한 이 전략은 기존의 <strong>Make to Stock(MTS)</strong> 및 <strong>Make to Order(MTO)</strong> 방식과 차별화된다.</p>
+<dl>
+<dt>MTA의 핵심 개념</dt>
+<dd>
+<ul>
+<li><dl>
+<dt><strong>수요 기반 재고 관리</strong></dt>
+<dd>
+단순한 MTS 방식과 달리, MTA는 시장 수요를 면밀히 모니터링하며 <strong>재고 수준을 동적으로 조정</strong>한다.
+</dd>
+</dl></li>
+<li><dl>
+<dt><strong>Buffer Management(완충재고 관리)</strong></dt>
+<dd>
+TOC의 버퍼 개념을 활용하여, <strong>재고를 지나치게 많이 또는 적게 유지하지 않고 적정 수준을 유지</strong>한다.
+</dd>
+</dl></li>
+<li><dl>
+<dt><strong>Throughput(처리량) 극대화</strong></dt>
+<dd>
+생산 흐름을 최적화하여 <strong>시장에 신속하게 대응</strong>할 수 있도록 설계한다.
+</dd>
+</dl></li>
+</ul>
+</dd>
+<dt>MTA와 기존 생산 방식 비교</dt>
+<dd>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 30%">
+<col style="width: 30%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>구분</th>
+<th>MTA (Make to Availability)</th>
+<th>MTS (Make to Stock)</th>
+<th>MTO (Make to Order)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>생산 방식</td>
+<td>예상 수요 기반 생산, 재고 유지</td>
+<td>대량 생산 후 재고 보유</td>
+<td>고객 주문 후 생산</td>
+</tr>
+<tr class="even">
+<td>리드 타임</td>
+<td>매우 짧음 (즉시 공급 가능)</td>
+<td>짧음 (재고 있음)</td>
+<td>김 (주문 후 생산)</td>
+</tr>
+<tr class="odd">
+<td>재고 수준</td>
+<td><strong>시장 수요를 반영하여 조정</strong></td>
+<td>고정된 목표 재고 유지</td>
+<td>거의 없음</td>
+</tr>
+<tr class="even">
+<td>유연성</td>
+<td><strong>높음 (수요 변화에 즉각 대응)</strong></td>
+<td>낮음 (초과 생산 위험)</td>
+<td>중간 (맞춤 생산 가능)</td>
+</tr>
+<tr class="odd">
+<td>주요 위험</td>
+<td>과도한 재고 또는 재고 부족 가능</td>
+<td>재고 과잉, 폐기 위험</td>
+<td>주문 폭증 시 지연 발생</td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt>MTA의 적용 방법</dt>
+<dd>
+<ol type="1">
+<li>시장 수요 기반 재고 설정
+<ul>
+<li>과거 수요 데이터를 분석하여 <strong>초기 버퍼(완충재고) 수준을 설정</strong><br>
+</li>
+<li>수요 변화에 따라 재고를 동적으로 조정<br>
+</li>
+</ul></li>
+<li>버퍼 관리(Buffer Management) 적용
+<ul>
+<li><strong>버퍼 색상 구역</strong>을 사용하여 재고 상태를 모니터링
+<ul>
+<li>🔴 <strong>Red Zone</strong> (부족) → 생산 속도 증가<br>
+</li>
+<li>🟡 <strong>Yellow Zone</strong> (적정) → 정상 운영<br>
+</li>
+<li>🟢 <strong>Green Zone</strong> (과잉) → 생산 속도 조절<br>
+</li>
+</ul></li>
+</ul></li>
+<li>생산 및 공급망 조정
+<ul>
+<li>제약자원(병목 공정)을 고려하여 <strong>생산 일정을 최적화</strong><br>
+</li>
+<li>공급업체 및 물류 시스템과 협력하여 <strong>적절한 시점에 적정 수준의 재고 유지</strong></li>
+</ul></li>
+</ol>
+</dd>
+<dt>MTA의 장점과 단점</dt>
+<dd>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>장점</th>
+<th>단점</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>고객 서비스</strong></td>
+<td>높은 가용성 유지, 즉시 공급 가능</td>
+<td>잘못된 재고 설정 시 과잉 또는 부족 가능</td>
+</tr>
+<tr class="even">
+<td><strong>재고 비용</strong></td>
+<td>불필요한 초과 생산 감소</td>
+<td>초기 재고 설정이 어려울 수 있음</td>
+</tr>
+<tr class="odd">
+<td><strong>생산 유연성</strong></td>
+<td>수요 변화에 신속 대응</td>
+<td>변동성이 큰 시장에서는 관리가 까다로움</td>
+</tr>
+<tr class="even">
+<td><strong>리드 타임</strong></td>
+<td>즉시 공급 가능</td>
+<td>빠른 공급망 조정이 필요함</td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt>MTA가 효과적인 경우</dt>
+<dd>
+<ul>
+<li>제품 수요가 <strong>상대적으로 예측 가능</strong>하고 일정한 경우<br>
+</li>
+<li>리드 타임이 짧아야 하는 <strong>빠른 납기 요구 시장</strong><br>
+</li>
+<li>재고 비용을 적절히 관리하면서도 <strong>재고 부족을 방지해야 하는 환경</strong></li>
+</ul>
+</dd>
+</dl>
+<p>MTA는 TOC의 핵심 원리를 적용하여 <strong>시장 수요를 만족시키면서도 불필요한 재고 비용을 줄이는 전략</strong>이다. 기존의 MTS 또는 MTO 방식의 한계를 보완할 수 있는 효율적인 접근법으로 활용된다.</p>
 </section>
-<section id="otp" class="level3">
-<h3 class="anchored" data-anchor-id="otp">OTP</h3>
+<section id="sec-otp" class="level3">
+<h3 class="anchored" data-anchor-id="sec-otp">OTP</h3>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 103-2-6">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1214,9 +1410,6 @@ window.Quarto = {
 </table>
 </dd>
 </dl>
-</section>
-<section id="sec-aps" class="level3">
-<h3 class="anchored" data-anchor-id="sec-aps">APS</h3>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 106-1-5">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1230,7 +1423,10 @@ window.Quarto = {
 
 </div>
 </div>
-<p>2차 세계대전 이전에는 생산스케쥴링은 EOQ, Two-Bin 시스템 또는 LP(Linear Programming)를 사용하여 수립하였다. 이후 생산 패러다임 전환으로 몇몇 기술, <a href="0501생산계획수립.html#sec-mrp" class="quarto-xref"><span>MRP</span></a>, <a href="0101경쟁우위생산전략.html#sec-jit" class="quarto-xref"><span>JIT 생산</span></a>, <a href="#sec-toc" class="quarto-xref"><span>TOC</span></a> 등이 개발되어 실용화 되었다. 그러나 MRP, JIT와 같은 도구는 능력 제약을 고려한 스케쥴 제공에 어려움이 있었다. 이를 <strong>유한능력스케쥴링</strong>(FCS, finite capacity scheduling)이라 하고 FCS는 다른 시스템 계획 절차를 모든 자원을 최적화하는 스케줄링 절차와 통합하였다. 즉, FCS는 MRP 기본 입력 요소인 BOM을 보강하고 반제품(재공재고) 및 완제품 재고를 감안하여 고객에게 납품 가능일자(CTP, capable to promise)까지통보할 수 있는 대 고객 서비스 기능가지 갖추게 되었다.</p>
+</section>
+<section id="sec-aps" class="level3">
+<h3 class="anchored" data-anchor-id="sec-aps">APS</h3>
+<p>2차 세계대전 이전에는 생산스케쥴링은 EOQ, Two-Bin 시스템 또는 LP(Linear Programming)를 사용하여 수립하였다. 이후 생산 패러다임 전환으로 몇몇 기술, <a href="0501생산계획수립.html#sec-mrp" class="quarto-xref"><span>MRP</span></a>, <a href="0101경쟁우위생산전략.html#sec-jit" class="quarto-xref"><span>JIT 생산</span></a>, <a href="#sec-toc" class="quarto-xref"><span>TOC</span></a> 등이 개발되어 실용화 되었다. 그러나 MRP, JIT와 같은 도구는 능력 제약을 고려한 스케쥴 제공에 어려움이 있었다. 이를 <strong>유한능력스케쥴링</strong>(FCS, finite capacity scheduling)이라 하고 FCS는 다른 시스템 계획 절차를 모든 자원을 최적화하는 스케줄링 절차와 통합하였다. 즉, FCS는 MRP 기본 입력 요소인 BOM을 보강하고 반제품(재공재고) 및 완제품 재고를 감안하여 고객에게 납품 가능일자(<span class="quarto-unresolved-ref">?sec-cpt</span>, capable to promise)까지통보할 수 있는 대 고객 서비스 기능가지 갖추게 되었다.</p>
 <dl>
 <dt>전통적인 스케줄링 방법 한계</dt>
 <dd>
@@ -1266,10 +1462,7 @@ window.Quarto = {
 <ul>
 <li>전통적인 자원능력이나 고정 리드타임 가정을 배제하고 상황에 따라 변동하는 리드타임을 사용한다.</li>
 </ul></li>
-<li>진보된 로직을 사용한다.
-<ul>
-<li>ASP는 규칙에 따른 로직이나 최적화 이론, 휴리스틱 기법, 인공지능기법 등 주문과 생산 제약 조건 문제를 풀기위한 최신 기법을 사용한다.</li>
-</ul></li>
+<li>진보된 로직을 사용한다. - ASP는 규칙에 따른 로직이나 최적화 이론, 휴리스틱 기법, 인공지능기법 등 주문과 생산 제약 조건 문제를 풀기위한 최신 기법을 사용한다.</li>
 </ul>
 </dd>
 </dl>
@@ -1329,8 +1522,6 @@ window.Quarto = {
 </section>
 <section id="sec-lean-six-sigma" class="level2">
 <h2 class="anchored" data-anchor-id="sec-lean-six-sigma">린 6시그마</h2>
-<section id="sec-six-sigma" class="level3">
-<h3 class="anchored" data-anchor-id="sec-six-sigma">6시그마</h3>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 121-1-1">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1344,6 +1535,8 @@ window.Quarto = {
 
 </div>
 </div>
+<section id="sec-six-sigma" class="level3">
+<h3 class="anchored" data-anchor-id="sec-six-sigma">6시그마</h3>
 <p><strong>6 시그마(Six Sigma)</strong>는 품질 개선 및 관리 방법론으로, 제품이나 서비스의 품질을 <strong>통계적 기법</strong>을 이용해 향상시키는 접근법이다. 이 방법론은 결함을 최소화하고, 프로세스를 효율적으로 개선하기 위해 사용됩니다. 6 시그마는 <strong>“결함률을 100만 개 중 3.4개 이하로 줄이는 것”</strong>을 목표로 하며, 이는 거의 완벽에 가까운 품질을 의미한다.</p>
 <dl>
 <dt>6 시그마의 목표</dt>
@@ -1381,11 +1574,36 @@ window.Quarto = {
 <dt>6 시그마의 단계</dt>
 <dd>
 <ol type="1">
-<li><strong>Define (정의)</strong>: 개선할 문제를 정의하고, 프로젝트 목표를 설정한다. 고객의 요구사항을 명확히 하고, 개선할 프로세스의 범위와 목표를 정한다.</li>
-<li><strong>Measure (측정)</strong>: 현재 프로세스를 측정하고, 데이터를 수집하여 문제 정도와 원인을 파악한다. 이 단계에서는 성과 지표(KPI)를 설정하고, 문제를 구체적으로 측정할 수 있는 방법을 정의한다.</li>
-<li><strong>Analyze (분석)</strong>: 수집한 데이터를 분석하여 문제의 원인을 파악한다. 다양한 분석 기법을 활용하여 근본 원인(root cause)을 도출하고, 이를 해결하기 위한 방법을 찾는다.</li>
-<li><strong>Improve (개선)</strong>: 분석된 정보를 바탕으로 프로세스를 개선하기 위한 해결책을 제시하고 실행한다. 이 단계에서는 해결책을 실험적으로 적용하고, 개선 효과를 측정한다.</li>
-<li><strong>Control (통제)</strong>: 개선된 프로세스를 표준화하고, 지속적인 성과 관리를 위해 모니터링 체계를 구축한다. 개선된 프로세스가 유지되도록 관리한다.</li>
+<li><dl>
+<dt><strong>Define (정의)</strong></dt>
+<dd>
+개선할 문제를 정의하고, 프로젝트 목표를 설정한다. 고객의 요구사항을 명확히 하고, 개선할 프로세스의 범위와 목표를 정한다.
+</dd>
+</dl></li>
+<li><dl>
+<dt><strong>Measure (측정)</strong></dt>
+<dd>
+현재 프로세스를 측정하고, 데이터를 수집하여 문제 정도와 원인을 파악한다. 이 단계에서는 성과 지표(KPI)를 설정하고, 문제를 구체적으로 측정할 수 있는 방법을 정의한다.
+</dd>
+</dl></li>
+<li><dl>
+<dt><strong>Analyze (분석)</strong></dt>
+<dd>
+수집한 데이터를 분석하여 문제의 원인을 파악한다. 다양한 분석 기법을 활용하여 근본 원인(root cause)을 도출하고, 이를 해결하기 위한 방법을 찾는다.
+</dd>
+</dl></li>
+<li><dl>
+<dt><strong>Improve (개선)</strong></dt>
+<dd>
+분석된 정보를 바탕으로 프로세스를 개선하기 위한 해결책을 제시하고 실행한다. 이 단계에서는 해결책을 실험적으로 적용하고, 개선 효과를 측정한다.
+</dd>
+</dl></li>
+<li><dl>
+<dt><strong>Control (통제)</strong></dt>
+<dd>
+개선된 프로세스를 표준화하고, 지속적인 성과 관리를 위해 모니터링 체계를 구축한다. 개선된 프로세스가 유지되도록 관리한다.
+</dd>
+</dl></li>
 </ol>
 </dd>
 </dl>
@@ -1400,35 +1618,43 @@ window.Quarto = {
 <dt><strong>DMADV</strong></dt>
 <dd>
 <ol type="1">
-<li><strong>Define (정의)</strong>: 새로운 제품이나 프로세스를 설계할 목표를 정의하고, 고객의 요구사항을 명확히 한다.</li>
-<li><strong>Measure (측정)</strong>: 제품 또는 서비스의 요구 사항을 정의하고, 이를 만족시키기 위한 성과 지표를 측정한다.</li>
-<li><strong>Analyze (분석)</strong>: 요구 사항을 충족하는 설계 대안을 분석하고, 최적의 설계 방법을 선택한다.</li>
-<li><strong>Design (설계)</strong>: 최적의 설계를 구체적으로 설계하고, 프로토타입을 개발하여 테스트한다.</li>
-<li><strong>Verify (검증)</strong>: 설계가 고객의 요구를 충족하는지, 최종 제품이나 프로세스를 검증한다.</li>
+<li><strong>Define (정의)</strong><br>
+새로운 제품이나 프로세스를 설계할 목표를 정의하고, 고객의 요구사항을 명확히 한다.</li>
+<li><strong>Measure (측정)</strong><br>
+제품 또는 서비스의 요구 사항을 정의하고, 이를 만족시키기 위한 성과 지표를 측정한다.</li>
+<li><strong>Analyze (분석)</strong><br>
+요구 사항을 충족하는 설계 대안을 분석하고, 최적의 설계 방법을 선택한다.</li>
+<li><strong>Design (설계)</strong><br>
+최적의 설계를 구체적으로 설계하고, 프로토타입을 개발하여 테스트한다.</li>
+<li><strong>Verify (검증)</strong><br>
+설계가 고객의 요구를 충족하는지, 최종 제품이나 프로세스를 검증한다.</li>
 </ol>
 </dd>
 <dt>6 시그마의 장점</dt>
 <dd>
 <ol type="1">
-<li><strong>고객 만족도 향상</strong>: 고객의 요구와 기대를 정확하게 반영하여 품질이 높은 제품과 서비스를 제공한다.</li>
-<li><strong>비용 절감</strong>: 결함을 줄이고, 프로세스를 개선함으로써 리워크나 재작업, 불량률을 낮추어 비용을 절감할 수 있다.</li>
-<li><strong>프로세스 효율성 증대</strong>: 프로세스의 변동성을 줄여 일관된 품질을 유지하고, 성과가 예측 가능해지므로 더 효율적인 운영이 가능다.</li>
-<li><strong>시장 경쟁력 강화</strong>: 높은 품질의 제품이나 서비스를 제공함으로써 시장에서 경쟁력을 확보할 수 있다.</li>
+<li><strong>고객 만족도 향상</strong><br>
+고객의 요구와 기대를 정확하게 반영하여 품질이 높은 제품과 서비스를 제공한다.</li>
+<li><strong>비용 절감</strong><br>
+결함을 줄이고, 프로세스를 개선함으로써 리워크나 재작업, 불량률을 낮추어 비용을 절감할 수 있다.</li>
+<li><strong>프로세스 효율성 증대</strong><br>
+프로세스의 변동성을 줄여 일관된 품질을 유지하고, 성과가 예측 가능해지므로 더 효율적인 운영이 가능다.</li>
+<li><strong>시장 경쟁력 강화</strong><br>
+높은 품질의 제품이나 서비스를 제공함으로써 시장에서 경쟁력을 확보할 수 있다.</li>
 </ol>
 </dd>
 <dt>6 시그마의 한계</dt>
 <dd>
 <ol type="1">
-<li><strong>초기 투자 비용</strong>: 6 시그마를 도입하고 실행하기 위한 교육, 툴, 분석 등에 초기 투자 비용이 들 수 있다.</li>
-<li><strong>조직 문화 변화 필요</strong>: 6 시그마를 성공적으로 적용하기 위해서는 조직 내 모든 직원이 품질 개선 활동에 적극 참여해야 하며, 이에 대한 문화적 변화가 필요다.</li>
-<li><strong>복잡성</strong>: 일부 복잡한 프로세스에서는 6 시그마 기법이 지나치게 복잡하게 느껴질 수 있으며, 효과적인 개선을 위해서는 적절한 분석 능력과 도구 사용이 요구된다.</li>
+<li><strong>초기 투자 비용</strong><br>
+6 시그마를 도입하고 실행하기 위한 교육, 툴, 분석 등에 초기 투자 비용이 들 수 있다.</li>
+<li><strong>조직 문화 변화 필요</strong><br>
+6 시그마를 성공적으로 적용하기 위해서는 조직 내 모든 직원이 품질 개선 활동에 적극 참여해야 하며, 이에 대한 문화적 변화가 필요다.</li>
+<li><strong>복잡성</strong> 일부 복잡한 프로세스에서는 6 시그마 기법이 지나치게 복잡하게 느껴질 수 있으며, 효과적인 개선을 위해서는 적절한 분석 능력과 도구 사용이 요구된다.</li>
 </ol>
 </dd>
 </dl>
 <p><strong>6 시그마</strong>는 결함을 줄이고, 품질을 극대화하는 방법론으로, 고객 만족도와 프로세스 효율성을 동시에 향상시킬 수 있는 강력한 도구이다. 이를 통해 조직은 제품 품질을 지속적으로 개선하고, 비용을 절감하며, 경쟁력을 높일 수 있다.</p>
-</section>
-<section id="sec-lean-6-sigma" class="level3">
-<h3 class="anchored" data-anchor-id="sec-lean-6-sigma">린 6시그마</h3>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 106-2-5">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1442,6 +1668,9 @@ window.Quarto = {
 
 </div>
 </div>
+</section>
+<section id="sec-lean-6-sigma" class="level3">
+<h3 class="anchored" data-anchor-id="sec-lean-6-sigma">린 6시그마</h3>
 <p><strong>린 6시그마</strong>(Lean 6 Sigma)는 제조, 서비스, 의료, 금융 등 다양한 산업에서 품질 개선과 운영 효율성을 높이기 위해사용되는 통합된 방법론이다. 이 방법론은 린과 6시그마 원칙과 도구를 결합하여 불필요한 낭비를 제거하고 변동성을 줄이며 품질과 성능을 향상시키는 것을 목표로 한다.</p>
 <dl>
 <dt>린(Lean)</dt>
@@ -1453,11 +1682,36 @@ window.Quarto = {
 <dt>린 핵심 개념</dt>
 <dd>
 <ul>
-<li>가치: 고객이 지불할 의사가 있는 제품이나 서비스 속성</li>
-<li>낭비 제거: 과잉 생산, 대기 시간, 불필요한 이동, 과도한 재고, 불량품 등 “낭비”로 분류되는 모든 활동 제거</li>
-<li>연속 흐름: 프로세스가 중단 없이 순조롭게 흐를 수 있도록 설계</li>
-<li>풀 시스템: 고객 수요에 맞추어작업을 수행하고 재고를 최소화</li>
-<li>지속적인 개선(카이젠): 지속적으로 개선하고 효율성을 높이기 위해 모든 구성원이 참여하는 철할</li>
+<li><dl>
+<dt>가치</dt>
+<dd>
+고객이 지불할 의사가 있는 제품이나 서비스 속성
+</dd>
+</dl></li>
+<li><dl>
+<dt>낭비 제거</dt>
+<dd>
+과잉 생산, 대기 시간, 불필요한 이동, 과도한 재고, 불량품 등 “낭비”로 분류되는 모든 활동 제거
+</dd>
+</dl></li>
+<li><dl>
+<dt>연속 흐름</dt>
+<dd>
+프로세스가 중단 없이 순조롭게 흐를 수 있도록 설계
+</dd>
+</dl></li>
+<li><dl>
+<dt>풀 시스템</dt>
+<dd>
+고객 수요에 맞추어작업을 수행하고 재고를 최소화
+</dd>
+</dl></li>
+<li><dl>
+<dt>지속적인 개선(카이젠)</dt>
+<dd>
+지속적으로 개선하고 효율성을 높이기 위해 모든 구성원이 참여하는 철할
+</dd>
+</dl></li>
 </ul>
 </dd>
 <dt>6시그마(Six Sigma)</dt>
@@ -1488,34 +1742,56 @@ window.Quarto = {
 </dd>
 </dl>
 <p>린 6시그마는 조직이 더 효율적이고 효과적인 운영을 달성하도록 돕는 강력한 방법론이다. Lean의 낭비제거와 6시그마의 변동성 감소 전략을 통합한 방법론으로 품질개선, 비용절감, 고객만족도 향상 등 여러 측면에서 조직 성과를 극대화할 수 있다.</p>
-</section>
-<section id="sec-lean-thinking" class="level3">
-<h3 class="anchored" data-anchor-id="sec-lean-thinking">Lean thinking</h3>
-<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출">
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 115-4-3">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-기출
+기출: 115-4-3
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>115-4-3</p>
+
 </div>
 </div>
+</section>
+<section id="sec-lean-thinking" class="level3">
+<h3 class="anchored" data-anchor-id="sec-lean-thinking">Lean thinking</h3>
 <p>Lean Thinking의 5가지 사고(원칙)는 다음과 같다.</p>
 <ol type="1">
-<li><strong>가치 정의 (Define Value)</strong>: 고객에게 가치를 제공하는 것이 무엇인지를 정의한다. 가치 있는 것은 고객이 기꺼이 비용을 지불할 의향이 있는 제품이나 서비스로, 불필요한 것들을 배제하고 고객의 요구에 맞는 가치를 찾아낸다.</li>
-<li><strong>가치 흐름 식별 (Map the Value Stream)</strong>: 가치가 고객에게 전달되는 모든 과정과 단계를 식별하고 분석한다. 이를 통해 낭비를 파악하고, 가치를 창출하는 데 불필요한 활동들을 제거하거나 개선한다.</li>
-<li><strong>흐름 만들기 (Create Flow)</strong>: 가치가 흐를 수 있도록 작업과 자원의 흐름을 최적화한다. 중단 없이 작업이 이어지도록 하여 지연이나 대기 시간을 최소화한다.</li>
-<li><strong>풀 시스템 만들기 (Establish Pull)</strong>: 고객의 수요에 맞춰 생산과 서비스를 제공한다. 미리 과잉 생산하는 대신, 고객의 실제 요구에 따라 필요한 만큼만 생산하는 시스템을 구축한다.</li>
-<li><strong>완벽을 추구 (Seek Perfection)</strong>: 지속적인 개선을 통해 낭비를 제거하고, 효율성을 높인다. 모든 과정에서 완벽을 추구하며, 작은 개선이라도 지속적으로 이루어져야 한다는 원칙이다.</li>
+<li><dl>
+<dt><strong>가치 정의 (Define Value)</strong></dt>
+<dd>
+고객에게 가치를 제공하는 것이 무엇인지를 정의한다. 가치 있는 것은 고객이 기꺼이 비용을 지불할 의향이 있는 제품이나 서비스로, 불필요한 것들을 배제하고 고객의 요구에 맞는 가치를 찾아낸다.
+</dd>
+</dl></li>
+<li><dl>
+<dt><strong>가치 흐름 식별 (Map the Value Stream)</strong></dt>
+<dd>
+가치가 고객에게 전달되는 모든 과정과 단계를 식별하고 분석한다. 이를 통해 낭비를 파악하고, 가치를 창출하는 데 불필요한 활동들을 제거하거나 개선한다.
+</dd>
+</dl></li>
+<li><dl>
+<dt><strong>흐름 만들기 (Create Flow)</strong></dt>
+<dd>
+가치가 흐를 수 있도록 작업과 자원의 흐름을 최적화한다. 중단 없이 작업이 이어지도록 하여 지연이나 대기 시간을 최소화한다.
+</dd>
+</dl></li>
+<li><dl>
+<dt><strong>풀 시스템 만들기 (Establish Pull)</strong></dt>
+<dd>
+고객의 수요에 맞춰 생산과 서비스를 제공한다. 미리 과잉 생산하는 대신, 고객의 실제 요구에 따라 필요한 만큼만 생산하는 시스템을 구축한다.
+</dd>
+</dl></li>
+<li><dl>
+<dt><strong>완벽을 추구 (Seek Perfection)</strong></dt>
+<dd>
+지속적인 개선을 통해 낭비를 제거하고, 효율성을 높인다. 모든 과정에서 완벽을 추구하며, 작은 개선이라도 지속적으로 이루어져야 한다는 원칙이다.
+</dd>
+</dl></li>
 </ol>
 <p>이 5가지 원칙을 통해 Lean Thinking은 효율성을 극대화하고, 낭비를 줄이며, 고객 가치를 증대시키는 데 집중한다.</p>
-</section>
-<section id="sec-vsm" class="level3">
-<h3 class="anchored" data-anchor-id="sec-vsm">가치흐름도(VSM)</h3>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 121-1-9">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1529,6 +1805,9 @@ window.Quarto = {
 
 </div>
 </div>
+</section>
+<section id="sec-vsm" class="level3">
+<h3 class="anchored" data-anchor-id="sec-vsm">가치흐름도(VSM)</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/9/99/ValueStreamMapParts.png" class="img-fluid figure-img"></p>
@@ -1540,51 +1819,132 @@ window.Quarto = {
 <dt>가치흐름도의 주요 목표</dt>
 <dd>
 <ul>
-<li><strong>가치 창출 활동과 비가치 활동 구분</strong>: 가치를 창출하는 활동과 그렇지 않은 활동을 구분하여 <strong>낭비를 제거</strong>하는 방향으로 개선한다.</li>
-<li><strong>현재 상태 분석</strong>: 현재의 생산 흐름을 시각화하여 문제점을 발견하고, 개선할 영역을 식별한다.</li>
-<li><strong>미래 상태 설정</strong>: 이상적인 가치 흐름을 정의하여, 향후 개선 목표를 설정하고 이를 달성할 계획을 수립한다.</li>
-<li><strong>리드 타임 단축</strong>: 전체 생산 공정에서 발생하는 <strong>불필요한 지연을 줄여 리드 타임을 단축</strong>하고, 고객의 요구를 빠르게 충족시킨다.</li>
+<li><dl>
+<dt><strong>가치 창출 활동과 비가치 활동 구분</strong></dt>
+<dd>
+가치를 창출하는 활동과 그렇지 않은 활동을 구분하여 <strong>낭비를 제거</strong>하는 방향으로 개선한다.
+</dd>
+</dl></li>
+<li><dl>
+<dt><strong>현재 상태 분석</strong></dt>
+<dd>
+현재의 생산 흐름을 시각화하여 문제점을 발견하고, 개선할 영역을 식별한다.
+</dd>
+</dl></li>
+<li><dl>
+<dt><strong>미래 상태 설정</strong></dt>
+<dd>
+이상적인 가치 흐름을 정의하여, 향후 개선 목표를 설정하고 이를 달성할 계획을 수립한다.
+</dd>
+</dl></li>
+<li><dl>
+<dt><strong>리드 타임 단축</strong></dt>
+<dd>
+전체 생산 공정에서 발생하는 <font color="blue">불필요한 지연을 줄여 리드 타임을 단축</font>하고, 고객의 요구를 빠르게 충족시킨다.
+</dd>
+</dl></li>
 </ul>
 </dd>
 <dt>가치흐름도 구성 요소</dt>
 <dd>
 <ul>
-<li><strong>정보 흐름 (Information Flow)</strong>: 생산 및 공급망의 <strong>정보 흐름</strong>을 시각적으로 나타내어, <strong>의사소통</strong>과 <strong>데이터 전달 방식</strong>을 파악한다. 예를 들어, 생산 계획, 주문, 재고 관리 등의 정보가 어떻게 전달되는지 보여준다.</li>
-<li><strong>물리적 흐름 (Physical Flow)</strong>: 원자재, 반제품, 완제품이 생산 라인을 통해 <strong>물리적으로 흐르는 경로</strong>를 나타낸다. 각 단계에서의 <strong>처리 시간, 대기 시간</strong> 등을 기록한다.</li>
-<li><strong>시간 요소 (Time Elements)</strong>: <strong>가치 창출 시간</strong>과 <strong>대기 시간</strong>을 구분하여 각 작업 단계에서 걸리는 시간을 시각화한다. 이를 통해 각 작업이 얼마나 효율적인지, 비효율적인지 분석한다.</li>
+<li><dl>
+<dt><strong>정보 흐름 (Information Flow)</strong></dt>
+<dd>
+생산 및 공급망의 <strong>정보 흐름</strong>을 시각적으로 나타내어, <strong>의사소통</strong>과 <strong>데이터 전달 방식</strong>을 파악한다. 예를 들어, 생산 계획, 주문, 재고 관리 등의 정보가 어떻게 전달되는지 보여준다.
+</dd>
+</dl></li>
+<li><dl>
+<dt><strong>물리적 흐름 (Physical Flow)</strong></dt>
+<dd>
+원자재, 반제품, 완제품이 생산 라인을 통해 <strong>물리적으로 흐르는 경로</strong>를 나타낸다. 각 단계에서의 <strong>처리 시간, 대기 시간</strong> 등을 기록한다.
+</dd>
+</dl></li>
+<li><dl>
+<dt><strong>시간 요소 (Time Elements)</strong></dt>
+<dd>
+<strong>가치 창출 시간</strong>과 <strong>대기 시간</strong>을 구분하여 각 작업 단계에서 걸리는 시간을 시각화한다. 이를 통해 각 작업이 얼마나 효율적인지, 비효율적인지 분석한다.
+</dd>
+</dl></li>
 </ul>
 </dd>
 <dt>가치흐름도 작성 단계</dt>
 <dd>
 <ul>
-<li><strong>현재 상태 맵 그리기</strong>: 첫 번째 단계는 현재 상태를 파악하고, 이를 그림으로 나타내는 것이다. 물리적 흐름과 정보 흐름을 모두 시각화하여, 현재 시스템에서 발생하는 <strong>문제점</strong>을 확인한다.</li>
-<li><strong>문제점 분석 및 개선 기회 도출</strong>: 비가치 활동을 찾고, 낭비(Waste) 요소를 식별하여 개선할 기회를 찾는다. 예를 들어, 과잉 생산, 불필요한 대기 시간, 과도한 재고 등이 낭비로 포함될 수 있다.</li>
-<li><strong>미래 상태 맵 그리기</strong>: 개선할 점을 반영하여 <strong>미래 상태 맵</strong>을 설계한다. <strong>효율적인 정보 흐름</strong>과 <strong>최적화된 생산 흐름</strong>을 기반으로 리드 타임을 단축시킬 수 있는 방안을 제시한다.</li>
-<li><strong>행동 계획 수립 및 실행</strong>: 미래 상태 맵을 구현하기 위한 구체적인 <strong>행동 계획</strong>을 수립하고, 이를 실행에 옮긴다. 이때, 각 단계별로 개선해야 할 사항을 명확하게 정의하고, 점진적으로 실행한다.</li>
+<li><dl>
+<dt><strong>현재 상태 맵 그리기</strong></dt>
+<dd>
+첫 번째 단계는 현재 상태를 파악하고, 이를 그림으로 나타내는 것이다. 물리적 흐름과 정보 흐름을 모두 시각화하여, 현재 시스템에서 발생하는 <strong>문제점</strong>을 확인한다.
+</dd>
+</dl></li>
+<li><dl>
+<dt><strong>문제점 분석 및 개선 기회 도출</strong></dt>
+<dd>
+비가치 활동을 찾고, 낭비(Waste) 요소를 식별하여 개선할 기회를 찾는다. 예를 들어, 과잉 생산, 불필요한 대기 시간, 과도한 재고 등이 낭비로 포함될 수 있다.
+</dd>
+</dl></li>
+<li><dl>
+<dt><strong>미래 상태 맵 그리기</strong></dt>
+<dd>
+개선할 점을 반영하여 <strong>미래 상태 맵</strong>을 설계한다. <strong>효율적인 정보 흐름</strong>과 <strong>최적화된 생산 흐름</strong>을 기반으로 리드 타임을 단축시킬 수 있는 방안을 제시한다.
+</dd>
+</dl></li>
+<li><dl>
+<dt><strong>행동 계획 수립 및 실행</strong></dt>
+<dd>
+미래 상태 맵을 구현하기 위한 구체적인 <strong>행동 계획</strong>을 수립하고, 이를 실행에 옮긴다. 이때, 각 단계별로 개선해야 할 사항을 명확하게 정의하고, 점진적으로 실행한다.
+</dd>
+</dl></li>
 </ul>
 </dd>
 <dt>VSM의 주요 이점</dt>
 <dd>
 <ul>
-<li><strong>비효율성 제거</strong>: 불필요한 작업이나 낭비를 제거하여 <strong>운영 효율성</strong>을 높일 수 있다.</li>
-<li><strong>고객 가치를 증대</strong>: <strong>가치 창출 활동에 집중</strong>하여 고객에게 제공되는 가치를 극대화할 수 있다.</li>
-<li><strong>리드 타임 단축</strong>: 불필요한 대기 시간이나 작업 시간을 줄여서 <strong>빠른 생산 주기</strong>를 달성한다.</li>
-<li><strong>지속적인 개선</strong>: VSM은 지속적인 개선을 위한 기초 자료를 제공하므로 <strong>Lean 관리</strong>를 쉽게 적용할 수 있다.</li>
+<li><dl>
+<dt><strong>비효율성 제거</strong></dt>
+<dd>
+불필요한 작업이나 낭비를 제거하여 <strong>운영 효율성</strong>을 높일 수 있다.
+</dd>
+</dl></li>
+<li><dl>
+<dt><strong>고객 가치를 증대</strong></dt>
+<dd>
+<strong>가치 창출 활동에 집중</strong>하여 고객에게 제공되는 가치를 극대화할 수 있다.
+</dd>
+</dl></li>
+<li><dl>
+<dt><strong>리드 타임 단축</strong></dt>
+<dd>
+불필요한 대기 시간이나 작업 시간을 줄여서 <strong>빠른 생산 주기</strong>를 달성한다.
+</dd>
+</dl></li>
+<li><dl>
+<dt><strong>지속적인 개선</strong></dt>
+<dd>
+VSM은 지속적인 개선을 위한 기초 자료를 제공하므로 <strong>Lean 관리</strong>를 쉽게 적용할 수 있다.
+</dd>
+</dl></li>
 </ul>
 </dd>
 <dt>VSM의 한계</dt>
 <dd>
 <ul>
-<li><strong>복잡한 시스템에서의 어려움</strong>: 매우 복잡한 생산 시스템에서는 VSM을 작성하는 것이 시간이 많이 걸릴 수 있다.</li>
-<li><strong>단기적 관점에 집중</strong>: VSM은 <strong>현재 상태와 미래 상태</strong>의 개선을 목표로 하지만, 장기적인 전략적인 관점이 부족할 수 있다.</li>
+<li><dl>
+<dt><strong>복잡한 시스템에서의 어려움</strong></dt>
+<dd>
+매우 복잡한 생산 시스템에서는 VSM을 작성하는 것이 시간이 많이 걸릴 수 있다.
+</dd>
+</dl></li>
+<li><dl>
+<dt><strong>단기적 관점에 집중</strong></dt>
+<dd>
+VSM은 <strong>현재 상태와 미래 상태</strong>의 개선을 목표로 하지만, 장기적인 전략적인 관점이 부족할 수 있다.
+</dd>
+</dl></li>
 </ul>
 </dd>
 </dl>
-<p><strong>가치흐름도(VSM)</strong>는 Lean 제조 및 <strong>지속적인 개선</strong>을 위한 중요한 도구로, 생산성과 효율성을 극대화하기 위해 <strong>불필요한 낭비를 식별</strong>하고 <strong>가치 창출 활동에 집중</strong>하는 방법을 제시한다. 이를 통해 기업은 <strong>고객 만족도를 높이고, 운영 효율성을 향상</strong>시킬 수 있다.</p>
-</section>
-</section>
-<section id="triz" class="level2">
-<h2 class="anchored" data-anchor-id="triz">TRIZ</h2>
+<p><strong>가치흐름도(VSM)</strong>는 Lean 제조 및 <strong>지속적인 개선</strong>을 위한 중요한 도구로, 생산성과 효율성을 극대화하기 위해 <font color="blue">불필요한 낭비를 식별하고 가치 창출 활동에 집중</font>하는 방법을 제시한다. 이를 통해 기업은 <font color="blue">고객 만족도를 높이고, 운영 효율성을 향상</font>시킬 수 있다.</p>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 100-2-2">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1598,33 +1958,55 @@ window.Quarto = {
 
 </div>
 </div>
+</section>
+</section>
+<section id="sec-triz" class="level2">
+<h2 class="anchored" data-anchor-id="sec-triz">TRIZ</h2>
 <p><strong>TRIZ</strong>는 러시아어로 Teoriya(이론), Reshniya(해결), Izobretatelskikh(발명), Zadatch(문제) 앞 철자로, 영어로는 Theory of Inventive Problem Solving이다. 즉, 발명문제 해결을 위한 체계적인 방법론으로 풀이할 수 있다.</p>
 <p>러시아 겐리히 알츠슐러가 1960년대 구 소련 해군에서 특허를 심사하는 업무를 할 당시 군 관련 기술적인 문제를 해결하면서 발명에는 어떤 공통 법칙과 패턴이 있음을 알게 되었다. 그는 누구나 창의적으로 문제를 해결할 수 있는 일반적이고 체계적인 문제 해결책을 강구하게 되었다. 그는 전 세계 특허 150만건 중 창의적인 특허 4만건을 추출 분석한 결과 다음 4가지 중요한 사실을 발견하게 되었다.</p>
 <ul>
-<li>창조적 문제 정의: 하나 이상 모순이 존재하는 문제</li>
-<li>해결안 수준: 특허 등에서 제시되 ㄴ해결안 수준을 5단계(해법, 개선, 혁신, 발명, 발견)로 구분</li>
-<li>발명 규칙성: 동일한 해법이 다른 분야에서 반복적으로 재사용</li>
-<li>진화 법칙: 기술 시스템은 일정한 유형에 따라 진화 또는 발전</li>
-</ul>
-<dl>
-<dt>발명 5가지 수준</dt>
+<li><dl>
+<dt>창조적 문제 정의</dt>
 <dd>
+하나 이상 모순이 존재하는 문제
+</dd>
+</dl></li>
+<li><dl>
+<dt>해결안 수준</dt>
+<dd>
+특허 등에서 제시되 ㄴ해결안 수준을 5단계(해법, 개선, 혁신, 발명, 발견)로 구분
+</dd>
+</dl></li>
+<li><dl>
+<dt>발명 규칙성</dt>
+<dd>
+동일한 해법이 다른 분야에서 반복적으로 재사용
+</dd>
+</dl></li>
+<li><dl>
+<dt>진화 법칙</dt>
+<dd>
+기술 시스템은 일정한 유형에 따라 진화 또는 발전
+</dd>
+</dl></li>
+</ul>
+<p><strong>발명 5가지 수준</strong></p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
+<col style="width: 7%">
+<col style="width: 12%">
+<col style="width: 5%">
+<col style="width: 15%">
+<col style="width: 10%">
+<col style="width: 50%">
 </colgroup>
 <thead>
 <tr class="header">
 <th>수준</th>
-<th>발명 정도</th>
+<th>발명정도</th>
 <th>%</th>
 <th>지식원천</th>
-<th>고려할 해법수</th>
+<th>해법수</th>
 <th>내용</th>
 </tr>
 </thead>
@@ -1651,7 +2033,7 @@ window.Quarto = {
 <td>18</td>
 <td>산업 내 지식</td>
 <td>1000</td>
-<td>다른 분야 지식/기술을 합성하여 해결 ㅣ가능한 문제(기존 시스템에 대한 essential improvement를 가져옴)</td>
+<td>다른 분야 지식/기술을 합성하여 해결 가능한 문제(기존 시스템에 대한 essential improvement를 가져옴)</td>
 </tr>
 <tr class="even">
 <td>4</td>
@@ -1671,15 +2053,40 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-</dd>
+<dl>
 <dt>문제해결을 위한 5가지 개념</dt>
 <dd>
 <ul>
-<li>모순: 문제를 해결한다는 것은 모순을 제거하는 것</li>
-<li>자원: 시스템 내부/외부 모든 자원 활용</li>
-<li>이상적 최종 결과: 모순을 해결하였을 때 달성</li>
-<li>진화 유형: 시스템은 우연히 되는 것이 아니라 어떤 유형에 따라 진화</li>
-<li>혁신 원리: 해결책에 대한 구체적인 단서를 제공하고 유형이 의미하는 것을 설명</li>
+<li><dl>
+<dt>모순</dt>
+<dd>
+문제를 해결한다는 것은 모순을 제거하는 것
+</dd>
+</dl></li>
+<li><dl>
+<dt>자원</dt>
+<dd>
+시스템 내부/외부 모든 자원 활용
+</dd>
+</dl></li>
+<li><dl>
+<dt>이상적 최종 결과</dt>
+<dd>
+모순을 해결하였을 때 달성
+</dd>
+</dl></li>
+<li><dl>
+<dt>진화 유형</dt>
+<dd>
+시스템은 우연히 되는 것이 아니라 어떤 유형에 따라 진화
+</dd>
+</dl></li>
+<li><dl>
+<dt>혁신 원리</dt>
+<dd>
+해결책에 대한 구체적인 단서를 제공하고 유형이 의미하는 것을 설명
+</dd>
+</dl></li>
 </ul>
 </dd>
 <dt>문제해결 절차 9단계</dt>
@@ -1699,27 +2106,172 @@ window.Quarto = {
 <dt>문제해결을 위한 4가지 분리 원리</dt>
 <dd>
 <ol type="1">
-<li>시간에 의한 분리
-<ul>
-<li>하나의 속성이 어떤 때는 높고 어떤 때는 낮게 한다. 혹은 하나의 속성이 어떤 때는 존재하고 어떤때는 존재하지 않게 한다. 전투기 날개는 물리적 모순을 시간적으로 분리한 예이다. 전투기가 이착륙 할 때에는 날개를 넓게 펴지만, 비행 중에는 날개를 접는다.</li>
-</ul></li>
-<li>공간에 의한 분리
-<ul>
-<li>하나의 속성이 한쪽에서는 높고 다른 쪽에서는 낮게 한다. 혹은 하나의 속성이 한쪽에서는 존재하고 다른 쪽에서는 존재하지 않게 한다. 노인들이 주로 사용하는 초점이 두개인 안경이 대표적인 예라 할 수 있다.</li>
-</ul></li>
-<li>부분과 전체에 의한 분리
-<ul>
-<li>하나의 속성이 전체 시스템 수준에서는 어떤 하나의 값을 갖고, 부품 수준에서는 다른 값을 갖게 한다. 혹은 하나의 속성이 시스템 수준에서는 존재하지만 부품 수준에서는 존재하지 않게 한다. 예를 들어 자전거 체인은 마이크로 수준에서는 단단하지만 매크로 수준에서는 유연하다.</li>
-</ul></li>
-<li>조건에 의한 분리
-<ul>
-<li>하나의 속성이 어떤 조건에서는 높고 다른 조건에서는 낮다. 혹은 하나의 속성이 어떤 조건에서는 조냊하고 다른 존건에서는 존재하지 않는다. 예를 들어 가는 체의 틈새들은 물을 통과시키지는 구멍 역할을 하지만, 곡물의 경우는 구명 역할을 하지 않는다. 낮은 속도로 물에 들어가면 물은 부드럽지만 10미터 높이에서 물에 뛰어들면 물은 매우 딱딱하게 느껴진다.</li>
-</ul></li>
+<li><dl>
+<dt>시간에 의한 분리</dt>
+<dd>
+하나의 속성이 어떤 때는 높고 어떤 때는 낮게 한다. 혹은 하나의 속성이 어떤 때는 존재하고 어떤때는 존재하지 않게 한다. 전투기 날개는 물리적 모순을 시간적으로 분리한 예이다. 전투기가 이착륙 할 때에는 날개를 넓게 펴지만, 비행 중에는 날개를 접는다.
+</dd>
+</dl></li>
+<li><dl>
+<dt>공간에 의한 분리</dt>
+<dd>
+하나의 속성이 한쪽에서는 높고 다른 쪽에서는 낮게 한다. 혹은 하나의 속성이 한쪽에서는 존재하고 다른 쪽에서는 존재하지 않게 한다. 노인들이 주로 사용하는 초점이 두개인 안경이 대표적인 예라 할 수 있다.
+</dd>
+</dl></li>
+<li><dl>
+<dt>부분과 전체에 의한 분리</dt>
+<dd>
+하나의 속성이 전체 시스템 수준에서는 어떤 하나의 값을 갖고, 부품 수준에서는 다른 값을 갖게 한다. 혹은 하나의 속성이 시스템 수준에서는 존재하지만 부품 수준에서는 존재하지 않게 한다. 예를 들어 자전거 체인은 마이크로 수준에서는 단단하지만 매크로 수준에서는 유연하다.
+</dd>
+</dl></li>
+<li><dl>
+<dt>조건에 의한 분리</dt>
+<dd>
+하나의 속성이 어떤 조건에서는 높고 다른 조건에서는 낮다. 혹은 하나의 속성이 어떤 조건에서는 조냊하고 다른 존건에서는 존재하지 않는다. 예를 들어 가는 체의 틈새들은 물을 통과시키지는 구멍 역할을 하지만, 곡물의 경우는 구명 역할을 하지 않는다. 낮은 속도로 물에 들어가면 물은 부드럽지만 10미터 높이에서 물에 뛰어들면 물은 매우 딱딱하게 느껴진다.
+</dd>
+</dl></li>
 </ol>
 </dd>
 </dl>
+</section>
+<section id="sec-ref-1104" class="level2">
+<h2 class="anchored" data-anchor-id="sec-ref-1104">참고자료</h2>
+<section id="sec-ctp" class="level3">
+<h3 class="anchored" data-anchor-id="sec-ctp">CTP</h3>
+<p>CTP(Capable to Promise)는 <font color="blue">제조 및 공급망 관리에서 특정 주문을 충족할 수 있는 능력을 평가하고, 현실적인 납기 일정을 약속하는 개념</font>이다. 기존의 ATP(Available to Promise)와 차별화되며, 기업이 <font color="blue">실제 생산 역량과 자원 가용성을 고려하여 고객에게 약속 가능한 납기를 제공</font>하는 것이 핵심이다.</p>
+<dl>
+<dt>CTP와 ATP 비교</dt>
+<dd>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 42%">
+<col style="width: 42%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>구분</th>
+<th>CTP (Capable to Promise)</th>
+<th>ATP (Available to Promise)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>개념</td>
+<td>생산 가능성을 고려한 납기 약속</td>
+<td>현재 재고를 기반으로 한 납기 약속</td>
+</tr>
+<tr class="even">
+<td>고려 요소</td>
+<td>생산 능력, 가용 자재, 공급망, 인력</td>
+<td>창고 내 재고, 입고 예정 재고</td>
+</tr>
+<tr class="odd">
+<td>적용 분야</td>
+<td>맞춤형 생산, 수요 변동이 큰 환경</td>
+<td>재고 기반 생산, 표준 제품 판매</td>
+</tr>
+<tr class="even">
+<td>유연성</td>
+<td>높음 (새로운 생산 일정 조정 가능)</td>
+<td>낮음 (재고 없으면 납기 불가능)</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<p>CTP는 ATP보다 <font color="blue">더 정교한 계산을 요구하며, 실시간으로 생산 계획과 연계하여 납기를 예측</font>하는 것이 특징이다.</p>
+<dl>
+<dt>CTP의 주요 기능 및 과정</dt>
+<dd>
+<ol type="1">
+<li><dl>
+<dt>주문 분석</dt>
+<dd>
+<ul>
+<li>고객 주문 접수 후 <strong>제품 생산 가능 여부 및 납기 일정 계산</strong></li>
+<li>기존 재고뿐만 아니라 <strong>생산 일정, 자재 가용성, 인력, 기계 가동률 등을 고려</strong></li>
+</ul>
+</dd>
+</dl></li>
+<li><dl>
+<dt>생산 가능성 확인</dt>
+<dd>
+<ul>
+<li><strong>BOM(Bill of Materials) 분석</strong>: 필요한 원자재 및 부품 확인<br>
+</li>
+<li><strong>공급망 확인</strong>: 자재 조달 가능 여부 파악<br>
+</li>
+<li><strong>제조 역량 분석</strong>: 현재 가동률, 기계 상태, 작업자 가용성 평가</li>
+</ul>
+</dd>
+</dl></li>
+<li><dl>
+<dt>납기 약속 결정</dt>
+<dd>
+<ul>
+<li>실제 생산 가능 일정을 고려한 납기 예측<br>
+</li>
+<li>병목 공정이 존재하는 경우 <strong>스케줄 조정 또는 생산 우선순위 변경</strong></li>
+</ul>
+</dd>
+</dl></li>
+</ol>
+</dd>
+</dl>
+<p><strong>CTP의 장점과 단점</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 40%">
+<col style="width: 40%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>장점</th>
+<th>단점</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>정확한 납기 예측</strong></td>
+<td>고객에게 현실적인 납기 제공 가능</td>
+<td>계산 복잡성 증가</td>
+</tr>
+<tr class="even">
+<td><strong>생산 효율성</strong></td>
+<td>불필요한 재고 축적 감소, 자원 최적 활용</td>
+<td>실시간 데이터 연계 필요</td>
+</tr>
+<tr class="odd">
+<td><strong>고객 만족도</strong></td>
+<td>무리한 약속 방지, 신뢰성 증가</td>
+<td>공급망 변동성에 민감</td>
+</tr>
+<tr class="even">
+<td><strong>유연한 대응</strong></td>
+<td>생산 일정 조정 가능</td>
+<td>계획 오류 시 납기 지연 발생</td>
+</tr>
+</tbody>
+</table>
+<dl>
+<dt>CTP가 효과적인 경우</dt>
+<dd>
+<ul>
+<li>맞춤형 제품을 생산하는 <strong>Make to Order(MTO) 환경</strong><br>
+</li>
+<li>자재 및 생산 역량이 변동성이 큰 <strong>Engineer to Order(ETO) 방식</strong><br>
+</li>
+<li>ATP만으로는 납기 약속이 어려운 <strong>다품종 소량 생산 시스템</strong></li>
+</ul>
+</dd>
+</dl>
+<p>CTP는 <font color="blue">제조 역량과 공급망을 실시간으로 평가하여 신뢰성 높은 납기 약속을 제공하는 전략</font>으로, 공급망 관리(SCM) 및 고급 생산 계획(APS) 시스템에서 중요한 역할을 한다.</p>
 
 
+</section>
 </section>
 <section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr>
