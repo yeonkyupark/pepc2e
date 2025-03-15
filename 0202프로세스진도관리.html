@@ -506,7 +506,7 @@ window.Quarto = {
   </ul></li>
   <li><a href="#cpm-vs.-ccm" id="toc-cpm-vs.-ccm" class="nav-link" data-scroll-target="#cpm-vs.-ccm">CPM vs.&nbsp;CCM</a></li>
   </ul></li>
-  <li><a href="#참고사항" id="toc-참고사항" class="nav-link" data-scroll-target="#참고사항">참고사항</a>
+  <li><a href="#sec-ref-0202" id="toc-sec-ref-0202" class="nav-link" data-scroll-target="#sec-ref-0202">참고사항</a>
   <ul>
   <li><a href="#프로젝트와-프로세스-차이" id="toc-프로젝트와-프로세스-차이" class="nav-link" data-scroll-target="#프로젝트와-프로세스-차이">프로젝트와 프로세스 차이</a></li>
   </ul></li>
@@ -636,9 +636,6 @@ window.Quarto = {
 </ul>
 </dd>
 </dl>
-</section>
-<section id="네트워크-기법" class="level2">
-<h2 class="anchored" data-anchor-id="네트워크-기법">네트워크 기법</h2>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 97-3-6, 100-3-1, 103-4-4, 115-1-5, 130-4-6">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -652,9 +649,10 @@ window.Quarto = {
 
 </div>
 </div>
+</section>
+<section id="네트워크-기법" class="level2">
+<h2 class="anchored" data-anchor-id="네트워크-기법">네트워크 기법</h2>
 <p><strong>네트워크 기법</strong>(Network, 화살도 arrow diagram, 활동 네트워크 activity network diagram)은 <font color="blue">필요한 활동 선후관계를 네트워크로 표시하는 방식</font>으로 간트차트 결점을 보완하기 위하여 개발되었다. 대표적인 기법으로 <a href="#sec-pert" class="quarto-xref"><span>PERT</span></a> (Program Evaluation &amp; Review Technique)와 <a href="#sec-cpm" class="quarto-xref"><span>CPM</span></a> (Critical Path Method)이 있다.</p>
-<section id="sec-critical-path" class="level3">
-<h3 class="anchored" data-anchor-id="sec-critical-path">주경로</h3>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 118-4-6">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -668,6 +666,8 @@ window.Quarto = {
 
 </div>
 </div>
+<section id="sec-critical-path" class="level3">
+<h3 class="anchored" data-anchor-id="sec-critical-path">주경로</h3>
 <p>네트워크 기법에서 <strong>주경로</strong>(critical path)는 다음과 같이 정의한다.</p>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
@@ -717,13 +717,9 @@ window.Quarto = {
 </div>
 <div class="callout-body-container callout-body">
 <p>아래 그림에서 주 공정(Critical Path) 및 총소요일을 구하시오. (단, 그림의 Path 위의 숫자는 해당 공정의 소요일이다.)</p>
-<center>
-<img src="images/118-4-6-01.png" class="img-fluid">
-</center>
+<p><img src="images/118-4-6-01.png" class="img-fluid"></p>
 <hr>
-<center>
-<img src="images/118-4-6-02.png" class="img-fluid">
-</center>
+<p><img src="images/118-4-6-02.png" class="img-fluid"></p>
 <p>각 공정 여유시간은 다음과 같다.</p>
 <table class="caption-top table">
 <thead>
@@ -758,9 +754,6 @@ window.Quarto = {
 <p>따라서 주공정은 여유시간이 최소가 되는 경로인 ⓪ → ① → ③ → ④ → ⑦ → ⑧이며, 총소요일은 20일이다.</p>
 </div>
 </div>
-</section>
-<section id="네트워크-구성" class="level3">
-<h3 class="anchored" data-anchor-id="네트워크-구성">네트워크 구성</h3>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 124-3-2">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -774,6 +767,9 @@ window.Quarto = {
 
 </div>
 </div>
+</section>
+<section id="네트워크-구성" class="level3">
+<h3 class="anchored" data-anchor-id="네트워크-구성">네트워크 구성</h3>
 <p>네트워크 기법은 네트워크 작성 방법에 따라 <a href="#sec-aoa" class="quarto-xref"><span>AOA 네트워크</span></a>와 <a href="#sec-aon" class="quarto-xref"><span>AON 네트워크</span></a> 방식으로 나뉜다.</p>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
@@ -811,7 +807,7 @@ window.Quarto = {
 <li>활동에 따라 단계가 분리되거나 연결되기도 하는데 분리되는 경우 분리단계(burst event), 연결되는 경우 병합단계(merge event)라 함</li>
 </ul>
 </dd>
-<dt>결합합점(Node)</dt>
+<dt>결합점(Node)</dt>
 <dd>
 <ul>
 <li>네크워크에서 마디(○)를 나타내는 것으로 AOA 방식에서는 단계(event)를 나타내며 AON 방식에서는 마디로 작업이나 활동을 나타냄</li>
@@ -826,7 +822,7 @@ window.Quarto = {
 </dl>
 <section id="sec-aoa" class="level4">
 <h4 class="anchored" data-anchor-id="sec-aoa">AOA 네트워크</h4>
-<p><strong>AOA</strong>(activity on arrow/arc)는 프로젝트에 필요한 활동을 화살표(arrow 또는 arc)로 표시하고 착수 완료 시점을 마디(node)로 표현하는 방법이다.</p>
+<p><strong>AOA</strong>(activity on arrow/arc)는 <font color="#245bdb">프로젝트에 필요한 활동을 화살표(arrow 또는 arc)로 표시하고 착수 완료 시점을 마디(node)로 표현</font>하는 방법이다.</p>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
@@ -1054,12 +1050,12 @@ window.Quarto = {
 <p></p><figure class="figure"><p></p>
 <div>
 <pre class="mermaid mermaid-js">flowchart LR
-1[1]
-2[2]
-3[3]
-4[4]
-5[5]
-6[6]
+1([1])
+2([2])
+3([3])
+4([4])
+5([5])
+6([6])
 
 1 --3,4,5--&gt; 2
 2 --4,5,6--&gt;3
@@ -1255,16 +1251,16 @@ z = \frac{TS-TE}{\sqrt{(\sum{(\sigma^2)}}} = \frac{24-24}{\sqrt{\sum{(0.11+0.11+
 <div>
 <pre class="mermaid mermaid-js">flowchart LR
 
-A[A&lt;br&gt;1.3]
-B[B&lt;br&gt;0.5]
-C[C&lt;br&gt;1.2]
-D[D&lt;br&gt;0.6]
-E[E&lt;br&gt;0.3]
-F[F&lt;br&gt;0.8]
-G[G&lt;br&gt;1.3]
-H[H&lt;br&gt;0.6]
-I[I&lt;br&gt;0.8]
-J[J&lt;br&gt;0.4]
+A([A&lt;br&gt;1.3])
+B([B&lt;br&gt;0.5])
+C([C&lt;br&gt;1.2])
+D([D&lt;br&gt;0.6])
+E([E&lt;br&gt;0.3])
+F([F&lt;br&gt;0.8])
+G([G&lt;br&gt;1.3])
+H([H&lt;br&gt;0.6])
+I([I&lt;br&gt;0.8])
+J([J&lt;br&gt;0.4])
 
 A --&gt; B
 A ---&gt; C
@@ -1301,16 +1297,16 @@ I --&gt; J
 <div>
 <pre class="mermaid mermaid-js">flowchart LR
 
-A[A&lt;br&gt;1.3]
-B[B&lt;br&gt;0.5]
-C[C&lt;br&gt;1.2]
-D[D&lt;br&gt;0.6]
-E[E&lt;br&gt;0.3]
-F[F&lt;br&gt;0.8]
-G[G&lt;br&gt;1.3]
-H[H&lt;br&gt;0.6]
-I[I&lt;br&gt;0.8]
-J[J&lt;br&gt;0.4]
+A([A&lt;br&gt;1.3])
+B([B&lt;br&gt;0.5])
+C([C&lt;br&gt;1.2])
+D([D&lt;br&gt;0.6])
+E([E&lt;br&gt;0.3])
+F([F&lt;br&gt;0.8])
+G([G&lt;br&gt;1.3])
+H([H&lt;br&gt;0.6])
+I([I&lt;br&gt;0.8])
+J([J&lt;br&gt;0.4])
 
 subgraph 01
 A
@@ -1540,7 +1536,7 @@ I --&gt; J
 <li>비관적 시간, pessimistic time(c), 활동을 완료하는데 소요되 수 있는 최장 시간</li>
 <li>낙관적 시간과 비관적 시간은 평균 시간에서 <span class="math inline">\(\pm3\sigma\)</span>만큼 떨어진 위치로 설정</li>
 <li>위 3가지 시간을 활용하여 평균 소요 시간(<span class="math inline">\(T_E\)</span>) 및 분산산을 확률적으로 예측(베타 분포를 따른다고 가정)<br>
-<span class="math display">\[T_E = mean \ value \ \frac{a + 4b + c}{6}, \quad \sigma^2=(\frac{c-a}{6})^2\]</span></li>
+<span id="eq-pert-te"><span class="math display">\[T_E = mean \ value \ = \frac{a + 4b + c}{6}, \quad \sigma^2=(\frac{c-a}{6})^2 \tag{7.1}\]</span></span></li>
 </ul></li>
 <li><p><strong>소요시간 정보를 고려하여 주공정(critical path) 결정</strong><br>
 위 단계에서 예측한 예상소요시간을 고려하여 프로젝트를 가장 짧은 시간에 완료할 수 있는 주공정을 결정한다.</p>
@@ -1710,13 +1706,13 @@ Note&nbsp;7.1 PERT/COST
 <p></p><figure class="figure"><p></p>
 <div>
 <pre class="mermaid mermaid-js">graph LR
-    A(("A (4일)")) --&gt; B(("B (3일)"))
-    A --&gt; C(("C (5일)"))
-    B --&gt; C
-    B --&gt; D(("D (2일)"))
-    C --&gt; D
-    C --&gt; E(("E (1일)"))
-    D --&gt; E
+&nbsp; &nbsp; A(("A (4일)")) --&gt; B(("B (3일)"))
+&nbsp; &nbsp; A ---&gt; C(("C (5일)"))
+&nbsp; &nbsp; B ---&gt; C
+&nbsp; &nbsp; C --&gt; D
+&nbsp; &nbsp; B --&gt; D(("D (2일)"))
+&nbsp; &nbsp; C --&gt; E(("E (1일)"))
+&nbsp; &nbsp; D --&gt; E
 </pre>
 </div>
 <p></p></figure><p></p>
@@ -1809,9 +1805,6 @@ Note&nbsp;7.1 PERT/COST
 </dl>
 </div>
 </div>
-</section>
-<section id="sec-ccm" class="level4">
-<h4 class="anchored" data-anchor-id="sec-ccm">CCM</h4>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 115-1-3">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1825,6 +1818,9 @@ Note&nbsp;7.1 PERT/COST
 
 </div>
 </div>
+</section>
+<section id="sec-ccm" class="level4">
+<h4 class="anchored" data-anchor-id="sec-ccm">CCM</h4>
 <p><strong>CCM</strong>(critical chain method) 또는 CCPM (critical chain project management)은 <font color="blue">TOC 제약 이론을 기반</font>으로 한 프로젝트 관리 기법이다.</p>
 <p>제품 Life cycle이 날로 짧아지고 고객 요구가 다양해 짐에 따라 신제품 개발, 신규 사업 추진 등 급변하는 사업 환경에 대응하기 위해서 프로젝트성 업무가 급증하는 추세이다. 프로젝트는 과제 특성상 <font color="red">완료 시간이 불확실하여 계획 단계에서 준수 확룔을 높이기 위해 안전 여유를 감안하여 예상 소요 시간을 길게 수립</font>한다. 프로제특 관리자는 제한된 자원, 즉 인력, 비용, 시간 등으로 여러 프로젝트를 동시에 관리하여 프로젝트를 기한 내 원활히 수행하기 위한 효과적인 관리기법이 필요하게 되었다.</p>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="예상 기간 장기화 문제 원인">
@@ -1889,15 +1885,15 @@ Note&nbsp;7.1 PERT/COST
 <dt>크래싱(crashing)</dt>
 <dd>
 <ul>
-<li>자원과 비용을 더 투입하여 일정을 단축하는 기법</li>
+<li><font color="#245bdb">자원과 비용을 더 투입하여 일정을 단축하는 기법</font></li>
 <li>프로젝트 전체 기간 중 CP(critical path) 구간에 자원을 먼저 할당하여 프로젝트 전체 일정을 줄이는 기법으로 프로젝트 원가가 상승한다는 단점이 있음</li>
 </ul>
 </dd>
 <dt>Fast tracking</dt>
 <dd>
 <ul>
-<li>순차적으로 진행되는 활동 간 연관관계를 병렬로 작업함으로써 일정을 단축시키는 기법</li>
-<li>프로젝트 리스크가 증가살 수 있으며 재작업을 해야 하는 단점이 있음음</li>
+<li><font color="#245bdb">순차적으로 진행되는 활동 간 연관관계를 병렬로 작업함으로써 일정을 단축시키는 기법</font></li>
+<li>프로젝트 리스크가 증가할 수 있으며 재작업을 해야 하는 단점이 있음</li>
 </ul>
 </dd>
 </dl>
@@ -2161,28 +2157,14 @@ Note&nbsp;7.1 PERT/COST
 </dl>
 <section id="pertcpm-전개-단계" class="level4">
 <h4 class="anchored" data-anchor-id="pertcpm-전개-단계">PERT/CPM 전개 단계</h4>
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart TB
-0[프로젝트에서 수행되어야 할 모든 활동 파악 및 정의]
-1[활동 간 선행 관계 결정]
-2[활동 간 선행 관계 네트워크도 작성]
-3["각 단계에서 소요되는 시간 추정 (평균, 분산 계산)"]
-4[각 단계에서 가장 빠른 시간과 가장 늦은 시간 계산]
-5[프로젝트 완료 시간과 critical path 결정]
-6[정해진 기간 내 프로젝트 완성 확률 계산]
-7[프로젝트 수행에 따른 정보 업데이트]
-
-0 --&gt; 1 --&gt; 2 --&gt; 3 --&gt; 4 --&gt; 5 --&gt; 6 --&gt; 7
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
+<pre><code>1.프로젝트에서 수행되어야 할 모든 활동 파악 및 정의
+2.활동 간 선행 관계 결정
+3.활동 간 선행 관계 네트워크도 작성
+4.각 단계에서 소요되는 시간 추정 (평균, 분산 계산)
+5.각 단계에서 가장 빠른 시간과 가장 늦은 시간 계산
+6.프로젝트 완료 시간과 critical path 결정
+7.정해진 기간 내 프로젝트 완성 확률 계산
+8.프로젝트 수행에 따른 정보 업데이트</code></pre>
 </section>
 </section>
 <section id="cpm-vs.-ccm" class="level3">
@@ -2235,8 +2217,8 @@ Note&nbsp;7.1 PERT/COST
 </table>
 </section>
 </section>
-<section id="참고사항" class="level2">
-<h2 class="anchored" data-anchor-id="참고사항">참고사항</h2>
+<section id="sec-ref-0202" class="level2">
+<h2 class="anchored" data-anchor-id="sec-ref-0202">참고사항</h2>
 <section id="프로젝트와-프로세스-차이" class="level3">
 <h3 class="anchored" data-anchor-id="프로젝트와-프로세스-차이">프로젝트와 프로세스 차이</h3>
 <table class="caption-top table">
