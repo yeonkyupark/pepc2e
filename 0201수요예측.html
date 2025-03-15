@@ -545,8 +545,6 @@ window.Quarto = {
 </header>
 
 
-<section id="수요예측-기법" class="level2">
-<h2 class="anchored" data-anchor-id="수요예측-기법">수요예측 기법</h2>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 97-2-2, 97-4-6, 103-2-2, 106-3-5, 118-2-2">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -560,6 +558,9 @@ window.Quarto = {
 
 </div>
 </div>
+<section id="수요예측-기법" class="level2">
+<h2 class="anchored" data-anchor-id="수요예측-기법">수요예측 기법</h2>
+<p>수요예측 기법에는 <strong>정량적 예측기법과 정성적 예측기법</strong>이 있다. 정량적 예측기법은 <font color="#245bdb">과거 데이터와 통계적 분석을 기반으로 수요를 예측</font>하며 시계열 예측기법과 인과관계 예측기법이 있다. 반면 정성적 예측기법은 <font color="#245bdb">과거 데이터가 부족하거나 데이터만으로 설명하기 어려운 상황에서 전문가 지식, 경험, 직관 등을 활용해 수요를 예측</font>하는 방식이다. 대표적인 방법으로 델파이법, 시장조사법, 자료 유추법이 있다.</p>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
@@ -571,7 +572,7 @@ subgraph s1["   "]
 11["직관을 이용한 예측"]
 12["시장 조사에 의한 예측"]
 13["유추에 의한 예측"]
-11 --- 111("데파이법")
+11 --- 111("델파이법")
 11 --- 112("판매원 의견 종합법")
 11 --- 113("경영자 판단법")
 11 --- 114("위원회 홥의법, 패널 동의법")
@@ -614,18 +615,35 @@ style 예측기법 fill:#d0e8f1
 <p>정성적 기법(Qualitative Methods)은 <font color="blue">과거 데이터가 부족하거나 데이터만으로 설명하기 어려운 상황에서 전문가의 지식, 경험, 직관 등을 활용해 수요를 예측하는 방법</font>이다.</p>
 <section id="sec-delphi" class="level4">
 <h4 class="anchored" data-anchor-id="sec-delphi">델파이법</h4>
-<p><strong>델파이법(Delphi Method)</strong>은 전문가들의 의견을 체계적으로 수집하고 종합하여 미래의 사건이나 수요를 예측하는 정성적 수요예측 기법이다. 이 방법은 <strong>반복적인 설문조사와 피드백 과정</strong>을 통해 의견을 수렴하고, 전문가들 간의 <strong>합의에 도달</strong>하는 것을 목표로 한다.</p>
+<p><strong>델파이법(Delphi Method)</strong>은 <font color="#245bdb">전문가들의 의견을 체계적으로 수집하고 종합하여 미래의 사건이나 수요를 예측하는 정성적 수요예측 기법</font>이다. 이 방법은 <strong>반복적인 설문조사와 피드백 과정</strong>을 통해 의견을 수렴하고, 전문가들 간의 <strong>합의에 도달</strong>하는 것을 목표로 한다.</p>
 <dl>
 <dt>델파이법의 특징</dt>
 <dd>
 <ul>
-<li><strong>전문가 집단의 의견 수렴:</strong> 다양한 분야의 전문가들이 익명으로 참여하여 편향을 최소화함<br>
-</li>
-<li><strong>반복적인 피드백:</strong> 여러 차례의 라운드를 통해 의견을 조정하고 합의 도출<br>
-</li>
-<li><strong>익명성 보장:</strong> 개인의 지위나 권위에 영향을 받지 않고 자유롭게 의견 제시 가능<br>
-</li>
-<li><strong>정성적 접근:</strong> 수량화된 데이터보다 전문가의 지식과 경험을 기반으로 분석</li>
+<li><dl>
+<dt><strong>전문가 집단의 의견 수렴</strong></dt>
+<dd>
+다양한 분야의 전문가들이 익명으로 참여하여 편향을 최소화함
+</dd>
+</dl></li>
+<li><dl>
+<dt><strong>반복적인 피드백</strong></dt>
+<dd>
+여러 차례의 라운드를 통해 의견을 조정하고 합의 도출
+</dd>
+</dl></li>
+<li><dl>
+<dt><strong>익명성 보장</strong></dt>
+<dd>
+개인의 지위나 권위에 영향을 받지 않고 자유롭게 의견 제시 가능
+</dd>
+</dl></li>
+<li><dl>
+<dt><strong>정성적 접근</strong></dt>
+<dd>
+수량화된 데이터보다 전문가의 지식과 경험을 기반으로 분석
+</dd>
+</dl></li>
 </ul>
 </dd>
 </dl>
@@ -683,20 +701,20 @@ style 예측기법 fill:#d0e8f1
 </thead>
 <tbody>
 <tr class="odd">
-<td>전문가의 집단 지혜를 활용하여 신뢰성 높은 예측 가능</td>
-<td>전문가 선정 과정에서 주관적 편향 발생 가능성 있음</td>
+<td>전문가의 집단 지혜를 활용하여 <font color="#245bdb">신뢰성 높은 예측</font> 가능</td>
+<td>전문가 선정 과정에서 <font color="#d83931">주관적 편향 발생 가능성</font> 있음</td>
 </tr>
 <tr class="even">
-<td>익명성을 보장해 자유롭고 솔직한 의견 개진 가능</td>
-<td>설문조사와 반복 과정으로 시간과 비용이 많이 소요됨</td>
+<td>익명성을 보장해 <font color="#245bdb">자유롭고 솔직한 의견 개진</font> 가능</td>
+<td>설문조사와 반복 과정으로 <font color="#d83931">시간과 비용이 많이 소요</font>됨</td>
 </tr>
 <tr class="odd">
-<td>반복적인 피드백을 통해 의견 수렴 및 합의 도출 가능</td>
-<td>전문가 간 의견 불일치 시 최종 합의 도출이 어려울 수 있음</td>
+<td><font color="#245bdb">반복적인 피드백</font>을 통해 의견 수렴 및 합의 도출 가능</td>
+<td>전문가 간 의견 불일치 시 <font color="#d83931">최종 합의 도출이 어려울 수</font> 있음</td>
 </tr>
 <tr class="even">
-<td>수량적 데이터 부족 시에도 유용하게 활용 가능</td>
-<td>정성적 방법이므로 객관적 데이터 기반의 예측에 한계 있음</td>
+<td><font color="#245bdb">수량적 데이터 부족 시에도 유용</font>하게 활용 가능</td>
+<td>정성적 방법이므로 <font color="#d83931">객관적 데이터 기반의 예측에 한계</font> 있음</td>
 </tr>
 </tbody>
 </table>
@@ -723,12 +741,24 @@ style 예측기법 fill:#d0e8f1
 <dt>중역판단법의 특징</dt>
 <dd>
 <ul>
-<li><strong>경영진의 경험과 직관 활용:</strong> 데이터보다는 조직 내 고위층의 시장 통찰력과 전략적 사고에 의존<br>
-</li>
-<li><strong>간단한 의사결정 과정:</strong> 복잡한 통계 분석 없이 빠르게 수요를 예측할 수 있음<br>
-</li>
-<li><strong>유연한 적용 가능:</strong> 정형화된 절차가 없으며 다양한 상황에 적용 가능<br>
-</li>
+<li><dl>
+<dt><strong>경영진의 경험과 직관 활용</strong></dt>
+<dd>
+데이터보다는 조직 내 고위층의 시장 통찰력과 전략적 사고에 의존
+</dd>
+</dl></li>
+<li><dl>
+<dt><strong>간단한 의사결정 과정</strong></dt>
+<dd>
+복잡한 통계 분석 없이 빠르게 수요를 예측할 수 있음
+</dd>
+</dl></li>
+<li><dl>
+<dt><strong>유연한 적용 가능</strong></dt>
+<dd>
+정형화된 절차가 없으며 다양한 상황에 적용 가능
+</dd>
+</dl></li>
 <li><strong>신제품 개발, 시장 진입 전략 수립 등에서 유용</strong></li>
 </ul>
 </dd>
