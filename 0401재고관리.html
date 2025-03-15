@@ -593,34 +593,22 @@ style 재고관리 fill:#EEF
 <dt>재고의 기능</dt>
 <dd>
 <ol type="1">
-<li><strong>수요와 공급의 불일치 완화</strong>
-<ul>
-<li>생산 속도와 고객 수요가 일치하지 않을 경우, 재고는 이를 조율하는 역할을 한다.<br>
+<li><strong>수요와 공급의 불일치 완화</strong><br>
+- 생산 속도와 고객 수요가 일치하지 않을 경우, 재고는 이를 조율하는 역할을 한다.<br>
+- 예) 계절별 수요 변동에 대비해 상품을 미리 생산해두는 경우.<br>
 </li>
-<li>예) 계절별 수요 변동에 대비해 상품을 미리 생산해두는 경우.<br>
+<li><strong>생산의 안정성 확보</strong><br>
+- 생산 라인의 중단 없이 지속적인 생산이 가능하도록 원자재 및 부품을 비축한다.<br>
+- 예) 원재료 공급에 차질이 생겨도 재고가 있다면 생산이 계속된다.<br>
 </li>
-</ul></li>
-<li><strong>생산의 안정성 확보</strong>
-<ul>
-<li>생산 라인의 중단 없이 지속적인 생산이 가능하도록 원자재 및 부품을 비축한다.<br>
+<li><strong>긴급 주문 대응</strong><br>
+- 고객의 긴급 주문이나 갑작스러운 수요 증가에 대비해 빠르게 대응할 수 있다.<br>
 </li>
-<li>예) 원재료 공급에 차질이 생겨도 재고가 있다면 생산이 계속된다.<br>
+<li><strong>가격 변동 완충</strong><br>
+- 원자재 가격 상승에 대비해 미리 대량 구매하여 가격 변동에 대한 리스크를 줄인다.<br>
 </li>
-</ul></li>
-<li><strong>긴급 주문 대응</strong>
-<ul>
-<li>고객의 긴급 주문이나 갑작스러운 수요 증가에 대비해 빠르게 대응할 수 있다.<br>
-</li>
-</ul></li>
-<li><strong>가격 변동 완충</strong>
-<ul>
-<li>원자재 가격 상승에 대비해 미리 대량 구매하여 가격 변동에 대한 리스크를 줄인다.<br>
-</li>
-</ul></li>
-<li><strong>운송 및 조달 효율화</strong>
-<ul>
-<li>대량으로 생산 및 조달하여 운송 비용을 절감하고, 수시로 재고를 채우는 부담을 줄인다.</li>
-</ul></li>
+<li><strong>운송 및 조달 효율화</strong><br>
+- 대량으로 생산 및 조달하여 운송 비용을 절감하고, 수시로 재고를 채우는 부담을 줄인다.</li>
 </ol>
 </dd>
 </dl>
@@ -664,9 +652,6 @@ style 재고관리 fill:#EEF
 </dd>
 </dl>
 <p>재고는 생산과 소비를 조율하는 필수 요소지만, 과도한 재고는 비용 부담으로 작용한다. <a href="0101경쟁우위생산전략.html#sec-tps" class="quarto-xref"><span>도요타 생산 시스템</span></a>에서 강조하는 <a href="0101경쟁우위생산전략.html#sec-jit" class="quarto-xref"><span>JIT 생산</span></a>은 필요한 시점에 필요한 만큼만 생산하여 <font color="blue">재고 삭감을 통한 경영 효율화</font>를 실현하는 대표적인 사례다.</p>
-</section>
-<section id="재고-종류" class="level3">
-<h3 class="anchored" data-anchor-id="재고-종류">재고 종류</h3>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 121-3-2">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -680,6 +665,9 @@ style 재고관리 fill:#EEF
 
 </div>
 </div>
+</section>
+<section id="재고-종류" class="level3">
+<h3 class="anchored" data-anchor-id="재고-종류">재고 종류</h3>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
@@ -803,12 +791,12 @@ style 재고관리 fill:#EEF
 </ul>
 </dd>
 </dl>
-<p><span class="math display">\[공급일수 = \frac{평균총재고}{\text{연간 매출 원가 (또는 연간 매출액)}} \times 기간\]</span></p>
+<p><span id="eq-inventory-days"><span class="math display">\[공급일수 = \frac{평균총재고}{\text{연간 매출 원가 (또는 연간 매출액)}} \times 기간 \tag{10.1}\]</span></span></p>
 <dl>
 <dt>재고자산회전율</dt>
 <dd>
 <ul>
-<li>매출원가를 평균재고자산으로 나눈 것으로 재고잔산 회전속도 의미 <span class="math display">\[재고회전율 = \frac{매출비용}{평균재고 \times 단위당 원가}\]</span></li>
+<li>매출원가를 평균재고자산으로 나눈 것으로 재고잔산 회전속도 의미 <span id="eq-inventory-turnover-rate"><span class="math display">\[재고회전율 = \frac{매출비용}{평균재고 \times 단위당 원가} \tag{10.2}\]</span></span></li>
 </ul>
 </dd>
 <dt>서비스 수준(%)</dt>
@@ -851,10 +839,6 @@ style 재고관리 fill:#EEF
 </ul>
 </dd>
 </dl>
-</section>
-</section>
-<section id="재고관리-모형" class="level2">
-<h2 class="anchored" data-anchor-id="재고관리-모형">재고관리 모형</h2>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 109-4-6">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -868,6 +852,10 @@ style 재고관리 fill:#EEF
 
 </div>
 </div>
+</section>
+</section>
+<section id="재고관리-모형" class="level2">
+<h2 class="anchored" data-anchor-id="재고관리-모형">재고관리 모형</h2>
 <p>재고관리 모형은 수용 특성에 따라 <strong>확정적 재고관리 모형</strong>과 <strong>확률적 재고관리 모형</strong>으로 나눌 수 있다. 또한 특수한 경우 사용할 수 있는 <strong>단일기간 재고관리 모형</strong>이나 <strong>ABC 재고관리 모형</strong>도 있다.</p>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
@@ -1081,27 +1069,27 @@ end
 <tbody>
 <tr class="odd">
 <td>연간 재고관련 총 비용 TC<br>(연간 주문비용 + 연간 재고 유지비용)</td>
-<td><span id="eq-eoq-tc"><span class="math display">\[ \frac{D}{Q}S + \frac{Q}{2}H = \sqrt{2DSH}  \tag{10.1}\]</span></span></td>
+<td><span id="eq-eoq-tc"><span class="math display">\[ \frac{D}{Q}S + \frac{Q}{2}H = \sqrt{2DSH}  \tag{10.3}\]</span></span></td>
 </tr>
 <tr class="even">
 <td>경제적 주문량(Q*)</td>
-<td><span id="eq-eoq-q"><span class="math display">\[ \sqrt\frac{2DS}{H}  \tag{10.2}\]</span></span></td>
+<td><span id="eq-eoq-q"><span class="math display">\[ \sqrt\frac{2DS}{H}  \tag{10.4}\]</span></span></td>
 </tr>
 <tr class="odd">
 <td>일일평균수요(d)</td>
-<td><span id="eq-eoq-d"><span class="math display">\[ \frac{D}{연간영업일수}  \tag{10.3}\]</span></span></td>
+<td><span id="eq-eoq-d"><span class="math display">\[ \frac{D}{연간영업일수}  \tag{10.5}\]</span></span></td>
 </tr>
 <tr class="even">
 <td>재주문점(R)</td>
-<td><span id="eq-eoq-r"><span class="math display">\[ dL \tag{10.4}\]</span></span></td>
+<td><span id="eq-eoq-r"><span class="math display">\[ dL \tag{10.6}\]</span></span></td>
 </tr>
 <tr class="odd">
 <td>연간 최적주문횟수(N*)</td>
-<td><span id="eq-eoq-n"><span class="math display">\[ \frac{D}{Q^*} = \sqrt{\frac{DH}{2S}}  \tag{10.5}\]</span></span></td>
+<td><span id="eq-eoq-n"><span class="math display">\[ \frac{D}{Q^*} = \sqrt{\frac{DH}{2S}}  \tag{10.7}\]</span></span></td>
 </tr>
 <tr class="even">
 <td>연간 최적주문주기(T*)</td>
-<td><span id="eq-eoq-t"><span class="math display">\[ \frac{1}{N^*} = \sqrt{\frac{2S}{DH}} \tag{10.6}\]</span></span></td>
+<td><span id="eq-eoq-t"><span class="math display">\[ \frac{1}{N^*} = \sqrt{\frac{2S}{DH}} \tag{10.8}\]</span></span></td>
 </tr>
 </tbody>
 </table>
@@ -1194,27 +1182,27 @@ EOQ 항목 계산
 <tbody>
 <tr class="odd">
 <td>생산기간(t)</td>
-<td><span id="eq-epq-t"><span class="math display">\[\frac{Q}{P} \tag{10.7}\]</span></span></td>
+<td><span id="eq-epq-t"><span class="math display">\[\frac{Q}{P} \tag{10.9}\]</span></span></td>
 </tr>
 <tr class="even">
 <td>평균재고수준</td>
-<td><span id="eq-epq-qp"><span class="math display">\[\frac{(P-D)Q}{2P} \tag{10.8}\]</span></span></td>
+<td><span id="eq-epq-qp"><span class="math display">\[\frac{(P-D)Q}{2P} \tag{10.10}\]</span></span></td>
 </tr>
 <tr class="odd">
 <td>연간재고유지비용</td>
-<td><span id="eq-epq-dsq"><span class="math display">\[\frac{(P-D)QH}{2P} = \frac{DS}{Q} \tag{10.9}\]</span></span></td>
+<td><span id="eq-epq-dsq"><span class="math display">\[\frac{(P-D)QH}{2P} = \frac{DS}{Q} \tag{10.11}\]</span></span></td>
 </tr>
 <tr class="even">
 <td>연간생산준비비용</td>
-<td><span id="eq-epq-dsq2"><span class="math display">\[\frac{D}{Q}S \tag{10.10}\]</span></span></td>
+<td><span id="eq-epq-dsq2"><span class="math display">\[\frac{D}{Q}S \tag{10.12}\]</span></span></td>
 </tr>
 <tr class="odd">
 <td>연간총비용(TC)</td>
-<td><span id="eq-epq-tc"><span class="math display">\[\frac{DS}{Q} + \frac{(P-D)QH}{2P} \tag{10.11}\]</span></span></td>
+<td><span id="eq-epq-tc"><span class="math display">\[\frac{DS}{Q} + \frac{(P-D)QH}{2P} \tag{10.13}\]</span></span></td>
 </tr>
 <tr class="even">
 <td>경제적 생산량(EPQ)</td>
-<td><span id="eq-epq-epq"><span class="math display">\[\sqrt{\frac{2DS}{H}(\frac{P}{P-D})} \tag{10.12}\]</span></span></td>
+<td><span id="eq-epq-epq"><span class="math display">\[\sqrt{\frac{2DS}{H}(\frac{P}{P-D})} \tag{10.14}\]</span></span></td>
 </tr>
 </tbody>
 </table>
@@ -1797,7 +1785,7 @@ EOQ 항목 계산
 </dl>
 <p><span id="eq-aaiv"><span class="math display">\[
 평균총재고액 = \frac{기초재고액 + 기말재고액}{2}
-\tag{10.13}\]</span></span></p>
+\tag{10.15}\]</span></span></p>
 <dl>
 <dt>재고 공급일수</dt>
 <dd>
@@ -1808,7 +1796,7 @@ EOQ 항목 계산
 </dl>
 <p><span id="eq-dos"><span class="math display">\[
 재고 \ 공급일수 = \frac{평균재고가액}{일당매출원가}
-\tag{10.14}\]</span></span></p>
+\tag{10.16}\]</span></span></p>
 <dl>
 <dt>재고 공급주수</dt>
 <dd>
@@ -1819,7 +1807,7 @@ EOQ 항목 계산
 </dl>
 <p><span id="eq-wos"><span class="math display">\[
 재고 \ 공급주수 = \frac{평균재고가액}{주당매출원가}
-\tag{10.15}\]</span></span></p>
+\tag{10.17}\]</span></span></p>
 <dl>
 <dt>재고 회전율</dt>
 <dd>
@@ -1831,7 +1819,7 @@ EOQ 항목 계산
 </dl>
 <p><span id="eq-itr"><span class="math display">\[
 회전율 = \frac{(연간)매출액(원가)}{(평균)재고액}
-\tag{10.16}\]</span></span></p>
+\tag{10.18}\]</span></span></p>
 <div class="callout callout-style-default callout-important no-icon callout-titled" title="재고 성과 척도">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1845,25 +1833,25 @@ EOQ 항목 계산
 <p>평균 총 재고액 2억원, 연간 매출원가 10억원, 연간 50주 영업, 연간 운영일수가 250일일 때, 재고회전율, 재고공급주수, 재고공급일수를 계산하시오. 만약 재고회전율이 10회/년으로 향상되었다면 평균총재고액을 계산하시오.</p>
 <hr>
 <dl>
-<dt>재고회전율(<a href="#eq-aaiv" class="quarto-xref">수식&nbsp;<span>10.13</span></a>)</dt>
+<dt>재고회전율(<a href="#eq-aaiv" class="quarto-xref">수식&nbsp;<span>10.15</span></a>)</dt>
 <dd>
 <ul>
 <li>재고회전율 = 10억/2억 = 5(회/년)</li>
 </ul>
 </dd>
-<dt>재고공급주수(<a href="#eq-wos" class="quarto-xref">수식&nbsp;<span>10.15</span></a>)</dt>
+<dt>재고공급주수(<a href="#eq-wos" class="quarto-xref">수식&nbsp;<span>10.17</span></a>)</dt>
 <dd>
 <ul>
 <li>재고공급주수 = 2억/(10억/50주) = 10주</li>
 </ul>
 </dd>
-<dt>재고공급일수(<a href="#eq-dos" class="quarto-xref">수식&nbsp;<span>10.14</span></a>)</dt>
+<dt>재고공급일수(<a href="#eq-dos" class="quarto-xref">수식&nbsp;<span>10.16</span></a>)</dt>
 <dd>
 <ul>
 <li>재고공급일수 = 2억/(10억/250일) = 50일</li>
 </ul>
 </dd>
-<dt>재고회전율(<a href="#eq-itr" class="quarto-xref">수식&nbsp;<span>10.16</span></a>)이 10회/년이면</dt>
+<dt>재고회전율(<a href="#eq-itr" class="quarto-xref">수식&nbsp;<span>10.18</span></a>)이 10회/년이면</dt>
 <dd>
 <ul>
 <li>재고회전율 = 10 = <span class="math inline">\(\frac{10}{x(평균재고액)}\)</span>, 따라서 평균재고액은 1억원</li>
