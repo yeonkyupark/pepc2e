@@ -9,7 +9,6 @@ book:
   repo-url: https://github.com/yeonkyupark/pepc2e 
   repo-branch: main
   repo-actions: [edit]
-  site-url: https://github.com/yeonkyupark/pepc2e
   favicon: logo.png
   page-footer: 
     left: "Copyright(c) 2025 YK" 
@@ -92,6 +91,9 @@ number-sections: false
 
 format:
   html:
+    title: "생산운영과 공장관리"
+    site-url: "https://github.com/yeonkyupark/pepc2e"
+    site-path: "/"
     toc: true
     toc-depth: 4
     toc-title: 목차
