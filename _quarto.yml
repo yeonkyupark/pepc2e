@@ -84,14 +84,15 @@ book:
       - 1202ISO14001.qmd
       - 1203ISO31000.qmd
       - 1204ISO21500.qmd
+  site-url: "https://github.com/yeonkyupark/pepc2e"
     
 bibliography: references.bib
 
 number-sections: false
 
 website:
-  title: "생산운영과 공장관리"
   site-url: "https://github.com/yeonkyupark/pepc2e"
+  title: "생산운영과 공장관리"
   site-path: "/"
 
 html:
