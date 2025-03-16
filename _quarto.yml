@@ -90,25 +90,21 @@ bibliography: references.bib
 
 number-sections: false
 
-website:
-  site-url: "https://github.com/yeonkyupark/pepc2e"
-  title: "생산운영과 공장관리"
-  site-path: "/"
-
-html:
-  toc: true
-  toc-depth: 4
-  toc-title: 목차
-  page-layout: full
-  grid:
-    body-width: 900px
-  theme: 
-    - simple
-    - custom.scss
-  mermaid:
-    theme: neutral
-  include-in-header: adsense.html
-  include-after-body: adsense-body.html
+format:
+  html:
+    toc: true
+    toc-depth: 4
+    toc-title: 목차
+    page-layout: full
+    grid:
+      body-width: 900px
+    theme: 
+      - simple
+      - custom.scss
+    mermaid:
+      theme: neutral
+    include-in-header: adsense.html
+    include-after-body: adsense-body.html
 
 execute:
   freeze: auto
