@@ -9,6 +9,7 @@ book:
   repo-url: https://github.com/yeonkyupark/pepc2e 
   repo-branch: main
   repo-actions: [edit]
+  site-url: https://github.com/yeonkyupark/pepc2e
   favicon: logo.png
   page-footer: 
     left: "Copyright(c) 2025 YK" 
