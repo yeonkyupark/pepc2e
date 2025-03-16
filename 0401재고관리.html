@@ -518,7 +518,7 @@ window.Quarto = {
   <li><a href="#sec-cpfr" id="toc-sec-cpfr" class="nav-link" data-scroll-target="#sec-cpfr">CPFR</a></li>
   <li><a href="#sec-cock" id="toc-sec-cock" class="nav-link" data-scroll-target="#sec-cock">COCK</a></li>
   </ul></li>
-  <li><a href="#sec-04-ref" id="toc-sec-04-ref" class="nav-link" data-scroll-target="#sec-04-ref">참고자료</a>
+  <li><a href="#sec-ref-0401" id="toc-sec-ref-0401" class="nav-link" data-scroll-target="#sec-ref-0401">참고자료</a>
   <ul>
   <li><a href="#sec-crp" id="toc-sec-crp" class="nav-link" data-scroll-target="#sec-crp">CRP</a></li>
   <li><a href="#sec-product-availability" id="toc-sec-product-availability" class="nav-link" data-scroll-target="#sec-product-availability">제품가용성</a></li>
@@ -1004,8 +1004,6 @@ end
 </ul>
 </dd>
 </dl>
-<section id="경제적-주문량-모형eoq" class="level5">
-<h5 class="anchored" data-anchor-id="경제적-주문량-모형eoq">경제적 주문량 모형(EOQ)</h5>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 115-4-2">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1019,8 +1017,17 @@ end
 
 </div>
 </div>
+<section id="경제적-주문량-모형eoq" class="level5">
+<h5 class="anchored" data-anchor-id="경제적-주문량-모형eoq">경제적 주문량 모형(EOQ)</h5>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://ars.els-cdn.com/content/image/1-s2.0-S0307904X09002777-gr1.jpg" class="img-fluid figure-img"></p>
+<figcaption>https://www.sciencedirect.com/science/article/pii/S0307904X09002777</figcaption>
+</figure>
+</div>
 <p>주문량에 따른 특징은 다음과 같다.</p>
 <table class="caption-top table">
+<caption>주문량에 따른 특징</caption>
 <thead>
 <tr class="header">
 <th>주문량이 적을 경우</th>
@@ -1097,18 +1104,38 @@ end
 <dt><font color="blue">모형이 성립하기 위한 전제조건</font></dt>
 <dd>
 <ol type="1">
-<li><strong>수요가 일정하고 예측 가능하다.</strong><br>
-수요는 일정한 속도로 지속적으로 발생하며, 예측 가능한 형태로 변화한다.</li>
-<li><strong>주문 시 비용은 일정하다.</strong><br>
-각 주문에 대해 발생하는 고정적인 비용이 존재하며, 주문당 비용은 일정하다.</li>
-<li><strong>재고 유지 비용이 일정하다.</strong><br>
-재고를 보유하는 동안 발생하는 비용(저장비용 등)은 일정하며, 보유 재고의 양에 비례한다.</li>
+<li><dl>
+<dt><strong>수요가 일정하고 예측 가능하다.</strong></dt>
+<dd>
+수요는 일정한 속도로 지속적으로 발생하며, 예측 가능한 형태로 변화한다.
+</dd>
+</dl></li>
+<li><dl>
+<dt><strong>주문 시 비용은 일정하다.</strong></dt>
+<dd>
+각 주문에 대해 발생하는 고정적인 비용이 존재하며, 주문당 비용은 일정하다.
+</dd>
+</dl></li>
+<li><dl>
+<dt><strong>재고 유지 비용이 일정하다.</strong></dt>
+<dd>
+재고를 보유하는 동안 발생하는 비용(저장비용 등)은 일정하며, 보유 재고의 양에 비례한다.
+</dd>
+</dl></li>
 <li><strong>주문 리드 타임이 일정하다.</strong><br>
 주문을 하고 실제로 물품이 도착하는데 걸리는 시간이 일정하다.</li>
-<li><strong>주문은 한 번에 이루어진다.</strong><br>
-주문은 한 번에 이루어지며, 연속적인 소규모 주문이 아니라 한 번의 주문으로 전체 수요를 충족시킬 수 있다.</li>
-<li><strong>재고가 소진되기 전에 항상 새로운 주문이 이루어진다.</strong><br>
-주문이 이루어질 때 재고가 충분히 남아 있도록 계획되며, 재고가 부족하지 않게 주문이 이루어진다.</li>
+<li><dl>
+<dt><strong>주문은 한 번에 이루어진다.</strong></dt>
+<dd>
+주문은 한 번에 이루어지며, 연속적인 소규모 주문이 아니라 한 번의 주문으로 전체 수요를 충족시킬 수 있다.
+</dd>
+</dl></li>
+<li><dl>
+<dt><strong>재고가 소진되기 전에 항상 새로운 주문이 이루어진다.</strong></dt>
+<dd>
+주문이 이루어질 때 재고가 충분히 남아 있도록 계획되며, 재고가 부족하지 않게 주문이 이루어진다.
+</dd>
+</dl></li>
 </ol>
 </dd>
 </dl>
@@ -1138,9 +1165,6 @@ EOQ 항목 계산
 \]</span></p>
 </div>
 </div>
-</section>
-<section id="경제적-생산량-모형epq" class="level5">
-<h5 class="anchored" data-anchor-id="경제적-생산량-모형epq">경제적 생산량 모형(EPQ)</h5>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 124-3-3">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1154,21 +1178,24 @@ EOQ 항목 계산
 
 </div>
 </div>
-<p><strong>경제적 생산량</strong>(EPQ, economic production quantity) 모형이란 생산이 진행되는 동안 생산된 제품이 재고에 더해짐과 동시에 소비가 일어나서 재고가 감소하는 경우 최적 <font color="blue">1회 생산량을 결정</font>하는 모형이다. 자체 생산, 조달하는 물품의 총 재고비용이 최소가 되는 1회당 경제적 생산량으로 기본 EOQ와 유사하지만 <font color="blue">주문비용 대신 작업 준비 비용을 대체</font>하여 사용하다는 점이 다르다.</p>
+</section>
+<section id="경제적-생산량-모형epq" class="level5">
+<h5 class="anchored" data-anchor-id="경제적-생산량-모형epq">경제적 생산량 모형(EPQ)</h5>
+<p><strong>경제적 생산량</strong>(EPQ, economic production quantity) 모형이란 <font color="#245bdb">생산이 진행되는 동안 생산된 제품이 재고에 더해짐과 동시에 소비가 일어나서 재고가 감소하는 경우</font> 최적 <font color="blue">1회 생산량을 결정</font>하는 모형이다. 자체 생산, 조달하는 물품의 총 재고비용이 최소가 되는 1회당 경제적 생산량으로 기본 EOQ와 유사하지만 <font color="blue">주문비용 대신 작업 준비 비용을 대체</font>하여 사용하다는 점이 다르다.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://ars.els-cdn.com/content/image/1-s2.0-S0307904X09002777-gr2.jpg" class="img-fluid figure-img"></p>
+<figcaption>https://www.sciencedirect.com/science/article/pii/S0307904X09002777</figcaption>
+</figure>
+</div>
 <dl>
 <dt>EPQ 모델 가정</dt>
 <dd>
-<ul>
-<li>생산이 시작되고 뒤이어 수요가 이루어지며 수요량은 생산량보다 작다.</li>
-<li>생산은 일정 기간 동안 점진적으로 쌓이고 어느 정도 재고 수준에 이르면 생산을 중단한다.</li>
-<li>생산이 중단되면 쌓였던 재고량은 일정량씩 소요되어 바닥 난다.</li>
-<li>재고가모두 없어지면 즉시 생산 작업이 되풀이 된다.</li>
-<li>재고 유지비는 생산량 크기에 정비례하여 발생한다.</li>
-<li>생산단가는 생산량 크리와 관계없이 일정하다.</li>
-</ul>
+<font color="#245bdb"> - 생산이 시작되고 뒤이어 수요가 이루어지며 수요량은 생산량보다 작다.</font> <font color="#245bdb"> - 생산은 일정 기간 동안 점진적으로 쌓이고 어느 정도 재고 수준에 이르면 생산을 중단한다.</font> <font color="#245bdb"> - 생산이 중단되면 쌓였던 재고량은 일정량씩 소요되어 바닥 난다.</font> <font color="#245bdb"> - 재고가모두 없어지면 즉시 생산 작업이 되풀이 된다.</font> <font color="#245bdb"> - 재고 유지비는 생산량 크기에 정비례하여 발생한다.</font> <font color="#245bdb"> - 생산단가는 생산량 크리와 관계없이 일정하다.</font>
 </dd>
 </dl>
 <table class="caption-top table">
+<caption>EPQ 모델 계산식</caption>
 <colgroup>
 <col style="width: 32%">
 <col style="width: 67%">
@@ -1334,8 +1361,6 @@ EOQ 항목 계산
 <section id="기타-재고관리-모형" class="level3">
 <h3 class="anchored" data-anchor-id="기타-재고관리-모형">기타 재고관리 모형</h3>
 <p>대표적인 재고관리 모형으로 ABC 모형, 투빈(Two Bin)시스템, min-Max시스템 등이 있다.</p>
-<section id="abc-모형" class="level4">
-<h4 class="anchored" data-anchor-id="abc-모형">ABC 모형</h4>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 112-2-5">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1349,6 +1374,8 @@ EOQ 항목 계산
 
 </div>
 </div>
+<section id="abc-모형" class="level4">
+<h4 class="anchored" data-anchor-id="abc-모형">ABC 모형</h4>
 <p><strong>ABC 재고관리 방식</strong>은 다수 경미한 품목보다는 <font color="blue">소수 중요품목을 중심으로 재고를 관리하는 방식</font>이다. <font color="blue">중요도 구분은 <strong>파레토 분석</strong>에 따른다</font>. 재고품목 중요도는 품목 연간 사용액을 기준으로 결정된다. 연간 사용액은 품목 단가에 연간 사용수량을 곱하여 계산한다. 연간 사용액 크기에 따라 A, B, C 세 등급으로 분류하지만, <font color="blue">부패하기 쉬운 품목이나 리드타임이 긴 품목등도 A 품목으로 지정할 수 있다</font>. ABC 품목 구성비는 회사 상황에 따라 차이가 있으며 대체로 다음과 같은 범위 내에서 이루어진다.</p>
 <table class="caption-top table">
 <caption>ABC 모형 예시</caption>
@@ -1504,9 +1531,6 @@ EOQ 항목 계산
 </dd>
 </dl>
 <p>투빈 시스템은 간단하고 효과적인 재고 관리 방법으로, 주로 <font color="blue">소모품이나 자주 사용하는 자재의 재고를 효율적으로 관리</font>하는 데 유용하다. 두 개의 bin을 사용해 재고를 관리함으로써 과잉 재고나 재고 부족을 방지하고, 자동적으로 재주문을 유도하여 생산 과정의 연속성을 유지할 수 있다.</p>
-</section>
-<section id="정량발주방식과-정기발주방식" class="level4">
-<h4 class="anchored" data-anchor-id="정량발주방식과-정기발주방식">정량발주방식과 정기발주방식</h4>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 103-1-12, 118-3-3, 127-1-4">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1520,6 +1544,9 @@ EOQ 항목 계산
 
 </div>
 </div>
+</section>
+<section id="정량발주방식과-정기발주방식" class="level4">
+<h4 class="anchored" data-anchor-id="정량발주방식과-정기발주방식">정량발주방식과 정기발주방식</h4>
 <p><strong>정기발주방식</strong>과 <strong>정량발주방식</strong>은 발주 시점에 따라 구분된다.</p>
 <table class="caption-top table">
 <caption>정량발주시스템과 정기발주시스템</caption>
@@ -1589,9 +1616,6 @@ EOQ 항목 계산
 <p>정량발주시스템에 따라 계속적인 재고실사를 통해 재고량이 533개가 남게되면 발저점에 도달한 것으로 판단하여 발주를 진행한다.</p>
 </div>
 </div>
-</section>
-<section id="min-max-시스템" class="level4">
-<h4 class="anchored" data-anchor-id="min-max-시스템">min-Max 시스템</h4>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 130-1-8">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1605,6 +1629,9 @@ EOQ 항목 계산
 
 </div>
 </div>
+</section>
+<section id="min-max-시스템" class="level4">
+<h4 class="anchored" data-anchor-id="min-max-시스템">min-Max 시스템</h4>
 <p><strong>min-Max System</strong>, 또는 <strong>(s,S) 시스템</strong>, <strong>절충 시스템</strong>은 재고 관리 방식 중 하나로, <font color="blue">최소 재고 수준(minimum level)과 최대 재고 수준(maximum level)을 설정하여 재고를 관리</font>하는 시스템이다. 이 시스템은 주로 <strong>소매업</strong>이나 <strong>제조업</strong>에서 사용되며, 재고 수준을 효율적으로 유지하고, <font color="blue">과잉 재고나 재고 부족을 방지</font>하는 데 도움을 준다. 이 시스템은 일정기간마다 재고수준을 확인하는 <font color="blue">정기발주형 재고관리시스템을 기초</font>로 일정기간에 재고 조사시 정량발주형에 있어 재발주점에 도달하지 않으면 주문을 하지 않는다. 반면 재발주점에 도달했다면 정량발주하여 발주관련 수고를 최소화 한다.</p>
 <dl>
 <dt>기본 개념</dt>
@@ -1682,11 +1709,6 @@ EOQ 항목 계산
 </dd>
 </dl>
 <p>Min-Max 시스템은 재고 관리의 기본적인 방법으로, <strong>최소 재고 수준</strong>과 <strong>최대 재고 수준</strong>을 설정하여 재고 부족과 과잉을 방지한다. 이 시스템은 단순하고 직관적이지만, <strong>수요 변동</strong>이나 <strong>리드 타임</strong>을 고려하는 데 한계가 있을 수 있어, <strong>자동화된 재고 추적</strong>과 <strong>수요 예측</strong>을 추가적으로 활용하면 더욱 효과적이다.</p>
-</section>
-</section>
-</section>
-<section id="sec-inventory-cost-kpi" class="level2">
-<h2 class="anchored" data-anchor-id="sec-inventory-cost-kpi">재고 비용 및 재고 성과 척도</h2>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 103-3-2, 112-1-1, 130-4-2">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1700,6 +1722,11 @@ EOQ 항목 계산
 
 </div>
 </div>
+</section>
+</section>
+</section>
+<section id="sec-inventory-cost-kpi" class="level2">
+<h2 class="anchored" data-anchor-id="sec-inventory-cost-kpi">재고 비용 및 재고 성과 척도</h2>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
@@ -1717,9 +1744,9 @@ EOQ 항목 계산
 </div>
 </div>
 </div>
-<p><span class="math display">\[
+<p><span id="eq-total-inventory-cost"><span class="math display">\[
 \text{총 재고비 = 재고비용 합 = 주문/구매 준비 비용 + 재고 유지 비용 + 품절 비용(재고 부족비)}
-\]</span></p>
+\tag{10.15}\]</span></span></p>
 <p>재고관련 비용은 일반적으로 <font color="red">제품 가치 15~35%</font> 발생한다(이자, 보관비용, 세금, 보험료, 상품 훼손 비용 등).</p>
 <dl>
 <dt>주문/준비 비용 (order/setup cost)</dt>
@@ -1785,7 +1812,7 @@ EOQ 항목 계산
 </dl>
 <p><span id="eq-aaiv"><span class="math display">\[
 평균총재고액 = \frac{기초재고액 + 기말재고액}{2}
-\tag{10.15}\]</span></span></p>
+\tag{10.16}\]</span></span></p>
 <dl>
 <dt>재고 공급일수</dt>
 <dd>
@@ -1796,7 +1823,7 @@ EOQ 항목 계산
 </dl>
 <p><span id="eq-dos"><span class="math display">\[
 재고 \ 공급일수 = \frac{평균재고가액}{일당매출원가}
-\tag{10.16}\]</span></span></p>
+\tag{10.17}\]</span></span></p>
 <dl>
 <dt>재고 공급주수</dt>
 <dd>
@@ -1807,7 +1834,7 @@ EOQ 항목 계산
 </dl>
 <p><span id="eq-wos"><span class="math display">\[
 재고 \ 공급주수 = \frac{평균재고가액}{주당매출원가}
-\tag{10.17}\]</span></span></p>
+\tag{10.18}\]</span></span></p>
 <dl>
 <dt>재고 회전율</dt>
 <dd>
@@ -1819,7 +1846,7 @@ EOQ 항목 계산
 </dl>
 <p><span id="eq-itr"><span class="math display">\[
 회전율 = \frac{(연간)매출액(원가)}{(평균)재고액}
-\tag{10.18}\]</span></span></p>
+\tag{10.19}\]</span></span></p>
 <div class="callout callout-style-default callout-important no-icon callout-titled" title="재고 성과 척도">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1833,25 +1860,25 @@ EOQ 항목 계산
 <p>평균 총 재고액 2억원, 연간 매출원가 10억원, 연간 50주 영업, 연간 운영일수가 250일일 때, 재고회전율, 재고공급주수, 재고공급일수를 계산하시오. 만약 재고회전율이 10회/년으로 향상되었다면 평균총재고액을 계산하시오.</p>
 <hr>
 <dl>
-<dt>재고회전율(<a href="#eq-aaiv" class="quarto-xref">수식&nbsp;<span>10.15</span></a>)</dt>
+<dt>재고회전율(<a href="#eq-aaiv" class="quarto-xref">수식&nbsp;<span>10.16</span></a>)</dt>
 <dd>
 <ul>
 <li>재고회전율 = 10억/2억 = 5(회/년)</li>
 </ul>
 </dd>
-<dt>재고공급주수(<a href="#eq-wos" class="quarto-xref">수식&nbsp;<span>10.17</span></a>)</dt>
+<dt>재고공급주수(<a href="#eq-wos" class="quarto-xref">수식&nbsp;<span>10.18</span></a>)</dt>
 <dd>
 <ul>
 <li>재고공급주수 = 2억/(10억/50주) = 10주</li>
 </ul>
 </dd>
-<dt>재고공급일수(<a href="#eq-dos" class="quarto-xref">수식&nbsp;<span>10.16</span></a>)</dt>
+<dt>재고공급일수(<a href="#eq-dos" class="quarto-xref">수식&nbsp;<span>10.17</span></a>)</dt>
 <dd>
 <ul>
 <li>재고공급일수 = 2억/(10억/250일) = 50일</li>
 </ul>
 </dd>
-<dt>재고회전율(<a href="#eq-itr" class="quarto-xref">수식&nbsp;<span>10.18</span></a>)이 10회/년이면</dt>
+<dt>재고회전율(<a href="#eq-itr" class="quarto-xref">수식&nbsp;<span>10.19</span></a>)이 10회/년이면</dt>
 <dd>
 <ul>
 <li>재고회전율 = 10 = <span class="math inline">\(\frac{10}{x(평균재고액)}\)</span>, 따라서 평균재고액은 1억원</li>
@@ -1864,9 +1891,7 @@ EOQ 항목 계산
 </section>
 <section id="공급업체-재고-관리" class="level2">
 <h2 class="anchored" data-anchor-id="공급업체-재고-관리">공급업체 재고 관리</h2>
-<p>재고관리 주체에 따라 다양한 방식이 존재한다.</p>
-<section id="sec-vmi" class="level3">
-<h3 class="anchored" data-anchor-id="sec-vmi">VMI</h3>
+<p>재고 관리에 있어 재고관리 주체에 따라 다양한 방식이 존재한다.</p>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출 106-1-11">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1880,6 +1905,8 @@ EOQ 항목 계산
 
 </div>
 </div>
+<section id="sec-vmi" class="level3">
+<h3 class="anchored" data-anchor-id="sec-vmi">VMI</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/vmi.png" class="img-fluid figure-img"></p>
@@ -1891,27 +1918,51 @@ EOQ 항목 계산
 <dt>VMI의 주요 특징</dt>
 <dd>
 <ul>
-<li>재고 관리의 자동화
+<li><dl>
+<dt>재고 관리의 자동화</dt>
+<dd>
 <ul>
-<li>공급업체가 고객의 재고 수준을 직접 모니터링하고 재고가 부족할 경우 발주를 자동으로 처리</li>
+<li>공급업체가 고객의 재고 수준을 직접 모니터링하고 재고가 부족할 경우 발주를 자동으로 처리
+<ul>
 <li>고객은 재고 수준을 관리할 필요 없이 공급업체가 이를 대신한다.</li>
 </ul></li>
-<li>실시간 데이터 공유
+</ul>
+</dd>
+</dl></li>
+<li><dl>
+<dt>실시간 데이터 공유</dt>
+<dd>
 <ul>
-<li>VMI 시스템에서는 고객과 공급업체가 실시간으로 데이터를 공유</li>
+<li>VMI 시스템에서는 고객과 공급업체가 실시간으로 데이터를 공유
+<ul>
 <li>고객의 재고 데이터, 판매 데이터 등이 공급업체에 전달되어 재고 수준과 수요를 예측하고 최적화된 발주 진행</li>
 </ul></li>
-<li>수요 예측 및 최적화
+</ul>
+</dd>
+</dl></li>
+<li><dl>
+<dt>수요 예측 및 최적화</dt>
+<dd>
 <ul>
-<li>공급업체는 고객의 판매 패턴과 재고 수준을 분석하여 적절한 시점에 적절한 수량의 상품을 공급</li>
+<li>공급업체는 고객의 판매 패턴과 재고 수준을 분석하여 적절한 시점에 적절한 수량의 상품을 공급
+<ul>
 <li>이를 통해 재고 부족이나 과잉을 방지하고 효율적인 재고 관리</li>
 </ul></li>
-<li>협력적인 관계
+</ul>
+</dd>
+</dl></li>
+<li><dl>
+<dt>협력적인 관계</dt>
+<dd>
 <ul>
-<li>VMI는 공급업체와 고객 간의 긴밀한 협력을 기반</li>
+<li>VMI는 공급업체와 고객 간의 긴밀한 협력을 기반
+<ul>
 <li>공급업체는 고객의 재고를 관리하면서 고객의 필요에 맞춰 공급 일정을 조정</li>
 <li>고객은 더 이상 재고 관리에 신경 쓸 필요 없이 원활한 공급 제공</li>
 </ul></li>
+</ul>
+</dd>
+</dl></li>
 </ul>
 </dd>
 </dl>
@@ -1974,27 +2025,49 @@ EOQ 항목 계산
 <dt>CMI의 주요 특징</dt>
 <dd>
 <ul>
-<li><strong>공동 재고 관리</strong>
+<li><dl>
+<dt><strong>공동 재고 관리</strong></dt>
+<dd>
 <ul>
-<li>공급업체와 고객이 재고를 공동으로 관리하며, 각자의 역할을 분담</li>
+<li>공급업체와 고객이 재고를 공동으로 관리하며, 각자의 역할을 분담
+<ul>
 <li>고객은 재고 상태와 수요 예측에 대한 정보를 제공하고, 공급업체는 재고 보충, 주문, 리드 타임 관리 등을 담당</li>
 </ul></li>
-<li><strong>정보 공유</strong>
+</ul>
+</dd>
+</dl></li>
+<li><dl>
+<dt><strong>정보 공유</strong></dt>
+<dd>
 <ul>
 <li>CMI 시스템에서는 재고 수준, 주문 상태, 수요 예측 등 중요한 정보를 공급업체와 고객이 실시간으로 공유</li>
 <li>이를 통해 양측은 보다 정확한 재고 관리와 생산 계획을 수립</li>
-</ul></li>
-<li><strong>수요 예측 및 주문 관리</strong>
+</ul>
+</dd>
+</dl></li>
+<li><dl>
+<dt><strong>수요 예측 및 주문 관리</strong></dt>
+<dd>
 <ul>
-<li>공급업체와 고객은 수요 변동을 예측하고, 이에 맞춰 재고를 조정</li>
+<li>공급업체와 고객은 수요 변동을 예측하고, 이에 맞춰 재고를 조정
+<ul>
 <li>이를 통해 불필요한 재고를 줄이고, 고객의 수요에 적시 대응</li>
 </ul></li>
-<li><strong>책임 분담</strong>
+</ul>
+</dd>
+</dl></li>
+<li><dl>
+<dt><strong>책임 분담</strong></dt>
+<dd>
 <ul>
-<li>CMI에서는 고객과 공급업체가 서로 책임을 분담</li>
+<li>CMI에서는 고객과 공급업체가 서로 책임을 분담
+<ul>
 <li>고객은 실제 판매나 사용 데이터를 제공하고, 공급업체는 재고를 보충하고 적정 수준의 재고를 유지</li>
 <li>이 과정에서 양측은 각자의 역할에 맞춰 효율적으로 협력</li>
 </ul></li>
+</ul>
+</dd>
+</dl></li>
 </ul>
 </dd>
 <dt>CMI의 장점</dt>
@@ -2394,10 +2467,8 @@ COCK 시스템과 비교
 </div>
 </section>
 </section>
-<section id="sec-04-ref" class="level2">
-<h2 class="anchored" data-anchor-id="sec-04-ref">참고자료</h2>
-<section id="sec-crp" class="level3">
-<h3 class="anchored" data-anchor-id="sec-crp">CRP</h3>
+<section id="sec-ref-0401" class="level2">
+<h2 class="anchored" data-anchor-id="sec-ref-0401">참고자료</h2>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출 106-1-10">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -2411,6 +2482,15 @@ COCK 시스템과 비교
 
 </div>
 </div>
+<section id="sec-crp" class="level3">
+<h3 class="anchored" data-anchor-id="sec-crp">CRP</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://www.researchgate.net/profile/Jonah-Tyan/publication/223320327/figure/fig2/AS:558390162227208@1510141997769/Retailer-supplier-relationship-power-structure.png" class="img-fluid figure-img"></p>
+<figcaption>https://www.researchgate.net/figure/Retailer-supplier-relationship-power-structure_fig2_223320327</figcaption>
+</figure>
+</div>
+<p><img src="https://www.redalyc.org/journal/1954/195460156004/1678-6971-ram-19-03-eRAMR170126-gf02.jpg" class="img-fluid"></p>
 <p><strong>CRP</strong>(Continuous Replenishment Program)는 <strong>지속적 보충 프로그램</strong>으로, <font color="blue">공급망에서 판매 데이터를 기반으로 자동으로 재고를 보충</font>하는 방식이다. 주로 제조업체와 소매업체 간 협력을 통해 실시간으로 수요를 분석하고 최적의 재고 수준을 유지하는 데 활용된다.</p>
 <dl>
 <dt>CRP의 특징</dt>
@@ -2474,9 +2554,6 @@ POS 데이터를 기반으로 상품 재고를 자동 조정하여 부족 시 �
 </dd>
 </dl>
 <p>CRP는 <font color="blue">공급망 운영 효율을 극대화하면서도 재고 비용을 최소화할 수 있는 전략</font>으로, 공급업체와 소매업체 간의 긴밀한 협력이 필수적이다.</p>
-</section>
-<section id="sec-product-availability" class="level3">
-<h3 class="anchored" data-anchor-id="sec-product-availability">제품가용성</h3>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출 106-1-12">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -2490,6 +2567,9 @@ POS 데이터를 기반으로 상품 재고를 자동 조정하여 부족 시 �
 
 </div>
 </div>
+</section>
+<section id="sec-product-availability" class="level3">
+<h3 class="anchored" data-anchor-id="sec-product-availability">제품가용성</h3>
 <p><strong>제품가용성</strong>(Product Availability)은 <font color="blue">고객이 원하는 시점에 원하는 제품을 구매할 수 있는 능력</font>을 의미하며, 공급망 관리(SCM)에서 중요한 성과 지표(KPI) 중 하나이다. 이는 고객 만족도, 매출, 브랜드 신뢰도에 직접적인 영향을 미친다.</p>
 <dl>
 <dt>제품가용성의 주요 지표</dt>
