@@ -41,7 +41,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-0bdeeeba54692e2e3ed4e674e149c507.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-2c7ed53404bac1839cc86737f4dff53a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -69,6 +69,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" crossorigin="anonymous"></script>
+<meta name="google-adsense-account" content="pub-8759553852956796">
+<meta name="mermaid-theme" content="neutral">
 <script src="site_libs/quarto-diagram/mermaid.min.js"></script>
 <script src="site_libs/quarto-diagram/mermaid-init.js"></script>
 <link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
@@ -124,7 +127,7 @@ window.Quarto = {
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
@@ -479,12 +482,12 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
+    <h2 id="toc-title">목차</h2>
    
   <ul>
   <li><a href="#sec-product-development-process" id="toc-sec-product-development-process" class="nav-link active" data-scroll-target="#sec-product-development-process">제품개발 과정</a></li>
   <li><a href="#sec-product-design" id="toc-sec-product-design" class="nav-link" data-scroll-target="#sec-product-design">제품설계</a>
-  <ul class="collapse">
+  <ul>
   <li><a href="#sec-concurrent-engineering" id="toc-sec-concurrent-engineering" class="nav-link" data-scroll-target="#sec-concurrent-engineering">동시공학</a></li>
   <li><a href="#sec-modular-design" id="toc-sec-modular-design" class="nav-link" data-scroll-target="#sec-modular-design">모듈러 설계</a></li>
   <li><a href="#sec-reliability-design" id="toc-sec-reliability-design" class="nav-link" data-scroll-target="#sec-reliability-design">신뢰도 설계기법</a></li>
@@ -492,13 +495,19 @@ window.Quarto = {
   <li><a href="#sec-kano-model" id="toc-sec-kano-model" class="nav-link" data-scroll-target="#sec-kano-model">카노(Kano) 모델</a></li>
   <li><a href="#sec-qfd" id="toc-sec-qfd" class="nav-link" data-scroll-target="#sec-qfd">품질기능전개(QFD)</a></li>
   <li><a href="#sec-dfss" id="toc-sec-dfss" class="nav-link" data-scroll-target="#sec-dfss">DFSS</a></li>
-  <li><a href="#sec-robust-design" id="toc-sec-robust-design" class="nav-link" data-scroll-target="#sec-robust-design">강건설계</a></li>
+  <li><a href="#sec-robust-design" id="toc-sec-robust-design" class="nav-link" data-scroll-target="#sec-robust-design">강건설계</a>
+  <ul class="collapse">
+  <li><a href="#품질-정의" id="toc-품질-정의" class="nav-link" data-scroll-target="#품질-정의">품질 정의</a></li>
+  <li><a href="#품질손실함수" id="toc-품질손실함수" class="nav-link" data-scroll-target="#품질손실함수">품질손실함수</a></li>
+  <li><a href="#품질설계-단계" id="toc-품질설계-단계" class="nav-link" data-scroll-target="#품질설계-단계">품질설계 단계</a></li>
+  <li><a href="#품질에-영향을-주는-인자" id="toc-품질에-영향을-주는-인자" class="nav-link" data-scroll-target="#품질에-영향을-주는-인자">품질에 영향을 주는 인자</a></li>
+  </ul></li>
   <li><a href="#친환경설계" id="toc-친환경설계" class="nav-link" data-scroll-target="#친환경설계">친환경설계</a></li>
   <li><a href="#sec-reverse-engineering" id="toc-sec-reverse-engineering" class="nav-link" data-scroll-target="#sec-reverse-engineering">역공학</a></li>
   <li><a href="#sec-vrp" id="toc-sec-vrp" class="nav-link" data-scroll-target="#sec-vrp">VRP</a></li>
   </ul></li>
   <li><a href="#sec-ref-1102" id="toc-sec-ref-1102" class="nav-link" data-scroll-target="#sec-ref-1102">참고자료</a>
-  <ul class="collapse">
+  <ul>
   <li><a href="#sec-design-thinking" id="toc-sec-design-thinking" class="nav-link" data-scroll-target="#sec-design-thinking">디자인 사고</a></li>
   <li><a href="#sec-bpr" id="toc-sec-bpr" class="nav-link" data-scroll-target="#sec-bpr">BPR</a></li>
   </ul></li>
@@ -506,7 +515,7 @@ window.Quarto = {
 <div class="toc-actions"><ul><li><a href="https://github.com/yeonkyupark/pepc2e/edit/main/1102제품개발기술.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-body" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./1101정보화활용기술.html">11. 생산지원기술</a></li><li class="breadcrumb-item"><a href="./1102제품개발기술.html"><span class="chapter-title">제품개발 기술</span></a></li></ol></nav>
 <div class="quarto-title">
@@ -515,7 +524,7 @@ window.Quarto = {
 
 
 
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-body">
 
     
   
@@ -1923,6 +1932,12 @@ BPR을 통해 달성하고자 하는 목표를 설정한다. 예를 들어, 비�
 </section>
 
 </main> <!-- /main -->
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8759553852956796" crossorigin="anonymous"></script>
+<!-- display-horizontal -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8759553852956796" data-ad-slot="1446193043" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -2340,7 +2355,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation">
+<nav class="page-navigation column-body">
   <div class="nav-page nav-page-previous">
       <a href="./1101정보화활용기술.html" class="pagination-link" aria-label="정보화 활용 기술">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">정보화 활용 기술</span></span>

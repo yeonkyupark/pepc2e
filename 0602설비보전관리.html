@@ -41,7 +41,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-0bdeeeba54692e2e3ed4e674e149c507.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-2c7ed53404bac1839cc86737f4dff53a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -69,6 +69,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" crossorigin="anonymous"></script>
+<meta name="google-adsense-account" content="pub-8759553852956796">
+<meta name="mermaid-theme" content="neutral">
 <script src="site_libs/quarto-diagram/mermaid.min.js"></script>
 <script src="site_libs/quarto-diagram/mermaid-init.js"></script>
 <link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
@@ -124,7 +127,7 @@ window.Quarto = {
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
@@ -479,13 +482,19 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
+    <h2 id="toc-title">목차</h2>
    
   <ul>
   <li><a href="#sec-pm" id="toc-sec-pm" class="nav-link active" data-scroll-target="#sec-pm">설비보전</a>
+  <ul>
+  <li><a href="#sec-tpm" id="toc-sec-tpm" class="nav-link" data-scroll-target="#sec-tpm">TPM(전사적 생산보전)</a>
   <ul class="collapse">
-  <li><a href="#sec-tpm" id="toc-sec-tpm" class="nav-link" data-scroll-target="#sec-tpm">TPM(전사적 생산보전)</a></li>
-  <li><a href="#tpm전사적-예방보전" id="toc-tpm전사적-예방보전" class="nav-link" data-scroll-target="#tpm전사적-예방보전">TPM(전사적 예방보전)</a></li>
+  <li><a href="#tpm-8대-활동" id="toc-tpm-8대-활동" class="nav-link" data-scroll-target="#tpm-8대-활동">TPM 8대 활동</a></li>
+  </ul></li>
+  <li><a href="#tpm전사적-예방보전" id="toc-tpm전사적-예방보전" class="nav-link" data-scroll-target="#tpm전사적-예방보전">TPM(전사적 예방보전)</a>
+  <ul class="collapse">
+  <li><a href="#생산보전과-예방보전" id="toc-생산보전과-예방보전" class="nav-link" data-scroll-target="#생산보전과-예방보전">생산보전과 예방보전</a></li>
+  </ul></li>
   </ul></li>
   <li><a href="#생산보전pm" id="toc-생산보전pm" class="nav-link" data-scroll-target="#생산보전pm">생산보전(PM)</a></li>
   <li><a href="#강제열화와-자연열화" id="toc-강제열화와-자연열화" class="nav-link" data-scroll-target="#강제열화와-자연열화">강제열화와 자연열화</a></li>
@@ -493,33 +502,33 @@ window.Quarto = {
   <li><a href="#고장강도율" id="toc-고장강도율" class="nav-link" data-scroll-target="#고장강도율">고장강도율</a></li>
   <li><a href="#sec-am-7-steps" id="toc-sec-am-7-steps" class="nav-link" data-scroll-target="#sec-am-7-steps">자주보전 7단계</a></li>
   <li><a href="#sec-6-big-losses" id="toc-sec-6-big-losses" class="nav-link" data-scroll-target="#sec-6-big-losses">설비 6대 로스</a>
-  <ul class="collapse">
+  <ul>
   <li><a href="#장치산업-8대-로스" id="toc-장치산업-8대-로스" class="nav-link" data-scroll-target="#장치산업-8대-로스">장치산업 8대 로스</a></li>
   </ul></li>
   <li><a href="#설비-보전-지표" id="toc-설비-보전-지표" class="nav-link" data-scroll-target="#설비-보전-지표">설비 보전 지표</a>
-  <ul class="collapse">
+  <ul>
   <li><a href="#sec-mttr" id="toc-sec-mttr" class="nav-link" data-scroll-target="#sec-mttr">MTTR</a></li>
   <li><a href="#sec-mtbf" id="toc-sec-mtbf" class="nav-link" data-scroll-target="#sec-mtbf">MTBF</a></li>
   <li><a href="#sec-mttf" id="toc-sec-mttf" class="nav-link" data-scroll-target="#sec-mttf">MTTF</a></li>
   <li><a href="#가용도" id="toc-가용도" class="nav-link" data-scroll-target="#가용도">가용도</a></li>
   </ul></li>
   <li><a href="#sec-bathtube" id="toc-sec-bathtube" class="nav-link" data-scroll-target="#sec-bathtube">욕조곡선</a>
-  <ul class="collapse">
+  <ul>
   <li><a href="#sec-failure-rate" id="toc-sec-failure-rate" class="nav-link" data-scroll-target="#sec-failure-rate">고장률</a></li>
   </ul></li>
   <li><a href="#sec-rams" id="toc-sec-rams" class="nav-link" data-scroll-target="#sec-rams">RAMS</a>
-  <ul class="collapse">
+  <ul>
   <li><a href="#측정-방법" id="toc-측정-방법" class="nav-link" data-scroll-target="#측정-방법">측정 방법</a></li>
   </ul></li>
   <li><a href="#설비-분석-도구" id="toc-설비-분석-도구" class="nav-link" data-scroll-target="#설비-분석-도구">설비 분석 도구</a>
-  <ul class="collapse">
+  <ul>
   <li><a href="#sec-pm-analysis" id="toc-sec-pm-analysis" class="nav-link" data-scroll-target="#sec-pm-analysis">PM 분석</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/yeonkyupark/pepc2e/edit/main/0602설비보전관리.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-body" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./0601설비계획.html">06. 설비관리</a></li><li class="breadcrumb-item"><a href="./0602설비보전관리.html"><span class="chapter-title">설비보전 관리</span></a></li></ol></nav>
 <div class="quarto-title">
@@ -528,7 +537,7 @@ window.Quarto = {
 
 
 
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-body">
 
     
   
@@ -2019,6 +2028,12 @@ RAMS --- 신뢰성 &amp; 가용성 &amp; 유지보수성 &amp; 안전성
 </section>
 
 </main> <!-- /main -->
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8759553852956796" crossorigin="anonymous"></script>
+<!-- display-horizontal -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8759553852956796" data-ad-slot="1446193043" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -2436,7 +2451,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation">
+<nav class="page-navigation column-body">
   <div class="nav-page nav-page-previous">
       <a href="./0601설비계획.html" class="pagination-link" aria-label="설비계획">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">설비계획</span></span>
