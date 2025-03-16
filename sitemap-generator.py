@@ -3,7 +3,7 @@ from urllib.parse import urljoin
 from datetime import datetime
 
 # 사이트 URL 설정
-BASE_URL = "https://yeonkyupark.github.io/pepc2e/"
+BASE_URL = "https://yeonkyupark.github.io/"
 
 # 출력 파일
 output = "sitemap.xml"
