@@ -10,15 +10,15 @@ output = "sitemap.xml"
 
 def generate_sitemap():
     urls = []
-    for root, dirs, files in os.walk("_site"):
+    for root, dirs, files in os.walk("docs"):
         for file in files:
             if file.endswith(".html"):
                 file_path = os.path.join(root, file)
-                rel_path = os.path.relpath(file_path, "_site")
+                rel_path = os.path.relpath(file_path, "docs")
                 url = urljoin(BASE_URL, rel_path.replace("\\", "/"))
                 urls.append(url)
     
-    with open(os.path.join("_site", output), "w") as f:
+    with open(os.path.join("docs", output), "w") as f:
         f.write('<?xml version="1.0" encoding="UTF-8"?>\n')
         f.write('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n')
         for url in urls:
