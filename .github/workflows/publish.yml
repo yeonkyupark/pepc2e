@@ -24,6 +24,17 @@ jobs:
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Install Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt || true
+          
+      - name: Generate sitemap.xml
+        run: python sitemap-generator.py
         
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
