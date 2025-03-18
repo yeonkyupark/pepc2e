@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="keywords" content="APP, MPS, MRP, RRP, RCCP, CRP">
+<meta name="keywords" content="생산계획, APP, MPS, MRP, RRP, RCCP, CRP">
 <meta name="description" content="생산계획 수립에서는 생산계획 구조, 일정계획, 총괄생산계획, 기준생산계획, 자재소요계획에 대해 이해한다.">
 
 <title>생산계획 수립 – 공장관리기술사(2E)</title>
@@ -546,7 +546,7 @@ window.Quarto = {
 <div>
   <div class="keywords">
     <div class="block-title">Keywords</div>
-    <p>APP, MPS, MRP, RRP, RCCP, CRP</p>
+    <p>생산계획, APP, MPS, MRP, RRP, RCCP, CRP</p>
   </div>
 </div>
 
@@ -1328,12 +1328,24 @@ RRP는 종종 더 큰 <a href="1101정보화활용기술.html#sec-erp" class="qu
 <dt>장기 생산능력 계획</dt>
 <dd>
 <ul>
-<li><strong>공격전략</strong><br>
-장기적인 시장 확보 및 시장점유율 향상, 여유능력으로 불확실한 수요에 대한 대응이 가능하며 납기지연이 줄어 들어 고객에게 신뢰감을 주어 안정적인 구매자 확보 가능</li>
-<li><strong>방어전략</strong><br>
-생산능력 효율 향상으로 투자에대한 수익률 향상, 장기적으로 시장점유율을 잠식당할 위험 존재</li>
-<li><strong>평균전략</strong><br>
-간의 초과 능력과 수요 부족을 허용하는 생산계획이 바람직</li>
+<li><dl>
+<dt><strong>공격전략</strong></dt>
+<dd>
+장기적인 시장 확보 및 시장점유율 향상, 여유능력으로 불확실한 수요에 대한 대응이 가능하며 납기지연이 줄어 들어 고객에게 신뢰감을 주어 안정적인 구매자 확보 가능
+</dd>
+</dl></li>
+<li><dl>
+<dt><strong>방어전략</strong></dt>
+<dd>
+생산능력 효율 향상으로 투자에대한 수익률 향상, 장기적으로 시장점유율을 잠식당할 위험 존재
+</dd>
+</dl></li>
+<li><dl>
+<dt><strong>평균전략</strong></dt>
+<dd>
+간의 초과 능력과 수요 부족을 허용하는 생산계획이 바람직
+</dd>
+</dl></li>
 </ul>
 </dd>
 </dl>
@@ -1362,10 +1374,8 @@ RRP는 종종 더 큰 <a href="1101정보화활용기술.html#sec-erp" class="qu
 <dt>생산시설에 대한 의사결정 절차</dt>
 <dd>
 <ul>
-<li>시설 규모 결정: 최적 규모 설정
-<ul>
+<li>시설 규모 결정: 최적 규모 설정</li>
 <li>입지 설정: 관련된 모든 비용 합이 최소가 되도록 결정</li>
-</ul></li>
 </ul>
 </dd>
 </dl>
@@ -1376,13 +1386,19 @@ RRP는 종종 더 큰 <a href="1101정보화활용기술.html#sec-erp" class="qu
 <dt>여유능력 결정(Sizing Capacity Cushion)</dt>
 <dd>
 <ul>
-<li><strong>여유능력</strong>(capacity cushion)은 <font color="blue">기대를 초과하는 잉여 능력</font>으로 최적 여유 능력은 산업 분야별 차이가 있다.
-<ul>
+<li><strong>여유능력</strong>(capacity cushion)은 <font color="blue">기대를 초과하는 잉여 능력</font>으로 최적 여유 능력은 산업 분야별 차이가 있다.</li>
 <li>충분한 여유능력은 수요가 증가하는 추세에 있거나 불확실한 경우 또는 안정적인 공급을 요하는 경우에 필요하다.</li>
 <li>지나친 여유능력은 과대한 유지비용으로 수익률을 저하시킬 수 있다.</li>
-</ul></li>
 </ul>
 </dd>
+</dl>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/capacity_strategy.png" class="img-fluid figure-img"></p>
+<figcaption>사전 확장 전략과 사후 증설(두고보기) 전략</figcaption>
+</figure>
+</div>
+<dl>
 <dt>확장 시기와 규모(Timing and sizing Expansion)</dt>
 <dd>
 <ul>
@@ -1408,11 +1424,9 @@ RRP는 종종 더 큰 <a href="1101정보화활용기술.html#sec-erp" class="qu
 <dt>기대 가치 유지 전략(Expected Capacity Strategy)</dt>
 <dd>
 <ul>
-<li>기대 수요에 근접한 능력 유지(사전/사후 절충형)
-<ul>
+<li>기대 수요에 근접한 능력 유지(사전/사후 절충형)</li>
 <li>사전 확장, 사후 증설 전략을 절충한 접근 방식으로 가급적 기대 수요에 근접한 능력을 유지하려는 전략</li>
 <li>이 경우 충분한 능력을 갖지 못한 가능성만큼(잉여) 능력을 가질 가능성을 만들어 손실을 상쇄하는 전략</li>
-</ul></li>
 </ul>
 </dd>
 </dl>
@@ -1478,16 +1492,16 @@ RRP는 종종 더 큰 <a href="1101정보화활용기술.html#sec-erp" class="qu
 <dt>CR에 따른 생산능력 전략</dt>
 <dd>
 <ul>
-<li>CR &lt;= 0.5
+<li><span class="math inline">\(CR \ge 0.5\)</span>
 <ul>
 <li><font color="blue">품절 비용 &lt; 0.67 x 잉여 능력 유지 비용</font></li>
 <li>사후 증설 전략</li>
 </ul></li>
-<li>-0.5 &lt; CR &lt; 0.5
+<li><span class="math inline">\(-0.5 &lt; CR &lt; 0.5\)</span>
 <ul>
 <li>기대 가치 유지 전략</li>
 </ul></li>
-<li>CR &gt;= 0.5
+<li><span class="math inline">\(CR \le 0.5\)</span>
 <ul>
 <li><font color="blue">품절비용 &gt; 2 x 잉여 능력 비용</font></li>
 <li>사전 확장 전략</li>
@@ -1495,11 +1509,6 @@ RRP는 종종 더 큰 <a href="1101정보화활용기술.html#sec-erp" class="qu
 </ul>
 </dd>
 </dl>
-</section>
-</section>
-</section>
-<section id="sec-mps" class="level2">
-<h2 class="anchored" data-anchor-id="sec-mps">MPS</h2>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 112-3-1">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1513,6 +1522,11 @@ RRP는 종종 더 큰 <a href="1101정보화활용기술.html#sec-erp" class="qu
 
 </div>
 </div>
+</section>
+</section>
+</section>
+<section id="sec-mps" class="level2">
+<h2 class="anchored" data-anchor-id="sec-mps">MPS</h2>
 <p><strong>기준(주)일정계획</strong>(MPS, master production schedule)이란 생산시스템에서 생산되는 <font color="blue">개별 최종품목에 대한 단기생산계획으로 주단위로 총괄수요를 분해한 개별품목 수요에 대한 충족계획</font>이다.</p>
 <dl>
 <dt>MPS 수립 목표</dt>
