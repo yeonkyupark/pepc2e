@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="재고관리에서는 재고관리 모형, 확정적 재고관리 모형, 확률적 재고관리 모형, ABC 모형, 투빈(Two bin) 시스템, 정량발주와 정기발주 시스템, min-Max(sS, 절충) 시스템, 재고 비용 및 재고 성과 척도, 공급업체 관리, VMI, CMI, CPFR, COCK, CRP 등을 이해한다.">
 
 <title>재고관리 – 공장관리기술사(2E)</title>
 <style>
@@ -593,22 +594,34 @@ style 재고관리 fill:#EEF
 <dt>재고의 기능</dt>
 <dd>
 <ol type="1">
-<li><strong>수요와 공급의 불일치 완화</strong><br>
-- 생산 속도와 고객 수요가 일치하지 않을 경우, 재고는 이를 조율하는 역할을 한다.<br>
-- 예) 계절별 수요 변동에 대비해 상품을 미리 생산해두는 경우.<br>
+<li><strong>수요와 공급의 불일치 완화</strong>
+<ul>
+<li>생산 속도와 고객 수요가 일치하지 않을 경우, 재고는 이를 조율하는 역할을 한다.<br>
 </li>
-<li><strong>생산의 안정성 확보</strong><br>
-- 생산 라인의 중단 없이 지속적인 생산이 가능하도록 원자재 및 부품을 비축한다.<br>
-- 예) 원재료 공급에 차질이 생겨도 재고가 있다면 생산이 계속된다.<br>
+<li>예) 계절별 수요 변동에 대비해 상품을 미리 생산해두는 경우.<br>
 </li>
-<li><strong>긴급 주문 대응</strong><br>
-- 고객의 긴급 주문이나 갑작스러운 수요 증가에 대비해 빠르게 대응할 수 있다.<br>
+</ul></li>
+<li><strong>생산의 안정성 확보</strong>
+<ul>
+<li>생산 라인의 중단 없이 지속적인 생산이 가능하도록 원자재 및 부품을 비축한다.<br>
 </li>
-<li><strong>가격 변동 완충</strong><br>
-- 원자재 가격 상승에 대비해 미리 대량 구매하여 가격 변동에 대한 리스크를 줄인다.<br>
+<li>예) 원재료 공급에 차질이 생겨도 재고가 있다면 생산이 계속된다.<br>
 </li>
-<li><strong>운송 및 조달 효율화</strong><br>
-- 대량으로 생산 및 조달하여 운송 비용을 절감하고, 수시로 재고를 채우는 부담을 줄인다.</li>
+</ul></li>
+<li><strong>긴급 주문 대응</strong>
+<ul>
+<li>고객의 긴급 주문이나 갑작스러운 수요 증가에 대비해 빠르게 대응할 수 있다.<br>
+</li>
+</ul></li>
+<li><strong>가격 변동 완충</strong>
+<ul>
+<li>원자재 가격 상승에 대비해 미리 대량 구매하여 가격 변동에 대한 리스크를 줄인다.<br>
+</li>
+</ul></li>
+<li><strong>운송 및 조달 효율화</strong>
+<ul>
+<li>대량으로 생산 및 조달하여 운송 비용을 절감하고, 수시로 재고를 채우는 부담을 줄인다.</li>
+</ul></li>
 </ol>
 </dd>
 </dl>
@@ -1191,9 +1204,9 @@ EOQ 항목 계산
 <dl>
 <dt>EPQ 모델 가정</dt>
 <dd>
-<font color="#245bdb"> - 생산이 시작되고 뒤이어 수요가 이루어지며 수요량은 생산량보다 작다.</font> <font color="#245bdb"> - 생산은 일정 기간 동안 점진적으로 쌓이고 어느 정도 재고 수준에 이르면 생산을 중단한다.</font> <font color="#245bdb"> - 생산이 중단되면 쌓였던 재고량은 일정량씩 소요되어 바닥 난다.</font> <font color="#245bdb"> - 재고가모두 없어지면 즉시 생산 작업이 되풀이 된다.</font> <font color="#245bdb"> - 재고 유지비는 생산량 크기에 정비례하여 발생한다.</font> <font color="#245bdb"> - 생산단가는 생산량 크리와 관계없이 일정하다.</font>
-</dd>
-</dl>
+<font color="#245bdb"> - 생산이 시작되고 뒤이어 수요가 이루어지며 수요량은 생산량보다 작다. - 생산은 일정 기간 동안 점진적으로 쌓이고 어느 정도 재고 수준에 이르면 생산을 중단한다. - 생산이 중단되면 쌓였던 재고량은 일정량씩 소요되어 바닥 난다. - 재고가모두 없어지면 즉시 생산 작업이 되풀이 된다. - 재고 유지비는 생산량 크기에 정비례하여 발생한다. - 생산단가는 생산량 크리와 관계없이 일정하다.
+</font></dd><font color="#245bdb">
+</font></dl><font color="#245bdb">
 <table class="caption-top table">
 <caption>EPQ 모델 계산식</caption>
 <colgroup>
@@ -1233,8 +1246,8 @@ EOQ 항목 계산
 </tr>
 </tbody>
 </table>
-</section>
-</section>
+</font></section><font color="#245bdb">
+</font></section><font color="#245bdb">
 <section id="확률적-재고관리-모형" class="level3">
 <h3 class="anchored" data-anchor-id="확률적-재고관리-모형">확률적 재고관리 모형</h3>
 <p><strong>확정적 재고관리 모형</strong>과 <strong>확률적 재고관리 모형</strong>은 재고 관리를 위한 두 가지 주요 접근 방식이다. 이 두 모형은 재고 수준을 관리하고 최적화하는 데 필요한 수요 예측 방식에서 차이가 있다.</p>
@@ -1724,7 +1737,7 @@ EOQ 항목 계산
 </div>
 </section>
 </section>
-</section>
+</font></section><font color="#245bdb">
 <section id="sec-inventory-cost-kpi" class="level2">
 <h2 class="anchored" data-anchor-id="sec-inventory-cost-kpi">재고 비용 및 재고 성과 척도</h2>
 <div class="cell" data-layout-align="default">
@@ -2654,7 +2667,7 @@ POS 데이터를 기반으로 상품 재고를 자동 조정하여 부족 시 �
 </section>
 </section>
 
-</main> <!-- /main -->
+</font></main><font color="#245bdb"> <!-- /main -->
 <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8759553852956796" crossorigin="anonymous"></script>
 <!-- display-horizontal -->
 <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8759553852956796" data-ad-slot="1446193043" data-ad-format="auto" data-full-width-responsive="true"></ins>
@@ -3090,7 +3103,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>
   </div>
 </nav>
-</div> <!-- /content -->
+</font></div><font color="#245bdb"> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
@@ -3108,4 +3121,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-</body></html>
+</font></body></html>
