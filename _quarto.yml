@@ -3,9 +3,12 @@ project:
   output-dir: docs
 
 metadata:
+  title: "생산운영과 공장관리"
+  google-site-verification: "8xHzi-r2KaeozfPyDbwq2rtYE8sEI8Xu6irhM0ccwBU"
   keywords: ["공장관리기술사", "생산운영", "재고", "물류", "공정", "설비", "작업", "생산성", "원가", "OR"]
+  
 book:
-  title: "공장관리기술사(2E)"
+  title: "생산운영과 공장관리(2E)"
   author: "YK"
   date: last-modified
   repo-url: https://github.com/yeonkyupark/pepc2e 
@@ -105,6 +108,7 @@ format:
       - custom.scss
     mermaid:
       theme: neutral
+    sitemap: true
     include-in-header: adsense.html
     include-after-body: adsense-body.html
 
