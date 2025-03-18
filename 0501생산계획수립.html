@@ -522,6 +522,7 @@ window.Quarto = {
   <li><a href="#mrp-산출물" id="toc-mrp-산출물" class="nav-link" data-scroll-target="#mrp-산출물">MRP 산출물</a></li>
   <li><a href="#sec-bom" id="toc-sec-bom" class="nav-link" data-scroll-target="#sec-bom">BOM</a></li>
   </ul></li>
+  <li><a href="#sec-ref-0501" id="toc-sec-ref-0501" class="nav-link" data-scroll-target="#sec-ref-0501">참고자료</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/yeonkyupark/pepc2e/edit/main/0501생산계획수립.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
     </div>
@@ -1557,20 +1558,18 @@ RRP는 종종 더 큰 <a href="1101정보화활용기술.html#sec-erp" class="qu
 </dd>
 </dl>
 <p>MPS 작성 절차는 다음과 같다.</p>
-<ol type="1">
-<li>재고량 예측치 및 확정된 주문량에 따라 예측 보유재고량 산출</li>
-<li>수요량 대비 재고 부족 시 생산 LOT 크기 감안하여 MPS 수량 계획 수립</li>
-</ol>
-<p><span class="math display">\[
-예측된 \ 재고보유 \ 수량 \ = \ (직전기간 \ 말 \ 재고 \ 수준) + (MPS \ 수량) - (예측된 \ 수요량)
-\]</span> 약속 가능수량(ATP, available to promise quantities)은 고객과 약속한 제품이나 서비스 수량을 의미하며 다음과 같이 계산한다.</p>
+<pre><code>1. 재고량 예측치 및 확정된 주문량에 따라 예측 보유재고량 산출
+1. 수요량 대비 재고 부족 시 생산 LOT 크기 감안하여 MPS 수량 계획 수립</code></pre>
+<p><span id="eq-number-of-inventory"><span class="math display">\[
+\text{예측된 재고보유 수량 = (직전기간 말 재고 수준) + (MPS 수량) - (예측된 수요량)}
+\tag{11.2}\]</span></span> 약속 가능수량(ATP, available to promise quantities)은 고객과 약속한 제품이나 서비스 수량을 의미하며 다음과 같이 계산한다.</p>
 <p><span id="eq-atp"><span class="math display">\[
 ATP=
 \begin{cases}
 \text{(기초재고보유량) + (MPS 수량) - (다음번 MPS가 도래하기 전까지 확정된  고객주문량), 첫째 주}\\
-\text{(MPS 수량) - (다음 번 MPS가 도래하기 전까지 확정된 고객주문량),                                     MPS가 계획된 주}
+\text{(MPS 수량) - (다음 번 MPS가 도래하기 전까지 확정된 고객주문량), MPS가 계획된 주}
 \end{cases}
-\tag{11.2}\]</span></span></p>
+\tag{11.3}\]</span></span></p>
 <div class="callout callout-style-default callout-important no-icon callout-titled" title="MPS 작성">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1680,7 +1679,7 @@ ATP 계산
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>리드타임 2주, Lot 크기 100개, 현재고 80개일 때, ATP 계산 산식(<a href="#eq-atp" class="quarto-xref"><span>11.2</span></a>)에 따라 ATP를 계산하면 다음과 같다.</p>
+<p>리드타임 2주, Lot 크기 100개, 현재고 80개일 때, ATP 계산 산식(<a href="#eq-atp" class="quarto-xref"><span>11.3</span></a>)에 따라 ATP를 계산하면 다음과 같다.</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -1799,7 +1798,7 @@ ATP 계산
 <dt>종합계수법</dt>
 <dd>
 <ul>
-<li>RCCP 기법중 가장 단순한 방법으로 제품 수량, 제품 단 단위단 노동시간, 각 작업장 가동실적 등 3가지 데이터를 이용하여 계획을 수립함</li>
+<li>RCCP 기법중 가장 단순한 방법으로 제품 수량, 제품 단위당 노동시간, 각 작업장 가동실적 등 3가지 데이터를 이용하여 계획을 수립함</li>
 </ul>
 </dd>
 <dt>생산능력 명세서법</dt>
@@ -1811,15 +1810,11 @@ ATP 계산
 <dt>부하프로필법</dt>
 <dd>
 <ul>
-<li>일, 주, 분기별 생산능력 소욜를 도표로 나타내는 것으로 정상능력을 초과하는 기간에 대해 부하를 조정함</li>
+<li>일, 주, 분기별 생산능력 소요를 도표로 나타내는 것으로 정상능력을 초과하는 기간에 대해 부하를 조정함</li>
 <li>부하조정법: 잔업, 이동배치, 생산조정 등 조정불가시 MPS 조정</li>
 </ul>
 </dd>
 </dl>
-</section>
-</section>
-<section id="sec-mrp" class="level2">
-<h2 class="anchored" data-anchor-id="sec-mrp">MRP</h2>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 103-1-9, 124-3-4, 130-1-2">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1833,6 +1828,10 @@ ATP 계산
 
 </div>
 </div>
+</section>
+</section>
+<section id="sec-mrp" class="level2">
+<h2 class="anchored" data-anchor-id="sec-mrp">MRP</h2>
 <p><strong>MRP</strong>(자재소요계획, Material Requirements Planning)는 <font color="blue">제조업에서 원자재 및 부품의 수요를 계획하고 관리하는 시스템</font>이다. 제품 생산에 필요한 자재를 적시에 확보함으로써 생산 일정이 원활하게 진행되도록 돕는다. MRP는 최종 제품의 생산 일정(<a href="#sec-mps" class="quarto-xref"><span>MPS</span></a>)과 제품 구조(<a href="#sec-bom" class="quarto-xref"><span>BOM</span></a>, Bill of Materials)를 기반으로 각 부품 및 자재의 수요를 역산하여 계획을 수립한다.</p>
 <dl>
 <dt>MRP의 목적</dt>
@@ -1844,8 +1843,6 @@ ATP 계산
 </ul>
 </dd>
 </dl>
-<section id="sec-crp" class="level3">
-<h3 class="anchored" data-anchor-id="sec-crp">CRP</h3>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 112-1-12">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1859,41 +1856,83 @@ ATP 계산
 
 </div>
 </div>
+<section id="sec-crp" class="level3">
+<h3 class="anchored" data-anchor-id="sec-crp">CRP</h3>
 <p><strong>CRP</strong>(Capacity Requirements Planning)는 생산 계획 과정에서 필요한 자원 용량을 분석하고 조정하여 생산 목표를 달성할 수 있도록 지원하는 시스템이다. 이 시스템은 <font color="blue">생산 계획과 자원의 용량 사이의 균형을 맞추는 데 중요한 역할</font>을 한다. CRP는 주로 제조업체에서 사용되며, 생산 공정에 필요한 기계, 인력, 원자재 등 자원 용량을 예측하고 조정하는 데 초점을 맞춘다.</p>
 <dl>
 <dt>CRP 주요 목적</dt>
 <dd>
 <ul>
-<li>생산 자원의 용량을 평가하다.<br>
-계획된 생산 요구 사항에 맞춰, 필요한 기계, 노동력, 자원 등의 용량을 평가하고, 생산을 원활하게 진행할 수 있도록 보장하다.</li>
-<li>생산 일정 조정하다.<br>
-자원의 용량이 부족하거나 과잉인 경우 이를 조정하고, 생산 일정에 맞추어 자원을 배분하다.</li>
-<li>효율성 증대하다.<br>
-자원의 과잉 사용을 피하고, 자원 부족으로 인한 생산 지연을 방지함으로써 생산 효율성을 극대화하다.</li>
+<li><dl>
+<dt>생산 자원의 용량을 평가하다.</dt>
+<dd>
+계획된 생산 요구 사항에 맞춰, 필요한 기계, 노동력, 자원 등의 용량을 평가하고, 생산을 원활하게 진행할 수 있도록 보장하다.
+</dd>
+</dl></li>
+<li><dl>
+<dt>생산 일정 조정하다.</dt>
+<dd>
+자원의 용량이 부족하거나 과잉인 경우 이를 조정하고, 생산 일정에 맞추어 자원을 배분하다.
+</dd>
+</dl></li>
+<li><dl>
+<dt>효율성 증대하다.</dt>
+<dd>
+자원의 과잉 사용을 피하고, 자원 부족으로 인한 생산 지연을 방지함으로써 생산 효율성을 극대화하다.
+</dd>
+</dl></li>
 </ul>
 </dd>
 <dt>CRP 주요 구성 요소</dt>
 <dd>
 <ul>
-<li>로드 (Load)<br>
-특정 자원(기계, 인력 등)에 대해 필요한 작업 시간이나 처리량을 계산한 값이다. 이는 생산 계획을 기준으로 각 자원에 할당되는 작업량을 나타낸다.</li>
-<li>용량 (Capacity)<br>
-실제 자원이 제공할 수 있는 작업 시간이나 처리 능력이다. 예를 들어, 기계가 하루에 몇 시간씩 가동 가능한지, 노동력이 하루에 몇 시간을 일할 수 있는지를 평가한다.</li>
-<li>용량 격차 (Capacity Gap)<br>
-요구되는 용량과 실제 제공 가능한 용량 간의 차이를 말한다. 이 차이를 해결하기 위해 자원 추가, 일정 조정, 외부 자원 활용 등을 고려할 수 있다.</li>
+<li><dl>
+<dt>로드 (Load)</dt>
+<dd>
+특정 자원(기계, 인력 등)에 대해 필요한 작업 시간이나 처리량을 계산한 값이다. 이는 생산 계획을 기준으로 각 자원에 할당되는 작업량을 나타낸다.
+</dd>
+</dl></li>
+<li><dl>
+<dt>용량 (Capacity)</dt>
+<dd>
+실제 자원이 제공할 수 있는 작업 시간이나 처리 능력이다. 예를 들어, 기계가 하루에 몇 시간씩 가동 가능한지, 노동력이 하루에 몇 시간을 일할 수 있는지를 평가한다.
+</dd>
+</dl></li>
+<li><dl>
+<dt>용량 격차 (Capacity Gap)</dt>
+<dd>
+요구되는 용량과 실제 제공 가능한 용량 간의 차이를 말한다. 이 차이를 해결하기 위해 자원 추가, 일정 조정, 외부 자원 활용 등을 고려할 수 있다.
+</dd>
+</dl></li>
 </ul>
 </dd>
 <dt>CRP 과정</dt>
 <dd>
 <ol type="1">
-<li>주문 또는 생산 계획 수립<br>
-먼저 생산 계획을 세우고, 각 제품이나 주문에 필요한 자원량을 예측한다.</li>
-<li>용량 계산<br>
-각 자원의 용량을 계산하여, 계획된 생산 일정에 맞게 자원들을 얼마나 배정해야 하는지 평가한다.</li>
-<li>격차 분석<br>
-실제 용량과 요구 용량 간의 격차를 분석하여, 부족한 자원을 어떻게 보충할지 결정한다.</li>
-<li>조정 및 최적화<br>
-자원의 부족을 해결하거나 과잉 자원을 조정하여, 효율적으로 생산 목표를 달성할 수 있도록 생산 계획을 수정한다.</li>
+<li><dl>
+<dt>주문 또는 생산 계획 수립</dt>
+<dd>
+먼저 생산 계획을 세우고, 각 제품이나 주문에 필요한 자원량을 예측한다.
+</dd>
+</dl></li>
+<li><dl>
+<dt>용량 계산</dt>
+<dd>
+각 자원의 용량을 계산하여, 계획된 생산 일정에 맞게 자원들을 얼마나 배정해야 하는지 평가한다.
+</dd>
+</dl></li>
+<li><dl>
+<dt>격차 분석</dt>
+<dd>
+실제 용량과 요구 용량 간의 격차를 분석하여, 부족한 자원을 어떻게 보충할지 결정한다.
+</dd>
+</dl></li>
+<li><dl>
+<dt>조정 및 최적화</dt>
+<dd>
+자원의 부족을 해결하거나 과잉 자원을 조정하여, 효율적으로 생산 목표를 달성할 수 있도록 생산 계획을 수정한다.
+</dd>
+</dl></li>
 </ol>
 </dd>
 </dl>
@@ -1951,8 +1990,8 @@ ATP 계산
 <li>현재 보유 중인 재고와 리드타임, 입출고 내역 등을 기록한 파일</li>
 </ul>
 </dd>
-<dt>MRP 작동 원리</dt>
-<dd>
+</dl>
+<p><strong>MRP 작동 원리</strong>는 다음과 같다.</p>
 <ul>
 <li>순수요 계산<br>
 BOM과 현재 재고를 기반으로 부족한 자재의 순수요를 계산한다.</li>
@@ -1961,8 +2000,6 @@ BOM과 현재 재고를 기반으로 부족한 자재의 순수요를 계산한�
 <li>주문 일정 작성<br>
 리드 타임을 고려하여 자재를 언제 주문하거나 생산해야 하는지를 계획한다.</li>
 </ul>
-</dd>
-</dl>
 <table class="caption-top table">
 <caption>MRP 장점과 한계</caption>
 <colgroup>
@@ -2082,7 +2119,7 @@ MRP vs MRP II vs ERP
 </section>
 <section id="mrp-산출물" class="level3">
 <h3 class="anchored" data-anchor-id="mrp-산출물">MRP 산출물</h3>
-<p>MRP 산출물은 다음과 같다.</p>
+<p><strong>MRP 산출물</strong>은 자재 소요량 계획, 주문 계획, 생산 일정, 재고 수준 예측이 있다.</p>
 <ol type="1">
 <li><p><strong>자재 소요량 계획 (Material Requirements Plan)</strong><br>
 생산 일정과 BOM을 기반으로 각 자재와 부품의 소요량을 계산한 결과물이다. 언제, 얼마나 자재를 주문하고 생산해야 하는지에 대한 세부 계획이 포함된다.</p></li>
@@ -2273,9 +2310,12 @@ MRP 작성
 </table>
 </div>
 </div>
-
-
 </section>
+</section>
+<section id="sec-ref-0501" class="level2">
+<h2 class="anchored" data-anchor-id="sec-ref-0501">참고자료</h2>
+
+
 </section>
 
 </main> <!-- /main -->
