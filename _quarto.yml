@@ -2,6 +2,8 @@ project:
   type: book
   output-dir: docs
 
+metadata:
+  keywords: ["공장관리기술사", "생산운영", "재고", "물류", "공정", "설비", "작업", "생산성", "원가", "OR"]
 book:
   title: "공장관리기술사(2E)"
   author: "YK"
