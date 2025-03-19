@@ -6,7 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="keywords" content="공장관리기술사, 생산운영, 재고, 물류, 공정, 설비, 작업, 생산성, 원가, OR">
+<meta name="keywords" content="표준시간, 여유시간, 레이팅, 표준, 표준화">
+<meta name="description" content="표준시간 의미를 이해하고 레이팅과 여유시간을 정의한다.">
 
 <title>표준작업 관리 – 생산운영과 공장관리(2E)</title>
 <style>
@@ -498,7 +499,10 @@ window.Quarto = {
   <li><a href="#표준-역활" id="toc-표준-역활" class="nav-link" data-scroll-target="#표준-역활">표준 역활</a></li>
   <li><a href="#sec-standardization" id="toc-sec-standardization" class="nav-link" data-scroll-target="#sec-standardization">표준화</a></li>
   </ul></li>
-  <li><a href="#sec-ref-0504" id="toc-sec-ref-0504" class="nav-link" data-scroll-target="#sec-ref-0504">참고자료</a></li>
+  <li><a href="#sec-ref-0504" id="toc-sec-ref-0504" class="nav-link" data-scroll-target="#sec-ref-0504">참고자료</a>
+  <ul>
+  <li><a href="#표준시간-관련-용어" id="toc-표준시간-관련-용어" class="nav-link" data-scroll-target="#표준시간-관련-용어">표준시간 관련 용어</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/yeonkyupark/pepc2e/edit/main/0504표준작업관리.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
     </div>
@@ -519,19 +523,23 @@ window.Quarto = {
     
   </div>
   
+<div>
+  <div class="abstract">
+    <div class="block-title">Abstract</div>
+    <p>표준시간은 실 작업시간인 정미시간과 작업에 불가피한 여유시간 합으로 계산된다. 정미시간은 관측시간에 레이팅을 반영하여 계산하고 여유시간은 일반여유, 특수여유, 장려여유를 고혀한다. 표준이란 이익 또는 편의가 공정하게 얻어지도록 통일, 단순화를 목적으로 규정을 결정하는 것이고, 표준화는 표준을 설정하고 이것을 활용하는 조직적 행위를 의미한다.</p>
+  </div>
+</div>
 
 <div>
   <div class="keywords">
     <div class="block-title">Keywords</div>
-    <p>공장관리기술사, 생산운영, 재고, 물류, 공정, 설비, 작업, 생산성, 원가, OR</p>
+    <p>표준시간, 여유시간, 레이팅, 표준, 표준화</p>
   </div>
 </div>
 
 </header>
 
 
-<section id="sec-standard-time" class="level2">
-<h2 class="anchored" data-anchor-id="sec-standard-time">표준시간</h2>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 121-4-4, 127-2-2, 130-2-5">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -545,6 +553,8 @@ window.Quarto = {
 
 </div>
 </div>
+<section id="sec-standard-time" class="level2">
+<h2 class="anchored" data-anchor-id="sec-standard-time">표준시간</h2>
 <p><strong>표준시간</strong>(ST, standard time)이란</p>
 <ul>
 <li>표준 작업환경에서</li>
@@ -559,6 +569,19 @@ window.Quarto = {
 <p><span id="eq-st"><span class="math display">\[
 표준시간(ST) = 정미시간(NT) + 여유시간(AT) = 관측시간 \times (1+레이팅) + 여유시간
 \tag{14.1}\]</span></span></p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 127-1-13">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+기출: 127-1-13
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
 <section id="sec-rating" class="level3">
 <h3 class="anchored" data-anchor-id="sec-rating">레이팅</h3>
 <div class="cell" data-layout-align="default">
@@ -583,20 +606,7 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<p>레이팅 기법은 다음과 같다.</p>
-<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 127-1-13">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-기출: 127-1-13
-</div>
-</div>
-<div class="callout-body-container callout-body">
-
-</div>
-</div>
+<p><strong>레이팅 기법</strong>은 다음과 같다.</p>
 <dl>
 <dt>평준화(leveling)법 또는 <font color="blue">Westing house법</font></dt>
 <dd>
@@ -692,17 +702,17 @@ Westinghouse 레이팅 계수(Westinghouse Rating Factor)를 구하기 위한 �
 </div>
 </div>
 <dl>
-<dt><strong>속도레이팅</strong>(speed rating)* - 주관적 평가법</dt>
+<dt><strong>속도레이팅</strong>(speed rating, 주관적 평가법)</dt>
 <dd>
 <ul>
-<li>속도레이팅을 수행도 평가법(performance rating)이라고도 하며, 이 방법은 작업환경과 작업조건, 그리고 작업바법이 일정하다면 수행도는 작업능력과 작업의욕에 따라 변화게 된다는 가정에 기초를 둠</li>
+<li>속도레이팅을 <strong>수행도 평가법</strong>(performance rating)이라고도 하며, 이 방법은 작업환경과 작업조건, 그리고 작업방법이 일정하다면 <font color="blue">수행도는 작업능력과 작업의욕에 따라 변화게 된다는 가정</font>에 기초를 둠</li>
 <li>작업 수행도 기준을 100%으로 한다면 변동요인(능력, 의욕 등)에 따라 수행도 평가치를 120%로 할 때 평가계수는 (120/100)을 사용하여 관측시간을 수정함 <span id="eq-speed-rating"><span class="math display">\[NT = 관측시간 대표치 \times \frac{평가치}{기준수행도} \tag{14.3}\]</span></span></li>
 </ul>
 </dd>
 <dt><strong>객관적 레이팅</strong>(objective rating)법</dt>
 <dd>
 <ul>
-<li>M.E. Mundel이 발표한 것으로 제1평가(작업속도)와 제2평가(작업 곤란성)를 고려하여 정미시간을 계산하는 방식 <span id="eq-objective-rating"><span class="math display">\[NT = P \times S \times O \tag{14.4}\]</span></span>
+<li>M.E. Mundel이 발표한 것으로 <font color="blue">제1평가(작업속도)와 제2평가(작업 곤란성)를 고려</font>하여 정미시간을 계산하는 방식 <span id="eq-objective-rating"><span class="math display">\[NT = P \times S \times O \tag{14.4}\]</span></span>
 <ul>
 <li>P는 속도평가 계수</li>
 <li>S는 2차 조정계수(작업시간 증가분을 100분율로 표시)</li>
@@ -713,7 +723,7 @@ Westinghouse 레이팅 계수(Westinghouse Rating Factor)를 구하기 위한 �
 <dt><strong>합성레이팅</strong>(synthetic rating)법</dt>
 <dd>
 <ul>
-<li>작업을 요소작업으로 구분한 후 요소별 관측시간을 산출(O)</li>
+<li><font color="blue">작업을 요소작업으로 구분한 후 요소별 관측시간을 산출(O)</font></li>
 <li>요소작업 중 임의 작업자 요소작업을 몇개 선정함</li>
 <li>선정된 요소작업에 대해 PTS법으로 분석하여 시간치(F)를 계산</li>
 <li>실제관측치(O)와 PTS에 의한 시간치(F) 간 비율 <span class="math inline">\(P = \frac{F}{O}\)</span>이나 비율 평균치를 레이팅 계수로 구한 후 다른 요소작업에 적용</li>
@@ -732,9 +742,6 @@ Westinghouse 레이팅 계수(Westinghouse Rating Factor)를 구하기 위한 �
 </ul>
 </dd>
 </dl>
-</section>
-<section id="sec-allowance-time" class="level3">
-<h3 class="anchored" data-anchor-id="sec-allowance-time">여유시간</h3>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 115-2-4">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -748,7 +755,10 @@ Westinghouse 레이팅 계수(Westinghouse Rating Factor)를 구하기 위한 �
 
 </div>
 </div>
-<p>여유시간은 작업에 있어서 불가피한 시간을 의미한다. 작업자 휴식 또는 작업 중 여러가지 원인으로 지연이 발생하기 때문에 표준시간 설정 시 적당한 여유를 주어야 하는데 이에 해당하는 시간이 여유시간이다.</p>
+</section>
+<section id="sec-allowance-time" class="level3">
+<h3 class="anchored" data-anchor-id="sec-allowance-time">여유시간</h3>
+<p><strong>여유시간</strong>은 <font color="blue">작업에 있어서 불가피한 시간</font>을 의미한다. 작업자 휴식 또는 작업 중 여러가지 원인으로 지연이 발생하기 때문에 표준시간 설정 시 적당한 여유를 주어야 하는데 이에 해당하는 시간이 여유시간이다.</p>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
@@ -784,7 +794,7 @@ end
 
 02 --- 21 &amp; 22 &amp; 23 &amp; 24
 01 --- 11 &amp; 12 &amp; 13 &amp; 14
-00 --- 03 &amp; 02 &amp; 01
+00 --- 01 &amp; 02 &amp; 03
 
 </pre>
 </div>
@@ -796,7 +806,7 @@ end
 <dt>일반여유</dt>
 <dd>
 <ul>
-<li>어떤 작업에 대해서 공통적으로 감안해 주는 기본적인 여유</li>
+<li><font color="blue">어떤 작업에 대해서 공통적으로 감안해 주는 기본적인 여유</font></li>
 <li><strong>개인여유</strong>: 인적여유, 용우여유, 생리여유로서 일반적으로 2~5%(남자 5%, 여자 7%)</li>
 <li><strong>피로여유</strong>: 일반적으로 중노동 20~30%, 경노동 5~10%로 피로 발생은 작업강도, 환경, 육체적 근육노동, 정신적 건강에 기인함</li>
 <li><strong>작업여유</strong>: 3~5% 부여, 작업여유는 재료취급시간, 불량공구 연마 및 교환, 기계수리, 조정, 주유, 청소 등 불규칙적으로 발생되는 여유</li>
@@ -806,8 +816,8 @@ end
 <dt>특수여유</dt>
 <dd>
 <ul>
-<li>작업 특수성이나 작업편성 등 특별한 사정으로 인하여 표준시간 개개 작업에 적용할 경우에 특별히 고려할 필요가 있는 여유</li>
-<li><strong>기계간섭여</strong>유: 1명 작업자가 2대 이상 기계를 조작할 경우 기계 간섭이 발생함으로써 생산량이 감소하는 것을 반영하기 위한 여유</li>
+<li><font color="blue">작업 특수성이나 작업편성 등 특별한 사정으로 인하여</font> 표준시간 개개 작업에 적용할 경우에 특별히 고려할 필요가 있는 여유</li>
+<li><strong>기계간섭여유</strong>: 1명 작업자가 2대 이상 기계를 조작할 경우 기계 간섭이 발생함으로써 생산량이 감소하는 것을 반영하기 위한 여유</li>
 <li><strong>조여유</strong>: 작업자가 조를 이루어 작업을 실시할 때 발생하는 작업지연 보상</li>
 <li><strong>소로트여유</strong>: 로트수가 작기 때문에 정상작업속도가 유지곤란한 경우 보상</li>
 <li><strong>긴사이클여유</strong>: 사이클이 길기 때문에 작업 변동이나 복잡성을 보상하기 위한 여유</li>
@@ -817,14 +827,14 @@ end
 <dt>장려여유</dt>
 <dd>
 <ul>
-<li>임금지급제도와 관계되는 정책적인 여유로 능률제도와 같은 <strong>장려제도 실시 시 할증급 비율을 표준시간에 포함시키기 위한 계수</strong></li>
+<li>임금지급제도와 관계되는 정책적인 여유로 능률제도와 같은 <font color="blue">장려제도 실시 시 <strong>할증급 비율</strong>을 표준시간에 포함시키기 위한 계수</font></li>
 </ul>
 </dd>
 </dl>
 </section>
 <section id="여유율-계산" class="level3">
 <h3 class="anchored" data-anchor-id="여유율-계산">여유율 계산</h3>
-<p>여유율은 외경법과 내경법으로 계산할 수 있다.</p>
+<p>여유율은 외경법과 내경법으로 구분하여 계산할 수 있다.</p>
 <dl>
 <dt>외경법</dt>
 <dd>
@@ -854,7 +864,9 @@ end
 <li>10회 측정값(분)：2.54, 2.57, 2.60, 2.59, 2.62, 2.63, 2.65, 2.66, 2.63, 2.60</li>
 </ul>
 <hr>
+<blockquote class="blockquote">
 <p>내경법, 외경법 계산을 위한 평균관측치와 정미시간을 계산한다.</p>
+</blockquote>
 <dl>
 <dt>평균관측치</dt>
 <dd>
@@ -866,19 +878,15 @@ end
 </dd>
 <dt>외경법(<a href="#eq-ext-at" class="quarto-xref">수식&nbsp;<span>14.5</span></a> 참고)</dt>
 <dd>
-= <span class="math inline">\(정미시간 \times (1+여유율) = 2.22 \times (1+0.25) = 2.77\)</span>(분)
+표준시간 = <span class="math inline">\(정미시간 \times (1+여유율) = 2.22 \times (1+0.25) = 2.77\)</span>(분)
 </dd>
 <dt>내경법(<a href="#eq-int-at" class="quarto-xref">수식&nbsp;<span>14.6</span></a> 참고)</dt>
 <dd>
-= <span class="math inline">\(정미시간 \times(\frac{1}{1-여유율}) = 2.22 \times (\frac{1}{1-0.25}) = 2.96\)</span>(분)
+표준시간 = <span class="math inline">\(정미시간 \times(\frac{1}{1-여유율}) = 2.22 \times (\frac{1}{1-0.25}) = 2.96\)</span>(분)
 </dd>
 </dl>
 </div>
 </div>
-</section>
-</section>
-<section id="sec-standard" class="level2">
-<h2 class="anchored" data-anchor-id="sec-standard">표준과 표준화</h2>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 109-3-1">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -892,12 +900,16 @@ end
 
 </div>
 </div>
+</section>
+</section>
+<section id="sec-standard" class="level2">
+<h2 class="anchored" data-anchor-id="sec-standard">표준과 표준화</h2>
 <table class="caption-top table">
-<caption>표준과 표준화 :</caption>
+<caption>표준과 표준화 소방{tbl-colwidths=“[15,45,40]”}</caption>
 <colgroup>
-<col style="width: 15%">
-<col style="width: 45%">
-<col style="width: 40%">
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -978,7 +990,7 @@ end
 </tr>
 <tr class="even">
 <td><strong>표준화 열쇠</strong></td>
-<td>시장 도입기 점유율, 유력 기업 참가, 계열 기업 수, 소프트 수</td>
+<td>시장 도입기 점유율, 유력 기업 참가, 계열 기업 수, 소프트 파워</td>
 <td>표준화 기관 강제력, 참여 기업 수, 유력 기업 참여</td>
 </tr>
 </tbody>
@@ -1024,7 +1036,7 @@ end
 </section>
 <section id="sec-standardization" class="level3">
 <h3 class="anchored" data-anchor-id="sec-standardization">표준화</h3>
-<p><strong>표준화</strong>(Standardization)는 사물에 합리적인 기준(standard)을 설정하고 다수 사람이 어떤 사물에 그 기준을 맞추는 것으로 표준을 합리적으로 설정하여 활용하는 조직적 행위로 정의할 수 있다.</p>
+<p><strong>표준화</strong>(Standardization)는 사물에 합리적인 기준(standard)을 설정하고 다수 사람이 어떤 사물에 그 기준을 맞추는 것으로 <font color="blue">표준을 합리적으로 설정하여 활용하는 조직적 행위</font>로 정의할 수 있다.</p>
 <dl>
 <dt>표준화 목적(ISO/STACO)</dt>
 <dd>
@@ -1089,16 +1101,21 @@ end
 </section>
 <section id="sec-ref-0504" class="level2">
 <h2 class="anchored" data-anchor-id="sec-ref-0504">참고자료</h2>
-<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출 97-1-9">
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 97-1-9">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-기출 97-1-9
+기출: 97-1-9
 </div>
 </div>
 <div class="callout-body-container callout-body">
+
+</div>
+</div>
+<section id="표준시간-관련-용어" class="level3">
+<h3 class="anchored" data-anchor-id="표준시간-관련-용어">표준시간 관련 용어</h3>
 <dl>
 <dt>투입시간(부하시간)</dt>
 <dd>
@@ -1165,10 +1182,9 @@ end
 </ul>
 </dd>
 </dl>
-</div>
-</div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
