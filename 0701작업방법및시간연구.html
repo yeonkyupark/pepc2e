@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="keywords" content="공장관리기술사, 생산운영, 재고, 물류, 공정, 설비, 작업, 생산성, 원가, OR">
+<meta name="keywords" content="작업방법, 시간연구, 동작경제원칙, 시간연구법, PTS, 학습곡선">
 
 <title>작업방법 및 시간연구 – 생산운영과 공장관리(2E)</title>
 <style>
@@ -501,6 +501,7 @@ window.Quarto = {
   </ul></li>
   </ul></li>
   <li><a href="#sec-learning-curve" id="toc-sec-learning-curve" class="nav-link" data-scroll-target="#sec-learning-curve">학습곡선</a></li>
+  <li><a href="#sec-ref-0701" id="toc-sec-ref-0701" class="nav-link" data-scroll-target="#sec-ref-0701">참고자료</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/yeonkyupark/pepc2e/edit/main/0701작업방법및시간연구.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
     </div>
@@ -525,7 +526,7 @@ window.Quarto = {
 <div>
   <div class="keywords">
     <div class="block-title">Keywords</div>
-    <p>공장관리기술사, 생산운영, 재고, 물류, 공정, 설비, 작업, 생산성, 원가, OR</p>
+    <p>작업방법, 시간연구, 동작경제원칙, 시간연구법, PTS, 학습곡선</p>
   </div>
 </div>
 
@@ -634,7 +635,7 @@ window.Quarto = {
 </section>
 <section id="작업시간-산정" class="level2">
 <h2 class="anchored" data-anchor-id="작업시간-산정">작업시간 산정</h2>
-<p>작업시간을 산정하는 방법에는 통계적인 방법, 관측을 통한 방법, 그리고 기존 자료를 활용한 합성법이 있다.</p>
+<p>작업시간을 산정하는 방법에는 통계적인 방법, 작접 관측을 통한 방법, 그리고 기존 자료를 활용한 합성법이 있다.</p>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
@@ -704,15 +705,10 @@ end
 </dl>
 <p>선정된 작업자가 작업시간을 늘리려고 불필요한 동작을 하는 경우가 많기 때문에 연구를 수행하는 분석 담당자는 대상 업무를 철저히 알고 있어야 하며, 표준시간을 정하기 이전에 그 업무가 효율적으로 수행되는지 확인할 필요가 있다. 측정횟수는 관측된 시간 변동성, 정확도 목표, 추정된 업무시간 신뢰도 수준 목표에 맞게 설정한다.</p>
 <p><span id="eq-time-study-n"><span class="math display">\[
-측정횟수(n) = (\frac{zs}{a\bar{x}})^2
+측정횟수(n) = (z \times \frac{s}{a\bar{x}})^2
 \tag{22.1}\]</span></span></p>
-<p>여기서,</p>
-<ul>
-<li><span class="math inline">\(z\)</span> = 목표 신뢰도를 달성하기 위한 표준편차(<strong>신뢰도 목표</strong>)</li>
-<li><span class="math inline">\(s\)</span> = 표본 <strong>표준편차</strong></li>
-<li><span class="math inline">\(a\)</span> = <strong>정확도 목표</strong></li>
-<li><span class="math inline">\(\bar{x}\)</span> = <strong>표본평균</strong></li>
-</ul>
+<p>여기서,<br>
+- <span class="math inline">\(z\)</span> = 목표 신뢰도를 달성하기 위한 표준편차(<strong>신뢰도 목표</strong>) - <span class="math inline">\(s\)</span> = 표본 <strong>표준편차</strong> - <span class="math inline">\(a\)</span> = <strong>정확도 목표</strong> - <span class="math inline">\(\bar{x}\)</span> = <strong>표본평균</strong></p>
 <div class="callout callout-style-default callout-important no-icon callout-titled" title="시간연구법">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -792,21 +788,15 @@ end
 </li>
 <li>S: p에 대한 상대적 정도(허용오차)<br>
 </li>
-<li>p: 구하는 비율(발생률)</li>
+<li>p: 구하는 비율(발생률)<br>
+</li>
 </ul></li>
+<li>표준시간 산정<br>
+<span id="eq-work-sampling-st"><span class="math display">\[정상시간(단위당)=\frac{\text{총관측시간 x 발생률 x 수행도평가(레이팅)}}{생산량} \tag{22.3}\]</span></span><br>
+- 여기서 여유시간을 가산하여 단위당 표준시간 산정<br>
+- 표준시간 = 정상시간(1+여유률), 또는 정상시간 x <span class="math inline">\((\frac{1}{1-여유율})\)</span></li>
 </ol>
 </dd>
-</dl>
-<ol start="2" type="1">
-<li>표준시간 산정<br>
-<span id="eq-work-sampling-st"><span class="math display">\[정상시간(단위당)=\frac{\text{총관측시간 x 발생률 x 수행도평가(레이팅)}}{생산량} \tag{22.3}\]</span></span>
-<ul>
-<li>여기서 여유시간을 가산하여 단위당 표준시간 산정<br>
-</li>
-<li>표준시간 = 정상시간(1+여유률), 또는 정상시간 x <span class="math inline">\((\frac{1}{1-여유율})\)</span></li>
-</ul></li>
-</ol>
-<dl>
 <dt>워크샘플링 적용 대상</dt>
 <dd>
 <ul>
@@ -815,10 +805,6 @@ end
 </ul>
 </dd>
 </dl>
-</section>
-</section>
-<section id="sec-pts" class="level3">
-<h3 class="anchored" data-anchor-id="sec-pts">PTS</h3>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 109-2-2">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -832,6 +818,10 @@ end
 
 </div>
 </div>
+</section>
+</section>
+<section id="sec-pts" class="level3">
+<h3 class="anchored" data-anchor-id="sec-pts">PTS</h3>
 <p><strong>PTS</strong>(predetermined time standard)는 <font color="blue">이미 작성된 작업요소들을 이용하여 표준시간을 계산하는 방식</font>이다. 1940년대 말 Method Engineering Council이 개발한 방법시간측정(MTM, Methods-time measurement)을 주로 사용했다.</p>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
@@ -952,8 +942,6 @@ MTA --- WF --- MTM --- BMT --- RWF --- MODAPTS
 </tr>
 </tbody>
 </table>
-<section id="sec-work-factor" class="level4">
-<h4 class="anchored" data-anchor-id="sec-work-factor">WF</h4>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 103-3-1, 127-1-12">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -967,6 +955,8 @@ MTA --- WF --- MTM --- BMT --- RWF --- MODAPTS
 
 </div>
 </div>
+<section id="sec-work-factor" class="level4">
+<h4 class="anchored" data-anchor-id="sec-work-factor">WF</h4>
 <p><strong>WF</strong>(Work factor)법은 각 신체 부위마다 움직이는 거리, 취급중량, 작업자에 의한 제어 여부(동작 곤란) 등과 같은 변수에 대해 <font color="blue">각 동작시간 표준치를 정하여 동작시간 표준을 적용하여 실질 시간을 구하는 기법</font>이다. 인간이 하는 작업에는 그 작업 구성요소인 동작을 행하는 <strong>신체부위</strong>, <strong>동작 크기</strong>, <strong>동작 제약 외적 조건</strong>에 따라 동작 수행에 소요되는 객관적으로 적정한 시간이 존재한다는 전제에서 측정한다. 따라서 각 요소 동작마다 각 신체 부위별로 동작시간을 실제 데이터에 의해 제약요인과 관련지어 해석하고 <strong>시간표</strong>를 만들어 둔다. 측정 단위 시간은 WFU며, 1분 = 10,000WFU이다.</p>
 <dl>
 <dt>기본원리</dt>
@@ -980,22 +970,38 @@ MTA --- WF --- MTM --- BMT --- RWF --- MODAPTS
 <dt>4가지 주요 변수(시간 변동 요인)</dt>
 <dd>
 <ul>
-<li>사용되는 신체부위
+<li><dl>
+<dt>사용되는 신체부위</dt>
+<dd>
 <ul>
 <li>손가락(F), 손(H), 앞팔선희(F8), 팔(A), 몸통(T), 다리(L), 발(FT), 머리회전(HT)</li>
-</ul></li>
-<li>이동 거리
+</ul>
+</dd>
+</dl></li>
+<li><dl>
+<dt>이동 거리</dt>
+<dd>
 <ul>
 <li>1~100cm, 45~180도</li>
-</ul></li>
-<li>중량 또는 저항
+</ul>
+</dd>
+</dl></li>
+<li><dl>
+<dt>중량 또는 저항</dt>
+<dd>
 <ul>
 <li>저항이 커질수록 W -&gt; WW -&gt; WWW, 신체 부위별 W 계수 다름</li>
-</ul></li>
-<li><strong>동작 곤란성</strong>
+</ul>
+</dd>
+</dl></li>
+<li><dl>
+<dt><strong>동작 곤란성</strong></dt>
+<dd>
 <ul>
 <li><font color="blue">일정한 정지(D), 방향 조절(S), 주의(P), 방향변경(U)</font></li>
-</ul></li>
+</ul>
+</dd>
+</dl></li>
 </ul>
 </dd>
 </dl>
@@ -1119,11 +1125,6 @@ MTA --- WF --- MTM --- BMT --- RWF --- MODAPTS
 <li>예시: 작업자가 물건을 한 곳에서 다른 곳으로 옮기는 동작.</li>
 </ul></li>
 </ol>
-</section>
-</section>
-</section>
-<section id="sec-learning-curve" class="level2">
-<h2 class="anchored" data-anchor-id="sec-learning-curve">학습곡선</h2>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 109-2-3, 112-1-2, 118-1-9">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1136,6 +1137,17 @@ MTA --- WF --- MTM --- BMT --- RWF --- MODAPTS
 <div class="callout-body-container callout-body">
 
 </div>
+</div>
+</section>
+</section>
+</section>
+<section id="sec-learning-curve" class="level2">
+<h2 class="anchored" data-anchor-id="sec-learning-curve">학습곡선</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://policonomics.com/wp-content/uploads/2016/02/Learning-curve-Catch-up-300x210.jpg" class="img-fluid figure-img"></p>
+<figcaption>https://policonomics.com/learning-curve/</figcaption>
+</figure>
 </div>
 <p><font color="blue">작업을 반복함에 따라 작업 소요시간 즉, 공수(Man hour)가 체감</font>되는데, 이와 같은 현상을 <strong>공수 체감 현상</strong>이라고 한다. 이 <font color="blue">공수 체감 현상 내지 능률 개선율을 그래프나 수식으로 나타낸 것</font>을 <strong>학습곡선</strong>(Learning curve)이라고 한다. 학습현상 혹은 학습효과란 동일한 업무를 반복적으로 수행함에 따라 숙련도가 증가되어 단위당 작업시간이 감소하여 단위당 원가가 감소하는 현상을 말한다.</p>
 <p><strong>학습효과</strong>는 <font color="blue">생산량이 2배 증가함에 따른 단위당 노동시간 감소를 뜻</font>하며, 학습률이 80%라면 학습효과는 20%가 된다. 즉, 첫 번째 단위 생산에 100시간 노동이 필요하다고 가정하면 2번째 단위 생산에서는 80시간이 필요하고, 4번째 단위 생산에서는 64시간이 소요된다. 따라서 n번째 단위를 생산하는데 소요되는 시간은 첫 번째 단위 생산하는데 소요되는 시간과 지수함수 관계를 갖게 된다.</p>
@@ -1261,12 +1273,15 @@ Y_n = Y_1 \times n^R
 <dd>
 <ul>
 <li>학습률은 기업, 작업 형태, 작업자에 따라 상이하므로 실증조사가 필요</li>
-<li>시간추정치는 <strong>첫 단위 생산시간에 크게 의존</strong>하므로 이의 결정에 신중을 기해야 함</li>
+<li><font color="#245bdb">시간추정치는 <strong>첫 단위 생산시간에 크게 의존</strong></font>하므로 이의 결정에 신중을 기해야 함</li>
 <li><strong>노동집약적</strong> 산업에 유효</li>
 <li>다품종 소량생산에는 불리</li>
 </ul>
 </dd>
 </dl>
+</section>
+<section id="sec-ref-0701" class="level2">
+<h2 class="anchored" data-anchor-id="sec-ref-0701">참고자료</h2>
 
 
 </section>
