@@ -1,12 +1,14 @@
 ---
 title: "설비계획"
 format: html
+description: 설비종합효율을 이해한다.
+keywords: ["설비종합효율", "OEE", "설비투자", "MAPI"]
 ---
-
-## 설비종합효율 {#sec-oee}
 
 :::{.callout-tip icon=false title="기출: 97-3-2, 109-3-5, 127-3-3"}
 :::
+
+## 설비종합효율 {#sec-oee}
 
 **설비종합효율**(Overall Equipment Effectiveness, OEE)은 실행 예정 기간 동안 제조 작업이 <font color="blue">최대 잠재력과 비교하여 얼마나 잘 활용되는지</font>(시설, 시간 및 재료)를 측정한 값이다. 이는 실제로 <font color="blue">생산적인 제조 시간 비율</font>을 식별한다. 100% OEE는 최대 속도(100% 성능)로 중단 없이(100% 가용성) 좋은 부품만 생산(100% 품질)한다는 의미이다. [^4-1-oee]
 
@@ -16,32 +18,32 @@ format: html
 
 조업시간 (time available, calendar time)
 : 
-- 1일 근무시간을 기초로 하루 시업 시간과 종업 시간 사이 총시간으로 휴식, 식사, 수주물량 부족 등 <font color="blue">계획 정지시간을 포함</font>
+	- 1일 근무시간을 기초로 하루 시업 시간과 종업 시간 사이 총시간으로 휴식, 식사, 수주물량 부족 등 <font color="blue">계획 정지시간을 포함</font>
 
 부하시간 (planned runtime)
 : 
-- 조업시간에 기업이 인정하는 식사시간, 휴식시간을 제외하고 설비가 실제 가동되어야 할 시간
+	- 조업시간에 기업이 인정하는 식사시간, 휴식시간을 제외하고 <font color="#245bdb">설비가 실제 가동되어야 할 시간</font>
   $$부하시간 = 조업시간 - 계획정지시간$$ {#eq-planned-runtime}
 
 가동시간 (production time)
 : 
-- 설비 부하시간에서 정지시간을 제외한 시간으로 설비가 실제 가동한 시간
-- 정지시간이란 비계획적으로 설비가 일정시간(예 5분) 이상 가동하지 않는 시간
+	- <font color="#245bdb">설비 부하시간에서 정지시간을 제외한 시간으로 설비가 실제 가동한 시간</font>
+	- 정지시간이란 비계획적으로 설비가 일정시간(예 5분) 이상 가동하지 않는 시간
   $$가동시간 = 부하시간 - 정지시간$$ {#eq-production-time}
 
 실가동시간 (net production time)
 : 
-- 설비가 현재 성능으로 얼마나 제품 생산에 기여했는지를 나타내는 시간
+	- 설비가 현재 성능으로 얼마나 제품 생산에 기여했는지를 나타내는 시간
   $$실가동시간 = 생산량 \times 실제 cycle time$$ {#eq-net-production-time}
 
 성능가동시간 (usable production time)
 : 
-- 설비 도입 시 표준 성능으로 얼마나 제품을 생산 가능한지를 나타내는 시간
+	- 설비 도입 시 표준 성능으로 얼마나 제품을 생산 가능한지를 나타내는 시간
   $$성능가동시간 = 생산량 \times 이론 cycle time$$ {#eq-usable-production-time}
 
 가치가동시간 (net productive time)
 : 
-- 설비 도입 시 성은으로 얼마나 양품을 생산했는지를 나타내는 시간 
+	- 설비 도입 시 성능으로 얼마나 <font color="#245bdb">양품</font>을 생산했는지를 나타내는 시간 
   $$가치가동시간 = 양품수 \times 이론 cycle time$$ {#eq-net-productive-time}
 
 ### 설비종합효율 계산 {#sec-oee-calculation}
@@ -51,24 +53,29 @@ format: html
 $$설비종합설비 = 시간 \ 가동률 \times 성능 \times 가동률 \ 양품률$$ {#eq-oee}
 
 시간가동률
-: - 부하시간 중 설비 고장정지, 기종변경, 자재 품절, 유실 시간 등을 제외한 가동시간과 부하시간 간 비율로 설비가 정지 없이 가돋되고 있는가를 나타내는 지표  
+: 
+	- 부하시간 중 설비 고장정지, 기종변경, 자재 품절, 유실 시간 등을 제외한 가동시간과 부하시간 간 비율로 설비가 정지 없이 가돋되고 있는가를 나타내는 지표  
   $$시간가동률 = \frac{부하시간 - 정지시간}{부하시간} \times 100$$ {#eq-oee-time-rate}
 
 정미가동률
-: - 실제 생산 시간 대비 가동시간 비율  
+:  
+	- 실제 생산 시간 대비 가동시간 비율  
   $$정미가동률 = \frac{생산량 \times 실제 cycle time}{부하시간 - 정지시간} \times 100$$ {#eq-oee-production-rate}
 
 속도가동률
-: - 이론 cycle time 대비 실제 cycle time 비율  
+:  
+	- 이론 cycle time 대비 실제 cycle time 비율  
   $$속도가동률 = \frac{이론 cycle time}{실제 cycle time} \times 100$$ {#eq-oee-speed-rate}
 
 성능가동률
-: - 가동시간 중 설비 목표 성능을 바뤼한 시간 비율  
+:  
+	- 가동시간 중 설비 목표 성능을 바뤼한 시간 비율  
   $$성능가동률 = \frac{생산량 \times 이론 cycle time}{가동시간} \times 100$$ {#eq-oee-performance-rate-1}
   $$성능가동률 = 정미가동률 \times 속도가동률 = \frac{생산량 \times 실제 cycle time}{부하시간 - 정지시간} \times \frac{이론 cycle time}{실제 cycle time}$$ {#eq-oee-performance-rate-2}
 
 양품률
-: - 전체 생산 수량에서 양품 비율  
+:  
+	- 전체 생산 수량에서 양품 비율  
   $$양품률 = \frac{생산수량 - 불량수량}{생산수량} \times 100$$ {#eq-oee-good-rate}
   
 :::{.callout-important icon=false title="예제"}
@@ -189,12 +196,10 @@ $$
 :::
 
 
-:::{.callout-important icon=false title="설비 수량 계산"}
-
----
-
 :::{.callout-tip icon=false title="기출: 106-3-3"}
 :::
+
+:::{.callout-important icon=false title="설비 수량 계산"}
 
 구분|표준작업시간|효율|신뢰도
 -|-|-|-
@@ -280,20 +285,20 @@ MAPI 방식의 주요 개념
 
 신 MAPI 방식의 장점  
 : 
-- 미래 비용까지 고려한 정밀 분석 가능  
-- 시간 가치(TVM)를 적용하여 보다 현실적인 교체 시점 도출  
-- 감가상각과 세금 혜택을 포함한 종합적인 경제성 평가 가능  
-- 설비의 유지보수 증가율과 생산성 변화를 반영하여 최적의 교체 타이밍 결정  
+	- 미래 비용까지 고려한 정밀 분석 가능  
+	- 시간 가치(TVM)를 적용하여 보다 현실적인 교체 시점 도출  
+	- 감가상각과 세금 혜택을 포함한 종합적인 경제성 평가 가능  
+	- 설비의 유지보수 증가율과 생산성 변화를 반영하여 최적의 교체 타이밍 결정  
 
 신 MAPI 방식은 기존 방식보다 <font color="blue">보다 종합적이고 정밀한 분석을 통해 최적의 설비 교체 시점을 결정할 수 있는 장점</font>이 있다.
 
 
 ## 참고자료 {#sec-ref-0601}
 
-### 효율성과 효과성
-
 :::{.callout-tip icon=falce title="기출 103-1-5"}
 :::
+
+### 효율성과 효과성
 
 효율성(efficiency)
 : - <font color="blue">최소한 자원으로 주어진 목표를 달성하는 것</font>으로, 생산성 측면에서 산출(output)이 목표라면 최소한 투입(input)으로 산츨을 빨리 이루어내는 것을 효율적이라 한다.
