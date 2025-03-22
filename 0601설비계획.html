@@ -6,7 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="keywords" content="공장관리기술사, 생산운영, 재고, 물류, 공정, 설비, 작업, 생산성, 원가, OR">
+<meta name="keywords" content="설비종합효율, OEE, 설비투자, MAPI">
+<meta name="description" content="설비종합효율을 이해한다.">
 
 <title>설비계획 – 생산운영과 공장관리(2E)</title>
 <style>
@@ -516,15 +517,13 @@ window.Quarto = {
 <div>
   <div class="keywords">
     <div class="block-title">Keywords</div>
-    <p>공장관리기술사, 생산운영, 재고, 물류, 공정, 설비, 작업, 생산성, 원가, OR</p>
+    <p>설비종합효율, OEE, 설비투자, MAPI</p>
   </div>
 </div>
 
 </header>
 
 
-<section id="sec-oee" class="level2">
-<h2 class="anchored" data-anchor-id="sec-oee">설비종합효율</h2>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 97-3-2, 109-3-5, 127-3-3">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -538,6 +537,8 @@ window.Quarto = {
 
 </div>
 </div>
+<section id="sec-oee" class="level2">
+<h2 class="anchored" data-anchor-id="sec-oee">설비종합효율</h2>
 <p><strong>설비종합효율</strong>(Overall Equipment Effectiveness, OEE)은 실행 예정 기간 동안 제조 작업이 <font color="blue">최대 잠재력과 비교하여 얼마나 잘 활용되는지</font>(시설, 시간 및 재료)를 측정한 값이다. 이는 실제로 <font color="blue">생산적인 제조 시간 비율</font>을 식별한다. 100% OEE는 최대 속도(100% 성능)로 중단 없이(100% 가용성) 좋은 부품만 생산(100% 품질)한다는 의미이다. <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 <section id="관련-용어" class="level3">
 <h3 class="anchored" data-anchor-id="관련-용어">관련 용어</h3>
@@ -551,13 +552,13 @@ window.Quarto = {
 <dt>부하시간 (planned runtime)</dt>
 <dd>
 <ul>
-<li>조업시간에 기업이 인정하는 식사시간, 휴식시간을 제외하고 설비가 실제 가동되어야 할 시간 <span id="eq-planned-runtime"><span class="math display">\[부하시간 = 조업시간 - 계획정지시간 \tag{16.1}\]</span></span></li>
+<li>조업시간에 기업이 인정하는 식사시간, 휴식시간을 제외하고 <font color="#245bdb">설비가 실제 가동되어야 할 시간</font> <span id="eq-planned-runtime"><span class="math display">\[부하시간 = 조업시간 - 계획정지시간 \tag{16.1}\]</span></span></li>
 </ul>
 </dd>
 <dt>가동시간 (production time)</dt>
 <dd>
 <ul>
-<li>설비 부하시간에서 정지시간을 제외한 시간으로 설비가 실제 가동한 시간</li>
+<li><font color="#245bdb">설비 부하시간에서 정지시간을 제외한 시간으로 설비가 실제 가동한 시간</font></li>
 <li>정지시간이란 비계획적으로 설비가 일정시간(예 5분) 이상 가동하지 않는 시간 <span id="eq-production-time"><span class="math display">\[가동시간 = 부하시간 - 정지시간 \tag{16.2}\]</span></span></li>
 </ul>
 </dd>
@@ -576,7 +577,7 @@ window.Quarto = {
 <dt>가치가동시간 (net productive time)</dt>
 <dd>
 <ul>
-<li>설비 도입 시 성은으로 얼마나 양품을 생산했는지를 나타내는 시간 <span id="eq-net-productive-time"><span class="math display">\[가치가동시간 = 양품수 \times 이론 cycle time \tag{16.5}\]</span></span></li>
+<li>설비 도입 시 성능으로 얼마나 <font color="#245bdb">양품</font>을 생산했는지를 나타내는 시간 <span id="eq-net-productive-time"><span class="math display">\[가치가동시간 = 양품수 \times 이론 cycle time \tag{16.5}\]</span></span></li>
 </ul>
 </dd>
 </dl>
@@ -773,17 +774,6 @@ window.Quarto = {
 <p>설비 종합효율(OEE)은 <strong>43.4%</strong>이다.</p>
 </div>
 </div>
-<div class="callout callout-style-default callout-important no-icon callout-titled" title="설비 수량 계산">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-설비 수량 계산
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<hr>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 106-3-3">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -797,6 +787,16 @@ window.Quarto = {
 
 </div>
 </div>
+<div class="callout callout-style-default callout-important no-icon callout-titled" title="설비 수량 계산">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+설비 수량 계산
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -969,8 +969,6 @@ window.Quarto = {
 </section>
 <section id="sec-ref-0601" class="level2">
 <h2 class="anchored" data-anchor-id="sec-ref-0601">참고자료</h2>
-<section id="효율성과-효과성" class="level3">
-<h3 class="anchored" data-anchor-id="효율성과-효과성">효율성과 효과성</h3>
 <div class="callout callout-style-default callout-tip callout-titled" title="기출 103-1-5">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -984,6 +982,8 @@ window.Quarto = {
 
 </div>
 </div>
+<section id="효율성과-효과성" class="level3">
+<h3 class="anchored" data-anchor-id="효율성과-효과성">효율성과 효과성</h3>
 <dl>
 <dt>효율성(efficiency)</dt>
 <dd>
