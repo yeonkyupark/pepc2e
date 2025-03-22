@@ -7,6 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="keywords" content="공장관리기술사, 생산운영, 재고, 물류, 공정, 설비, 작업, 생산성, 원가, OR">
+<meta name="description" content="설비보존 개념을 이해하고 설비 6대 로스를 파악한다.">
 
 <title>설비보전 관리 – 생산운영과 공장관리(2E)</title>
 <style>
@@ -525,6 +526,7 @@ window.Quarto = {
   <ul>
   <li><a href="#sec-pm-analysis" id="toc-sec-pm-analysis" class="nav-link" data-scroll-target="#sec-pm-analysis">PM 분석</a></li>
   </ul></li>
+  <li><a href="#sec-ref-0602" id="toc-sec-ref-0602" class="nav-link" data-scroll-target="#sec-ref-0602">참고자료</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/yeonkyupark/pepc2e/edit/main/0602설비보전관리.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
     </div>
@@ -564,11 +566,11 @@ window.Quarto = {
 <div>
 <p></p><figure class="figure"><p></p>
 <div>
-<pre class="mermaid mermaid-js">flowchart TD
-1["**Preventive** Maintenance&lt;br&gt;예방보전, 1951"]
-2["**Productive** Maintenance&lt;br&gt;생산보전, 1960대"]
-3["**Total Productive** Maintenance&lt;br&gt;종합적 생산보전, 1971"]
-4["**Total Productivity** Maintenance&lt;br&gt;종합적 생산성 관리, 1989"]
+<pre class="mermaid mermaid-js">flowchart LR
+1["**Preventive**&lt;br&gt;Maintenance&lt;br&gt;예방보전, 1951"]
+2["**Productive**&lt;br&gt;Maintenance&lt;br&gt;생산보전, 1960대"]
+3["**Total Productive**&lt;br&gt;Maintenance&lt;br&gt;종합적 생산보전, 1971"]
+4["**Total Productivity**&lt;br&gt;Maintenance&lt;br&gt;종합적 생산성 관리, 1989"]
 
 1 --&gt; 2 --&gt; 3 --&gt; 4
 </pre>
@@ -657,8 +659,6 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-<section id="sec-tpm" class="level3">
-<h3 class="anchored" data-anchor-id="sec-tpm">TPM(전사적 생산보전)</h3>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 127-4-5">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -672,7 +672,9 @@ window.Quarto = {
 
 </div>
 </div>
-<p><strong>TPM</strong>(Total Productive Maintenance)은 설비에 대한 보전 활동 전체 체계를 확립하고, 계확/사용/보전 부문에 있어 전체 인원이 참여하는 중복 소집단 활동을 통해 설비 효율을 최대화함을 목표로 한다.</p>
+<section id="sec-tpm" class="level3">
+<h3 class="anchored" data-anchor-id="sec-tpm">TPM(전사적 생산보전)</h3>
+<p><strong>TPM</strong>(Total <font color="#245bdb">Productive</font> Maintenance)은 설비에 대한 보전 활동 전체 체계를 확립하고, 계획/사용/보전 부문에 있어 전체 인원이 참여하는 중복 소집단 활동을 통해 설비 효율을 최대화함을 목표로 한다. TPM 주요내용으로 예방보전, 제로지향, 소집단활동이 있다.</p>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
@@ -713,7 +715,7 @@ window.Quarto = {
 <ul>
 <li>전원 참여 경영</li>
 <li>조직 구성원 능력을 향상</li>
-<li>의욕을 갖도록 세포조직 활성화</li>
+<li>의욕을 갖도록 셀조직 활성화</li>
 <li>조직 성과 극대화</li>
 </ul>
 </dd>
@@ -780,7 +782,7 @@ window.Quarto = {
 </tr>
 <tr class="even">
 <td>계획, 예지보전</td>
-<td>보전 부문을 중심으로 한 활동으로계획 보전 체계를 구축</td>
+<td>보전 부문을 중심으로 한 활동으로 계획 보전 체계를 구축</td>
 </tr>
 <tr class="odd">
 <td>교육, 훈련</td>
@@ -809,10 +811,6 @@ window.Quarto = {
 </tbody>
 </table>
 <p>TMS 활동 기반이 되는 5S는 <a href="0801프로세스분석과개선.html#sec-5s" class="quarto-xref"><span>5S 활동</span></a> 내용을 참고한다.</p>
-</section>
-</section>
-<section id="tpm전사적-예방보전" class="level3">
-<h3 class="anchored" data-anchor-id="tpm전사적-예방보전">TPM(전사적 예방보전)</h3>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 124-1-10">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -826,6 +824,10 @@ window.Quarto = {
 
 </div>
 </div>
+</section>
+</section>
+<section id="tpm전사적-예방보전" class="level3">
+<h3 class="anchored" data-anchor-id="tpm전사적-예방보전">TPM(전사적 예방보전)</h3>
 <p>TPM(<strong>Total Preventive Maintenance</strong>, 전사적 예방보전)은 설비와 장비의 가용성을 극대화하고 생산성을 높이기 위해 전사적으로 추진하는 보전 활동이다. TPM은 설비의 고장과 불량을 예방하고, 설비 수명을 연장하는 것을 목표로 한다.</p>
 <dl>
 <dt>TPM의 특징</dt>
@@ -922,11 +924,6 @@ window.Quarto = {
 </ul>
 </dd>
 </dl>
-</section>
-</section>
-</section>
-<section id="생산보전pm" class="level2">
-<h2 class="anchored" data-anchor-id="생산보전pm">생산보전(PM)</h2>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 97-4-3, 124-2-6">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -940,6 +937,11 @@ window.Quarto = {
 
 </div>
 </div>
+</section>
+</section>
+</section>
+<section id="생산보전pm" class="level2">
+<h2 class="anchored" data-anchor-id="생산보전pm">생산보전(PM)</h2>
 <p><strong>생산보전</strong>(productive maintenance)은 설비 수명주기(life cycle)를 대상으로 하여 생산성을 높이기 위해 실시하는 가장 경제적인 보전활동이다. 생산보전은 설비가 언제라도 기능을 발휘할 수 있도록 하는 목적으로 최소 비용을 수단으로 수행하는 활동이다. 아래와 같은 수단을 통해 목적을 달성할 수 있다.</p>
 <dl>
 <dt>설비관리 목표</dt>
@@ -1083,9 +1085,6 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-</section>
-<section id="강제열화와-자연열화" class="level2">
-<h2 class="anchored" data-anchor-id="강제열화와-자연열화">강제열화와 자연열화</h2>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 97-1-10">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1099,6 +1098,9 @@ window.Quarto = {
 
 </div>
 </div>
+</section>
+<section id="강제열화와-자연열화" class="level2">
+<h2 class="anchored" data-anchor-id="강제열화와-자연열화">강제열화와 자연열화</h2>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
@@ -1150,9 +1152,6 @@ window.Quarto = {
 </tbody>
 </table>
 <p>강제열화는 관리 부주의로 인해 발생하는 경우가 많으므로, 올바른 운영 및 유지보수를 통해 예방이 가능하다. 반면 자연열화는 피할 수 없지만, 예방 보전(Preventive Maintenance)과 예지 보전(Predictive Maintenance) 등을 통해 진행 속도를 늦출 수 있다.</p>
-</section>
-<section id="돌발로스와-만성로스" class="level2">
-<h2 class="anchored" data-anchor-id="돌발로스와-만성로스">돌발로스와 만성로스</h2>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 130-2-1">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1166,6 +1165,9 @@ window.Quarto = {
 
 </div>
 </div>
+</section>
+<section id="돌발로스와-만성로스" class="level2">
+<h2 class="anchored" data-anchor-id="돌발로스와-만성로스">돌발로스와 만성로스</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrafuVlCTsZBDkuOC2Bim5EMCrgh-WDZXbNA&amp;s.png" class="img-fluid figure-img"></p>
@@ -1223,9 +1225,6 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-</section>
-<section id="고장강도율" class="level2">
-<h2 class="anchored" data-anchor-id="고장강도율">고장강도율</h2>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 127-1-7">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1239,6 +1238,9 @@ window.Quarto = {
 
 </div>
 </div>
+</section>
+<section id="고장강도율" class="level2">
+<h2 class="anchored" data-anchor-id="고장강도율">고장강도율</h2>
 <p><strong>고장강도율</strong>은 <font color="blue">시스템이나 장비의 고장 발생 빈도와 그에 따른 강도를 측정하는 지표</font>로, <font color="blue">특정 기간 동안 고장이 발생하는 비율</font>을 나타낸다. 이 개념은 시스템의 신뢰성, 안정성, 그리고 지속 가능한 운영에 중요한 요소로, 특히 제조업과 같은 산업 환경에서 중요한 역할을 한다. 고장강도율은 일반적으로 고장 수와 그로 인한 생산 차질 정도를 함께 고려하여 계산된다.</p>
 <dl>
 <dt>고장강도율의 주요 개념</dt>
@@ -1285,9 +1287,6 @@ window.Quarto = {
 </ul></li>
 </ol>
 <p>고장강도율을 개선하는 것은 생산성과 품질을 높이고, 시스템의 신뢰성을 향상시키는 중요한 과정이다. 이를 통해 기업은 안정적인 운영과 비용 절감을 동시에 달성할 수 있다.</p>
-</section>
-<section id="sec-am-7-steps" class="level2">
-<h2 class="anchored" data-anchor-id="sec-am-7-steps">자주보전 7단계</h2>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 97-2-3, 112-2-1, 115-3-3, 118-1-6">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1301,6 +1300,9 @@ window.Quarto = {
 
 </div>
 </div>
+</section>
+<section id="sec-am-7-steps" class="level2">
+<h2 class="anchored" data-anchor-id="sec-am-7-steps">자주보전 7단계</h2>
 <div class="markdown">
 <table class="caption-top table">
 <colgroup>
@@ -1320,43 +1322,43 @@ window.Quarto = {
 <tbody>
 <tr class="odd">
 <td>1단계</td>
-<td>초기 청소</td>
+<td><strong>초기 청소</strong></td>
 <td>설비 본체를 중심으로 먼지, 더러움을 완전히 없앤다.</td>
 <td>1단계</td>
 </tr>
 <tr class="even">
 <td>2단계</td>
-<td>발생원, 곤란부위 대책 수립</td>
+<td><strong>발생원, 곤란부위 대책 수립</strong></td>
 <td>먼저, 더러움 발생원, 비산 방지나 청소, 급유 곤란 부위를 개선하고 청소, 급유 시간 단축을 도모한다.</td>
 <td>1단계</td>
 </tr>
 <tr class="odd">
 <td>3단계</td>
-<td>청소/급유/점검 기준 작성</td>
+<td><strong>청소/급유/점검 기준 작성</strong></td>
 <td>단시간으로 청소/급유/점검을 확실히 할 수 있도록 행동 기준을 작성한다.</td>
 <td>2단계</td>
 </tr>
 <tr class="even">
 <td>4단계</td>
-<td>총점검 <span class="math inline">\(^{주2}\)</span></td>
+<td><strong>총점검</strong> <span class="math inline">\(^{주2}\)</span></td>
 <td>점검 매뉴얼에 의한 점검기능교육과 총 점검 실시에 의한 설비 미흡을 적출 및 복원한다.</td>
 <td>2단계</td>
 </tr>
 <tr class="odd">
 <td>5단계</td>
-<td>자주점검</td>
+<td><strong>자주점검</strong></td>
 <td>자주점검 체크 시트 작성, 실시로 오퍼레이션 신뢰성을 향상한다.</td>
 <td>3단계</td>
 </tr>
 <tr class="even">
 <td>6단계</td>
-<td>표준화</td>
+<td><strong>표준화</strong></td>
 <td>MTBF 분석 기록을 확실하게 해석하여 설비 개선을 꾀한다.</td>
 <td>3단계</td>
 </tr>
 <tr class="odd">
 <td>7단계</td>
-<td>자주관리 확립</td>
+<td><strong>자주관리 확립</strong></td>
 <td></td>
 <td>4단계</td>
 </tr>
@@ -1393,9 +1395,6 @@ window.Quarto = {
 </dd>
 </dl>
 </div>
-</section>
-<section id="sec-6-big-losses" class="level2">
-<h2 class="anchored" data-anchor-id="sec-6-big-losses">설비 6대 로스</h2>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 100-4-5, 106-3-2, 118-1-11">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1409,6 +1408,9 @@ window.Quarto = {
 
 </div>
 </div>
+</section>
+<section id="sec-6-big-losses" class="level2">
+<h2 class="anchored" data-anchor-id="sec-6-big-losses">설비 6대 로스</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/oee.png" class="img-fluid figure-img"></p>
@@ -1459,8 +1461,6 @@ window.Quarto = {
 </ul>
 </dd>
 </dl>
-<section id="장치산업-8대-로스" class="level3">
-<h3 class="anchored" data-anchor-id="장치산업-8대-로스">장치산업 8대 로스</h3>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 103-1-8">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1474,6 +1474,8 @@ window.Quarto = {
 
 </div>
 </div>
+<section id="장치산업-8대-로스" class="level3">
+<h3 class="anchored" data-anchor-id="장치산업-8대-로스">장치산업 8대 로스</h3>
 <p>장치산업 8대 로스는 다음과 같다.</p>
 <table class="caption-top table">
 <caption>로스(loss) 유형과 정의</caption>
@@ -1606,11 +1608,9 @@ MTBF = \frac{정상가동총시간}{고장횟수}
 <div class="callout-body-container callout-body">
 <p>설비 부품 A가 10시간 만에 파손되어 설비 고장이 발생하였고, 부품 A를 교체하는데 1시간 소요되었다. 교체된 부품 A가 다시 10시간 후 파손되었을 때 가용도를 계산하시오.</p>
 <p>설비 보전 지표는 다음과 같다.</p>
-<ul>
-<li>MTTR: 1</li>
-<li>MTTF: 10</li>
-<li>MTBF: 11 (10+1)</li>
-</ul>
+<pre><code>- MTTR: 1
+- MTTF: 10
+- MTBF: 11 (10+1)</code></pre>
 <p>따라서 가용도(<a href="#eq-availability" class="quarto-xref">수식&nbsp;<span>17.4</span></a>)는 다음과 같다.</p>
 <p><span class="math display">\[
 가용도 = \frac{MTTF}{MTBF} = 10/11 = 0.91
@@ -1618,17 +1618,6 @@ MTBF = \frac{정상가동총시간}{고장횟수}
 <p>해당 설비를 사용하는 작업장의 조업일수가 200일인 경우 200x0.09 = 18, 즉 18일은 비가동이라 볼 수 있다.</p>
 </div>
 </div>
-<div class="callout callout-style-default callout-note no-icon callout-titled" title="신뢰성과 보전성">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-신뢰성과 보전성
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<hr>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 127-1-10, 130-3-1">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1642,6 +1631,16 @@ MTBF = \frac{정상가동총시간}{고장횟수}
 
 </div>
 </div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="신뢰성과 보전성">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+신뢰성과 보전성
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p><strong>Reliability(신뢰성)</strong>와 <strong>Maintainability(유지보수성)</strong>은 시스템이나 장비가 운영되는 동안 발생할 수 있는 문제를 다루는 중요한 개념이다. 이 두 개념은 서로 관련이 있지만, 각각 다른 측면에서 시스템의 성능과 효율성을 평가한다.</p>
 <p><strong>Reliability (신뢰성)</strong>은 시스템이나 장비가 고장 없이 정해진 시간 동안 정상적으로 작동하는 능력을 의미한다. 즉, 신뢰성은 장비가 고장 없이, 의도된 기능을 수행할 수 있는 확률이나 시간의 개념이다.</p>
 <dl>
@@ -1766,10 +1765,6 @@ MTBF = \frac{정상가동총시간}{고장횟수}
 </dl>
 </div>
 </div>
-</section>
-</section>
-<section id="sec-bathtube" class="level2">
-<h2 class="anchored" data-anchor-id="sec-bathtube">욕조곡선</h2>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 97-4-3, 118-1-13, 121-4-1">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1783,6 +1778,10 @@ MTBF = \frac{정상가동총시간}{고장횟수}
 
 </div>
 </div>
+</section>
+</section>
+<section id="sec-bathtube" class="level2">
+<h2 class="anchored" data-anchor-id="sec-bathtube">욕조곡선</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://nrms.kisti.re.kr/bitextimages/TRKO201300024419/TRKO201300024419_129_image_89.jpg" class="img-fluid figure-img"></p>
@@ -1794,7 +1793,7 @@ MTBF = \frac{정상가동총시간}{고장횟수}
 <dt>DFR, decrease failure rate</dt>
 <dd>
 <ul>
-<li>초기고장, 감소형</li>
+<li><font color="#245bdb">초기고장, 감소형</font></li>
 <li>품질관리 미비로 발생할 수 있는 고장으로 작업시작 전 점검, 시운전 등으로 사전 예방이 가능한 고장</li>
 <li>debugging 기간, burn-in 기간을 통해 결함 탐지 및 안정화</li>
 </ul>
@@ -1802,7 +1801,7 @@ MTBF = \frac{정상가동총시간}{고장횟수}
 <dt>CFR, constant failure rate</dt>
 <dd>
 <ul>
-<li>우발고장, 일정형</li>
+<li><font color="#245bdb">우발고장, 일정형</font></li>
 <li>예측할 수 없는 경우 발생하는 고장으로 시운전이나 점검으로 예방이 불가</li>
 <li>낮은 안전계수, 사용자 과오 등</li>
 </ul>
@@ -1810,7 +1809,7 @@ MTBF = \frac{정상가동총시간}{고장횟수}
 <dt>IFR, increase failure rate</dt>
 <dd>
 <ul>
-<li>마모고장, 증가형</li>
+<li><font color="#245bdb">마모고장, 증가형</font></li>
 <li>정치 일부분이 수명을 다하여 발생하는 고장</li>
 <li>부식, 마모, 불충분한 정비 등</li>
 </ul>
@@ -1823,10 +1822,6 @@ MTBF = \frac{정상가동총시간}{고장횟수}
 평균고장률(\lambda) = \frac{r(총고장횟수)}{T(총동작시간)} = \frac{1}{MTBF}
 \tag{17.5}\]</span></span></p>
 <p>여기서 <strong><a href="#sec-mtbf" class="quarto-xref"><span>MTBF</span></a></strong>(Mean Time Between Failure)는 평균고장간격으로, 즉 수리할 수 있는 시스템 또는 설비에서 고장 발생 시점부터 다음 고장 발생 시점까지의 평균 시간이다.</p>
-</section>
-</section>
-<section id="sec-rams" class="level2">
-<h2 class="anchored" data-anchor-id="sec-rams">RAMS</h2>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 112-4-4">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1840,7 +1835,11 @@ MTBF = \frac{정상가동총시간}{고장횟수}
 
 </div>
 </div>
-<p><strong>RAMS</strong>(Reliability, Availability, Maintainability, Safety)는 제품 신뢰성과 안전성 평가를 위한 지표이다. 제품이나 시스템의 신뢰성, 가용성, 유지보수성 그리고 안전성을 평가한다.</p>
+</section>
+</section>
+<section id="sec-rams" class="level2">
+<h2 class="anchored" data-anchor-id="sec-rams">RAMS</h2>
+<p><strong>RAMS</strong>(Reliability, Availability, Maintainability, Safety)는 제품 신뢰성과 안전성 평가를 위한 지표이다. 제품이나 시스템의 <font color="#245bdb">신뢰성, 가용성, 유지보수성 그리고 안전성을 평가</font>한다.</p>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
@@ -1859,28 +1858,28 @@ RAMS --- 신뢰성 &amp; 가용성 &amp; 유지보수성 &amp; 안전성
 <dd>
 <ul>
 <li>제품이 일정 기간 동안 얼마나 정상적으로 동작하는지를 나타내는 지표</li>
-<li>고장없이 예상대로 동작하는 능력</li>
+<li><font color="#245bdb">고장없이</font> 예상대로 동작하는 능력</li>
 </ul>
 </dd>
 <dt>가용성(availability)</dt>
 <dd>
 <ul>
 <li>제품이나 시스템이 사용 가능한 상태에 있는 비율을 나타내는 지표</li>
-<li>장애로 인한 중단 시간을 최소화하여 시스템 가동 시간을 최대한 확보하는 것이 목표</li>
+<li>장애로 인한 중단 시간을 최소화하여 시스템 <font color="#245bdb">가동 시간을 최대한 확보</font>하는 것이 목표</li>
 </ul>
 </dd>
 <dt>유지보수성(maintainability)</dt>
 <dd>
 <ul>
 <li>제품이나 시스템이 고장 났을 때 빠르게 복구 또는 유지보수를 수행할 수 있는지를 나타내는 지표</li>
-<li>유지보수성이 높으면 고장 시간을 최소화하고 장애복구를 빠르게 수행 가능</li>
+<li>유지보수성이 높으면 <font color="#245bdb">고장 시간을 최소화</font>하고 장애복구를 빠르게 수행 가능</li>
 </ul>
 </dd>
 <dt>안전성(safety)</dt>
 <dd>
 <ul>
-<li>제품이나 시스템을 사용하는 중 사용ㅈ바나 환경에 어떠한 유해한 영향도 미치지 않는 능력</li>
-<li>제품 사용자와 주변 환경을 보호하는 중요한 역할</li>
+<li>제품이나 시스템을 사용하는 중 사용자자나 환경에 어떠한 유해한 영향도 미치지 않는 능력</li>
+<li>제품 사용자와 주변 환경을 <font color="#245bdb">보호</font>하는 중요한 역할</li>
 </ul>
 </dd>
 </dl>
@@ -1921,8 +1920,6 @@ RAMS --- 신뢰성 &amp; 가용성 &amp; 유지보수성 &amp; 안전성
 </section>
 <section id="설비-분석-도구" class="level2">
 <h2 class="anchored" data-anchor-id="설비-분석-도구">설비 분석 도구</h2>
-<section id="sec-pm-analysis" class="level3">
-<h3 class="anchored" data-anchor-id="sec-pm-analysis">PM 분석</h3>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 103-4-6">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1936,6 +1933,8 @@ RAMS --- 신뢰성 &amp; 가용성 &amp; 유지보수성 &amp; 안전성
 
 </div>
 </div>
+<section id="sec-pm-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="sec-pm-analysis">PM 분석</h3>
 <p><strong>PM</strong>(phenomena mechanism) 분석은 <font color="blue">설비 정지시간 감소나 불량 감소를 위하여 원인 분석 도구</font>로 사용된다. 만성 불량 등 고질적인 문제에 대하여 물리적인 해해석을 통해 문제를 개선하는 기법이다. 분석 핵심은 불량이나 문제 발생 성립 조건을 찾는데 있으며 장기간 <font color="red">고도로 훈련된 사람만이 이를 구사할 수 있다는 단점</font>이 있다.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2029,9 +2028,12 @@ RAMS --- 신뢰성 &amp; 가용성 &amp; 유지보수성 &amp; 안전성
 </ul>
 </dd>
 </dl>
-
-
 </section>
+</section>
+<section id="sec-ref-0602" class="level2">
+<h2 class="anchored" data-anchor-id="sec-ref-0602">참고자료</h2>
+
+
 </section>
 
 </main> <!-- /main -->
