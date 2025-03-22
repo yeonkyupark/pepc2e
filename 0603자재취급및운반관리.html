@@ -6,7 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="keywords" content="공장관리기술사, 생산운영, 재고, 물류, 공정, 설비, 작업, 생산성, 원가, OR">
+<meta name="keywords" content="자재취급, 운반관리, 활성지수, 운반개선, 전용용기">
+<meta name="description" content="자재취급 및 운반관리에 대해 이해한다.">
 
 <title>자재취급 및 운반관리 – 생산운영과 공장관리(2E)</title>
 <style>
@@ -453,9 +454,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">목차</h2>
    
   <ul>
-  <li><a href="#활성지수" id="toc-활성지수" class="nav-link active" data-scroll-target="#활성지수">활성지수</a></li>
+  <li><a href="#sec-activity-index" id="toc-sec-activity-index" class="nav-link active" data-scroll-target="#sec-activity-index">활성지수</a></li>
   <li><a href="#운반개선-5가지-원칙" id="toc-운반개선-5가지-원칙" class="nav-link" data-scroll-target="#운반개선-5가지-원칙">운반개선 5가지 원칙</a></li>
   <li><a href="#전용-용기-설계" id="toc-전용-용기-설계" class="nav-link" data-scroll-target="#전용-용기-설계">전용 용기 설계</a></li>
+  <li><a href="#sec-ref-0603" id="toc-sec-ref-0603" class="nav-link" data-scroll-target="#sec-ref-0603">참고자료</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/yeonkyupark/pepc2e/edit/main/0603자재취급및운반관리.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
     </div>
@@ -480,15 +482,13 @@ ul.task-list li input[type="checkbox"] {
 <div>
   <div class="keywords">
     <div class="block-title">Keywords</div>
-    <p>공장관리기술사, 생산운영, 재고, 물류, 공정, 설비, 작업, 생산성, 원가, OR</p>
+    <p>자재취급, 운반관리, 활성지수, 운반개선, 전용용기</p>
   </div>
 </div>
 
 </header>
 
 
-<section id="활성지수" class="level2">
-<h2 class="anchored" data-anchor-id="활성지수">활성지수</h2>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 103-1-3, 127-4-1">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -502,13 +502,15 @@ ul.task-list li input[type="checkbox"] {
 
 </div>
 </div>
+<section id="sec-activity-index" class="level2">
+<h2 class="anchored" data-anchor-id="sec-activity-index">활성지수</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/activity_index.png" class="img-fluid figure-img"></p>
 <figcaption>활성지수 분석 기호</figcaption>
 </figure>
 </div>
-<p><strong>활성지수</strong>는 물류 관리에서 <font color="blue">물건이 놓여 있는 상태로부터 이동에 들어가기까지의 수고의 정도를 나타내는 지수</font>로, 일반적으로 0에서 4까지의 척도로 측정된다. 이 지수는 물건의 운반 효율성을 평가하는 데 사용되며, 활성지수가 높을수록 하역 작업의 효율이 높아진진다</p>
+<p><strong>활성지수</strong>는 물류 관리에서 <font color="blue">물건이 놓여 있는 상태로부터 이동에 들어가기까지의 수고의 정도를 나타내는 지수</font>로, 일반적으로 0에서 4까지의 척도로 측정된다. 이 지수는 물건의 운반 효율성을 평가하는 데 사용되며, 활성지수가 높을수록 하역 작업의 효율이 높아진다</p>
 <dl>
 <dt>활성지수 0</dt>
 <dd>
@@ -542,7 +544,7 @@ ul.task-list li input[type="checkbox"] {
 </dd>
 <dt>활성지수 활용</dt>
 <dd>
-활성지수는 물류 활동의 효율성을 평가하고 개선하는 데 사용된다. 예를 들어, 물건이 컨베이어 위에 있는 경우(활성지수 4)에는 이동에 거의 노력이 필요하지 않기 때문에, 이러한 상태가 많을수록 물류센터의 운영이 효율적이라고 할 수 있다. 반대로, 물건이 마루에 그냥 놓여 있는 경우(활성지수 0)에는 많은 노력이 필요하기 때문에, 이러한 상태를 최소화하는 것이 중요하다
+활성지수는 <font color="#245bdb">물류 활동의 효율성을 평가하고 개선하는 데 사용</font>된다. 예를 들어, 물건이 컨베이어 위에 있는 경우(활성지수 4)에는 이동에 거의 노력이 필요하지 않기 때문에, 이러한 상태가 많을수록 물류센터의 운영이 효율적이라고 할 수 있다. 반대로, 물건이 마루에 그냥 놓여 있는 경우(활성지수 0)에는 많은 노력이 필요하기 때문에, 이러한 상태를 최소화하는 것이 중요하다
 </dd>
 <dt>자재 취급 시스템과의 연관성</dt>
 <dd>
@@ -566,9 +568,6 @@ ul.task-list li input[type="checkbox"] {
 이는 기계화나 자동화를 통해 인력의 피로를 줄이고, 안전성을 높이는 데 목표를 두고 있다.</p></li>
 </ol>
 <p>이러한 원칙들은 운반 작업의 효율성과 안전성을 동시에 높이는 데 중요한 역할을 한다.</p>
-</section>
-<section id="전용-용기-설계" class="level2">
-<h2 class="anchored" data-anchor-id="전용-용기-설계">전용 용기 설계</h2>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 115-1-12">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -582,6 +581,9 @@ ul.task-list li input[type="checkbox"] {
 
 </div>
 </div>
+</section>
+<section id="전용-용기-설계" class="level2">
+<h2 class="anchored" data-anchor-id="전용-용기-설계">전용 용기 설계</h2>
 <p>자재 출고에 필요한 전용 용기 설계 시 고려해야 할 원칙은 <strong>효율적인 물류</strong>와 <strong>안전한 운반</strong>을 위해 중요하다. 전용 용기는 자재의 보호와 최적화된 운송을 도와야 하므로, 설계 시 여러 가지 요소를 신중히 고려해야 한다.</p>
 <dl>
 <dt>자재 출고 전용 용기 설계 시 고려해야 할 원칙</dt>
@@ -631,6 +633,9 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 <p>전용 용기는 효율적인 물류와 안전한 운반에 도움을 준다. 설계 시 개발 비용이 상승할 수 있고 다용도성을 고려해야 하는 한계도 있다.</p>
+</section>
+<section id="sec-ref-0603" class="level2">
+<h2 class="anchored" data-anchor-id="sec-ref-0603">참고자료</h2>
 
 
 </section>
