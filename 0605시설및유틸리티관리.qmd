@@ -1,5 +1,10 @@
 ---
 title: "시설 및 유틸리티 관리"
 format: html
+description: 생산운영에 있어 시설 및 유틸리티 관리에 대해 이해한다.
+keywords: ["시설", "유틸리티"]
 ---
+
+## 참고자료 {#sec-ref-0605}
+
 
