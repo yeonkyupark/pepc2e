@@ -222,7 +222,7 @@ Less Engineering은 <font color="blue">"적을수록 더 좋다(Less is More)"</
 :::{.callout-tip icon=false title="기출: 130-1-12"}
 :::
 
-::: {.callout-note title="개선 4원칙(ECRS)" icon="false"}
+::: {#nte-ecrs .callout-note icon="false" title="개선 4원칙(ECRS)"}
 
 1. **제거 (Eliminate)**
    :   
