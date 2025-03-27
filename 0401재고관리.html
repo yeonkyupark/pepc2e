@@ -503,7 +503,7 @@ window.Quarto = {
   <li><a href="#확률적-재고관리-모형" id="toc-확률적-재고관리-모형" class="nav-link" data-scroll-target="#확률적-재고관리-모형">확률적 재고관리 모형</a></li>
   <li><a href="#기타-재고관리-모형" id="toc-기타-재고관리-모형" class="nav-link" data-scroll-target="#기타-재고관리-모형">기타 재고관리 모형</a>
   <ul class="collapse">
-  <li><a href="#abc-모형" id="toc-abc-모형" class="nav-link" data-scroll-target="#abc-모형">ABC 모형</a></li>
+  <li><a href="#sec-abc" id="toc-sec-abc" class="nav-link" data-scroll-target="#sec-abc">ABC 모형</a></li>
   <li><a href="#sec-two-bin" id="toc-sec-two-bin" class="nav-link" data-scroll-target="#sec-two-bin">투빈(Two Bin) 시스템</a></li>
   <li><a href="#정량발주방식과-정기발주방식" id="toc-정량발주방식과-정기발주방식" class="nav-link" data-scroll-target="#정량발주방식과-정기발주방식">정량발주방식과 정기발주방식</a></li>
   <li><a href="#min-max-시스템" id="toc-min-max-시스템" class="nav-link" data-scroll-target="#min-max-시스템">min-Max 시스템</a></li>
@@ -1037,8 +1037,8 @@ end
 
 </div>
 </div>
-<section id="경제적-주문량-모형eoq" class="level5">
-<h5 class="anchored" data-anchor-id="경제적-주문량-모형eoq">경제적 주문량 모형(EOQ)</h5>
+<section id="sec-eoq" class="level5">
+<h5 class="anchored" data-anchor-id="sec-eoq">경제적 주문량 모형(EOQ)</h5>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://ars.els-cdn.com/content/image/1-s2.0-S0307904X09002777-gr1.jpg" class="img-fluid figure-img"></p>
@@ -1199,8 +1199,8 @@ EOQ 항목 계산
 </div>
 </div>
 </section>
-<section id="경제적-생산량-모형epq" class="level5">
-<h5 class="anchored" data-anchor-id="경제적-생산량-모형epq">경제적 생산량 모형(EPQ)</h5>
+<section id="sec-epq" class="level5">
+<h5 class="anchored" data-anchor-id="sec-epq">경제적 생산량 모형(EPQ)</h5>
 <p><strong>경제적 생산량</strong>(EPQ, economic production quantity) 모형이란 <font color="#245bdb">생산이 진행되는 동안 생산된 제품이 재고에 더해짐과 동시에 소비가 일어나서 재고가 감소하는 경우</font> 최적 <font color="blue">1회 생산량을 결정</font>하는 모형이다. 자체 생산, 조달하는 물품의 총 재고비용이 최소가 되는 1회당 경제적 생산량으로 기본 EOQ와 유사하지만 <font color="blue">주문비용 대신 작업 준비 비용을 대체</font>하여 사용하다는 점이 다르다.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1211,9 +1211,9 @@ EOQ 항목 계산
 <dl>
 <dt>EPQ 모델 가정</dt>
 <dd>
-<font color="#245bdb"> - 생산이 시작되고 뒤이어 수요가 이루어지며 수요량은 생산량보다 작다. - 생산은 일정 기간 동안 점진적으로 쌓이고 어느 정도 재고 수준에 이르면 생산을 중단한다. - 생산이 중단되면 쌓였던 재고량은 일정량씩 소요되어 바닥 난다. - 재고가모두 없어지면 즉시 생산 작업이 되풀이 된다. - 재고 유지비는 생산량 크기에 정비례하여 발생한다. - 생산단가는 생산량 크리와 관계없이 일정하다.
-</font></dd><font color="#245bdb">
-</font></dl><font color="#245bdb">
+<font color="#245bdb"> - 생산이 시작되고 뒤이어 수요가 이루어지며 수요량은 생산량보다 작다. - 생산은 일정 기간 동안 점진적으로 쌓이고 어느 정도 재고 수준에 이르면 생산을 중단한다. - 생산이 중단되면 쌓였던 재고량은 일정량씩 소요되어 바닥 난다. - 재고가모두 없어지면 즉시 생산 작업이 되풀이 된다. - 재고 유지비는 생산량 크기에 정비례하여 발생한다. - 생산단가는 생산량 크리와 관계없이 일정하다. </font>
+</dd>
+</dl>
 <table class="caption-top table">
 <caption>EPQ 모델 계산식</caption>
 <colgroup>
@@ -1253,8 +1253,8 @@ EOQ 항목 계산
 </tr>
 </tbody>
 </table>
-</font></section><font color="#245bdb">
-</font></section><font color="#245bdb">
+</section>
+</section>
 <section id="확률적-재고관리-모형" class="level3">
 <h3 class="anchored" data-anchor-id="확률적-재고관리-모형">확률적 재고관리 모형</h3>
 <p><strong>확정적 재고관리 모형</strong>과 <strong>확률적 재고관리 모형</strong>은 재고 관리를 위한 두 가지 주요 접근 방식이다. 이 두 모형은 재고 수준을 관리하고 최적화하는 데 필요한 수요 예측 방식에서 차이가 있다.</p>
@@ -1394,8 +1394,8 @@ EOQ 항목 계산
 
 </div>
 </div>
-<section id="abc-모형" class="level4">
-<h4 class="anchored" data-anchor-id="abc-모형">ABC 모형</h4>
+<section id="sec-abc" class="level4">
+<h4 class="anchored" data-anchor-id="sec-abc">ABC 모형</h4>
 <p><strong>ABC 재고관리 방식</strong>은 다수 경미한 품목보다는 <font color="blue">소수 중요품목을 중심으로 재고를 관리하는 방식</font>이다. <font color="blue">중요도 구분은 <strong>파레토 분석</strong>에 따른다</font>. 재고품목 중요도는 품목 연간 사용액을 기준으로 결정된다. 연간 사용액은 품목 단가에 연간 사용수량을 곱하여 계산한다. 연간 사용액 크기에 따라 A, B, C 세 등급으로 분류하지만, <font color="blue">부패하기 쉬운 품목이나 리드타임이 긴 품목등도 A 품목으로 지정할 수 있다</font>. ABC 품목 구성비는 회사 상황에 따라 차이가 있으며 대체로 다음과 같은 범위 내에서 이루어진다.</p>
 <table class="caption-top table">
 <caption>ABC 모형 예시</caption>
@@ -1744,7 +1744,7 @@ EOQ 항목 계산
 </div>
 </section>
 </section>
-</font></section><font color="#245bdb">
+</section>
 <section id="sec-inventory-cost-kpi" class="level2">
 <h2 class="anchored" data-anchor-id="sec-inventory-cost-kpi">재고 비용 및 재고 성과 척도</h2>
 <div class="cell" data-layout-align="default">
@@ -2674,7 +2674,7 @@ POS 데이터를 기반으로 상품 재고를 자동 조정하여 부족 시 �
 </section>
 </section>
 
-</font></main><font color="#245bdb"> <!-- /main -->
+</main> <!-- /main -->
 <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8759553852956796" crossorigin="anonymous"></script>
 <!-- display-horizontal -->
 <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8759553852956796" data-ad-slot="1446193043" data-ad-format="auto" data-full-width-responsive="true"></ins>
@@ -3110,7 +3110,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>
   </div>
 </nav>
-</font></div><font color="#245bdb"> <!-- /content -->
+</div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
@@ -3128,4 +3128,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-</font></body></html>
+</body></html>
