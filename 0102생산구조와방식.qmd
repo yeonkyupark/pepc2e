@@ -1,6 +1,8 @@
 ---
 title: "생산구조와 방식(Layout)"
 format: html
+description: 생산운영과 공장관리에 있어 생산구조와 방식에 대해 알아본다.
+keywords: 설비배치, 제품별 배치, 공정별 배치, 위치고정형 배치, 셀 배치, 프로젝트형 배치, CMS
 ---
 
 :::{.callout-tip icon=false title="기출: 97-2-1, 106-2-4, 109-4-3, 112-3-6, 121-3-3"}
