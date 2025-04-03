@@ -539,7 +539,7 @@ end
 
 subgraph 0[" "]
 분석기법 --- 공정별 &amp; 제품별 &amp; 셀별
-공정별 --- 도시해법 &amp; SLP &amp; 51[Computer 활용]
+공정별 --- 도시해법 &amp; SLP &amp; 51[전산배치 기법]
 제품별 --- 52["라인 발란싱"]
 end
 
@@ -659,7 +659,7 @@ style 0 fill:#fee
 <caption>공정별 배치 장단점</caption>
 <colgroup>
 <col style="width: 50%">
-<col style="width: 49%">
+<col style="width: 50%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -669,20 +669,24 @@ style 0 fill:#fee
 </thead>
 <tbody>
 <tr class="odd">
-<td><ul>
-<li><p>변화에 대한 <strong>유연성</strong>이 크다</p></li>
-<li><p><strong>범용설비</strong> 투자 및 배치에 비용이 적게 든다.</p></li>
-<li><p>기계고장, 작업자 결근 등에도 생산량 유지가 용이하다.</p></li>
-<li><p><strong>소량생산</strong> 시 유리하다.</p></li>
-<li><p><strong>직무만족</strong>을 증진시킨다.</p></li>
-</ul></td>
-<td><ul>
-<li><p>대량생산 시 불리하다.</p></li>
-<li><p>운반능률이 떨어진다.</p></li>
-<li><p>재고나 재공품의 투자액과 저장면적이 많이 소요된다.</p></li>
-<li><p>설비와 작업자 이용률이 낮다.</p></li>
-<li><p>주문별로 일정계획이 달라 관리가 어렵다.</p></li>
-</ul></td>
+<td>변화에 대한 <strong>유연성</strong>이 크다</td>
+<td>대량생산 시 불리하다.</td>
+</tr>
+<tr class="even">
+<td><strong>범용설비</strong> 투자 및 배치에 비용이 적게 든다.</td>
+<td>운반능률이 떨어진다.</td>
+</tr>
+<tr class="odd">
+<td>기계고장, 작업자 결근 등에도 생산량 유지가 용이하다.</td>
+<td>재고나 재공품의 투자액과 저장면적이 많이 소요된다.</td>
+</tr>
+<tr class="even">
+<td><strong>소량생산</strong> 시 유리하다.</td>
+<td>설비와 작업자 이용률이 낮다.</td>
+</tr>
+<tr class="odd">
+<td><strong>직무만족</strong>을 증진시킨다.</td>
+<td>주문별로 일정계획이 달라 관리가 어렵다.</td>
 </tr>
 </tbody>
 </table>
@@ -891,7 +895,7 @@ style 0 fill:#fee
 </section>
 <section id="sec-cms" class="level4">
 <h4 class="anchored" data-anchor-id="sec-cms">CMS</h4>
-<p><strong>CMS(Cellular Manufacturing System)</strong>는 셀 제조 방식으로, 생산 공정에서 여러 작업을 하나의 작은 생산 단위인 ’셀’로 구성하여 각 셀에서 다양한 작업을 독립적으로 처리하는 방식을 의미한다. CMS는 생산 효율성 향상과 품질 개선을 목표로 하는 방식으로, 기존의 <strong>배치 생산 방식</strong>이나 <strong>작업 분담 방식을 개선하기 위해 등장했다</strong>.</p>
+<p><strong>CMS(Cellular Manufacturing System)</strong>는 셀 제조 방식으로, <font color="blue">생산 공정에서 여러 작업을 하나의 작은 생산 단위인 ’셀’로 구성하여 각 셀에서 다양한 작업을 독립적으로 처리하는 방식</font>을 의미한다. CMS는 생산 효율성 향상과 품질 개선을 목표로 하는 방식으로, 기존의 <strong>배치 생산 방식</strong>이나 <strong>작업 분담 방식을 개선하기 위해 등장했다</strong>.</p>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
@@ -984,20 +988,20 @@ style 0 fill:#fee
 </thead>
 <tbody>
 <tr class="odd">
-<td>공정 간 이동 거리 단축으로 리드 타임 감소</td>
+<td><font color="blue">공정 간 이동 거리 단축으로 리드 타임 감소</font></td>
 <td>셀 구성 및 초기 설계에 많은 시간과 비용 필요</td>
 </tr>
 <tr class="even">
 <td>재공품(WIP) 감소로 재고 비용 절감</td>
-<td>작업 부하 불균형 발생 가능성</td>
+<td><font color="red">작업 부하 불균형 발생 가능성</font></td>
 </tr>
 <tr class="odd">
 <td>품질 개선 및 불량률 감소(작업자 책임 의식 증가)</td>
 <td>다기능 작업자 교육 필요</td>
 </tr>
 <tr class="even">
-<td>작업자 간 협업 촉진으로 유연한 생산 가능</td>
-<td>특정 제품군에 최적화되어 다양한 제품 생산 시 비효율 발생</td>
+<td><font color="blue">작업자 간 협업 촉진으로 유연한 생산 가능</font></td>
+<td><font color="red">특정 제품군에 최적화되어 다양한 제품 생산 시 비효율 발생</font></td>
 </tr>
 <tr class="odd">
 <td>생산 변화 대응이 용이하여 고객 주문에 유연한 대응 가능</td>
@@ -1336,9 +1340,9 @@ style SLP fill:#eef
 <h4 class="anchored" data-anchor-id="sec-slp">SLP</h4>
 <p><strong>SLP</strong>(체계적 설비 배치, Systematic Layout Planning)는 설비 배치 시 효율적인 질적요인을 분석하기 위해 머더(Richard Muther)가 소개한 기법이다.</p>
 <ul>
-<li>물자 흐름 및 상호 관계 검토 후 활동 내용 작성</li>
-<li>필요한 면적에 따른 이용 가능 면적 작성</li>
-<li>제약조건과 시설 등 설비 공간을 고려하여 최종 배치안 작성</li>
+<li><font color="blue">물자 흐름 및 상호 관계 검토</font> 후 활동 내용 작성</li>
+<li><font color="blue">필요한 면적</font>에 따른 이용 가능 면적 작성</li>
+<li><font color="blue">제약조건</font>과 시설 등 설비 공간을 고려하여 최종 배치안 작성</li>
 </ul>
 <p><font color="blue">부서 간 관계 밀접도와 같은 질적 기준을 사용하여 설비를 배치</font>하는 기법이다.</p>
 <dl>
