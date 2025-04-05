@@ -1,6 +1,8 @@
 ---
 title: "공급망 관리"
 format: html
+description: 생산운영 및 공장관리에 있어 공급망 관리를 알아 본다.
+keywords: 공급망, SCM, SQCM, OMS, Push system, Pull system, 수직적 통합, 신속대응
 ---
 
 :::{.callout-tip icon=false title="기출: 118-2-1"}
