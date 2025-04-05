@@ -6,7 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="keywords" content="공장관리기술사, 생산운영, 재고, 물류, 공정, 설비, 작업, 생산성, 원가, OR">
+<meta name="keywords" content="수요예측, 시계열, 지수평활법, 회귀분석, 델파이법, 경영자 판단법, 예측오차, 추적지표">
+<meta name="description" content="생산운영과 공장관리에 있어 수요예측에 대해 알아 본다.">
 
 <title>수요예측 – 생산운영과 공장관리(2E)</title>
 <style>
@@ -545,7 +546,7 @@ window.Quarto = {
 <div>
   <div class="keywords">
     <div class="block-title">Keywords</div>
-    <p>공장관리기술사, 생산운영, 재고, 물류, 공정, 설비, 작업, 생산성, 원가, OR</p>
+    <p>수요예측, 시계열, 지수평활법, 회귀분석, 델파이법, 경영자 판단법, 예측오차, 추적지표</p>
   </div>
 </div>
 
@@ -599,7 +600,7 @@ subgraph s2["   "]
 21 --- 214("Box-Jenkins")
 21 --- 215("추세 분석법")
 22 --- 221("회귀분석")
-22 --- 222("계량경제모")
+22 --- 222("계량경제모델")
 22 --- 223("투입-산출 모형")
 22 --- 224("시뮬레이션 모형")
 22 --- 225("선도지표법")
@@ -1135,7 +1136,7 @@ F_t = F_{t-1} + \alpha (A_{t-1} - F_{t-1}) = \alpha A_{t-1} + (1-\alpha)F_{t-1}
 <dt>평균절대편차(MAD, Mean Absolute Deviation)</dt>
 <dd>
 <span id="eq-mad"><span class="math display">\[
-MAD = \frac{\sum_{t=1}^{n}(A_t - F_t)}{n}
+MAD = \frac{\sum_{t=1}^{n}|A_t - F_t|}{n}
 \tag{6.5}\]</span></span>
 </dd>
 <dt>누적예측오차(RSFE, running sum of forcasting errors / CFE, cumulative sum of forecast errors)</dt>
@@ -1720,12 +1721,12 @@ MAD = \frac{\sum_{t=1}^{n}(A_t - F_t)}{n}
 <h3 class="anchored" data-anchor-id="신속대응">신속대응</h3>
 <p><strong>신속대응</strong>(QR, quick response, <a href="0301공급망관리.html#sec-qr" class="quarto-xref"><span>신속대응</span></a>) 시스템은 <font color="blue">제품 제조에서 소비자에게 전달되기까지 제조 전 과정을 단축시키고 소비자 요구 및 수요에 적합한 제품을 공급함으로써 제품 공급 사슬(SCM) 효율성을 극대화</font>하는 시스템으로 시장수요에 신속하게 대응하여 기업 경쟁력을 향상시키는 것을 말한다.</p>
 <p>QR 목표는 <font color="#245bdb">공급체인 길이를 단축시키고 물류 속도를 높임</font>으로써 달성할 수 있다. 주문접수에서 납품까지 시간을 분석한 결과 가치생산활동에 사용되는 시간은 총 사이클 타임 중 10~20%에 불과하고 나머지 80~90% 시간은 비용만 발생시키는 것으로 조사되었다.</p>
-<p>QR은 <font color="#245bdb">재고가 쌓이고 반응시간이 길어지는 요인을 제거</font>하는 것으로 공급체인상 존재하는 긴 준비사간과 교체시간, 병목현상, 과다 재고, 비효율적인 작업 등을 찾아내어 효율적으로 제어하는 것이다.</p>
+<p>QR은 <font color="#245bdb">재고가 쌓이고 반응시간이 길어지는 요인을 제거</font>하는 것으로 공급체인상 존재하는 긴 준비시간과 교체시간, 병목현상, 과다 재고, 비효율적인 작업 등을 찾아내어 효율적으로 제어하는 것이다.</p>
 <dl>
 <dt>QR 목적</dt>
 <dd>
 <ul>
-<li>생산, 유통 관련 거래당사자가 상호 협력하여 소비자에게 정확한 장소와 시기에 정확한 상품을 정확핝 양과 적정한 가격으로 제공</li>
+<li>생산, 유통 관련 거래 당사자가 상호 협력하여 소비자에게 정확한 장소와 시기에 정확한 상품을 정확한 양과 적정한 가격으로 제공</li>
 </ul>
 </dd>
 <dt>QR 시스템 효과</dt>
@@ -2092,6 +2093,7 @@ MAD = \frac{\sum_{t=1}^{n}(A_t - F_t)}{n}
 </ul>
 </dd>
 </dl>
+<p><strong>각주</strong></p>
 
 
 </section>
