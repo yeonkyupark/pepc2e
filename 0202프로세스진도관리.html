@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="keywords" content="공장관리기술사, 생산운영, 재고, 물류, 공정, 설비, 작업, 생산성, 원가, OR">
+<meta name="keywords" content="진도관리, 네트워크 기법, 주경로, AOA, AON, PERT, CPM, CCM">
 
 <title>프로세스 진도관리 – 생산운영과 공장관리(2E)</title>
 <style>
@@ -507,7 +507,7 @@ window.Quarto = {
   </ul></li>
   <li><a href="#cpm-vs.-ccm" id="toc-cpm-vs.-ccm" class="nav-link" data-scroll-target="#cpm-vs.-ccm">CPM vs.&nbsp;CCM</a></li>
   </ul></li>
-  <li><a href="#sec-ref-0202" id="toc-sec-ref-0202" class="nav-link" data-scroll-target="#sec-ref-0202">참고사항</a>
+  <li><a href="#sec-ref-0202" id="toc-sec-ref-0202" class="nav-link" data-scroll-target="#sec-ref-0202">참고자료</a>
   <ul>
   <li><a href="#프로젝트와-프로세스-차이" id="toc-프로젝트와-프로세스-차이" class="nav-link" data-scroll-target="#프로젝트와-프로세스-차이">프로젝트와 프로세스 차이</a></li>
   </ul></li>
@@ -535,7 +535,7 @@ window.Quarto = {
 <div>
   <div class="keywords">
     <div class="block-title">Keywords</div>
-    <p>공장관리기술사, 생산운영, 재고, 물류, 공정, 설비, 작업, 생산성, 원가, OR</p>
+    <p>진도관리, 네트워크 기법, 주경로, AOA, AON, PERT, CPM, CCM</p>
   </div>
 </div>
 
@@ -626,7 +626,7 @@ window.Quarto = {
 </dd>
 </dl></li>
 <li><dl>
-<dt><strong>ERP(Enterprise Resource Planning) 시스템</strong></dt>
+<dt><a href="1101정보화활용기술.html#sec-erp" class="quarto-xref"><span>ERP</span></a> 시스템</dt>
 <dd>
 기업 내 모든 자원을 통합적으로 관리하여 실시간으로 공정 진행을 모니터링한다.
 </dd>
@@ -851,7 +851,7 @@ window.Quarto = {
 <dt>AOA 작성 시 원칙</dt>
 <dd>
 <ul>
-<li>마디 사이는 오직 화살표 한나만 연결</li>
+<li>마디 사이는 오직 화살표 하나만 연결</li>
 <li>공정 순서는 화살표 방향, 화살표 길이는 소요시간과 무관</li>
 <li>편의상 마디에 번호를 부여하되 중복 표시하지 않음</li>
 <li>첫마디 하나에서 시작하여 끝마디 하나에서 완료</li>
@@ -978,15 +978,15 @@ window.Quarto = {
 3--"D&lt;br&gt;4"--&gt;4((4))
 0[시작]--"B&lt;br&gt;7"--&gt; 2((2))
 3 =="E&lt;br&gt;11"==&gt; 5((5))
-3 -.-&gt; 6
+3 -.-&gt; 2
 2 --"F&lt;br&gt;4"--&gt;6((6))
 4 --"G&lt;br&gt;5"--&gt; 7((7))
 5 --"H&lt;br&gt;2" --&gt; 8((8))
-6 -.-&gt; 8
-7 -.-&gt; 9
+6 -.-&gt; 5
+7 -.-&gt; 5
 5 =="I&lt;br&gt;4"==&gt; 9((9))
 9 =="J&lt;br&gt;2"==&gt;10(완료)
-8 -.-&gt; 10
+8 -.-&gt; 9
 </pre>
 </div>
 <p></p></figure><p></p>
@@ -1136,7 +1136,7 @@ window.Quarto = {
 <td>7</td>
 <td>9</td>
 <td>7</td>
-<td>0.11</td>
+<td>0.44</td>
 </tr>
 <tr class="odd">
 <td>3</td>
@@ -1168,7 +1168,7 @@ window.Quarto = {
 </tbody>
 </table>
 <p><span class="math display">\[
-기대분산(t_e) = \frac{a + 4m + b}{6},  \quad 분산(\sigma^2) = (\frac{b-a}{6})^2
+기대시간(t_e) = \frac{a + 4m + b}{6},  \quad 분산(\sigma^2) = (\frac{b-a}{6})^2
 \]</span></p>
 <p>단순열거법으로 주경로를 찾게되면 1 - 2 - 3 - 5 - 6이고 기대완료 시간은 24(4+5+6+9)일이다.</p>
 <p>프로젝트를 24일만에 끝낼 확률을 구하기 위해서는 정규분포 z 값을 계산한다.</p>
@@ -1235,7 +1235,7 @@ z = \frac{TS-TE}{\sqrt{(\sum{(\sigma^2)}}} = \frac{24-24}{\sqrt{\sum{(0.11+0.11+
 </tr>
 <tr class="even">
 <td>H</td>
-<td>F</td>
+<td>F,G</td>
 <td>0.6</td>
 </tr>
 <tr class="odd">
@@ -2225,7 +2225,7 @@ Note&nbsp;7.1 PERT/COST
 </section>
 </section>
 <section id="sec-ref-0202" class="level2">
-<h2 class="anchored" data-anchor-id="sec-ref-0202">참고사항</h2>
+<h2 class="anchored" data-anchor-id="sec-ref-0202">참고자료</h2>
 <section id="프로젝트와-프로세스-차이" class="level3">
 <h3 class="anchored" data-anchor-id="프로젝트와-프로세스-차이">프로젝트와 프로세스 차이</h3>
 <table class="caption-top table">
@@ -2295,6 +2295,8 @@ Note&nbsp;7.1 PERT/COST
 </tr>
 </tbody>
 </table>
+<hr>
+<p>** 각주**</p>
 
 
 </section>
