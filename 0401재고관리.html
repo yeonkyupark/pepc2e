@@ -740,11 +740,11 @@ style 재고관리 fill:#EEF
 <li>연간 주문횟수를 줄여서 비용을 절감하려면 <font color="blue">일회 주문량이 늘어나는데, 이로 인해 발생하는 재고</font></li>
 <li>주문을 얼마나 자주 하고 한 번에 얼마나 할 것인가를 결정하는 것을 크기 결정이라 함</li>
 <li>외주 또는 생산 로트 사이즈(발주량 Q)를 줄이면 주기재고를 줄일 수 있다. 로트사이즈를 소형화하면 그에 반비례하여 발주(작업준비) 횟수가 많아지므로 발주비(작업준비비)가 증대함</li>
-<li><font color="blue">소로트화<font>를 위해서는 먼저 발주(작업준비) 과정을 개선하여 발주와 작업준비에 소비되는 시간과 비용을 최소화해야 함</font></font></li><font color="blue"><font>
-</font></font></ul><font color="blue"><font>
-</font></font></dd><font color="blue"><font>
-</font></font></dl><font color="blue"><font>
-</font></font></section><font color="blue"><font>
+<li><font color="blue">소로트화</font>를 위해서는 먼저 발주(작업준비) 과정을 개선하여 발주와 작업준비에 소비되는 시간과 비용을 최소화해야 함</li>
+</ul>
+</dd>
+</dl>
+</section>
 <section id="sec-inventory-cost" class="level3">
 <h3 class="anchored" data-anchor-id="sec-inventory-cost">재고 비용</h3>
 <div class="cell" data-layout-align="default">
@@ -873,7 +873,7 @@ style 재고관리 fill:#EEF
 </div>
 </div>
 </section>
-</font></font></section><font color="blue"><font>
+</section>
 <section id="재고관리-모형" class="level2">
 <h2 class="anchored" data-anchor-id="재고관리-모형">재고관리 모형</h2>
 <p>재고관리 모형은 수용 특성에 따라 <strong>확정적 재고관리 모형</strong>과 <strong>확률적 재고관리 모형</strong>으로 나눌 수 있다. 또한 특수한 경우 사용할 수 있는 <strong>단일기간 재고관리 모형</strong>이나 <strong>ABC 재고관리 모형</strong>도 있다.</p>
@@ -1263,47 +1263,8 @@ EOQ 항목 계산
 </section>
 <section id="확률적-재고관리-모형" class="level3">
 <h3 class="anchored" data-anchor-id="확률적-재고관리-모형">확률적 재고관리 모형</h3>
-<p><strong>확정적 재고관리 모형</strong>과 <strong>확률적 재고관리 모형</strong>은 재고 관리를 위한 두 가지 주요 접근 방식이다. 이 두 모형은 재고 수준을 관리하고 최적화하는 데 필요한 수요 예측 방식에서 차이가 있다.</p>
+<p>확률적 재고 모형 (Stochastic Inventory Model)은 <font color="blue">수요와 리드 타임이 불확실하고 변동성이 있는 경우</font>에 사용하는 모형으로 수요가 일정하지 않고, 예측할 수 없는 변동성을 포함하고 있기 때문에 확률적인 요소가 포함된다. 결품 위험을 줄이기 위해 안전재고(Safety Stock)를 설정하고 서비스 수준(결품 허용 확률)에 따라 재고량을 결정한다.</p>
 <dl>
-<dt>확정적 재고관리 모형 (Deterministic Inventory Model)</dt>
-<dd>
-<ul>
-<li><font color="blue">확정적 재고 모형은 수요가 일정하고 예측 가능한 경우</font>에 사용하는 모형</li>
-<li>수요와 리드 타임이 일정하고 변동이 없다고 가정</li>
-<li><font color="blue">미래의 수요를 정확하게 예측할 수 있으며</font> 예측된 수요에 따라 재고를 관리</li>
-</ul>
-</dd>
-<dt>주요 특징</dt>
-<dd>
-<ul>
-<li><strong>수요가 일정하다.</strong><br>
-수요가 고정되어 있어 예측이 정확하고, 이를 바탕으로 재고를 최적화한다.</li>
-<li><strong>리드 타임이 일정하다.</strong><br>
-재고 보충을 위한 시간도 일정하므로 공급망에 변동성이 없다.</li>
-<li><strong>재고 수준이 미리 계획된다.</strong><br>
-예측된 수요에 맞춰 재고를 정확하게 조절한다.</li>
-</ul>
-</dd>
-<dt>주요 모형</dt>
-<dd>
-<ul>
-<li><strong>EOQ</strong> (Economic Order Quantity, 경제적 주문량 모형)
-<ul>
-<li>EOQ 모형은 재고를 최적화하기 위해 <strong>주문량</strong>과 <strong>주문주기</strong>를 결정하는 수학적 모델</li>
-<li>수요가 일정하고, 주문비용과 보관비용을 고려하여 <strong>최적의 주문량</strong>을 계산</li>
-</ul></li>
-</ul>
-</dd>
-</dl>
-<p><font color="blue"><strong>소매업체</strong></font>가 일정한 수요를 가진 제품을 판매한다고 가정했을 때, 매일 100개씩 판매되는 제품에 대해 일정량의 주문을 내고, 매번 동일한 양의 제품을 주문한다고 할 수 있다. 이 경우 <font color="blue">수요가 일정하므로, EOQ 모형을 사용</font>하여 최적의 주문량을 계산하고, 재고를 효율적으로 관리할 수 있다.</p>
-<dl>
-<dt>확률적 재고 모형 (Stochastic Inventory Model)</dt>
-<dd>
-<ul>
-<li><strong>확률적 재고 모형</strong>은 <font color="blue">수요와 리드 타임이 불확실하고 변동성이 있는 경우</font>에 사용하는 모형</li>
-<li>수요가 일정하지 않고, 예측할 수 없는 변동성을 포함하고 있기 때문에 확률적인 요소가 포함</li>
-</ul>
-</dd>
 <dt>주요 특징</dt>
 <dd>
 <ul>
@@ -1324,10 +1285,18 @@ EOQ 항목 계산
 <li>주로 <strong>단기</strong>의 재고 관리에 적용되며, <strong>한정된 기간</strong> 동안 제품을 주문하고 판매하는 경우에 유용</li>
 <li>수요의 확률 분포에 따라 <strong>최적의 재고 수준</strong>을 결정</li>
 </ul></li>
+<li><font color="blue"><strong>베이스스톡 모형(Base-stock Model)</strong></font>
+<ul>
+<li>수요가 랜덤이고, 매번 주문 후 리드타임 후에 보충<br>
+</li>
+<li>목표 서비스 수준을 맞추기 위한 주문점 설정<br>
+</li>
+</ul></li>
 <li><font color="blue"><strong>(R, Q) 시스템</strong></font>
 <ul>
 <li><strong>주문 점 (R)</strong>을 설정하고, 이 점에 도달했을 때 <strong>주문량 (Q)</strong>을 결정하여 재고를 보충</li>
 <li>수요와 리드 타임이 불확실한 상황에서 이 시스템은 주문을 적시에 하기 위해 <strong>안전 재고</strong>와 <strong>주문 주기</strong>를 설정</li>
+<li>수요와 리드 타임에 따라 확정적 또는 확률적 모형으로 분류되나 주로 확률적 재고관리 모형으로 분류</li>
 </ul></li>
 </ul>
 </dd>
@@ -2680,7 +2649,7 @@ POS 데이터를 기반으로 상품 재고를 자동 조정하여 부족 시 �
 </section>
 </section>
 
-</font></font></main><font color="blue"><font> <!-- /main -->
+</main> <!-- /main -->
 <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8759553852956796" crossorigin="anonymous"></script>
 <!-- display-horizontal -->
 <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8759553852956796" data-ad-slot="1446193043" data-ad-format="auto" data-full-width-responsive="true"></ins>
@@ -3116,7 +3085,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>
   </div>
 </nav>
-</font></font></div><font color="blue"><font> <!-- /content -->
+</div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
@@ -3134,4 +3103,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-</font></font></body></html>
+</body></html>
