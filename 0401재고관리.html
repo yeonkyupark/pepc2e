@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="keywords" content="공장관리기술사, 생산운영, 재고, 물류, 공정, 설비, 작업, 생산성, 원가, OR">
+<meta name="keywords" content="재고관리, 재고관리 모형, 재고 비용, EOQ, EPQ, ABC, 투빈시스템, min-Max 시스템, 정량발주방식, 정기발주방식, VMI, CMI, CPFR, COCK">
 <meta name="description" content="재고관리에서는 재고관리 모형, 확정적 재고관리 모형, 확률적 재고관리 모형, ABC 모형, 투빈(Two bin) 시스템, 정량발주와 정기발주 시스템, min-Max(sS, 절충) 시스템, 재고 비용 및 재고 성과 척도, 공급업체 관리, VMI, CMI, CPFR, COCK, CRP 등을 이해한다.">
 
 <title>재고관리 – 생산운영과 공장관리(2E)</title>
@@ -549,7 +549,7 @@ window.Quarto = {
 <div>
   <div class="keywords">
     <div class="block-title">Keywords</div>
-    <p>공장관리기술사, 생산운영, 재고, 물류, 공정, 설비, 작업, 생산성, 원가, OR</p>
+    <p>재고관리, 재고관리 모형, 재고 비용, EOQ, EPQ, ABC, 투빈시스템, min-Max 시스템, 정량발주방식, 정기발주방식, VMI, CMI, CPFR, COCK</p>
   </div>
 </div>
 
@@ -713,7 +713,7 @@ style 재고관리 fill:#EEF
 <dd>
 <ul>
 <li><strong>완충재고</strong>라고도 하며, <font color="blue">고객 서비스 차질과 부품 부족으로 인한 <strong>기회비용을 예방</strong>하기 위하여 비축</font>하는 재고</li>
-<li>제품수요, 리드타임, 부품공급 등 불확실성에 대처하기 위한 것</li>
+<li>제품수요, 리드타임, 부품공급 등 <font color="blue">불확실성에 대처</font>하기 위한 것</li>
 <li>수요예측을 개선하며, 구매 또는 생산할 품목 리드타임을 줄여서 그 기간 동안 수요 불확실성을 감소</li>
 <li>공급 불확실성 감소</li>
 <li>생산계획을 부품납품업체들에게 알려 주면 예측이 정확해져 공급 신뢰도 향상</li>
@@ -724,7 +724,7 @@ style 재고관리 fill:#EEF
 <ul>
 <li><strong>계절재고</strong>라고도 하며, <font color="blue">사업상 직면하게 되는 <strong>불규칙한 수요와 공급에 대응</strong>하기 위한 재고</font></li>
 <li>수요 절정기에 생산수준을 많이 높이지 않기 위하여 수요가 적은 기간 동안 재고를 비축하거나 부품 납품 업체가 파업이나 생산능력 제한 때문에 위협을 받을 경우 비축한 재고</li>
-<li>수요율과 산출률을 일치시키는 것, 그러나 수요 변동이 심하면 생산을 조절하기 어려우므로 수요를 평준화 하는 것이 바람직</li>
+<li><font color="blue">수요율과 산출률을 일치</font>시키는 것, 그러나 수요 변동이 심하면 생산을 조절하기 어려우므로 수요를 평준화 하는 것이 바람직</li>
 <li>수요 평준화 방안으로, 비수기에 가격을 인하하고 비수기에 판매 촉진을 강화하며, 기존 제품과 수요 사이클이 정반대가 되는 신제품을 제품 라인에 추가하는 방법</li>
 </ul>
 </dd>
@@ -740,11 +740,11 @@ style 재고관리 fill:#EEF
 <li>연간 주문횟수를 줄여서 비용을 절감하려면 <font color="blue">일회 주문량이 늘어나는데, 이로 인해 발생하는 재고</font></li>
 <li>주문을 얼마나 자주 하고 한 번에 얼마나 할 것인가를 결정하는 것을 크기 결정이라 함</li>
 <li>외주 또는 생산 로트 사이즈(발주량 Q)를 줄이면 주기재고를 줄일 수 있다. 로트사이즈를 소형화하면 그에 반비례하여 발주(작업준비) 횟수가 많아지므로 발주비(작업준비비)가 증대함</li>
-<li>소로트화를 위해서는 먼저 발주(작업준비) 과정을 개선하여 발주와 작업준비에 소비되는 시간과 비용을 최소화해야 함</li>
-</ul>
-</dd>
-</dl>
-</section>
+<li><font color="blue">소로트화<font>를 위해서는 먼저 발주(작업준비) 과정을 개선하여 발주와 작업준비에 소비되는 시간과 비용을 최소화해야 함</font></font></li><font color="blue"><font>
+</font></font></ul><font color="blue"><font>
+</font></font></dd><font color="blue"><font>
+</font></font></dl><font color="blue"><font>
+</font></font></section><font color="blue"><font>
 <section id="sec-inventory-cost" class="level3">
 <h3 class="anchored" data-anchor-id="sec-inventory-cost">재고 비용</h3>
 <div class="cell" data-layout-align="default">
@@ -816,13 +816,13 @@ style 재고관리 fill:#EEF
 <dt>재고자산회전율</dt>
 <dd>
 <ul>
-<li>매출원가를 평균재고자산으로 나눈 것으로 재고잔산 회전속도 의미 <span id="eq-inventory-turnover-rate"><span class="math display">\[재고회전율 = \frac{매출비용}{평균재고 \times 단위당 원가} \tag{10.2}\]</span></span></li>
+<li>매출원가를 평균재고자산으로 나눈 것으로 재고자산 회전속도 의미 <span id="eq-inventory-turnover-rate"><span class="math display">\[재고회전율 = \frac{매출비용}{평균재고 \times 단위당 원가} \tag{10.2}\]</span></span></li>
 </ul>
 </dd>
 <dt>서비스 수준(%)</dt>
 <dd>
 <ul>
-<li>고객수요를 충족시키는 목적이 엉ㄹ마나 잘 달성되었는지를 측정하는 척도</li>
+<li>고객수요를 충족시키는 목적이 얼마나 잘 달성되었는지를 측정하는 척도</li>
 </ul>
 </dd>
 </dl>
@@ -843,7 +843,7 @@ style 재고관리 fill:#EEF
 <ul>
 <li>완제품이나 예비부품/서비스부품에 대한 수요와 같이 다른 품목 수요에 의존하지 않고 기업 외부 시장 조건에 따라 결정되는 수요 형태</li>
 <li>시계열 패턴을 가지고 지속적으로 발생, <strong>수요 예측</strong> 필요</li>
-<li>재고관리에 있어 <strong>보충</strong>(replenishment) 개념이 사용되고, 재고가 줄게 되면 수요 대비를 위해 재고를 보충</li>
+<li>재고관리에 있어 <font color="blue"><strong>보충</strong></font>(replenishment) 개념이 사용되고, 재고가 줄게 되면 수요 대비를 위해 재고를 보충</li>
 </ul>
 </dd>
 <dt>종속수요 (Dependent demand)</dt>
@@ -854,7 +854,7 @@ style 재고관리 fill:#EEF
 <ul>
 <li>자전거(독립수요) 생산 시, 핸들, 프레임, 바퀴, 타이어 등이 종속수요가 됨</li>
 </ul></li>
-<li>재고관리에 있어 <strong>소요</strong>(requirement) 개념이 사용되고 원자재나 부분품이 쓰이는 상위단계 품목 또는 최종품목 필요에 따라 주문</li>
+<li>재고관리에 있어 <font color="blue"><strong>소요</strong></font>(requirement) 개념이 사용되고 원자재나 부분품이 쓰이는 상위단계 품목 또는 최종품목 필요에 따라 <font color="blue">주문</font></li>
 <li>종속수요품목 재고 관리 시스템, <a href="0501생산계획수립.html#sec-mrp" class="quarto-xref"><span>MRP</span></a> 시스템</li>
 </ul>
 </dd>
@@ -873,7 +873,7 @@ style 재고관리 fill:#EEF
 </div>
 </div>
 </section>
-</section>
+</font></font></section><font color="blue"><font>
 <section id="재고관리-모형" class="level2">
 <h2 class="anchored" data-anchor-id="재고관리-모형">재고관리 모형</h2>
 <p>재고관리 모형은 수용 특성에 따라 <strong>확정적 재고관리 모형</strong>과 <strong>확률적 재고관리 모형</strong>으로 나눌 수 있다. 또한 특수한 경우 사용할 수 있는 <strong>단일기간 재고관리 모형</strong>이나 <strong>ABC 재고관리 모형</strong>도 있다.</p>
@@ -910,9 +910,14 @@ subgraph s1[수요 및 조달 기간 특성]
 13
 end
 
-subgraph s2[주문시기 및 주문량 결정 방법]
+subgraph s2[수요량이나 리드타임에 따른 결정 방법]
 21
 22
+end
+
+subgraph s21[주문시기 및 주문량 결정 방법]
+211[뉴스보이 모형]
+212[베이스스톡 모형]
 end
 
 subgraph s3[고정주문량]
@@ -921,7 +926,8 @@ subgraph s3[고정주문량]
 end
 
 0 --&gt; 11 &amp; 12 &amp; 13
-11 &amp; 12 --&gt; 21 &amp; 22
+11 --&gt; 21 &amp; 22
+12 --&gt; 211 &amp; 212
 13 --&gt; 23 &amp; 24 &amp; 25 &amp; 26
 21 --&gt; 31 &amp; 32
 </pre>
@@ -932,7 +938,7 @@ end
 </div>
 <section id="확정적-재고관리-모형" class="level3">
 <h3 class="anchored" data-anchor-id="확정적-재고관리-모형">확정적 재고관리 모형</h3>
-<p><strong>확정적 재고관리 모형</strong>은 재고관련 비용, 수요율, 생산율이 확정적인 경우에 사용하는 관리 모형이다.</p>
+<p><strong>확정적 재고관리 모형</strong>은 재고관련 비용, 수요율, 생산율이 확정적인 경우에 사용하는 관리 모형이다. 즉 수요와 리드타임이 확실하게 알려져 있을 때 사용하는 모형이다. 대표적으로 정량주문모형(Q모형), 정기주문모형(P모형)이 있다.</p>
 <dl>
 <dt>특징</dt>
 <dd>
@@ -2674,7 +2680,7 @@ POS 데이터를 기반으로 상품 재고를 자동 조정하여 부족 시 �
 </section>
 </section>
 
-</main> <!-- /main -->
+</font></font></main><font color="blue"><font> <!-- /main -->
 <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8759553852956796" crossorigin="anonymous"></script>
 <!-- display-horizontal -->
 <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8759553852956796" data-ad-slot="1446193043" data-ad-format="auto" data-full-width-responsive="true"></ins>
@@ -3110,7 +3116,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>
   </div>
 </nav>
-</div> <!-- /content -->
+</font></font></div><font color="blue"><font> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
@@ -3128,4 +3134,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-</body></html>
+</font></font></body></html>
