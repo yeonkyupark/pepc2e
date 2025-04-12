@@ -782,6 +782,33 @@ MRP(Material Requirements Planning), **<font color = "blue">MRP II**(Manufacturi
 **BOP**(bill of process)는 <font color="#245bdb">제품을 구성하고 있는 부품이 어떤 공정에서 언제 생산을 해야 할지가 분단위로 이루어진 것</font>으로 BOM 부품구성정보와 부품 정보에서 <font color="#245bdb">개당 작업공수와 부품 가공공정 정보 조합</font>이다. BOM에 각 부품 제작공정을 표시하여 <font color="#245bdb">부품과 공정 선후관계를 네트워크(network) 형태로 표현</font>한다.
 :::
 
+#### BOM 종류
+
+BOM(Bill of Materials, 자재명세서)은 제품을 생산하는 데 필요한 부품, 재료, 하위 조립품 등의 목록을 체계적으로 나열한 문서이다. 사용 목적이나 구성 방식에 따라 다양한 형태로 구분되며, 아래와 같이 주요 종류를 정리할 수 있다.
+
+|BOM 종류|설명|
+|---|---|
+|**단일 수준 BOM (Single-level BOM)**|제품 구성요소를 한 단계만 나열한 구조로, 간단한 제품에 적합|
+|**다중 수준 BOM (Multi-level BOM)**|제품을 구성하는 모든 하위 부품과 조립 단계를 계층적으로 표현한 구조|
+|**역 BOM (Reverse BOM)**|완성된 제품을 기준으로 하여 어떤 부품으로 구성되어 있는지 역으로 분석한 BOM|
+|**판매용 BOM (Sales BOM)**|판매 시점에서 제품과 함께 제공되는 구성요소들을 나타낸 BOM|
+|**생산용 BOM (Manufacturing BOM)**|제조 공정에 따라 필요한 자재, 수량, 공정 정보 등을 포함한 BOM|
+|**설계용 BOM (Engineering BOM)**|제품 설계 단계에서 CAD, PLM 등과 연계되어 구성된 BOM|
+|**서비스 BOM (Service BOM)**|A/S나 유지보수에 필요한 부품 정보를 중심으로 구성된 BOM|
+|**변형 BOM (Variant BOM)**|기본 제품을 바탕으로 옵션이나 고객 요구사항에 따라 달라지는 구성들을 관리하기 위한 BOM|
+|**모듈식 BOM (Modular BOM)**|제품을 기능 단위의 모듈로 구성하여 다양한 조합이 가능하도록 만든 BOM|
+
+내용별 구분  
+: 
+	1) **기능에 따른 구분** 
+	: 
+		- 설계용, 생산용, 판매용, 서비스용 BOM으로 나뉨 
+		- 각 부서나 목적에 따라 BOM에 포함되는 정보가 달라짐  
+	2) **구조에 따른 구분** 
+	:
+		- 단일 수준, 다중 수준, 모듈식, 변형 BOM 등 구성 방식에 따라 분류됨  
+		- 제품 복잡성이나 제품 옵션 다양성에 따라 적절한 형태 사용
+
 :::{.callout-important icon=false title="MRP 작성"}
 
 ```{mermaid}
