@@ -520,7 +520,10 @@ window.Quarto = {
   <li><a href="#sec-crp" id="toc-sec-crp" class="nav-link" data-scroll-target="#sec-crp">CRP</a></li>
   <li><a href="#mrp-입력물" id="toc-mrp-입력물" class="nav-link" data-scroll-target="#mrp-입력물">MRP 입력물</a></li>
   <li><a href="#mrp-산출물" id="toc-mrp-산출물" class="nav-link" data-scroll-target="#mrp-산출물">MRP 산출물</a></li>
-  <li><a href="#sec-bom" id="toc-sec-bom" class="nav-link" data-scroll-target="#sec-bom">BOM</a></li>
+  <li><a href="#sec-bom" id="toc-sec-bom" class="nav-link" data-scroll-target="#sec-bom">BOM</a>
+  <ul class="collapse">
+  <li><a href="#bom-종류" id="toc-bom-종류" class="nav-link" data-scroll-target="#bom-종류">BOM 종류</a></li>
+  </ul></li>
   </ul></li>
   <li><a href="#sec-ref-0501" id="toc-sec-ref-0501" class="nav-link" data-scroll-target="#sec-ref-0501">참고자료</a></li>
   </ul>
@@ -2157,6 +2160,81 @@ BOP
 <p><strong>BOP</strong>(bill of process)는 <font color="#245bdb">제품을 구성하고 있는 부품이 어떤 공정에서 언제 생산을 해야 할지가 분단위로 이루어진 것</font>으로 BOM 부품구성정보와 부품 정보에서 <font color="#245bdb">개당 작업공수와 부품 가공공정 정보 조합</font>이다. BOM에 각 부품 제작공정을 표시하여 <font color="#245bdb">부품과 공정 선후관계를 네트워크(network) 형태로 표현</font>한다.</p>
 </div>
 </div>
+<section id="bom-종류" class="level4">
+<h4 class="anchored" data-anchor-id="bom-종류">BOM 종류</h4>
+<p>BOM(Bill of Materials, 자재명세서)은 제품을 생산하는 데 필요한 부품, 재료, 하위 조립품 등의 목록을 체계적으로 나열한 문서이다. 사용 목적이나 구성 방식에 따라 다양한 형태로 구분되며, 아래와 같이 주요 종류를 정리할 수 있다.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>BOM 종류</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>단일 수준 BOM (Single-level BOM)</strong></td>
+<td>제품 구성요소를 한 단계만 나열한 구조로, 간단한 제품에 적합</td>
+</tr>
+<tr class="even">
+<td><strong>다중 수준 BOM (Multi-level BOM)</strong></td>
+<td>제품을 구성하는 모든 하위 부품과 조립 단계를 계층적으로 표현한 구조</td>
+</tr>
+<tr class="odd">
+<td><strong>역 BOM (Reverse BOM)</strong></td>
+<td>완성된 제품을 기준으로 하여 어떤 부품으로 구성되어 있는지 역으로 분석한 BOM</td>
+</tr>
+<tr class="even">
+<td><strong>판매용 BOM (Sales BOM)</strong></td>
+<td>판매 시점에서 제품과 함께 제공되는 구성요소들을 나타낸 BOM</td>
+</tr>
+<tr class="odd">
+<td><strong>생산용 BOM (Manufacturing BOM)</strong></td>
+<td>제조 공정에 따라 필요한 자재, 수량, 공정 정보 등을 포함한 BOM</td>
+</tr>
+<tr class="even">
+<td><strong>설계용 BOM (Engineering BOM)</strong></td>
+<td>제품 설계 단계에서 CAD, PLM 등과 연계되어 구성된 BOM</td>
+</tr>
+<tr class="odd">
+<td><strong>서비스 BOM (Service BOM)</strong></td>
+<td>A/S나 유지보수에 필요한 부품 정보를 중심으로 구성된 BOM</td>
+</tr>
+<tr class="even">
+<td><strong>변형 BOM (Variant BOM)</strong></td>
+<td>기본 제품을 바탕으로 옵션이나 고객 요구사항에 따라 달라지는 구성들을 관리하기 위한 BOM</td>
+</tr>
+<tr class="odd">
+<td><strong>모듈식 BOM (Modular BOM)</strong></td>
+<td>제품을 기능 단위의 모듈로 구성하여 다양한 조합이 가능하도록 만든 BOM</td>
+</tr>
+</tbody>
+</table>
+<dl>
+<dt>내용별 구분</dt>
+<dd>
+<ol type="1">
+<li><dl>
+<dt><strong>기능에 따른 구분</strong></dt>
+<dd>
+<ul>
+<li>설계용, 생산용, 판매용, 서비스용 BOM으로 나뉨</li>
+<li>각 부서나 목적에 따라 BOM에 포함되는 정보가 달라짐</li>
+</ul>
+</dd>
+</dl></li>
+<li><strong>구조에 따른 구분</strong> :
+<ul>
+<li>단일 수준, 다중 수준, 모듈식, 변형 BOM 등 구성 방식에 따라 분류됨<br>
+</li>
+<li>제품 복잡성이나 제품 옵션 다양성에 따라 적절한 형태 사용</li>
+</ul></li>
+</ol>
+</dd>
+</dl>
 <div class="callout callout-style-default callout-important no-icon callout-titled" title="MRP 작성">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -2318,6 +2396,7 @@ MRP 작성
 </table>
 </div>
 </div>
+</section>
 </section>
 </section>
 <section id="sec-ref-0501" class="level2">
