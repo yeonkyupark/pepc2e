@@ -87,10 +87,11 @@ h4 {
   h1.title {
     text-align: center;
     position: relative;
-    color: #006A71;
+    /* color: #006A71; */
+	 color: #000;
     margin: 0 -30px 30px -30px;
     padding: 10px 0;
-    text-shadow: 0 1px rgba(0,0,0,.8);
+    text-shadow: 1px 1px rgba(0,0,0,.8);
     background-color: #F2EFE7;
     background-image:  linear-gradient(rgba(255,255,255,.3), rgba(255,255,255,0));
     box-shadow: 0 2px 0 rgba(0,0,0,.3);
