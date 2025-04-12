@@ -1292,11 +1292,11 @@ RRP는 종종 더 큰 <a href="1101정보화활용기술.html#sec-erp" class="qu
 <li><dl>
 <dt><strong>공정요인</strong>(Process Factors)</dt>
 <dd>
-공정 및및 설비 생산량, 공정 및 설비 븡력
+공정 및 설비 생산량, 공정 및 설비 븡력
 </dd>
 </dl></li>
 <li><dl>
-<dt><strong>인력력요인</strong>(Human Factors)</dt>
+<dt><strong>인력요인</strong>(Human Factors)</dt>
 <dd>
 직무설계, 직무내용, 작업방법, 작업강도, 작업환경, 교육 및 경험, 동기부여, 보상 등
 </dd>
@@ -1495,7 +1495,7 @@ RRP는 종종 더 큰 <a href="1101정보화활용기술.html#sec-erp" class="qu
 능력비율(CR) = \frac{(C_s - C_e)}{C_s}
 \tag{11.1}\]</span></span></p>
 <p><span class="math display">\[
-여기서 \ C_s는 \ 단위당 \ 품절 \ 손신, C_e는 \ 단위당 \ 잉영능력 \ 유지 \ 비용
+여기서 \ C_s는 \ 단위당 \ 품절 \ 손실, C_e는 \ 단위당 \ 잉여능력 \ 유지 \ 비용
 \]</span></p>
 <dl>
 <dt>CR에 따른 생산능력 전략</dt>
@@ -1504,16 +1504,16 @@ RRP는 종종 더 큰 <a href="1101정보화활용기술.html#sec-erp" class="qu
 <li><span class="math inline">\(CR \ge 0.5\)</span>
 <ul>
 <li><font color="blue">품절 비용 &lt; 0.67 x 잉여 능력 유지 비용</font></li>
-<li>사후 증설 전략</li>
+<li>사전 확장 전략</li>
 </ul></li>
 <li><span class="math inline">\(-0.5 &lt; CR &lt; 0.5\)</span>
 <ul>
 <li>기대 가치 유지 전략</li>
 </ul></li>
-<li><span class="math inline">\(CR \le 0.5\)</span>
+<li><span class="math inline">\(CR \le -0.5\)</span>
 <ul>
 <li><font color="blue">품절비용 &gt; 2 x 잉여 능력 비용</font></li>
-<li>사전 확장 전략</li>
+<li>사후 증설 전략</li>
 </ul></li>
 </ul>
 </dd>
@@ -1561,13 +1561,13 @@ RRP는 종종 더 큰 <a href="1101정보화활용기술.html#sec-erp" class="qu
 <li>자재소요을 발생시킨다.</li>
 <li>생산능력소요를 발생시킨다.</li>
 <li>작업이나 주문 우선순위가 결정된다.</li>
-<li>타 부서 일상계획에 활용할 수 있다.</li>
+<li>타 부서 일정계획에 활용할 수 있다.</li>
 </ol>
 </dd>
 </dl>
 <p>MPS 작성 절차는 다음과 같다.</p>
 <pre><code>1. 재고량 예측치 및 확정된 주문량에 따라 예측 보유재고량 산출
-1. 수요량 대비 재고 부족 시 생산 LOT 크기 감안하여 MPS 수량 계획 수립</code></pre>
+2. 수요량 대비 재고 부족 시 생산 LOT 크기 감안하여 MPS 수량 계획 수립</code></pre>
 <p><span id="eq-number-of-inventory"><span class="math display">\[
 \text{예측된 재고보유 수량 = (직전기간 말 재고 수준) + (MPS 수량) - (예측된 수요량)}
 \tag{11.2}\]</span></span> 약속 가능수량(ATP, available to promise quantities)은 고객과 약속한 제품이나 서비스 수량을 의미하며 다음과 같이 계산한다.</p>
@@ -2154,7 +2154,7 @@ BOP
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>BOP</strong>(bill of process)는 제품을 구성하고 있는 부품이 어떤 공정에서 언제 생산을 해야 할지가 분단위로 이루어진 것으로 BOM 부품구성정보와 부품 정보에서 개당 작업공수와 부품 가공공정 정보 조합이다. BOM에 각 부품 제작공정을 표시하여 부품과 공정 선후관계를 네트워크(network) 형태로 표현한다.</p>
+<p><strong>BOP</strong>(bill of process)는 <font color="#245bdb">제품을 구성하고 있는 부품이 어떤 공정에서 언제 생산을 해야 할지가 분단위로 이루어진 것</font>으로 BOM 부품구성정보와 부품 정보에서 <font color="#245bdb">개당 작업공수와 부품 가공공정 정보 조합</font>이다. BOM에 각 부품 제작공정을 표시하여 <font color="#245bdb">부품과 공정 선후관계를 네트워크(network) 형태로 표현</font>한다.</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-important no-icon callout-titled" title="MRP 작성">
@@ -2322,6 +2322,8 @@ MRP 작성
 </section>
 <section id="sec-ref-0501" class="level2">
 <h2 class="anchored" data-anchor-id="sec-ref-0501">참고자료</h2>
+<hr>
+<p><strong>각주</strong></p>
 
 
 </section>
