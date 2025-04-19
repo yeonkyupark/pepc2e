@@ -244,7 +244,7 @@ PTS 발전
 
 구분|정의|개발배경|복잡성/난이도|시간단위|Pace|정밀도/적용
 -|-|-|-|-|-|-
-WF|신체 각 부분 동작 난이도에 다라 서로 다른 개수로 work factor 부여|DWF 1945|복잡/쉬움|1RU(Ready time unit) = 0.001분|Incentive pace 125% rate|전자 및 기계조립 업체
+WF|신체 각 부분 동작 난이도에 따라 서로 다른 개수로 work factor 부여|DWF 1945|복잡/쉬움|1RU(Ready time unit) = 0.001분|Incentive pace 125% rate|전자 및 기계조립 업체
 MTM|작업에 필요한 기본 동작으로 분해하고 성질과 조건에 대응하는 시간치 부여|MTM1 1948, MTM2 1965, MTM3 1971| 간단, 약간 어려움|1TMU(Time measurement unit) = (1/100000)시간|Normal pace 100% rate|중공업
 MODAPTS|신체 각 부분 동작 거리에 따라 시간치를 부여|Basic M 1966, Offixe M 1969, Tmnit M 1973|매우간단, 쉬움|1MOD(Modular) = 0.129/0.1초, 0.143/0.12초|4가지 pace임의로 채용|정밀기계, 가공업체
 : 주요 PTS 기법 비교
@@ -304,6 +304,7 @@ WF법 표준시간 설정절차
       
 #### MODAPTS {#sec-modapts}
 
+![https://apparelresources.com/business-news/manufacturing/modapts-new-pmts-apparel-manufacturing/](https://apparelresources.com/wp-content/uploads/2014/11/Modapts-Chart-771x1024.jpg)
 **MODAPTS**(Modular Arrangement of Predetermined Time Standards) 시스템은 <font color="blue">작업자의 신체 동작을 분석하여 작업 시간을 측정하고 표준을 설정하는 방법</font>이다. MODAPTS에서 신체 동작은 여러 기본 단위로 나누어지며, **주요 동작 3가지**는 다음과 같다.
 
 1. Reach (리치)
@@ -386,4 +387,6 @@ $$ {#eq-learning-rate}
 
 ## 참고자료 {#sec-ref-0701}
 
+----
 
+**각주**
