@@ -485,12 +485,15 @@ window.Quarto = {
   <ul>
   <li><a href="#sec-cost" id="toc-sec-cost" class="nav-link active" data-scroll-target="#sec-cost">원가</a>
   <ul>
+  <li><a href="#직접비-간접비" id="toc-직접비-간접비" class="nav-link" data-scroll-target="#직접비-간접비">직접비 / 간접비</a></li>
+  <li><a href="#고정비-변동비" id="toc-고정비-변동비" class="nav-link" data-scroll-target="#고정비-변동비">고정비 / 변동비</a></li>
+  <li><a href="#혼합-사례" id="toc-혼합-사례" class="nav-link" data-scroll-target="#혼합-사례">혼합 사례</a></li>
   <li><a href="#원가절감-방안" id="toc-원가절감-방안" class="nav-link" data-scroll-target="#원가절감-방안">원가절감 방안</a></li>
   <li><a href="#sec-expense" id="toc-sec-expense" class="nav-link" data-scroll-target="#sec-expense">비용</a></li>
   <li><a href="#sec-sunk-cost" id="toc-sec-sunk-cost" class="nav-link" data-scroll-target="#sec-sunk-cost">매몰원가</a></li>
   </ul></li>
   <li><a href="#prm" id="toc-prm" class="nav-link" data-scroll-target="#prm">PRM</a></li>
-  <li><a href="#감가상각-sec-depreciation" id="toc-감가상각-sec-depreciation" class="nav-link" data-scroll-target="#감가상각-sec-depreciation">감가상각 {#sec-depreciation)</a></li>
+  <li><a href="#sec-depreciation" id="toc-sec-depreciation" class="nav-link" data-scroll-target="#sec-depreciation">감가상각</a></li>
   <li><a href="#참고자료" id="toc-참고자료" class="nav-link" data-scroll-target="#참고자료">참고자료</a>
   <ul>
   <li><a href="#부가원가와-중성비용" id="toc-부가원가와-중성비용" class="nav-link" data-scroll-target="#부가원가와-중성비용">부가원가와 중성비용</a></li>
@@ -548,21 +551,87 @@ window.Quarto = {
 <figcaption>원가 구성</figcaption>
 </figure>
 </div>
-<dl>
-<dt>직접비와 간접비</dt>
-<dd>
+<p>원가는 <strong>귀속 대상</strong>에 따라 직접비·간접비로, <strong>원가 행태</strong>에 따라 고정비·변동비로 나눌 수 있으며, 실제 현장에서 비용을 구분하고 관리하는 데 중요한 기준이 된다.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>구분</th>
+<th>정의</th>
+<th>대표 예</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>직접비</strong></td>
+<td>특정 제품에 직접적으로 추적 가능한 원가</td>
+<td>직접재료비, 직접노무비</td>
+</tr>
+<tr class="even">
+<td><strong>간접비</strong></td>
+<td>여러 제품에 걸쳐 공통적으로 발생하여 개별 추적이 어려운 원가</td>
+<td>공장 임차료, 관리자 급여, 감가상각비</td>
+</tr>
+<tr class="odd">
+<td><strong>고정비</strong></td>
+<td>생산량 변화와 관계없이 일정한 원가</td>
+<td>임대료, 감가상각비, 관리자 급여</td>
+</tr>
+<tr class="even">
+<td><strong>변동비</strong></td>
+<td>생산량 변화에 따라 증감하는 원가</td>
+<td>재료비, 시간급 임금, 포장재 비용</td>
+</tr>
+</tbody>
+</table>
+<section id="직접비-간접비" class="level3">
+<h3 class="anchored" data-anchor-id="직접비-간접비">직접비 / 간접비</h3>
+<ol type="1">
+<li><strong>직접비</strong>
 <ul>
-<li><font color="blue">제품에 대응하여 계산으로</font> 구할 수 있는 원가를 직접비 함</li>
-<li>명확하게 대응하여 인식하는 것이 곤란하여 일정 배부기준에 의해 배부되는 원가를 간간접비라고 함</li>
-</ul>
-</dd>
-<dt>변동비와 고정비</dt>
-<dd>
+<li>제품 1개에 소요된 <strong>특정 자원 투입이 명확히 식별되는 경우</strong></li>
+<li>예: 의자 생산 시 사용되는 원목, 조립을 위한 노동자의 인건비 등</li>
+</ul></li>
+<li><strong>간접비</strong>
 <ul>
-<li>원가계산을 할 때 필요한 분류로서, <font color="blue">조업도 변화에 대응해서 원가가 변동하는가</font> 그렇지 않은가에 따라 전자를 변동비, 후자를 고정비로 분류</li>
-</ul>
-</dd>
-</dl>
+<li>제품별로 <strong>직접 배부가 어려운 공통 원가</strong></li>
+<li>예: 공장장 월급, 조명·전기세, 기계 감가상각 등</li>
+</ul></li>
+</ol>
+</section>
+<section id="고정비-변동비" class="level3">
+<h3 class="anchored" data-anchor-id="고정비-변동비">고정비 / 변동비</h3>
+<ol type="1">
+<li><strong>고정비</strong>
+<ul>
+<li><strong>생산량에 상관없이</strong> 일정 기간 동안 변하지 않는 비용</li>
+<li>예: 공장 건물 임대료, 기계 감가상각, 보험료, 경영진 급여</li>
+</ul></li>
+<li><strong>변동비</strong>
+<ul>
+<li><strong>생산량 증가 시 비례적으로 증가하는 비용</strong></li>
+<li>예: 생산에 투입되는 원재료비, 시간제 근로자 인건비, 배송비</li>
+</ul></li>
+</ol>
+</section>
+<section id="혼합-사례" class="level3">
+<h3 class="anchored" data-anchor-id="혼합-사례">혼합 사례</h3>
+<ol type="1">
+<li><strong>고정비이면서 간접비</strong>
+<ul>
+<li>예: 공장 임대료, 관리자 급여 → 생산량과 관계없이 발생하며 특정 제품에 직접 귀속되지 않음</li>
+</ul></li>
+<li><strong>변동비이면서 직접비</strong>
+<ul>
+<li>예: 제품 하나당 들어가는 재료비 → 생산량에 비례하고, 특정 제품에 명확히 귀속됨</li>
+</ul></li>
+</ol>
+<p>원가의 분류는 <strong>제품 원가 산정</strong>, <strong>예산 관리</strong>, <strong>손익 분석</strong>, <strong>의사결정</strong> 등에 활용되며, 직접비·간접비는 <strong>귀속성 중심</strong>, 고정비·변동비는 <strong>비용 행태 중심</strong>의 분류 방식임. 두 분류를 조합하면 <strong>보다 정교한 원가관리</strong>가 가능하다.</p>
+</section>
 <section id="원가절감-방안" class="level3">
 <h3 class="anchored" data-anchor-id="원가절감-방안">원가절감 방안</h3>
 <p>원가절감은 시장 경력력 확보에 있어 중요한 부분이다. 다음과 같은 방법을 통해 원가를 절감할 수 있다.</p>
@@ -570,7 +639,8 @@ window.Quarto = {
 <li><strong>공정 최적화</strong>
 <ul>
 <li>자동화 도입: 반복적인 작업을 자동화하여 인건비를 절감하고, 실수를 줄이다.<br>
-라인 밸런싱(Line Balancing): 작업 부하를 균등하게 분배하여 대기 시간을 최소화하고 생산 속도를 향상시키다.<br>
+</li>
+<li>라인 밸런싱(Line Balancing): 작업 부하를 균등하게 분배하여 대기 시간을 최소화하고 생산 속도를 향상시키다.<br>
 </li>
 <li>표준화 및 모듈화: 제품이나 부품을 표준화하여 생산 공정을 간소화하고 재고 관리 비용을 절감하다.<br>
 </li>
@@ -700,9 +770,9 @@ window.Quarto = {
 <dt>매몰원가의 대표적인 예</dt>
 <dd>
 <ul>
-<li>연구개발 비용: 새로운 제품이나 서비스 개발에 들어간 비용</li>
-<li>교육 비용: 직원 교육에 사용된 비용</li>
-<li>설비 비용: 오래된 설비나 장비의 구매 비용</li>
+<li><font color="#245bdb">연구개발 비용</font>: 새로운 제품이나 서비스 개발에 들어간 비용</li>
+<li><font color="#245bdb">교육 비용</font>: 직원 교육에 사용된 비용</li>
+<li><font color="#245bdb">설비 비용</font>: 오래된 설비나 장비의 구매 비용</li>
 </ul>
 </dd>
 </dl>
@@ -795,18 +865,18 @@ window.Quarto = {
 </div>
 </div>
 </section>
-<section id="감가상각-sec-depreciation" class="level2">
-<h2 class="anchored" data-anchor-id="감가상각-sec-depreciation">감가상각 {#sec-depreciation)</h2>
+<section id="sec-depreciation" class="level2">
+<h2 class="anchored" data-anchor-id="sec-depreciation">감가상각</h2>
 <p><strong>감가상각</strong>이란 <font color="blue">당해 자산에 대해 경제적 효익이 발생하는 기간 동안 합리적이고 체계적인 방법으로 당해 수익에 대응시킬 비용을 인식하는 과정</font>이다. 모든 유형자산은 보유기간 중 감가상각하는 것이 원칙이지만 토지와 건설중인 자산은 예외이다.</p>
 <p>감가상각을 수행하기 위해서는 <strong>취득원가, 잔존가치, 내용연수</strong>를 알아야 하는데 이를 <strong>감가상각계산 3요소</strong>라고 한다.</p>
 <dl>
 <dt>취득원가</dt>
 <dd>
-유형자산 최초 구입가격 또는 제작가액에 이를 본래 목적에 사용가능하도록 하는데 소요된 일체 부대비용을 함계한 금액
+유형자산 최초 구입가격 또는 제작가액에 이를 본래 목적에 사용 가능하도록 하는데 소요된 일체 부대비용을 합계한 금액
 </dd>
 <dt>잔존가치</dt>
 <dd>
-자산이 이미 오래되어 내용연수 종료시점에 도달하였다는 가정하에 자산 처분으로부터 현재 휙득할 금액에서 처분부대원가를 차감한 금액에 대한 추정치
+자산이 이미 오래되어 내용연수 종료시점에 도달하였다는 가정하에 자산 처분으로부터 현재 획득할 금액에서 처분부대원가를 차감한 금액에 대한 추정치
 </dd>
 <dt>내용연수</dt>
 <dd>
@@ -846,7 +916,7 @@ window.Quarto = {
 <dd>
 <ul>
 <li>미상각잔액에 매기 정액법에서 상각률에 2배를 곱하여 감가상각비를 계산하는 방법</li>
-<li>미상각잔액에 일정한 상각률을 곱하여 삼가상각비를 구하게 되므로 시간이 경과하여 기초장부가액이 감소함에 따라 각 연도에 감가상각비도 점차적으로 감소</li>
+<li>미상각잔액에 일정한 상각률을 곱하여 감가상각비를 구하게 되므로 시간이 경과하여 기초장부가액이 감소함에 따라 각 연도에 감가상각비도 점차적으로 감소</li>
 </ul>
 <p><span class="math display">\[\text{감가상각비 = (취득원가 - 기초감가상각누계액) } \times \text{상각률}\]</span></p>
 <p><span class="math display">\[\text{여기서 상각률 }= \frac{1}{내용연수} \times 2\]</span></p>
@@ -892,6 +962,8 @@ window.Quarto = {
 </ul>
 </dd>
 </dl>
+<hr>
+<p><strong>각주</strong></p>
 
 
 </section>
