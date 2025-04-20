@@ -1698,7 +1698,9 @@ Laplace 기준 의사결정
 </dd>
 </dl>
 <p>가중 이익 계산식:<br>
-- 소규모: $ 75 + 50 = 60 $ - 중규모: $ 120 + 40 = 72 $ - 대규모: $ 130 + 30 = 70 $</p>
+- 소규모: <span class="math inline">\(75 \times 0.4 + 50 \times 0.6 = 60\)</span><br>
+- 중규모: <span class="math inline">\(120 \times 0.4 + 40 \times 0.6 = 72\)</span><br>
+- 대규모: <span class="math inline">\(130 \times 0.4 + 30 \times 0.6 = 70\)</span></p>
 <p>중규모 대안을 선택한다.</p>
 </div>
 </div>
@@ -1814,7 +1816,7 @@ Laplace 기준 의사결정
 <h3 class="anchored" data-anchor-id="위험하-의사결정">위험하 의사결정</h3>
 <section id="시뮬레이션" class="level4">
 <h4 class="anchored" data-anchor-id="시뮬레이션">시뮬레이션</h4>
-<p>시뮬레이션이란 최적해를 도출하는 기법이라기보다 어떤 실제 현상을 모형화하여 제작한 후 그 모형에 대한 실험을 수행함으로써 관계되는 결과치를 도출하고 이를 실제 현상에 적용하기 위한 방법이다. 시뮬레이션을 사용하는 이유는 실제 상황에 대한 실험이 비실용적이거나 불가능할 경우, 수학적인 표현이나 모델 해를 제시하기에 실제 상황이 너무 복잡할 경우에 사용하게 된다.</p>
+<p><strong>시뮬레이션</strong>이란 최적해를 도출하는 기법이라기보다 <font color="#245bdb">어떤 실제 현상을 모형화하여 제작한 후 그 모형에 대한 실험을 수행함으로써 관계되는 결과치를 도출하고 이를 실제 현상에 적용하기 위한 방법</font>이다. 시뮬레이션을 사용하는 이유는 실제 상황에 대한 실험이 비실용적이거나 불가능할 경우, 수학적인 표현이나 모델 해를 제시하기에 실제 상황이 너무 복잡할 경우에 사용하게 된다.</p>
 <dl>
 <dt>의의</dt>
 <dd>
@@ -1918,33 +1920,58 @@ Laplace 기준 의사결정
 <li>재료나 일감 공급을 기다리는 작업공정</li>
 </ul>
 <p>대기행렬 분석 목적은 고객 도착 상황에 잘 대응할 수 있는 능력 내지 규모를 경제적으로 결정하여 서비스 비용을 최소화 하는데 있다.</p>
-<p>대기행렬 시스템 기본 구조는 다음과 같다.</p>
-<ol type="1">
-<li><dl>
-<dt>고객(도착지, Input)</dt>
-<dd>
-서비스를 받으러 오는 시스템 투입물
-</dd>
-</dl></li>
-<li><dl>
-<dt>서버(Server), 서비스 시설</dt>
-<dd>
-서비스를 수행하는 주체로 어떤 서비스를 정해진 순서나 규칙에 따라 제공
-</dd>
-</dl></li>
-<li><dl>
-<dt>서비스(Output)</dt>
-<dd>
-고객(도착지)에게 제공되는 산출물
-</dd>
-</dl></li>
-<li><dl>
-<dt>모집단 크기</dt>
-<dd>
-서비스를 요구하는 잠재 고객 수
-</dd>
-</dl></li>
-</ol>
+<p>일반적인 대기행렬 시스템 기본 구조는 다음과 같다.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>구성 요소</strong></th>
+<th><strong>설명</strong></th>
+<th><strong>예시</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>고객 (Customer)</strong></td>
+<td>서비스를 받기 위해 대기행렬에 도착하는 개체 (사람, 기계, 작업 등)</td>
+<td>은행 고객, 고장 난 기계, 처리해야 할 주문</td>
+</tr>
+<tr class="even">
+<td><strong>도착 과정 (Arrival Process)</strong></td>
+<td>고객이 대기행렬에 도착하는 패턴</td>
+<td>일정한 간격으로 도착, 무작위로 도착 (포아송 분포), 그룹으로 도착</td>
+</tr>
+<tr class="odd">
+<td><strong>대기행렬 용량 (Queue Capacity)</strong></td>
+<td>대기행렬이 수용할 수 있는 최대 고객 수</td>
+<td>무한대, 제한된 좌석 수, 버퍼 크기</td>
+</tr>
+<tr class="even">
+<td><strong>대기 규율 (Queue Discipline)</strong></td>
+<td>대기하고 있는 고객이 서비스를 받는 순서 규칙</td>
+<td>선착순 (FIFO), 후착순 (LIFO), 우선순위, 무작위</td>
+</tr>
+<tr class="odd">
+<td><strong>서비스 시설 (Service Facility)</strong></td>
+<td>고객에게 서비스를 제공하는 주체 (창구, 수리공, 처리 장치 등)</td>
+<td>은행 창구, 병원 진료실, 컴퓨터 서버</td>
+</tr>
+<tr class="even">
+<td><strong>서비스 과정 (Service Process)</strong></td>
+<td>서비스 시설이 고객에게 서비스를 제공하는 데 걸리는 시간 패턴</td>
+<td>일정한 서비스 시간, 확률 분포를 따르는 서비스 시간 (지수 분포)</td>
+</tr>
+<tr class="odd">
+<td><strong>서비스 채널 수 (Number of Service Channels)</strong></td>
+<td>동시에 서비스를 제공할 수 있는 서비스 시설의 수</td>
+<td>단일 서버 (은행 창구 1개), 다중 서버 (은행 창구 여러 개)</td>
+</tr>
+</tbody>
+</table>
 <section id="대기행렬-가정" class="level5">
 <h5 class="anchored" data-anchor-id="대기행렬-가정">대기행렬 가정</h5>
 <p>대기행렬 이론 가정은 다음과 같다.</p>
@@ -2013,7 +2040,7 @@ Note&nbsp;29.1 리틀(Little) 공식
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>시스템 성성능척도 간 관계식을 정의한 공식으로 <span class="math inline">\(L\)</span>, <span class="math inline">\(L_q\)</span>, <span class="math inline">\(W\)</span>, <span class="math inline">\(W_q\)</span> 중 하나만 알고 있어도 나머지 세 값을 구할 수 있다. 즉, <span id="eq-little"><span class="math display">\[
+<p>시스템 성능척도 간 관계식을 정의한 공식으로 <span class="math inline">\(L\)</span>, <span class="math inline">\(L_q\)</span>, <span class="math inline">\(W\)</span>, <span class="math inline">\(W_q\)</span> 중 하나만 알고 있어도 나머지 세 값을 구할 수 있다. 즉, <span id="eq-little"><span class="math display">\[
 \bar\lambda = \sum^\infty_{n=0} \lambda_nP_n이라고 \ 할 \ 때, \quad
 L = \bar\lambda, \quad
 L_q = \bar\lambda W_q, \quad
@@ -2185,7 +2212,7 @@ where \ x_1 \ge 0, \ x_2 \ge 0, \ , \ ... \ , \ x_n \ge 0
 <ul>
 <li><span class="math inline">\(10x_1 + 4x_2 \le 80\)</span> : 조립조건</li>
 <li><span class="math inline">\(1x_1 + 2x_2 \le 22\)</span> : 검사조건</li>
-<li><span class="math inline">\(3x_1 + 3x_2 \le 39\)</span> - 저장조건</li>
+<li><span class="math inline">\(3x_1 + 3x_2 \le 39\)</span> : 저장조건</li>
 </ul>
 </dd>
 <dt>비음조건</dt>
@@ -2496,7 +2523,7 @@ x_1 \ge 0, \ x_2 \ge 0
 </dd>
 <dt>상대적 중요도 설정</dt>
 <dd>
-인간은 관측한 사물 사이의 관계를 인식하고 유사한 사물들을 짝으로 묶어 특정 기준에 대하여 비교하고 그 짝의 구성 인자 사이의 선호도를 판단하는 능력을 소유하고 있다. 최종적으로 상상이나 논니적 과정을 통하여 그들이 내린 판단을 종합하여 전체 시스템에 대한 이래를 보다 강화한다. AHP 특징은 많은 의사결정 요소 간 가중치 또는 중요도(weight)를 간단한 <strong>쌍대비교(1:1)</strong>를 통해 산출해 내는데 있다.
+인간은 관측한 사물 사이의 관계를 인식하고 유사한 사물들을 짝으로 묶어 특정 기준에 대하여 비교하고 그 짝의 구성 인자 사이의 선호도를 판단하는 능력을 소유하고 있다. 최종적으로 상상이나 논리적 과정을 통하여 그들이 내린 판단을 종합하여 전체 시스템에 대한 이해를 보다 강화한다. AHP 특징은 많은 의사결정 요소 간 가중치 또는 중요도(weight)를 간단한 <strong>쌍대비교(1:1)</strong>를 통해 산출해 내는데 있다.
 </dd>
 <dt>논리적 일관성 유지</dt>
 <dd>
@@ -2545,7 +2572,7 @@ x_1 \ge 0, \ x_2 \ge 0
 <dt>기대성(expectation)</dt>
 <dd>
 <ul>
-<li>계층구조는 의사결정에 필요한 모든 사항들을 완전하게 포함하는 것을 가정한다. 즉 위사결정자의 합리적 기대에 부합하는 완전한 계측구조를 갖고 있어야 한다. 반면 수준 수가 많아 계층 구조가 깊으면 계산상 복잡성을 유발시키므로 일반적으로 3-7 수준으로 계층을 형성한다.</li>
+<li>계층구조는 의사결정에 필요한 모든 사항들을 완전하게 포함하는 것을 가정한다. 즉 의사결정자의 합리적 기대에 부합하는 완전한 계측구조를 갖고 있어야 한다. 반면 수준 수가 많아 계층 구조가 깊으면 계산상 복잡성을 유발시키므로 일반적으로 3-7 수준으로 계층을 형성한다.</li>
 </ul>
 </dd>
 </dl>
@@ -2721,10 +2748,6 @@ end
 </dl>
 <p>회수기간법은 다음과 같은 장단점을 갖는다.</p>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 45%">
-<col style="width: 45%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>장점</th>
@@ -2733,24 +2756,100 @@ end
 </thead>
 <tbody>
 <tr class="odd">
-<td><ul>
-<li><p>계산이 간단하고 이해하기 쉬움</p></li>
-<li><p>위험지표(risk indicator)로서 정보를 제공(즉, 회수기간이 짧을수록 안전한 투자안으로 볼 수 있음)</p></li>
-<li><p>간접적으로 유동성상태를 나타내 줌(회수기간이 짧을수록 빠른 자금회수로 기업 유동성이 증가)</p></li>
-<li><p>시설재의 내용수명 적정성을 평가하는 판단 기준(특히, 수요변화나 기술진부화 등의 위험이 높은 경우 유용)</p></li>
-</ul></td>
-<td><ul>
-<li><p>화폐의 시간적 가치를 무시</p></li>
-<li><p>회수기간 이후 현금흐름이 무시</p></li>
-<li><p>회수기간만을 고려하기 때문에 투자안 수익성 자체가 무시</p></li>
-<li><p>목표회수기간을 결정하는데 주관적임</p></li>
-<li><p>R&amp;D 투자안과 같은 장기투자안일수록 부정적인 편의가 심함</p></li>
-<li><p>투자안에 따라서는 회수기간이 존재하지 않을 수 있음</p></li>
-<li><p>목표회수기간 내에 회수되는 투자안이지만 NPV는 음(-)일 수 있음</p></li>
-</ul></td>
+<td>- 계산이 간단하고 이해하기</td>
+<td>- 화폐의 시간적 가치를 무시</td>
+</tr>
+<tr class="even">
+<td>쉬움</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>- 회수기간 이후 현금흐름이</td>
+</tr>
+<tr class="even">
+<td>- 위험지표(risk</td>
+<td>무시</td>
+</tr>
+<tr class="odd">
+<td>indicator)로서 정보를</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>제공(즉, 회수기간이</td>
+<td>- 회수기간만을 고려하기</td>
+</tr>
+<tr class="odd">
+<td>짧을수록 안전한 투자안으로</td>
+<td>때문에 투자안 수익성</td>
+</tr>
+<tr class="even">
+<td>볼 수 있음)</td>
+<td>자체가 무시</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>- 간접적으로 유동성상태를</td>
+<td>- 목표회수기간을 결정하는데</td>
+</tr>
+<tr class="odd">
+<td>나타내 줌(회수기간이</td>
+<td>주관적임</td>
+</tr>
+<tr class="even">
+<td>짧을수록 빠른 자금회수로</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>기업 유동성이 증가)</td>
+<td>- R&amp;D 투자안과 같은</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>장기투자안일수록 부정적인</td>
+</tr>
+<tr class="odd">
+<td>- 시설재의 내용수명 적정성을</td>
+<td>편의가 심함</td>
+</tr>
+<tr class="even">
+<td>평가하는 판단 기준(특히,</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>수요변화나 기술진부화 등의</td>
+<td>- 투자안에 따라서는</td>
+</tr>
+<tr class="even">
+<td>위험이 높은 경우 유용)</td>
+<td>회수기간이 존재하지 않을</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>수 있음</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>- 목표회수기간 내에 회수되는</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>투자안이지만 NPV는 음(-)일</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>수 있음</td>
 </tr>
 </tbody>
 </table>
+<p>+——————————–+——————————–+</p>
 <p><br></p>
 <p><strong>할인회수기간법(discounted payback period method)</strong>은 미래 현금유입의 현재가치로부터 투자원금을 회수하는데 소요되는 기간으로 투자의사결정을 하는 방법이다. 화폐의 시간가치가 감안되어 있으나 회수기간 이후의 현금흐름름이 무시된다는 단점이 여전히 존재한다.</p>
 <div class="callout callout-style-default callout-important no-icon callout-titled" title="예제">
@@ -2892,10 +2991,6 @@ end
 </dl>
 <p>회계적 이익률법은 다음과 같은 장단점을 갖는다.</p>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 48%">
-<col style="width: 48%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>장점</th>
@@ -2904,18 +2999,40 @@ end
 </thead>
 <tbody>
 <tr class="odd">
-<td><ul>
-<li><p>계산이 간편하고 이해하기가 용이</p></li>
-<li><p>회계자료를 바로 이용할 수 있어 편리</p></li>
-</ul></td>
-<td><ul>
-<li><p>화폐의 시간가치를 무시</p></li>
-<li><p>회계처리방법에 따라 순이익이 달라지므로 객관성이 떨어짐(예, 감가상각방법 차이)</p></li>
-<li><p>목표이익률 결정이 자의적</p></li>
-</ul></td>
+<td>- 계산이 간편하고 이해하기가</td>
+<td>- 화폐의 시간가치를 무시</td>
+</tr>
+<tr class="even">
+<td>용이</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>- 회계처리방법에 따라 순이익이</td>
+</tr>
+<tr class="even">
+<td>- 회계자료를 바로 이용할 수</td>
+<td>달라지므로 객관성이</td>
+</tr>
+<tr class="odd">
+<td>있어 편리</td>
+<td>떨어짐(예, 감가상각방법</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>차이)</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>- 목표이익률 결정이 자의적</td>
 </tr>
 </tbody>
 </table>
+<p>+———————————-+———————————-+</p>
 </section>
 </section>
 <section id="현금흐름할인법" class="level3">
@@ -3136,7 +3253,7 @@ IRR \approx 7.88
 <li>자본회수기간법(payoff or payback period) 기준 효과적인 평가안을 선택하시오.</li>
 </ol>
 <p><span class="math display">\[
-자본회수기간(년) = \frac{순투자액}{연가이익+감가상각비}
+자본회수기간(년) = \frac{순투자액}{연간이익+감가상각비}
 \]</span></p>
 <dl>
 <dt>A설비</dt>
