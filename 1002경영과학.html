@@ -3607,7 +3607,7 @@ MARR
 <dd>
 <ul>
 <li>NPV 수식 참고(<a href="#eq-npv" class="quarto-xref"><span>29.8</span></a>)</li>
-<li>투자안 검토 - <span class="math inline">\(A = [\frac{2470}{(1+0.2)^1} + ... + \frac{2470}{(1+0.2)^5}] - \frac{2470}{(1+0.2)^0} = 411.27\)</span>(만원) - <span class="math inline">\(B = [\frac{2310}{(1+0.2)^1} + ... + \frac{2310}{(1+0.2)^4}] - \frac{2310}{(1+0.2)^0} = 504.62\)</span>(만원)</li>
+<li>투자안 검토 - <span class="math inline">\(A = [\frac{2470}{(1+0.2)^1} + ... + \frac{2470}{(1+0.2)^5}] - \frac{2470}{(1+0.2)^0} = 411.27\)</span>(만원)$ - <span class="math inline">\(B = [\frac{2310}{(1+0.2)^1} + ... + \frac{2310}{(1+0.2)^4}] - \frac{2310}{(1+0.2)^0} = 504.62\)</span>(만원)$</li>
 <li>따라서 NPV가 큰 B기계 투자안이 효과적</li>
 </ul>
 </dd>
@@ -4029,18 +4029,41 @@ TRIZ는 로봇 시스템과 자동화 기술의 문제를 해결하는 데도 �
 </section>
 <section id="sec-dea" class="level3">
 <h3 class="anchored" data-anchor-id="sec-dea">DEA</h3>
-<p><strong>DEA</strong>(Data Envelopment Analysis)는 1978년 Charnes, Cooper, Rhodes에 의해 처음으로 제안되었으며, OR/M(Operations Research/Management, 운영과학/경영)에서 가장 널리 활용되는 방법 중 하나이다. 가장 큰 DEA 특징은 ‘<strong>과제 중심적 접근</strong>’과’<strong>중요한 과제에 추점</strong>’을 맞추어 DMU(Decision Making Units, 의사결정 단위) 성과를 평가한다는 점이다.</p>
+<p><strong>DEA</strong>(Data Envelopment Analysis)는 1978년 Charnes, Cooper, Rhodes에 의해 처음으로 제안되었으며, OR/M(Operations Research/Management, 운영과학/경영)에서 가장 널리 활용되는 방법 중 하나이다. 생산운영 관리와 경영과학분야에 있어 효율성을 측정하기 위해 사용되는 비모수적 방법이다. 주로 여러 개 투입(input)과 산출(output)을 가지는 동일한 유형의 의사결정단위(DMU, Deceision Making Unit) 간 상대적 효율성을 평가하는데 사용한다.</p>
 <dl>
-<dt>주요 특징 및 장점</dt>
+<dt>핵심개념</dt>
 <dd>
 <ul>
-<li>투입과 산출에 대한 관계설정이 필요 없음</li>
-<li>효율적 자원 배분이 가능</li>
-<li>비효율적인 개선 가능성을 도출할 수 있음</li>
-<li>벤치마킹 대상을 도출할 수 있음</li>
+<li>의사결정단위(DMU): 병원, 학교, 공장, 점포 등 비교 대상이 되는 동일 유형 조직이나 부서</li>
+<li>투입(input): 자원, 예산, 인력 등 DMU가 사용하는 것</li>
+<li>산출(output): 제푸 수, 고객 만족도, 이익 등 DMU가 만들어 내는 결과</li>
+<li>효율성(efficency): 산출/투입 비율로 계산되며, DEA는 이를 상대적 기준으로 평가함</li>
+</ul>
+</dd>
+<dt>주요 특징</dt>
+<dd>
+<ul>
+<li>수학적 최적화 모델을 기반으로 한 평가 도구</li>
+<li>비모수적 방법: 자료 분포나 함수 형태를 가정하지 않음</li>
+<li>상대적 효율성 측정: 가장 효율적인 DMU를 기준으로 다른 단위 효율성을 평가</li>
+</ul>
+</dd>
+<dt>예시</dt>
+<dd>
+5개 학교가 있고, 각 학교는 교사 수(투입)와 졸업생 수(산출)를 가지고 있다고 할 때, DEA는 가장 효율적으로 졸업생을 많이 배출한 학교를 기준으로 삼고, 다른 학교의 상대적 효율성을 계산
+</dd>
+<dt>주요 활용 분야</dt>
+<dd>
+<ul>
+<li>병원 간 서비스 효율 비교</li>
+<li>공공기간 성과 분석</li>
+<li>제조업체 생산성 비교</li>
+<li>교육기간 운영 효율 분석</li>
 </ul>
 </dd>
 </dl>
+<hr>
+<p><strong>각주</strong></p>
 
 
 </section>
