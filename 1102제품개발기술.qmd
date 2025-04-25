@@ -164,7 +164,7 @@ CE는 제품 개발과 그 제품을 생산하는 공정, 판매와 유통, 구�
 
 ![모듈러 설계, https://en.wikipedia.org/wiki/Modular_design](https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Framework_Laptop_-_the_Design_Museum.jpg/330px-Framework_Laptop_-_the_Design_Museum.jpg)  
   
-**모듈러 설계**(Modular Design)는 <font color="blue">호환성 있는 표준 모듈을 여러 가지로 다르게 결합하여 제품 다양성과 생산원가 절감, 두 가지를 동시에 달성하기 위한 제품설계 기법</font>이다. 여기서 **모듈**(Module)이란 <font color="blue">다수 부품으로 구성되어 있는 표준화된 중간 조립품</font>을 말한다. 모듈러 설계에서는 서로 다른 모듈이 결합되어 제품 하나가 구성되므로 제품 기본 단위는 모듈이 된다.
+**모듈러 설계**(Modular Design)는 <font color="blue">호환성 있는 표준 모듈을 여러 가지로 다르게 결합하여 제품 다양성과 생산원가 절감, 두 가지를 동시에 달성하기 위한 제품설계 기법</ffont>이다. 여기서 **모듈**(Module)이란 <font color="blue">다수 부품으로 구성되어 있는 표준화된 중간 조립품</font>을 말한다. 모듈러 설계에서는 서로 다른 모듈이 결합되어 제품 하나가 구성되므로 제품 기본 단위는 모듈이 된다.
 
 모듈러 설계는 재고관리, 구매관리, 생산관리 등 경영활동에 있어 복잡성을 줄이는 효과가 있다. 모듈러 설계 시 장단점은 다음과 같다.
 
@@ -557,7 +557,7 @@ flowchart TB
     - 재활용 및 재자원화 극대화
     - 자재나 제조공정 상 소모자원이나 오염물질 종류를 분석, 환경 평가
 
-제품에 대한 환경 전과정 영향평가(**LCA**, life cycle assessment)[^lca]와 총비용분석(**TCA**, total cost analysis)을 기초로 분해를 고려한 설계(**DfD**, design for disassembly)와 재활용을 고려한 설계(**DfR**, design for recycling), 회수 및 재사용을 고려한 설계(**DfR**, design for resue) 등을 주된 내용으로 하는 제품 설계기법이다.
+제품에 대한 환경 전과정 영향평가(**LCA**, life cycle assessment)[^lca]와 총비용분석(**TCA**, total cost analysis)을 기초로 분해를 고려한 설계(**DfD**, design for disassembly)와 재활용을 고려한 설계(**DfR**, design for recycling), 회수 및 재사용을 고려한 설계(**DfR**, design for reuse) 등을 주된 내용으로 하는 제품 설계기법이다.
 
 [^lca]: **LCA**(Life Cycle Assessment, 환경전과정평가)는 제품 및 서비스의 원료 채취부터 제조, 유통, 사용 및 폐기에 이르기까지 전과정에 걸친 환경 영향을 정량적으로 분석・평가하는 방법이다.
 
@@ -768,3 +768,6 @@ BPR의 적용 사례
 
 BPR은 조직 비지니스 프로세스를 근본적으로 재설계하여 효율성과 경쟁력을 극대화하는 방법론이다. 하지만 높은 비용과 리스크가 따를 수 있기 때문에 신중하게 접근해야 하며, 성공적인 실행을 위해서는 조직 전체가 협력하고 철저한 계획을 수립해야 한다.
 
+----
+
+**각주**
