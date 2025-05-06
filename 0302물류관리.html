@@ -460,13 +460,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#sec-logistic-5-functions" id="toc-sec-logistic-5-functions" class="nav-link active" data-scroll-target="#sec-logistic-5-functions">물류 5대 기능</a></li>
-  <li><a href="#sec-wms" id="toc-sec-wms" class="nav-link" data-scroll-target="#sec-wms">WMS</a>
-  <ul class="collapse">
-  <li><a href="#수불관리-입출고-관리" id="toc-수불관리-입출고-관리" class="nav-link" data-scroll-target="#수불관리-입출고-관리">수불관리 (입출고 관리)</a></li>
-  <li><a href="#재고관리" id="toc-재고관리" class="nav-link" data-scroll-target="#재고관리">재고관리</a></li>
-  <li><a href="#설비보전관리" id="toc-설비보전관리" class="nav-link" data-scroll-target="#설비보전관리">설비보전관리</a></li>
-  <li><a href="#운송관리" id="toc-운송관리" class="nav-link" data-scroll-target="#운송관리">운송관리</a></li>
-  </ul></li>
+  <li><a href="#sec-wms" id="toc-sec-wms" class="nav-link" data-scroll-target="#sec-wms">WMS</a></li>
   <li><a href="#sec-uls" id="toc-sec-uls" class="nav-link" data-scroll-target="#sec-uls">유닛로드시스템</a></li>
   <li><a href="#sec-as-rs" id="toc-sec-as-rs" class="nav-link" data-scroll-target="#sec-as-rs">AS/RS</a></li>
   <li><a href="#sec-order-picking" id="toc-sec-order-picking" class="nav-link" data-scroll-target="#sec-order-picking">오더피킹</a></li>
@@ -563,7 +557,7 @@ style 10 stroke-dasharray: 5 5
 <dl>
 <dt>하역 (Handling)</dt>
 <dd>
-하역은 <font color="blue">제품이나 자재를 이동 수단에서 내리고, 보관하거나 운송하기 위해 다시 올리는 작업</font>이다. 하역은 물류 과정에서 물품의 손상을 방지하고, 효율적인 이동을 도와주는 중요한 과정이다. 하역 작업에는 제품의 종류에 따라 다양한 장비가 사용되며, 고도화된 기술을 통해 효율성을 높인다(<span class="quarto-unresolved-ref">?sec-unit-load</span>, <a href="#sec-cross-docking" class="quarto-xref"><span>크로스 도킹</span></a> 참고).
+하역은 <font color="blue">제품이나 자재를 이동 수단에서 내리고, 보관하거나 운송하기 위해 다시 올리는 작업</font>이다. 하역은 물류 과정에서 물품의 손상을 방지하고, 효율적인 이동을 도와주는 중요한 과정이다. 하역 작업에는 제품의 종류에 따라 다양한 장비가 사용되며, 고도화된 기술을 통해 효율성을 높인다(<a href="#sec-uls" class="quarto-xref"><span>유닛로드시스템</span></a>, <a href="#sec-cross-docking" class="quarto-xref"><span>크로스 도킹</span></a> 참고).
 </dd>
 </dl>
 <ul>
@@ -631,150 +625,91 @@ Tip&nbsp;9.1 TMS
 </section>
 <section id="sec-wms" class="level2">
 <h2 class="anchored" data-anchor-id="sec-wms">WMS</h2>
-<p><strong>WMS</strong>(Warehouse Management System, 창고관리체계)는 창고의 효율적인 운영과 관리를 위해 필요한 시스템이다. WMS는 <font color="blue">물류의 최적화와 효율화를 지원</font>하는 여러 핵심 모듈을 포함하고 있다.</p>
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart TB
+<p><strong>WMS(Warehouse Management System)</strong>는 창고나 물류센터 내의 재고, 입출고, 피킹, 적재, 이동 등을 체계적으로 관리하여 운영 효율성을 극대화하는 소프트웨어 시스템이다.</p>
+<dl>
+<dt>WMS의 목적</dt>
+<dd>
+<ul>
+<li><strong>재고 정확도 향상</strong>: 실시간 재고 현황 파악 및 과잉·부족 재고 방지</li>
+</ul>
+</dd>
+</dl>
+<ul>
+<li><p><strong>작업 효율성 개선</strong>: 입고부터 출고까지 프로세스 자동화로 인한 작업시간 단축</p></li>
+<li><p><strong>운영 가시성 확보</strong>: KPI, 리포트, 대시보드를 통한 현황 파악</p></li>
+<li><p><strong>고객 서비스 향상</strong>: 주문 정확도와 신속한 출하로 고객 만족도 제고</p></li>
+</ul>
+<dl>
+<dt>WMS의 구성</dt>
+<dd>
+<ul>
+<li><strong>입고 관리 모듈</strong>: 입고 예약, 검수, 라벨링, 로케이션 배정</li>
+</ul>
+</dd>
+</dl>
+<ul>
+<li><p><strong>재고 관리 모듈</strong>: 실시간 재고 파악, 로케이션 이동, 유효기간 관리</p></li>
+<li><p><strong>피킹/패킹 모듈</strong>: 주문에 맞는 최적 경로 피킹, 포장, 출고 처리</p></li>
+<li><p><strong>출고 관리 모듈</strong>: 출하 검수, 송장 생성, 차량 배차 등</p></li>
+<li><p><strong>인터페이스 모듈</strong>: ERP, TMS, MES 등 타 시스템과 연동</p></li>
+</ul>
+<dl>
+<dt>WMS의 주요 특징</dt>
+<dd>
+<ul>
+<li><strong>실시간 데이터 기반 운영</strong>: PDA, 스캐너, IoT 센서 등을 통한 실시간 재고 상태 파악</li>
+</ul>
+</dd>
+</dl>
+<ul>
+<li><p><strong>로케이션 기반 재고관리</strong>: 창고 내 특정 위치 단위로 재고 추적 가능</p></li>
+<li><p><strong>사용자 권한 관리</strong>: 담당자별 권한에 따른 기능 접근 통제</p></li>
+<li><p><strong>유연한 커스터마이징</strong>: 기업의 물류 환경에 따라 다양한 프로세스 설정 가능</p></li>
+<li><p><strong>자동화 장비 연동</strong>: AGV, 컨베이어, 로봇팔 등 자동화 설비와 통합 운영 가능</p></li>
+</ul>
+<dl>
+<dt>장점</dt>
+<dd>
+<ul>
+<li><strong>재고 정확도 향상</strong>: 오차 없는 재고 관리 가능</li>
+</ul>
+</dd>
+</dl>
+<ul>
+<li><p><strong>업무 속도 및 효율 향상</strong>: 피킹 및 출고 작업의 표준화와 자동화</p></li>
+<li><p><strong>운영비용 절감</strong>: 인건비, 재고 유지비용 감소</p></li>
+<li><p><strong>고객 만족도 향상</strong>: 정확하고 빠른 납기 대응</p></li>
+</ul>
+<dl>
+<dt>단점</dt>
+<dd>
+<ul>
+<li><strong>초기 도입 비용 부담</strong>: 시스템 구축, 교육, 장비 비용이 높을 수 있음</li>
+</ul>
+</dd>
+</dl>
+<ul>
+<li><p><strong>운영 복잡도 증가</strong>: 기존 수작업 시스템 대비 초기 운영 난이도 상승</p></li>
+<li><p><strong>시스템 장애 리스크</strong>: 시스템 다운 시 전체 물류 운영에 차질 발생 가능</p></li>
+</ul>
+<p>적용 사례</p>
+<p>: - <strong>제조업체 A사</strong></p>
+<pre><code>- **도입 배경**: 납기 지연 및 재고 정확도 문제
 
-00[WMS 기능]
-10["수불관리"]
-20["재고관리"]
-30["설비보전관리"]
-40["운송관리"]
-
-00 --- 40 &amp; 30 &amp; 20 &amp; 10
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/wms.png" class="img-fluid figure-img"></p>
-<figcaption>WMS기능</figcaption>
-</figure>
-</div>
-<section id="수불관리-입출고-관리" class="level3">
-<h3 class="anchored" data-anchor-id="수불관리-입출고-관리">수불관리 (입출고 관리)</h3>
-<dl>
-<dt>정보화 관점</dt>
-<dd>
+- **적용 효과**: 실시간 재고 파악, 출고 실수율 40% 감소, 납기 준수율 95% 달성</code></pre>
 <ul>
-<li>수불관리는 <font color="blue">창고에 들어오는 물품과 나가는 물품을 관리</font>하는 핵심 기능으로, 시스템은 입고, 출고, 이동 등의 과정을 자동화하여 실시간으로 기록하고 추적</li>
-<li>RFID, 바코드, QR 코드 등의 기술을 활용하여 입출고 데이터를 정확하게 기록하고, 실시간으로 재고 상태를 파악</li>
-<li>입출고 작업의 효율성을 높이고, 오류를 줄이는 데 도움</li>
-</ul>
-</dd>
-<dt>개선방향</dt>
-<dd>
+<li><p><strong>이커머스 물류센터 B사</strong></p>
 <ul>
-<li><strong>자동화 확대</strong><br>
-로봇 및 드론을 활용한 자동화 시스템을 도입하여 입출고 작업의 속도와 정확도 향상</li>
-<li><strong>데이터 통합</strong><br>
-<a href="1101정보화활용기술.html#sec-erp" class="quarto-xref"><span>ERP</span></a>과 <a href="#sec-wms" class="quarto-xref"><span>WMS</span></a>를 통합하여 전사적인 물류 흐름을 실시간으로 추적하고, 재고와 주문 정보를 일관되게 관리</li>
-<li><strong>AI 및 예측 분석</strong><br>
-AI 기반의 예측 분석을 통해 수요 변화를 예측하고 입출고 계획을 최적화</li>
-</ul>
-</dd>
-</dl>
-</section>
-<section id="재고관리" class="level3">
-<h3 class="anchored" data-anchor-id="재고관리">재고관리</h3>
-<dl>
-<dt>정보화 관점</dt>
-<dd>
+<li><p><strong>도입 배경</strong>: 하루 수만 건의 주문 처리로 인한 혼선</p></li>
+<li><p><strong>적용 효과</strong>: AI 기반 피킹 최적화, 평균 출고시간 30% 단축</p></li>
+</ul></li>
+<li><p><strong>글로벌 식품 유통기업 C사</strong></p>
 <ul>
-<li>재고관리는 <font color="blue">창고에 보관된 제품의 정확한 수량과 위치를 파악하고, 재고 회전율을 관리하는 기능</font></li>
-<li><a href="1101정보화활용기술.html#sec-rfid" class="quarto-xref"><span>RFID</span></a>, 바코드, GPS 등을 통해 실시간 재고 정보를 관리하며, 재고의 과잉 또는 부족을 예방</li>
-<li>이 시스템은 재고의 실시간 추적 및 정확성을 보장하고, <font color="blue">재고 불일치를 최소화</font></li>
+<li><p><strong>도입 배경</strong>: 유통기한 관리 및 다국적 재고 통합 문제</p></li>
+<li><p><strong>적용 효과</strong>: 바코드 스캔 기반의 유효기간 관리, 폐기율 25% 감소</p></li>
+</ul></li>
 </ul>
-</dd>
-<dt>개선방향</dt>
-<dd>
-<ul>
-<li><strong>실시간 재고 추적</strong><br>
-<a href="1101정보화활용기술.html#sec-iot" class="quarto-xref"><span>IoT</span></a> 기술을 활용하여 각 제품의 실시간 위치와 상태를 추적하고, 재고 관리의 정확도 향상</li>
-<li><strong>자동화된 재고 조정</strong><br>
-자동화된 시스템을 통해 재고가 일정 수준 이하로 떨어지면 자동으로 보충 주문을 실행하는 시스템을 구축</li>
-<li><strong>데이터 분석 활용</strong><br>
-재고 데이터를 분석하여 재고 회전율을 최적화하고, 재고 비용을 절감</li>
-</ul>
-</dd>
-</dl>
-</section>
-<section id="설비보전관리" class="level3">
-<h3 class="anchored" data-anchor-id="설비보전관리">설비보전관리</h3>
-<dl>
-<dt>정보화 관점</dt>
-<dd>
-<ul>
-<li>설비보전관리는 <font color="blue">창고 내 설비들의 유지보수 및 수리 일정을 관리하는 모듈</font>로 설비의 고장 예방과 효율적인 운영을 위해 중요한 역할</li>
-<li>WMS와 통합된 설비보전 시스템은 설비의 상태를 모니터링하고, 고장이 발생하기 전에 예측하여 보수를 진행할 수 있게 도움</li>
-<li>이 시스템은 예측 보수(<a href="0602설비보전관리.html#sec-pm" class="quarto-xref"><span>설비보전</span></a>, Predictive Maintenance) 기능을 제공하여 설비의 수명을 연장하고, <font color="blue">고장으로 인한 다운타임을 최소화</font></li>
-</ul>
-</dd>
-<dt>개선방향</dt>
-<dd>
-<ul>
-<li><strong>IoT 기반의 실시간 모니터링</strong><br>
-IoT 기술을 활용하여 설비의 상태를 실시간으로 모니터링하고, 이상 징후를 조기에 감지하여 예기치 않은 고장을 사전 방지</li>
-<li><strong>예측 보수 시스템</strong><br>
-빅데이터와 AI를 이용해 설비의 고장을 예측하고, 사전 보수를 자동으로 예약하여 다운타임을 최소화</li>
-<li><strong>통합 유지보수 시스템</strong><br>
-WMS와 설비보전 관리 시스템을 통합하여 유지보수 기록을 관리하고, 설비의 수명 주기 및 관리 효율성을 향상</li>
-</ul>
-</dd>
-</dl>
-</section>
-<section id="운송관리" class="level3">
-<h3 class="anchored" data-anchor-id="운송관리">운송관리</h3>
-<dl>
-<dt>정보화 관점</dt>
-<dd>
-<ul>
-<li>운송관리는 <font color="blue">창고에서 물품을 출고하여 목적지까지 배송하는 과정을 관리</font>하는 모듈로 WMS와 TMS(<a href="#nte-tms" class="quarto-xref">Note&nbsp;<span>9.1</span></a>, Transport Management System)가 연계되어 운송 계획, 스케줄, 배송 경로 등을 최적화</li>
-<li>실시간 GPS 추적 및 데이터 분석을 통해 운송 경로와 시간을 최적화하고, 운송 비용을 절감</li>
-<li>이 시스템은 물류의 흐름을 관리하며, 주문 상태 및 배송 현황을 실시간으로 파악</li>
-</ul>
-</dd>
-<dt>개선방향</dt>
-<dd>
-<ul>
-<li><strong>운송 경로 최적화</strong><br>
-AI 기반의 경로 최적화 시스템을 도입하여 물품의 운송 경로를 효율적으로 계획하고, 시간과 비용을 절감</li>
-<li><strong>통합 물류 관리</strong><br>
-WMS와 TMS를 통합하여 창고와 운송의 데이터를 일관되게 관리하고, 물류 흐름을 실시간으로 모니터링</li>
-<li><strong>배차 시스템 개선</strong><br>
-운송 차량의 효율적인 배차 시스템을 통해 자원의 낭비를 줄이고, 운송 효율을 향상</li>
-</ul>
-</dd>
-</dl>
-<p>WMS 종합 개선방향을 정리하면 다음과 같다.</p>
-<ul>
-<li><dl>
-<dt><strong>모듈 통합</strong></dt>
-<dd>
-WMS와 <a href="1101정보화활용기술.html#sec-erp" class="quarto-xref"><span>ERP</span></a>, <a href="#nte-tms" class="quarto-xref">TMS&nbsp;<span>9.1</span></a>, 설비보전 시스템을 통합하여 물류의 흐름과 데이터를 일관되게 관리한다. 이를 통해 정보의 중복을 줄이고, 효율성을 향상한다.
-</dd>
-</dl></li>
-<li><dl>
-<dt><strong>자동화 및 IoT 기술 도입</strong></dt>
-<dd>
-입출고, 재고 관리, 설비 모니터링, 운송 과정에서 자동화와 <a href="1101정보화활용기술.html#sec-iot" class="quarto-xref"><span>IoT</span></a> 기술을 도입하여 실시간 데이터를 기반으로 빠르고 정확한 의사결정한다.
-</dd>
-</dl></li>
-<li><dl>
-<dt><strong>AI 및 빅데이터 활용</strong></dt>
-<dd>
-<a href="1101정보화활용기술.html#sec-ai" class="quarto-xref"><span>인공지능(AI)</span></a>와 <a href="1101정보화활용기술.html#sec-bigdata" class="quarto-xref"><span>빅데이터</span></a>를 활용하여 예측 분석을 통해 물류를 최적화하고, 미래의 수요와 트렌드를 미리 예측하여 대응한다.
-</dd>
-</dl></li>
-</ul>
-<p>이러한 정보화 기반의 개선 방향을 통해 WMS의 효율성을 극대화하고, 전체 물류 시스템의 성능을 향상시킬 수 있다.</p>
+<p>WMS는 단순한 창고관리 소프트웨어가 아닌, <strong>공급망 전체의 효율성과 고객 서비스를 동시에 강화</strong>할 수 있는 전략적 시스템이다. 특히 스마트팩토리, 자동화 물류, AI 기반 수요예측 시스템 등과 연계되면 시너지가 더욱 커진다.</p>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 100-4-4">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -788,7 +723,6 @@ WMS와 <a href="1101정보화활용기술.html#sec-erp" class="quarto-xref"><spa
 
 </div>
 </div>
-</section>
 </section>
 <section id="sec-uls" class="level2">
 <h2 class="anchored" data-anchor-id="sec-uls">유닛로드시스템</h2>
@@ -861,13 +795,42 @@ WMS와 <a href="1101정보화활용기술.html#sec-erp" class="quarto-xref"><spa
 <h2 class="anchored" data-anchor-id="sec-as-rs">AS/RS</h2>
 <p>AS/RS(자동 창고 및 반출 시스템, Automated Storage and Retrieval System)는 <font color="blue">물류 및 창고 관리에서 자동화된 저장 및 회수 작업을 수행하는 시스템</font>이다. 로봇, 컨베이어, 리프트 등의 기계를 활용하여 물품을 자동으로 입·출고하며, 물류 효율성을 극대화하는 데 사용된다.</p>
 <dl>
+<dt>목적</dt>
+<dd>
+<ul>
+<li><strong>공간 효율 극대화</strong>: 수직 구조 활용으로 저장 용량 증가</li>
+</ul>
+</dd>
+</dl>
+<ul>
+<li><p><strong>입출고 자동화</strong>: 사람 개입 없이 정확하고 빠른 자재 이동 가능</p></li>
+<li><p><strong>작업 안전성 향상</strong>: 고소작업, 중량물 처리에서의 안전성 확보</p></li>
+<li><p><strong>물류 정확성 향상</strong>: 재고 위치와 이동 기록 자동 추적</p></li>
+<li><p><strong>인건비 절감</strong>: 수작업 최소화로 인력 운용 효율화</p></li>
+</ul>
+<dl>
+<dt>주요 구성요소</dt>
+<dd>
+<ul>
+<li><strong>랙(Rack)</strong>: 자재를 저장하는 구조물. 일반적으로 수직 구조</li>
+</ul>
+</dd>
+</dl>
+<ul>
+<li><p><strong>S/R 머신(Storage &amp; Retrieval Machine)</strong>: 레일을 따라 이동하며 자재를 자동으로 저장하거나 회수하는 장비</p></li>
+<li><p><strong>컨베이어/엘리베이터</strong>: 입출고 구역과 연결되어 자재를 수송</p></li>
+<li><p><strong>컨트롤러/PLC</strong>: 기계 제어 및 작업 지시 수행</p></li>
+<li><p><strong>WMS 또는 WCS</strong>: 재고 정보와 입출고 명령을 관리하는 소프트웨어 시스템</p></li>
+</ul>
+<dl>
 <dt>주요 특징</dt>
 <dd>
 <ul>
-<li><strong>자동화</strong>: 사람이 직접 개입하지 않고 기계를 통해 입고 및 출고 작업 수행</li>
-<li><strong>고밀도 저장</strong>: 창고 공간을 최적화하여 높은 밀도로 제품 저장 가능</li>
-<li><strong>속도 향상</strong>: 물품 검색 및 반출 시간이 단축됨</li>
-<li><strong>정확성 증가</strong>: 오류를 최소화하여 물류 운영의 신뢰성 향상</li>
+<li><strong>고밀도 저장 구조</strong>: 한정된 공간에 최대한 많은 재고 적재 가능</li>
+<li><strong>고속 입출고 처리</strong>: S/R 머신, 셔틀 등이 자동으로 빠르게 이동</li>
+<li><strong>정확한 재고 추적</strong>: WMS와 연동되어 재고 위치 실시간 파악</li>
+<li><strong>무인 운영 가능</strong>: 야간, 무인 시간대에도 운영 가능</li>
+<li><strong>다양한 물류 시스템 연동</strong>: 컨베이어, 로봇, TMS, MES 등과 통합 운영</li>
 </ul>
 </dd>
 <dt>AS/RS의 유형</dt>
@@ -879,26 +842,30 @@ WMS와 <a href="1101정보화활용기술.html#sec-erp" class="quarto-xref"><spa
 </colgroup>
 <thead>
 <tr class="header">
-<th>유형</th>
+<th>구분</th>
 <th>설명</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>Unit-Load AS/RS</strong></td>
-<td>팔레트 단위의 대형 화물을 취급하는 시스템</td>
+<td><strong>Unit Load AS/RS</strong></td>
+<td>팔레트 단위의 대형 화물 저장용. 주로 제조업에서 사용</td>
 </tr>
 <tr class="even">
-<td><strong>Mini-Load AS/RS</strong></td>
-<td>소형 박스나 컨테이너 단위의 물품을 취급하는 시스템</td>
+<td><strong>Mini Load AS/RS</strong></td>
+<td>박스나 소형 부품 단위 저장용. 부품창고나 전자업체에 적합</td>
 </tr>
 <tr class="odd">
-<td><strong>Carousel AS/RS</strong></td>
-<td>회전형 선반을 이용해 물품을 자동으로 가져오는 방식</td>
+<td><strong>Shuttle-based AS/RS</strong></td>
+<td>셔틀이 랙 사이를 횡단하면서 입출고 수행. 속도와 유연성이 우수</td>
 </tr>
 <tr class="even">
-<td><strong>Vertical Lift Module (VLM)</strong></td>
-<td>수직 공간을 활용하여 트레이를 자동으로 이동시키는 방식</td>
+<td><strong>Carousel AS/RS</strong></td>
+<td>수평 또는 수직 회전식. 공간 제약 있는 환경에서 효과적</td>
+</tr>
+<tr class="odd">
+<td><strong>Autostore (Bin-based)</strong></td>
+<td>고정된 셀에 상자를 저장하고 로봇이 상단에서 입출고 수행</td>
 </tr>
 </tbody>
 </table>
@@ -907,23 +874,42 @@ WMS와 <a href="1101정보화활용기술.html#sec-erp" class="quarto-xref"><spa
 <p>AS/RS의 장단점은 다음과 같다.</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
 </colgroup>
 <thead>
 <tr class="header">
 <th>구분</th>
-<th>내용</th>
+<th>장점</th>
+<th>단점</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>장점</strong></td>
-<td>- 공간 활용 극대화 <br>- 인건비 절감 <br>- 작업 속도 향상 <br>- 재고 관리 정확성 증가</td>
+<td><strong>공간 활용</strong></td>
+<td>수직 적재로 창고 공간 극대화</td>
+<td>건물 구조 제한이 있을 경우 설치 어려움</td>
 </tr>
 <tr class="even">
-<td><strong>단점</strong></td>
-<td>- 초기 투자 비용이 높음 <br>- 유지보수 비용 부담 <br>- 특정 제품군에 적합 (유연성 제한)</td>
+<td><strong>운영 효율</strong></td>
+<td>자동화로 작업속도 및 정확도 향상</td>
+<td>초기 도입 비용이 매우 높음</td>
+</tr>
+<tr class="odd">
+<td><strong>인력 운용</strong></td>
+<td>인건비 절감, 안전사고 감소</td>
+<td>유지보수 및 전문 인력 필요</td>
+</tr>
+<tr class="even">
+<td><strong>재고 관리</strong></td>
+<td>실시간 위치 추적 및 FIFO 운영 가능</td>
+<td>정전, 시스템 장애 시 전체 운영 차질 가능</td>
+</tr>
+<tr class="odd">
+<td><strong>스마트화 연계</strong></td>
+<td>WMS, ERP, MES 등과 통합 용이</td>
+<td>시스템 커스터마이징 시 복잡성 증가</td>
 </tr>
 </tbody>
 </table>
@@ -931,12 +917,33 @@ WMS와 <a href="1101정보화활용기술.html#sec-erp" class="quarto-xref"><spa
 <dt>적용 사례</dt>
 <dd>
 <ul>
-<li><strong>제조업 창고</strong>: 원자재 및 부품 보관, 조립라인 연계</li>
-<li><strong>전자상거래 물류센터</strong>: 소형 박스 및 개별 상품 자동 분류 및 출고</li>
-<li><strong>식품 및 의약품 창고</strong>: 온도 조절 및 정밀한 재고 관리 필요</li>
+<li><strong>전자부품 제조업체 A사</strong></li>
+<li><strong>적용 유형</strong>: Mini Load AS/RS</li>
+<li><strong>효과</strong>:
+<ul>
+<li>부품 적재 효율 40% 향상<br>
+</li>
+<li>부품 피킹 정확도 99.8% 달성</li>
+</ul></li>
 </ul>
 </dd>
 </dl>
+<ul>
+<li><strong>글로벌 물류기업 B사</strong>
+<ul>
+<li><strong>적용 유형</strong>: Shuttle-based AS/RS</li>
+<li><strong>효과</strong>:
+<ul>
+<li>입출고 속도 2배 향상</li>
+<li>야간 무인 피킹 운영 가능</li>
+</ul></li>
+</ul></li>
+<li><strong>의약품 물류센터 C사</strong>
+<ul>
+<li><strong>적용 유형</strong>: Autostore</li>
+<li><strong>효과</strong>: - 유효기간 기반 재고 자동 회전 - 공간 대비 보관량 4배 이상 증가</li>
+</ul></li>
+</ul>
 <p>AS/RS는 대량 물류 처리 및 높은 정밀도가 요구되는 환경에서 특히 효과적인 시스템으로, 최신 물류 자동화 기술과 결합하여 점점 발전하고 있다.</p>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 106-2-2">
 <div class="callout-header d-flex align-content-center">
