@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.29">
+<meta name="generator" content="quarto-1.7.30">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -41,7 +41,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-0815c480559380816a4d1ea211a47e91.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-de070a7b0ab54f8780927367ac907214.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-90a33d8323c06b9d241570da6711a1f6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -489,7 +489,7 @@ window.Quarto = {
    
   <ul>
   <li><a href="#sec-invenory-management" id="toc-sec-invenory-management" class="nav-link active" data-scroll-target="#sec-invenory-management">재고관리</a>
-  <ul>
+  <ul class="collapse">
   <li><a href="#재고관리-개요" id="toc-재고관리-개요" class="nav-link" data-scroll-target="#재고관리-개요">재고관리 개요</a></li>
   <li><a href="#재고-기능" id="toc-재고-기능" class="nav-link" data-scroll-target="#재고-기능">재고 기능</a></li>
   <li><a href="#재고-삭감-효과" id="toc-재고-삭감-효과" class="nav-link" data-scroll-target="#재고-삭감-효과">재고 삭감 효과</a></li>
@@ -499,30 +499,24 @@ window.Quarto = {
   <li><a href="#수요-종류" id="toc-수요-종류" class="nav-link" data-scroll-target="#수요-종류">수요 종류</a></li>
   </ul></li>
   <li><a href="#재고관리-모형" id="toc-재고관리-모형" class="nav-link" data-scroll-target="#재고관리-모형">재고관리 모형</a>
-  <ul>
+  <ul class="collapse">
   <li><a href="#확정적-재고관리-모형" id="toc-확정적-재고관리-모형" class="nav-link" data-scroll-target="#확정적-재고관리-모형">확정적 재고관리 모형</a></li>
   <li><a href="#확률적-재고관리-모형" id="toc-확률적-재고관리-모형" class="nav-link" data-scroll-target="#확률적-재고관리-모형">확률적 재고관리 모형</a></li>
-  <li><a href="#기타-재고관리-모형" id="toc-기타-재고관리-모형" class="nav-link" data-scroll-target="#기타-재고관리-모형">기타 재고관리 모형</a>
-  <ul class="collapse">
-  <li><a href="#sec-abc" id="toc-sec-abc" class="nav-link" data-scroll-target="#sec-abc">ABC 모형</a></li>
-  <li><a href="#sec-two-bin" id="toc-sec-two-bin" class="nav-link" data-scroll-target="#sec-two-bin">투빈(Two Bin) 시스템</a></li>
-  <li><a href="#정량발주방식과-정기발주방식" id="toc-정량발주방식과-정기발주방식" class="nav-link" data-scroll-target="#정량발주방식과-정기발주방식">정량발주방식과 정기발주방식</a></li>
-  <li><a href="#min-max-시스템" id="toc-min-max-시스템" class="nav-link" data-scroll-target="#min-max-시스템">min-Max 시스템</a></li>
-  </ul></li>
+  <li><a href="#기타-재고관리-모형" id="toc-기타-재고관리-모형" class="nav-link" data-scroll-target="#기타-재고관리-모형">기타 재고관리 모형</a></li>
   </ul></li>
   <li><a href="#sec-inventory-cost-kpi" id="toc-sec-inventory-cost-kpi" class="nav-link" data-scroll-target="#sec-inventory-cost-kpi">재고 비용 및 재고 성과 척도</a>
-  <ul>
+  <ul class="collapse">
   <li><a href="#재고-관리-척도" id="toc-재고-관리-척도" class="nav-link" data-scroll-target="#재고-관리-척도">재고 관리 척도</a></li>
   </ul></li>
   <li><a href="#공급업체-재고-관리" id="toc-공급업체-재고-관리" class="nav-link" data-scroll-target="#공급업체-재고-관리">공급업체 재고 관리</a>
-  <ul>
+  <ul class="collapse">
   <li><a href="#sec-vmi" id="toc-sec-vmi" class="nav-link" data-scroll-target="#sec-vmi">VMI</a></li>
   <li><a href="#sec-cmi" id="toc-sec-cmi" class="nav-link" data-scroll-target="#sec-cmi">CMI</a></li>
   <li><a href="#sec-cpfr" id="toc-sec-cpfr" class="nav-link" data-scroll-target="#sec-cpfr">CPFR</a></li>
   <li><a href="#sec-cock" id="toc-sec-cock" class="nav-link" data-scroll-target="#sec-cock">COCK</a></li>
   </ul></li>
   <li><a href="#sec-ref-0401" id="toc-sec-ref-0401" class="nav-link" data-scroll-target="#sec-ref-0401">참고자료</a>
-  <ul>
+  <ul class="collapse">
   <li><a href="#sec-crp" id="toc-sec-crp" class="nav-link" data-scroll-target="#sec-crp">CRP</a></li>
   <li><a href="#sec-product-availability" id="toc-sec-product-availability" class="nav-link" data-scroll-target="#sec-product-availability">제품가용성</a></li>
   </ul></li>
