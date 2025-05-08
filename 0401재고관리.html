@@ -44,7 +44,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-de070a7b0ab54f8780927367ac907214.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-90a33d8323c06b9d241570da6711a1f6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-a45fae88b3c51a1900839b9f9bc354d5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -488,7 +488,7 @@ window.Quarto = {
     <h2 id="toc-title">목차</h2>
    
   <ul>
-  <li><a href="#sec-invenory-management" id="toc-sec-invenory-management" class="nav-link active" data-scroll-target="#sec-invenory-management">재고관리</a>
+  <li><a href="#sec-inventory-management" id="toc-sec-inventory-management" class="nav-link active" data-scroll-target="#sec-inventory-management">재고관리</a>
   <ul class="collapse">
   <li><a href="#재고관리-개요" id="toc-재고관리-개요" class="nav-link" data-scroll-target="#재고관리-개요">재고관리 개요</a></li>
   <li><a href="#재고-기능" id="toc-재고-기능" class="nav-link" data-scroll-target="#재고-기능">재고 기능</a></li>
@@ -582,8 +582,8 @@ style 재고관리 fill:#EEF
 
 </div>
 </div>
-<section id="sec-invenory-management" class="level2">
-<h2 class="anchored" data-anchor-id="sec-invenory-management">재고관리</h2>
+<section id="sec-inventory-management" class="level2">
+<h2 class="anchored" data-anchor-id="sec-inventory-management">재고관리</h2>
 <p><strong>재고</strong>란 조직에서 <font color="blue">판매를 목적으로 보관중인 물품이나 자원</font>으로, 많이 보유하면 빠르게 시장에 대응할 수 있고 재고주문비용이나 생산준비비용이 절감되지만, 재고 저장 비용이나 이자비용, 기회비용이 증가하는 문제점이 발생한다.</p>
 <section id="재고관리-개요" class="level3">
 <h3 class="anchored" data-anchor-id="재고관리-개요">재고관리 개요</h3>
@@ -1270,31 +1270,289 @@ EOQ 항목 계산
 확률적 모델은 수요 변동성과 리드 타임의 불확실성에 대비하기 위해 <font color="blue"><strong>안전 재고</strong></font>를 설정하는 등 리스크를 관리하는 방법을 포함한다.</li>
 </ul>
 </dd>
-<dt>주요 모형</dt>
+</dl>
+<p>확률적 재고 모형 중 대표적인 <strong>뉴스밴더 모형(Newsvendor Model)</strong>과 <strong>베이스스톡 모형(Base Stock Model)</strong>은 재고 관리에서 수요가 불확실할 때 최적의 주문량 또는 재고 수준을 결정하는 데 사용되는 핵심 모델이다. 아래에서 각각의 개념과 특징을 정리하고, 예제와 함께 비교하면 다음과 같다.</p>
+<section id="뉴스밴더-모형-newsvendor-model" class="level4">
+<h4 class="anchored" data-anchor-id="뉴스밴더-모형-newsvendor-model">뉴스밴더 모형 (Newsvendor Model)</h4>
+<dl>
+<dt>개념</dt>
 <dd>
 <ul>
-<li><font color="blue"><strong>뉴스벤더 모형 (Newsvendor Model)</strong></font>
+<li>단일 기간(one-period), 단일 주문의 재고 문제를 다룸.</li>
+<li>한 번의 주문으로 끝나는 상황(예: 신문, 도시락, 시즌 상품 등)에 적합.</li>
+<li>수요는 확률적이며, 실제 수요보다 많이 주문하면 <strong>초과 비용(overage cost)</strong>, 적게 주문하면 <strong>기회 비용(underage cost)</strong>이 발생.</li>
+</ul>
+</dd>
+<dt>목적</dt>
+<dd>
 <ul>
-<li>불확실한 수요와 공급 조건에서 <strong>최적 주문량</strong>을 결정하는 방법</li>
-<li>주로 <strong>단기</strong>의 재고 관리에 적용되며, <strong>한정된 기간</strong> 동안 제품을 주문하고 판매하는 경우에 유용</li>
-<li>수요의 확률 분포에 따라 <strong>최적의 재고 수준</strong>을 결정</li>
-</ul></li>
-<li><font color="blue"><strong>베이스스톡 모형(Base-stock Model)</strong></font>
+<li>수요 불확실성 하에서 <strong>기대 이익 또는 기대 비용을 최적화</strong>하는 주문량 Q∗Q^* 결정</li>
+</ul>
+</dd>
+<dt>수식</dt>
+<dd>
+<p><span class="math display">\[P(D≤Q∗)=CuCu+CoP(D \leq Q^*) = \frac{C_u}{C_u + C_o}\]</span></p>
 <ul>
-<li>수요가 랜덤이고, 매번 주문 후 리드타임 후에 보충<br>
-</li>
-<li>목표 서비스 수준을 맞추기 위한 주문점 설정<br>
-</li>
-</ul></li>
-<li><font color="blue"><strong>(R, Q) 시스템</strong></font>
+<li><span class="math inline">\(DD\)</span>: 수요 (확률 변수)</li>
+<li><span class="math inline">\(Q^*\)</span>: 최적 주문량</li>
+<li><span class="math inline">\(C_u\)</span>: underage cost (기회비용, 주문 부족 시 손해)</li>
+<li><span class="math inline">\(C_o\)</span>: overage cost (초과 주문 시 손해)</li>
+</ul>
+</dd>
+<dt>예시</dt>
+<dd>
+한 편의점에서 하루에 팔 도시락 수를 결정해야 한다. 도시락은 하루가 지나면 폐기해야 하며, 예상 수요는 정규분포를 따른다.
+</dd>
+</dl>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>값</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>도시락 판매가</td>
+<td>6,000원</td>
+</tr>
+<tr class="even">
+<td>도시락 원가</td>
+<td>3,000원</td>
+</tr>
+<tr class="odd">
+<td>남은 도시락 폐기 손실</td>
+<td>3,000원 (원가)</td>
+</tr>
+<tr class="even">
+<td>수요 분포</td>
+<td>평균 100, 표준편차 15</td>
+</tr>
+</tbody>
+</table>
+<p><span class="math inline">\(Cu=6,000−3,000=3,000,Co=3,000⇒CuCu+Co=3,0006,000=0.5⇒Q∗=수요의&nbsp;50퍼센타일=100개C_u = 6,000 - 3,000 = 3,000,\quad C_o = 3,000 \Rightarrow \frac{C_u}{C_u + C_o} = \frac{3,000}{6,000} = 0.5 \Rightarrow Q^* = \text{수요의 50퍼센타일} = 100개\)</span></p>
+</section>
+<section id="베이스스톡-모형-base-stock-model" class="level4">
+<h4 class="anchored" data-anchor-id="베이스스톡-모형-base-stock-model">베이스스톡 모형 (Base Stock Model)</h4>
+<dl>
+<dt>개념</dt>
+<dd>
 <ul>
-<li><strong>주문 점 (R)</strong>을 설정하고, 이 점에 도달했을 때 <strong>주문량 (Q)</strong>을 결정하여 재고를 보충</li>
-<li>수요와 리드 타임이 불확실한 상황에서 이 시스템은 주문을 적시에 하기 위해 <strong>안전 재고</strong>와 <strong>주문 주기</strong>를 설정</li>
-<li>수요와 리드 타임에 따라 확정적 또는 확률적 모형으로 분류되나 주로 확률적 재고관리 모형으로 분류</li>
-</ul></li>
+<li>여러 기간(multi-period), <strong>연속 주문이 가능한 상황</strong>에서 사용.</li>
+<li>수요는 확률적이며, 리드타임(주문 후 도착까지 시간) 동안의 수요를 보충할 수 있도록 재고를 유지.</li>
+<li>각 주문 시점에서 <strong>목표 재고 수준(Base stock level, SS)</strong>까지 보충.</li>
+</ul>
+</dd>
+<dt>목적</dt>
+<dd>
+<ul>
+<li>서비스 수준을 유지하면서 <strong>재고 부족을 최소화</strong>하고, 재고 비용을 관리.</li>
+</ul>
+</dd>
+<dt>수식</dt>
+<dd>
+<p><span class="math display">\[S = \mu_L + z \cdot \sigma_L\]</span></p>
+<ul>
+<li><span class="math inline">\(\mu_L\)</span>: 리드타임 동안의 평균 수요</li>
+<li><span class="math inline">\(\sigma_L\)</span>: 리드타임 동안 수요의 표준편차</li>
+<li><span class="math inline">\(z\)</span>: 목표 서비스 수준에 대응하는 Z값 (예: 95% → 1.645)</li>
+</ul>
+</dd>
+<dt>예시</dt>
+<dd>
+부품을 보관하고 수요에 맞춰 공급해야 하는 공장에서, 리드타임이 2일인 부품의 일일 수요가 정규분포를 따름.
+</dd>
+</dl>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>값</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>일일 평균 수요</td>
+<td>50개</td>
+</tr>
+<tr class="even">
+<td>일일 수요 표준편차</td>
+<td>10개</td>
+</tr>
+<tr class="odd">
+<td>리드타임</td>
+<td>2일</td>
+</tr>
+<tr class="even">
+<td>목표 서비스 수준</td>
+<td>95% (z=1.645)</td>
+</tr>
+</tbody>
+</table>
+<p><span class="math inline">\(μL=2⋅50=100,σL=2⋅10≈14.14⇒S=100+1.645⋅14.14≈123.27⇒124개\mu_L = 2 \cdot 50 = 100,\quad \sigma_L = \sqrt{2} \cdot 10 \approx 14.14 \Rightarrow S = 100 + 1.645 \cdot 14.14 \approx 123.27 \Rightarrow 124개\)</span></p>
+<p><strong>뉴스밴더 모형과 베이스스톡 모형 비교</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>뉴스밴더 모형</th>
+<th>베이스스톡 모형</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>기간</td>
+<td>단일 기간</td>
+<td>다기간, 반복</td>
+</tr>
+<tr class="even">
+<td>주문 시점</td>
+<td>한 번만 주문</td>
+<td>수시로 보충</td>
+</tr>
+<tr class="odd">
+<td>수요 특성</td>
+<td>확률적, 한 번만 발생</td>
+<td>확률적, 반복 발생</td>
+</tr>
+<tr class="even">
+<td>목적</td>
+<td>단기 수익 극대화</td>
+<td>장기 서비스 수준 유지</td>
+</tr>
+<tr class="odd">
+<td>적용 사례</td>
+<td>도시락, 신문, 시즌 상품</td>
+<td>부품 재고, B2B 납품, 정기 생산라인</td>
+</tr>
+</tbody>
+</table>
+<p>이 두 모델은 <strong>수요의 특성과 운영 환경에 따라 선택적으로 적용</strong>된다. 뉴스밴더는 이벤트성 상품이나 폐기 우려 품목에 적합하며, 베이스스톡은 지속적인 공급이 필요한 생산, 유통 환경에 주로 사용된다.</p>
+</section>
+<section id="기타-확률적-재고-모형" class="level4">
+<h4 class="anchored" data-anchor-id="기타-확률적-재고-모형">기타 확률적 재고 모형</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>구분</th>
+<th>모형명</th>
+<th>특징</th>
+<th>적용 사례</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td><strong>(Q, R) 모형</strong>(정량·재주문점 모형)</td>
+<td>- 고정된 주문량 QQ- 재고가 임계치 RR 이하로 떨어지면 주문- 서비스 수준 기반 재주문점 설정</td>
+<td>공장 부품, 소매유통</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td><strong>(s, S) 모형</strong>(최소·최대 모형)</td>
+<td>- 재고가 임계치 ss 이하일 때- 재고를 최대치 SS까지 보충- 수요 변동이 클 때 유리</td>
+<td>고비용 부품, 항공부품</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td><strong>(R, S) 모형</strong>(주기·최대 재고 보충 모형)</td>
+<td>- 고정된 주기 RR마다- 현재 재고를 최대치 SS까지 보충- 주기적 검토 시스템</td>
+<td>정기 발주가 필요한 공급망</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td><strong>연속검토 vs 주기검토 모형</strong></td>
+<td>- 연속: 수시로 재고 수준 확인- 주기: 일정 주기로만 재고 확인</td>
+<td>전자는 ERP 기반 공장, 후자는 오프라인 매장</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td><strong>서비스 수준 기반 모델</strong></td>
+<td>- 목표 서비스 수준(예: 95%)을 만족시키는 재고 수준 결정- 재고 부족 리스크를 확률적으로 반영</td>
+<td>병원, 고가 장비 재고</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td><strong>다기간 동적 모형 (Stochastic Dynamic Programming)</strong></td>
+<td>- 여러 기간에 걸쳐 수요 및 재고 상태를 고려해동적으로 정책 수립- 수요가 시간에 따라 변화할 때 효과적</td>
+<td>항공권, 시즌 재고, 리드타임이 가변적일 때</td>
+</tr>
+</tbody>
+</table>
+<p>확률적 재고 모형 구조를 간단히 비교하면 다음과 같다.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>모형</th>
+<th>주문 조건</th>
+<th>재고 보충 방식</th>
+<th>서비스 수준 반영 여부</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>(Q, R)</td>
+<td>재고가 R 이하일 때</td>
+<td>Q만큼 고정 주문</td>
+<td>○</td>
+</tr>
+<tr class="even">
+<td>(s, S)</td>
+<td>재고가 s 이하일 때</td>
+<td>S까지 보충</td>
+<td>○</td>
+</tr>
+<tr class="odd">
+<td>(R, S)</td>
+<td>매 R주기마다</td>
+<td>S까지 보충</td>
+<td>△ (검토 주기에 의존)</td>
+</tr>
+<tr class="even">
+<td>뉴스밴더</td>
+<td>1회 주문</td>
+<td>Q만큼 결정</td>
+<td>○</td>
+</tr>
+<tr class="odd">
+<td>베이스스톡</td>
+<td>수시 보충</td>
+<td>S까지 보충</td>
+<td>○</td>
+</tr>
+<tr class="even">
+<td>동적계획</td>
+<td>상태에 따라 유연하게 결정</td>
+<td>동적 최적화</td>
+<td>○ (비용과 리스크 동시 고려)</td>
+</tr>
+</tbody>
+</table>
+<dl>
+<dt>간단한 예시 비교</dt>
+<dd>
+<ul>
+<li><strong>(Q, R) 모형</strong>: 부품 재고가 50개(R) 이하가 되면 항상 200개(Q)를 주문</li>
 </ul>
 </dd>
 </dl>
+<ul>
+<li><p><strong>(s, S) 모형</strong>: 재고가 30개(s) 이하가 되면 재고가 100개(S)가 되도록 보충</p></li>
+<li><p><strong>(R, S) 모형</strong>: 매주 수요일마다 현재 재고 수준과 관계없이 100개(S)가 되도록 보충</p></li>
+<li><p><strong>동적계획 모형</strong>: 다가오는 연휴, 수요 증가를 예측해 이번 주는 150개, 다음 주는 100개로 유동적 주문</p></li>
+</ul>
 <p><font color="blue"><strong>레스토랑</strong></font>이 하루에 <strong>음료수</strong>를 판매한다고 가정했을 때, 음료수의 수요는 날마다 달라질 수 있다. 예를 들어, 날씨가 좋으면 수요가 증가하고, 나쁠 경우에는 수요가 감소한다. 이 경우 <strong>확률적 재고 모형</strong>을 사용하여 수요의 변동성을 고려하고, 재고 부족을 방지하기 위해 <strong>안전 재고</strong>를 설정한다.</p>
 <table class="caption-top table">
 <caption>확정적 재고 모형 vs 확률적 재고 모형</caption>
@@ -1346,6 +1604,7 @@ EOQ 항목 계산
 <p><strong>확정적 재고 모형</strong>은 <strong>수요가 일정하고 예측 가능한</strong> 경우에 적합하다. 이 모형은 예측이 정확하므로 <font color="blue">최적의 재고 수준을 유지하는 데 유리</font>하다.</p>
 <p><strong>확률적 재고 모형</strong>은 <strong>수요와 리드 타임이 불확실한</strong> 경우에 적합하다. 이 모형은 수요의 변동성과 불확실성에 대비해 <strong>안전 재고</strong>를 설정하고 <font color="blue">리스크를 관리하는 데 유리</font>하다.</p>
 <p>따라서, 재고 관리 방식은 사업 환경에 따라 선택해야 하며, 수요 예측의 정확도와 변동성에 따라 <strong>확정적</strong> 또는 <strong>확률적</strong> 모형을 선택하여 최적의 재고 관리를 수행해야 한다.</p>
+</section>
 </section>
 <section id="기타-재고관리-모형" class="level3">
 <h3 class="anchored" data-anchor-id="기타-재고관리-모형">기타 재고관리 모형</h3>
