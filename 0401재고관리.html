@@ -1852,80 +1852,168 @@ EOQ 항목 계산
 <figcaption>Two Bin 시스템</figcaption>
 </figure>
 </div>
-<p><strong>투빈(Two-bin) 시스템</strong>은 재고 관리 방법 중 하나로, 주로 <font color="blue">재고를 두 개(two)의 별도 저장 용기(bin)로 나누어 관리</font>하는 방식이다. 이 시스템은 특히 <strong>소모성 자재나 부품</strong>을 관리할 때 유용하며, 재고 수준을 효율적으로 추적하고 <strong>자동 주문</strong>을 촉진하는 데 도움을 준다.</p>
+<p><strong>Two-bin 시스템</strong>은 재고 관리에서 사용되는 <strong>간단하고 직관적인 보충 방식</strong>으로, 특히 <strong>소모성 자재</strong>, <strong>소형 부품</strong>, <strong>의약품</strong>, <strong>사무용품</strong> 등 자주 쓰이는 품목에서 널리 사용된다. 이름 그대로, <strong>2개의 상자(bin)를 사용하여 재고를 관리</strong>하는 방식이다.</p>
 <dl>
-<dt>기본 개념</dt>
+<dt>Two-bin 시스템 개념</dt>
 <dd>
 <ul>
-<li><strong>두 개의 컨테이너</strong>(bin)를 사용하여 재고를 관리</li>
-<li><strong>첫 번째 bin</strong>: 사용 중인 재고. 이 bin에서 자재를 소모</li>
-<li><strong>두 번째 bin</strong>: 예비 재고. 첫 번째 bin의 자재가 소진되면 두 번째 bin에서 자재를 꺼내 사용</li>
-<li><strong>첫 번째 bin</strong>이 비어가면, 두 번째 bin의 자재를 사용하며, 동시에 공급업체에 주문을 하여 첫 번째 bin을 다시 채운다</li>
-<li>주문이 완료되면, 재고를 채운 후 두 번째 bin을 첫 번째 bin으로 옮겨 다시 사용하는 방식이다.</li>
+<li>재고를 두 개의 상자에 나누어 보관한다.</li>
+<li><strong>첫 번째 상자(1st bin)</strong>가 모두 소진되면, <strong>두 번째 상자(2nd bin)</strong>를 사용하면서 동시에 재주문을 진행한다.</li>
+<li>두 번째 상자의 재고는 <strong>리드타임 동안 사용할 수 있는 최소한의 재고</strong>로 설정된다.</li>
 </ul>
 </dd>
-<dt>운영 원리</dt>
+<dt>구조와 작동 방식</dt>
 <dd>
-<ul>
-<li><strong>초기 재고 분배</strong>: 재고가 두 개의 bin에 균등하게 분배</li>
-<li><strong>첫 번째 bin 사용</strong>: 생산 또는 작업에서 자재가 소진될 때까지 첫 번째 bin에서 자재를 사용</li>
-<li><strong>두 번째 bin 사용</strong>: 첫 번째 bin의 자재가 모두 소진되면 두 번째 bin을 사용하여 자재가 부족하지 않도록 함</li>
-<li><strong>주문 프로세스</strong>: 첫 번째 bin이 비었을 때, 즉 자재를 두 번째 bin에서 사용하기 시작할 때 공급업체에 재주문을 하고, 주문된 자재가 들어오면 첫 번째 bin에 자재를 채움</li>
-</ul>
-</dd>
-<dt>주요 특징</dt>
-<dd>
-<ul>
-<li><strong>재고 관리의 단순화</strong><br>
-두 개의 bin을 사용하여 재고 관리가 간단해지고, 재고 부족을 방지</li>
-<li><strong>자동 주문 유도</strong><br>
-첫 번째 bin이 비었을 때 자동으로 재주문이 발생하여, 자재가 부족하지 않도록 유지</li>
-<li><strong>재고 확인 용이</strong><br>
-두 개의 bin을 통해 현재 사용 중인 재고와 예비 재고를 쉽게 확인 가능</li>
-<li><strong>낭비 감소</strong><br>
-과잉 재고를 피할 수 있고, 자재가 부족하지 않게 유지하여 생산 차질을 줄일 수 있음</li>
-</ul>
+<pre><code>┌──────────────┐         ┌──────────────┐
+│   1st bin    │ 사용 → │   2nd bin    │ ← 리드타임 동안 사용
+└──────────────┘         └──────────────┘
+   ↓                        ↓
+  재고가 0이 되면         재주문 발주
+  → 2nd bin 사용 시작 → 신규 재고 입고 → 2개 bin 다시 채움</code></pre>
 </dd>
 </dl>
+<ul>
+<li>1st bin: <strong>운영 재고(working stock)</strong></li>
+<li>2nd bin: <strong>보충 시점 재고(reorder point)</strong> 또는 <strong>안전 재고(safety stock)</strong></li>
+</ul>
+<dl>
+<dt>특징</dt>
+<dd>
 <table class="caption-top table">
-<caption>투빈 시스템 장점과 단점</caption>
 <colgroup>
 <col style="width: 50%">
 <col style="width: 50%">
 </colgroup>
 <thead>
 <tr class="header">
-<th><strong>장점</strong></th>
-<th><strong>단점</strong></th>
+<th>항목</th>
+<th>설명</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>• <strong>간단한 시스템</strong>: 재고 관리가 직관적이고, 복잡한 소프트웨어나 고급 시스템 없이도 효율적인 재고 관리가 가능</td>
-<td>• <strong>한정된 용도</strong>: 이 시스템은 소모품이나 자주 사용되는 자재에 적합하며, 대량 생산 시스템이나 복잡한 제품에 적용하기 어려울 수 있음</td>
+<td>목적</td>
+<td>재고 부족 방지, 단순하고 직관적인 운영</td>
 </tr>
 <tr class="even">
-<td>• <strong>주문 자동화</strong>: 자재가 소진되면 즉시 자동으로 주문을 유도하여, 재고 부족 상태를 예방</td>
-<td>• <strong>재고 수준 관리의 한계</strong>: 두 개의 bin만 사용하므로, 여러 종류의 자재가 필요한 경우 관리가 복잡해질 수 있음</td>
+<td>적용 조건</td>
+<td>수요가 일정하거나 예측 가능한 품목</td>
 </tr>
 <tr class="odd">
-<td>• <strong>비용 절감</strong>: 재고가 과잉되지 않도록 관리할 수 있으며, 필요한 자재만을 효율적으로 주문 가능</td>
-<td></td>
+<td>사용 장소</td>
+<td>병원, 사무실, 조립라인, 창고 등</td>
+</tr>
+<tr class="even">
+<td>필요 요건</td>
+<td>리드타임 동안 수요를 충족할 수 있도록 2nd bin 크기 설정 필요</td>
+</tr>
+<tr class="odd">
+<td>관리 방식</td>
+<td><strong>물리적 표시</strong> 기반: 눈으로 보고 주문 여부 판단 (비전자적 시스템)</td>
 </tr>
 </tbody>
 </table>
-<dl>
-<dt>적용 예시</dt>
-<dd>
-<ul>
-<li><strong>소모성 자재 관리</strong><br>
-사무실 용품, 부품, 원자재 등 자주 사용되지만 고정된 양을 필요로 하는 자재에 사용</li>
-<li><strong>제조업체</strong><br>
-일정한 양의 부품을 자주 사용하는 제조업체에서 유용하게 활용</li>
-</ul>
 </dd>
 </dl>
-<p>투빈 시스템은 간단하고 효과적인 재고 관리 방법으로, 주로 <font color="blue">소모품이나 자주 사용하는 자재의 재고를 효율적으로 관리</font>하는 데 유용하다. 두 개의 bin을 사용해 재고를 관리함으로써 과잉 재고나 재고 부족을 방지하고, 자동적으로 재주문을 유도하여 생산 과정의 연속성을 유지할 수 있다.</p>
+<p><strong>부품 A</strong>를 one-bin당 100개씩 보관하고, 일일 평균 수요는 20개, 리드타임은 4일이라고 가정하자.</p>
+<ul>
+<li>1st bin: 100개 (일반 사용분)</li>
+<li>2nd bin: 20개 × 4일 = 80개 (리드타임 재고)</li>
+</ul>
+<p>1st bin이 소진되면:</p>
+<ul>
+<li>작업자가 2nd bin을 사용 시작</li>
+<li>동시에 100개 발주</li>
+<li>리드타임 동안 2nd bin 사용 → 입고 시 다시 1st, 2nd bin 채움</li>
+</ul>
+<p><strong>장점과 단점</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>장점</th>
+<th>단점</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>관리 용이성</td>
+<td>시스템이 단순하고 시각적으로 명확</td>
+<td>정확한 재고 기록 없음 (ERP 연동 어려움)</td>
+</tr>
+<tr class="even">
+<td>작업자 편의성</td>
+<td>교육 없이도 사용 가능</td>
+<td>수요가 급증할 경우 부족 가능</td>
+</tr>
+<tr class="odd">
+<td>비용 측면</td>
+<td>관리 인건비 및 시스템 비용 절감</td>
+<td>과잉 재고 또는 주문 지연 가능성 존재</td>
+</tr>
+</tbody>
+</table>
+<p><strong>적합한 상황과 부적합한 경우</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>적합한 경우</th>
+<th>부적합한 경우</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>반복적이고 안정적인 수요</td>
+<td>고가 품목, 수요 변동이 큰 품목</td>
+</tr>
+<tr class="even">
+<td>소형 저가 소모품</td>
+<td>긴 리드타임, 긴 수급주기 품목</td>
+</tr>
+<tr class="odd">
+<td>보건/조립라인 부품</td>
+<td>복잡한 품목 구조 또는 유통기한 이슈</td>
+</tr>
+</tbody>
+</table>
+<p>Two-bin vs (Q, R) 모형</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>Two-bin 시스템</th>
+<th>(Q, R) 재고 모형</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>주문 기준</td>
+<td>물리적 상자 기준</td>
+<td>재고량 기준 (수량으로 계산)</td>
+</tr>
+<tr class="even">
+<td>발주량</td>
+<td>고정 or bin 수량</td>
+<td>Q(고정)</td>
+</tr>
+<tr class="odd">
+<td>재주문점</td>
+<td>2nd bin의 수량</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>적용 난이도</td>
+<td>낮음 (수작업)</td>
+<td>중간~높음 (ERP/시뮬레이션 가능)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Two-bin 시스템은 간단하고 직관적인 재고 보충 시스템</strong>으로서, <strong>일정한 수요와 빠른 회전이 있는 소형 품목</strong>에 특히 효과적이다. IT 시스템이 없거나 간단한 현장 중심의 재고 운영이 필요한 경우 실무에서 매우 유용하게 활용된다. 다만, <strong>수요 변동성과 리드타임이 높은 품목에는 더 정교한 모형((Q, R), (s, S) 등)을 사용하는 것이 바람직</strong>하다.</p>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 103-1-12, 118-3-3, 127-1-4">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -2009,6 +2097,7 @@ EOQ 항목 계산
 <hr>
 <p>발주점 = 조달기간 수요량(d x L) + 안전계수(<span class="math inline">\(u_{1-\alpha}\)</span>) x 조달기간 중 수요량 표준편차(<span class="math inline">\(\sigma_L\)</span>) = (100x5) + 1.65x20 = 533</p>
 <p>정량발주시스템에 따라 계속적인 재고실사를 통해 재고량이 533개가 남게되면 발저점에 도달한 것으로 판단하여 발주를 진행한다.</p>
+<p>참고로 1일 사용량 표준편차가 20개인 경우라면 다음과 같이 계산된다. <span class="math inline">\(\sigma_L = (100 \times 5) + 1.65 \times \sqrt{5} \times 20 = 500 + 44.72\)</span></p>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 130-1-8">
@@ -2027,83 +2116,247 @@ EOQ 항목 계산
 </section>
 <section id="min-max-시스템" class="level4">
 <h4 class="anchored" data-anchor-id="min-max-시스템">min-Max 시스템</h4>
-<p><strong>min-Max System</strong>, 또는 <strong>(s,S) 시스템</strong>, <strong>절충 시스템</strong>은 재고 관리 방식 중 하나로, <font color="blue">최소 재고 수준(minimum level)과 최대 재고 수준(maximum level)을 설정하여 재고를 관리</font>하는 시스템이다. 이 시스템은 주로 <strong>소매업</strong>이나 <strong>제조업</strong>에서 사용되며, 재고 수준을 효율적으로 유지하고, <font color="blue">과잉 재고나 재고 부족을 방지</font>하는 데 도움을 준다. 이 시스템은 일정기간마다 재고수준을 확인하는 <font color="blue">정기발주형 재고관리시스템을 기초</font>로 일정기간에 재고 조사시 정량발주형에 있어 재발주점에 도달하지 않으면 주문을 하지 않는다. 반면 재발주점에 도달했다면 정량발주하여 발주관련 수고를 최소화 한다.</p>
+<p><strong>Min-Max 시스템</strong>은 재고 관리에서 사용되는 간단하고 널리 보급된 <strong>주기 검토형(Periodic Review)</strong> 재고 통제 기법이다. 최소 재고 수준(Min)과 최대 재고 수준(Max)을 설정해 두고, <strong>주기적으로 재고 수준을 확인하여 보충 발주하는 방식</strong>이다.</p>
 <dl>
-<dt>기본 개념</dt>
+<dt>Min-Max 시스템 개요</dt>
 <dd>
 <ul>
-<li><strong>최소 재고 수준 (Min Level)</strong><br>
-재고가 이 수준 이하로 떨어지면 자동으로 <strong>재주문</strong>이 이루어지도록 설정하는 최소한의 재고량, 이를 통해 <strong>재고 부족</strong>을 예방</li>
-<li><strong>최대 재고 수준 (Max Level)</strong><br>
-재고가 이 수준 이상으로 증가하지 않도록 설정하는 최대 재고량, 이를 통해 <strong>과잉 재고</strong>를 방지하고, <strong>창고 공간</strong>을 효율적으로 관리</li>
+<li>재고가 <strong>최소 수준(Min) 이하</strong>로 내려가면 발주를 실시.</li>
+<li>발주량은 <strong>Max 수준까지 채우는 수량</strong>.</li>
+<li>주기적 검토 주기(예: 매주 월요일 또는 매달 1일 등)에 맞춰 실행함.</li>
 </ul>
 </dd>
-<dt>운영 원리</dt>
+<dt>구조와 동작 방식</dt>
 <dd>
-<ul>
-<li><strong>재고 수준 모니터링</strong><br>
-재고 수준이 최소 수준 이하로 떨어지면 <strong>재주문</strong>을 통해 재고를 보충하고, 최대 수준을 초과하지 않도록 관리</li>
-<li><strong>재주문 시점</strong><br>
-재고가 <font color="blue">최소 재고 수준에 도달</font>하면, 지정된 양의 재고를 주문, 이때 재주문 수량은 <strong>최대 재고 수준</strong>에서 <strong>현재 재고 수준</strong>을 뺀 양만큼 발생</li>
-<li><strong>자동화된 재주문</strong><br>
-일부 시스템에서는 재고 수준을 실시간으로 추적하여 자동으로 재주문 가능</li>
-</ul>
-</dd>
-<dt>주요 특징</dt>
-<dd>
-<ul>
-<li><strong>단순한 관리</strong><br>
-최소/최대 수준만 설정하면 되므로 비교적 <strong>단순한 방식</strong>으로 재고를 관리 가능</li>
-<li><strong>예측 가능한 재고 수준</strong><br>
-최소 및 최대 수준을 설정해 두면 재고가 과잉이거나 부족하지 않도록 <strong>예측 가능</strong>한 수준으로 관리 가능</li>
-<li><strong>정해진 주문 시점</strong><br>
-재고가 일정 수준 이하로 떨어졌을 때 자동으로 주문을 하여 재고 부족을 방지</li>
-</ul>
-</dd>
-</dl>
 <table class="caption-top table">
-<caption>min-Max 시스템 장점과 단점</caption>
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
 <thead>
 <tr class="header">
-<th><strong>장점</strong></th>
-<th><strong>단점</strong></th>
+<th>항목</th>
+<th>설명</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>• <strong>과잉 재고 방지</strong>: 최대 재고 수준을 설정함으로써 <strong>과잉 재고</strong>를 방지</td>
-<td>• <strong>재고 관리의 유연성 부족</strong>: 수요가 갑자기 변동하는 경우, <strong>고정된 최소/최대 재고 수준</strong>만으로는 적절한 대응이 어려울 수 있음</td>
+<td><strong>Max</strong></td>
+<td>재고가 도달해야 할 목표 수준</td>
 </tr>
 <tr class="even">
-<td>• <strong>재고 부족 예방</strong>: 최소 재고 수준을 설정하여 <strong>재고 부족</strong> 상황을 미리 방지</td>
-<td>• <strong>과잉 주문의 위험</strong>: 예상보다 수요가 낮을 경우, <strong>재주문 수량</strong>이 과도해질 수 있어 <strong>재고 과잉</strong>이 발생할 수 있음</td>
+<td><strong>Min</strong></td>
+<td>재고 보충을 결정하는 기준점</td>
 </tr>
 <tr class="odd">
-<td>• <strong>창고 공간 효율적 관리</strong>: 과도한 재고를 쌓아두지 않도록 관리하여 창고 공간을 효율적으로 활용</td>
-<td>• <strong>주문 리드 타임 고려 부족</strong>: 리드 타임(주문부터 입고까지의 시간)을 정확히 반영하지 않으면, 재고 부족 상태가 발생</td>
+<td><strong>현재 재고</strong></td>
+<td>검토 시점의 재고 수량</td>
 </tr>
 <tr class="even">
-<td>• <strong>단순하고 직관적인 시스템</strong>: 최소/최대 재고 수준만으로 재고를 관리할 수 있어 <strong>설정이 간단</strong>하고 <strong>이해하기 쉽다</strong>는 장점</td>
-<td></td>
+<td><strong>발주량</strong></td>
+<td><code>Max – 현재 재고</code></td>
 </tr>
 </tbody>
 </table>
+</dd>
+<dt>동작 예시</dt>
+<dd>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>수치</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Max</td>
+<td>1,000개</td>
+</tr>
+<tr class="even">
+<td>Min</td>
+<td>400개</td>
+</tr>
+<tr class="odd">
+<td>현재 재고</td>
+<td>350개</td>
+</tr>
+<tr class="even">
+<td>발주량</td>
+<td>1,000 – 350 = 650개</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<p>→ 현재 재고(350개) &lt; Min(400개)이므로 <strong>650개 발주</strong></p>
 <dl>
-<dt>적용 예시</dt>
+<dt>수식 정리</dt>
 <dd>
 <ul>
-<li><strong>소매업체</strong><br>
-인기 있는 제품에 대해 최소 재고 수준을 설정하고, 재고가 그 수준에 도달하면 자동으로 재주문을 하여 고객에게 제품이 계속 공급될 수 있도록 관리</li>
-<li><strong>제조업체</strong><br>
-원자재나 부품의 재고를 관리할 때, 최소 및 최대 재고 수준을 설정하여 생산이 원활하게 이루어지도록 관리</li>
+<li><strong>발주 조건</strong>:</li>
+</ul>
+<p><span class="math inline">\(재고량≤Min\text{재고량} \leq \text{Min}\)</span> - <strong>발주량</strong>:</p>
+<p><span class="math inline">\(주문량=Max−현재&nbsp;재고량\text{주문량} = \text{Max} - \text{현재 재고량}\)</span></p>
+</dd>
+<dt>장단점 비교</dt>
+<dd>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>장점</th>
+<th>단점</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>관리 단순성</td>
+<td>설정만 하면 <strong>정기적 검토로 자동 운영</strong> 가능</td>
+<td>수요 예측이나 리드타임이 부정확하면 과잉/부족 발생 가능</td>
+</tr>
+<tr class="even">
+<td>비용 측면</td>
+<td>시스템 구현이 간단, ERP 없이도 운영 가능</td>
+<td>주기적 검토는 <strong>수요 급변 시 대응이 느림</strong></td>
+</tr>
+<tr class="odd">
+<td>적용 용도</td>
+<td>다품종 소량 품목에 적합</td>
+<td>고가 품목에는 과잉재고 우려</td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt>Min, Max 설정 방법</dt>
+<dd>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>설명</th>
+<th>계산 예</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Min</strong></td>
+<td>리드타임 동안 수요 + 안전재고</td>
+<td>d⋅L+z⋅σd L + z </td>
+</tr>
+<tr class="even">
+<td><strong>Max</strong></td>
+<td>다음 발주주기 동안의 수요 + Min</td>
+<td>d⋅T+Mind T + ※ T: 발주 주기</td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt>예시</dt>
+<dd>
+<ul>
+<li>일일 수요: 50개</li>
 </ul>
 </dd>
 </dl>
-<p>Min-Max 시스템은 재고 관리의 기본적인 방법으로, <strong>최소 재고 수준</strong>과 <strong>최대 재고 수준</strong>을 설정하여 재고 부족과 과잉을 방지한다. 이 시스템은 단순하고 직관적이지만, <strong>수요 변동</strong>이나 <strong>리드 타임</strong>을 고려하는 데 한계가 있을 수 있어, <strong>자동화된 재고 추적</strong>과 <strong>수요 예측</strong>을 추가적으로 활용하면 더욱 효과적이다.</p>
+<ul>
+<li><p>리드타임: 5일</p></li>
+<li><p>발주 주기: 7일</p></li>
+<li><p>안전계수: 1.65, 수요 표준편차: 10개</p></li>
+</ul>
+<ol type="1">
+<li><p>Min:</p>
+<p><span class="math inline">\(=50⋅5+1.65⋅(10⋅5)≈250+36.9=286.9⇒287개= 50 \cdot 5 + 1.65 \cdot (10 \cdot \sqrt{5}) \approx 250 + 36.9 = 286.9 \Rightarrow 287개\)</span></p></li>
+<li><p>Max:</p>
+<p><span class="math inline">\(=50⋅7+287=350+287=637개= 50 \cdot 7 + 287 = 350 + 287 = 637개\)</span></p></li>
+</ol>
+<dl>
+<dt>다른 시스템과 비교</dt>
+<dd>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>Min-Max</th>
+<th>Two-bin</th>
+<th>(Q, R) 모형</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>검토 시점</td>
+<td><strong>정기적</strong> (주기 검토)</td>
+<td>불규칙 (재고 소진 시)</td>
+<td><strong>지속적</strong> (연속 검토)</td>
+</tr>
+<tr class="even">
+<td>발주량</td>
+<td>Max – 현재 재고</td>
+<td>Bin 수량 고정</td>
+<td>고정 주문량 Q</td>
+</tr>
+<tr class="odd">
+<td>발주 조건</td>
+<td>현재 재고 ≤ Min</td>
+<td>상자 1 소진</td>
+<td>현재 재고 ≤ R</td>
+</tr>
+<tr class="even">
+<td>특징</td>
+<td>간편, 직관적</td>
+<td>물리적 시각적 운영</td>
+<td>수학적 최적화 가능</td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt>적용 사례</dt>
+<dd>
+<ul>
+<li><strong>병원 재고품</strong>, <strong>사무용품</strong>, <strong>간단한 소모성 부품</strong></li>
+</ul>
+</dd>
+</dl>
+<ul>
+<li><p><strong>수요 예측이 어렵고</strong>, <strong>재고 회전이 빠른 품목</strong></p></li>
+<li><p><strong>정기 발주 루틴이 정착된 공공기관이나 중소기업</strong></p></li>
+</ul>
+<p>핵심 포인트를 정리하면 다음과 같다.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>핵심 포인트</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>개념</td>
+<td>Min 이하일 때 Max까지 채우는 발주 시스템</td>
+</tr>
+<tr class="even">
+<td>조건</td>
+<td>정기적 검토가 가능하고 수요 패턴이 예측 가능할수록 효과적</td>
+</tr>
+<tr class="odd">
+<td>유용성</td>
+<td>ERP 시스템 없이도 수작업 또는 간단한 프로그램으로 운영 가능</td>
+</tr>
+</tbody>
+</table>
+<p>Min-Max 시스템은 <strong>운영이 간단하면서도 안전재고와 수요를 반영</strong>할 수 있어 실무에서 자주 활용되며, 특히 <strong>적시관리(JIT)가 필요하지 않은 환경</strong>에서 유용하다.</p>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 103-3-2, 112-1-1, 130-4-2">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
