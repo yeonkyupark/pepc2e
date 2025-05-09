@@ -1289,113 +1289,740 @@ end
 </table>
 <section id="수요추종-전략" class="level4">
 <h4 class="anchored" data-anchor-id="수요추종-전략">수요추종 전략</h4>
-<p><strong>수요추종 전략</strong>은 <font color="blue">수요변동에 따라 생산량과 고용수준을 변화시키는 방법</font>이다. 즉, 수요량이 증가하게 되면 고용을 하고, 반면 수요가 감소하게 되면 해고하는 방법이다. 단, 종업원수를 다음과 같은 방법으로 일정하게 유지할 수 있다.</p>
+<p><strong>수요추종전략(Chase Production Strategy)</strong>은 생산량을 실제 수요에 <strong>맞춰 유연하게 조정</strong>하는 전략으로, 총괄생산계획(Aggregate Production Planning)에서 수요 변동을 재고 없이 대응하고자 할 때 사용된다.</p>
 <dl>
-<dt>종업원수 일정 유지</dt>
+<dt>수요추종전략의 정의</dt>
 <dd>
-<ul>
-<li>잔업, 특근, 초과근무 또는 근무시간 단축이나 하청 활용</li>
-<li>장점: 종업원 고용 불만 해소</li>
-<li>단점: 잔업수당, 조업단축 유휴비용, 하청비용이 큰 경우 사용이 곤란하고 지나친 초과근무로 사기, 품질저하 및 하청업체 및 하청업체 품질 관리 어려움</li>
-</ul>
+수요의 증감에 따라 <strong>생산량, 작업시간, 인력 수준을 조정</strong>하여, 고객 수요를 최대한 실시간으로 따라가는 전략 , <strong>재고를 최소화</strong>하고 <strong>납기 준수율</strong>을 높이는 것을 목표로 한다.
 </dd>
-</dl>
-</section>
-<section id="생산평준화-전략" class="level4">
-<h4 class="anchored" data-anchor-id="생산평준화-전략">생산평준화 전략</h4>
-<p><strong>생산평준화 전략</strong>은 변화하는 수요에 대하여 <strong>생산수준과 고용수준을 일정하게 유지</strong>하는 방법이다. 종업원 고용불안을 해소하고 과도한 잔업 및 하청 등 비용과 품질문제를 회피할 수 있는 장점이 있다.</p>
-<dl>
-<dt>수요 대응 전략</dt>
+<dt>주요 특징</dt>
 <dd>
-<ul>
-<li><font color="blue">재고를 활용하는 방법</font>
-<ul>
-<li>수요가 작으면 일정 수준 생산 유지 → 적정재고 유지, 수요가 많을 때 활용</li>
-</ul></li>
-<li><font color="blue">수요 자체를 조절하는 방법</font>
-<ul>
-<li>수요가 많으면 납기를 연장, 수요가 적으면 가격할인 등 판매촉진을 통해 수요 활성화</li>
-</ul></li>
-<li><font color="blue">총 생산량을 일정하게 유지하는 방법</font>
-<ul>
-<li>제품 품목별 기간에 따라 생산량을 조절</li>
-<li>1개 생산라인에서 다른 제품을 병행 생산</li>
-<li>계절성 품목으로 겨울에는 난방 전열가전, 여름에는 선풍기, 냉방가전 생산 증대</li>
-</ul></li>
-</ul>
-</dd>
-</dl>
-</section>
-<section id="혼합전략" class="level4">
-<h4 class="anchored" data-anchor-id="혼합전략">혼합전략</h4>
-<p><strong>혼합전략</strong>은 수요추종 전략과 생산평준화 전략을 <strong>혼합</strong>한 방식으로 수요 변동에 유연하게 대응하고 종업원 고용 및 재고 수준 등 상황에 따라 대처하는 방법이다. 추종전략에서는 수요변화에 따라 고용수준이 변화하고 생산평준화 전략에서는 고용 수준에 변화가 없다. 기업에서는 두 가지를 혼합한 혼합전략이 더 널리 사용된다. 어떤 수요 및 공급관리 수단을 혼합하여 사용하느냐는 기업마다 처한 환경과 경영활동에 따라 달라진다. 적절한 총괄계획 전략은 생산활동이나 업무 특성에 따라 달라진다.</p>
-<dl>
-<dt>자동차, 전자업종 등 <font color="blue">숙력된 작업자 확보가 어려운 경우</font></dt>
-<dd>
-<ul>
-<li>점진적 고용증대를 통한 생산능력 확충과 동시에 잔업, 하청을 활용</li>
-</ul>
-</dd>
-<dt>노동 집약적이며 <font color="blue">노동력확보가 용이한 경우</font></dt>
-<dd>
-<ul>
-<li>고용수준을 조절하여 수요에 대응(토목공사, 택배 등)</li>
-</ul>
-</dd>
-</dl>
-<p>수요추종 전략과 생산평준화 전략을 비교하면 다음과 같다.</p>
 <table class="caption-top table">
-<caption>추종전략과 평준화전략 비교</caption>
 <thead>
 <tr class="header">
-<th>요인</th>
-<th>추종전략</th>
-<th>평준화전략</th>
+<th>구분</th>
+<th>내용</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>요구되는 노동기술 수준</strong></td>
-<td>낮음</td>
-<td>높음</td>
+<td>생산량</td>
+<td>수요에 따라 매기간 달라짐</td>
 </tr>
 <tr class="even">
-<td><strong>직무 재량권</strong></td>
-<td>낮음</td>
-<td>높음</td>
+<td>재고</td>
+<td>최소화 또는 없음</td>
 </tr>
 <tr class="odd">
-<td><strong>보수</strong></td>
-<td>낮음</td>
-<td>높음</td>
+<td>인력/설비 활용</td>
+<td>수요에 따라 <strong>작업자 수, 근무시간 조정</strong> 필요</td>
 </tr>
 <tr class="even">
-<td><strong>종업원당 요구되는 훈련</strong></td>
-<td>낮음</td>
-<td>높음</td>
+<td>탄력성</td>
+<td>높음. 단, 운영 안정성은 낮을 수 있음</td>
 </tr>
 <tr class="odd">
-<td><strong>노동력 이직률</strong></td>
-<td>높음</td>
-<td>낮음</td>
-</tr>
-<tr class="even">
-<td><strong>종업원당 채용-해고 비용</strong></td>
-<td>낮음</td>
-<td>높음</td>
-</tr>
-<tr class="odd">
-<td><strong>요구되는 감독 양</strong></td>
-<td>높음</td>
-<td>낮음</td>
-</tr>
-<tr class="even">
-<td><strong>요구되는 예산 수립 및 예측 유형</strong></td>
-<td>단기</td>
-<td>장기</td>
+<td>목적</td>
+<td>수요에 빠르게 대응하여 <strong>고객 서비스 향상</strong></td>
 </tr>
 </tbody>
 </table>
+</dd>
+<dt>운영 방식</dt>
+<dd>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>조정 대상</th>
+<th>방법</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>노동력</strong></td>
+<td>고용/해고, 잔업/휴무, 파트타임 활용</td>
+</tr>
+<tr class="even">
+<td><strong>생산시간</strong></td>
+<td>주간/야간 교대, 유연근무제</td>
+</tr>
+<tr class="odd">
+<td><strong>외주활용</strong></td>
+<td>수요가 높을 때 외부 위탁 생산</td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt>예시 시나리오</dt>
+<dd>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>월</th>
+<th>수요량</th>
+<th>생산량(수요추종)</th>
+<th>인력 조정</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1월</td>
+<td>800</td>
+<td>800</td>
+<td>정규 인력</td>
+</tr>
+<tr class="even">
+<td>2월</td>
+<td>1,200</td>
+<td>1,200</td>
+<td>잔업 또는 임시직 투입</td>
+</tr>
+<tr class="odd">
+<td>3월</td>
+<td>700</td>
+<td>700</td>
+<td>파트타이머 감축 또는 휴무</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<p>이처럼 매월 수요 변화에 따라 생산량과 자원을 조정한다.</p>
+<dl>
+<dt>장점과 단점</dt>
+<dd>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>장점</th>
+<th>단점</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>재고</strong></td>
+<td>최소화, 재고비용 절감</td>
+<td>급변 수요 시 납기 지연 위험</td>
+</tr>
+<tr class="even">
+<td><strong>고객 서비스</strong></td>
+<td>수요에 맞춰 생산 → 납기 신뢰도 ↑</td>
+<td>인력 피로도 증가, 운영 불안정</td>
+</tr>
+<tr class="odd">
+<td><strong>운영비용</strong></td>
+<td>재고 비용 절감</td>
+<td>잦은 인력/설비 조정 → 고용 비용, 전환비용 발생</td>
+</tr>
+<tr class="even">
+<td><strong>설비/인력 효율</strong></td>
+<td>불필요한 자원 투입 줄임</td>
+<td>수요 예측 실패 시 생산성 저하 가능</td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt>수요추종전략이 적합한 상황</dt>
+<dd>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>조건</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>수요 변동 폭이 큼</td>
+<td>계절성 또는 캠페인 중심 제품</td>
+</tr>
+<tr class="even">
+<td>제품 저장이 어려움</td>
+<td>유통기한이 짧거나 대형 제품</td>
+</tr>
+<tr class="odd">
+<td>고정비용보다 변동비용이 작음</td>
+<td>인건비 조정이 상대적으로 용이</td>
+</tr>
+<tr class="even">
+<td>고정 재고비용이 큼</td>
+<td>재고 축적에 따른 비용이 높을 때</td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt>수요추종전략 vs 생산평준화전략 비교</dt>
+<dd>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>수요추종전략</th>
+<th>생산평준화전략</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>기본 개념</td>
+<td>수요에 따라 생산량 조정</td>
+<td>일정 생산량 유지</td>
+</tr>
+<tr class="even">
+<td>재고 수준</td>
+<td>낮음</td>
+<td>높음(버퍼 역할)</td>
+</tr>
+<tr class="odd">
+<td>유연성</td>
+<td>높음 (수요 민감)</td>
+<td>낮음 (운영 안정 중심)</td>
+</tr>
+<tr class="even">
+<td>인력/설비 부담</td>
+<td>가변 → 피로도↑</td>
+<td>고정 → 안정성↑</td>
+</tr>
+<tr class="odd">
+<td>적용 산업</td>
+<td>주문생산, 서비스업</td>
+<td>대량생산, 정기적 공급 제품</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<p>주요 내용을 정리하면 다음과 같다.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>정의</td>
+<td>수요 변동에 따라 생산량을 직접 조정하여 대응하는 전략</td>
+</tr>
+<tr class="even">
+<td>핵심 목표</td>
+<td>재고 최소화, 납기 대응</td>
+</tr>
+<tr class="odd">
+<td>장점</td>
+<td>유연성 높음, 재고 비용 낮음</td>
+</tr>
+<tr class="even">
+<td>단점</td>
+<td>인력 운영 불안정, 전환비용 발생</td>
+</tr>
+<tr class="odd">
+<td>적합 사례</td>
+<td>맞춤형 생산, 계절성 상품, 고비용 재고 품목</td>
+</tr>
+</tbody>
+</table>
+<p>이 전략은 <strong>JIT(Just-In-Time)</strong> 생산 방식이나 <strong>Make-to-Order</strong> 모델과도 밀접한 관련이 있으며, 민첩한 공급망 운영이 필요한 기업에서 유용하게 활용된다.</p>
+</section>
+<section id="생산평준화-전략" class="level4">
+<h4 class="anchored" data-anchor-id="생산평준화-전략">생산평준화 전략</h4>
+<p><strong>생산평준화 전략(Level Production Strategy)</strong>은 총괄생산계획(APP: Aggregate Production Planning)에서 <strong>수요 변동에 관계없이 일정한 생산량을 유지</strong>하여 운영 안정성을 확보하는 전략이다. 자원의 효율적 사용과 비용 절감을 목표로 하며, 대표적으로 <strong>재고를 활용하여 수요 변동을 흡수</strong>한다.</p>
+<dl>
+<dt>생산평준화 전략의 정의</dt>
+<dd>
+일정한 생산량을 유지하면서 <strong>수요의 변동은 재고나 백로그(backlog)로 흡수</strong>하는 생산 전략, 생산계획을 안정적으로 운영하며, <strong>설비, 인력 등 내부 자원을 균등하게 활용</strong>하는 데 중점을 둔다.
+</dd>
+<dt>주요 특징</dt>
+<dd>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>생산량</td>
+<td>수요와 무관하게 <strong>일정량을 지속적으로 생산</strong></td>
+</tr>
+<tr class="even">
+<td>재고</td>
+<td>수요 변동에 따른 완충재 역할. 필요 시 많이 축적됨</td>
+</tr>
+<tr class="odd">
+<td>고객 수요 대응</td>
+<td>수요 초과 시: 재고 감소 or 백로그수요 부족 시: 재고 증가</td>
+</tr>
+<tr class="even">
+<td>인력 운영</td>
+<td>고용 변동 거의 없음, <strong>작업자 피로도 최소화</strong></td>
+</tr>
+<tr class="odd">
+<td>장점</td>
+<td>설비/인력 가동률 유지, 교육/운영 효율성 향상</td>
+</tr>
+<tr class="even">
+<td>단점</td>
+<td><strong>재고비용 상승</strong>, 급격한 수요 변화 대응 어려움</td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt>운영 메커니즘 예시</dt>
+<dd>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>월</th>
+<th>수요량</th>
+<th>생산량(고정)</th>
+<th>재고 변화</th>
+<th>비고</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1월</td>
+<td>1,000</td>
+<td>1,100</td>
+<td>+100</td>
+<td>재고 증가</td>
+</tr>
+<tr class="even">
+<td>2월</td>
+<td>1,200</td>
+<td>1,100</td>
+<td>-100</td>
+<td>재고 감소</td>
+</tr>
+<tr class="odd">
+<td>3월</td>
+<td>900</td>
+<td>1,100</td>
+<td>+200</td>
+<td>재고 증가</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<ul>
+<li><strong>생산량은 고정(1,100)</strong>이고</li>
+<li>수요가 적을 땐 재고가 증가하고,</li>
+<li>수요가 많을 땐 재고를 소진한다.</li>
+</ul>
+<dl>
+<dt>장점과 단점</dt>
+<dd>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>구분</th>
+<th>장점</th>
+<th>단점</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>운영 안정성</strong></td>
+<td>인력 및 설비 운영의 일관성 유지</td>
+<td>생산량 조절 유연성 부족</td>
+</tr>
+<tr class="even">
+<td><strong>비용 측면</strong></td>
+<td>고용/해고, 잔업 등 전환비용 없음</td>
+<td>재고 보관 비용 증가 가능성</td>
+</tr>
+<tr class="odd">
+<td><strong>품질/교육</strong></td>
+<td>생산공정 표준화로 품질 안정</td>
+<td>수요 급변 시 대응 미흡</td>
+</tr>
+<tr class="even">
+<td><strong>고객 대응</strong></td>
+<td>재고를 통해 급한 주문도 즉시 대응 가능</td>
+<td>과잉 재고 시 폐기/할인 판매 위험</td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt>생산평준화 전략이 적합한 상황</dt>
+<dd>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>조건</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>수요 예측 정확도 높음</td>
+<td>연중 수요가 비교적 안정적일 때</td>
+</tr>
+<tr class="even">
+<td>재고비용이 상대적으로 낮음</td>
+<td>완제품 저장이 용이하고 보관비용 부담이 낮을 때</td>
+</tr>
+<tr class="odd">
+<td>노동시장 유연성 낮음</td>
+<td>고용/해고에 따른 법적 제약이 클 때</td>
+</tr>
+<tr class="even">
+<td>생산설비 전환비용 높음</td>
+<td>잦은 생산량 변경 시 비용이 크다면 평준화가 유리</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<p>생산평준화 전략 vs 수요추종전략 비교</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>생산평준화 전략</th>
+<th>수요추종 전략</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>생산량</td>
+<td>고정</td>
+<td>수요에 따라 변동</td>
+</tr>
+<tr class="even">
+<td>재고</td>
+<td>높음 (완충재 역할)</td>
+<td>낮음 (재고 최소화)</td>
+</tr>
+<tr class="odd">
+<td>인력 운영</td>
+<td>안정적</td>
+<td>유동적 (고용/해고)</td>
+</tr>
+<tr class="even">
+<td>대응 유연성</td>
+<td>낮음</td>
+<td>높음</td>
+</tr>
+<tr class="odd">
+<td>운영 안정성</td>
+<td>높음</td>
+<td>낮음</td>
+</tr>
+<tr class="even">
+<td>적용 예</td>
+<td>자동차, 가전 등 대량생산</td>
+<td>의류, 외식업 등 맞춤 수요 대응</td>
+</tr>
+</tbody>
+</table>
+<p>주요 내용을 요약하면 다음과 같다.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>정의</td>
+<td>수요와 무관하게 일정한 생산량을 유지하고 재고로 수요 변동을 대응하는 전략</td>
+</tr>
+<tr class="even">
+<td>핵심 목표</td>
+<td>생산 안정성, 자원 효율 극대화</td>
+</tr>
+<tr class="odd">
+<td>운영 특징</td>
+<td>일정 생산, 안정된 인력 운영, 재고 기반 대응</td>
+</tr>
+<tr class="even">
+<td>장점</td>
+<td>교육/품질 관리 용이, 인건비 예측 가능</td>
+</tr>
+<tr class="odd">
+<td>단점</td>
+<td>과잉 재고 발생 가능성, 급변 수요에 비효율적</td>
+</tr>
+<tr class="even">
+<td>적합 대상</td>
+<td>대량생산 제품, 수요 예측이 안정적인 산업군</td>
+</tr>
+</tbody>
+</table>
+<p>이 전략은 <strong>설비 효율성</strong>, <strong>작업자 숙련도 향상</strong>, <strong>생산계획 단순화</strong>라는 이점을 제공하며, <strong>JIT(Just-In-Time)</strong> 시스템과는 반대 개념으로 이해하면 좋다. 실제로는 수요추종 전략과 혼합하여 사용하는 경우가 많다.</p>
+</section>
+<section id="혼합전략" class="level4">
+<h4 class="anchored" data-anchor-id="혼합전략">혼합전략</h4>
+<p><strong>혼합전략(Mixed Production Strategy)</strong>은 생산관리에서 <strong>수요추종 전략(Chase Strategy)</strong>과 <strong>생산평준화 전략(Level Strategy)</strong>의 장단점을 적절히 결합하여, 생산비용과 고객서비스 수준을 균형 있게 유지하려는 <strong>총괄생산계획</strong> 기법이다.</p>
+<dl>
+<dt>혼합전략의 정의</dt>
+<dd>
+수요 변화에 따라 일부 생산량을 조정하면서도, 일정 수준의 생산 안정성과 재고 활용을 유지하는 전략, 즉 <strong>생산량 조정 + 재고 활용 + 인력/외주 등 다양한 수단을 병행</strong>하여 수요에 대응
+</dd>
+<dt>혼합전략 운영 방식</dt>
+<dd>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>요소</th>
+<th>방식</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>기본 생산량</strong></td>
+<td>일정 수준으로 유지하여 생산 안정성 확보 (Level 전략 기반)</td>
+</tr>
+<tr class="even">
+<td><strong>추가 수요 대응</strong></td>
+<td>잔업, 외주, 임시직 활용 또는 일부 생산량 증감 (Chase 전략 요소 반영)</td>
+</tr>
+<tr class="odd">
+<td><strong>재고 운영</strong></td>
+<td>수요보다 초과 생산된 양은 재고로 축적해 다음 기간 대응</td>
+</tr>
+<tr class="even">
+<td><strong>백로그/누락 대응</strong></td>
+<td>급격한 수요 증가 시 재고 부족은 <strong>후행 생산 또는 외주</strong>로 커버</td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt>혼합전략의 사례</dt>
+<dd>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>월</th>
+<th>수요</th>
+<th>기본생산량</th>
+<th>외주/임시생산</th>
+<th>재고 변화</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1월</td>
+<td>1,000</td>
+<td>900</td>
+<td>100 (외주)</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>2월</td>
+<td>1,200</td>
+<td>1,000</td>
+<td>150 (잔업 포함)</td>
+<td>-50</td>
+</tr>
+<tr class="odd">
+<td>3월</td>
+<td>900</td>
+<td>1,000</td>
+<td>0</td>
+<td>+100</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<ul>
+<li>일정 수준의 기본 생산은 유지하고, 수요가 많은 달은 외주 또는 잔업 등으로 보완</li>
+<li>수요보다 적은 달에는 재고를 축적하여 다음 기간 대응</li>
+</ul>
+<dl>
+<dt>장점과 단점</dt>
+<dd>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>장점</th>
+<th>단점</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>유연성</strong></td>
+<td>수요 변화에 대한 적절한 대응 가능</td>
+<td>전략 구성 복잡, 관리 어려움</td>
+</tr>
+<tr class="even">
+<td><strong>비용 효율</strong></td>
+<td>과도한 인력/설비 변동 또는 재고비용 최소화</td>
+<td>잦은 계획 수정 및 조정 필요</td>
+</tr>
+<tr class="odd">
+<td><strong>서비스 수준</strong></td>
+<td>납기 대응력 확보</td>
+<td>계획이 복잡해 실행력 저하 가능</td>
+</tr>
+<tr class="even">
+<td><strong>인력/설비 활용</strong></td>
+<td>안정성과 유연성 동시에 확보</td>
+<td>외주/잔업 관리 비용 추가 발생 가능</td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt>혼합전략이 적합한 상황</dt>
+<dd>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>조건</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>수요 예측 정확도 보통</strong></td>
+<td>불확실성이 존재하지만 완전히 유동적이지는 않을 때</td>
+</tr>
+<tr class="even">
+<td><strong>재고와 유연성 둘 다 필요</strong></td>
+<td>납기 대응과 비용 균형이 필요한 경우</td>
+</tr>
+<tr class="odd">
+<td><strong>노동시장 규제 존재</strong></td>
+<td>인력 고용/해고가 어렵고 잔업 등으로 대응 가능할 때</td>
+</tr>
+<tr class="even">
+<td><strong>비용 제약 존재</strong></td>
+<td>외주, 재고, 잔업 등 다양한 비용 요소가 균형 필요할 때</td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt>3가지 전략 비교</dt>
+<dd>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>수요추종 전략</th>
+<th>생산평준화 전략</th>
+<th>혼합 전략</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>생산량 조정</td>
+<td>수요에 따라 유연하게</td>
+<td>일정하게 유지</td>
+<td>부분 조정</td>
+</tr>
+<tr class="even">
+<td>재고 수준</td>
+<td>거의 없음</td>
+<td>높음</td>
+<td>중간</td>
+</tr>
+<tr class="odd">
+<td>인력/설비 유연성</td>
+<td>매우 높음</td>
+<td>낮음</td>
+<td>중간</td>
+</tr>
+<tr class="even">
+<td>운영 안정성</td>
+<td>낮음</td>
+<td>높음</td>
+<td>균형</td>
+</tr>
+<tr class="odd">
+<td>대응 유연성</td>
+<td>높음</td>
+<td>낮음</td>
+<td>중간 이상</td>
+</tr>
+<tr class="even">
+<td>적용 산업</td>
+<td>맞춤 생산</td>
+<td>대량 반복 생산</td>
+<td>혼합형 수요, 계절성 수요 등</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<p>혼합전략 운영 방식 주요 내용을 정리하면 다음과 같다.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>정의</td>
+<td>수요추종과 생산평준화 전략을 적절히 결합한 유연한 생산 전략</td>
+</tr>
+<tr class="even">
+<td>목표</td>
+<td>생산 안정성과 유연성, 비용 효율을 동시에 확보</td>
+</tr>
+<tr class="odd">
+<td>실행 방법</td>
+<td>고정 생산 + 외주/잔업 + 재고 활용의 혼합 방식</td>
+</tr>
+<tr class="even">
+<td>장점</td>
+<td>유연한 수요 대응, 일정한 생산 유지, 서비스 품질 향상</td>
+</tr>
+<tr class="odd">
+<td>단점</td>
+<td>전략 구성과 실행이 복잡, 계획 수립에 시간 소요</td>
+</tr>
+<tr class="even">
+<td>적합 산업</td>
+<td>계절성 제품, 중간 규모 제조업, 유통-제조 혼합업</td>
+</tr>
+</tbody>
+</table>
+<p>실제 기업들은 수요의 불확실성과 자원 활용의 한계를 고려해 <strong>혼합 전략</strong>을 가장 많이 채택하고 있으며, <strong>ERP 시스템이나 APS(Advanced Planning &amp; Scheduling)</strong> 도구를 활용해 세밀하게 운영하고 있다.</p>
 </section>
 </section>
 <section id="sec-rrp" class="level3">
@@ -1715,21 +2342,19 @@ RRP는 종종 더 큰 <a href="1101정보화활용기술.html#sec-erp" class="qu
 <li><strong>사후 증설 전략</strong>(Reactive Capacity Strategy)
 <ul>
 <li><font color="blue">재고 부족 손실 &lt; 잉여 능력 비용 x 0.67</font></li>
-<li>여유 능력 유지 비용이 품절 비용ㅇ를 초과할 때 채택되는 전략으로 수요를 관망하다가 증설하는 보수 전략</li>
+<li>여유 능력 유지 비용이 품절 비용을 초과할 때 채택되는 전략으로 수요를 관망하다가 증설하는 보수 전략</li>
 <li>능력 이용률은 높지만 시장 위치가 불안한 기업에서 채택</li>
 <li>수요를 관망(wait and see)하다가 증설하는 보수적인 증설 전략으로 관망 기간 중 어느 정도 부족 능력은 감수해야 한다.</li>
 <li>사후 증설 전략은 투자 위험을 줄일 수 있으나 수요에 뒤처지며 생산능력 부족을 메우기 위한 잔업, 임시고용, 하청 등 단기적인 대안에 의존하는 경우가 많다.</li>
 <li>이 전략은 능력 이용률 높지만 시장 위치가 불안한 기업에서 흔히 채택된다.</li>
 <li>경쟁업체에서 동시에 생산능력을 증대시키게 되어 많은 잉여 능력을 유발하여 경쟁은 더울 치열해진다.</li>
 </ul></li>
-</ul>
-</dd>
-<dt>기대 가치 유지 전략(Expected Capacity Strategy)</dt>
-<dd>
+<li><strong>기대 가치 유지 전략</strong>(Expected Capacity Strategy)
 <ul>
 <li>기대 수요에 근접한 능력 유지(사전/사후 절충형)</li>
 <li>사전 확장, 사후 증설 전략을 절충한 접근 방식으로 가급적 기대 수요에 근접한 능력을 유지하려는 전략</li>
 <li>이 경우 충분한 능력을 갖지 못한 가능성만큼(잉여) 능력을 가질 가능성을 만들어 손실을 상쇄하는 전략</li>
+</ul></li>
 </ul>
 </dd>
 </dl>
@@ -1794,22 +2419,7 @@ RRP는 종종 더 큰 <a href="1101정보화활용기술.html#sec-erp" class="qu
 <dl>
 <dt>CR에 따른 생산능력 전략</dt>
 <dd>
-<ul>
-<li><span class="math inline">\(CR \ge 0.5\)</span>
-<ul>
-<li><font color="blue">품절 비용 &lt; 0.67 x 잉여 능력 유지 비용</font></li>
-<li>사전 확장 전략</li>
-</ul></li>
-<li><span class="math inline">\(-0.5 &lt; CR &lt; 0.5\)</span>
-<ul>
-<li>기대 가치 유지 전략</li>
-</ul></li>
-<li><span class="math inline">\(CR \le -0.5\)</span>
-<ul>
-<li><font color="blue">품절비용 &gt; 2 x 잉여 능력 비용</font></li>
-<li>사후 증설 전략</li>
-</ul></li>
-</ul>
+​- <span class="math inline">\(CR \ge 0.5\)</span> - <font color="blue">품절비용 &gt; 2 x 잉여 능력 비용</font> - 사전 확장 전략 - <span class="math inline">\(-0.5 &lt; CR &lt; 0.5\)</span> - 기대 가치 유지 전략 - <span class="math inline">\(CR \le -0.5\)</span> - <font color="blue">품절 비용 &lt; 0.67 x 잉여 능력 유지 비용</font> - 사후 증설 전략
 </dd>
 </dl>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 112-3-1">
@@ -1839,15 +2449,6 @@ RRP는 종종 더 큰 <a href="1101정보화활용기술.html#sec-erp" class="qu
 <li><strong>생산비용 최소화</strong>: 생산설비에 대한 과중한 부하 또는 적정한 생산 능력 효율적 활용 → 생산비용 최소화</li>
 </ul>
 </dd>
-<dt>MPS 시간 구역</dt>
-<dd>
-<ul>
-<li><strong>동결된 시간</strong>(frozen): 특별상황 관리책임자 허가 없이 생산일정 변경 불가</li>
-<li><strong>확정된 구간</strong>(fixed): 예외적인 상황 발생에 한하여 변경 가능</li>
-<li><strong>채워진 구간</strong>(full): 일정변경, 사용 가능한 생산능력 및 주문처리를 위해 할당되었으나 일정 변경으로 인한 비용에는 큰 영향을 미치지 않음</li>
-<li><strong>개방된 구간</strong>(open): 새 주문을 자유롭게 반영 가능, 아지 생산능력 미 반영</li>
-</ul>
-</dd>
 <dt>주요 특성</dt>
 <dd>
 <ol type="1">
@@ -1858,13 +2459,23 @@ RRP는 종종 더 큰 <a href="1101정보화활용기술.html#sec-erp" class="qu
 <li>타 부서 일정계획에 활용할 수 있다.</li>
 </ol>
 </dd>
+<dt>MPS 시간 구역</dt>
+<dd>
+<ul>
+<li><strong>동결된 시간</strong>(frozen): 특별상황 관리책임자 허가 없이 생산일정 변경 불가</li>
+<li><strong>확정된 구간</strong>(fixed): 예외적인 상황 발생에 한하여 변경 가능</li>
+<li><strong>채워진 구간</strong>(full): 일정변경, 사용 가능한 생산능력 및 주문처리를 위해 할당되었으나 일정 변경으로 인한 비용에는 큰 영향을 미치지 않음</li>
+<li><strong>개방된 구간</strong>(open): 새 주문을 자유롭게 반영 가능, 아지 생산능력 미 반영</li>
+</ul>
+</dd>
 </dl>
 <p>MPS 작성 절차는 다음과 같다.</p>
 <pre><code>1. 재고량 예측치 및 확정된 주문량에 따라 예측 보유재고량 산출
 2. 수요량 대비 재고 부족 시 생산 LOT 크기 감안하여 MPS 수량 계획 수립</code></pre>
 <p><span id="eq-number-of-inventory"><span class="math display">\[
-\text{예측된 재고보유 수량 = (직전기간 말 재고 수준) + (MPS 수량) - (예측된 수요량)}
-\tag{11.2}\]</span></span> 약속 가능수량(ATP, available to promise quantities)은 고객과 약속한 제품이나 서비스 수량을 의미하며 다음과 같이 계산한다.</p>
+\text{예측된 재고보유 수량 = (직전기간 말 재고 수준) + (MPS 수량) - max(수요예측치, 확정주문량)}
+\tag{11.2}\]</span></span></p>
+<p>약속 가능수량(ATP, available to promise quantities)은 고객과 약속한 제품이나 서비스 수량을 의미하며 다음과 같이 계산한다.</p>
 <p><span id="eq-atp"><span class="math display">\[
 ATP=
 \begin{cases}
@@ -1959,13 +2570,13 @@ MPS 작성
 <dt>1주차 경우</dt>
 <dd>
 <ul>
-<li>현재고 - 예측된 수요(55) = 5</li>
+<li>현재고 - max(40, 55) = 5</li>
 </ul>
 </dd>
 <dt>2주차 경우</dt>
 <dd>
 <ul>
-<li>보유재고(5) + MPS수량(200) - 예측된 수요(50) = 155</li>
+<li>보유재고(5) + MPS수량(200) - max(50,45) = 155</li>
 </ul>
 </dd>
 </dl>
