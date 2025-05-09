@@ -630,25 +630,236 @@ window.Quarto = {
 세부일정계획으로 <font color="blue">작업자, 기계별 일정계획</font>을 말함</li>
 </ul>
 </dd>
-<dt>일정계획 기능</dt>
+<dt>일정계획 주요 목적</dt>
 <dd>
-
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>목적</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>납기 준수</td>
+<td>고객 요구 납기에 맞춰 제품을 적시에 제공</td>
+</tr>
+<tr class="even">
+<td>자원 효율화</td>
+<td>기계 및 작업자의 유휴 시간 최소화</td>
+</tr>
+<tr class="odd">
+<td>재공품 최소화</td>
+<td>작업 간 대기시간을 줄여 공정 흐름 원활화</td>
+</tr>
+<tr class="even">
+<td>생산 리드타임 단축</td>
+<td>총 생산 소요시간 단축</td>
+</tr>
+<tr class="odd">
+<td>공정 간 균형화</td>
+<td>특정 작업장이나 공정에 부하가 몰리지 않도록 분산</td>
+</tr>
+</tbody>
+</table>
 </dd>
-</dl>
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart LR
-부하결정 --- 작업우선순위결정 --- 작업할당 --- 작업배정 ---진도관리
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
-<dl>
+<dt>일정계획 계층 구조</dt>
+<dd>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>수준</th>
+<th>계획명</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1단계</td>
+<td><strong>총괄생산계획 (Aggregate Planning)</strong></td>
+<td>월 단위로 제품군 수준의 생산량 및 자원계획 수립</td>
+</tr>
+<tr class="even">
+<td>2단계</td>
+<td><strong>주생산계획 (Master Production Schedule, MPS)</strong></td>
+<td>주 단위로 제품별 생산 시기 및 수량 결정</td>
+</tr>
+<tr class="odd">
+<td>3단계</td>
+<td><strong>작업할당 (Job Allocation)</strong></td>
+<td>작업을 어느 공정이나 설비 그룹에 배치할지 결정</td>
+</tr>
+<tr class="even">
+<td>4단계</td>
+<td><strong>작업배정 (Job Assignment)</strong></td>
+<td>작업장 내 세부 작업자/설비에 작업을 배분</td>
+</tr>
+<tr class="odd">
+<td>5단계</td>
+<td><strong>작업순서결정 (Sequencing)</strong></td>
+<td>각 작업장 내 작업의 실행 순서 결정</td>
+</tr>
+<tr class="even">
+<td>6단계</td>
+<td><strong>작업지시 (Dispatching)</strong></td>
+<td>실제 작업 실행에 대한 지시 및 통제</td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt>일정계획 주요 개념</dt>
+<dd>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>구분</th>
+<th>설명</th>
+<th>예시</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>할당 (Allocation)</strong></td>
+<td>어떤 작업을 어떤 작업장/설비 그룹에 보낼 것인가</td>
+<td>A작업은 조립라인 1에 할당</td>
+</tr>
+<tr class="even">
+<td><strong>배정 (Assignment)</strong></td>
+<td>할당된 작업을 어떤 개별 기계나 작업자에게 어떻게 배정할 것인가</td>
+<td>라인 1의 작업자 김 씨에게 오전에 A작업 배정</td>
+</tr>
+<tr class="odd">
+<td><strong>Sequencing</strong></td>
+<td>같은 작업장에서 작업의 수행 순서를 정하는 것</td>
+<td>A → B → C 순으로 작업</td>
+</tr>
+<tr class="even">
+<td><strong>Dispatching</strong></td>
+<td>작업 지시를 실제로 실행하는 것</td>
+<td>김 씨, 지금 A작업 시작하세요</td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt>일정계획 주요 기법</dt>
+<dd>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>구분</th>
+<th>기법명</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>정적 스케줄링</td>
+<td>Gantt 차트, 작업순서표</td>
+<td>미리 고정된 계획에 따라 일정 작성</td>
+</tr>
+<tr class="even">
+<td>동적 스케줄링</td>
+<td>우선순위 규칙 (SPT, LPT, EDD 등)</td>
+<td>작업 상황에 따라 실시간 우선순위 결정</td>
+</tr>
+<tr class="odd">
+<td>휴리스틱 기법</td>
+<td>SPT(최단처리시간우선), EDD(납기우선) 등</td>
+<td>단순 규칙 기반의 일정 결정 방식</td>
+</tr>
+<tr class="even">
+<td>최적화 기법</td>
+<td>선형계획법, 시뮬레이션, 제약이론(TOC)</td>
+<td>수학적 모델 기반 최적 해 도출</td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt>일정계획 핵심성과지표(KPI)</dt>
+<dd>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>지표</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>납기준수율 (OTD)</td>
+<td>정해진 납기 내에 출하된 비율</td>
+</tr>
+<tr class="even">
+<td>기계가동률</td>
+<td>설비의 실제 가동시간 대비 가능한 가동시간</td>
+</tr>
+<tr class="odd">
+<td>평균 리드타임</td>
+<td>생산 시작부터 완료까지 소요 시간</td>
+</tr>
+<tr class="even">
+<td>WIP 수준</td>
+<td>생산 중인 재공품 수량</td>
+</tr>
+<tr class="odd">
+<td>대기시간</td>
+<td>작업 간 대기 발생 시간의 총합</td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt>생산계획 시나리오</dt>
+<dd>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>단계</th>
+<th>작업 내용</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>생산계획</td>
+<td>A제품 500개, B제품 300개 생산 필요</td>
+</tr>
+<tr class="even">
+<td>작업 할당</td>
+<td>A제품 → 1조 라인, B제품 → 2조 라인</td>
+</tr>
+<tr class="odd">
+<td>작업 배정</td>
+<td>1조 라인의 기계 M1: A제품 오전 생산1조 라인의 기계 M2: A제품 오후 생산</td>
+</tr>
+<tr class="even">
+<td>Sequencing</td>
+<td>M1: A1 → A2 → A3 순서로 작업</td>
+</tr>
+<tr class="odd">
+<td>Dispatching</td>
+<td>M1 작업자에게 A1 작업 즉시 지시</td>
+</tr>
+</tbody>
+</table>
+</dd>
 <dt>기준일정</dt>
 <dd>
 <ul>
@@ -667,12 +878,12 @@ window.Quarto = {
 </thead>
 <tbody>
 <tr class="odd">
-<td>절차계획(순서계획)</td>
-<td>작업배정(우선순위 통제)</td>
+<td>공정계획(순서계획)</td>
+<td>작업지시(우선순위 통제)</td>
 </tr>
 <tr class="even">
 <td>공수계획(능력소요계획)</td>
-<td>여력관리</td>
+<td>능력관리</td>
 </tr>
 <tr class="odd">
 <td>일정계획</td>
@@ -681,13 +892,58 @@ window.Quarto = {
 </tbody>
 </table>
 <dl>
-<dt>절차계획(routing)</dt>
+<dt>계획기능 요약</dt>
+<dd>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>Routing</th>
+<th>Loading</th>
+<th>Scheduling</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>정의</td>
+<td>공정 흐름 결정</td>
+<td>설비별 작업 분배</td>
+<td>작업 시간 결정</td>
+</tr>
+<tr class="even">
+<td>중심 개념</td>
+<td><strong>“어디서 어떤 순서로”</strong></td>
+<td><strong>“어디에 얼마나”</strong></td>
+<td><strong>“언제”</strong></td>
+</tr>
+<tr class="odd">
+<td>주요 목적</td>
+<td>흐름 최적화</td>
+<td>자원 활용 최적화</td>
+<td>시간 효율화, 납기 준수</td>
+</tr>
+<tr class="even">
+<td>적용 도구</td>
+<td>공정도, 작업지시서</td>
+<td>부하 차트, 자원표</td>
+<td>Gantt 차트, 우선순위 규칙</td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt>공정계획(routing)</dt>
 <dd>
 <ul>
 <li>작업계시에 앞서 능률적이고 경제적인 작업절차를 결정하기 위한 것(<font color="blue">작업방법과 순서가 정해짐</font>)</li>
 </ul>
 </dd>
-<dt>공수계획(loading)</dt>
+<dt>공수계획(작업부하할당, loading)</dt>
 <dd>
 <ul>
 <li>생산계획량을 완성하는데 필요한 <font color="blue">인원이나 기계 부하를 결정</font>하게 됨</li>
@@ -699,13 +955,47 @@ window.Quarto = {
 <li>작업순서와 방법이 결정되고(절차계획), 생산량이 공수로 환산되면(공수계획), 작업 <font color="blue">시작시간과 종료시간을 결정</font>하는 과정</li>
 </ul>
 </dd>
-<dt>작업배정(dispatching)</dt>
+<dt>통제기능 요약</dt>
+<dd>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>정의</th>
+<th>주요 활동</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Dispatching</strong></td>
+<td>작업을 실제로 지시하고 개시</td>
+<td>작업지시서 발행, 자재/설비 준비</td>
+</tr>
+<tr class="even">
+<td><strong>Capacity Control</strong></td>
+<td>설비와 인력의 가용 능력 점검 및 조정</td>
+<td>가동률 분석, 부하조절</td>
+</tr>
+<tr class="odd">
+<td><strong>Expediting (Follow-up)</strong></td>
+<td>계획대로 진척 중인지 점검하고 문제 조정</td>
+<td>납기 추적, 병목관리, 현장 피드백</td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt>작업지시(dispatching)</dt>
 <dd>
 <ul>
 <li>절차계획과 일정계획표에 따라서 <font color="blue">생산을 개시</font>하도록 허락</li>
 </ul>
 </dd>
-<dt>여력관리(capacity control)</dt>
+<dt>능력관리(capacity control)</dt>
 <dd>
 <ul>
 <li>통제단계에서 <font color="blue">실제 능력과 부하를 조사</font>하여 양자 균형을 이루도록 조정</li>
