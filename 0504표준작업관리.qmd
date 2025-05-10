@@ -50,7 +50,8 @@ flowchart LR
 00 --- 10 & 20 & 30 & 40 & 50 & 60
 ```
 
-**레이팅 기법**은 다음과 같다.
+
+구체적인 **레이팅 기법**은 다음과 같다.
 
 평준화(leveling)법 또는 <font color="blue">Westing house법</font>
 : 
@@ -188,7 +189,8 @@ end
 내경법
 : 
     - **실동시간에 대한 비율**을 여유율로 사용함
-      $$여유율(A) = (여유시간/실동시간)\times100 = \frac{여유시간}{(정미시간+여유시간)}\times100 = \frac{AT}{NT+AT}\times100(\%)$$ {#eq-int-at}
+      $$여유율(A) = (여유시간/실동시간)\times 100 $$
+      $$= \frac{여유시간}{(정미시간+여유시간)}\times100 = \frac{AT}{NT+AT}\times100(\%)$$ {#eq-int-at}
 
 :::{.callout-important icon=false title="내경법과 외경법"}
 
