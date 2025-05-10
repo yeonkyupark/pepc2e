@@ -2479,8 +2479,8 @@ RRP는 종종 더 큰 <a href="1101정보화활용기술.html#sec-erp" class="qu
 <p><span id="eq-atp"><span class="math display">\[
 ATP=
 \begin{cases}
-\text{(기초재고보유량) + (MPS 수량) - (다음번 MPS가 도래하기 전까지 확정된  고객주문량), 첫째 주}\\
-\text{(MPS 수량) - (다음 번 MPS가 도래하기 전까지 확정된 고객주문량), MPS가 계획된 주}
+\text{(기초재고보유량) + (MPS 수량) -\sum{확정주문량_{t(다음MPS전까지)}}, 첫째 주}\\
+\text{(이전주재고량)+(MPS 수량) - \sum{확정주문량_{t(다음MPS전까지)}}, MPS가 계획된 주}
 \end{cases}
 \tag{11.3}\]</span></span></p>
 <div class="callout callout-style-default callout-important no-icon callout-titled" title="MPS 작성">
@@ -2567,13 +2567,13 @@ MPS 작성
 </tbody>
 </table>
 <dl>
-<dt>1주차 경우</dt>
+<dt>1 주차 경우</dt>
 <dd>
 <ul>
 <li>현재고 - max(40, 55) = 5</li>
 </ul>
 </dd>
-<dt>2주차 경우</dt>
+<dt>2 주차 경우</dt>
 <dd>
 <ul>
 <li>보유재고(5) + MPS수량(200) - max(50,45) = 155</li>
@@ -2592,11 +2592,46 @@ ATP 계산
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>리드타임 2주, Lot 크기 100개, 현재고 80개일 때, ATP 계산 산식(<a href="#eq-atp" class="quarto-xref"><span>11.3</span></a>)에 따라 ATP를 계산하면 다음과 같다.</p>
+<dl>
+<dt>조건 요약</dt>
+<dd>
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th>주별</th>
+<th>항목</th>
+<th>값</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>초기 재고</td>
+<td>80개</td>
+</tr>
+<tr class="even">
+<td>Lot 크기</td>
+<td>100개</td>
+</tr>
+<tr class="odd">
+<td>리드타임</td>
+<td>2주 (계산에 영향 없음)</td>
+</tr>
+<tr class="even">
+<td>MPS 주차</td>
+<td>3주, 5주, 6주</td>
+</tr>
+<tr class="odd">
+<td>안전재고</td>
+<td>없음</td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt>전체 시뮬레이션 표</dt>
+<dd>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>항목</th>
 <th>1주</th>
 <th>2주</th>
 <th>3주</th>
@@ -2609,7 +2644,7 @@ ATP 계산
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>수요 예측치</strong></td>
+<td>수요 예측치</td>
 <td>20</td>
 <td>50</td>
 <td>40</td>
@@ -2620,7 +2655,7 @@ ATP 계산
 <td>40</td>
 </tr>
 <tr class="even">
-<td><strong>확정된 주문량</strong></td>
+<td>확정 주문량</td>
 <td>25</td>
 <td>35</td>
 <td>20</td>
@@ -2631,68 +2666,122 @@ ATP 계산
 <td>0</td>
 </tr>
 <tr class="odd">
-<td><strong>예측 보유재고</strong></td>
-<td>55</td>
-<td>5</td>
-<td>65</td>
-<td>25</td>
-<td>45</td>
-<td>65</td>
-<td>85</td>
-<td>45</td>
+<td>MPS 생산량</td>
+<td>-</td>
+<td>-</td>
+<td>100</td>
+<td>-</td>
+<td>100</td>
+<td>100</td>
+<td>-</td>
+<td>-</td>
 </tr>
 <tr class="even">
-<td><strong>MPS</strong></td>
-<td>-</td>
-<td>-</td>
+<td>PAB (예상 가용재고)</td>
+<td>55</td>
+<td>20</td>
 <td>100</td>
-<td>-</td>
-<td>100</td>
-<td>100</td>
-<td>100</td>
-<td>-</td>
+<td>90</td>
+<td>185</td>
+<td>105</td>
+<td>25</td>
+<td>-15</td>
 </tr>
 <tr class="odd">
-<td><strong>MPS 생산</strong></td>
-<td>100</td>
-<td>-</td>
-<td>100</td>
-<td>100</td>
-<td>100</td>
+<td>ATP</td>
 <td>-</td>
 <td>-</td>
+<td>75</td>
 <td>-</td>
-</tr>
-<tr class="even">
-<td><strong>ATP</strong></td>
-<td>20</td>
-<td>-</td>
-<td>70</td>
-<td>-</td>
-<td>95</td>
-<td>-</td>
+<td>120</td>
+<td>145</td>
 <td>-</td>
 <td>-</td>
 </tr>
 </tbody>
 </table>
+</dd>
+</dl>
+<p><strong>계산 과정 요약</strong></p>
 <dl>
-<dt>첫째 주</dt>
+<dt>1주</dt>
 <dd>
 <ul>
-<li>ATP = 80 + 0 + (25+35) = 20</li>
+<li>초기 재고: 80</li>
 </ul>
 </dd>
-<dt>3째 주</dt>
+</dl>
+<ul>
+<li>확정 주문량: 25<br>
+→ PAB = 80 - 25 = <strong>55</strong></li>
+</ul>
+<dl>
+<dt>2주</dt>
 <dd>
 <ul>
-<li>ATP = 100 - (20+10) = 70</li>
+<li>PAB: 55</li>
 </ul>
 </dd>
-<dt>5째 주</dt>
+</dl>
+<ul>
+<li>확정 주문량: 35<br>
+→ PAB = 55 - 35 = <strong>20</strong></li>
+</ul>
+<dl>
+<dt>3주</dt>
 <dd>
 <ul>
-<li>ATP = 100 - (5+0+0+0) = 95</li>
+<li>MPS 생산: 100</li>
+</ul>
+</dd>
+</dl>
+<ul>
+<li>확정 주문량: 20<br>
+→ PAB = 20 + 100 - 20 = <strong>100</strong><br>
+→ ATP = 100 + 20 - (20 + 10) = <strong>75</strong></li>
+</ul>
+<dl>
+<dt>4주</dt>
+<dd>
+<ul>
+<li>확정 주문량: 10<br>
+→ PAB = 100 - 10 = <strong>90</strong></li>
+</ul>
+</dd>
+<dt>5주</dt>
+<dd>
+<ul>
+<li>MPS 생산: 100</li>
+</ul>
+</dd>
+</dl>
+<ul>
+<li>확정 주문량: 5<br>
+→ PAB = 90 + 100 - 5 = <strong>185</strong><br>
+→ ATP = 100 + 90 - 5 = <strong>120</strong></li>
+</ul>
+<dl>
+<dt>6주</dt>
+<dd>
+<ul>
+<li>MPS 생산: 100<br>
+→ PAB = 185 + 100 - 0 = <strong>285</strong><br>
+→ ATP = 100 + 185 - 0 = <strong>145</strong><br>
+→ 다음 주문 없음, 전체 가용</li>
+</ul>
+</dd>
+<dt>7주</dt>
+<dd>
+<ul>
+<li>확정 주문량: 0<br>
+→ PAB = 285 - 80 = <strong>205</strong></li>
+</ul>
+</dd>
+<dt>8주</dt>
+<dd>
+<ul>
+<li>확정 주문량: 0<br>
+→ PAB = 205 - 40 = <strong>165</strong></li>
 </ul>
 </dd>
 </dl>
