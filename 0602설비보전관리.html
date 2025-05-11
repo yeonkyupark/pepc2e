@@ -519,10 +519,7 @@ window.Quarto = {
   <ul>
   <li><a href="#sec-failure-rate" id="toc-sec-failure-rate" class="nav-link" data-scroll-target="#sec-failure-rate">고장률</a></li>
   </ul></li>
-  <li><a href="#sec-rams" id="toc-sec-rams" class="nav-link" data-scroll-target="#sec-rams">RAMS</a>
-  <ul>
-  <li><a href="#측정-방법" id="toc-측정-방법" class="nav-link" data-scroll-target="#측정-방법">측정 방법</a></li>
-  </ul></li>
+  <li><a href="#sec-rams" id="toc-sec-rams" class="nav-link" data-scroll-target="#sec-rams">RAMS</a></li>
   <li><a href="#설비-분석-도구" id="toc-설비-분석-도구" class="nav-link" data-scroll-target="#설비-분석-도구">설비 분석 도구</a>
   <ul>
   <li><a href="#sec-pm-analysis" id="toc-sec-pm-analysis" class="nav-link" data-scroll-target="#sec-pm-analysis">PM 분석</a></li>
@@ -2377,33 +2374,119 @@ MTBF = \frac{정상가동총시간}{고장횟수}
 <figcaption>https://scienceon.kisti.re.kr/srch/selectPORSrchReport.do?cn=TRKO201300024419</figcaption>
 </figure>
 </div>
-<p><strong>욕조곡선</strong>(bathtube curve), 신뢰도 곡선은 <font color="blue">고장률이 시간 변화에 따라 높은 값에서 점차 낮은 값으로 감소하는 일정한 값을 얼마동안 유지한 후 점차 다시 높아지는 제품 수명을 나타내는 곡선</font>이다. 신뢰도에서 고장률이 마치 욕조처럼 생겼다고 붙여진 명칭이다.</p>
-<dl>
-<dt>DFR, decrease failure rate</dt>
-<dd>
-<ul>
-<li><font color="#245bdb">초기고장, 감소형</font></li>
-<li>품질관리 미비로 발생할 수 있는 고장으로 작업시작 전 점검, 시운전 등으로 사전 예방이 가능한 고장</li>
-<li>debugging 기간, burn-in 기간을 통해 결함 탐지 및 안정화</li>
-</ul>
-</dd>
-<dt>CFR, constant failure rate</dt>
-<dd>
-<ul>
-<li><font color="#245bdb">우발고장, 일정형</font></li>
-<li>예측할 수 없는 경우 발생하는 고장으로 시운전이나 점검으로 예방이 불가</li>
-<li>낮은 안전계수, 사용자 과오 등</li>
-</ul>
-</dd>
-<dt>IFR, increase failure rate</dt>
-<dd>
-<ul>
-<li><font color="#245bdb">마모고장, 증가형</font></li>
-<li>정치 일부분이 수명을 다하여 발생하는 고장</li>
-<li>부식, 마모, 불충분한 정비 등</li>
-</ul>
-</dd>
-</dl>
+<p>욕조곡선(Bathtub Curve)은 제품이나 설비의 수명 주기에 따른 <strong>고장률(Failure Rate)</strong> 변화를 설명하는 곡선으로, 신뢰성공학의 핵심 개념이다. 이 곡선은 일반적으로 <strong>세 단계</strong>로 나뉘며, 각각의 구간은 고장률의 변화 특성에 따라 <strong>DFR(Decreasing Failure Rate)</strong>, <strong>CFR(Constant Failure Rate)</strong>, <strong>IFR(Increasing Failure Rate)</strong>로 구분된다.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>구간</th>
+<th>고장률 형태</th>
+<th>영어 약어</th>
+<th>주요 특징</th>
+<th>고장 원인</th>
+<th>개선/대응 전략</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>초기 고장기</strong></td>
+<td>감소함</td>
+<td><strong>DFR</strong>(Decreasing Failure Rate)</td>
+<td>제조/설치 초기 결함이 시간이 지나며 제거되어 고장률이 점차 낮아짐</td>
+<td>설계 결함, 조립 불량, 초기 사용 오류</td>
+<td>초기 품질관리 강화, 번인 테스트, 사용자 교육</td>
+</tr>
+<tr class="even">
+<td><strong>정상 수명기</strong></td>
+<td>일정함</td>
+<td><strong>CFR</strong>(Constant Failure Rate)</td>
+<td>고장률이 일정하게 유지되며, 우발적이고 확률적인 고장이 주로 발생</td>
+<td>일시적 외부 요인, 사용자의 실수 등</td>
+<td>예방보전(PM), 표준작업 준수, 상태기반보전(CBM)</td>
+</tr>
+<tr class="odd">
+<td><strong>마모 고장기</strong></td>
+<td>증가함</td>
+<td><strong>IFR</strong>(Increasing Failure Rate)</td>
+<td>부품의 마모나 열화로 인해 고장률이 점점 증가</td>
+<td>피로 누적, 마모, 노화</td>
+<td>예지보전(PdM), 주기적 부품 교체, 수명 종료 설계</td>
+</tr>
+</tbody>
+</table>
+<p>참고로 고장률 모델별 의미는 다음과 같다.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>약어</th>
+<th>풀네임</th>
+<th>의미</th>
+<th>수학적 특징</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>DFR</strong></td>
+<td>Decreasing Failure Rate</td>
+<td>시간이 지날수록 고장 확률이 감소</td>
+<td>Weibull 분포의 형상계수 β &lt; 1</td>
+</tr>
+<tr class="even">
+<td><strong>CFR</strong></td>
+<td>Constant Failure Rate</td>
+<td>시간이 지나도 고장 확률이 일정</td>
+<td>형상계수 β = 1 (지수 분포)</td>
+</tr>
+<tr class="odd">
+<td><strong>IFR</strong></td>
+<td>Increasing Failure Rate</td>
+<td>시간이 지날수록 고장 확률이 증가</td>
+<td>형상계수 β &gt; 1</td>
+</tr>
+</tbody>
+</table>
+<p>욕조곡선을 실무에 적용한 예시는 다음과 같다.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>산업 분야</th>
+<th>적용 사례</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>반도체/전자</strong></td>
+<td>초기 고장(DFR) 대비 번인 테스트 실시</td>
+</tr>
+<tr class="even">
+<td><strong>자동차/항공</strong></td>
+<td>마모 고장기(IFR)를 고려한 정기적 부품 교체</td>
+</tr>
+<tr class="odd">
+<td><strong>설비보전(TPM)</strong></td>
+<td>수명기별 보전 전략 차별화 (예방 → 예지 → 교체)</td>
+</tr>
+<tr class="even">
+<td><strong>신뢰성 분석</strong></td>
+<td>Weibull 분석으로 설비 수명곡선 도출 및 MTBF 계산</td>
+</tr>
+</tbody>
+</table>
+<p>욕조곡선은 설비나 제품의 수명 동안 고장률이 <strong>감소(DFR) → 일정(CFR) → 증가(IFR)</strong>하는 세 구간으로 구성되어 있으며,<br>
+이를 통해 <strong>각 단계에 맞는 설비관리 전략</strong>을 수립할 수 있다. 특히, Weibull 분석을 병행하면 고장률 변화의 수치화와 예측이 가능하다.</p>
 <section id="sec-failure-rate" class="level3">
 <h3 class="anchored" data-anchor-id="sec-failure-rate">고장률</h3>
 <p><strong>고장률</strong>(failure rate)이란 <font color="blue">어떤 시점까지 동작하여 온 품목이 계속되는 단위시간 내 고장을 일으키는 비율</font>을 뜻한다. 평균 고장률은 총 고장횟수를 총 동작시간으로 나눈 값이다.</p>
@@ -2442,70 +2525,221 @@ RAMS --- 신뢰성 &amp; 가용성 &amp; 유지보수성 &amp; 안전성
 </div>
 </div>
 </div>
-<dl>
-<dt>신뢰성(reliability)</dt>
-<dd>
-<ul>
-<li>제품이 일정 기간 동안 얼마나 정상적으로 동작하는지를 나타내는 지표</li>
-<li><font color="#245bdb">고장없이</font> 예상대로 동작하는 능력</li>
-</ul>
-</dd>
-<dt>가용성(availability)</dt>
-<dd>
-<ul>
-<li>제품이나 시스템이 사용 가능한 상태에 있는 비율을 나타내는 지표</li>
-<li>장애로 인한 중단 시간을 최소화하여 시스템 <font color="#245bdb">가동 시간을 최대한 확보</font>하는 것이 목표</li>
-</ul>
-</dd>
-<dt>유지보수성(maintainability)</dt>
-<dd>
-<ul>
-<li>제품이나 시스템이 고장 났을 때 빠르게 복구 또는 유지보수를 수행할 수 있는지를 나타내는 지표</li>
-<li>유지보수성이 높으면 <font color="#245bdb">고장 시간을 최소화</font>하고 장애복구를 빠르게 수행 가능</li>
-</ul>
-</dd>
-<dt>안전성(safety)</dt>
-<dd>
-<ul>
-<li>제품이나 시스템을 사용하는 중 사용자자나 환경에 어떠한 유해한 영향도 미치지 않는 능력</li>
-<li>제품 사용자와 주변 환경을 <font color="#245bdb">보호</font>하는 중요한 역할</li>
-</ul>
-</dd>
-</dl>
-<section id="측정-방법" class="level3">
-<h3 class="anchored" data-anchor-id="측정-방법">측정 방법</h3>
 <table class="caption-top table">
-<caption>RAMS 측정 방법</caption>
 <colgroup>
-<col style="width: 15%">
-<col style="width: 85%">
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>항목</th>
-<th>측정방법</th>
+<th>구성요소</th>
+<th>정의</th>
+<th>설명</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>신뢰성</td>
-<td>MTBF, 실페 확률(특정 기간 내 고장이 발생할 확률, 과거 데이터 및 통계 기반으로 계산)</td>
+<td><strong>Reliability (신뢰성)</strong></td>
+<td>일정 시간 동안 고장 없이 동작할 수 있는 능력</td>
+<td>고장 발생 없이 의도된 기능을 수행하는 확률</td>
 </tr>
 <tr class="even">
-<td>가용성</td>
-<td>MTTR</td>
+<td><strong>Availability (가용성)</strong></td>
+<td>시스템이 언제든지 사용 가능한 상태에 있는 정도</td>
+<td>유지보수 시간과 고장률을 함께 고려한 실제 사용 가능성</td>
 </tr>
 <tr class="odd">
-<td>유지보수성</td>
-<td>복구 시간, 유지 보수 작업 복잡성, 필요한 기술 및 장비 등을 고려하여 평가</td>
+<td><strong>Maintainability (유지보수성)</strong></td>
+<td>고장 발생 시 빠르게 수리하거나 복구할 수 있는 능력</td>
+<td>수리 시간의 평균 및 정비 용이성</td>
 </tr>
 <tr class="even">
-<td>안전성</td>
-<td>HAZOP(hazard and operability study), FMEA(failure modes and effects analysis), FTA(fault tree analysis)</td>
+<td><strong>Safety (안전성)</strong></td>
+<td>시스템이 사람과 환경에 위험을 미치지 않고 동작할 수 있는 능력</td>
+<td>고장 시 위험요소가 발생하지 않도록 설계되어 있는지 평가</td>
 </tr>
 </tbody>
 </table>
-</section>
+<p>RAMS 항목별 평가 지표는 다음과 같다.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>주요 평가 지표</th>
+<th>정의</th>
+<th>측정 방법 또는 단위</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Reliability</strong></td>
+<td>MTBF(Mean Time Between Failures)</td>
+<td>평균 고장 간격</td>
+<td>시간 (h), 사이클 등</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>R(t)</td>
+<td>t시간 동안 고장 없이 작동할 확률</td>
+<td>R(t) = e^(-λt) (λ: 고장률)</td>
+</tr>
+<tr class="odd">
+<td><strong>Availability</strong></td>
+<td>A = MTBF / (MTBF + MTTR)</td>
+<td>정상 가동 시간 비율</td>
+<td>% 또는 소수</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Operational Availability</td>
+<td>실제 운용 중인 시간의 비율</td>
+<td>(가동시간 / 전체 시간)</td>
+</tr>
+<tr class="odd">
+<td><strong>Maintainability</strong></td>
+<td>MTTR(Mean Time To Repair)</td>
+<td>고장 발생 후 수리까지 걸리는 평균 시간</td>
+<td>시간 (h)</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>M(t)</td>
+<td>t 시간 내 수리 완료 확률</td>
+<td>누적 분포 함수로 표현</td>
+</tr>
+<tr class="odd">
+<td><strong>Safety</strong></td>
+<td>SIL(Safety Integrity Level)</td>
+<td>기능안전 등급 (IEC 61508)</td>
+<td>SIL1~SIL4 (숫자 클수록 안전)</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>FMEA/FMECA</td>
+<td>고장모드 영향 분석</td>
+<td>정성적 또는 정량적 평가</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Fault Tree Analysis (FTA)</td>
+<td>시스템 고장 논리 구조 분석</td>
+<td>확률적 위험 계산 가능</td>
+</tr>
+</tbody>
+</table>
+<p>RAMS 주요 적용 사례는 다음과 같다.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>산업</th>
+<th>RAMS 적용 목적</th>
+<th>특이사항</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>철도</td>
+<td>시스템 가용성과 승객 안전 확보</td>
+<td>EN 50126 표준 기반 RAMS 요구</td>
+</tr>
+<tr class="even">
+<td>항공</td>
+<td>비행 중 고장 방지 및 사고 예방</td>
+<td>FAA, EASA 기준 엄격 적용</td>
+</tr>
+<tr class="odd">
+<td>플랜트</td>
+<td>고장 방지와 공정 연속성 확보</td>
+<td>SIL 기반 안전계장(SIS) 필수</td>
+</tr>
+<tr class="even">
+<td>군수</td>
+<td>고장 최소화와 빠른 복구</td>
+<td>LCC (Life Cycle Cost)와 연계</td>
+</tr>
+</tbody>
+</table>
+<p>RAMS는 제품이나 시스템이 얼마나 <strong>신뢰성 있고, 항상 사용 가능하며, 빠르게 복구 가능하고, 위험하지 않은지</strong>를 평가하는 기준이다. 설비와 시스템의 <strong>전 생애주기 관리</strong>에서 중요한 역할을 하며, 신뢰성 공학의 핵심 지표로 자리 잡고 있다.</p>
+<p>참고로 안전성 평가 도구인 FMEA와 FTA를 비교하면 다음과 같다.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>항목</th>
+<th><strong>FMEA</strong> (고장 모드 및 영향 분석)</th>
+<th><strong>FTA</strong> (결함수 분석)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>분석 방향</strong></td>
+<td><em>Bottom-up</em> (부품 → 시스템)</td>
+<td><em>Top-down</em> (시스템 → 부품)</td>
+</tr>
+<tr class="even">
+<td><strong>출발점</strong></td>
+<td>개별 부품 또는 기능의 고장 모드</td>
+<td>시스템 전체의 최상위 고장(Top Event)</td>
+</tr>
+<tr class="odd">
+<td><strong>목적</strong></td>
+<td>고장 모드가 시스템에 미치는 영향 분석</td>
+<td>특정 시스템 고장의 원인과 논리 구조 분석</td>
+</tr>
+<tr class="even">
+<td><strong>분석 대상</strong></td>
+<td>모든 가능한 고장 모드</td>
+<td>특정 문제 또는 중대한 고장</td>
+</tr>
+<tr class="odd">
+<td><strong>표현 방식</strong></td>
+<td>테이블 기반 (정형 양식 사용)</td>
+<td>논리 다이어그램 (AND/OR 게이트)</td>
+</tr>
+<tr class="even">
+<td><strong>정성/정량 여부</strong></td>
+<td>주로 정성적 (RPN 등 활용)</td>
+<td>정성 + 정량 모두 가능 (고장 확률 계산)</td>
+</tr>
+<tr class="odd">
+<td><strong>결과 지표</strong></td>
+<td>RPN (Risk Priority Number), S, O, D</td>
+<td>시스템 고장 확률, 기여도 분석</td>
+</tr>
+<tr class="even">
+<td><strong>활용 예</strong></td>
+<td>자동차 부품 설계, 전자기기 내부 회로</td>
+<td>항공기 시스템 고장 원인 분석, 플랜트 안전 평가</td>
+</tr>
+<tr class="odd">
+<td><strong>장점</strong></td>
+<td>단순하고 널리 사용됨, 표준화 용이</td>
+<td>고장 논리 구조 분석에 강함, 사고 예방에 효과적</td>
+</tr>
+<tr class="even">
+<td><strong>단점</strong></td>
+<td>상호작용 고장 고려 어려움, 고장 원인 간 관계 파악 제한</td>
+<td>복잡한 시스템은 분석 시간과 비용이 큼</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p><strong>FMEA</strong>는 개별 부품의 고장 모드가 시스템에 어떤 영향을 주는지 <strong>사전 예방적 관점</strong>에서 분석하고, <strong>우선순위 결정</strong>에 유용하다.</p></li>
+<li><p><strong>FTA</strong>는 시스템의 <strong>중대한 고장이 왜 발생했는지를 논리적으로 역추적</strong>하며, <strong>사고 원인 분석과 정량적 위험 평가</strong>에 강점을 가진다.</p></li>
+</ul>
+<p>이 두 기법은 <strong>상호보완적으로 활용</strong>할 수 있으며, 실제 산업 현장에서는 FMEA로 전반적인 위험 항목을 정리한 후,<br>
+FTA로 특정 중요 고장에 대해 심층 분석하는 방식이 자주 사용된다.</p>
 </section>
 <section id="설비-분석-도구" class="level2">
 <h2 class="anchored" data-anchor-id="설비-분석-도구">설비 분석 도구</h2>
@@ -2621,6 +2855,8 @@ RAMS --- 신뢰성 &amp; 가용성 &amp; 유지보수성 &amp; 안전성
 </section>
 <section id="sec-ref-0602" class="level2">
 <h2 class="anchored" data-anchor-id="sec-ref-0602">참고자료</h2>
+<hr>
+<p><strong>각주</strong></p>
 
 
 </section>
