@@ -1400,14 +1400,14 @@ Note&nbsp;17.1 TBM vs.&nbsp;CBM
 </tbody>
 </table>
 <p>고장 강도율은 다음과 같이 표현된다.</p>
-<p><span class="math display">\[λ(t)=dN(t)dt\lambda(t) = \frac{dN(t)}{dt}\]</span></p>
+<p><span class="math display">\[\lambda(t) = \frac{dN(t)}{dt}\]</span></p>
 <ul>
 <li><p><span class="math inline">\(N(t)\)</span>: 시간 t까지 누적된 고장 수</p></li>
 <li><p><span class="math inline">\(\lambda(t)\)</span>: 시간 t에서의 고장 강도율</p></li>
 </ul>
 <p>평균적인 경우에는 아래와 같이 간단히 계산 가능하다.</p>
-<p><span class="math display">\[λ=총고장수총운영시간\lambda = \frac{총 고장 수}{총 운영 시간}\]</span></p>
-<p>관련 주요 개념을 비교하면 다음과 같닫.</p>
+<p><span class="math display">\[\lambda = \frac{총 고장 수}{총 운영 시간}\]</span></p>
+<p>관련 주요 개념을 비교하면 다음과 같다.</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -1529,78 +1529,216 @@ Note&nbsp;17.1 TBM vs.&nbsp;CBM
 </section>
 <section id="sec-am-7-steps" class="level2">
 <h2 class="anchored" data-anchor-id="sec-am-7-steps">자주보전 7단계</h2>
-<div class="markdown">
+<p><strong>자주보전 7단계</strong>는 <strong>TPM(Total Productive Maintenance, 전사적 생산보전)</strong> 활동 중 핵심적인 <strong><font color="#245bdb">운전자가 주체가 되어 설비를 관리</font></strong>하는 체계를 의미한다. 설비의 <strong>초기 열화 요인 제거</strong>와 <strong>자율적인 유지보수 역량 강화</strong>를 통해 고장을 예방하고 생산성을 높이는 데 목적이 있다.</p>
+<dl>
+<dt>자주보전 7단계 요약표</dt>
+<dd>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 4%">
-<col style="width: 18%">
-<col style="width: 65%">
-<col style="width: 11%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>단계</th>
-<th>명칭</th>
-<th>활동내용</th>
-<th>육성 단계 <span class="math inline">\(^{주1}\)</span></th>
+<th>주요 활동</th>
+<th>목적</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>1단계</td>
-<td><strong>초기 청소</strong></td>
-<td>설비 본체를 중심으로 먼지, 더러움을 완전히 없앤다.</td>
-<td>1단계</td>
+<td><strong>1단계</strong></td>
+<td>초기청소</td>
+<td>오염 제거 및 결함 발견 능력 향상</td>
 </tr>
 <tr class="even">
-<td>2단계</td>
-<td><strong>발생원, 곤란부위 대책 수립</strong></td>
-<td>먼저, 더러움 발생원, 비산 방지나 청소, 급유 곤란 부위를 개선하고 청소, 급유 시간 단축을 도모한다.</td>
-<td>1단계</td>
+<td><strong>2단계</strong></td>
+<td>오염원/불편 개선</td>
+<td>오염·결함 재발 방지 및 접근성 개선</td>
 </tr>
 <tr class="odd">
-<td>3단계</td>
-<td><strong>청소/급유/점검 기준 작성</strong></td>
-<td>단시간으로 청소/급유/점검을 확실히 할 수 있도록 행동 기준을 작성한다.</td>
-<td>2단계</td>
+<td><strong>3단계</strong></td>
+<td>청소·급유 기준 설정</td>
+<td>설비 관리 기준화 및 이상 조기 감지</td>
 </tr>
 <tr class="even">
-<td>4단계</td>
-<td><strong>총점검</strong> <span class="math inline">\(^{주2}\)</span></td>
-<td>점검 매뉴얼에 의한 점검기능교육과 총 점검 실시에 의한 설비 미흡을 적출 및 복원한다.</td>
-<td>2단계</td>
+<td><strong>4단계</strong></td>
+<td>일반점검 교육 및 훈련</td>
+<td>운전자의 점검 역량 향상</td>
 </tr>
 <tr class="odd">
-<td>5단계</td>
-<td><strong>자주점검</strong></td>
-<td>자주점검 체크 시트 작성, 실시로 오퍼레이션 신뢰성을 향상한다.</td>
-<td>3단계</td>
+<td><strong>5단계</strong></td>
+<td>자율점검 체계화</td>
+<td>운전자의 일상 점검 정착</td>
 </tr>
 <tr class="even">
-<td>6단계</td>
-<td><strong>표준화</strong></td>
-<td>MTBF 분석 기록을 확실하게 해석하여 설비 개선을 꾀한다.</td>
-<td>3단계</td>
+<td><strong>6단계</strong></td>
+<td>표준화</td>
+<td>관리 및 작업 표준서 작성·정착</td>
 </tr>
 <tr class="odd">
-<td>7단계</td>
-<td><strong>자주관리 확립</strong></td>
-<td></td>
-<td>4단계</td>
+<td><strong>7단계</strong></td>
+<td>자율관리 실현</td>
+<td>자주보전 정착 및 고도화</td>
 </tr>
 </tbody>
 </table>
+</dd>
+</dl>
+<p>단계별 설명 및 예시는 다음과 같다.</p>
 <dl>
-<dt>주1: 설비에 강한 오퍼레이터 육성 단계</dt>
+<dt>1단계: <strong>초기 청소</strong></dt>
+<dd>
+<ul>
+<li>설비의 외부 및 내부 오염을 제거하고, <strong>이상 징후(누유, 이완, 파손 등)</strong>를 직접 확인함.</li>
+<li><strong>기능 회복 + 문제 인식 능력 강화</strong>가 목적.</li>
+</ul>
+</dd>
+</dl>
+<blockquote class="blockquote">
+<p>예시: 설비 커버를 열고 오염 제거, 풀어진 볼트 조임, 누유 제거 등</p>
+</blockquote>
+<dl>
+<dt>2단계: <strong>오염원 및 불편개선</strong></dt>
+<dd>
+<ul>
+<li>자주 발생하는 오염이나 불편 사항의 <strong>근본 원인을 제거</strong>.</li>
+<li>청소·급유의 <strong>작업 효율을 높이기 위한 설비 구조 개선</strong>.</li>
+</ul>
+</dd>
+</dl>
+<blockquote class="blockquote">
+<p>예시: 기름 샘 방지를 위해 실링 보강, 급유 위치를 운전자가 쉽게 접근 가능한 곳으로 이동</p>
+</blockquote>
+<dl>
+<dt>3단계: <strong>청소·급유 기준 설정</strong></dt>
+<dd>
+<ul>
+<li>운전자 스스로 청소, 급유, 점검을 할 수 있도록 <strong>기준서를 만들고 주기화</strong>함.</li>
+<li>이상 조기 발견 체계 구축</li>
+</ul>
+</dd>
+</dl>
+<blockquote class="blockquote">
+<p>예시: 윤활 주기와 급유량 표시, 점검 포인트 라벨링 등</p>
+</blockquote>
+<dl>
+<dt>4단계: <strong>일반점검 교육 및 훈련</strong></dt>
+<dd>
+<ul>
+<li><strong>보전 담당자가 하던 점검 항목</strong>을 운전자가 수행할 수 있도록 기술 교육 실시</li>
+<li><strong>센서 이상, 체결 상태, 벨트 장력</strong> 등의 기초 점검 역량을 강화함</li>
+</ul>
+</dd>
+</dl>
+<blockquote class="blockquote">
+<p>예시: 베어링 온도 체크법, 체인 장력 확인 방법 교육</p>
+</blockquote>
+<dl>
+<dt>5단계: <strong>자율점검 체계화</strong></dt>
+<dd>
+<ul>
+<li>교육받은 운전자가 <strong>정기적으로 점검을 수행하고 기록</strong>함</li>
+<li>자율 점검을 <strong>일상 업무에 통합</strong>하는 단계</li>
+</ul>
+</dd>
+</dl>
+<blockquote class="blockquote">
+<p>예시: 주간 점검표 작성, 설비 옆 점검 보드 부착</p>
+</blockquote>
+<dl>
+<dt>6단계: <strong>표준화</strong></dt>
+<dd>
+<ul>
+<li>작업자 간의 편차를 줄이기 위해 <strong>관리 항목, 절차, 기준을 문서화</strong>함</li>
+<li><strong>청소·급유·점검 표준서</strong>, 이상 발생시 대응 프로세스 명확화</li>
+</ul>
+</dd>
+</dl>
+<blockquote class="blockquote">
+<p>예시: 설비별 점검표 양식 통일, 표준 작업지도서 작성</p>
+</blockquote>
+<dl>
+<dt>7단계: <strong>자율관리 실현</strong></dt>
+<dd>
+<ul>
+<li>자주보전이 <strong>습관화되어 자율적으로 운영</strong>됨</li>
+<li><strong>문제 발견 → 개선 → 정착 → 공유</strong>의 선순환 구조 정착</li>
+</ul>
+</dd>
+</dl>
+<blockquote class="blockquote">
+<p>예시: 운전자가 이상 발견 시 개선 제안하고, 개선 활동을 추진하며 KPI로 관리</p>
+</blockquote>
+<p>자주보전 7단계의 목표를 정리하면 다음과 같다.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>구분</th>
+<th>목표</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>기술적 측면</strong></td>
+<td>설비 고장 Zero, 품질 불량 Zero</td>
+</tr>
+<tr class="even">
+<td><strong>관리 측면</strong></td>
+<td>보전의 일상화, 자율적인 설비관리 정착</td>
+</tr>
+<tr class="odd">
+<td><strong>교육 측면</strong></td>
+<td>운전자의 설비 이해도 및 유지보수 능력 향상</td>
+</tr>
+<tr class="even">
+<td><strong>문화 측면</strong></td>
+<td>전 직원의 보전 참여와 개선 마인드 확산</td>
+</tr>
+</tbody>
+</table>
+<p>자주보전 7단계 적용 시 다음과 같은 효과를 기대할 수 있다.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>개선 전</th>
+<th>개선 후</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>설비 고장률</td>
+<td>높음</td>
+<td>현저히 감소</td>
+</tr>
+<tr class="even">
+<td>보전 대응 시간</td>
+<td>늦음</td>
+<td>신속하게 대응</td>
+</tr>
+<tr class="odd">
+<td>생산성</td>
+<td>저하</td>
+<td>향상</td>
+</tr>
+<tr class="even">
+<td>설비 수명</td>
+<td>짧음</td>
+<td>연장됨</td>
+</tr>
+<tr class="odd">
+<td>불량률</td>
+<td>증가</td>
+<td>감소</td>
+</tr>
+</tbody>
+</table>
+<p><strong>자주보전 7단계는 단순한 설비 점검 활동이 아니라</strong>, 운전자가 스스로 문제를 발견하고 개선할 수 있는 ’<strong>설비의 주인</strong>’이 되도록 만드는 체계이다. TPM의 성공을 위해서는 관리자뿐 아니라 <strong>현장 작업자의 적극적인 참여와 교육이 필수</strong>다.</p>
+<dl>
+<dt>주1: 설비에 강한 오퍼레이터 육성 단계 (자주보전 단계)</dt>
 <dd>
 <ol type="1">
-<li>1단계: 오퍼레이터가 설비 개선 사고 방식을 익히는 단계<br>
-</li>
-<li>2단계: 오퍼레이터가 설비 기능 및 구조를 이해하는 단계<br>
-</li>
-<li>3단계: 오퍼레이터가 설비 정밀도와 제품 품질 간 관계를 이해하는 단계<br>
-</li>
-<li>4단계: 오퍼레이터가 설비 수리 가능한 단계</li>
+<li>1단계: 오퍼레이터가 설비 개선 사고 방식을 익히는 단계 (1~2단계)</li>
+<li>2단계: 오퍼레이터가 설비 기능 및 구조를 이해하는 단계 (3~4단계)</li>
+<li>3단계: 오퍼레이터가 설비 정밀도와 제품 품질 간 관계를 이해하는 단계 (5~6단계)</li>
+<li>4단계: 오퍼레이터가 설비 수리 가능한 단계 (7단계)</li>
 </ol>
 </dd>
 <dt>주2: 총점검 전개 방법</dt>
@@ -1620,7 +1758,6 @@ Note&nbsp;17.1 TBM vs.&nbsp;CBM
 </ol>
 </dd>
 </dl>
-</div>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 100-4-5, 106-3-2, 118-1-11">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
