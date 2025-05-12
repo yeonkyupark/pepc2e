@@ -222,7 +222,7 @@ MTA --- WF --- MTM --- BMT --- RWF --- MODAPTS
 
 PTS 발전
 :   
-	- 1942년 MTA(Motion time study)라는 명칭으로 처음 소개된 이래 다양한 기법이 연구됨
+	- 1924년 MTA(Motion time study)라는 명칭으로 처음 소개된 이래 다양한 기법이 연구됨
     - MTA, Motion time Analysis 1924
     - WF, Work factor 1938
     - MTM, Method time measurement 1948
