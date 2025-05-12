@@ -945,7 +945,7 @@ MTA --- WF --- MTM --- BMT --- RWF --- MODAPTS
 <td>신체 각 부분 동작 거리에 따라 시간치를 부여</td>
 <td>Basic M 1966, Offixe M 1969, Tmnit M 1973</td>
 <td>매우간단, 쉬움</td>
-<td>1MOD(Modular) = 0.129/0.1초, 0.143/0.12초</td>
+<td>1MOD(Modular) = 0.129초, 0.143/0.12초</td>
 <td>4가지 pace임의로 채용</td>
 <td>정밀기계, 가공업체</td>
 </tr>
@@ -1122,24 +1122,231 @@ MTA --- WF --- MTM --- BMT --- RWF --- MODAPTS
 <figcaption>https://modapts.org/</figcaption>
 </figure>
 </div>
-<p><strong>MODAPTS</strong>(Modular Arrangement of Predetermined Time Standards) 시스템은 <font color="blue">작업자의 신체 동작을 분석하여 작업 시간을 측정하고 표준을 설정하는 방법</font>이다. MODAPTS에서 신체 동작은 여러 기본 단위로 나누어지며, <strong>주요 동작 3가지</strong>는 다음과 같다.</p>
-<ol type="1">
-<li>Reach (리치)
-<ul>
-<li>설명: 작업자가 물체를 잡기 위해 팔을 뻗는 동작입니다. 이 동작은 작업자가 물체를 가져오기 위해 팔을 앞으로 뻗을 때의 시간을 측정하는 데 사용된다.</li>
-<li>예시: 작업자가 테이블 위의 물건을 집기 위해 팔을 뻗을 때의 동작.</li>
-</ul></li>
-<li>Grasp (그랩)
-<ul>
-<li>설명: 물체를 손으로 잡는 동작입니다. 이 동작은 물체를 손으로 쥐는 데 소요되는 시간을 측정한다.</li>
-<li>예시: 작업자가 도구를 손에 쥐거나 물건을 집을 때의 동작.</li>
-</ul></li>
-<li>Move (무브)
-<ul>
-<li>설명: 물체를 이동시키는 동작입니다. 이는 물체를 한 장소에서 다른 장소로 옮기는 데 드는 시간을 측정한다.</li>
-<li>예시: 작업자가 물건을 한 곳에서 다른 곳으로 옮기는 동작.</li>
-</ul></li>
-</ol>
+<p><strong>MODAPTS</strong>(Modular Arrangement of Predetermined Time Standards)는<br>
+작업 분석 기법 중 하나로, 작업 동작을 <strong>모듈화된 단위 시간으로 정량화</strong>하여<br>
+<strong>표준작업시간(Standard Time)</strong>을 설정하는 데 사용되는 방법이다.</p>
+<dl>
+<dt>MODAPTS 개요</dt>
+<dd>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>정식 명칭</td>
+<td>Modular Arrangement of Predetermined Time Standards</td>
+</tr>
+<tr class="even">
+<td>개발 시기</td>
+<td>1960년대, W. E. Kennedy 등에 의해 개발</td>
+</tr>
+<tr class="odd">
+<td>목적</td>
+<td><strong>작업 동작을 시간 단위로 모듈화</strong>하여 작업시간을 정확히 산출</td>
+</tr>
+<tr class="even">
+<td>특징</td>
+<td>- 각 동작을 <strong>모듈(Mod)</strong>이라는 단위로 표현- <strong>1 MOD = 0.129초</strong> (약 7.75 MOD = 1초)- 시각적 관찰만으로 시간 산출 가능</td>
+</tr>
+<tr class="odd">
+<td>활용 분야</td>
+<td>제조업, 조립공정, 사무작업, 서비스업 등 <strong>표준작업 개발 및 개선 활동</strong></td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<p>MODAPTS는 작업을 구성하는 다양한 동작을 <strong>크게 3가지 그룹</strong>으로 분류한다.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>그룹</th>
+<th>설명</th>
+<th>주요 동작 예시</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>M (Movement)</strong></td>
+<td>몸, 팔, 손의 움직임</td>
+<td>손 이동, 몸 돌리기, 걷기</td>
+</tr>
+<tr class="even">
+<td><strong>G (Get/Grasp)</strong></td>
+<td>물체를 잡거나 놓는 동작</td>
+<td>물건 집기, 내려놓기</td>
+</tr>
+<tr class="odd">
+<td><strong>P (Put/Placement)</strong></td>
+<td>물체를 특정 위치에 두는 동작</td>
+<td>삽입, 정확히 위치시키기</td>
+</tr>
+</tbody>
+</table>
+<dl>
+<dt>동작 예시와 MODAPTS 모듈 값</dt>
+<dd>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>동작</th>
+<th>설명</th>
+<th>MOD</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>손 이동 (30cm 이내)</td>
+<td>한 손으로 가까운 곳에 손 이동</td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td>물체 잡기</td>
+<td>일반적인 물건을 집는 동작</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>정확히 놓기</td>
+<td>정해진 위치에 정확히 물체 놓기</td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td>걷기 (2걸음)</td>
+<td>2걸음 정도 걷기</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>몸 회전 (90도)</td>
+<td>허리만 돌리기</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<blockquote class="blockquote">
+<p>🔹 예시: “30cm 떨어진 상자에서 물건을 집어 정확히 위치시키는 경우”<br>
+→ 손 이동(3) + 잡기(2) + 놓기(3) = <strong>총 8 MOD</strong><br>
+→ 시간 환산: 8 × 0.129초 = <strong>1.032초</strong></p>
+</blockquote>
+<dl>
+<dt>MODAPTS의 장점</dt>
+<dd>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>구분</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>정량성</strong></td>
+<td>모든 동작을 수치로 표현 → <strong>객관적인 시간 산출 가능</strong></td>
+</tr>
+<tr class="even">
+<td><strong>관찰 기반 분석</strong></td>
+<td><strong>영상 또는 현장 관찰</strong>만으로 시간 산출 가능</td>
+</tr>
+<tr class="odd">
+<td><strong>표준화 용이</strong></td>
+<td>반복 작업의 <strong>표준시간 및 표준작업</strong> 수립에 효과적</td>
+</tr>
+<tr class="even">
+<td><strong>교육 및 훈련 용이</strong></td>
+<td>모듈 단위로 구성되어 <strong>입문자 교육도 체계적</strong></td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt>MODAPTS vs MTM vs WF 비교</dt>
+<dd>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>구분</th>
+<th>MODAPTS</th>
+<th>MTM</th>
+<th>WF</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>단위 시간</td>
+<td>0.129초</td>
+<td>0.036초 (MTM-1 기준)</td>
+<td>다변화</td>
+</tr>
+<tr class="even">
+<td>난이도</td>
+<td>중간 (현장 실무자 친화적)</td>
+<td>세밀하고 복잡함</td>
+<td>실무적이나 해석 다양</td>
+</tr>
+<tr class="odd">
+<td>동작 분류</td>
+<td>M, G, P 중심</td>
+<td>R, M, G, P 등 세분화</td>
+<td>동작 중심 해석</td>
+</tr>
+<tr class="even">
+<td>장점</td>
+<td>빠른 분석, 쉬운 교육</td>
+<td>정밀 분석</td>
+<td>작업 난이도 고려</td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt>적용 사례 예시</dt>
+<dd>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>적용 분야</th>
+<th>사례</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>조립 작업</td>
+<td>전자부품 조립공정의 <strong>표준시간 책정</strong></td>
+</tr>
+<tr class="even">
+<td>사무 작업</td>
+<td><strong>서류 분류 및 배치 동작 분석</strong></td>
+</tr>
+<tr class="odd">
+<td>생산성 향상</td>
+<td>작업 동작을 분석하여 <strong>낭비 동작 제거</strong> 및 <strong>레이아웃 개선</strong></td>
+</tr>
+<tr class="even">
+<td>인력 배치</td>
+<td>각 작업의 MOD 값을 기반으로 <strong>인원 배분 최적화</strong></td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<p>MODAPTS는 단순 반복 작업뿐 아니라 <strong>현대적 제조현장 및 서비스 업무</strong>까지도<br>
+<strong>작업을 정량적으로 분석하고, 표준화된 작업개선 기반을 제공하는 데 매우 유용</strong>한 도구다.</p>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 109-2-3, 112-1-2, 118-1-9">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
