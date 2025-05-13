@@ -224,6 +224,8 @@ Less Engineering은 <font color="blue">"적을수록 더 좋다(Less is More)"</
 
 ::: {#nte-ecrs .callout-note icon="false" title="개선 4원칙(ECRS)"}
 
+ECRS는 효율성 개선을 위한 4가지 기본 원칙으로 다음과 같은 개념을 포함한다.
+
 1. **제거 (Eliminate)**
    :   
 	- 불필요한 재고를 줄이기 위해 적시 생산 시스템(JIT)을 도입한다.
