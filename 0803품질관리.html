@@ -938,120 +938,416 @@ end
 <h3 class="anchored" data-anchor-id="관리도-작성">관리도 작성</h3>
 <section id="계량형-관리도" class="level4">
 <h4 class="anchored" data-anchor-id="계량형-관리도">계량형 관리도</h4>
+<p>계량형 관리도(Quantitative Control Chart)는 공정에서 측정 가능한 <strong>연속적인 수치 데이터</strong>(예: 길이, 무게, 온도 등)를 활용하여 품질을 관리하는 도구이다. 품질 특성을 계량적으로 측정할 수 있을 때 사용되며, 통계적 공정관리(SPC: Statistical Process Control)의 대표적인 수단 중 하나이다.</p>
+<dl>
+<dt>계량형 관리도의 개념</dt>
+<dd>
+<ul>
+<li><strong>목적</strong>: 생산 공정이 통계적으로 안정(Statistical Control) 상태에 있는지를 판단</li>
+</ul>
+</dd>
+</dl>
+<ul>
+<li><p><strong>적용 대상</strong>: 연속적인 수치로 측정 가능한 품질 특성</p></li>
+<li><p><strong>핵심 구성</strong>:</p>
+<ul>
+<li><p>중심선(CL: Center Line): 평균값</p></li>
+<li><p>관리 상한선(UCL: Upper Control Limit)</p></li>
+<li><p>관리 하한선(LCL: Lower Control Limit)</p></li>
+</ul></li>
+</ul>
+<dl>
+<dt>주요 계량형 관리도 유형</dt>
+<dd>
 <table class="caption-top table">
-<caption>계량형 관리도 종류</caption>
 <colgroup>
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>관리도</th>
-<th>측정치</th>
-<th>CL</th>
-<th>UCL</th>
-<th>LCL</th>
-<th>측정치</th>
-<th>CL</th>
-<th>UCL</th>
-<th>LCL</th>
+<th>구분</th>
+<th>관리도 이름</th>
+<th>사용 조건</th>
+<th>관리 항목</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><span class="math inline">\(x-R\)</span></td>
-<td><span class="math inline">\(\bar{x}\)</span></td>
-<td><span class="math inline">\(\bar{\bar{x}}\)</span></td>
-<td><span class="math inline">\(\bar{\bar{x}} + A_2\bar{R}\)</span></td>
-<td><span class="math inline">\(\bar{\bar{x}} - A_2\bar{R}\)</span></td>
-<td><span class="math inline">\(R\)</span></td>
-<td><span class="math inline">\(\bar{R}\)</span></td>
-<td><span class="math inline">\(D_4\bar{R}\)</span></td>
-<td><span class="math inline">\(D_3\bar{R}\)</span></td>
+<td>1</td>
+<td><strong>X̄ - R 관리도</strong></td>
+<td>샘플 크기 <span class="math inline">\(n \leq 10\)</span></td>
+<td>평균(X̄)과 범위(R)</td>
 </tr>
 <tr class="even">
-<td><span class="math inline">\(\bar{x}-R\)</span></td>
-<td><span class="math inline">\(\bar{x}\)</span></td>
-<td><span class="math inline">\(\bar{\bar{x}}\)</span></td>
-<td><span class="math inline">\(\bar{\bar{x}} + E_2\bar{R}\)</span></td>
-<td><span class="math inline">\(\bar{\bar{x}} - E_2\bar{R}\)</span></td>
-<td><span class="math inline">\(R\)</span></td>
-<td><span class="math inline">\(\bar{R}\)</span></td>
-<td><span class="math inline">\(D_4\bar{R}\)</span></td>
-<td><span class="math inline">\(D_3\bar{R}\)</span></td>
+<td>2</td>
+<td><strong>X̄ - S 관리도</strong></td>
+<td>샘플 크기 <span class="math inline">\(n &gt; 10\)</span></td>
+<td>평균(X̄)과 표준편차(S)</td>
 </tr>
 <tr class="odd">
-<td><span class="math inline">\(x-s\)</span></td>
-<td><span class="math inline">\(\bar{x}\)</span></td>
-<td><span class="math inline">\(\bar{\bar{x}}\)</span></td>
-<td><span class="math inline">\(\bar{\bar{x}} + A_3\bar{R}\)</span></td>
-<td><span class="math inline">\(\bar{\bar{x}} - A_3\bar{R}\)</span></td>
-<td><span class="math inline">\(s\)</span></td>
-<td><span class="math inline">\(\bar{s}\)</span></td>
-<td><span class="math inline">\(B_4\bar{s}\)</span></td>
-<td><span class="math inline">\(B_3\bar{s}\)</span></td>
+<td>3</td>
+<td><strong>개별값 관리도 (I-MR 관리도)</strong></td>
+<td>샘플 크기 <span class="math inline">\(n = 1\)</span></td>
+<td>개별값(I), 이동 범위(MR)</td>
 </tr>
 </tbody>
 </table>
+</dd>
+</dl>
+<hr>
+<dl>
+<dt>X̄ - R 관리도의 구조</dt>
+<dd>
+<ul>
+<li><strong>X̄ 관리도</strong>: 각 샘플의 평균값을 시계열로 나타냄</li>
+</ul>
+</dd>
+</dl>
+<ul>
+<li><strong>R 관리도</strong>: 각 샘플의 범위(최댓값 - 최솟값)를 시계열로 나타냄</li>
+</ul>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>구성</th>
+<th>계산 방법</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>X̄ (샘플 평균)</td>
+<td><span class="math inline">\(\bar{X} = \frac{1}{n} \sum_{i=1}^n x_i\)</span></td>
+</tr>
+<tr class="even">
+<td>R (샘플 범위)</td>
+<td><span class="math inline">\(R = \max(x_i) - \min(x_i)\)</span></td>
+</tr>
+<tr class="odd">
+<td>UCL / LCL</td>
+<td>통계적 상수(A₂, D₃, D₄ 등)을 이용하여 계산</td>
+</tr>
+</tbody>
+</table>
+<p>예를 들어 샘플 크기 n=5n = 5인 경우:</p>
+<ul>
+<li><p><span class="math inline">\(UCL_{\bar{X}} = \bar{\bar{X}} + A_2 \cdot \bar{R}\)</span></p></li>
+<li><p><span class="math inline">\(LCL_{\bar{X}} = \bar{\bar{X}} - A_2 \cdot \bar{R}\)</span></p></li>
+</ul>
+<p>※ <span class="math inline">\(A_2, D_3, D_4\)</span> 등은 샘플 크기에 따라 결정되는 상수이며, 통계표로 제공됨.</p>
+<dl>
+<dt>관리도의 해석 방법</dt>
+<dd>
+<ul>
+<li><p><strong>공정이 안정 상태일 경우</strong>:</p></li>
+<li><p>모든 점이 관리 한계 내에 있음</p></li>
+<li><p>점들이 랜덤하게 분포함</p></li>
+</ul>
+</dd>
+</dl>
+<ul>
+<li><p><strong>이상 상태일 경우</strong> (예시):</p>
+<ul>
+<li><p>점이 UCL 또는 LCL 밖으로 나감</p></li>
+<li><p>점들이 연속적으로 한쪽에 치우침</p></li>
+<li><p>점들이 일정한 패턴을 가짐 (예: 상승 또는 하강 반복)</p></li>
+</ul></li>
+</ul>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>이상 상태 징후</th>
+<th>의미</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>한 점 이상이 UCL/LCL 바깥</td>
+<td>특수 원인 발생 가능성</td>
+</tr>
+<tr class="even">
+<td>7점 이상이 연속적으로 한쪽에 있음</td>
+<td>편향된 경향 존재</td>
+</tr>
+<tr class="odd">
+<td>점들이 연속적으로 증가/감소</td>
+<td>추세(Trend) 존재</td>
+</tr>
+</tbody>
+</table>
+<p>예를 들면, 자동차 부품의 길이를 하루 4회, 각 회당 5개씩 측정한 결과를 기반으로 X̄-R 관리도 작성한다.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>일자</th>
+<th>샘플 5개(mm)</th>
+<th>X̄</th>
+<th>R</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1일차</td>
+<td>10.01, 10.02, 9.98, 10.00, 10.03</td>
+<td>10.008</td>
+<td>0.05</td>
+</tr>
+<tr class="even">
+<td>2일차</td>
+<td>10.05, 10.02, 9.99, 10.01, 10.00</td>
+<td>10.014</td>
+<td>0.06</td>
+</tr>
+<tr class="odd">
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>중심선은 전체 평균, 관리한계선은 A₂, D₃, D₄를 활용하여 계산</p></li>
+<li><p>X̄-R 관리도를 작성하여 공정이 안정 상태인지 판단</p></li>
+</ul>
+<dl>
+<dt>계량형 vs 계수형 관리도 비교</dt>
+<dd>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>계량형 관리도</th>
+<th>계수형 관리도</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>데이터 유형</td>
+<td>연속형 수치 데이터</td>
+<td>이산형(불량 수, 불량률 등)</td>
+</tr>
+<tr class="even">
+<td>예시</td>
+<td>길이, 무게, 직경</td>
+<td>불량품 개수, 불량률</td>
+</tr>
+<tr class="odd">
+<td>대표 관리도</td>
+<td>X̄-R, X̄-S, I-MR</td>
+<td>p, np, c, u 관리도</td>
+</tr>
+<tr class="even">
+<td>정밀도</td>
+<td>높음</td>
+<td>상대적으로 낮음</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<p>계량형 관리도는 품질 특성을 수치로 정확하게 측정할 수 있는 경우에 강력한 도구이다. 특히 생산 공정이 안정적으로 유지되고 있는지를 실시간으로 모니터링하고 문제 발생 시 즉시 대응할 수 있는 기반이 된다.</p>
 </section>
 <section id="계수형-관리도" class="level4">
 <h4 class="anchored" data-anchor-id="계수형-관리도">계수형 관리도</h4>
+<p>계수형 관리도(Attribute Control Chart)는 품질 특성을 <strong>불량품의 수, 결함의 수, 불량률 등 이산적(계수형)</strong>으로 측정할 수 있을 때 사용하는 관리도이다. 즉, 연속적인 수치가 아닌 <strong>불량의 유무, 개수</strong>를 기반으로 품질을 판단한다.</p>
+<dl>
+<dt>계수형 관리도의 개념</dt>
+<dd>
+<ul>
+<li><strong>목적</strong>: 공정에서 발생하는 <strong>불량 또는 결함의 발생 패턴을 통계적으로 관리</strong></li>
+</ul>
+</dd>
+</dl>
+<ul>
+<li><p><strong>적용 대상</strong>: 불량품 수, 결함 수, 불량률 등 <strong>이산형 품질 특성</strong></p></li>
+<li><p><strong>핵심 구성</strong>:</p>
+<ul>
+<li><p>중심선(CL): 평균 불량률 또는 평균 결함 수</p></li>
+<li><p>관리 상한선(UCL)</p></li>
+<li><p>관리 하한선(LCL)<br>
+단, LCL은 음수가 되면 0으로 설정</p></li>
+</ul></li>
+</ul>
+<dl>
+<dt>주요 계수형 관리도 유형</dt>
+<dd>
 <table class="caption-top table">
-<caption>계수형 관리도 종류</caption>
 <colgroup>
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>관리도</th>
-<th>측정치</th>
-<th>CL</th>
-<th>UCL</th>
-<th>LCL</th>
+<th>관리도 유형</th>
+<th>측정 항목</th>
+<th>표본 크기</th>
+<th>데이터 예시</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><span class="math inline">\(p\)</span></td>
-<td><span class="math inline">\(p\)</span></td>
-<td><span class="math inline">\(\bar{p}\)</span></td>
-<td><span class="math inline">\(\bar{p}+3\sqrt{\frac{\bar{p}(1-\bar{p})}{n}}\)</span></td>
-<td><span class="math inline">\(\bar{p}-3\sqrt{\frac{\bar{p}(1-\bar{p})}{n}}\)</span></td>
+<td><strong>p 관리도</strong></td>
+<td><strong>불량률</strong></td>
+<td>가변 (n 변화 가능)</td>
+<td>100개 중 4개 불량 → 불량률 4%</td>
 </tr>
 <tr class="even">
-<td><span class="math inline">\(np\)</span></td>
-<td><span class="math inline">\(np\)</span></td>
-<td><span class="math inline">\(n\bar{p}\)</span></td>
-<td><span class="math inline">\(n\bar{p} + 3\sqrt{n\bar{p}(1-\bar{p})}\)</span></td>
-<td><span class="math inline">\(n\bar{p} - 3\sqrt{n\bar{p}(1-\bar{p})}\)</span></td>
+<td><strong>np 관리도</strong></td>
+<td><strong>불량품 수</strong></td>
+<td>고정 (n 일정)</td>
+<td>100개 중 4개 불량 → 불량 수 4개</td>
 </tr>
 <tr class="odd">
-<td><span class="math inline">\(u\)</span></td>
-<td><span class="math inline">\(u\)</span></td>
-<td><span class="math inline">\(\bar{u}\)</span></td>
-<td><span class="math inline">\(\bar{u} + 3\sqrt{\frac{\bar{u}}{n}}\)</span></td>
-<td><span class="math inline">\(\bar{u} - 3\sqrt{\frac{\bar{u}}{n}}\)</span></td>
+<td><strong>c 관리도</strong></td>
+<td><strong>결함 수</strong></td>
+<td>검사 단위 크기 일정</td>
+<td>1개 제품에 스크래치 3개</td>
 </tr>
 <tr class="even">
-<td><span class="math inline">\(c\)</span></td>
-<td><span class="math inline">\(c\)</span></td>
-<td><span class="math inline">\(\bar{c}\)</span></td>
-<td><span class="math inline">\(\bar{c} + 3\sqrt{\bar{c}}\)</span></td>
-<td><span class="math inline">\(\bar{c} - 3\sqrt{\bar{c}}\)</span></td>
+<td><strong>u 관리도</strong></td>
+<td><strong>단위당 결함 수</strong></td>
+<td>검사 단위 크기 가변</td>
+<td>2개 제품에서 6개 결함 → u = 3개/제품</td>
 </tr>
 </tbody>
 </table>
+</dd>
+</dl>
+<p>각 관리도별 계산 공식은 다음과 같다.</p>
+<dl>
+<dt>p 관리도 (불량률 관리도)</dt>
+<dd>
+<ul>
+<li>중심선: <span class="math inline">\(\bar{p} = \frac{\sum d_i}{\sum n_i}\)</span><br>
+( did_i: i번째 샘플의 불량 수, nin_i: 샘플 크기 )</li>
+</ul>
+</dd>
+</dl>
+<ul>
+<li>관리 한계선:<br>
+<span class="math inline">\(UCL = \bar{p} + 3 \sqrt{\frac{\bar{p}(1 - \bar{p})}{n}}\)</span><br>
+<span class="math inline">\(LCL = \bar{p} - 3 \sqrt{\frac{\bar{p}(1 - \bar{p})}{n}}\)</span><br>
+단, LCL &lt; 0이면 0으로 설정</li>
+</ul>
+<dl>
+<dt>np 관리도 (불량 수 관리도)</dt>
+<dd>
+<ul>
+<li>중심선: <span class="math inline">\(\bar{np} = n \cdot \bar{p}\)</span></li>
+</ul>
+</dd>
+</dl>
+<ul>
+<li>관리 한계선:<br>
+<span class="math inline">\(UCL = \bar{np} + 3 \sqrt{n \cdot \bar{p}(1 - \bar{p})}\)</span><br>
+<span class="math inline">\(LCL = \bar{np} - 3 \sqrt{n \cdot \bar{p}(1 - \bar{p})}\)</span></li>
+</ul>
+<p>※ p와 np 관리도의 차이: <strong>표본 크기(n)의 가변성 여부</strong></p>
+<p>c 관리도 (결함 수 관리도)</p>
+<ul>
+<li><p>중심선: <span class="math inline">\(\bar{c} = \frac{\sum c_i}{k}\)</span><br>
+( cic_i: i번째 샘플의 결함 수, kk: 샘플 수 )</p></li>
+<li><p>관리 한계선:<br>
+<span class="math inline">\(UCL = \bar{c} + 3 \sqrt{\bar{c}}\)</span><br>
+<span class="math inline">\(LCL = \bar{c} - 3 \sqrt{\bar{c}}\)</span></p></li>
+</ul>
+<p>u 관리도 (단위당 결함 수 관리도)</p>
+<ul>
+<li><p>중심선: <span class="math inline">\(\bar{u} = \frac{\sum c_i}{\sum n_i}\)</span></p></li>
+<li><p>관리 한계선:<br>
+<span class="math inline">\(UCL = \bar{u} + 3 \sqrt{\frac{\bar{u}}{n_i}}\)</span><br>
+<span class="math inline">\(LCL = \bar{u} - 3 \sqrt{\frac{\bar{u}}{n_i}}\)</span></p></li>
+</ul>
+<dl>
+<dt>계수형 관리도의 적용 예시</dt>
+<dd>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>관리도 유형</th>
+<th>적용 사례</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>p 관리도</strong></td>
+<td>매일 생산된 제품 중 불량률 관리 (예: 하루 200개 중 불량 4개)</td>
+</tr>
+<tr class="even">
+<td><strong>np 관리도</strong></td>
+<td>고정 샘플 크기로 매일 불량 개수 모니터링</td>
+</tr>
+<tr class="odd">
+<td><strong>c 관리도</strong></td>
+<td>1개 제품 내의 결함 수 관리 (예: 찌그러짐, 스크래치 수)</td>
+</tr>
+<tr class="even">
+<td><strong>u 관리도</strong></td>
+<td>서로 다른 면적이나 길이 제품의 결함 수 관리 (예: 1m당 결함 수)</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<p>하루에 100개 제품을 검사하고, 5일간의 불량 수가 다음과 같을 때 : |일자|검사 수(n)|불량 수(d)|불량률(p)| |—|—|—|—| |1일차|100|4|0.04| |2일차|100|3|0.03| |3일차|100|6|0.06| |4일차|100|5|0.05| |5일차|100|2|0.02|</p>
+<ul>
+<li><p><span class="math inline">\(\bar{p} = \frac{4 + 3 + 6 + 5 + 2}{5 \times 100} = 0.04\)</span></p></li>
+<li><p><span class="math inline">\(UCL = 0.04 + 3 \sqrt{\frac{0.04 \times 0.96}{100}} ≈ 0.122\)</span></p></li>
+<li><p><span class="math inline">\(LCL = 0.04 - 3 \sqrt{\frac{0.04 \times 0.96}{100}} ≈ -0.042\)</span> → 0으로 설정</p></li>
+<li><p>불량률이 0 ~ 12.2% 범위 안에 들면 공정이 안정</p></li>
+<li><p>관리 한계선을 벗어나면 이상 원인 분석 필요</p></li>
+</ul>
+<dl>
+<dt>계량형 vs 계수형 관리도 비교 요약</dt>
+<dd>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>계량형 관리도</th>
+<th>계수형 관리도</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>데이터 유형</td>
+<td>연속형 (예: 길이, 무게)</td>
+<td>이산형 (예: 불량 수, 결함 수)</td>
+</tr>
+<tr class="even">
+<td>사용 예</td>
+<td>부품 직경, 온도</td>
+<td>불량품 수, 스크래치 개수</td>
+</tr>
+<tr class="odd">
+<td>대표 관리도</td>
+<td>X̄-R, X̄-S, I-MR</td>
+<td>p, np, c, u</td>
+</tr>
+<tr class="even">
+<td>정밀도</td>
+<td>높음</td>
+<td>상대적으로 낮음</td>
+</tr>
+<tr class="odd">
+<td>공정 안정도 판단</td>
+<td>정밀한 수치 기반</td>
+<td>불량 유무 및 개수 기반</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<p>계수형 관리도는 복잡한 측정 장비 없이도 <strong>현장에서 품질을 직관적으로 관리</strong>할 수 있다는 장점이 있다. 특히 다품종 소량 생산이나 시각적 검사 중심의 라인에서 널리 활용된다.</p>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 118-2-5">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1647,7 +1943,7 @@ UCL = \bar{u} + 3\sqrt{\frac{\bar{u}}{n}} = 2.92 + 3\sqrt{\frac{2.92}{1.7}} = 6.
 <dd>
 <ul>
 <li>품질이란 “고객 요구 사항과 사양에 부합하는지 여부”를 의미한다. 품질은 단순히 제품이나 서비스 특성이 아니라 <font color="blue">고객 요구와 기대를 정확히 충족시키는 것</font>이 핵심이다. 이는 품질을 결함없는 상태로 정의하는 개념과 연결된다.</li>
-<li>품지은 “적합성”, 즉 고객 요구를 충족하는 정도로 정의하며, 이를 기반으로 품질을평가한다.</li>
+<li>품질은 “적합성”, 즉 고객 요구를 충족하는 정도로 정의하며, 이를 기반으로 품질을 평가한다.</li>
 </ul>
 </dd>
 <dt>품질은 예방해야 한다.</dt>
@@ -1693,32 +1989,216 @@ UCL = \bar{u} + 3\sqrt{\frac{\bar{u}}{n}} = 2.92 + 3\sqrt{\frac{2.92}{1.7}} = 6.
 <p><strong>신뢰도</strong>는 <font color="#245bdb">신뢰성에 대한 양적 표시</font>로 임무기간 중 일어나는 단위시간당 고장회수로 나타내는 것이 일반적이며 이를 시간 함수로 볼 때 R(t)로 나타낸다. 이것은 제품이 t 시간 동안 고장이 나지 않는 확률이다. 즉, 제품을 사용하기 시작해서 어느 시점까지 전체 몇 %가 고장나지 않고 남아 있는가 하는 잔존률에 해당한다.</p>
 <p><strong>신뢰성관리</strong>는 성능과 신뢰성, 보전성 그리고 가동성이 높은 제품을 경제적으로 제조하기 위해서 제품 개발로부터 설계, 제조, 사용 및 보전에 이르기까지 제품 전 생명 주기(life cycle)에 걸쳐 미리 설정된 신뢰성 계획에 따라 <font color="#245bdb">제품 신뢰성을 확보하고 유지하기 위한 종합적인 관리활동</font>을 가리킨다.이를 위하여 신뢰성을 정량적으로 측정할 수 있는 척도를 설정하고 이를 바탕으로 불량원인을 발견하고 고장 원인을 찾아내서 개선하여 가능한 그 영향을 줄이거나 제거시키고자 하는 활동이다.</p>
 <p>품질경영적 관점에서 볼 때 신뢰성은 품질특성 중 하나이고 품질보증 기능을 한다. 따라서 신뢰성관리는 품질경영과 함께 상호 유기적인 관계에서 전개되어야 한다.</p>
-<p>신뢰성은 <strong>고유신뢰성</strong>과 <strong>사용신뢰성</strong>으로 구분할 수 있다.</p>
+<p>신뢰성은 고유 신뢰성과 사용 신뢰성으로 구분할 수 있다. 고유 신뢰성과 사용 신뢰성은 제품이나 시스템의 신뢰성을 평가할 때 사용하는 <strong>서로 다른 관점의 개념</strong>이다. 아래에서 두 개념을 <strong>정의</strong>, <strong>차이점</strong>, <strong>예시</strong>, <strong>적용 시점</strong> 등으로 체계적으로 비교 설명한다.</p>
 <dl>
-<dt>고유신뢰성</dt>
+<dt>정의 비교</dt>
 <dd>
-<ul>
-<li>제품 자체가 가지고 있는 고유한 신뢰성으로 제품 수명을 연장하고 고장을 적게 하는 신뢰성 설계나 공정관리, 공정해석에 의해 기술적 요인을 찾아내고 이를 시정하는 품질관리 활동으로 달성된다.</li>
-<li>증대방안
-<ul>
-<li>설계부문: 용장성 설계, 부하 경감, 안전계수, 환경조건 추정, 안전장치, 인간공학적 적합성 등</li>
-<li>제조부문: 자재, 기계, 제조방법, 작업관리, 품질관리 등</li>
-</ul></li>
-</ul>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>구분</th>
+<th>고유 신뢰성 (Inherent Reliability)</th>
+<th>사용 신뢰성 (Operational Reliability)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>정의</td>
+<td>설계와 제작 단계에서 이론적으로 달성 가능한 신뢰성</td>
+<td>실제 사용 환경에서 측정되는 신뢰성</td>
+</tr>
+<tr class="even">
+<td>고려 요소</td>
+<td>제품 내부 설계, 부품 품질, 구조적 강건성 등</td>
+<td>사용 조건, 운용 환경, 유지보수 상태 등</td>
+</tr>
+<tr class="odd">
+<td>목적</td>
+<td>이상적인 조건에서의 제품 신뢰성 확보</td>
+<td>현실적인 사용 환경에서의 신뢰성 평가</td>
+</tr>
+</tbody>
+</table>
 </dd>
-<dt>사용신뢰성</dt>
+<dt>비교 설명</dt>
+<dd>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>고유 신뢰성</th>
+<th>사용 신뢰성</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>설계 기준</strong></td>
+<td>제품 사양서와 기능 요구사항에 따라 설계</td>
+<td>실제 고객의 사용 방식, 환경 조건을 반영</td>
+</tr>
+<tr class="even">
+<td><strong>시험 조건</strong></td>
+<td>실험실 내 정해진 조건(온도, 습도 등 일정)</td>
+<td>현장 사용 조건(진동, 먼지, 전압 변동 등 반영)</td>
+</tr>
+<tr class="odd">
+<td><strong>측정 대상</strong></td>
+<td>이론적 고장률 (Failure Rate)</td>
+<td>실제 고장 발생률 (Field Failure Rate)</td>
+</tr>
+<tr class="even">
+<td><strong>주요 목적</strong></td>
+<td>제품 개발 초기 성능 확보</td>
+<td>실사용에서의 신뢰성 보장</td>
+</tr>
+<tr class="odd">
+<td><strong>영향 요소</strong></td>
+<td>부품 신뢰성, 설계 여유, 제조 품질 등</td>
+<td>운용자 숙련도, 정비 수준, 환경 스트레스 등</td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt>예시</dt>
+<dd>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>사례</th>
+<th>고유 신뢰성</th>
+<th>사용 신뢰성</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>예: 산업용 모터</td>
+<td>실험실에서 40,000시간 무고장 조건에서 테스트됨</td>
+<td>실제 공장 내 고온 다습 + 과부하 상태에서 25,000시간 후 고장</td>
+</tr>
+<tr class="even">
+<td>예: 스마트폰</td>
+<td>설계상 1일 2시간 사용 기준으로 3년 무고장 설계</td>
+<td>사용자가 하루 10시간 게임 사용 → 1.5년 후 고장</td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt>적용 시점</dt>
+<dd>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>단계</th>
+<th>고유 신뢰성</th>
+<th>사용 신뢰성</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>제품 개발 초기</td>
+<td>✅ 설계 검토, 시험 조건 정의</td>
+<td>❌ 아직 사용 조건 정보 부족</td>
+</tr>
+<tr class="even">
+<td>양산 직전</td>
+<td>✅ 신뢰성 시험 (ALT, HALT 등)</td>
+<td>⚠️ 일부 가상 사용 조건 반영 가능</td>
+</tr>
+<tr class="odd">
+<td>출시 후</td>
+<td>❌ 이론 값만 존재</td>
+<td>✅ 현장 데이터로 평가 (현장 고장률, MTBF 등)</td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt>고유 신뢰성과 사용 신뢰성 간의 관계</dt>
 <dd>
 <ul>
-<li>제품이 만들어진 후 설계나 제조과정에서 형성된 제품 고유신뢰성이 유지 및 관리되도록 하는 신뢰성을 말한다.</li>
-<li>증대방안
-<ul>
-<li>사용부문: 사용방법, 교육훈련, 취급설명</li>
-<li>보전부문: 보전방법, 예비품 관리, 사용법, 안전요원 훈련</li>
-<li>환경부문: 저장, 운반, 포장, 사용 환경</li>
-</ul></li>
+<li><strong>고유 신뢰성은 사용 신뢰성의 기반</strong><br>
+→ 고유 신뢰성이 낮으면 사용 신뢰성도 낮을 가능성이 큼</li>
 </ul>
 </dd>
 </dl>
+<ul>
+<li><p><strong>사용 신뢰성은 고유 신뢰성 + 운용 환경 영향</strong></p>
+<p>사용&nbsp;신뢰성=고유&nbsp;신뢰성×환경&nbsp;계수×운용&nbsp;계수 = </p></li>
+</ul>
+<p>주요 내용을 정리하면 다음과 같다.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>고유 신뢰성</th>
+<th>사용 신뢰성</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>설계 목표</td>
+<td>이상적인 성능</td>
+<td>실제 신뢰도</td>
+</tr>
+<tr class="even">
+<td>시험 환경</td>
+<td>통제된 실험실</td>
+<td>실제 사용 현장</td>
+</tr>
+<tr class="odd">
+<td>활용 목적</td>
+<td>설계 개선, 부품 선정</td>
+<td>현장 대응, 유지보수 전략 수립</td>
+</tr>
+<tr class="even">
+<td>대표 지표</td>
+<td>MTBF(Mean Time Between Failure), FIT</td>
+<td>현장 고장률, 사용 중 평균 수명</td>
+</tr>
+</tbody>
+</table>
+<dl>
+<dt>실무 활용 예시</dt>
+<dd>
+<ul>
+<li><p><strong>스마트팩토리 시스템 구축 시</strong></p></li>
+<li><p>고유 신뢰성: 제어 시스템 설계 시 부품의 MTBF 기준으로 구성</p></li>
+<li><p>사용 신뢰성: 실제 생산 라인 온도/습도/진동 조건에서 운영 후 현장 고장률 수집하여 평가</p></li>
+</ul>
+</dd>
+</dl>
+<ul>
+<li><p><strong>가전제품 개발 시</strong></p>
+<ul>
+<li><p>고유 신뢰성: 소비자 사용 전 85℃/85% 습도 조건에서 고장 시간 예측</p></li>
+<li><p>사용 신뢰성: 고객 CS 데이터를 바탕으로 현장 고장률 피드백 받아 차기 설계 개선</p></li>
+</ul></li>
+</ul>
+<p>두 개념을 혼동하지 않고 적절히 구분하여 활용하면, 제품 설계 개선과 고객 만족도 향상 모두에 기여할 수 있다.</p>
 <p>고장 통계에 따른 신뢰성 비율은 다음과 같다.</p>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
