@@ -44,7 +44,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-af4c6a5a70a538cac110114332b45ece.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-999e73883ea5c4cc544d6c1887eb71dc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -868,7 +868,7 @@ window.Quarto = {
 </section>
 <section id="sec-depreciation" class="level2">
 <h2 class="anchored" data-anchor-id="sec-depreciation">감가상각</h2>
-<p><strong>감가상각</strong>이란 <font color="blue">당해 자산에 대해 경제적 효익이 발생하는 기간 동안 합리적이고 체계적인 방법으로 당해 수익에 대응시킬 비용을 인식하는 과정</font>이다. 모든 유형자산은 보유기간 중 감가상각하는 것이 원칙이지만 토지와 건설중인 자산은 예외이다.</p>
+<p>감가상각(減價償却, Depreciation)은 자산의 취득원가를 자산의 내용연수에 걸쳐 비용으로 배분하는 회계 절차를 의미한다. 쉽게 말해, 공장 기계나 차량 같은 유형자산의 가치가 시간이 지나면서 점차 감소하는 것을 회계적으로 반영하는 방법이다. 모든 유형자산은 보유기간 중 감가상각하는 것이 원칙이지만 토지와 건설중인 자산은 예외이다.</p>
 <p>감가상각을 수행하기 위해서는 <strong>취득원가, 잔존가치, 내용연수</strong>를 알아야 하는데 이를 <strong>감가상각계산 3요소</strong>라고 한다.</p>
 <dl>
 <dt>취득원가</dt>
@@ -883,8 +883,70 @@ window.Quarto = {
 <dd>
 기업에서 자산을 사용가능할 것으로 기대되는 기간 또는 자산에서 얻을 것으로 예상되는 생산량이나 이와 유사한 단위 수량
 </dd>
+<dt>감가상각 필요성</dt>
+<dd>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 23%">
+<col style="width: 76%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>구분</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>자산가치 현실화</td>
+<td>시간이 지나면서 자산은 마모, 기술노후화로 가치가 줄어듦</td>
+</tr>
+<tr class="even">
+<td>수익-비용 대응 원칙</td>
+<td>자산을 사용해 수익을 창출할 때, 해당 기간에 비용도 인식해야 함</td>
+</tr>
+<tr class="odd">
+<td>세무 목적</td>
+<td>감가상각은 법인세 계산 시 비용으로 인정되어 세금 부담을 줄여줌</td>
+</tr>
+</tbody>
+</table>
+</dd>
 </dl>
+<p>감가상각 대상 자산 : | 자산 종류 | 예시 | | —– | —————————————– | | 유형자산 | 기계장치, 차량, 건물, 공구 | | 무형자산 | 소프트웨어, 특허권 (→ 감가상각이 아닌 ’<strong>상각</strong>’이라는 용어 사용) |</p>
+<p>※ 토지는 시간이 지나도 가치가 감소하지 않는다고 보기 때문에 감가상각 대상이 아님</p>
 <p>감가상각 방법에는 정액법, 정률법, 생산량 비례법, 이중체감잔액법, 연수합계법 등이 있다.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 9%">
+<col style="width: 57%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>방법</th>
+<th>수식</th>
+<th>특징</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>정액법</td>
+<td><span class="math inline">\(\frac{취득원가 - 잔존가치}{내용연수}\)</span></td>
+<td>매년 동일한 금액을 감가상각</td>
+</tr>
+<tr class="even">
+<td>정률법</td>
+<td><span class="math inline">\(기초장부가액 \times 상각률\)</span></td>
+<td>초기에 큰 금액을 상각, 점점 줄어듦</td>
+</tr>
+<tr class="odd">
+<td>생산량 비례법</td>
+<td><span class="math inline">\(\frac{취득원가 - 잔존가치}{총예상생산량} \times 해당연도생산량\)</span></td>
+<td>자산의 실제 사용량에 따라 감가상각 비용 배분</td>
+</tr>
+</tbody>
+</table>
 <dl>
 <dt>정액법</dt>
 <dd>
@@ -931,6 +993,8 @@ window.Quarto = {
 <p><span class="math display">\[\text{감가상각비 = (취득원가 - 잔존가액) } \times \frac{내용연수 \ 역순}{내용연수 \ 합계}\]</span></p>
 </dd>
 </dl>
+<p>상황: A사는 5년간 사용할 기계를 1,000만 원에 구입했고 잔존가치는 100만 원이라고 가정할 경우, : - 정액법: (1000-100)/5 = 180, 즉 매년 180만원씩 감가상각 - 정률법(상각률 40%) 사용 시<br>
+| 연도 | 기초장부가액 | 감가상각비 (40%) | 감가상각 후 잔액 | | — | —— | ———– | ——— | | 1년차 | 1,000 | 400 | 600 | | 2년차 | 600 | 240 | 360 | | 3년차 | 360 | 144 | 216 |</p>
 </section>
 <section id="참고자료" class="level2">
 <h2 class="anchored" data-anchor-id="참고자료">참고자료</h2>
