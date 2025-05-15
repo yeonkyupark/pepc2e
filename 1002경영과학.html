@@ -2069,7 +2069,7 @@ W = W_q + \frac{1}{\mu}
 <h3 class="anchored" data-anchor-id="확실성하-의사결정">확실성하 의사결정</h3>
 <section id="선형계획법" class="level4">
 <h4 class="anchored" data-anchor-id="선형계획법">선형계획법</h4>
-<p><strong>선형계획법</strong>(linear programming, LP)은 선형(linearity) 조건이 갖추어진 수리계획법으로 변수 간 함수적 관계가 직선으로 표현된다.</p>
+<p>확실성 하에서의 의사결정 모델 중 하나인 <strong>선형 계획법(Linear Programming, LP)</strong>은 제한된 자원을 효율적으로 배분하여 목표함수(Objective Function) 를 최대화하거나 최소화하는 수학적 기법이다. 확실성이란, 모든 변수(자원, 수요, 비용 등)가 명확하게 알려져 있으며, 변화하지 않는 상황을 의미한다.</p>
 <dl>
 <dt>수리계획법(mathematical programming)</dt>
 <dd>
@@ -2080,6 +2080,36 @@ W = W_q + \frac{1}{\mu}
 </dd>
 </dl>
 <p>일반적인 선형계획 모델 구조는 다음과 같다.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 48%">
+<col style="width: 51%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>구성 요소</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>목표함수(Objective Function)</strong></td>
+<td>극대화(이익, 생산량 등) 또는 극소화(비용 등)하려는 함수</td>
+</tr>
+<tr class="even">
+<td><strong>의사결정 변수(Decision Variables)</strong></td>
+<td>결정하고자 하는 변수 (예: 생산 수량 <span class="math inline">\(x_1, x_2\)</span>)</td>
+</tr>
+<tr class="odd">
+<td><strong>제약조건(Constraints)</strong></td>
+<td>자원, 시간, 용량 등 현실적인 한계를 수학적으로 표현한 식</td>
+</tr>
+<tr class="even">
+<td><strong>비음 조건(Non-negativity)</strong></td>
+<td>변수는 음수가 될 수 없다는 조건 (<span class="math inline">\(x_i \ge 0\)</span>)</td>
+</tr>
+</tbody>
+</table>
 <p><span id="eq-lp-eq1"><span class="math display">\[ \begin{align}
 max/min \ Z = C_1x_1 + C_2x_2 + ... + C_nx_n
 \end{align}  \tag{29.3}\]</span></span></p>
@@ -2508,7 +2538,42 @@ x_1 \ge 0, \ x_2 \ge 0
 <h3 class="anchored" data-anchor-id="대안평가">대안평가</h3>
 <section id="sec-ahp" class="level4">
 <h4 class="anchored" data-anchor-id="sec-ahp">AHP</h4>
-<p><strong>분석적 계층화 과정</strong>(AHP, Analytic Hierarchy Process)는 Thomas L.Saaty 교수가 1970년대 창안한 다기준 의사결정방법론이다.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<p>AHP(Analytic Hierarchy Process, 계층 분석법)는 복잡한 의사결정 문제를 구조화하고 정량적으로 분석할 수 있도록 도와주는 다기준 의사결정(Multi-Criteria Decision Making, MCDM) 기법이다. 1970년대에 <strong>토마스 사아티(Thomas Saaty)</strong>가 개발하였으며, 정성적 요소를 수치화할 수 있다는 점에서 다양한 분야에서 폭넓게 사용된다.</p>
+<dl>
+<dt>AHP 특징</dt>
+<dd>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 89%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>목적</td>
+<td>여러 대안 중에서 우선순위를 도출하거나 최적 대안을 선택</td>
+</tr>
+<tr class="even">
+<td>구조</td>
+<td>계층 구조로 의사결정 문제를 분해</td>
+</tr>
+<tr class="odd">
+<td>비교 방식</td>
+<td>쌍대비교(Pairwise Comparison)를 통해 상대적 중요도를 정량화</td>
+</tr>
+<tr class="even">
+<td>산출 결과</td>
+<td>각 대안의 <strong>가중치 및 우선순위</strong>, <strong>일관성 지수(CI)</strong></td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
 <section id="ahp-원리" class="level5">
 <h5 class="anchored" data-anchor-id="ahp-원리">AHP 원리</h5>
 <p>인간이 의사결정 시 두뇌가 단계적 또는 위계적 분석 과정을 활용한다는 사실에 착안하여 개발되었다. 연구 결과에 따르면 사람은 문제를 해결할 때 다음 세가지 원칙을 따른다.</p>
@@ -2573,7 +2638,7 @@ x_1 \ge 0, \ x_2 \ge 0
 <dt>기대성(expectation)</dt>
 <dd>
 <ul>
-<li>계층구조는 의사결정에 필요한 모든 사항들을 완전하게 포함하는 것을 가정한다. 즉 의사결정자의 합리적 기대에 부합하는 완전한 계측구조를 갖고 있어야 한다. 반면 수준 수가 많아 계층 구조가 깊으면 계산상 복잡성을 유발시키므로 일반적으로 3-7 수준으로 계층을 형성한다.</li>
+<li>계층구조는 의사결정에 필요한 모든 사항들을 완전하게 포함하는 것을 가정한다. 즉 의사결정자의 합리적 기대에 부합하는 완전한 계층구조를 갖고 있어야 한다. 반면 수준 수가 많아 계층 구조가 깊으면 계산상 복잡성을 유발시키므로 일반적으로 3-7 수준으로 계층을 형성한다.</li>
 </ul>
 </dd>
 </dl>
@@ -2639,13 +2704,45 @@ end
 </section>
 <section id="sec-anp" class="level4">
 <h4 class="anchored" data-anchor-id="sec-anp">ANP</h4>
-<p><strong>분석 네트워크 프로세스</strong>(ANP, Analytic Network Process)는 AHP 분석 한계로 인해 1996년 Saaty 교수가 기존 AHP 기법을 보완하여 개발되었다. AHP는 구성요소간 독립성을 가정하였지만 현실에서는 수평적 상호관계, 수직적 종속관계가 존재하기 때문에 단순한 계층적 구조만으로 설명할 수 없는 경우가 있다. ANP는 AHP 기법에 기초를 둔 시스템으로 요소간 비선형 관계를 모델화하는 복작한 의사결정을 다룰 수 있다.</p>
+<p><strong>ANP(Analytic Network Process, 분석 네트워크 과정)</strong>는 AHP(Analytic Hierarchy Process)의 한계를 극복하기 위해 토마스 사아티(Saaty)가 확장한 의사결정 기법이다. AHP가 <strong>계층적 구조(Hierarchy)</strong>를 가정하는 반면, ANP는 요소 간 상호의존성(Interdependence)을 허용하는 <strong>네트워크 구조(Network)</strong>를 기반으로 한다.</p>
 <table class="caption-top table">
-<caption>AHP와 ANP 비교</caption>
 <colgroup>
-<col style="width: 11%">
-<col style="width: 40%">
-<col style="width: 48%">
+<col style="width: 10%">
+<col style="width: 89%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>목적</td>
+<td><strong>상호 의존적 관계</strong>가 있는 복잡한 의사결정 문제 해결</td>
+</tr>
+<tr class="even">
+<td>기본 원리</td>
+<td>AHP의 쌍대비교 및 고유벡터 방식 활용</td>
+</tr>
+<tr class="odd">
+<td>특징</td>
+<td>요소들 간의 <strong>피드백과 상호작용</strong>을 고려</td>
+</tr>
+<tr class="even">
+<td>구조</td>
+<td>계층(Hierarchy)이 아닌 <strong>네트워크 구조(Network)</strong> 기반</td>
+</tr>
+</tbody>
+</table>
+<dl>
+<dt>AHP와 ANP 비교</dt>
+<dd>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 38%">
+<col style="width: 45%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -2656,22 +2753,83 @@ end
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>구조</strong></td>
-<td>트리 구조</td>
-<td>네트워크 구조</td>
+<td>구조</td>
+<td>계층적(Hierarchical)</td>
+<td>네트워크(Networked)</td>
 </tr>
 <tr class="even">
-<td><strong>가정</strong></td>
-<td>각 구성 요소 간 상호 독립</td>
-<td>각 구성 요소 간 상관관계 존재</td>
+<td>요소 간 관계</td>
+<td>독립적</td>
+<td>상호의존적(Feedback 포함)</td>
 </tr>
 <tr class="odd">
-<td><strong>특징</strong></td>
-<td>단방향 흐름, 계산이 비교적 단순</td>
-<td>상호 종속성, 피드백 효과, 계산이 복잡하여 시간 과다 소요</td>
+<td>적용 범위</td>
+<td>단순 문제</td>
+<td>복잡한 상호작용 문제</td>
+</tr>
+<tr class="even">
+<td>계산 방식</td>
+<td>쌍대비교 → 가중치</td>
+<td>쌍대비교 → <strong>슈퍼매트릭스</strong> 이용</td>
 </tr>
 </tbody>
 </table>
+</dd>
+<dt>ANP 장점</dt>
+<dd>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>장점</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>현실 반영력 향상</td>
+<td>상호의존 관계, 피드백 반영 가능</td>
+</tr>
+<tr class="even">
+<td>정성적 요소 수치화</td>
+<td>사람의 주관적 판단을 수치로 변환</td>
+</tr>
+<tr class="odd">
+<td>복잡한 문제 해결</td>
+<td>AHP로 해결 불가능한 문제 대응 가능</td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt>ANP 한계</dt>
+<dd>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 17%">
+<col style="width: 82%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>한계</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>계산 복잡도 높음</td>
+<td>슈퍼매트릭스 구성과 수렴 계산이 복잡</td>
+</tr>
+<tr class="even">
+<td>주관적 오류 가능성</td>
+<td>쌍대비교에서 편향 발생 가능</td>
+</tr>
+<tr class="odd">
+<td>도구 의존도 높음</td>
+<td>수작업보다는 전용 소프트웨어 사용 필요 (ex. <strong>Super Decisions</strong>)</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 97-4-4, 103-3-4, 112-3-3, 121-1-10, 121-2-4, 127-3-5">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -2690,7 +2848,7 @@ end
 </section>
 <section id="투자안-평가" class="level2">
 <h2 class="anchored" data-anchor-id="투자안-평가">투자안 평가</h2>
-<p>투자안으로부터 예상되는 미래 현금흐름과 자본비용을 알고 잇다고 가정할 때 각 투자안이 기업 가치 증가에 어느정도 공헌하는지에 따라 투자안 경제성을 평가한다. 미래 현금 흐름을 고려 유무에 따라 전통적인 분석방법과 현금흐름할인법(DCF, discounted cash flow)으로 구분할 수 있다.</p>
+<p>투자안으로부터 예상되는 미래 현금흐름과 자본비용을 알고 있다고 가정할 때 각 투자안이 기업 가치 증가에 어느정도 공헌하는지에 따라 투자안 경제성을 평가한다. 미래 현금 흐름을 고려 유무에 따라 전통적인 분석방법과 현금흐름할인법(DCF, discounted cash flow)으로 구분할 수 있다.</p>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
@@ -2749,6 +2907,10 @@ end
 </dl>
 <p>회수기간법은 다음과 같은 장단점을 갖는다.</p>
 <table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
 <thead>
 <tr class="header">
 <th>장점</th>
@@ -2757,100 +2919,35 @@ end
 </thead>
 <tbody>
 <tr class="odd">
-<td>- 계산이 간단하고 이해하기</td>
-<td>- 화폐의 시간적 가치를 무시</td>
+<td>계산이 간단하고 이해하기 쉬움</td>
+<td>화폐의 시간적 가치를 무시</td>
 </tr>
 <tr class="even">
-<td>쉬움</td>
-<td></td>
+<td>위험지표(risk indicator)로서 정보를 제공 (즉, 회수기간이 짧을수록 안전한 투자안으로 볼 수 있음)</td>
+<td>회수기간 이후 현금흐름이 무시됨</td>
+</tr>
+<tr class="odd">
+<td>간접적으로 유동성 상태를 나타냄 (회수기간이 짧을수록 빠른 자금회수로 기업 유동성이 증가)</td>
+<td>회수기간만을 고려하기 때문에 투자안 수익성 자체가 무시됨</td>
+</tr>
+<tr class="even">
+<td>시설재의 내용수명 적정성을 평가하는 판단 기준으로 유용함 (특히, 수요변화나 기술진부화 등의 위험이 높은 경우)</td>
+<td>목표 회수기간을 결정하는 데 주관적임</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>- 회수기간 이후 현금흐름이</td>
-</tr>
-<tr class="even">
-<td>- 위험지표(risk</td>
-<td>무시</td>
-</tr>
-<tr class="odd">
-<td>indicator)로서 정보를</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>제공(즉, 회수기간이</td>
-<td>- 회수기간만을 고려하기</td>
-</tr>
-<tr class="odd">
-<td>짧을수록 안전한 투자안으로</td>
-<td>때문에 투자안 수익성</td>
-</tr>
-<tr class="even">
-<td>볼 수 있음)</td>
-<td>자체가 무시</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>- 간접적으로 유동성상태를</td>
-<td>- 목표회수기간을 결정하는데</td>
-</tr>
-<tr class="odd">
-<td>나타내 줌(회수기간이</td>
-<td>주관적임</td>
-</tr>
-<tr class="even">
-<td>짧을수록 빠른 자금회수로</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>기업 유동성이 증가)</td>
-<td>- R&amp;D 투자안과 같은</td>
+<td>R&amp;D 투자안과 같은 장기투자안일수록 부정적인 편의가 심함</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>장기투자안일수록 부정적인</td>
-</tr>
-<tr class="odd">
-<td>- 시설재의 내용수명 적정성을</td>
-<td>편의가 심함</td>
-</tr>
-<tr class="even">
-<td>평가하는 판단 기준(특히,</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>수요변화나 기술진부화 등의</td>
-<td>- 투자안에 따라서는</td>
-</tr>
-<tr class="even">
-<td>위험이 높은 경우 유용)</td>
-<td>회수기간이 존재하지 않을</td>
+<td>투자안에 따라 회수기간이 존재하지 않을 수 있음</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>수 있음</td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>- 목표회수기간 내에 회수되는</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>투자안이지만 NPV는 음(-)일</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>수 있음</td>
+<td>목표 회수기간 내에 회수되는 투자안이지만 NPV는 음(-)일 수 있음</td>
 </tr>
 </tbody>
 </table>
-<p>+——————————–+——————————–+</p>
 <p><br></p>
 <p><strong>할인회수기간법(discounted payback period method)</strong>은 미래 현금유입의 현재가치로부터 투자원금을 회수하는데 소요되는 기간으로 투자의사결정을 하는 방법이다. 화폐의 시간가치가 감안되어 있으나 회수기간 이후의 현금흐름름이 무시된다는 단점이 여전히 존재한다.</p>
 <div class="callout callout-style-default callout-important no-icon callout-titled" title="예제">
@@ -2992,6 +3089,10 @@ end
 </dl>
 <p>회계적 이익률법은 다음과 같은 장단점을 갖는다.</p>
 <table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
 <thead>
 <tr class="header">
 <th>장점</th>
@@ -3000,40 +3101,19 @@ end
 </thead>
 <tbody>
 <tr class="odd">
-<td>- 계산이 간편하고 이해하기가</td>
-<td>- 화폐의 시간가치를 무시</td>
+<td>계산이 간편하고 이해하기가 용이함</td>
+<td>화폐의 시간가치를 무시함</td>
 </tr>
 <tr class="even">
-<td>용이</td>
-<td></td>
+<td>회계자료를 바로 이용할 수 있어 편리함</td>
+<td>회계처리방법에 따라 순이익이 달라지므로 객관성이 떨어짐 (예: 감가상각방법 차이)</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>- 회계처리방법에 따라 순이익이</td>
-</tr>
-<tr class="even">
-<td>- 회계자료를 바로 이용할 수</td>
-<td>달라지므로 객관성이</td>
-</tr>
-<tr class="odd">
-<td>있어 편리</td>
-<td>떨어짐(예, 감가상각방법</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>차이)</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td></td>
-<td>- 목표이익률 결정이 자의적</td>
+<td>목표이익률 결정이 자의적임</td>
 </tr>
 </tbody>
 </table>
-<p>+———————————-+———————————-+</p>
 </section>
 </section>
 <section id="현금흐름할인법" class="level3">
@@ -4073,7 +4153,6 @@ TRIZ는 로봇 시스템과 자동화 기술의 문제를 해결하는 데도 �
 <hr>
 <ol>
 <li id="fn1"><p><a href="http://www.kocw.net/home/search/kemView.do?kemId=1317851" target="_blank">http://www.kocw.net/home/search/kemView.do?kemId=1317851</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p><a href="https://ko.wikipedia.org/wiki/분석적_계층화_과정" target="_blank">https://ko.wikipedia.org/wiki/분석적_계층화_과정</a><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 
