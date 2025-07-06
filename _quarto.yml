@@ -89,6 +89,12 @@ book:
       - 1202ISO14001.qmd
       - 1203ISO31000.qmd
       - 1204ISO21500.qmd
+    - part: "13. 참고자료"
+      chapters:   
+      - 1301주요내용정리.qmd
+
+
+  
   site-url: "https://github.com/yeonkyupark/pepc2e"
     
 bibliography: references.bib
