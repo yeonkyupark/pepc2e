@@ -91,9 +91,14 @@ book:
       - 1204ISO21500.qmd
     - part: "13. 참고자료"
       chapters:   
+      - 1301생산전략.md
+      - 1302생산운영및물류관리.md
+      - 1303공정관리.md
+      - 1304설비관리.md
+      - 1305작업및생산성과측정과개선.md
+      - 1306원가관리및경제성공학.md
+      - 1307생산지원기술및기타.md
       - 1301주요내용정리.qmd
-
-
   
   site-url: "https://github.com/yeonkyupark/pepc2e"
     
