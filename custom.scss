@@ -130,6 +130,10 @@ h3.anchored {
 	font-size: 32px;
     font-weight: bold;
 	margin: 1em 0 0.5em 0;
+
+	text-underline-offset: 3px;
+	text-decoration-thickness: 2px;
+	padding-bottom: 2px;
 }
 
 h4.anchored {
