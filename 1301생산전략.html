@@ -552,7 +552,22 @@ window.Quarto = {
   </ul></li>
   </ul></li>
   <li><a href="#해외-공장-입지-시-고려사항" id="toc-해외-공장-입지-시-고려사항" class="nav-link" data-scroll-target="#해외-공장-입지-시-고려사항">해외 공장 입지 시 고려사항</a></li>
-  <li><a href="#생산구조와-방식layout" id="toc-생산구조와-방식layout" class="nav-link" data-scroll-target="#생산구조와-방식layout">생산구조와 방식(Layout)</a></li>
+  <li><a href="#생산구조와-방식layout" id="toc-생산구조와-방식layout" class="nav-link" data-scroll-target="#생산구조와-방식layout">생산구조와 방식(Layout)</a>
+  <ul>
+  <li><a href="#tsp-vs.-lean" id="toc-tsp-vs.-lean" class="nav-link" data-scroll-target="#tsp-vs.-lean">TSP vs.&nbsp;Lean</a>
+  <ul class="collapse">
+  <li><a href="#정의" id="toc-정의" class="nav-link" data-scroll-target="#정의">정의</a></li>
+  <li><a href="#핵심-철학-비교" id="toc-핵심-철학-비교" class="nav-link" data-scroll-target="#핵심-철학-비교">핵심 철학 비교</a></li>
+  <li><a href="#낭비-제거" id="toc-낭비-제거" class="nav-link" data-scroll-target="#낭비-제거">낭비 제거</a></li>
+  <li><a href="#주요-내용-비교" id="toc-주요-내용-비교" class="nav-link" data-scroll-target="#주요-내용-비교">주요 내용 비교</a></li>
+  </ul></li>
+  <li><a href="#tayor-vs.-ford" id="toc-tayor-vs.-ford" class="nav-link" data-scroll-target="#tayor-vs.-ford">Tayor vs.&nbsp;Ford</a>
+  <ul class="collapse">
+  <li><a href="#정의-1" id="toc-정의-1" class="nav-link" data-scroll-target="#정의-1">정의</a></li>
+  <li><a href="#핵심-원칙-비교" id="toc-핵심-원칙-비교" class="nav-link" data-scroll-target="#핵심-원칙-비교">핵심 원칙 비교</a></li>
+  <li><a href="#주요-성과-및-한계" id="toc-주요-성과-및-한계" class="nav-link" data-scroll-target="#주요-성과-및-한계">주요 성과 및 한계</a></li>
+  </ul></li>
+  </ul></li>
   <li><a href="#구매와-외주전략" id="toc-구매와-외주전략" class="nav-link" data-scroll-target="#구매와-외주전략">구매와 외주전략</a>
   <ul>
   <li><a href="#아웃소싱" id="toc-아웃소싱" class="nav-link" data-scroll-target="#아웃소싱">아웃소싱</a></li>
@@ -891,6 +906,190 @@ S/N = 10log\frac{Signal^2}{Noise^2}
 </section>
 <section id="생산구조와-방식layout" class="level2">
 <h2 class="anchored" data-anchor-id="생산구조와-방식layout">생산구조와 방식(Layout)</h2>
+<section id="tsp-vs.-lean" class="level3">
+<h3 class="anchored" data-anchor-id="tsp-vs.-lean">TSP vs.&nbsp;Lean</h3>
+<section id="정의" class="level4">
+<h4 class="anchored" data-anchor-id="정의">정의</h4>
+<p><strong>TSP</strong></p>
+<ul>
+<li>Toyota에서 1940 ~ 70년대에 개발한 자체적 제조 시스템</li>
+<li>핵심원칙
+<ul>
+<li>JIT(Just In Time), 필요한 것을 필요한 시간에 필요한 수량만</li>
+<li>Jidoka, 자동화에 인간 감시를 더해 품질 보증</li>
+</ul></li>
+</ul>
+<p><strong>Lean</strong></p>
+<ul>
+<li>1980년대, TPS를 중심으로 확산된 보편적 개선 시스템</li>
+<li>가치 기준, 흐름, Pull 방식, 완벽 추구 5원칙 기반</li>
+</ul>
+</section>
+<section id="핵심-철학-비교" class="level4">
+<h4 class="anchored" data-anchor-id="핵심-철학-비교">핵심 철학 비교</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 8%">
+<col style="width: 41%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>TPS (Toyota 방식)</th>
+<th>Lean (리드 방식)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>목적</td>
+<td>무재고, 무결함, 무과부하 → 효율에 집중</td>
+<td>고객 가치 중심 + 전 프로세스 낭비 제거</td>
+</tr>
+<tr class="even">
+<td>문화∙조직</td>
+<td>오너쉽 있는 작업자 + 관리자의 현장 지원</td>
+<td>문화 기반 Lean 전파, 전사적 참여 강조</td>
+</tr>
+<tr class="odd">
+<td>지속 개선 방식</td>
+<td>Kaizen 통한 일상적 문제해결 및 개선</td>
+<td>PDCA 기반 개선과 Lean 원칙 통합 적용</td>
+</tr>
+<tr class="even">
+<td>도구 및 기법</td>
+<td>Kanban, Andon, Heijunka, SMED 등 TPS 도구 활용</td>
+<td>5S, Kanban, Value Stream Mapping, Pull System 등 확장</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="낭비-제거" class="level4">
+<h4 class="anchored" data-anchor-id="낭비-제거">낭비 제거</h4>
+<p><strong>TSP</strong></p>
+<ul>
+<li>7대 낭비(Muda) 정의 - 과잉생산, 과잉 가공, 불량, 재고, 대기, 운송, 동작</li>
+</ul>
+<p><strong>Lean</strong></p>
+<ul>
+<li>TPS 무재고, 무결함 철학 확장 → 고객 중심 가치 흐름을 차단하는 모든 낭비 제거</li>
+</ul>
+</section>
+<section id="주요-내용-비교" class="level4">
+<h4 class="anchored" data-anchor-id="주요-내용-비교">주요 내용 비교</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 8%">
+<col style="width: 50%">
+<col style="width: 41%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>비교 항목</th>
+<th>TPS</th>
+<th>Lean</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>기원</td>
+<td>Toyota 고유의 제조 철학</td>
+<td>TPS를 기반으로 일반화된 개선 철학</td>
+</tr>
+<tr class="even">
+<td>적용 범위</td>
+<td>자동차 제조 중심</td>
+<td>전 산업·조직에 걸친 가치 흐름 최적화</td>
+</tr>
+<tr class="odd">
+<td>핵심 원칙</td>
+<td>JIT + Jidoka + Kaizen</td>
+<td>고객 가치, 흐름, 풀, 완벽 추구 원칙</td>
+</tr>
+<tr class="even">
+<td>문화·조직</td>
+<td>현장 권한 강조, 즉시 문제 해결 중심</td>
+<td>전사적 참여, 리더십 기반 개선 문화 조성</td>
+</tr>
+<tr class="odd">
+<td>도구 및 기법</td>
+<td>Kanban, Andon, Heijunka, SMED 등&nbsp;TPS 특화 도구</td>
+<td>VSM, 5S, Kanban, Pull 시스템 등 확장 도구들</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="tayor-vs.-ford" class="level3">
+<h3 class="anchored" data-anchor-id="tayor-vs.-ford">Tayor vs.&nbsp;Ford</h3>
+<section id="정의-1" class="level4">
+<h4 class="anchored" data-anchor-id="정의-1">정의</h4>
+<p>테일러 생산 방식</p>
+<ul>
+<li><strong>과학적 관리</strong>(Scientific Management) 기반</li>
+<li>프레더릭 윈슬로우 테일러가 작업을 분해⋅분석하여 “One Best Way” 도출, 시간⋅동작 연규, 기능적 감독 체계 구축 등을 통해 효율성과 생산성 극대화를 추구한 초기 산업혁명 방식</li>
+</ul>
+<p>포드 생산 방식</p>
+<ul>
+<li>헨리 포드가 개발한 <strong>이동식 조립 라인</strong> (Assembly Line) 기반</li>
+<li>차량 조립을 45개 작업으로 분할하고 컨베이어로 이동시키며 Model T 생산을 12.5시간에서 93분으로 대폭 단축</li>
+</ul>
+</section>
+<section id="핵심-원칙-비교" class="level4">
+<h4 class="anchored" data-anchor-id="핵심-원칙-비교">핵심 원칙 비교</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>테일러 방식</th>
+<th>포드 방식</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>초점</strong></td>
+<td>작업 분해, 시간·동작 분석, 최적화된 작업 표준화</td>
+<td>이동식 조립 라인을 통한 대량생산·연속성 중시</td>
+</tr>
+<tr class="even">
+<td><strong>관리 구조</strong></td>
+<td>기능적 감독체계(Functional foremanship) 체제 – 계획 vs 실행 역할 분리</td>
+<td>단일 감독 + 표준화된 작업 환경 / 고임금·고효율 정책 병행</td>
+</tr>
+<tr class="odd">
+<td><strong>노동 분업 방식</strong></td>
+<td>작업자 숙련도 제거, 동작 표준화 및 계측 도구 사용</td>
+<td>단순화된 작업 반복 수행, 비숙련 인력 활용</td>
+</tr>
+<tr class="even">
+<td><strong>유인 구조</strong></td>
+<td>차등 성과급(Differential piece-rate system) 적용</td>
+<td>$5 Day 정책으로 고임금 + 낮은 이직률 달성</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="주요-성과-및-한계" class="level4">
+<h4 class="anchored" data-anchor-id="주요-성과-및-한계">주요 성과 및 한계</h4>
+<p><strong>테일러 방식</strong></p>
+<ul>
+<li>작업장별 시간 정의, 불필요한 동작 제거</li>
+<li>장점: 객관적 작업 분석 → 생산성 향상</li>
+<li>단점: 인간 소외, 단순 기계적 작업 유도</li>
+</ul>
+<p><strong>포드 방식</strong></p>
+<ul>
+<li>조립라인 도입으로 단위 생산시간 및 비용 획기적 절감</li>
+<li>장점: 대량생산 구현, 충산층 확대</li>
+<li>단점: 작업 단조성 증가, 유연성 부족</li>
+</ul>
+</section>
+</section>
 </section>
 <section id="구매와-외주전략" class="level2">
 <h2 class="anchored" data-anchor-id="구매와-외주전략">구매와 외주전략</h2>
