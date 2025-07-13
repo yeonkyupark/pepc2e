@@ -44,7 +44,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-697ed21af366e4697da836931d5038a1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-fa21c3afbcb42c9f51505ba8406a614f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -75,6 +75,35 @@ ul.task-list li input[type="checkbox"] {
 <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" crossorigin="anonymous"></script>
 <meta name="google-adsense-account" content="pub-8759553852956796">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -461,32 +490,32 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./1302생산운영및물류관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">생산운영과 공장관리</span></a>
+  <a href="./1302생산운영및물류관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">2. 생산운영 및 물류관리</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./1303공정관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">생산운영과 공장관리</span></a>
+  <a href="./1303공정관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">3. 공정관리</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./1304설비관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">생산운영과 공장관리</span></a>
+  <a href="./1304설비관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">4. 설비관리</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./1305작업및생산성과측정과개선.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">생산운영과 공장관리</span></a>
+  <a href="./1305작업및생산성과측정과개선.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">5. 작업 및 생산성과 측정과 개선</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./1306원가관리및경제성공학.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">생산운영과 공장관리</span></a>
+  <a href="./1306원가관리및경제성공학.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">6. 원가관리 및 경제성공학</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./1307생산지원기술및기타.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">생산운영과 공장관리</span></a>
+  <a href="./1307생산지원기술및기타.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">7. 생산지원기술 및 기타</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -506,16 +535,41 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">목차</h2>
    
   <ul>
-  <li><a href="#생산-시스템" id="toc-생산-시스템" class="nav-link active" data-scroll-target="#생산-시스템">생산 시스템</a>
+  <li><a href="#경쟁우위-생산전략" id="toc-경쟁우위-생산전략" class="nav-link active" data-scroll-target="#경쟁우위-생산전략">경쟁우위 생산전략</a>
+  <ul>
+  <li><a href="#제품-개발" id="toc-제품-개발" class="nav-link" data-scroll-target="#제품-개발">제품 개발</a>
+  <ul class="collapse">
+  <li><a href="#qfd" id="toc-qfd" class="nav-link" data-scroll-target="#qfd">QFD</a></li>
+  </ul></li>
+  <li><a href="#plc-단계에-따른-생산-전략" id="toc-plc-단계에-따른-생산-전략" class="nav-link" data-scroll-target="#plc-단계에-따른-생산-전략">PLC 단계에 따른 생산 전략</a></li>
+  <li><a href="#강건설계-다구찌-공학" id="toc-강건설계-다구찌-공학" class="nav-link" data-scroll-target="#강건설계-다구찌-공학">강건설계 (다구찌 공학)</a>
+  <ul class="collapse">
+  <li><a href="#핵심-개념" id="toc-핵심-개념" class="nav-link" data-scroll-target="#핵심-개념">핵심 개념</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#생산구조와-방식layout" id="toc-생산구조와-방식layout" class="nav-link" data-scroll-target="#생산구조와-방식layout">생산구조와 방식(Layout)</a></li>
+  <li><a href="#구매와-외주전략" id="toc-구매와-외주전략" class="nav-link" data-scroll-target="#구매와-외주전략">구매와 외주전략</a></li>
+  <li><a href="#인력과-직무설계" id="toc-인력과-직무설계" class="nav-link" data-scroll-target="#인력과-직무설계">인력과 직무설계</a></li>
+  <li><a href="#사업환경분석" id="toc-사업환경분석" class="nav-link" data-scroll-target="#사업환경분석">사업환경분석</a>
+  <ul>
+  <li><a href="#ve" id="toc-ve" class="nav-link" data-scroll-target="#ve">VE</a>
+  <ul class="collapse">
+  <li><a href="#ve-절차" id="toc-ve-절차" class="nav-link" data-scroll-target="#ve-절차">VE 절차</a></li>
+  <li><a href="#가치공학-기본-원칙" id="toc-가치공학-기본-원칙" class="nav-link" data-scroll-target="#가치공학-기본-원칙">가치공학 기본 원칙</a></li>
+  </ul></li>
+  <li><a href="#가치흐름도" id="toc-가치흐름도" class="nav-link" data-scroll-target="#가치흐름도">가치흐름도</a></li>
+  </ul></li>
+  <li><a href="#생산-시스템" id="toc-생산-시스템" class="nav-link" data-scroll-target="#생산-시스템">생산 시스템</a>
   <ul>
   <li><a href="#유연생산시스템fms" id="toc-유연생산시스템fms" class="nav-link" data-scroll-target="#유연생산시스템fms">유연생산시스템(FMS)</a>
   <ul class="collapse">
   <li><a href="#주요-구성-요소" id="toc-주요-구성-요소" class="nav-link" data-scroll-target="#주요-구성-요소">주요 구성 요소</a></li>
   <li><a href="#도입-시-장점과-단점" id="toc-도입-시-장점과-단점" class="nav-link" data-scroll-target="#도입-시-장점과-단점">도입 시 장점과 단점</a></li>
   </ul></li>
+  <li><a href="#택트-타임-생산방식" id="toc-택트-타임-생산방식" class="nav-link" data-scroll-target="#택트-타임-생산방식">택트 타임 생산방식</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/yeonkyupark/pepc2e/edit/main/1301생산전략.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/yeonkyupark/pepc2e/edit/main/1301생산전략.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content column-body" id="quarto-document-content">
@@ -545,6 +599,258 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="경쟁우위-생산전략" class="level2">
+<h2 class="anchored" data-anchor-id="경쟁우위-생산전략">경쟁우위 생산전략</h2>
+<section id="제품-개발" class="level3">
+<h3 class="anchored" data-anchor-id="제품-개발">제품 개발</h3>
+<section id="qfd" class="level4">
+<h4 class="anchored" data-anchor-id="qfd">QFD</h4>
+<p>QFD(Quality Function Deployment)는 고객 요구사항(VOC)을 정량적으로 기술 요소로 변환하고 제품, 부품, 공정 수준까지 체계적으로 전개하는 품질 기획 방법이다. 즉, 제품 개발 과정에서 고객이 진정으로 원하는 품질 요소를 최우선 설계 목표로 삼기 위한 고객 중심 설계 도구이다.</p>
+<p>QFD를 대표하는 매트릭스로 HOQ(House of Quality)는 다음과 같이 구성된다.</p>
+<ol type="1">
+<li>WHATs, 고객 요구사항으로 고객이 원하는 것</li>
+<li>HOWs, 기수 요구사항으로 WHAT을 실현하기 위한 엔지니어링 요소</li>
+<li>관계행렬, WHAT과 HOW 간 연관성 강도 표시</li>
+<li>기술 중요도 및 목표, 우선순위 및 설계 목표 설정</li>
+<li>기술 상관관계(지붕), 기술 요소 간 상호 지지 및 충돌 파악</li>
+<li>경쟁 벤치마킹, 경쟁 제품과 비교 분석</li>
+</ol>
+<p><strong>QFD 4단계</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 29%">
+<col style="width: 70%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>단계</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1단계: 제품 기획</td>
+<td>고객의 VOC 수집 및 요구 우선순위 도출</td>
+</tr>
+<tr class="even">
+<td>2단계: 제품 개발</td>
+<td>WHAT → HOW 전환, 핵심 엔지니어링 특성 정의</td>
+</tr>
+<tr class="odd">
+<td>3단계: 공정 개발</td>
+<td>설계 요소가 반영된 제조 공정 규격 설정</td>
+</tr>
+<tr class="even">
+<td>4단계: 공정 품질 관리</td>
+<td>공정능력 검증, 검사 계획 수립, 지속 모니터링 및 개선</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="plc-단계에-따른-생산-전략" class="level3">
+<h3 class="anchored" data-anchor-id="plc-단계에-따른-생산-전략">PLC 단계에 따른 생산 전략</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 5%">
+<col style="width: 25%">
+<col style="width: 68%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>단계</th>
+<th>목표</th>
+<th>전략 요소</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>도입</td>
+<td>인지도 확보, 시장 진입</td>
+<td>체험 제공, 가격 전략, 유통 확보, 광고 집중</td>
+</tr>
+<tr class="even">
+<td>성장</td>
+<td>시장 점유율 확대</td>
+<td>제품 개선, 서비스 강화, 유통 확장, 광고·브랜딩 유지</td>
+</tr>
+<tr class="odd">
+<td>성숙</td>
+<td>수익 극대화 및 차별화</td>
+<td>제품/서비스 차별화, 비용 효율화, 프로모션 강화, 신시장 개척</td>
+</tr>
+<tr class="even">
+<td>쇠퇴</td>
+<td>비용 관리, 정리 전략</td>
+<td>단종/가격 인하, 광고·유통 축소, 니치 유지, 자원 재배치</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="강건설계-다구찌-공학" class="level3">
+<h3 class="anchored" data-anchor-id="강건설계-다구찌-공학">강건설계 (다구찌 공학)</h3>
+<p>다구찌 공학은 품질 손실을 최소화하고 환경 변화에 강인한(Robust) 제품 및 공정을 설계하기 위한 통계 기반 품질공학 방법론이다. 다구찌 공학 목표는 포르라인 품질관리로, 즉 제품이 설계 단계에서부터 환경 변화나 변동에 덜 민감하도록 설계하는 것이다.</p>
+<section id="핵심-개념" class="level4">
+<h4 class="anchored" data-anchor-id="핵심-개념">핵심 개념</h4>
+<p><strong>손실함수</strong> (Loss Function) 품질 특성이 목표값(T)을 벗어날 때마다 사회적 손실이 발생하다는 것으로 이를 모델화 것이다.</p>
+<p><span class="math display">\[
+L = k(y-T)^2
+\]</span> 여기서 y는 실제 값이고 k는 비용 계수이다.</p>
+<p><strong>강건 설계</strong> (Robust Design) 노이즈라 칭하는 오염 변수에도 강인한 설계를 목표로 한다. 통제요인을 조정하여 성능변동이 최소화 되도록 설계한다.</p>
+<p><strong>다구찌 3단계 프로세스</strong> 1. 시스템 설계: 개념 설계 단계로 품질 달성을 위한 시스템 개요 수립 2. 파라미터 설계: 실험설계(DOE, Design of Experiment)를 통해 최적 수준 결정, 통제 및 노이즈 요인 모두 고려 3. 허용오차 설계: 파라미터 설계 단계 후 필요 시 허용 오차를 조정함으로써 비용-품질 최적 균형을 달성</p>
+<p><strong>실험 설계</strong> (DOE) 기법 직교배열 사용을 통해 실험 횟수를 줄이면서도 주효과와 주요 노이즈 상호 작용 분석을 한다. 통제 요인과 노이즈 요인 모두 포함된 내부, 외부 배열을 구성하여 실제 사용 환경까지 고려한 분석을 지원한다.</p>
+<p><strong>신호대비 잡음비</strong> 강건성 평가는 평균대비 변동성을 기반으로 하는 S/R Ratio로 측정한다.</p>
+<p><span class="math display">\[
+S/N = 10log\frac{Signal^2}{Noise^2}
+\]</span> 이 값이 클수록 변동성이 작고, 목표 성능에 안정적으로 근접하게 된다.</p>
+<p><strong>통계 분석</strong> DOE 결과에 대해 분산분석을 적용하여 각 통제요인의 영향력 기여도를 파악하고 최적 조건을 결정한다.</p>
+<p><strong>장점과 단점</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 47%">
+<col style="width: 52%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>장점</th>
+<th>단점</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>실험 횟수 절감, 비용 효율적 설계 가능</td>
+<td>복잡한 상호작용 모두를 탐지하지 못할 수 있음</td>
+</tr>
+<tr class="even">
+<td>노이즈 변수 대응 제품 설계 가능</td>
+<td>통계적 기반 약하고 S/N Ratio만으로는 한계</td>
+</tr>
+<tr class="odd">
+<td>전체 제품 수명 동안 안정적 품질 유지 가능</td>
+<td>표준 공정 대비 이론 근거가 약하다는 지적 존재</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+</section>
+<section id="생산구조와-방식layout" class="level2">
+<h2 class="anchored" data-anchor-id="생산구조와-방식layout">생산구조와 방식(Layout)</h2>
+</section>
+<section id="구매와-외주전략" class="level2">
+<h2 class="anchored" data-anchor-id="구매와-외주전략">구매와 외주전략</h2>
+</section>
+<section id="인력과-직무설계" class="level2">
+<h2 class="anchored" data-anchor-id="인력과-직무설계">인력과 직무설계</h2>
+</section>
+<section id="사업환경분석" class="level2">
+<h2 class="anchored" data-anchor-id="사업환경분석">사업환경분석</h2>
+<section id="ve" class="level3">
+<h3 class="anchored" data-anchor-id="ve">VE</h3>
+<p>VE는 제 2차 세계대전 중 GE에서 원자재 부족으로 대체재를 찾는 과정에서 비용 절감 및 기능 향상을 동시에 이룬 경험에서 시작되었다(석면 사건). 구매 담당이던 Lawrence Miles가 이 방법을 발전시켜 ’Value Analysis’라는 이름으로 정립했다. 이후 다양한 산업, 특히 건선, 제조 등에서 체계화되어 적용되었고, SAVE(국제가치엔지니어링협회)가 1959년 창립되면서 VE는 기능 중심의 비용 최적화 도구로 자리 잡았다. VE는 단순히 비용을 줄이는 것이 아니라, 기능을 유지하거나 개선하면서 수명 주기 관점에서 비용과 품질의 최적 균형을 찾는 것이 핵샘이다.</p>
+<section id="ve-절차" class="level4">
+<h4 class="anchored" data-anchor-id="ve-절차">VE 절차</h4>
+<p>VE 기본 절차는 기능정의, 기능평가, 대체안 작성 순으로 이루어지며, 전형적인 절차는 다음 8단계와 같다.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 3%">
+<col style="width: 36%">
+<col style="width: 60%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>단계</th>
+<th>명칭</th>
+<th>주요 활동</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>①</td>
+<td><strong>Preparation</strong></td>
+<td>대상 프로젝트 선정, VE팀 구성, 일정 및 목표 설정</td>
+</tr>
+<tr class="even">
+<td>②</td>
+<td><strong>Information</strong></td>
+<td>기능, 비용, 기술 사양, 이해관계자 요구사항 등 데이터 수집</td>
+</tr>
+<tr class="odd">
+<td>③</td>
+<td><strong>Function Analysis</strong></td>
+<td>기능(F)과 비용(Cost)의 관계 분석 → 기능 우선순위 정립</td>
+</tr>
+<tr class="even">
+<td>④</td>
+<td><strong>Creative</strong></td>
+<td>브레인스토밍 통해 대체 아이디어 생성 (대체재, 공정 등)</td>
+</tr>
+<tr class="odd">
+<td>⑤</td>
+<td><strong>Evaluation</strong></td>
+<td>대안의 장단점 분석 및 비용-기능 비교, 경제성 평가</td>
+</tr>
+<tr class="even">
+<td>⑥</td>
+<td><strong>Development</strong></td>
+<td>제안된 대안을 설계에 반영할 구체적 실행 방안 마련</td>
+</tr>
+<tr class="odd">
+<td>⑦</td>
+<td><strong>Presentation</strong></td>
+<td>VE 결과(대안, 비용절감, 기대효과 등)를 이해관계자에게 보고</td>
+</tr>
+<tr class="even">
+<td>⑧</td>
+<td><strong>Implementation</strong></td>
+<td>승인된 개선안 실행 및 효과 추적·검증</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="가치공학-기본-원칙" class="level4">
+<h4 class="anchored" data-anchor-id="가치공학-기본-원칙">가치공학 기본 원칙</h4>
+<p>VE의 5가지 원칙은 다음과 같다.</p>
+<ol type="1">
+<li><strong>사용자 지향</strong>: 고객과 사용자의 요구사항과 만족도를 최우선으로 고려하는 관점</li>
+<li><strong>기능중심 사고</strong>: 제품이나 서비스의 본질적인 기능에 집중하여 분석하는 접근법</li>
+<li><strong>체계적 접근</strong>: 단계별 절차와 방법론을 토해 논리적이고 과학적으로 분석하는 방법</li>
+<li><strong>팀워크</strong>: 다양한 전문분아의 구성원들이 협력하여 종합적 관점에서 문제를 해결하는 협업 방식</li>
+<li><strong>창의적 사고</strong>: 기존 관념에서 벗어나 새로운 아이디어와 대안을 모색하는 혁신적 사고 방식</li>
+</ol>
+</section>
+</section>
+<section id="가치흐름도" class="level3">
+<h3 class="anchored" data-anchor-id="가치흐름도">가치흐름도</h3>
+<p>가치흐름도(VSM, Value Stream Mapping)는 제품이나 서비스가 고객에게 전달되는 전체 과정을 시각화하여 낭비 요소를 식별하고 개선하는 린 제조 기법이다.</p>
+<p><strong>정의</strong></p>
+<ul>
+<li>원재료부터 완제품까지 모든 활동을 도식화한 지도</li>
+<li>가치 창출 활동과 비가치 창출 활동을 구분하여 표현</li>
+<li>정보 흐름과 물질 흐름을 동시에 나타내는 도구</li>
+</ul>
+<p><strong>구성 요소</strong></p>
+<ul>
+<li><strong>현재 상태 지도</strong>: 현재 가치 흐믈을 있는 그대로 표현</li>
+<li><strong>미래 상태 지도</strong>: 개선된 이상적인 흐름 설계</li>
+<li><strong>실행 계획</strong>: 현재에서 미래 상태로 전환하기 위한 구체적 실행 방안</li>
+</ul>
+<p><strong>주요 기호</strong></p>
+<ul>
+<li><strong>프로세스 박스</strong>: 각 공정 단계 표현</li>
+<li><strong>재고 삼각형</strong>: 재고 수준과 대기 시간 표시</li>
+<li><strong>정보 흐름 화살표</strong>: 정보 전달 경로 표현</li>
+<li><strong>물질 흐름 화살표</strong>: 제품 이동 경로 표시</li>
+</ul>
+<p><strong>활용 효과</strong></p>
+<ul>
+<li>낭비 요소 식별: 불필요한 대기시간, 과잉제고, 운반 등 발견</li>
+<li>리드타임 단축: 전체 프로세스 소요 시간 감소</li>
+<li>생산성 향상: 자치 창출 활동 비율 증대</li>
+<li>의사소통: 전 구성원의 프로세스 이해도 향상</li>
+</ul>
+</section>
+</section>
 <section id="생산-시스템" class="level2">
 <h2 class="anchored" data-anchor-id="생산-시스템">생산 시스템</h2>
 <section id="유연생산시스템fms" class="level3">
@@ -598,9 +904,38 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p>FMS는 최근 IIoT, 로봇, 엣지 컴퓨팅 등과 함께 고도화가 진행되고 있으며 MES와 연계하여 생산을 실시간 모티너링, 스케쥴링하는 등 최적화를 구현하고 있다.</p>
 <p>FMS는 다품종, 소량생산 시대에 대응하기 위한 핵심 생산방식 중 하나며, 스마트팩토리 기본 단위로서 CNC+로봇+자동물류+지능제어를 통합한 시스템이다. 초기 비용과 전문인력 요구는 있으나 유연성 확보, 낭비 최소화, 리드타임 단축, 품질 안정성 향상 등 장기적 효과를 기대할 수 있다.</p>
-
-
 </section>
+</section>
+<section id="택트-타임-생산방식" class="level3">
+<h3 class="anchored" data-anchor-id="택트-타임-생산방식">택트 타임 생산방식</h3>
+<p>택트 타임 생산방식은 고객 수요에 따라 제품이 일정한 리듬으로 생산되도록 운영 속도를 맞추는 방식이다.</p>
+<p><span class="math display">\[
+\text{택트 타임} = \frac{\text{사용 가능 생산 시간}}{\text{고객 수요}}
+\]</span></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 2%">
+<col style="width: 97%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>장점</strong></td>
+<td>- <strong>병목구간 즉시 식별</strong>: 지연 구간 빠르게 파악 가능 <br>- <strong>실시간 라인 생산성 파악</strong>: 비가동 지점·저성능 스테이션 모니터링 용이 <br>- <strong>낭비 제거 집중</strong>: 비부가가치 작업 최소화, 재고·초과생산 억제 <br>- <strong>흐름 균형 유지</strong>: 공정 라인 균형 유지 및 주기적 흐름 확보</td>
+</tr>
+<tr class="even">
+<td><strong>단점</strong></td>
+<td>- <strong>병렬 공정 정지</strong>: 한 스테이션이 지연되면 전체 라인 운행 중단 <br>- <strong>작업자·설비 부담 증가</strong>: 작업 속도 강요로 인한 부상 및 설비 고장 위험 <br>- <strong>예측 불가능 변수 반영 부족</strong>: 휴식, 리셋 기간 등 비가동 요소 반영 어려움 <br>- <strong>수요 변화 시 재구성 필요</strong>: 수요 증가 또는 변동 시 라인 재배치 등 설계 변경 필요</td>
+</tr>
+</tbody>
+</table>
+
+
 </section>
 </section>
 
@@ -1017,8 +1352,8 @@ ul.task-list li input[type="checkbox"] {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./1302생산운영및물류관리.html" class="pagination-link" aria-label="생산운영과 공장관리">
-        <span class="nav-page-text"><span class="chapter-title">생산운영과 공장관리</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./1302생산운영및물류관리.html" class="pagination-link" aria-label="2. 생산운영 및 물류관리">
+        <span class="nav-page-text"><span class="chapter-title">2. 생산운영 및 물류관리</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1030,7 +1365,7 @@ ul.task-list li input[type="checkbox"] {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/yeonkyupark/pepc2e/edit/main/1301생산전략.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/yeonkyupark/pepc2e/edit/main/1301생산전략.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Professional Engineer Plant Control</p>
 </div>

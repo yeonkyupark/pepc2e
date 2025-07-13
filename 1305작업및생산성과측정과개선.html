@@ -7,8 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="keywords" content="공장관리기술사, 생산운영, 재고, 물류, 공정, 설비, 작업, 생산성, 원가, OR">
+<meta name="description" content="생상관리 관련 주요 내용을 정리한다.">
 
-<title>생산운영과 공장관리 – 생산운영과 공장관리(2E)</title>
+<title>5. 작업 및 생산성과 측정과 개선 – 생산운영과 공장관리(2E)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -43,7 +44,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-697ed21af366e4697da836931d5038a1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-fa21c3afbcb42c9f51505ba8406a614f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -74,6 +75,35 @@ ul.task-list li input[type="checkbox"] {
 <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" crossorigin="anonymous"></script>
 <meta name="google-adsense-account" content="pub-8759553852956796">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -86,7 +116,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./1301생산전략.html">13. 참고자료</a></li><li class="breadcrumb-item"><a href="./1305작업및생산성과측정과개선.html"><span class="chapter-title">생산운영과 공장관리</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./1301생산전략.html">13. 참고자료</a></li><li class="breadcrumb-item"><a href="./1305작업및생산성과측정과개선.html"><span class="chapter-title">5. 작업 및 생산성과 측정과 개선</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -460,32 +490,32 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./1302생산운영및물류관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">생산운영과 공장관리</span></a>
+  <a href="./1302생산운영및물류관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">2. 생산운영 및 물류관리</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./1303공정관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">생산운영과 공장관리</span></a>
+  <a href="./1303공정관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">3. 공정관리</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./1304설비관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">생산운영과 공장관리</span></a>
+  <a href="./1304설비관리.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">4. 설비관리</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./1305작업및생산성과측정과개선.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">생산운영과 공장관리</span></a>
+  <a href="./1305작업및생산성과측정과개선.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">5. 작업 및 생산성과 측정과 개선</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./1306원가관리및경제성공학.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">생산운영과 공장관리</span></a>
+  <a href="./1306원가관리및경제성공학.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">6. 원가관리 및 경제성공학</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./1307생산지원기술및기타.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">생산운영과 공장관리</span></a>
+  <a href="./1307생산지원기술및기타.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">7. 생산지원기술 및 기타</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -500,20 +530,32 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">목차</h2>
+   
+  <ul>
+  <li><a href="#작업방법-및-시간연구" id="toc-작업방법-및-시간연구" class="nav-link active" data-scroll-target="#작업방법-및-시간연구">작업방법 및 시간연구</a></li>
+  <li><a href="#프로세스-분석과-개선" id="toc-프로세스-분석과-개선" class="nav-link" data-scroll-target="#프로세스-분석과-개선">프로세스 분석과 개선</a></li>
+  <li><a href="#생산성-관리" id="toc-생산성-관리" class="nav-link" data-scroll-target="#생산성-관리">생산성 관리</a></li>
+  <li><a href="#품질관리" id="toc-품질관리" class="nav-link" data-scroll-target="#품질관리">품질관리</a>
+  <ul>
+  <li><a href="#t검정" id="toc-t검정" class="nav-link" data-scroll-target="#t검정">T검정</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/yeonkyupark/pepc2e/edit/main/1305작업및생산성과측정과개선.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content column-page-right" id="quarto-document-content">
+<main class="content column-body" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./1301생산전략.html">13. 참고자료</a></li><li class="breadcrumb-item"><a href="./1305작업및생산성과측정과개선.html"><span class="chapter-title">생산운영과 공장관리</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./1301생산전략.html">13. 참고자료</a></li><li class="breadcrumb-item"><a href="./1305작업및생산성과측정과개선.html"><span class="chapter-title">5. 작업 및 생산성과 측정과 개선</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">생산운영과 공장관리</h1>
+<h1 class="title"><span class="chapter-title">5. 작업 및 생산성과 측정과 개선</span></h1>
 </div>
 
 
 
-<div class="quarto-title-meta column-page-right">
+<div class="quarto-title-meta column-body">
 
     
   
@@ -531,8 +573,70 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="작업방법-및-시간연구" class="level2">
+<h2 class="anchored" data-anchor-id="작업방법-및-시간연구">작업방법 및 시간연구</h2>
+</section>
+<section id="프로세스-분석과-개선" class="level2">
+<h2 class="anchored" data-anchor-id="프로세스-분석과-개선">프로세스 분석과 개선</h2>
+</section>
+<section id="생산성-관리" class="level2">
+<h2 class="anchored" data-anchor-id="생산성-관리">생산성 관리</h2>
+</section>
+<section id="품질관리" class="level2">
+<h2 class="anchored" data-anchor-id="품질관리">품질관리</h2>
+<section id="t검정" class="level3">
+<h3 class="anchored" data-anchor-id="t검정">T검정</h3>
+<p>T검정은 두 집단 평균 차이가 통계적으로 유의미한지를 판단하는 추론 통계 기법이다. 정규분포를 따르고 분산이 알려지지 않은 소규모 표본(n&lt;30) 상황에서 주로 사용된다.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 19%">
+<col style="width: 43%">
+<col style="width: 36%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>유형</th>
+<th>설명</th>
+<th>사용 사례</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>1표본 T-검정</strong></td>
+<td>단일 샘플 평균이 기준(또는 모집단 평균)과 다른지 확인</td>
+<td>초콜릿 바 평균 무게가 표기(50g)와 다른지</td>
+</tr>
+<tr class="even">
+<td><strong>독립 표본 T-검정</strong></td>
+<td>서로 독립인 두 집단 평균 비교</td>
+<td>서로 다른 약물 A/B 효과 비교</td>
+</tr>
+<tr class="odd">
+<td><strong>대응 표본 T-검정</strong></td>
+<td>같은 대상의 전후 측정값 비교</td>
+<td>체중 변화 전후 비교</td>
+</tr>
+</tbody>
+</table>
+<p>T검정을 위한 가정 조건은 다음과 같다.</p>
+<ul>
+<li>데이터는 연속형이며 정규분포를 따른다.</li>
+<li>독립 샘플</li>
+<li>분산 동질성</li>
+</ul>
+<p>표본이 충분히 크다면 t분포는 정규분포에 근사하게 된다.</p>
+<p>각 검증별 산식은 다음과 같다.</p>
+<p><strong>1표본 t-검정</strong> (One-sample t-test) <span class="math display">\[t = \frac{\bar{X} - \mu_0}{s / \sqrt{n}}\]</span></p>
+<p><strong>독립표본 t-검정</strong> (Independent two-sample t-test, <strong>등분산 가정</strong>) <span class="math display">\[t = \frac{\bar{X}_1 - \bar{X}_2}{s_p \cdot \sqrt{\frac{1}{n_1} + \frac{1}{n_2}}}\]</span></p>
+<p><strong>풀링 표준편차</strong> (Pooled standard deviation) <span class="math display">\[s_p = \sqrt{ \frac{(n_1 - 1)s_1^2 + (n_2 - 1)s_2^2}{n_1 + n_2 - 2} }\]</span></p>
+<p><strong>Welch의 t-검정</strong> (<strong>이분산 가정</strong>) <span class="math display">\[t = \frac{\bar{X}_1 - \bar{X}_2}{\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}}\]</span></p>
+<p><strong>대응표본 t-검정</strong> (Paired t-test) <span class="math display">\[t = \frac{\bar{d}}{s_d / \sqrt{n}}\]</span></p>
+<p>t값은 자유도(df)에 따라 t분포와 비교하여 유의 여부가 결정된다.</p>
+<p>_<em>EOD</em>_</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8759553852956796" crossorigin="anonymous"></script>
@@ -940,15 +1044,15 @@ ul.task-list li input[type="checkbox"] {
     }
   });
   </script>
-<nav class="page-navigation column-page-right">
+<nav class="page-navigation column-body">
   <div class="nav-page nav-page-previous">
-      <a href="./1304설비관리.html" class="pagination-link" aria-label="생산운영과 공장관리">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">생산운영과 공장관리</span></span>
+      <a href="./1304설비관리.html" class="pagination-link" aria-label="4. 설비관리">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">4. 설비관리</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./1306원가관리및경제성공학.html" class="pagination-link" aria-label="생산운영과 공장관리">
-        <span class="nav-page-text"><span class="chapter-title">생산운영과 공장관리</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./1306원가관리및경제성공학.html" class="pagination-link" aria-label="6. 원가관리 및 경제성공학">
+        <span class="nav-page-text"><span class="chapter-title">6. 원가관리 및 경제성공학</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -960,7 +1064,7 @@ ul.task-list li input[type="checkbox"] {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/yeonkyupark/pepc2e/edit/main/1305작업및생산성과측정과개선.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/yeonkyupark/pepc2e/edit/main/1305작업및생산성과측정과개선.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Professional Engineer Plant Control</p>
 </div>
