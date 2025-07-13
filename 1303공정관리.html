@@ -536,7 +536,17 @@ window.Quarto = {
    
   <ul>
   <li><a href="#생산계획수립" id="toc-생산계획수립" class="nav-link active" data-scroll-target="#생산계획수립">생산계획수립</a></li>
-  <li><a href="#공정설계" id="toc-공정설계" class="nav-link" data-scroll-target="#공정설계">공정설계</a></li>
+  <li><a href="#공정설계" id="toc-공정설계" class="nav-link" data-scroll-target="#공정설계">공정설계</a>
+  <ul>
+  <li><a href="#lob" id="toc-lob" class="nav-link" data-scroll-target="#lob">LOB</a>
+  <ul class="collapse">
+  <li><a href="#lob-주요-목적" id="toc-lob-주요-목적" class="nav-link" data-scroll-target="#lob-주요-목적">LOB 주요 목적</a></li>
+  <li><a href="#핵심-구성-요소" id="toc-핵심-구성-요소" class="nav-link" data-scroll-target="#핵심-구성-요소">핵심 구성 요소</a></li>
+  <li><a href="#주요-공식" id="toc-주요-공식" class="nav-link" data-scroll-target="#주요-공식">주요 공식</a></li>
+  <li><a href="#활용-예시" id="toc-활용-예시" class="nav-link" data-scroll-target="#활용-예시">활용 예시</a></li>
+  <li><a href="#장점" id="toc-장점" class="nav-link" data-scroll-target="#장점">장점</a></li>
+  </ul></li>
+  </ul></li>
   <li><a href="#작업계획수립" id="toc-작업계획수립" class="nav-link" data-scroll-target="#작업계획수립">작업계획수립</a></li>
   <li><a href="#표준작업관리" id="toc-표준작업관리" class="nav-link" data-scroll-target="#표준작업관리">표준작업관리</a>
   <ul>
@@ -595,6 +605,54 @@ window.Quarto = {
 </section>
 <section id="공정설계" class="level2">
 <h2 class="anchored" data-anchor-id="공정설계">공정설계</h2>
+<section id="lob" class="level3">
+<h3 class="anchored" data-anchor-id="lob">LOB</h3>
+<p>LOB, Line Of Balance는 반복적 작업의 흐름과 일정 균형을 시각적으로 표현하는 생산, 프로젝트 일정 관리 기법이다. X축은 시간, Y축은 작업 흐름 누적 유닛 수, 각 활도은 일정한 속도로 직선 형태로 나타나며, 계획과 실제를 도잇에 가시화할 수 있다.</p>
+<section id="lob-주요-목적" class="level4">
+<h4 class="anchored" data-anchor-id="lob-주요-목적">LOB 주요 목적</h4>
+<ul>
+<li>리소스 적절 배치: 반복 설비나 작업 인력을 균형 있게 계획</li>
+<li>병목 발견: 흐름 불일정으로 인한 지체나 과잉 생산 지점 확인</li>
+<li>진행 모니터링: 계획 vs.&nbsp;실제 차이를 지속적으로 비교</li>
+<li>향후 결과 예측: 일정 이탈 시 조기 대응 가능</li>
+</ul>
+</section>
+<section id="핵심-구성-요소" class="level4">
+<h4 class="anchored" data-anchor-id="핵심-구성-요소">핵심 구성 요소</h4>
+<ul>
+<li>유닛: 제품, 공정, 작업단위</li>
+<li>활동: 유닛별 반복 작업</li>
+<li>사이클 타임: 유닛 1개당 소요 시간</li>
+<li>속도: 단위 시간당 처리 가능한 유닛(사이클 역수)</li>
+<li>시작(t0) 및 종료 시간(tf): 활동별 일정 기준</li>
+</ul>
+</section>
+<section id="주요-공식" class="level4">
+<h4 class="anchored" data-anchor-id="주요-공식">주요 공식</h4>
+<p><strong>작업 속도(R) 계산</strong></p>
+<p><span class="math display">\[
+R = \frac{n-1}{t_f - t_0}
+\]</span> - n: 총 유닛 수 - t0: 첫 유닛 시작 시간 - tf: 마지막 유닛 완료 시간</p>
+<p><strong>필요 인력 수 계산</strong></p>
+<p><span class="math display">\[
+C = D \times R
+\]</span> - D: 유닛당 소요 시간 - R: 유닛 처리 속도</p>
+</section>
+<section id="활용-예시" class="level4">
+<h4 class="anchored" data-anchor-id="활용-예시">활용 예시</h4>
+<ul>
+<li>D 3일, R 2유닛/일 → C = 6명</li>
+<li>시작과 종료 기준으로 속도 균형, 인력 배치 적정성 판단</li>
+</ul>
+</section>
+<section id="장점" class="level4">
+<h4 class="anchored" data-anchor-id="장점">장점</h4>
+<ul>
+<li>데이터 기반 일정 및 리소스 최적화</li>
+<li>바쁨과 한산함을 한눈에 파악 가능</li>
+</ul>
+</section>
+</section>
 </section>
 <section id="작업계획수립" class="level2">
 <h2 class="anchored" data-anchor-id="작업계획수립">작업계획수립</h2>

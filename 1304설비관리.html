@@ -75,6 +75,35 @@ ul.task-list li input[type="checkbox"] {
 <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" crossorigin="anonymous"></script>
 <meta name="google-adsense-account" content="pub-8759553852956796">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -506,7 +535,15 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">목차</h2>
    
   <ul>
-  <li><a href="#설비계획-및-관리" id="toc-설비계획-및-관리" class="nav-link active" data-scroll-target="#설비계획-및-관리">설비계획 및 관리</a></li>
+  <li><a href="#설비계획-및-관리" id="toc-설비계획-및-관리" class="nav-link active" data-scroll-target="#설비계획-및-관리">설비계획 및 관리</a>
+  <ul>
+  <li><a href="#설비-6대-로스" id="toc-설비-6대-로스" class="nav-link" data-scroll-target="#설비-6대-로스">설비 6대 로스</a></li>
+  <li><a href="#설비종합효율" id="toc-설비종합효율" class="nav-link" data-scroll-target="#설비종합효율">설비종합효율</a></li>
+  <li><a href="#돌발로스와-만성로스" id="toc-돌발로스와-만성로스" class="nav-link" data-scroll-target="#돌발로스와-만성로스">돌발로스와 만성로스</a>
+  <ul class="collapse">
+  <li><a href="#개선-방안" id="toc-개선-방안" class="nav-link" data-scroll-target="#개선-방안">개선 방안</a></li>
+  </ul></li>
+  </ul></li>
   <li><a href="#자재취급-및-운반관리" id="toc-자재취급-및-운반관리" class="nav-link" data-scroll-target="#자재취급-및-운반관리">자재취급 및 운반관리</a></li>
   <li><a href="#환경관리-및-안전관리" id="toc-환경관리-및-안전관리" class="nav-link" data-scroll-target="#환경관리-및-안전관리">환경관리 및 안전관리</a></li>
   <li><a href="#시설-및-유틸리티관리" id="toc-시설-및-유틸리티관리" class="nav-link" data-scroll-target="#시설-및-유틸리티관리">시설 및 유틸리티관리</a></li>
@@ -544,6 +581,109 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="설비계획-및-관리" class="level2">
 <h2 class="anchored" data-anchor-id="설비계획-및-관리">설비계획 및 관리</h2>
+<section id="설비-6대-로스" class="level3">
+<h3 class="anchored" data-anchor-id="설비-6대-로스">설비 6대 로스</h3>
+<p>설비 6대 로스는 TPM OEE 체계에서 핵심적인 설비 손실 유형을 정의한 기준으로 Availability, Performance, Quality 3대 요인으로 세분화 된다.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 52%">
+<col style="width: 36%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>분류</th>
+<th>Loss 명칭</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>가동률(A)</strong></td>
+<td>① 장비 고장 (Equipment Failure / Unplanned Stops)</td>
+<td>예기치 않은 고장, 블록, 자재 부족 등으로 인한 장비 비가동</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>② 설비 전환/정비 (Setup &amp; Adjustments / Planned Stops)</td>
+<td>교체, 조정, 청소, 예지보전 등의 계획된 비가동</td>
+</tr>
+<tr class="odd">
+<td><strong>성능(P)</strong></td>
+<td>③ 소규모 정지 (Idling &amp; Minor Stops / Small Stops)</td>
+<td>짧은 정지 반복(센서 이상, 막힘 등)</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>④ 속도 저하 (Reduced Speed / Slow Cycles)</td>
+<td>이론 대비 사이클 타임 지연</td>
+</tr>
+<tr class="odd">
+<td><strong>품질(Q)</strong></td>
+<td>⑤ 공정 불량 (Process Defects / Production Rejects)</td>
+<td>정상 운전 중 발생하는 불량품</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>⑥ 초기 불량 (Reduced Yield / Startup Rejects)</td>
+<td>시작 또는 설비 전환 직후 발생하는 불량품</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="설비종합효율" class="level3">
+<h3 class="anchored" data-anchor-id="설비종합효율">설비종합효율</h3>
+<p>설비종합 효율은 다음과 같이 계산된다.</p>
+<p><span class="math display">\[
+OEE = Availability \times Performance \times Quality
+\]</span></p>
+<p>여기서 각 항목은 다음과 같이 계산된다.</p>
+<ul>
+<li>Availability = Run Time / Planned Production Time (장비고장 + 전환 포함)</li>
+<li>Performance = (Ideal Cycle Time x Produced Quantity) / Run Time</li>
+<li>Quality = Good Pars / Total Produced Parts</li>
+</ul>
+<p>OEE 100%는 무손실 생산을 의미하며, 현실에서는 60~85% 수준이 일반적이다.</p>
+</section>
+<section id="돌발로스와-만성로스" class="level3">
+<h3 class="anchored" data-anchor-id="돌발로스와-만성로스">돌발로스와 만성로스</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 7%">
+<col style="width: 46%">
+<col style="width: 46%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>구분</th>
+<th>돌발로스 (Sudden Loss)</th>
+<th>만성로스 (Chronic Loss)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>정의</td>
+<td>예기치 않게 발생하는 <strong>돌발 고장이나 문제</strong>로 인한 손실</td>
+<td><strong>지속적·반복적</strong>으로 발생하는 설비 성능저하로 인한 손실</td>
+</tr>
+<tr class="even">
+<td>발생 특성</td>
+<td><strong>갑작스럽고 예측 불가</strong>, 큰 영향</td>
+<td><strong>비교적 작지만 반복적</strong>, 누적되어 심각해짐</td>
+</tr>
+<tr class="odd">
+<td>예시</td>
+<td>전원장치 고장, 제어시스템 오류, 외부 충격</td>
+<td>부품 마모, 미미한 설계 결함, 반복되는 세팅 편차</td>
+</tr>
+</tbody>
+</table>
+<section id="개선-방안" class="level4">
+<h4 class="anchored" data-anchor-id="개선-방안">개선 방안</h4>
+<p><strong>돌발로스</strong> - 정기적 예방보전 → 고장 미리 차단 - 안전장치/경고시스템 추가 → 빠른 대응 - 작업자 훈련 및 대응 매뉴얼 정비 → 복구시간 단축</p>
+<p><strong>만성로스</strong> - 설비 설계 및 유지보수 개선 → 내구성 부품 적용, 결함 원인 제거 - 데이터 기반 분석 → 고장 트렌드 모니터링, MTBF/MTTR 지표 운용 - 정기 점검 및 부품 교체 → 부품 마모 주기에 따른 선제 교체 - 혁신적동 개선 활동 → 문제 원인 철저 분석(PM 분석), 설비 리디자인 반영</p>
+</section>
+</section>
 </section>
 <section id="자재취급-및-운반관리" class="level2">
 <h2 class="anchored" data-anchor-id="자재취급-및-운반관리">자재취급 및 운반관리</h2>
