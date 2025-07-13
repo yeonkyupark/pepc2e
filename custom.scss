@@ -119,6 +119,35 @@ h4 {
   }
 
 h2.anchored {
+	font-family: 'Noto Sans KR', sans-serif;
+	font-size: 64px;
+    font-weight: bold;
+	margin: 1em 0 0.5em 0;
+}
+
+h3.anchored {
+	font-family: 'Noto Sans KR', sans-serif;
+	font-size: 48px;
+    font-weight: bold;
+	margin: 1em 0 0.5em 0;
+}
+
+h4.anchored {
+	font-family: 'Noto Sans KR', sans-serif;
+	font-size: 32px;
+    font-weight: bold;
+	margin: 1em 0 0.5em 0;
+}
+
+h5.anchored {
+	font-family: 'Noto Sans KR', sans-serif;
+	font-size: 24px;
+    font-weight: bold;
+	margin: 1em 0 0.5em 0;
+}
+
+/*
+h2.anchored {
 	margin: 1em 0 0.5em 0;
 	font-weight: normal;
 	position: relative;
@@ -157,7 +186,7 @@ h4.anchored {
 	border-radius: 10px 0 0 0;
 	font-family: 'Noto Sans KR', sans-serif;
 }
-
+*/
 .hl {
     background-color: gray;
     color: white;
