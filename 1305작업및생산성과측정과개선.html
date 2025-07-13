@@ -546,6 +546,19 @@ window.Quarto = {
   <li><a href="#생산성-관리" id="toc-생산성-관리" class="nav-link" data-scroll-target="#생산성-관리">생산성 관리</a></li>
   <li><a href="#품질관리" id="toc-품질관리" class="nav-link" data-scroll-target="#품질관리">품질관리</a>
   <ul>
+  <li><a href="#시그마-cpcpk" id="toc-시그마-cpcpk" class="nav-link" data-scroll-target="#시그마-cpcpk">6시그마, Cp/Cpk</a>
+  <ul class="collapse">
+  <li><a href="#시그마" id="toc-시그마" class="nav-link" data-scroll-target="#시그마">6시그마</a></li>
+  <li><a href="#cppotential-capability" id="toc-cppotential-capability" class="nav-link" data-scroll-target="#cppotential-capability">Cp(Potential Capability)</a></li>
+  <li><a href="#cpkcapability-index-cosidering-centering" id="toc-cpkcapability-index-cosidering-centering" class="nav-link" data-scroll-target="#cpkcapability-index-cosidering-centering">Cpk(Capability Index cosidering centering)</a></li>
+  <li><a href="#cp-vs.-cpk" id="toc-cp-vs.-cpk" class="nav-link" data-scroll-target="#cp-vs.-cpk">Cp vs.&nbsp;Cpk</a></li>
+  <li><a href="#dpmo-vs.-ppm" id="toc-dpmo-vs.-ppm" class="nav-link" data-scroll-target="#dpmo-vs.-ppm">DPMO vs.&nbsp;PPM</a></li>
+  </ul></li>
+  <li><a href="#pl" id="toc-pl" class="nav-link" data-scroll-target="#pl">PL</a>
+  <ul class="collapse">
+  <li><a href="#사고-발생-시-주요-특성" id="toc-사고-발생-시-주요-특성" class="nav-link" data-scroll-target="#사고-발생-시-주요-특성">사고 발생 시 주요 특성</a></li>
+  <li><a href="#pl-사고-대처-절차-및-방안" id="toc-pl-사고-대처-절차-및-방안" class="nav-link" data-scroll-target="#pl-사고-대처-절차-및-방안">PL 사고 대처 절차 및 방안</a></li>
+  </ul></li>
   <li><a href="#t검정" id="toc-t검정" class="nav-link" data-scroll-target="#t검정">T검정</a></li>
   </ul></li>
   </ul>
@@ -693,6 +706,216 @@ window.Quarto = {
 </section>
 <section id="품질관리" class="level2">
 <h2 class="anchored" data-anchor-id="품질관리">품질관리</h2>
+<section id="시그마-cpcpk" class="level3">
+<h3 class="anchored" data-anchor-id="시그마-cpcpk">6시그마, Cp/Cpk</h3>
+<section id="시그마" class="level4">
+<h4 class="anchored" data-anchor-id="시그마">6시그마</h4>
+<p>6시그마는 공정변동을 ±3σ 수준(즉, 전체 ±6σ 범위) 내로 제한하여, 백만 기회당 3.4개의 불량(DPMO ≤ 3.4) 수준을 달성하는 최고 수준의 품질 관리 방법론이다.</p>
+</section>
+<section id="cppotential-capability" class="level4">
+<h4 class="anchored" data-anchor-id="cppotential-capability">Cp(Potential Capability)</h4>
+<p><strong>공식</strong></p>
+<p><span class="math display">\[
+C_p = \frac{USL-LSL}{6σ}
+\]</span></p>
+<p><strong>의미</strong></p>
+<ul>
+<li>공정의 이론적 역략을 보여주며, 공정이 완벽히 중앙에 있을 때 성능 지표</li>
+<li>Cp ≥ 1 → 공정 분산이 허용된 한계 내</li>
+<li>일반적으로 Cp ≥ 1.33 이상이면 높은 공정능력으로 판단</li>
+</ul>
+</section>
+<section id="cpkcapability-index-cosidering-centering" class="level4">
+<h4 class="anchored" data-anchor-id="cpkcapability-index-cosidering-centering">Cpk(Capability Index cosidering centering)</h4>
+<p><strong>공식</strong></p>
+<p><span class="math display">\[
+C_{pk} = min[\frac{USL-μ}{3σ}, \frac{μ-LSL}{3σ}]
+\]</span></p>
+<p><strong>의미</strong></p>
+<ul>
+<li>공정이 목표 중심에 위치한 정도를 반영</li>
+<li>Cp와 달리 공정 중심 편차를 포함하여 계산됩니다</li>
+<li>Cpk ≥ 1 → 공정이 규격 내에서 중심성 유지</li>
+<li>Cpk ≥ 1.33 이상이면 안정적 우수 공정으로 평가</li>
+</ul>
+</section>
+<section id="cp-vs.-cpk" class="level4">
+<h4 class="anchored" data-anchor-id="cp-vs.-cpk">Cp vs.&nbsp;Cpk</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 41%">
+<col style="width: 46%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>Cp</th>
+<th>Cpk</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>목적</td>
+<td>공정 분산 대비 가능성 평가</td>
+<td><strong>공정 중심과 분산 모두</strong> 평가</td>
+</tr>
+<tr class="even">
+<td>전제</td>
+<td>공정 중심이 정확히 중앙에 있음</td>
+<td>공정의 <strong>편향 고려</strong></td>
+</tr>
+<tr class="odd">
+<td>해석 시점</td>
+<td>이상적인 공정 성능 예측</td>
+<td>실제 공정 성능 평가</td>
+</tr>
+<tr class="even">
+<td>해석 결과</td>
+<td>Cp &gt; 1이면 가능성 있음</td>
+<td>Cpk &gt; 1이면 실제 적합</td>
+</tr>
+</tbody>
+</table>
+<p>Cp는 높으나 Cpk가 낮다면 공정이 편향되어 있을 가능성이 있다</p>
+<p>예시: 볼트 직경 공정</p>
+<ul>
+<li>USL=10.2, LSL=9.8, μ=10.1, σ=0.05</li>
+<li>Cp = (10.2–9.8)/(6×0.05)=1.33, → 분산은 OK</li>
+<li>Cpk = min[(10.2–10.1)/(3×0.05)=0.67, (10.1–9.8)/(3×0.05)=2.0] = 0.67 → 중심 편향 발생</li>
+</ul>
+</section>
+<section id="dpmo-vs.-ppm" class="level4">
+<h4 class="anchored" data-anchor-id="dpmo-vs.-ppm">DPMO vs.&nbsp;PPM</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 2%">
+<col style="width: 70%">
+<col style="width: 27%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>DPMO</th>
+<th>PPM</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>측정 대상</td>
+<td>단위당 발생 가능한 <strong>모든 결함 기회</strong> 포함</td>
+<td><strong>불량 단위</strong>에 집중</td>
+</tr>
+<tr class="even">
+<td>단위</td>
+<td>백만 기회 기준 결함 수</td>
+<td>백만 단위 기준 불량품 수</td>
+</tr>
+<tr class="odd">
+<td>사용 목적</td>
+<td>공정별 정밀 품질 관리(Six Sigma)</td>
+<td>공급자·제품 수준의 불량률 관리 및 벤치마킹</td>
+</tr>
+<tr class="even">
+<td>예시</td>
+<td>단위 1000개 × 기회 4 → 결함 7개 → DPMO = (7/4000)×1e6=1,750 </td>
+<td>단위 2000개 중 불량 400 → PPM = (400/2000)×1e6=200,000 </td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="pl" class="level3">
+<h3 class="anchored" data-anchor-id="pl">PL</h3>
+<p>PL(Product Liability, 제조물 책임) 사고란 제조, 설계, 마케팅 과정에서 결함이 있는 제품으로 인해 소비자의 신체 및 재산에 손해가 발생하는 경우를 말한다.</p>
+<p><strong>결함 유형</strong> - 설계 상 결함 (Design Defect) - 제조 상 결함 (Manufacturing Defect) - 표시, 경고 부족 (Failure to Warn / Marketing Defect)</p>
+<section id="사고-발생-시-주요-특성" class="level4">
+<h4 class="anchored" data-anchor-id="사고-발생-시-주요-특성">사고 발생 시 주요 특성</h4>
+<ul>
+<li><strong>엄격 책임</strong>(strict liability) 적용 가능: 설계나 주의 의무 위반이 입증되지 않아도 결함만 입증되면 책임이 발생</li>
+<li>결정 요건
+<ul>
+<li>제품 결함 존재</li>
+<li>정상 사용 상태</li>
+<li>손해 발생</li>
+<li>결함과 손해 간 인과관계</li>
+</ul></li>
+</ul>
+</section>
+<section id="pl-사고-대처-절차-및-방안" class="level4">
+<h4 class="anchored" data-anchor-id="pl-사고-대처-절차-및-방안">PL 사고 대처 절차 및 방안</h4>
+<p><strong>사고 대응 절차</strong></p>
+<ol type="1">
+<li>초기 대응
+<ul>
+<li>피해자 긴급 의료 조치 및 안정</li>
+<li>제품, 포장, 사용 설명서 보존</li>
+<li>사고 현장, 제품 상태 사진 및 샘플 확보</li>
+</ul></li>
+<li>신고 및 리콜 조치
+<ul>
+<li>소비자, 당국에 사고 보고</li>
+<li>리콜,회수, 수리, 파기 조치 시행</li>
+</ul></li>
+<li>원인 조사 및 내부 공유
+<ul>
+<li>FMEA, 8D 등 기법 활용</li>
+<li>기술, 품질, 법무, 마케팅 부서 협의체 구성</li>
+<li>제조 공정, 설계, 표시사검</li>
+</ul></li>
+<li>법적 대응 준비
+<ul>
+<li>법률 자문 및 제품책임보험(PL 보험) 활성화</li>
+<li>증거 관리 체계 구축</li>
+</ul></li>
+</ol>
+<p><strong>예방 중심 대책</strong></p>
+<ul>
+<li>사전 예방(PLP, Product Liablity Prevention)
+<ul>
+<li>설계, 제조품질 관리, 경고, 표시 정확성 확보</li>
+<li>국제, 국내 안전인증 획득</li>
+</ul></li>
+<li>사후 방어(PLD, Product Liability Defense)
+<ul>
+<li>사고 발생 시 증적(inspection 기록, 테스트 결과) 활용</li>
+<li>제조, 판매 책임 분배 기준 명확화</li>
+<li>PL 보험 및 법뮘 연계 대응 전략 수립</li>
+</ul></li>
+</ul>
+<p><strong>기업 관점 대응 체계 요약</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>단계</th>
+<th>주요 활동</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>예방(P)</td>
+<td>설계 검증, 생산 품질 시스템, 교육, 인증</td>
+</tr>
+<tr class="even">
+<td>감지(Monitor)</td>
+<td>실시간 모니터링, 고객 상담, 사고·불량 데이터 수집</td>
+</tr>
+<tr class="odd">
+<td>대응(R)</td>
+<td>의료 지원, 리콜/회수, 법률 대응, 고객 보상</td>
+</tr>
+<tr class="even">
+<td>분석(A)</td>
+<td>원인 분석(FMEA), 부서 협업, 매뉴얼 갱신</td>
+</tr>
+<tr class="odd">
+<td>보험·법률</td>
+<td>PL 보험 가입, 법률 자문, 제품 책임 구조 정비</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
 <section id="t검정" class="level3">
 <h3 class="anchored" data-anchor-id="t검정">T검정</h3>
 <p>T검정은 두 집단 평균 차이가 통계적으로 유의미한지를 판단하는 추론 통계 기법이다. 정규분포를 따르고 분산이 알려지지 않은 소규모 표본(n&lt;30) 상황에서 주로 사용된다.</p>
