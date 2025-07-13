@@ -75,6 +75,35 @@ ul.task-list li input[type="checkbox"] {
 <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" crossorigin="anonymous"></script>
 <meta name="google-adsense-account" content="pub-8759553852956796">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -519,7 +548,11 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#제품개발기술" id="toc-제품개발기술" class="nav-link" data-scroll-target="#제품개발기술">제품개발기술</a></li>
   <li><a href="#서비스운영관리" id="toc-서비스운영관리" class="nav-link" data-scroll-target="#서비스운영관리">서비스운영관리</a></li>
   <li><a href="#생산혁신기술" id="toc-생산혁신기술" class="nav-link" data-scroll-target="#생산혁신기술">생산혁신기술</a></li>
-  <li><a href="#공장관리에-관한-신기술-및-경향에-관한-사항" id="toc-공장관리에-관한-신기술-및-경향에-관한-사항" class="nav-link" data-scroll-target="#공장관리에-관한-신기술-및-경향에-관한-사항">공장관리에 관한 신기술 및 경향에 관한 사항</a></li>
+  <li><a href="#공장관리에-관한-신기술-및-경향에-관한-사항" id="toc-공장관리에-관한-신기술-및-경향에-관한-사항" class="nav-link" data-scroll-target="#공장관리에-관한-신기술-및-경향에-관한-사항">공장관리에 관한 신기술 및 경향에 관한 사항</a>
+  <ul>
+  <li><a href="#탄소중립carbon-neutrality" id="toc-탄소중립carbon-neutrality" class="nav-link" data-scroll-target="#탄소중립carbon-neutrality">탄소중립(Carbon Neutrality)</a></li>
+  <li><a href="#esg" id="toc-esg" class="nav-link" data-scroll-target="#esg">ESG</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/yeonkyupark/pepc2e/edit/main/1307생산지원기술및기타.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
     </div>
@@ -643,9 +676,78 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="공장관리에-관한-신기술-및-경향에-관한-사항" class="level2">
 <h2 class="anchored" data-anchor-id="공장관리에-관한-신기술-및-경향에-관한-사항">공장관리에 관한 신기술 및 경향에 관한 사항</h2>
+<section id="탄소중립carbon-neutrality" class="level3">
+<h3 class="anchored" data-anchor-id="탄소중립carbon-neutrality">탄소중립(Carbon Neutrality)</h3>
+<p>탄소중립이란 배출한 이산화탄소(<span class="math inline">\(CO_2\)</span>)만큼 동등하게 제거하여 순배출량을 제로로 만드는 상태를 의미한다.</p>
+<ul>
+<li>탄소중립: CO_2$ 배출량과 제거량이 균형을 이루는 상태</li>
+<li>넷제로(Net-Zero): 모든 온실가스(GHG) 배출량, 즉 탄소뿐 아니라 메탄, 산화질소 포함하여 순배출을 0으로 만드는 개념</li>
+</ul>
+<p><strong>달성 방법</strong> - 배출량 측정 (Scope 1 ~ 3 포함) - 감축 전략 실행(재생 에너지 전환, 효율 개선 등) - 전여 배출량 상쇄(산림 보호, 탄소배출권 구매 등)</p>
+<p><strong>유의사항</strong> - 그린워싱(Greenwashing) 위험 존재: 실제 감축 없이 상쇄만으로 탄소중립을 자처할 경우 법적 이슈 발생 가능 - 기업은 투명한 기준과 검증된 절차 기반으로 목표 설정 및 실행 결과를 공개</p>
+</section>
+<section id="esg" class="level3">
+<h3 class="anchored" data-anchor-id="esg">ESG</h3>
+<p>ESG는 환경(Environment), 사회(Social), 지배구조(Governance) 측면에서 기업 활동의 지속 가능성과 비재무적 성과를 평가하는 관리 및 투자 프레임워크다.</p>
+<p><strong>3가지 축</strong></p>
+<ul>
+<li>Environment: 온실가스 감축, 폐기물 관리, 생물 다양성 등</li>
+<li>Social: 노동 관행, 다양성, 인권, 커뮤니티 기여 등</li>
+<li>Governamce: 이사회 구성, 윤리경영, 내부통제, 주주 권리 등</li>
+</ul>
+<p><strong>목적 및 중요성</strong></p>
+<ul>
+<li>투자자 및 이해관계자가 리스크 및 기회를 종합적으로 평가</li>
+<li>뛰어난 ESG 성과를 보이는 기업은 재무 성과 및 직원 만족도 측면에서 유의한 우위</li>
+<li>기업에는 규제 대응, 브랜드 신뢰 확보, 우수 인재 유치 등 다방면 이점</li>
+</ul>
+<p><strong>탄소중립과 비교</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>탄소중립(Carbon Neutrality)</th>
+<th>ESG</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>포커스</strong></td>
+<td>온실가스 배출-흡수 <strong>균형 실현</strong></td>
+<td>환경·사회·지배구조에 대한 <strong>전반적 지속 관리</strong></td>
+</tr>
+<tr class="even">
+<td><strong>측정 주체</strong></td>
+<td>CO₂량 정량 측정 및 상쇄</td>
+<td>ESG 지수 및 리포팅 기준(예: SASB, GRI 등) 활용</td>
+</tr>
+<tr class="odd">
+<td><strong>세부 지표</strong></td>
+<td>Scope 1~3 배출량, 상쇄량, 순배출량 등</td>
+<td>기후 전략, 노동 환경, 윤리 수준, 다양성 지표 등</td>
+</tr>
+<tr class="even">
+<td><strong>적용 목적</strong></td>
+<td>기후 변화 대응 및 친환경 이미지 확보</td>
+<td>리스크 관리, 자본 유치, 사회적 책임 강화 등 광범위한 목적</td>
+</tr>
+<tr class="odd">
+<td><strong>관계</strong></td>
+<td>ESG 중 Environmental(E) 항목의 핵심 주제로 작용</td>
+<td>탄소중립은 ESG 전략의 일부이며, ESG는 훨씬 포괄적 개념</td>
+</tr>
+</tbody>
+</table>
+<p>탄소중립은 기후 변화 대응을 위한 구체적인 행동 지표로 <span class="math inline">\(CO_2\)</span> 순배출 0을 목표로 한다. ESG는 환경 뿐만 아니라 사회 및 기업 지배구조가지 포함하는 포괄적 지속 가능 경영 프레임워크이다.</p>
 <p><em><em>EOD</em></em></p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
