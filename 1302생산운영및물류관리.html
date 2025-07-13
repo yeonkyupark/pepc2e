@@ -517,7 +517,15 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#프로세스-진도관리" id="toc-프로세스-진도관리" class="nav-link" data-scroll-target="#프로세스-진도관리">프로세스 진도관리</a></li>
   <li><a href="#공급망-관리scm" id="toc-공급망-관리scm" class="nav-link" data-scroll-target="#공급망-관리scm">공급망 관리(SCM)</a></li>
-  <li><a href="#물류관리자재-및-재고관리" id="toc-물류관리자재-및-재고관리" class="nav-link" data-scroll-target="#물류관리자재-및-재고관리">물류관리(자재 및 재고관리)</a></li>
+  <li><a href="#물류관리자재-및-재고관리" id="toc-물류관리자재-및-재고관리" class="nav-link" data-scroll-target="#물류관리자재-및-재고관리">물류관리(자재 및 재고관리)</a>
+  <ul>
+  <li><a href="#채찍효과" id="toc-채찍효과" class="nav-link" data-scroll-target="#채찍효과">채찍효과</a>
+  <ul class="collapse">
+  <li><a href="#주요-원인" id="toc-주요-원인" class="nav-link" data-scroll-target="#주요-원인">주요 원인</a></li>
+  <li><a href="#주요-영향" id="toc-주요-영향" class="nav-link" data-scroll-target="#주요-영향">주요 영향</a></li>
+  <li><a href="#대응-방안" id="toc-대응-방안" class="nav-link" data-scroll-target="#대응-방안">대응 방안</a></li>
+  </ul></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/yeonkyupark/pepc2e/edit/main/1302생산운영및물류관리.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
     </div>
@@ -647,9 +655,95 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="물류관리자재-및-재고관리" class="level2">
 <h2 class="anchored" data-anchor-id="물류관리자재-및-재고관리">물류관리(자재 및 재고관리)</h2>
+<section id="채찍효과" class="level3">
+<h3 class="anchored" data-anchor-id="채찍효과">채찍효과</h3>
+<p>채찍효과(Bullwhip Effect)는 공급망에서 최종 소비자의 작은 수요변화가 상위 단계로 갈수록 점점 더 크게 증폭되는 현장을 의미한다. 마치 채찍 끝이 손목 움직임보다 훨씬 빠르고 크게 움직이는 것처럼 리테일 → 유통 → 제조로 데이터가 전달될수록 불확실성, 폭증이 커지게 된다.</p>
+<ul>
+<li>소비자 수요 변화가 100 → 110건으로 증가할 경우,
+<ul>
+<li>유통업체에서는 120건,</li>
+<li>도매업체에서는 150건</li>
+<li>제조사에서는 150건 주문 발생</li>
+</ul></li>
+</ul>
+<section id="주요-원인" class="level4">
+<h4 class="anchored" data-anchor-id="주요-원인">주요 원인</h4>
+<ol type="1">
+<li>수요 예측의 개별적 업데이트
+<ul>
+<li>각 계측이 안전 재고 확보를 위해 예측 재고를 더 주문</li>
+</ul></li>
+<li>발주 배치화
+<ul>
+<li>비용 절감을 위해 주문을 몰아서 하고, 이로 인해 수요 패터이 강조됨</li>
+</ul></li>
+<li>가격 변동 및 프로모션 영향
+<ul>
+<li>할인, 행사 시 대량 주문, 행사 후 수요 급감 → 왜곡된 신호 발생</li>
+</ul></li>
+<li>정보 공유 부족 미 리드타임 지연
+<ul>
+<li>상이한 시스템, 전산 지영ㄴ 등으로 인해 최신 수요 정보 공유가 늦어짐</li>
+</ul></li>
+<li>배급 게임
+<ul>
+<li>재고 부족 시 과다 주문 유도, 반환 등으로 왜곡된 자료 생성</li>
+</ul></li>
+</ol>
+</section>
+<section id="주요-영향" class="level4">
+<h4 class="anchored" data-anchor-id="주요-영향">주요 영향</h4>
+<ul>
+<li>과인 안전쟂고로 비용 증가, 창고 공간 부족, 자본 회전 저하</li>
+<li>잘못된 생산 계획으로 설비 비효율, 납기 지연, 고객 서비스 저하</li>
+<li>재고 과잉 또는 품절반복으로 수익 감소, 폐기 리스크, 직원 과인 채용, 해고 등 부정적 효과</li>
+</ul>
+</section>
+<section id="대응-방안" class="level4">
+<h4 class="anchored" data-anchor-id="대응-방안">대응 방안</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 36%">
+<col style="width: 63%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>전략</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>정보 공유 강화</strong></td>
+<td>POS 데이터 실시간 공유, EDI 시스템 도입 통해 투명성 확보</td>
+</tr>
+<tr class="even">
+<td><strong>발주 빈도 증가 &amp; 배치 최소화</strong></td>
+<td>소량·빈번 주문으로 변동성 완화</td>
+</tr>
+<tr class="odd">
+<td><strong>리드타임 단축</strong></td>
+<td>제조·물류 효율화로 정보 지연 감소</td>
+</tr>
+<tr class="even">
+<td><strong>가격 정책 안정화</strong></td>
+<td>할인·프로모션 구조 조정으로 부정적 주문 억제</td>
+</tr>
+<tr class="odd">
+<td><strong>계획 수요 중심 전환</strong></td>
+<td>JIT, VMI, 수요 기반 공급망(Demand-driven) 적용</td>
+</tr>
+<tr class="even">
+<td><strong>전략적 협업 및 파트너십 강화</strong></td>
+<td>공급망 참여자 간 협력 및 신뢰 구축</td>
+</tr>
+</tbody>
+</table>
 <p><em><em>EOD</em></em></p>
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->
