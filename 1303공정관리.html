@@ -602,14 +602,14 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="공정설계">공정설계</h2>
 <section id="lob" class="level3">
 <h3 class="anchored" data-anchor-id="lob">LOB</h3>
-<p>LOB, Line Of Balance는 반복적 작업의 흐름과 일정 균형을 시각적으로 표현하는 생산, 프로젝트 일정 관리 기법이다. X축은 시간, Y축은 작업 흐름 누적 유닛 수, 각 활도은 일정한 속도로 직선 형태로 나타나며, 계획과 실제를 도잇에 가시화할 수 있다.</p>
+<p><strong>LOB</strong>(Line Of Balance)는 <span class="hl">반복적 작업의 흐름과 일정 균형을 시각적으로 표현하는 생산, 프로젝트 일정 관리 기법</span>이다. X축은 시간, Y축은 작업 흐름 누적 유닛 수, 각 활동은 일정한 속도로 직선 형태로 나타나며, 계획과 실제를 동시에 가시화할 수 있다.</p>
 <section id="lob-주요-목적" class="level4">
 <h4 class="anchored" data-anchor-id="lob-주요-목적">LOB 주요 목적</h4>
 <ul>
-<li>리소스 적절 배치: 반복 설비나 작업 인력을 균형 있게 계획</li>
-<li>병목 발견: 흐름 불일정으로 인한 지체나 과잉 생산 지점 확인</li>
-<li>진행 모니터링: 계획 vs.&nbsp;실제 차이를 지속적으로 비교</li>
-<li>향후 결과 예측: 일정 이탈 시 조기 대응 가능</li>
+<li><strong>리소스 적절 배치</strong>: 반복 설비나 작업 인력을 균형 있게 계획</li>
+<li><strong>병목 발견</strong>: 흐름 불일정으로 인한 지체나 과잉 생산 지점 확인</li>
+<li><strong>진행 모니터링</strong>: 계획 vs.&nbsp;실제 차이를 지속적으로 비교</li>
+<li><strong>향후 결과 예측</strong>: 일정 이탈 시 조기 대응 가능</li>
 </ul>
 </section>
 <section id="핵심-구성-요소" class="level4">
@@ -627,11 +627,20 @@ window.Quarto = {
 <p><strong>작업 속도(R) 계산</strong></p>
 <p><span class="math display">\[
 R = \frac{n-1}{t_f - t_0}
-\]</span> - n: 총 유닛 수 - t0: 첫 유닛 시작 시간 - tf: 마지막 유닛 완료 시간</p>
+\]</span></p>
+<ul>
+<li>n: 총 유닛 수</li>
+<li>t0: 첫 유닛 시작 시간</li>
+<li>tf: 마지막 유닛 완료 시간</li>
+</ul>
 <p><strong>필요 인력 수 계산</strong></p>
 <p><span class="math display">\[
 C = D \times R
 \]</span> - D: 유닛당 소요 시간 - R: 유닛 처리 속도</p>
+<p><strong>라인편성효율</strong></p>
+<p><span class="math display">\[
+\frac{\text{공정시간 총 합}}{\text{공정 중 가장 긴(Max) 시간 × 공정수}} \times 100
+\]</span></p>
 </section>
 <section id="활용-예시" class="level4">
 <h4 class="anchored" data-anchor-id="활용-예시">활용 예시</h4>
@@ -656,7 +665,7 @@ C = D \times R
 <h2 class="anchored" data-anchor-id="표준작업관리">표준작업관리</h2>
 <section id="표준시간" class="level3">
 <h3 class="anchored" data-anchor-id="표준시간">표준시간</h3>
-<p><strong>표준시간</strong>이란 작업자가 정해진 작업 조건과 표준적인 작업 방법에 따라 정상적인 숙련도로 수행할 때 소요되는 시간이다. 이는 생산계획, 인력배치, 공정설계, 원가계산 등 제조업에 있어 다양한 영역에서 기준 지표로 활용된다.</p>
+<p><strong>표준시간</strong>이란 <span class="hl">작업자가 정해진 작업 조건과 표준적인 작업 방법에 따라 정상적인 숙련도로 수행할 때 소요되는 시간</span>이다. 이는 생산계획, 인력배치, 공정설계, 원가계산 등 제조업에 있어 다양한 영역에서 기준 지표로 활용된다.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 40%">
@@ -696,7 +705,8 @@ C = D \times R
 <p>표준시간은 다음과 같이 세 가지 시간 합으로 구성된다.</p>
 <p><span class="math display">\[
 \text{표준시간(ST)} = \text{순수작업시간(NT)} + \text{여유시간(AT)}
-\]</span> <span class="math display">\[
+\]</span></p>
+<p><span class="math display">\[
 ST = NT \times(1+\frac{여유율}{100})
 \]</span></p>
 <p>여기서 ST는 Standard Time, NT는 Normal Time, AT는 Allowance Time 약자이다.</p>
@@ -733,13 +743,11 @@ ST = 10 \times (1 + 0.15) = 11.5(분)
 </section>
 <section id="표준시간-계산-방법" class="level4">
 <h4 class="anchored" data-anchor-id="표준시간-계산-방법">표준시간 계산 방법</h4>
-<p><strong>외경법</strong> (External Method)</p>
-<p>순수 작업시간에 비율을 더해 계산하는 방식이다.</p>
+<p><strong>외경법</strong>(External Method), 순수 작업시간에 비율을 더해 계산하는 방식이다.</p>
 <p><span class="math display">\[
 ST = NT \times (1 + 여유율)
 \]</span></p>
-<p><strong>내경법</strong> (Internal Method)</p>
-<p>여유율 적용 시 전체 시간을 기준으로 계산하는 방식이다.</p>
+<p><strong>내경법</strong>(Internal Method), 여유율 적용 시 전체 시간을 기준으로 계산하는 방식이다.</p>
 <p><span class="math display">\[
 ST = \frac{NT}{1-여유율}
 \]</span></p>
@@ -788,9 +796,9 @@ ST = \frac{NT}{1-여유율}
 <p><strong>장점과 단점</strong></p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 4%">
-<col style="width: 48%">
-<col style="width: 48%">
+<col style="width: 10%">
+<col style="width: 45%">
+<col style="width: 45%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -829,37 +837,37 @@ ST = \frac{NT}{1-여유율}
 </section>
 <section id="여유시간" class="level3">
 <h3 class="anchored" data-anchor-id="여유시간">여유시간</h3>
-<p>여유시간은 크게 일반여유, 특수여유, 장려여유로 나눌 수 있다.</p>
+<p>여유시간은 크게 <strong>일반여유</strong>, <strong>특수여유</strong>, <strong>장려여유</strong>로 나눌 수 있다.</p>
 <section id="일반여유" class="level4">
 <h4 class="anchored" data-anchor-id="일반여유">일반여유</h4>
 <ul>
-<li>개인여유: 생리적 현상이나 개인적인 용무를 위한 시간</li>
-<li>피로여유: 작업으로 인한 피로 회복을 위한 시간으로 작업 강도, 작업 환경, 육체적 정신적 부담 등에 따라 상이</li>
-<li>작업여유: 작업 과정에서 발생하는 불가피한 지연(재료 준비, 기계 조작, 정리정돈 등)을 보상하기 위한 시간</li>
-<li>직장여유: 작업 환경 및 관리상 문제로 발생하는 지연(재료 대기, 설비 고장, 지시 대기 등)을 보상하기 위한 시간</li>
+<li><strong>개인여유</strong>: 생리적 현상이나 개인적인 용무를 위한 시간</li>
+<li><strong>피로여유</strong>: 작업으로 인한 피로 회복을 위한 시간으로 작업 강도, 작업 환경, 육체적 정신적 부담 등에 따라 상이</li>
+<li><strong>작업여유</strong>: 작업 과정에서 발생하는 불가피한 지연(재료 준비, 기계 조작, 정리정돈 등)을 보상하기 위한 시간</li>
+<li><strong>직장여유</strong>: 작업 환경 및 관리상 문제로 발생하는 지연(재료 대기, 설비 고장, 지시 대기 등)을 보상하기 위한 시간</li>
 </ul>
 </section>
 <section id="특수여유" class="level4">
 <h4 class="anchored" data-anchor-id="특수여유">특수여유</h4>
 <ul>
-<li>기계간섭 여유: 작업자 1명이 동일한 여러 대 기계를 담당할 때 발생하는 기계 간섭으로 인한여 생산량이 감소하는 것을 보상하는 여유</li>
-<li>조 여유: 작업자가 조를 이루어 작업을 실시할 때 발생하는 작업 지연을 보상하는 여유</li>
-<li>소로트 여유: 정상적인 페이스를 유지하기 곤란하게 되는 것을 보상하는 여유</li>
-<li>장사이클 여유: 사이클이 길기 때문에 작업 변동이나 복잡성을 보상하기 위한 여유</li>
-<li>기타 여유: 3~5% 부연</li>
+<li><strong>기계간섭 여유</strong>: 작업자 1명이 동일한 여러 대 기계를 담당할 때 발생하는 기계 간섭으로 인한여 생산량이 감소하는 것을 보상하는 여유</li>
+<li><strong>조 여유</strong>: 작업자가 조를 이루어 작업을 실시할 때 발생하는 작업 지연을 보상하는 여유</li>
+<li><strong>소로트 여유</strong>: 정상적인 페이스를 유지하기 곤란하게 되는 것을 보상하는 여유</li>
+<li><strong>장사이클 여유</strong>: 사이클이 길기 때문에 작업 변동이나 복잡성을 보상하기 위한 여유</li>
+<li><strong>기타 여유</strong>: 3~5% 부여여</li>
 </ul>
 </section>
 <section id="장려여유" class="level4">
 <h4 class="anchored" data-anchor-id="장려여유">장려여유</h4>
-<p>임금지급제도와 관련되는 정책적인 여유로서, 능률제도와 같은 장려제도 실시 시 할증급의 비율을 표준시간에 포함시키기 위한 계수</p>
+<p><span class="hl">임금지급제도와 관련되는 정책적인 여유</span>로서, 능률제도와 같은 장려제도 실시 시 할증급의 비율을 표준시간에 포함시키기 위한 계수</p>
 </section>
 </section>
 <section id="작업-표준과-표준작업" class="level3">
 <h3 class="anchored" data-anchor-id="작업-표준과-표준작업">작업 표준과 표준작업</h3>
 <section id="정의" class="level4">
 <h4 class="anchored" data-anchor-id="정의">정의</h4>
-<p>작업표준은 문서화된 공장, 공정 수준의 지침서로써 작업 절차, 순서, 조건, 기준 등을 관리자가 사전에 설정하는 것으로 품질, 안전, 효율 준수를 위한 기준 역할을 한다.</p>
-<p>표준작업은 현장 작업자가 항상 일정한 방식과 순서로 작업하도록 작업 순서, 인원 배치, 작업 방법을 작업자 눈높이에 정착시킨 실행 기준이다.</p>
+<p><strong>작업표준</strong>은 문서화된 공장, 공정 수준의 지침서로써 작업 절차, 순서, 조건, 기준 등을 관리자가 사전에 설정하는 것으로 품질, 안전, 효율 준수를 위한 기준 역할을 한다.</p>
+<p><strong>표준작업</strong>은 현장 작업자가 항상 일정한 방식과 순서로 작업하도록 작업 순서, 인원 배치, 작업 방법을 작업자 눈높이에 정착시킨 실행 기준이다.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 10%">
@@ -959,7 +967,7 @@ ST = \frac{NT}{1-여유율}
 </section>
 <section id="공정개선" class="level2">
 <h2 class="anchored" data-anchor-id="공정개선">공정개선</h2>
-<p><em><em>EOD</em></em></p>
+<p><em>_EOD_</em></p>
 
 
 </section>
