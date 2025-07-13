@@ -2671,7 +2671,7 @@
     "href": "1306원가관리및경제성공학.html#원가관리",
     "title": "6. 원가관리 및 경제성공학",
     "section": "원가관리",
-    "text": "원가관리",
+    "text": "원가관리\n\n원가 구조\n일반적으로 제조업체 원가는 다음과 같이 구성된다.\n\n재료비: 원⋅부재료비, 포장자재비 등 (30~70% 수준)\n노무비: 직접 작업자 급여 및 간접 작업자 인건비 (10~15% 수준)\n경비: 설비 감가상각, 유지 보수, 품질 관리, 일반 관리비 등 (15~20% 수준)\n\n\n\n원가 절감 방안\n다음과 같은 방법을 통해 원가를 절감할 수 있다.\n\n재료비 절감\n\n공급자 다변화 및 장기 계약을 통한 단가 협상\n자재 대체재 개발 또는 제품 설계 최적화로 Material Efficiency 향상\n재고 회전율 개선 및 DIO 감소1로 작업자본 축소\n\n\n자동화, 로봇 도입을 통해 작업자 효율 극대화\n에너지 효율화: LED, 설비유지보수 등을 통한 전기비 절감\n정비비 전략 개선: 예지 보전 도입, 설비 가동률을 올려 OEE 향상\n\n\n\n재공재료 및 재고 최적화\n\nLean, JIT 도입을 통해 불용 재고 감소\n디지털 트윈, 분석 기반 DIO 조절로 작업 자본 회전율 상승\n\n\n\n원가절감 전략 및 실행 흐름\n\n\n\n단계\n전략\n주요 활동\n\n\n\n\n① 원자재\n절감\n협상 및 대체재 개발\n\n\n② 생산\n효율화\n자동화·정비·에너지 절감\n\n\n③ 재고\n최적화\nLean, JIT, 디지털트윈\n\n\n④ 제품\n수익성 강화\n고기여도 품목 비중 확대\n\n\n⑤ 가격\n전략적 설정\n가치 기반 및 동적 가격",
     "crumbs": [
       "13. 참고자료",
       "<span class='chapter-number'>44</span>  <span class='chapter-title'>6. 원가관리 및 경제성공학</span>"
@@ -2694,6 +2694,17 @@
     "title": "6. 원가관리 및 경제성공학",
     "section": "경영공학(OR)",
     "text": "경영공학(OR)\nEOF",
+    "crumbs": [
+      "13. 참고자료",
+      "<span class='chapter-number'>44</span>  <span class='chapter-title'>6. 원가관리 및 경제성공학</span>"
+    ]
+  },
+  {
+    "objectID": "1306원가관리및경제성공학.html#footnotes",
+    "href": "1306원가관리및경제성공학.html#footnotes",
+    "title": "6. 원가관리 및 경제성공학",
+    "section": "",
+    "text": "“DIO 감소”는 일반적으로 “Days Inventory Outstanding (재고 회전일수) 감소”를 의미하며. DIO는 기업이 재고를 판매하는 데 걸리는 평균 일수를 나타내는 지표로, 감소는 재고 관리 효율성이 향상되었음을 시사한다. #### 노무비 및 간접비 절감↩︎",
     "crumbs": [
       "13. 참고자료",
       "<span class='chapter-number'>44</span>  <span class='chapter-title'>6. 원가관리 및 경제성공학</span>"
