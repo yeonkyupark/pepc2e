@@ -535,7 +535,13 @@ window.Quarto = {
     <h2 id="toc-title">목차</h2>
    
   <ul>
-  <li><a href="#작업방법-및-시간연구" id="toc-작업방법-및-시간연구" class="nav-link active" data-scroll-target="#작업방법-및-시간연구">작업방법 및 시간연구</a></li>
+  <li><a href="#작업방법-및-시간연구" id="toc-작업방법-및-시간연구" class="nav-link active" data-scroll-target="#작업방법-및-시간연구">작업방법 및 시간연구</a>
+  <ul>
+  <li><a href="#시간-측정-방법" id="toc-시간-측정-방법" class="nav-link" data-scroll-target="#시간-측정-방법">시간 측정 방법</a>
+  <ul class="collapse">
+  <li><a href="#워크샘플링" id="toc-워크샘플링" class="nav-link" data-scroll-target="#워크샘플링">워크샘플링</a></li>
+  </ul></li>
+  </ul></li>
   <li><a href="#프로세스-분석과-개선" id="toc-프로세스-분석과-개선" class="nav-link" data-scroll-target="#프로세스-분석과-개선">프로세스 분석과 개선</a></li>
   <li><a href="#생산성-관리" id="toc-생산성-관리" class="nav-link" data-scroll-target="#생산성-관리">생산성 관리</a></li>
   <li><a href="#품질관리" id="toc-품질관리" class="nav-link" data-scroll-target="#품질관리">품질관리</a>
@@ -575,6 +581,109 @@ window.Quarto = {
 
 <section id="작업방법-및-시간연구" class="level2">
 <h2 class="anchored" data-anchor-id="작업방법-및-시간연구">작업방법 및 시간연구</h2>
+<section id="시간-측정-방법" class="level3">
+<h3 class="anchored" data-anchor-id="시간-측정-방법">시간 측정 방법</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 49%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>방법</th>
+<th>특징</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>시간연구 (Time Study)</strong></td>
+<td>스톱워치를 이용하여 <strong>직접 작업시간 측정</strong> 후 여유율 적용</td>
+</tr>
+<tr class="even">
+<td><strong>작업 표준서</strong></td>
+<td>숙련된 작업자의 <strong>표준 동작을 분석</strong>하여 결정</td>
+</tr>
+<tr class="odd">
+<td><strong>PMTS (Predetermined Motion Time System)</strong></td>
+<td>동작요소별로 사전 정의된 시간값을 합산 (예: MTM, MODAPTS)</td>
+</tr>
+<tr class="even">
+<td><strong>워크 샘플링</strong></td>
+<td>반복 작업이 아닌 경우에 <strong>확률적 추정 방식</strong> 활용</td>
+</tr>
+<tr class="odd">
+<td><strong>과거 데이터 분석</strong></td>
+<td>IoT, 센서 기반 데이터로 작업 시간 통계 추정 (스마트팩토리 활용 가능)</td>
+</tr>
+</tbody>
+</table>
+<section id="워크샘플링" class="level4">
+<h4 class="anchored" data-anchor-id="워크샘플링">워크샘플링</h4>
+<p>워크샘플링은 작업자 또는 설비 상태를 램덤한 시점에 다수 관측하여 전체 시간 중 각 활동이 차지하는 비율을 추정하는 통계적 기법이다. 목적은 표준시간 뿐만 아니라 비작업 시간, 병목 공정, 휴식 및 지연 패턴 등을 정량적으로 분석한다.</p>
+<p><strong>적용단계</strong></p>
+<ol type="1">
+<li>목표 정의 및 활동 분류
+<ul>
+<li>생산, 설비 셋업, 대기, 휴식 등 주요 활동 항목을 정의</li>
+</ul></li>
+<li>표본 수와 관측 시점을 결정
+<ul>
+<li>통계적 정확도(신뢰도, 오차한계)를 고려하여 관측횟수를 결정</li>
+</ul></li>
+<li>랜덤 추출 관측
+<ul>
+<li>무작위 시점에 작업자 또는 설비 상태를 기록</li>
+</ul></li>
+<li>데이터 수집 및 분석
+<ul>
+<li>각 활동 발생 횟수 / 총 관측 횟수 = 활동 비율</li>
+<li>가동 60%, 셋업 15%, 대기 25% 등</li>
+</ul></li>
+<li>정미시간 및 표준시간 계산
+<ul>
+<li>정미시간 = <span class="math inline">\(\frac{\text{(총 관측시간} \times \text{각 활동 비율)}}{생산수량} \times \text{수행도 보정}\)</span></li>
+<li>표준시간 = 정미시간 <span class="math inline">\(\times\)</span> (1+여유율)</li>
+</ul></li>
+</ol>
+<p><strong>장점과 단점</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 11%">
+<col style="width: 53%">
+<col style="width: 34%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>장점</th>
+<th>단점</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>적용범위</td>
+<td><strong>비반복적, 긴 주기 작업</strong>에 적합</td>
+<td>짧고 반복적인 작업에는 부적합</td>
+</tr>
+<tr class="even">
+<td>관측 효율성</td>
+<td><strong>한 번에 다수 대상 관측 가능</strong>, 비용 절감</td>
+<td>요소별 상세 시간 분석 불가</td>
+</tr>
+<tr class="odd">
+<td>정확도</td>
+<td><strong>신뢰도 있는 비율 도출</strong>, 통계적 타당성 확보</td>
+<td>많은 샘플 필요, 설문 단계 복잡</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
 </section>
 <section id="프로세스-분석과-개선" class="level2">
 <h2 class="anchored" data-anchor-id="프로세스-분석과-개선">프로세스 분석과 개선</h2>
