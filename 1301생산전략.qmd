@@ -14,7 +14,7 @@ keyworks: 경쟁우위 생산전략, 생산구조와 방식(Layout), 구매와 �
 
 **QFD**(Quality Function Deployment)는 <span class='hl'>고객 요구사항(VOC)을 정량적으로 기술 요소로 변환하고 제품, 부품, 공정 수준까지 체계적으로 전개하는 품질 기획 방법</span>이다. 즉, 제품 개발 과정에서 고객이 진정으로 원하는 품질 요소를 최우선 설계 목표로 삼기 위한 고객 중심 설계 도구이다.
 
-![](https://hbr.org/resources/images/article_assets/hbr/8805/88307_K.gif)  
+![https://hbr.org/1988/05/the-house-of-quality](https://hbr.org/resources/images/article_assets/hbr/8805/88307_K.gif)  
 
 QFD를 대표하는 매트릭스로 HOQ(House of Quality)는 다음과 같이 구성된다.
 
@@ -46,6 +46,7 @@ QFD를 대표하는 매트릭스로 HOQ(House of Quality)는 다음과 같이 �
 | 성장기    | 수요 증가 대응, 품질 안정화   | - 중량 생산체계 진입<br>- 반자동화 및 설비 확충<br>- 품질관리 체계화(SPC 등)<br>- 납기 단축 중심 생산계획 (TOC 등)     |
 | 성숙기    | 생산성 극대화, 원가 경쟁력 확보 | - 대량 생산체계 확립<br>- 고도화된 자동화 및 표준작업 정착<br>- Lean 생산방식 도입<br>- TPM, 6시그마 등 품질혁신 활동 강화 |
 | 쇠퇴기    | 재고 최소화, 유연한 전환 준비  | - 수요 기반 주문생산 전환<br>- 멀티모델 셀 생산 도입<br>- 설비 및 인력 축소 운용<br>- 라인 전환 및 대체제품 준비 전략 병행    |
+: {tbl-colwidths="[20,20,60]"}
 
 PLC에 따른 생산전략 수립은 제품 중심 사고를 넘어 생산 시스템 설계와 전사적 운영 최적화 관점에서 접근해야 한다.
 
