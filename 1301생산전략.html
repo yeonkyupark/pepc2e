@@ -549,6 +549,8 @@ window.Quarto = {
   <li><a href="#해외-공장-입지-시-고려사항" id="toc-해외-공장-입지-시-고려사항" class="nav-link" data-scroll-target="#해외-공장-입지-시-고려사항">해외 공장 입지 시 고려사항</a></li>
   <li><a href="#생산구조와-방식layout" id="toc-생산구조와-방식layout" class="nav-link" data-scroll-target="#생산구조와-방식layout">생산구조와 방식(Layout)</a>
   <ul>
+  <li><a href="#유연생산시스템fms" id="toc-유연생산시스템fms" class="nav-link" data-scroll-target="#유연생산시스템fms">유연생산시스템(FMS)</a></li>
+  <li><a href="#택트-타임-생산방식" id="toc-택트-타임-생산방식" class="nav-link" data-scroll-target="#택트-타임-생산방식">택트 타임 생산방식</a></li>
   <li><a href="#tsp-vs.-lean" id="toc-tsp-vs.-lean" class="nav-link" data-scroll-target="#tsp-vs.-lean">TSP vs.&nbsp;Lean</a>
   <ul class="collapse">
   <li><a href="#정의" id="toc-정의" class="nav-link" data-scroll-target="#정의">정의</a></li>
@@ -570,21 +572,7 @@ window.Quarto = {
   <li><a href="#인력과-직무설계" id="toc-인력과-직무설계" class="nav-link" data-scroll-target="#인력과-직무설계">인력과 직무설계</a></li>
   <li><a href="#사업환경분석" id="toc-사업환경분석" class="nav-link" data-scroll-target="#사업환경분석">사업환경분석</a>
   <ul>
-  <li><a href="#ve" id="toc-ve" class="nav-link" data-scroll-target="#ve">VE</a>
-  <ul class="collapse">
-  <li><a href="#ve-절차" id="toc-ve-절차" class="nav-link" data-scroll-target="#ve-절차">VE 절차</a></li>
-  <li><a href="#가치공학-기본-원칙" id="toc-가치공학-기본-원칙" class="nav-link" data-scroll-target="#가치공학-기본-원칙">가치공학 기본 원칙</a></li>
-  </ul></li>
   <li><a href="#가치흐름도" id="toc-가치흐름도" class="nav-link" data-scroll-target="#가치흐름도">가치흐름도</a></li>
-  </ul></li>
-  <li><a href="#생산-시스템" id="toc-생산-시스템" class="nav-link" data-scroll-target="#생산-시스템">생산 시스템</a>
-  <ul>
-  <li><a href="#유연생산시스템fms" id="toc-유연생산시스템fms" class="nav-link" data-scroll-target="#유연생산시스템fms">유연생산시스템(FMS)</a>
-  <ul class="collapse">
-  <li><a href="#주요-구성-요소" id="toc-주요-구성-요소" class="nav-link" data-scroll-target="#주요-구성-요소">주요 구성 요소</a></li>
-  <li><a href="#도입-시-장점과-단점" id="toc-도입-시-장점과-단점" class="nav-link" data-scroll-target="#도입-시-장점과-단점">도입 시 장점과 단점</a></li>
-  </ul></li>
-  <li><a href="#택트-타임-생산방식" id="toc-택트-타임-생산방식" class="nav-link" data-scroll-target="#택트-타임-생산방식">택트 타임 생산방식</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/yeonkyupark/pepc2e/edit/main/1301생산전략.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
@@ -623,7 +611,8 @@ window.Quarto = {
 <h3 class="anchored" data-anchor-id="제품-개발">제품 개발</h3>
 <section id="qfd" class="level4">
 <h4 class="anchored" data-anchor-id="qfd">QFD</h4>
-<p><strong>QFD</strong>(Quality Function Deployment)는 <strong>고객 요구사항(VOC)을 정량적으로 기술 요소로 변환</strong>하고 <strong>제품, 부품, 공정 수준까지 체계적으로 전개하는 품질 기획 방법</strong>이다. 즉, 제품 개발 과정에서 고객이 진정으로 원하는 품질 요소를 최우선 설계 목표로 삼기 위한 고객 중심 설계 도구이다.</p>
+<p><strong>QFD</strong>(Quality Function Deployment)는 <span class="hl">고객 요구사항(VOC)을 정량적으로 기술 요소로 변환하고 제품, 부품, 공정 수준까지 체계적으로 전개하는 품질 기획 방법</span>이다. 즉, 제품 개발 과정에서 고객이 진정으로 원하는 품질 요소를 최우선 설계 목표로 삼기 위한 고객 중심 설계 도구이다.</p>
+<p><img src="https://hbr.org/resources/images/article_assets/hbr/8805/88307_K.gif" class="img-fluid"></p>
 <p>QFD를 대표하는 매트릭스로 HOQ(House of Quality)는 다음과 같이 구성된다.</p>
 <ol type="1">
 <li>WHATs, 고객 요구사항으로 고객이 원하는 것</li>
@@ -633,6 +622,12 @@ window.Quarto = {
 <li>기술 상관관계(지붕), 기술 요소 간 상호 지지 및 충돌 파악</li>
 <li>경쟁 벤치마킹, 경쟁 제품과 비교 분석</li>
 </ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://hbr.org/resources/images/article_assets/hbr/8805/88307_J.gif" class="img-fluid figure-img"></p>
+<figcaption>https://hbr.org/1988/05/the-house-of-quality</figcaption>
+</figure>
+</div>
 <p><strong>QFD 4단계</strong></p>
 <table class="caption-top table">
 <colgroup>
@@ -668,60 +663,90 @@ window.Quarto = {
 </section>
 <section id="plc-단계에-따른-생산-전략" class="level3">
 <h3 class="anchored" data-anchor-id="plc-단계에-따른-생산-전략">PLC 단계에 따른 생산 전략</h3>
+<p>제품 수명주기(PLC, Product Life Cycle)는 도입기, 성장기, 성숙기, 쇠퇴기 4 단계로 구분되며, 각 단계에서 시장 환경과 생산 조건이 달라지므로 생산 전략도 이에 맞춰 달라져야 한다. 아래는 단계별 주요 목표와 생산 전략 요약이다.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 5%">
-<col style="width: 25%">
-<col style="width: 68%">
+<col style="width: 16%">
+<col style="width: 77%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>단계</th>
-<th>목표</th>
-<th>전략 요소</th>
+<th>PLC 단계</th>
+<th>주요 목표</th>
+<th>생산 전략</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>도입</td>
-<td>인지도 확보, 시장 진입</td>
-<td>체험 제공, 가격 전략, 유통 확보, 광고 집중</td>
+<td>도입기</td>
+<td>초기 수요 대응, 시장 검증</td>
+<td>- 소량 다품종 생산, 유연한 생산체계<br>- 수작업 중심 공정<br>- 엔지니어링 중심 운용<br>- 조기 품질 확보(QbD 접근)</td>
 </tr>
 <tr class="even">
-<td>성장</td>
-<td>시장 점유율 확대</td>
-<td>제품 개선, 서비스 강화, 유통 확장, 광고·브랜딩 유지</td>
+<td>성장기</td>
+<td>수요 증가 대응, 품질 안정화</td>
+<td>- 중량 생산체계 진입<br>- 반자동화 및 설비 확충<br>- 품질관리 체계화(SPC 등)<br>- 납기 단축 중심 생산계획 (TOC 등)</td>
 </tr>
 <tr class="odd">
-<td>성숙</td>
-<td>수익 극대화 및 차별화</td>
-<td>제품/서비스 차별화, 비용 효율화, 프로모션 강화, 신시장 개척</td>
+<td>성숙기</td>
+<td>생산성 극대화, 원가 경쟁력 확보</td>
+<td>- 대량 생산체계 확립<br>- 고도화된 자동화 및 표준작업 정착<br>- Lean 생산방식 도입<br>- TPM, 6시그마 등 품질혁신 활동 강화</td>
 </tr>
 <tr class="even">
-<td>쇠퇴</td>
-<td>비용 관리, 정리 전략</td>
-<td>단종/가격 인하, 광고·유통 축소, 니치 유지, 자원 재배치</td>
+<td>쇠퇴기</td>
+<td>재고 최소화, 유연한 전환 준비</td>
+<td>- 수요 기반 주문생산 전환<br>- 멀티모델 셀 생산 도입<br>- 설비 및 인력 축소 운용<br>- 라인 전환 및 대체제품 준비 전략 병행</td>
 </tr>
 </tbody>
 </table>
+<p>PLC에 따른 생산전략 수립은 제품 중심 사고를 넘어 생산 시스템 설계와 전사적 운영 최적화 관점에서 접근해야 한다.</p>
 </section>
 <section id="강건설계-다구찌-공학" class="level3">
 <h3 class="anchored" data-anchor-id="강건설계-다구찌-공학">강건설계 (다구찌 공학)</h3>
-<p>다구찌 공학은 품질 손실을 최소화하고 환경 변화에 강인한(Robust) 제품 및 공정을 설계하기 위한 통계 기반 품질공학 방법론이다. 다구찌 공학 목표는 포르라인 품질관리로, 즉 제품이 설계 단계에서부터 환경 변화나 변동에 덜 민감하도록 설계하는 것이다.</p>
+<p><strong>다구찌 공학</strong>은 <span class="hl">품질 손실을 최소화하고 환경 변화에 강인한(Robust) 제품 및 공정을 설계하기 위한 통계 기반 품질공학 방법론</span>이다. 다구찌 공학 목표는 제품이 설계 단계에서부터 환경 변화나 변동에 덜 민감하도록 설계하는 것이다.</p>
 <section id="핵심-개념" class="level4">
 <h4 class="anchored" data-anchor-id="핵심-개념">핵심 개념</h4>
-<p><strong>손실함수</strong> (Loss Function) 품질 특성이 목표값(T)을 벗어날 때마다 사회적 손실이 발생하다는 것으로 이를 모델화 것이다.</p>
+<p><strong>손실함수</strong> (Loss Function)</p>
+<p>품질 특성이 목표값(T)을 벗어날 때마다 사회적 손실이 발생하다는 것으로 이를 모델화 것이다.</p>
 <p><span class="math display">\[
 L = k(y-T)^2
-\]</span> 여기서 y는 실제 값이고 k는 비용 계수이다.</p>
-<p><strong>강건 설계</strong> (Robust Design) 노이즈라 칭하는 오염 변수에도 강인한 설계를 목표로 한다. 통제요인을 조정하여 성능변동이 최소화 되도록 설계한다.</p>
-<p><strong>다구찌 3단계 프로세스</strong> 1. 시스템 설계: 개념 설계 단계로 품질 달성을 위한 시스템 개요 수립 2. 파라미터 설계: 실험설계(DOE, Design of Experiment)를 통해 최적 수준 결정, 통제 및 노이즈 요인 모두 고려 3. 허용오차 설계: 파라미터 설계 단계 후 필요 시 허용 오차를 조정함으로써 비용-품질 최적 균형을 달성</p>
-<p><strong>실험 설계</strong> (DOE) 기법 직교배열 사용을 통해 실험 횟수를 줄이면서도 주효과와 주요 노이즈 상호 작용 분석을 한다. 통제 요인과 노이즈 요인 모두 포함된 내부, 외부 배열을 구성하여 실제 사용 환경까지 고려한 분석을 지원한다.</p>
-<p><strong>신호대비 잡음비</strong> 강건성 평가는 평균대비 변동성을 기반으로 하는 S/R Ratio로 측정한다.</p>
+\]</span></p>
+<p>여기서 y는 실제 값이고 k는 비용 계수이다.</p>
+<p><strong>강건 설계</strong> (Robust Design)</p>
+<p>노이즈라 칭하는 오염 변수에도 강인한 설계를 목표로 한다. 통제요인을 조정하여 성능변동이 최소화 되도록 설계한다.</p>
+<p><strong>다구찌 3단계 프로세스</strong></p>
+<ol type="1">
+<li><strong>시스템</strong> 설계
+<ul>
+<li>개념 설계 단계로 품질 달성을 위한 시스템 개요 수립<br>
+</li>
+<li>제품 강도를 높이기 위해 이중 사출 방식 도입, 외관 품질 확보를 위해 광택 재질 사용</li>
+</ul></li>
+<li><strong>파라미터</strong> 설계
+<ul>
+<li>실험설계(DOE, Design of Experiment)를 통해 최적 수준 결정, 통제 및 노이즈 요인 모두 고려<br>
+</li>
+<li>치수 안정성 확보를 위한 품질 특성 설정, 사출 압력, 금형 온도, 냉각 시간 등을 변수로 DOE 수행, 최적 조건 선택<br>
+</li>
+</ul></li>
+<li><strong>허용오차</strong> 설계
+<ul>
+<li>파라미터 설계 단계 후 필요 시 허용 오차를 조정함으로써 비용-품질 최적 균형을 달성<br>
+</li>
+<li>금형온도는 ±2℃, 사출 압력은 ±5bar로 공정 능력(Cp, Cpk) 분석 후 공차 설정</li>
+</ul></li>
+</ol>
+<p><strong>실험 설계</strong> (DOE) 기법</p>
+<p>직교배열 사용을 통해 실험 횟수를 줄이면서도 주효과와 주요 노이즈 상호 작용 분석을 한다. 통제 요인과 노이즈 요인 모두 포함된 내부, 외부 배열을 구성하여 실제 사용 환경까지 고려한 분석을 지원한다.</p>
+<p><strong>신호대비 잡음비</strong></p>
+<p>강건성 평가는 평균대비 변동성을 기반으로 하는 S/R Ratio로 측정한다.</p>
 <p><span class="math display">\[
 S/N = 10log\frac{Signal^2}{Noise^2}
-\]</span> 이 값이 클수록 변동성이 작고, 목표 성능에 안정적으로 근접하게 된다.</p>
-<p><strong>통계 분석</strong> DOE 결과에 대해 분산분석을 적용하여 각 통제요인의 영향력 기여도를 파악하고 최적 조건을 결정한다.</p>
+\]</span></p>
+<p>이 값이 클수록 변동성이 작고, 목표 성능에 안정적으로 근접하게 된다.</p>
+<p><strong>통계 분석</strong></p>
+<p>DOE 결과에 대해 분산분석을 적용하여 각 통제요인의 영향력 기여도를 파악하고 최적 조건을 결정한다.</p>
 <p><strong>장점과 단점</strong></p>
 <table class="caption-top table">
 <colgroup>
@@ -901,6 +926,83 @@ S/N = 10log\frac{Signal^2}{Noise^2}
 </section>
 <section id="생산구조와-방식layout" class="level2">
 <h2 class="anchored" data-anchor-id="생산구조와-방식layout">생산구조와 방식(Layout)</h2>
+<section id="유연생산시스템fms" class="level3">
+<h3 class="anchored" data-anchor-id="유연생산시스템fms">유연생산시스템(FMS)</h3>
+<p>FMS는 CNC 기계, 로봇, 자동화 물류 시스템 그리고 중앙 제어 컴퓨터가 결합되어 제품 종류, 공정순서, 생산량 변화에 자율적으로 대응 가능한 스마트 제조 시스템이다.</p>
+<p>유연성은 크게 기계유연성과 경로유연성으로 나눌 수 있다.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 35%">
+<col style="width: 64%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>구분</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>기계 유연성</strong> (Machine Flexibility)</td>
+<td>동일 공정 수행 가능한 다중 기계 보유, 설비 활용 최적화 가능</td>
+</tr>
+<tr class="even">
+<td><strong>경로 유연성</strong> (Routing Flexibility)</td>
+<td>동일 제품 생산 시 공정 순서 변경, 복수 경로 지원으로 <strong>보완성·확장성 확보</strong></td>
+</tr>
+</tbody>
+</table>
+<p>FMS는 다음과 같은 구성 요소가 있다.</p>
+<ul>
+<li>작업 기계: 보통 CNC 및 로봇 셀</li>
+<li>물류 시스템: AGV, 컨베이어 등 자동화 자재 이송장치</li>
+<li>중앙 제어 컴퓨터: 작업 스케줄링, 기계-물류 연계, 최적 경로 계산</li>
+</ul>
+<p><strong>도입 시 장점과 단점</strong></p>
+<p><strong>장점</strong></p>
+<ul>
+<li>제품 전환 시 재구성 최소화, 리드타임 단축</li>
+<li>다양한 제품을 소량부터 대량까지 유연 대응 가능</li>
+<li>자동화로 품질 안정성 향상, 불량 감소</li>
+<li>재고 감소, 생산성 증대, 낭비 최소화</li>
+</ul>
+<p><strong>단점</strong></p>
+<ul>
+<li>초기 투자 비용 및 설치 난이도 높음</li>
+<li>숙련된 인력 및 시스템 운영 복잡성 요구</li>
+</ul>
+<p>FMS는 최근 IIoT, 로봇, 엣지 컴퓨팅 등과 함께 고도화가 진행되고 있으며 MES와 연계하여 생산을 실시간 모티너링, 스케쥴링하는 등 최적화를 구현하고 있다.</p>
+<p>FMS는 다품종, 소량생산 시대에 대응하기 위한 핵심 생산방식 중 하나며, 스마트팩토리 기본 단위로서 CNC+로봇+자동물류+지능제어를 통합한 시스템이다. 초기 비용과 전문인력 요구는 있으나 유연성 확보, 낭비 최소화, 리드타임 단축, 품질 안정성 향상 등 장기적 효과를 기대할 수 있다.</p>
+</section>
+<section id="택트-타임-생산방식" class="level3">
+<h3 class="anchored" data-anchor-id="택트-타임-생산방식">택트 타임 생산방식</h3>
+<p>택트 타임 생산방식은 고객 수요에 따라 제품이 일정한 리듬으로 생산되도록 운영 속도를 맞추는 방식이다.</p>
+<p><span class="math display">\[
+\text{택트 타임} = \frac{\text{사용 가능 생산 시간}}{\text{고객 수요}}
+\]</span></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 2%">
+<col style="width: 97%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>장점</strong></td>
+<td>- <strong>병목구간 즉시 식별</strong>: 지연 구간 빠르게 파악 가능 <br>- <strong>실시간 라인 생산성 파악</strong>: 비가동 지점·저성능 스테이션 모니터링 용이 <br>- <strong>낭비 제거 집중</strong>: 비부가가치 작업 최소화, 재고·초과생산 억제 <br>- <strong>흐름 균형 유지</strong>: 공정 라인 균형 유지 및 주기적 흐름 확보</td>
+</tr>
+<tr class="even">
+<td><strong>단점</strong></td>
+<td>- <strong>병렬 공정 정지</strong>: 한 스테이션이 지연되면 전체 라인 운행 중단 <br>- <strong>작업자·설비 부담 증가</strong>: 작업 속도 강요로 인한 부상 및 설비 고장 위험 <br>- <strong>예측 불가능 변수 반영 부족</strong>: 휴식, 리셋 기간 등 비가동 요소 반영 어려움 <br>- <strong>수요 변화 시 재구성 필요</strong>: 수요 증가 또는 변동 시 라인 재배치 등 설계 변경 필요</td>
+</tr>
+</tbody>
+</table>
+</section>
 <section id="tsp-vs.-lean" class="level3">
 <h3 class="anchored" data-anchor-id="tsp-vs.-lean">TSP vs.&nbsp;Lean</h3>
 <section id="정의" class="level4">
@@ -910,14 +1012,21 @@ S/N = 10log\frac{Signal^2}{Noise^2}
 <li>Toyota에서 1940 ~ 70년대에 개발한 자체적 제조 시스템</li>
 <li>핵심원칙
 <ul>
-<li>JIT(Just In Time), 필요한 것을 필요한 시간에 필요한 수량만</li>
-<li>Jidoka, 자동화에 인간 감시를 더해 품질 보증</li>
+<li><strong>JIT</strong>(Just In Time), 필요한 것을 필요한 시간에 필요한 수량만</li>
+<li><strong>Jidoka</strong>(인변자동화), 자동화에 인간 감시를 더해 품질 보증</li>
 </ul></li>
 </ul>
 <p><strong>Lean</strong></p>
 <ul>
 <li>1980년대, TPS를 중심으로 확산된 보편적 개선 시스템</li>
-<li>가치 기준, 흐름, Pull 방식, 완벽 추구 5원칙 기반</li>
+<li>5원칙
+<ul>
+<li>가치: 고객 관점에서 무엇이 진정한 가치인지를 정의</li>
+<li>가치 흐름: 제품이나 서비스 전 과정을 분석, 가치를 창출하지 않는 단계(낭비)를 식별하고 제거</li>
+<li>흐름: 가치가 중단 없이 연속적으로 흐를 수 있도록 생산 프로세스 설계</li>
+<li>풀(Pull) 시스템: 수요에 따라 필요하 만큼만 생산하는 방식</li>
+<li>완벽: 지속적인 개선(Kaizen)을 통해 완벽을 추구</li>
+</ul></li>
 </ul>
 </section>
 <section id="핵심-철학-비교" class="level4">
@@ -1019,14 +1128,14 @@ S/N = 10log\frac{Signal^2}{Noise^2}
 <h3 class="anchored" data-anchor-id="tayor-vs.-ford">Tayor vs.&nbsp;Ford</h3>
 <section id="정의-1" class="level4">
 <h4 class="anchored" data-anchor-id="정의-1">정의</h4>
-<p>테일러 생산 방식</p>
+<p><strong>테일러 생산 방식</strong></p>
 <ul>
-<li><strong>과학적 관리</strong>(Scientific Management) 기반</li>
+<li><span class="hl">과학적 관리(Scientific Management) 기반</span></li>
 <li>프레더릭 윈슬로우 테일러가 작업을 분해⋅분석하여 “One Best Way” 도출, 시간⋅동작 연규, 기능적 감독 체계 구축 등을 통해 효율성과 생산성 극대화를 추구한 초기 산업혁명 방식</li>
 </ul>
-<p>포드 생산 방식</p>
+<p><strong>포드 생산 방식</strong></p>
 <ul>
-<li>헨리 포드가 개발한 <strong>이동식 조립 라인</strong> (Assembly Line) 기반</li>
+<li>헨리 포드가 개발한 <span class="hl">이동식 조립 라인(Assembly Line) 기반</span></li>
 <li>차량 조립을 45개 작업으로 분할하고 컨베이어로 이동시키며 Model T 생산을 12.5시간에서 93분으로 대폭 단축</li>
 </ul>
 </section>
@@ -1080,9 +1189,10 @@ S/N = 10log\frac{Signal^2}{Noise^2}
 <p><strong>포드 방식</strong></p>
 <ul>
 <li>조립라인 도입으로 단위 생산시간 및 비용 획기적 절감</li>
-<li>장점: 대량생산 구현, 충산층 확대</li>
+<li>장점: 대량생산 구현, 중산층 확대</li>
 <li>단점: 작업 단조성 증가, 유연성 부족</li>
 </ul>
+<hr>
 </section>
 </section>
 </section>
@@ -1090,7 +1200,7 @@ S/N = 10log\frac{Signal^2}{Noise^2}
 <h2 class="anchored" data-anchor-id="구매와-외주전략">구매와 외주전략</h2>
 <section id="아웃소싱" class="level3">
 <h3 class="anchored" data-anchor-id="아웃소싱">아웃소싱</h3>
-<p>아웃소싱은 기업이 내부에서 수행하던 업무(생산, 서비스, IT, 회계 등)를 외부 전문 기업에 위탁하는 경영전략이다. 핵심 목표는 비용 절감, 전문성 확보, 핵심 역량 집중에 있다.</p>
+<p>아웃소싱은 기업이 내부에서 수행하던 업무(생산, 서비스, IT, 회계 등)를 외부 전문 기업에 위탁하는 경영전략이다. 핵심 목표는 <span class="hl">비용 절감, 전문성 확보, 핵심 역량 집중</span>에 있다. 또한 아웃소싱을 통해 생산이나 운영에 필요한 설비, 인력 등을 외부에 맞기게 되어 기존에 내부에서 발생하던 고정적인 지출이 줄어 들고, 필요할 때마다 단가 기준으로 비줄하게 되어 <strong>변동비화</strong> 되는 효과를 볼 수 있다.</p>
 <p><strong>주요 동기 및 이점</strong></p>
 <table class="caption-top table">
 <colgroup>
@@ -1199,91 +1309,18 @@ S/N = 10log\frac{Signal^2}{Noise^2}
 <li>전략적 관계 관리: 정기 리뷰 및 개선 프로세스 유지</li>
 <li>탈아웃소싱 전략: 긴급 시 내부 복귀 가능한 백업 계획 수립</li>
 </ul>
+<hr>
 </section>
 </section>
 <section id="인력과-직무설계" class="level2">
 <h2 class="anchored" data-anchor-id="인력과-직무설계">인력과 직무설계</h2>
+<hr>
 </section>
 <section id="사업환경분석" class="level2">
 <h2 class="anchored" data-anchor-id="사업환경분석">사업환경분석</h2>
-<section id="ve" class="level3">
-<h3 class="anchored" data-anchor-id="ve">VE</h3>
-<p>VE는 제 2차 세계대전 중 GE에서 원자재 부족으로 대체재를 찾는 과정에서 비용 절감 및 기능 향상을 동시에 이룬 경험에서 시작되었다(석면 사건). 구매 담당이던 Lawrence Miles가 이 방법을 발전시켜 ’Value Analysis’라는 이름으로 정립했다. 이후 다양한 산업, 특히 건선, 제조 등에서 체계화되어 적용되었고, SAVE(국제가치엔지니어링협회)가 1959년 창립되면서 VE는 기능 중심의 비용 최적화 도구로 자리 잡았다. VE는 단순히 비용을 줄이는 것이 아니라, 기능을 유지하거나 개선하면서 수명 주기 관점에서 비용과 품질의 최적 균형을 찾는 것이 핵샘이다.</p>
-<section id="ve-절차" class="level4">
-<h4 class="anchored" data-anchor-id="ve-절차">VE 절차</h4>
-<p>VE 기본 절차는 기능정의, 기능평가, 대체안 작성 순으로 이루어지며, 전형적인 절차는 다음 8단계와 같다.</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 3%">
-<col style="width: 36%">
-<col style="width: 60%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>단계</th>
-<th>명칭</th>
-<th>주요 활동</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>①</td>
-<td><strong>Preparation</strong></td>
-<td>대상 프로젝트 선정, VE팀 구성, 일정 및 목표 설정</td>
-</tr>
-<tr class="even">
-<td>②</td>
-<td><strong>Information</strong></td>
-<td>기능, 비용, 기술 사양, 이해관계자 요구사항 등 데이터 수집</td>
-</tr>
-<tr class="odd">
-<td>③</td>
-<td><strong>Function Analysis</strong></td>
-<td>기능(F)과 비용(Cost)의 관계 분석 → 기능 우선순위 정립</td>
-</tr>
-<tr class="even">
-<td>④</td>
-<td><strong>Creative</strong></td>
-<td>브레인스토밍 통해 대체 아이디어 생성 (대체재, 공정 등)</td>
-</tr>
-<tr class="odd">
-<td>⑤</td>
-<td><strong>Evaluation</strong></td>
-<td>대안의 장단점 분석 및 비용-기능 비교, 경제성 평가</td>
-</tr>
-<tr class="even">
-<td>⑥</td>
-<td><strong>Development</strong></td>
-<td>제안된 대안을 설계에 반영할 구체적 실행 방안 마련</td>
-</tr>
-<tr class="odd">
-<td>⑦</td>
-<td><strong>Presentation</strong></td>
-<td>VE 결과(대안, 비용절감, 기대효과 등)를 이해관계자에게 보고</td>
-</tr>
-<tr class="even">
-<td>⑧</td>
-<td><strong>Implementation</strong></td>
-<td>승인된 개선안 실행 및 효과 추적·검증</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="가치공학-기본-원칙" class="level4">
-<h4 class="anchored" data-anchor-id="가치공학-기본-원칙">가치공학 기본 원칙</h4>
-<p>VE의 5가지 원칙은 다음과 같다.</p>
-<ol type="1">
-<li><strong>사용자 지향</strong>: 고객과 사용자의 요구사항과 만족도를 최우선으로 고려하는 관점</li>
-<li><strong>기능중심 사고</strong>: 제품이나 서비스의 본질적인 기능에 집중하여 분석하는 접근법</li>
-<li><strong>체계적 접근</strong>: 단계별 절차와 방법론을 토해 논리적이고 과학적으로 분석하는 방법</li>
-<li><strong>팀워크</strong>: 다양한 전문분아의 구성원들이 협력하여 종합적 관점에서 문제를 해결하는 협업 방식</li>
-<li><strong>창의적 사고</strong>: 기존 관념에서 벗어나 새로운 아이디어와 대안을 모색하는 혁신적 사고 방식</li>
-</ol>
-</section>
-</section>
 <section id="가치흐름도" class="level3">
 <h3 class="anchored" data-anchor-id="가치흐름도">가치흐름도</h3>
-<p>가치흐름도(VSM, Value Stream Mapping)는 제품이나 서비스가 고객에게 전달되는 전체 과정을 시각화하여 낭비 요소를 식별하고 개선하는 린 제조 기법이다.</p>
+<p>가치흐름도(VSM, Value Stream Mapping)는 <span class="hl">제품이나 서비스가 고객에게 전달되는 전체 과정을 시각화하여 낭비 요소를 식별하고 개선하는 린 제조 기법이다.</span></p>
 <p><strong>정의</strong></p>
 <ul>
 <li>원재료부터 완제품까지 모든 활동을 도식화한 지도</li>
@@ -1310,91 +1347,7 @@ S/N = 10log\frac{Signal^2}{Noise^2}
 <li>생산성 향상: 자치 창출 활동 비율 증대</li>
 <li>의사소통: 전 구성원의 프로세스 이해도 향상</li>
 </ul>
-</section>
-</section>
-<section id="생산-시스템" class="level2">
-<h2 class="anchored" data-anchor-id="생산-시스템">생산 시스템</h2>
-<section id="유연생산시스템fms" class="level3">
-<h3 class="anchored" data-anchor-id="유연생산시스템fms">유연생산시스템(FMS)</h3>
-<p>FMS는 CNC 기계, 로봇, 자동화 물류 시스템 그리고 중앙 제어 컴퓨터가 결합되어 제품 종류, 공정순서, 생산량 변화에 자율적으로 대응 가능한 스마트 제조 시스템이다.</p>
-<p>유연성은 크게 기계유연성과 경로유연성으로 나눌 수 있다.</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 35%">
-<col style="width: 64%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>구분</th>
-<th>설명</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>기계 유연성</strong> (Machine Flexibility)</td>
-<td>동일 공정 수행 가능한 다중 기계 보유, 설비 활용 최적화 가능</td>
-</tr>
-<tr class="even">
-<td><strong>경로 유연성</strong> (Routing Flexibility)</td>
-<td>동일 제품 생산 시 공정 순서 변경, 복수 경로 지원으로 <strong>보완성·확장성 확보</strong></td>
-</tr>
-</tbody>
-</table>
-<section id="주요-구성-요소" class="level4">
-<h4 class="anchored" data-anchor-id="주요-구성-요소">주요 구성 요소</h4>
-<p>FMS는 다음과 같은 구성 요소가 있다.</p>
-<ul>
-<li>작업 기계: 보통 CNC 및 로봇 셀</li>
-<li>물류 시스템: AGV, 컨베이어 등 자동화 자재 이송장치</li>
-<li>중앙 제어 컴퓨터: 작업 스케줄링, 기계-물류 연계, 최적 경로 계산</li>
-</ul>
-</section>
-<section id="도입-시-장점과-단점" class="level4">
-<h4 class="anchored" data-anchor-id="도입-시-장점과-단점">도입 시 장점과 단점</h4>
-<p><strong>장점</strong></p>
-<ul>
-<li>제품 전환 시 재구성 최소화, 리드타임 단축</li>
-<li>다양한 제품을 소량부터 대량까지 유연 대응 가능</li>
-<li>자동화로 품질 안정성 향상, 불량 감소</li>
-<li>재고 감소, 생산성 증대, 낭비 최소화</li>
-</ul>
-<p><strong>단점</strong></p>
-<ul>
-<li>초기 투자 비용 및 설치 난이도 높음</li>
-<li>숙련된 인력 및 시스템 운영 복잡성 요구</li>
-</ul>
-<p>FMS는 최근 IIoT, 로봇, 엣지 컴퓨팅 등과 함께 고도화가 진행되고 있으며 MES와 연계하여 생산을 실시간 모티너링, 스케쥴링하는 등 최적화를 구현하고 있다.</p>
-<p>FMS는 다품종, 소량생산 시대에 대응하기 위한 핵심 생산방식 중 하나며, 스마트팩토리 기본 단위로서 CNC+로봇+자동물류+지능제어를 통합한 시스템이다. 초기 비용과 전문인력 요구는 있으나 유연성 확보, 낭비 최소화, 리드타임 단축, 품질 안정성 향상 등 장기적 효과를 기대할 수 있다.</p>
-</section>
-</section>
-<section id="택트-타임-생산방식" class="level3">
-<h3 class="anchored" data-anchor-id="택트-타임-생산방식">택트 타임 생산방식</h3>
-<p>택트 타임 생산방식은 고객 수요에 따라 제품이 일정한 리듬으로 생산되도록 운영 속도를 맞추는 방식이다.</p>
-<p><span class="math display">\[
-\text{택트 타임} = \frac{\text{사용 가능 생산 시간}}{\text{고객 수요}}
-\]</span></p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 2%">
-<col style="width: 97%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>항목</th>
-<th>내용</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>장점</strong></td>
-<td>- <strong>병목구간 즉시 식별</strong>: 지연 구간 빠르게 파악 가능 <br>- <strong>실시간 라인 생산성 파악</strong>: 비가동 지점·저성능 스테이션 모니터링 용이 <br>- <strong>낭비 제거 집중</strong>: 비부가가치 작업 최소화, 재고·초과생산 억제 <br>- <strong>흐름 균형 유지</strong>: 공정 라인 균형 유지 및 주기적 흐름 확보</td>
-</tr>
-<tr class="even">
-<td><strong>단점</strong></td>
-<td>- <strong>병렬 공정 정지</strong>: 한 스테이션이 지연되면 전체 라인 운행 중단 <br>- <strong>작업자·설비 부담 증가</strong>: 작업 속도 강요로 인한 부상 및 설비 고장 위험 <br>- <strong>예측 불가능 변수 반영 부족</strong>: 휴식, 리셋 기간 등 비가동 요소 반영 어려움 <br>- <strong>수요 변화 시 재구성 필요</strong>: 수요 증가 또는 변동 시 라인 재배치 등 설계 변경 필요</td>
-</tr>
-</tbody>
-</table>
+<p><em><em>EOD</em></em></p>
 
 
 </section>
