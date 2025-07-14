@@ -604,7 +604,7 @@ window.Quarto = {
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>시간연구 (Time Study)</strong></td>
+<td><strong>시간연구</strong>(Time Study)</td>
 <td>스톱워치를 이용하여 <strong>직접 작업시간 측정</strong> 후 여유율 적용</td>
 </tr>
 <tr class="even">
@@ -612,11 +612,11 @@ window.Quarto = {
 <td>숙련된 작업자의 <strong>표준 동작을 분석</strong>하여 결정</td>
 </tr>
 <tr class="odd">
-<td><strong>PMTS (Predetermined Motion Time System)</strong></td>
+<td><strong>PMT</strong>(Predetermined Motion Time System)</td>
 <td>동작요소별로 사전 정의된 시간값을 합산 (예: MTM, MODAPTS)</td>
 </tr>
 <tr class="even">
-<td><strong>워크 샘플링</strong></td>
+<td><strong>워크 샘플링</strong>(Work Sampling)</td>
 <td>반복 작업이 아닌 경우에 <strong>확률적 추정 방식</strong> 활용</td>
 </tr>
 <tr class="odd">
@@ -627,7 +627,7 @@ window.Quarto = {
 </table>
 <section id="워크샘플링" class="level4">
 <h4 class="anchored" data-anchor-id="워크샘플링">워크샘플링</h4>
-<p>워크샘플링은 작업자 또는 설비 상태를 램덤한 시점에 다수 관측하여 전체 시간 중 각 활동이 차지하는 비율을 추정하는 통계적 기법이다. 목적은 표준시간 뿐만 아니라 비작업 시간, 병목 공정, 휴식 및 지연 패턴 등을 정량적으로 분석한다.</p>
+<p><strong>워크샘플링</strong>은 <span class="hl">작업자 또는 설비 상태를 램덤한 시점에 다수 관측하여 전체 시간 중 각 활동이 차지하는 비율을 추정하는 통계적 기법</span>이다. 목적은 표준시간 뿐만 아니라 비작업 시간, 병목 공정, 휴식 및 지연 패턴 등을 정량적으로 분석한다.</p>
 <p><strong>적용단계</strong></p>
 <ol type="1">
 <li>목표 정의 및 활동 분류
@@ -683,11 +683,6 @@ window.Quarto = {
 <td><strong>신뢰도 있는 비율 도출</strong>, 통계적 타당성 확보</td>
 <td>많은 샘플 필요, 설문 단계 복잡</td>
 </tr>
-<tr class="even">
-<td></td>
-<td></td>
-<td></td>
-</tr>
 </tbody>
 </table>
 </section>
@@ -705,7 +700,98 @@ window.Quarto = {
 <h3 class="anchored" data-anchor-id="시그마-cpcpk">6시그마, Cp/Cpk</h3>
 <section id="시그마" class="level4">
 <h4 class="anchored" data-anchor-id="시그마">6시그마</h4>
-<p>6시그마는 공정변동을 ±3σ 수준(즉, 전체 ±6σ 범위) 내로 제한하여, 백만 기회당 3.4개의 불량(DPMO ≤ 3.4) 수준을 달성하는 최고 수준의 품질 관리 방법론이다.</p>
+<p><strong>6시그마</strong>는 <span class="hl">결함률을 100만개 중 3.4개(DPMO 기준) 수준으로 줄이는 것을 목표로 하는 통계 기반 품질 개선 기법/span&gt;이다. 시그마는 공정의 표준편차(변동성)를 의미하며 시그마 수준이 높을수록 품질이 우수하고 변동이 적음을 뜻한다. 단순한 통계기법을 넘어서 조직 전반의 전략적 품질 혁신 방법론으로 자리를 잡았다.</span></p>
+<p><strong>6시그마 품질수준 의미</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>시그마 수준</th>
+<th>불량률(PPM)</th>
+<th>DPMO (Defects Per Million Opportunities)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1σ</td>
+<td>690,000</td>
+<td>690,000</td>
+</tr>
+<tr class="even">
+<td>2σ</td>
+<td>308,000</td>
+<td>308,000</td>
+</tr>
+<tr class="odd">
+<td>3σ</td>
+<td>66,800</td>
+<td>66,800</td>
+</tr>
+<tr class="even">
+<td>4σ</td>
+<td>6,210</td>
+<td>6,210</td>
+</tr>
+<tr class="odd">
+<td>5σ</td>
+<td>233</td>
+<td>233</td>
+</tr>
+<tr class="even">
+<td><strong>6σ</strong></td>
+<td><strong>3.4</strong></td>
+<td><strong>3.4</strong></td>
+</tr>
+</tbody>
+</table>
+<p>참고로, 실제 ±6σ 수준은 10억 개 중 2개 불량(0.002ppm)이지마 공정 중심이 ±1.5σ 이동했을 때를 감안하여 현실적으로 수립한 목표치이다.</p>
+<p>추진 방법론으로 <strong>DMAIC</strong>가 있으며 기존 공정 개선 시 사용하는 핵심절차이다.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 4%">
+<col style="width: 21%">
+<col style="width: 73%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>단계</th>
+<th>명칭 (DMAIC)</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>D</td>
+<td>Define</td>
+<td>문제 정의 및 프로젝트 목표 설정</td>
+</tr>
+<tr class="even">
+<td>M</td>
+<td>Measure</td>
+<td>현 상태 측정 (CTQ, 변동성, DPMO 등)</td>
+</tr>
+<tr class="odd">
+<td>A</td>
+<td>Analyze</td>
+<td>문제 원인 분석 (파레토, 히스토그램, 상관분석 등)</td>
+</tr>
+<tr class="even">
+<td>I</td>
+<td>Improve</td>
+<td>개선안 도출 및 실행 (DOE, FMEA, 최적화 기법 활용)</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td>Control</td>
+<td>개선 결과 유지 및 관리계획 수립 (관리도 등)</td>
+</tr>
+</tbody>
+</table>
+<p>신규 공정/서비스 개발 시에는 DMADV(Define, Measure, Analyze, Design, Verify) 절차를 사용한다. DMA 절차는 동일하며, DV 절차는 다음과 같다.</p>
+<ul>
+<li>Design: 세부사항, 디자인 최적화, 디자인 검증을 위한 계획을 수립, 시뮬레이션 과정 필요</li>
+<li>Verfiy: 디자인, 시험 작동, 제품 개발 프로세스 적용과 프로세스 담당자 이관 등</li>
+</ul>
+<p>이외 GE의 DMADOV(Define, Measure, Analyze, Design, Optimize and Verify) 등 적절하게 변경된 프로세스 방법론들이 있다.</p>
 </section>
 <section id="cppotential-capability" class="level4">
 <h4 class="anchored" data-anchor-id="cppotential-capability">Cp(Potential Capability)</h4>
@@ -822,8 +908,13 @@ C_{pk} = min[\frac{USL-μ}{3σ}, \frac{μ-LSL}{3σ}]
 </section>
 <section id="pl" class="level3">
 <h3 class="anchored" data-anchor-id="pl">PL</h3>
-<p>PL(Product Liability, 제조물 책임) 사고란 제조, 설계, 마케팅 과정에서 결함이 있는 제품으로 인해 소비자의 신체 및 재산에 손해가 발생하는 경우를 말한다.</p>
-<p><strong>결함 유형</strong> - 설계 상 결함 (Design Defect) - 제조 상 결함 (Manufacturing Defect) - 표시, 경고 부족 (Failure to Warn / Marketing Defect)</p>
+<p><strong>PL</strong>(Product Liability, 제조물 책임) 사고란 <span class="hl">제조, 설계, 마케팅 과정에서 결함이 있는 제품으로 인해 소비자의 신체 및 재산에 손해가 발생하는 경우</span>를 말한다.</p>
+<p><strong>결함 유형</strong></p>
+<ul>
+<li>설계 상 결함 (Design Defect)</li>
+<li>제조 상 결함 (Manufacturing Defect)</li>
+<li>표시, 경고 부족 (Failure to Warn / Marketing Defect)</li>
+</ul>
 <section id="사고-발생-시-주요-특성" class="level4">
 <h4 class="anchored" data-anchor-id="사고-발생-시-주요-특성">사고 발생 시 주요 특성</h4>
 <ul>
@@ -913,7 +1004,7 @@ C_{pk} = min[\frac{USL-μ}{3σ}, \frac{μ-LSL}{3σ}]
 </section>
 <section id="t검정" class="level3">
 <h3 class="anchored" data-anchor-id="t검정">T검정</h3>
-<p>T검정은 두 집단 평균 차이가 통계적으로 유의미한지를 판단하는 추론 통계 기법이다. 정규분포를 따르고 분산이 알려지지 않은 소규모 표본(n&lt;30) 상황에서 주로 사용된다.</p>
+<p>T검정은 <span class="hl">두 집단 평균 차이가 통계적으로 유의미한지를 판단하는 추론 통계 기법</span>이다. 정규분포를 따르고 분산이 알려지지 않은 소규모 표본(n&lt;30) 상황에서 주로 사용된다.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 19%">
@@ -947,7 +1038,7 @@ C_{pk} = min[\frac{USL-μ}{3σ}, \frac{μ-LSL}{3σ}]
 </table>
 <p>T검정을 위한 가정 조건은 다음과 같다.</p>
 <ul>
-<li>데이터는 연속형이며 정규분포를 따른다.</li>
+<li>데이터는 연속형이며 정규분포</li>
 <li>독립 샘플</li>
 <li>분산 동질성</li>
 </ul>
@@ -955,7 +1046,6 @@ C_{pk} = min[\frac{USL-μ}{3σ}, \frac{μ-LSL}{3σ}]
 <p>각 검증별 산식은 다음과 같다.</p>
 <p><strong>1표본 t-검정</strong> (One-sample t-test) <span class="math display">\[t = \frac{\bar{X} - \mu_0}{s / \sqrt{n}}\]</span></p>
 <p><strong>독립표본 t-검정</strong> (Independent two-sample t-test, <strong>등분산 가정</strong>) <span class="math display">\[t = \frac{\bar{X}_1 - \bar{X}_2}{s_p \cdot \sqrt{\frac{1}{n_1} + \frac{1}{n_2}}}\]</span></p>
-<p><strong>풀링 표준편차</strong> (Pooled standard deviation) <span class="math display">\[s_p = \sqrt{ \frac{(n_1 - 1)s_1^2 + (n_2 - 1)s_2^2}{n_1 + n_2 - 2} }\]</span></p>
 <p><strong>Welch의 t-검정</strong> (<strong>이분산 가정</strong>) <span class="math display">\[t = \frac{\bar{X}_1 - \bar{X}_2}{\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}}\]</span></p>
 <p><strong>대응표본 t-검정</strong> (Paired t-test) <span class="math display">\[t = \frac{\bar{d}}{s_d / \sqrt{n}}\]</span></p>
 <p>t값은 자유도(df)에 따라 t분포와 비교하여 유의 여부가 결정된다.</p>
