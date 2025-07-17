@@ -534,11 +534,36 @@ window.Quarto = {
     <h2 id="toc-title">목차</h2>
    
   <ul>
-  <li><a href="#sec-strategy" id="toc-sec-strategy" class="nav-link active" data-scroll-target="#sec-strategy">기업전략</a></li>
-  <li><a href="#전략-수립-모델" id="toc-전략-수립-모델" class="nav-link" data-scroll-target="#전략-수립-모델">전략 수립 모델</a>
+  <li><a href="#sec-strategy" id="toc-sec-strategy" class="nav-link active" data-scroll-target="#sec-strategy">전략</a>
   <ul>
-  <li><a href="#sec-qcdfs" id="toc-sec-qcdfs" class="nav-link" data-scroll-target="#sec-qcdfs">경쟁우선순위</a></li>
-  <li><a href="#sec-porter-generic-strategies" id="toc-sec-porter-generic-strategies" class="nav-link" data-scroll-target="#sec-porter-generic-strategies">본원적 경쟁전략</a></li>
+  <li><a href="#기업전략" id="toc-기업전략" class="nav-link" data-scroll-target="#기업전략">기업전략</a>
+  <ul class="collapse">
+  <li><a href="#기업전략-구성-요소" id="toc-기업전략-구성-요소" class="nav-link" data-scroll-target="#기업전략-구성-요소">기업전략 구성 요소</a></li>
+  <li><a href="#기업전략-유형" id="toc-기업전략-유형" class="nav-link" data-scroll-target="#기업전략-유형">기업전략 유형</a></li>
+  <li><a href="#기업전략-수립-모델" id="toc-기업전략-수립-모델" class="nav-link" data-scroll-target="#기업전략-수립-모델">기업전략 수립 모델</a></li>
+  </ul></li>
+  <li><a href="#사업전략" id="toc-사업전략" class="nav-link" data-scroll-target="#사업전략">사업전략</a>
+  <ul class="collapse">
+  <li><a href="#대표적-경쟁전략-포터의-세-가지-일반-전략" id="toc-대표적-경쟁전략-포터의-세-가지-일반-전략" class="nav-link" data-scroll-target="#대표적-경쟁전략-포터의-세-가지-일반-전략">대표적 경쟁전략 (포터의 세 가지 일반 전략)</a></li>
+  </ul></li>
+  <li><a href="#운영전략" id="toc-운영전략" class="nav-link" data-scroll-target="#운영전략">운영전략</a>
+  <ul class="collapse">
+  <li><a href="#운영전략의-주요-구성-요소" id="toc-운영전략의-주요-구성-요소" class="nav-link" data-scroll-target="#운영전략의-주요-구성-요소">운영전략의 주요 구성 요소</a></li>
+  </ul></li>
+  <li><a href="#sec-qcdfs" id="toc-sec-qcdfs" class="nav-link" data-scroll-target="#sec-qcdfs">경쟁우선순위</a>
+  <ul class="collapse">
+  <li><a href="#품질-quality" id="toc-품질-quality" class="nav-link" data-scroll-target="#품질-quality">품질 (Quality)</a></li>
+  <li><a href="#비용-cost" id="toc-비용-cost" class="nav-link" data-scroll-target="#비용-cost">비용 (Cost)</a></li>
+  <li><a href="#납기-delivery" id="toc-납기-delivery" class="nav-link" data-scroll-target="#납기-delivery">납기 (Delivery)</a></li>
+  <li><a href="#유연성-flexibility" id="toc-유연성-flexibility" class="nav-link" data-scroll-target="#유연성-flexibility">4. 유연성 (Flexibility)</a></li>
+  <li><a href="#서비스-service" id="toc-서비스-service" class="nav-link" data-scroll-target="#서비스-service">5. 서비스 (Service)</a></li>
+  <li><a href="#다섯-가지-요소-간-관계-및-전략적-적용" id="toc-다섯-가지-요소-간-관계-및-전략적-적용" class="nav-link" data-scroll-target="#다섯-가지-요소-간-관계-및-전략적-적용">다섯 가지 요소 간 관계 및 전략적 적용</a></li>
+  </ul></li>
+  <li><a href="#sec-porter-generic-strategies" id="toc-sec-porter-generic-strategies" class="nav-link" data-scroll-target="#sec-porter-generic-strategies">본원적 경쟁전략</a>
+  <ul class="collapse">
+  <li><a href="#본원적-경쟁전략의-유형" id="toc-본원적-경쟁전략의-유형" class="nav-link" data-scroll-target="#본원적-경쟁전략의-유형">본원적 경쟁전략의 유형</a></li>
+  <li><a href="#전략-선택-시-고려사항" id="toc-전략-선택-시-고려사항" class="nav-link" data-scroll-target="#전략-선택-시-고려사항">전략 선택 시 고려사항</a></li>
+  </ul></li>
   </ul></li>
   <li><a href="#생산전략-수립" id="toc-생산전략-수립" class="nav-link" data-scroll-target="#생산전략-수립">생산전략 수립</a></li>
   <li><a href="#sec-production-method" id="toc-sec-production-method" class="nav-link" data-scroll-target="#sec-production-method">생산방식</a>
@@ -626,43 +651,220 @@ window.Quarto = {
 
 
 <section id="sec-strategy" class="level2">
-<h2 class="anchored" data-anchor-id="sec-strategy">기업전략</h2>
-<p><strong>경영전략</strong>은 의사결정 수준, 즉 사업영역과 경쟁우위에 대한 고민에 따라 <strong>기업전략</strong>, <strong>사업전략</strong>, <strong>기능전략</strong>으로 구분된다. 일반적으로 장기적인 기본 방향인 기업전략을 수립하고 이를 구체화하는 사업전략, 기능전략으로 확정, 전개한다. 아래 도표와 같이 <strong>기업전략 - 사업전락 - 기능전략</strong>으로 계층 구조를 갖는다.</p>
+<h2 class="anchored" data-anchor-id="sec-strategy">전략</h2>
+<p>전략은 일반적으로 다음과 같은 3단계 계층 구조로 구성된다.</p>
+<ul>
+<li>기업전략(Corporate Strategy)
+<ul>
+<li>전체 기업의 비전과 장기적 방향성 설정</li>
+<li>어떤 산업·사업에 진출하거나 철수할 것인가에 대한 의사결정</li>
+</ul></li>
+<li>사업전략(Business Strategy)
+<ul>
+<li>개별 사업단위 수준에서의 경쟁 전략</li>
+<li>“어떻게 경쟁에서 승리할 것인가?”에 대한 전략 수립</li>
+</ul></li>
+<li>운영전략(Operations Strategy)
+<ul>
+<li>생산, 물류, 품질, 설비 등 운영 부문이 사업전략을 실행하기 위한 구체적인 계획과 실행 전략</li>
+</ul></li>
+</ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/strategy.png" class="img-fluid figure-img"></p>
 <figcaption>기업전략-사업전략-기능전략 계층 구조</figcaption>
 </figure>
 </div>
-<dl>
-<dt><strong>기업전략</strong>(Corporate Strategy)</dt>
-<dd>
+<section id="기업전략" class="level3">
+<h3 class="anchored" data-anchor-id="기업전략">기업전략</h3>
+<p><strong>기업전략</strong>(Corporate Strategy)이란, 기업이 장기적인 성장과 생존을 도모하기 위해 설정하는 최상위 전략 수준의 의사결정 체계를 의미한다. 이는 기업의 전체 방향성과 목적을 설정하고, 자원을 어떻게 배분할지, 어떤 사업에 진출하거나 철수할지를 결정하는 총체적인 전략이다. 기업 전략은 제품, 시장, 경쟁우위확보 등 다양한 요소를 포함하며, 우리는 어떤 사업을 할 것인가(What business are we in?)라는 질문에 대한 답을 제시하는 전략이라 할 수 있다.</p>
+<section id="기업전략-구성-요소" class="level4">
+<h4 class="anchored" data-anchor-id="기업전략-구성-요소">기업전략 구성 요소</h4>
+<p>기업전략은 일반적으로 다음과 같은 세 가지 핵심 구성 요소로 이루어진다.</p>
 <ul>
-<li>기업이 참여할 <strong>시장과 산업 범위</strong>를 결정한다. <font color="blue">사업 다각화, 수직적 통합, 인수합병, 해외사업진출 등 사업 영역 전반적인 의사결정</font>을 한다.</li>
-</ul>
-</dd>
-<dt><strong>사업전략</strong>(Business Strategy)</dt>
-<dd>
+<li>사명(Mission) 및 비전(Vision)
 <ul>
-<li><strong>시장 진출 사업 단위로 수립</strong>하며, <font color="blue">사업 영역을 설정하고 경쟁우위 확보를 위한 구체적이고 실질적인 전략</font>이다. 원가가우위 전략, 차별화 전략, 집중화 전략 등 시장 경쟁위를 위한 의사결정을 한다. 기업이 단일 사업일 경우 기업전략과 사업전략은 동일하다.</li>
-</ul>
-</dd>
-<dt><strong>기능전략</strong>(Functions Strategy)</dt>
-<dd>
+<li>사명(Mission): 기업이 존재하는 목적과 사회적 역할을 명확히 기술한 문장</li>
+<li>비전(Vision): 장기적인 관점에서 기업이 달성하고자 하는 미래 모습</li>
+</ul></li>
+<li>목표(Goals) 및 전략적 방향
 <ul>
-<li>연구개발, 구매, 생산, 물류, 영업 등 <strong>사업 경영 기능별 기본 전략</strong>이다. <font color="blue">사업전략 달성을 위해 각 사업 운영에 있어 세부적이고 효율적인 수행방법을 수립</font>한다.</li>
+<li>기업의 정량적·정성적 목표를 수립하고, 이를 달성하기 위한 전략적 방향성을 설정</li>
+<li>예: 매출 성장, 시장점유율 확대, 기술 리더십 확보 등</li>
+</ul></li>
+<li>사업 포트폴리오 관리
+<ul>
+<li>기업이 보유하고 있는 다양한 사업 단위(Business Units)를 평가하여, 어떤 사업에 투자하고, 어떤 사업을 철수할지를 결정</li>
+<li>대표적인 도구: BCG 매트릭스, GE-McKinsey 매트릭스</li>
+</ul></li>
 </ul>
-</dd>
-</dl>
 </section>
-<section id="전략-수립-모델" class="level2">
-<h2 class="anchored" data-anchor-id="전략-수립-모델">전략 수립 모델</h2>
+<section id="기업전략-유형" class="level4">
+<h4 class="anchored" data-anchor-id="기업전략-유형">기업전략 유형</h4>
+<p>기업전략은 그 목표와 범위에 따라 다음과 같이 구분된다.</p>
+<ul>
+<li>집중 전략 (Concentration Strategy)
+<ul>
+<li>핵심 역량이 있는 하나의 사업 영역에 집중하여 경쟁우위를 확보하고 성장하는 전략</li>
+<li>예: 특정 시장이나 제품군에 특화된 전략</li>
+</ul></li>
+<li>다각화 전략 (Diversification Strategy)
+<ul>
+<li>새로운 제품이나 시장으로 진출하여 사업을 다각화하는 전략
+<ul>
+<li>관련 다각화: 기존 사업과 기술, 시장 등에서 연관성을 가진 분야로 확장</li>
+<li>비관련 다각화: 기존 사업과 전혀 다른 영역으로 확장</li>
+</ul></li>
+</ul></li>
+<li>수직통합 전략 (Vertical Integration)
+<ul>
+<li>공급망 상의 앞단(전방 통합, Forward Integration)이나 뒷단(후방 통합, Backward Integration)으로 사업을 확장함으로써 원가 절감 또는 품질 통제를 도모하는 전략</li>
+</ul></li>
+<li>인수합병 전략 (M&amp;A: Mergers and Acquisitions)
+<ul>
+<li>외부 기업을 인수하거나 합병하여 시장 지배력 확보, 기술 습득 또는 규모의 경제 실현을 추구함.</li>
+</ul></li>
+</ul>
+</section>
+<section id="기업전략-수립-모델" class="level4">
+<h4 class="anchored" data-anchor-id="기업전략-수립-모델">기업전략 수립 모델</h4>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/strategy_planning.png" class="img-fluid figure-img"></p>
 <figcaption>경영전략 수립 절차</figcaption>
 </figure>
 </div>
+<p>전략 수립은 다음의 순차적인 단계로 진행된다.</p>
+<ol type="1">
+<li>환경 분석 (Environmental Analysis)
+<ul>
+<li>외부 환경: 산업 구조, 시장 동향, 경쟁자 분석 (예: PEST, 5 Forces 분석)</li>
+<li>내부 환경: 자원, 역량, 핵심 역량 분석 (예: SWOT 분석)</li>
+</ul></li>
+<li>전략 대안 도출 및 평가
+<ul>
+<li>다양한 전략 대안을 도출하고, 실행 가능성과 성과 기대치 측면에서 비교 분석</li>
+</ul></li>
+<li>전략 선택 및 실행계획 수립
+<ul>
+<li>가장 적합한 전략을 선택하고, 실행계획(Action Plan), 자원 배분계획, KPI 등을 설정</li>
+</ul></li>
+<li>전략 실행 및 성과 관리
+<ul>
+<li>실행 과정에서의 조직 정렬, 리더십, 커뮤니케이션이 중요</li>
+<li>성과 측정 및 전략 수정(피드백 루프)을 통한 지속적인 개선이 필요</li>
+</ul></li>
+</ol>
+</section>
+</section>
+<section id="사업전략" class="level3">
+<h3 class="anchored" data-anchor-id="사업전략">사업전략</h3>
+<p>사업전략(Business Strategy)은 특정 사업단위(SBU: Strategic Business Unit)에서 경쟁 시장 내에서 지속가능한 경쟁우위를 확보하기 위해 수립하는 전략이다. 즉, <strong>“어떤 고객을 대상으로, 어떤 제품·서비스를, 어떤 방식으로 제공하여 경쟁사와 차별화할 것인가?”</strong>를 결정한다.</p>
+<section id="대표적-경쟁전략-포터의-세-가지-일반-전략" class="level4">
+<h4 class="anchored" data-anchor-id="대표적-경쟁전략-포터의-세-가지-일반-전략">대표적 경쟁전략 (포터의 세 가지 일반 전략)</h4>
+<p>마이클 포터(Michael Porter)는 기업이 취할 수 있는 사업전략을 다음 세 가지로 구분하였다.</p>
+<ol type="1">
+<li>원가우위 전략 (Cost Leadership)
+<ul>
+<li>경쟁사보다 낮은 비용으로 제품·서비스를 제공함으로써 시장점유율 확보</li>
+<li>규모의 경제, 효율적 생산 시스템, 공급망 최적화가 핵심</li>
+<li>예: 이케아(IKEA), 월마트(Walmart)</li>
+</ul></li>
+<li>차별화 전략 (Differentiation)
+<ul>
+<li>독특한 제품·서비스를 제공하여 고객 충성도 확보</li>
+<li>품질, 디자인, 브랜드, 기술, 고객 서비스 등 차별화 요소 활용</li>
+<li>예: 애플(Apple), 스타벅스(Starbucks)</li>
+</ul></li>
+<li>집중 전략 (Focus Strategy)
+<ul>
+<li>특정 세분시장(Niche Market)을 목표로 원가우위 또는 차별화 전략을 집중적으로 수행</li>
+<li>예: 고급 의료기기 전문업체, 프리미엄 맞춤형 제품 브랜드 등</li>
+</ul></li>
+</ol>
+<p>전략선택 시 다음과 같은 요소를 고려해야 한다.</p>
+<ul>
+<li>산업 구조(5Force)</li>
+<li>고객 니즈 및 트렌드</li>
+<li>내부 역량(Core Competence)</li>
+<li>기술 및 자본 수준</li>
+</ul>
+</section>
+</section>
+<section id="운영전략" class="level3">
+<h3 class="anchored" data-anchor-id="운영전략">운영전략</h3>
+<p>운영전략(Operations Strategy)은 생산, 공급망, 품질, 설비, 인력 등의 운영 활동을 통해 사업전략을 구체적으로 실행하기 위한 전략이다. 즉, 운영 자원을 어떤 방향으로 배치하고 관리할 것인지를 다룬다. 운영전략은 사업전략의 실행 기반이며, 실제 제품과 서비스가 어떻게 효율적으로 제공될지를 결정한다.</p>
+<section id="운영전략의-주요-구성-요소" class="level4">
+<h4 class="anchored" data-anchor-id="운영전략의-주요-구성-요소">운영전략의 주요 구성 요소</h4>
+<p>운영전략은 일반적으로 다음의 네 가지 주요 경쟁요소(Competitive Priorities, QCDF)를 중심으로 수립된다.</p>
+<ol type="1">
+<li>품질(Quality)
+<ul>
+<li>일관된 성능, 신뢰성, 고객 기대 충족 수준</li>
+<li>예: 식품 제조업의 위생 품질, 정밀 부품의 정밀도</li>
+</ul></li>
+<li>비용(Cost)
+<ul>
+<li>생산 및 운영비 절감</li>
+<li>예: 자동화, 공급망 최적화, 재고 최소화</li>
+</ul></li>
+<li>납기(Delivery)
+<ul>
+<li>고객 요구 납기 내 생산 및 배송 가능성</li>
+<li>예: Just-in-Time 생산 시스템, 리드타임 단축</li>
+</ul></li>
+<li>유연성(Flexibility)
+<ul>
+<li>제품 다양성 대응, 소량 다품종 생산, 생산 전환 시간 단축</li>
+<li>예: 주문형 생산(MTO), 모듈화 설계</li>
+</ul></li>
+</ol>
+<p>이들 요소 간에는 트레이드오프(Trade-off) 관계가 존재할 수 있으므로, 기업의 경쟁전략에 맞춰 우선순위를 설정해야 한다.</p>
+<p>운영전략 수립 절차는 다음과 같다.</p>
+<ol type="1">
+<li>외부 환경 및 고객 요구 분석</li>
+<li>사업전략과 연계된 운영 목표 설정</li>
+<li>운영역량 확보 및 자원 배치 계획 수립</li>
+<li>성과 측정 및 지속 개선 활동 실행</li>
+</ol>
+<p>참고로 전략간 연계성은 다음과 같다.</p>
+<p><strong>기업전략 ↔︎ 사업전략 ↔︎ 운영전략</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 8%">
+<col style="width: 26%">
+<col style="width: 31%">
+<col style="width: 34%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>전략 수준</th>
+<th>주요 질문</th>
+<th>담당 범위</th>
+<th>예시</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>기업전략</td>
+<td>어떤 사업을 할 것인가?</td>
+<td>사업 포트폴리오</td>
+<td>자동차, 전자, 금융 등</td>
+</tr>
+<tr class="even">
+<td>사업전략</td>
+<td>어떻게 경쟁에서 이길 것인가?</td>
+<td>각 사업단위</td>
+<td>프리미엄 전기차 시장 진입</td>
+</tr>
+<tr class="odd">
+<td>운영전략</td>
+<td>어떻게 실행할 것인가?</td>
+<td>생산, 공급망, 품질 등 기능 부서</td>
+<td>고효율 생산라인 구축, 품질 기준 수립</td>
+</tr>
+</tbody>
+</table>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 97-4-2, 100-1-7, 100-2-4, 124-4-3">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -676,6 +878,8 @@ window.Quarto = {
 
 </div>
 </div>
+</section>
+</section>
 <section id="sec-qcdfs" class="level3">
 <h3 class="anchored" data-anchor-id="sec-qcdfs">경쟁우선순위</h3>
 <p>경쟁우선순위는 <strong>생산관리 목표</strong>로 볼 수 있다. 기업 생존 부등식에 따라 고객 만족과 효율적 생산을 목표로 전체 조직이 지향하는 방향을 나타낸다.</p>
@@ -685,44 +889,118 @@ window.Quarto = {
 <figcaption>경쟁우선순위</figcaption>
 </figure>
 </div>
-<p><strong>QCDFS</strong>는 <strong>Quality (품질)</strong>, <strong>Cost (비용)</strong>, <strong>Delivery (납기)</strong>, <strong>Flexibility (유연성)</strong>, <strong>Service (서비스)</strong>의 다섯 가지 요소를 말하는 것으로, 주로 <font color="blue">제조업과 공급망 관리에서 사용되는 경쟁 우선순위를 나타내는 모델</font>이다. 이 모델은 기업이나 공급자가 시장에서 경쟁 우위를 확보하기 위해 어떤 요소에 우선순위를 두어야 할지를 결정하는 데 도움을 준다.</p>
-<dl>
-<dt>Quality (품질)</dt>
-<dd>
+<section id="품질-quality" class="level4">
+<h4 class="anchored" data-anchor-id="품질-quality">품질 (Quality)</h4>
+<p>품질은 제품이나 서비스가 고객의 기대와 요구를 <strong>일관되게 충족</strong>시키는 능력을 의미한다.</p>
+<p><strong>품질의 측면</strong></p>
 <ul>
-<li><font color="#245bdb">제품이나 서비스의 품질은 고객의 만족도를 결정짓는 핵심 요소</font>다. 고품질의 제품을 제공하는 기업은 고객의 신뢰를 얻고 재구매를 유도할 수 있다. 품질을 우선시하는 기업은 결함이 적고 신뢰할 수 있는 제품을 생산하려는 노력을 기울인다.</li>
-<li>고성능 품질, 균일품질</li>
+<li><strong>설계 품질(Design Quality)</strong>: 제품이나 서비스의 기능, 성능, 특성 등 설계 단계에서의 품질 수준</li>
+<li><strong>일치 품질(Conformance Quality)</strong>: 설계된 품질 기준에 실제 생산된 제품이 얼마나 잘 부합하는가</li>
+<li><strong>서비스 품질(Service Quality)</strong>: 고객 접점에서의 신뢰성, 응대 태도, 문제 해결력 등</li>
 </ul>
-</dd>
-<dt>Cost (비용)</dt>
-<dd>
+<p><strong>운영전략 관점</strong></p>
 <ul>
-<li><font color="#245bdb">경쟁력 있는 가격을 제시하는 것도 중요한 요소</font>이다. 고객은 품질이 좋고 가격이 합리적인 제품을 선호하기 때문에, 비용 효율성을 고려한 생산과 관리가 필요다. 비용을 낮추는 전략은 <font color="#4f81bd">생산 공정 개선, 재고 관리, 물류 최적화</font> 등을 통해 이루어질 수 있다.</li>
-<li>저비용, 낮은 가격</li>
+<li>품질 향상을 위한 <strong>표준화, 품질관리 시스템(TQM, SPC 등), 지속적 개선(Kaizen)</strong> 등이 중점적으로 운영 전략에 포함된다.</li>
+<li>고품질은 차별화 전략에서 핵심 경쟁우위 요소로 작용함.</li>
 </ul>
-</dd>
-<dt>Delivery (납기)</dt>
-<dd>
+</section>
+<section id="비용-cost" class="level4">
+<h4 class="anchored" data-anchor-id="비용-cost">비용 (Cost)</h4>
+<p>비용 경쟁력은 제품 또는 서비스를 <strong>최소한의 자원 투입으로 생산</strong>하여 고객에게 <strong>경쟁력 있는 가격</strong>으로 제공하는 능력이다.</p>
+<p><strong>주요 관리 대상</strong></p>
 <ul>
-<li><font color="#245bdb">제품이나 서비스를 제때에 제공하는 능력은 고객 만족도에 큰 영향을 미친다</font>. 납기 준수는 고객의 요구에 맞춰 정확한 시간에 제품을 전달하는 것을 의미한다. 효율적인 물류 시스템과 생산 계획을 통해 납기를 맞추는 것이 중요하다.</li>
-<li>신속한 납기, 짧은 개발기간, 정시 납품</li>
+<li><strong>직접비 절감</strong>: 재료비, 인건비, 가공비 등</li>
+<li><strong>간접비 절감</strong>: 공정 자동화, 에너지 효율, 생산성 향상</li>
+<li><strong>공급망 최적화</strong>: 재고 회전율 개선, 로지스틱스 비용 절감</li>
 </ul>
-</dd>
-<dt>Flexibility (유연성)</dt>
-<dd>
+<p><strong>운영전략 관점</strong></p>
 <ul>
-<li><font color="#245bdb">시장의 변화나 고객의 요구에 빠르게 적응할 수 있는 능력도 중요한 경쟁 요소</font>이다. 유연성은 주문 변경, 생산량 조정, 고객의 특수 요구사항을 처리하는 능력 등 다양한 상황에서 요구될 수 있다.</li>
-<li>제품 유연성, 수량유연성</li>
+<li>대량 생산(Mass Production), 설비 자동화, 생산공정 표준화, JIT 생산 등이 대표적인 운영 전략 요소</li>
+<li>원가우위 전략(Cost Leadership)을 따르는 기업에게 핵심 경쟁 요소</li>
 </ul>
-</dd>
-<dt>Service (서비스)</dt>
-<dd>
+</section>
+<section id="납기-delivery" class="level4">
+<h4 class="anchored" data-anchor-id="납기-delivery">납기 (Delivery)</h4>
+<p>납기경쟁력은 고객이 요구하는 시점에 <strong>정확하고 신속하게 제품이나 서비스를 제공</strong>할 수 있는 능력을 의미한다.</p>
+<p><strong>두 가지 하위 요소</strong></p>
 <ul>
-<li><font color="#245bdb">제품의 품질만큼 중요한 요소는 고객 서비스</font>이다. 제품 판매 후의 지원, 고객과의 소통, 문제 해결 능력 등은 고객의 충성도를 높이고, 장기적으로는 브랜드의 평판을 강화하는 데 중요한 역할을 한다.</li>
+<li><strong>납기 신뢰성(Reliability)</strong>: 약속된 납기 내 정확히 제공</li>
+<li><strong>납기 속도(Speed)</strong>: 고객 주문부터 납품까지의 리드타임 최소화</li>
 </ul>
-</dd>
-</dl>
-<p>이 다섯 가지 요소는 각 기업이 시장에서 경쟁할 때 어떤 요소를 우선시할지 결정하는 기준이 된다. 예를 들어, <strong>고급 브랜드</strong>는 주로 <strong>품질</strong>과 <strong>서비스</strong>에 집중할 수 있고, <strong>가격 경쟁력</strong>을 강조하는 기업은 <strong>비용</strong>과 <strong>납기</strong>를 중시할 수 있다.</p>
+<p><strong>운영전략 관점</strong></p>
+<ul>
+<li>리드타임 단축, 생산 스케줄링 최적화, 물류 시스템 고도화, Pull 시스템 구축</li>
+<li>서비스 산업에서는 고객 대기 시간 최소화와 직결됨</li>
+</ul>
+</section>
+<section id="유연성-flexibility" class="level4">
+<h4 class="anchored" data-anchor-id="유연성-flexibility">4. 유연성 (Flexibility)</h4>
+<p>유연성은 시장 변화나 고객 요구에 대응하여 <strong>생산 제품, 생산량, 납기 등을 빠르게 조정</strong>할 수 있는 능력을 의미한다.</p>
+<p><strong>유연성의 종류</strong></p>
+<ul>
+<li><strong>제품 유연성(Product Flexibility)</strong>: 다양한 제품 라인을 신속하게 생산할 수 있는 능력</li>
+<li><strong>볼륨 유연성(Volume Flexibility)</strong>: 수요 변화에 따라 생산량을 탄력적으로 조절할 수 있는 능력</li>
+<li><strong>변형 유연성(Mix Flexibility)</strong>: 제품 구성을 다양하게 조합할 수 있는 능력</li>
+</ul>
+<p><strong>운영전략 관점</strong></p>
+<ul>
+<li>범용 설비 사용, 크로스 트레이닝된 인력, 모듈화 설계, 셀 생산(Cellular Manufacturing) 등</li>
+<li>소량 다품종 생산, 고객 맞춤화 전략(Mass Customization)에 필수적인 요소</li>
+</ul>
+</section>
+<section id="서비스-service" class="level4">
+<h4 class="anchored" data-anchor-id="서비스-service">5. 서비스 (Service)</h4>
+<p>서비스는 단순히 제품을 넘어서, <strong>고객 경험 전체에 대한 만족도를 향상</strong>시키는 경쟁 요소이다. 특히 제조업에서도 제품의 하자 대응, 고객 커뮤니케이션, A/S 등에서 중요한 차별화 요인으로 작용한다.</p>
+<p><strong>서비스의 구성 요소</strong></p>
+<ul>
+<li><strong>접근성</strong>: 고객이 쉽게 제품이나 서비스를 이용할 수 있는가</li>
+<li><strong>신뢰성</strong>: 서비스가 일관되게 제공되는가</li>
+<li><strong>신속성</strong>: 문제 대응 및 의사결정의 속도</li>
+<li><strong>친절성</strong>: 고객 응대 태도 및 커뮤니케이션 품질</li>
+<li><strong>사후 지원</strong>: A/S, 피드백 반영, 교환/환불 정책 등</li>
+</ul>
+<p><strong>운영전략 관점</strong><br>
+- 고객접점 관리(CRM), 고객 피드백 시스템, AI 기반 챗봇 도입, 현장대응 프로세스 등이 포함됨 - 서비스는 품질 및 납기 요소와 상호작용하며, <strong>고객 충성도 및 재구매율</strong>에 영향을 미친다</p>
+</section>
+<section id="다섯-가지-요소-간-관계-및-전략적-적용" class="level4">
+<h4 class="anchored" data-anchor-id="다섯-가지-요소-간-관계-및-전략적-적용">다섯 가지 요소 간 관계 및 전략적 적용</h4>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>경쟁요소</th>
+<th>전략적 가치</th>
+<th>주요 적용 분야</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>품질</td>
+<td>고객 만족, 브랜드 가치</td>
+<td>고급 소비재, 정밀 기계</td>
+</tr>
+<tr class="even">
+<td>비용</td>
+<td>가격 경쟁력 확보</td>
+<td>대량생산, 원가중심 산업</td>
+</tr>
+<tr class="odd">
+<td>납기</td>
+<td>고객 신뢰, 긴급 수요 대응</td>
+<td>패스트푸드, 온라인 쇼핑</td>
+</tr>
+<tr class="even">
+<td>유연성</td>
+<td>변화 대응, 고객 맞춤화</td>
+<td>IT, 패션, 부품 조립업</td>
+</tr>
+<tr class="odd">
+<td>서비스</td>
+<td>고객 경험 개선, 차별화</td>
+<td>서비스업, B2C 제조업</td>
+</tr>
+</tbody>
+</table>
+<p><strong>운영 전략은 이들 요소 중 하나 또는 그 이상에 초점을 맞추되, 모든 요소를 동시에 최우선으로 추구하는 것은 현실적으로 어렵다.</strong> 따라서 <strong>기업의 경쟁전략, 시장 특성, 고객 요구</strong>에 따라 <strong>우선순위를 명확히 설정</strong>하고, 운영 시스템을 그에 맞게 설계해야 한다. 운영 전략의 다섯 가지 경쟁요소(QCDFS)는 기업의 생산 및 서비스 활동이 고객에게 <strong>지속가능한 가치</strong>를 제공하고 경쟁사 대비 우위를 점하기 위한 핵심 기준이 된다.</p>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 106-1-3">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -737,6 +1015,7 @@ window.Quarto = {
 </div>
 </div>
 </section>
+</section>
 <section id="sec-porter-generic-strategies" class="level3">
 <h3 class="anchored" data-anchor-id="sec-porter-generic-strategies">본원적 경쟁전략</h3>
 <div class="quarto-figure quarto-figure-center">
@@ -745,43 +1024,130 @@ window.Quarto = {
 <figcaption>본원적 전략, https://en.wikipedia.org/wiki/Porter%27s_generic_strategies</figcaption>
 </figure>
 </div>
-<p><font color="#8db3e2"><font color="#1f497d">1</font></font> <font color="#c6d9f0">2</font></p>
-<p>마이클 포터(Michael Porter)의 <strong>본원적 경쟁전략(Generic Competitive Strategy)</strong>은 기업이 경쟁에서 우위를 확보하기 위해 선택할 수 있는 세 가지 기본적인 전략을 제시한 이론이다. 포터는 경쟁 우위를 창출하는 방법으로 <strong>비용 우위(Cost Leadership)</strong>, <strong>차별화(Differentiation)</strong>, <strong>집중화(Focus)</strong> 전략을 제시했다.</p>
+<p>마이클 포터(Michael E. Porter)는 1980년대 초 저서 『경쟁전략(Competitive Strategy)』에서 기업이 경쟁시장에서 지속가능한 경쟁우위를 확보하기 위해 취할 수 있는 <strong>본원적 경쟁전략</strong>을 제시하였다. 이 전략들은 모든 산업과 기업에 적용 가능한 일반적인 전략 유형으로, 사업단위 차원에서 <strong>어떻게 경쟁할 것인가</strong>에 대한 기본 틀을 제공한다.</p>
+<section id="본원적-경쟁전략의-유형" class="level4">
+<h4 class="anchored" data-anchor-id="본원적-경쟁전략의-유형">본원적 경쟁전략의 유형</h4>
+<p>포터는 크게 두 가지 축을 기준으로 세 가지 전략을 도출하였다.</p>
+<ul>
+<li><strong>경쟁 범위</strong>(Competitive Scope)
+<ul>
+<li>전체 시장(광범위 시장)<br>
+</li>
+<li>특정 시장 세분(Niche, 집중 시장)</li>
+</ul></li>
+<li><strong>경쟁 우위 확보 방법</strong>(Competitive Advantage)
+<ul>
+<li>원가우위(Cost Leadership)<br>
+</li>
+<li>차별화(Differentiation)</li>
+</ul></li>
+</ul>
 <table class="caption-top table">
+<colgroup>
+<col style="width: 18%">
+<col style="width: 20%">
+<col style="width: 19%">
+<col style="width: 42%">
+</colgroup>
 <thead>
 <tr class="header">
-<th>전략</th>
-<th>정의</th>
-<th>목표</th>
-<th>장점</th>
-<th>예시</th>
+<th>전략 유형</th>
+<th>경쟁 범위</th>
+<th>경쟁 우위</th>
+<th>전략 핵심 내용</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>비용 우위<br>(Cost Leadership)</strong></td>
-<td>기업이 동일한 <strong>산업 내에서 가장 낮은 비용</strong>으로 제품을 생산하고 제공함으로써 경쟁 우위를 확보하는 전략.</td>
-<td>생산 비용을 절감하고, 가격을 낮춰 시장에서 경쟁력을 확보. 대량 생산, 공정 최적화 등을 통해 비용을 최소화.</td>
-<td><strong>가격 민감도가 높은 고객</strong>을 타겟으로 할 때 유리. 경쟁사들이 가격 경쟁에서 밀려 시장 점유율 확대 가능.</td>
-<td>월마트(Walmart),<br>맥도날드(McDonald’s)</td>
+<td>원가우위 전략</td>
+<td>광범위 시장</td>
+<td>원가 절감</td>
+<td>가장 낮은 비용 구조를 구축하여 가격 경쟁력 확보</td>
 </tr>
 <tr class="even">
-<td><strong>차별화<br>(Differentiation)</strong></td>
-<td>제품이나 서비스가 다른 <strong>경쟁자들과 명확하게 차별화</strong>되어 고객들이 높은 가격을 지불하도록 유도하는 전략.</td>
-<td>제품의 품질, 디자인, 기술, 서비스 등에서 차별성을 강조하여 고객들에게 독특한 가치를 제공.</td>
-<td><strong>브랜드 충성도가 높고</strong>, 가격 민감도가 낮은 고객을 타겟으로 할 수 있다. 경쟁에서 독특한 위치를 차지.</td>
-<td>애플(Apple),<br>테슬라(Tesla)</td>
+<td>차별화 전략</td>
+<td>광범위 시장</td>
+<td>독특성 제공</td>
+<td>독특하고 차별화된 제품/서비스로 고객 충성도 확보</td>
 </tr>
 <tr class="odd">
-<td><strong>집중화<br>(Focus)</strong></td>
-<td>시장의 <strong>특정 세그먼트에 집중</strong>하여, 세그먼트 내에서 비용 우위 또는 차별화 전략으로 경쟁 우위를 확보하는 전략.</td>
-<td>전체 시장을 대상으로 하지 않고 특정 시장 세그먼트나 <strong>틈새 시장에 집중</strong>하여 경쟁 우위를 점함.</td>
-<td>특정 시장의 요구를 잘 이해하고 맞춤화된 제품이나 서비스를 제공. 경쟁이 치열하지 않은 틈새 시장에서 독점적 위치 확보.</td>
-<td>페라리(Ferrari),<br>REI(아웃도어 용품 회사)<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></td>
+<td>집중 전략 (포커스)</td>
+<td>특정 세분시장(Niche)</td>
+<td>원가우위 또는 차별화</td>
+<td>좁은 시장에 특화하여 경쟁 우위 확보</td>
 </tr>
 </tbody>
 </table>
-<p>전략 선택에 있어 포터는 각 기업이 이 <font color="blue">세 가지 전략 중 하나를 선택해야</font> 한다고 강조했다. <font color="red">다양한 전략을 혼합하려는 시도가 종종 실패로 이어질 수 있다</font>는 것이다. 이유는 각 전략이 요구하는 핵심 역량이 다르고, 각 전략을 혼합하면 자원의 집중이 부족해질 수 있기 때문이다. 결론적으로, <font color="blue">포터는 기업이 선택한 전략을 일관되게 유지하고 실행하는 것이 중요하다고 강조</font>했다.</p>
+<p><strong>원가우위 전략</strong> (Cost Leadership)</p>
+<ul>
+<li><strong>목표</strong>: 업계 내 가장 낮은 생산·운영 비용을 달성하여 경쟁사보다 가격 경쟁력 확보<br>
+</li>
+<li><strong>핵심 요소</strong>:
+<ul>
+<li>대량 생산을 통한 규모의 경제 실현<br>
+</li>
+<li>효율적인 공정 및 공급망 관리<br>
+</li>
+<li>비용절감 기술 및 프로세스 혁신<br>
+</li>
+</ul></li>
+<li><strong>위험요소</strong>: 품질 저하, 과도한 원가 절감으로 인한 고객 가치 감소 가능성<br>
+</li>
+<li><strong>적용 예</strong>: 월마트(Walmart), 이케아(IKEA)</li>
+</ul>
+<p><strong>차별화 전략</strong> (Differentiation)</p>
+<ul>
+<li><strong>목표</strong>: 독특하고 우수한 제품·서비스를 제공하여 가격 민감도가 낮은 고객 확보<br>
+</li>
+<li><strong>핵심 요소</strong>:
+<ul>
+<li>브랜드 이미지 및 디자인 차별화<br>
+</li>
+<li>기술 혁신 및 품질 향상<br>
+</li>
+<li>탁월한 고객 서비스<br>
+</li>
+</ul></li>
+<li><strong>위험요소</strong>: 차별화 비용이 너무 커져 가격 경쟁력 상실 가능성<br>
+</li>
+<li><strong>적용 예</strong>: 애플(Apple), 스타벅스(Starbucks)</li>
+</ul>
+<p><strong>집중 전략</strong> (Focus Strategy)</p>
+<ul>
+<li><strong>목표</strong>: 특정 시장 세분 또는 고객군에 집중하여 원가우위 또는 차별화 전략을 실행<br>
+</li>
+<li><strong>핵심 요소</strong>:
+<ul>
+<li>좁은 시장에 특화된 제품/서비스 제공<br>
+</li>
+<li>시장 니즈에 대한 깊은 이해 및 맞춤 대응<br>
+</li>
+</ul></li>
+<li><strong>유형</strong>:
+<ul>
+<li>비용 집중(Cost Focus): 특정 세그먼트 내에서 원가 절감<br>
+</li>
+<li>차별화 집중(Differentiation Focus): 특정 세그먼트 내 차별화<br>
+</li>
+</ul></li>
+<li><strong>위험요소</strong>: 세분시장 축소 시 성장 한계, 광범위 시장 진입 시 경쟁 압력<br>
+</li>
+<li><strong>적용 예</strong>: 고급 시계 브랜드, 프리미엄 맞춤형 제품 업체</li>
+</ul>
+</section>
+<section id="전략-선택-시-고려사항" class="level4">
+<h4 class="anchored" data-anchor-id="전략-선택-시-고려사항">전략 선택 시 고려사항</h4>
+<ul>
+<li><strong>산업 특성 및 경쟁 강도</strong><br>
+</li>
+<li><strong>기업의 핵심 역량 및 자원</strong><br>
+</li>
+<li><strong>시장 세분화 및 고객 요구 변화</strong><br>
+</li>
+<li><strong>기술 변화 및 규제 환경</strong></li>
+</ul>
+<p>포터는 본원적 경쟁전략 중 한 가지 전략에 집중하여 실행하는 것이 효과적이라고 강조하였다. 즉, 전략의 ‘중복’이나 ‘모호성’은 경쟁우위 확보를 어렵게 하며, ‘중간자 위치’(stuck in the middle)에 빠질 위험이 있다고 했다. 마이클 포터의 본원적 경쟁전략은 기업이 명확한 경쟁우위를 창출하기 위한 기본적이고 실용적인 틀을 제공한다.</p>
+</section>
 </section>
 </section>
 <section id="생산전략-수립" class="level2">
@@ -1376,7 +1742,7 @@ window.Quarto = {
 <h3 class="anchored" data-anchor-id="sec-system">시스템</h3>
 <section id="시스템-정의" class="level4">
 <h4 class="anchored" data-anchor-id="시스템-정의">시스템 정의</h4>
-<p><strong>시스템</strong>(system)은 각 구성 요소들이 상호작용 하거나 상호 의존하여 복잡하게 얽힌 통일된 하나의 집합체(unified whole)이다. 또는 이 용어는 복잡한 사회적 체계의 맥락에서 구조와 행동을 통제하는 규칙들의 집합체를 일컫기도 한다. <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<p><strong>시스템</strong>(system)은 각 구성 요소들이 상호작용 하거나 상호 의존하여 복잡하게 얽힌 통일된 하나의 집합체(unified whole)이다. 또는 이 용어는 복잡한 사회적 체계의 맥락에서 구조와 행동을 통제하는 규칙들의 집합체를 일컫기도 한다. <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 <p>어떤 환경에서 주어진 목적을 달성하려는 서로 관련성을 가진 식별 가능한 여러 요소 집합으로 다음과 같은 특성을 가진다.</p>
 <dl>
 <dt>집합성</dt>
@@ -1399,7 +1765,7 @@ window.Quarto = {
 </section>
 <section id="sec-system-thinking" class="level4">
 <h4 class="anchored" data-anchor-id="sec-system-thinking">시스템 사고</h4>
-<p><strong>시스템 사고</strong>(systems thinking)는 세상을 여러 부분으로 나누는 것이 아니라 <strong>전체 관계의 관점에서 바라봄</strong>으로써 세상의 복잡성을 이해하는 방법이다. 시스템 이론과 시스템 과학 등을 이론적인 기반으로 한다. 기존의 분석적 사고가 <strong>환원주의</strong>에 기반하여 대상을 쪼개어 나가는데 반해 시스템적 사고는 <strong>전일주일</strong>(holism)에 기반하여 <font color="blue">대상을 살아있는 유기체로 보며 부분을 넘어선 전체를 파악</font>하려 한다. 시스템 사고는 1950년대 말 MIT 포리스터 교수가 개발한 시스템 다이나믹스(System Dynamics)라는 학문을 뿌리에 두고, 해당 학자들이 어려운 컴퓨터 모델링 부분을 떼어 내어 시스템 사고라는 영역을 만드어 널리 알려졌다. <a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
+<p><strong>시스템 사고</strong>(systems thinking)는 세상을 여러 부분으로 나누는 것이 아니라 <strong>전체 관계의 관점에서 바라봄</strong>으로써 세상의 복잡성을 이해하는 방법이다. 시스템 이론과 시스템 과학 등을 이론적인 기반으로 한다. 기존의 분석적 사고가 <strong>환원주의</strong>에 기반하여 대상을 쪼개어 나가는데 반해 시스템적 사고는 <strong>전일주일</strong>(holism)에 기반하여 <font color="blue">대상을 살아있는 유기체로 보며 부분을 넘어선 전체를 파악</font>하려 한다. 시스템 사고는 1950년대 말 MIT 포리스터 교수가 개발한 시스템 다이나믹스(System Dynamics)라는 학문을 뿌리에 두고, 해당 학자들이 어려운 컴퓨터 모델링 부분을 떼어 내어 시스템 사고라는 영역을 만드어 널리 알려졌다. <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="시스템 다이나믹스(System Dynamics)">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -3054,9 +3420,8 @@ classDef transclass fill:#fcfcfc, stroke:#fcfcfc
 <section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn1"><p><a href="https://en.wikipedia.org/wiki/REI" target="_blank">https://en.wikipedia.org/wiki/REI</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p><a href="https://ko.wikipedia.org/wiki/시스템" target="_blank">https://ko.wikipedia.org/wiki/시스템</a><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p><a href="https://ko.wikipedia.org/wiki/시스템_사고" target="_blank">https://ko.wikipedia.org/wiki/시스템_사고</a><a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p><a href="https://ko.wikipedia.org/wiki/시스템" target="_blank">https://ko.wikipedia.org/wiki/시스템</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p><a href="https://ko.wikipedia.org/wiki/시스템_사고" target="_blank">https://ko.wikipedia.org/wiki/시스템_사고</a><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 
