@@ -471,7 +471,7 @@ Muther 6단계 SLP
 
 **Decoupling Point(디커플링 포인트)**는 생산 및 공급망 관리에서 매우 중요한 개념으로, **고객 주문과 생산 활동이 연결되는 시점**을 의미한다. 즉, 고객의 주문 신호가 공급망과 생산 프로세스에 전달되어 생산 방식이나 재고 운영 방식에 영향을 주는 지점을 말한다.
 
-![분리재고에 따른 생산방식](https://yeonkyupark.github.io/pepc2e/images/production_by_decoupling.png)
+![분리재고에 따른 생산방식](images/production_by_decoupling.png)
 
 #### Make to Stock (MTS) – 재고 후 생산
 
@@ -537,7 +537,7 @@ Decoupling Point는 생산 및 공급망 전략 수립에 있어 핵심적인 �
 
 제품 수명주기(Product Life Cycle, PLC)는 제품이 시장에 도입되어 성장, 성숙, 쇠퇴 단계를 거치는 전 과정을 의미한다. 각 수명주기 단계에 따라 수요 특성, 생산량, 품질 요구 등이 변화하며, 이에 맞는 적절한 생산방식을 선택하는 것이 중요하다.
 
-![제품 수명주기에 따른 생산 방식](https://yeonkyupark.github.io/pepc2e/images/plc.png)
+![제품 수명주기에 따른 생산 방식](images/plc.png)
 
 **제품 수명주기 단계별 특징과 생산방식**
 
@@ -800,4 +800,10 @@ $$
 | **안정성** | 생산 계획과 실적 예측 가능                   | 설비 이상 발생 시 전체 라인 정지 위험
 
 
-**각주**
+## 참고자료  {#sec-ref-0102}
+
+
+*\_EOF\_*
+
+
+
