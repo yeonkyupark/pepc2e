@@ -79,6 +79,35 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-diagram/mermaid-init.js"></script>
 <link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -507,12 +536,44 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#생산-방식" id="toc-생산-방식" class="nav-link active" data-scroll-target="#생산-방식">생산 방식</a>
   <ul>
-  <li><a href="#주요-생산-방식-유형" id="toc-주요-생산-방식-유형" class="nav-link" data-scroll-target="#주요-생산-방식-유형">주요 생산 방식 유형</a></li>
-  <li><a href="#sec-equipment-layout" id="toc-sec-equipment-layout" class="nav-link" data-scroll-target="#sec-equipment-layout">설비 배치에 다른 생산 방식</a>
+  <li><a href="#sec-equipment-layout" id="toc-sec-equipment-layout" class="nav-link" data-scroll-target="#sec-equipment-layout">설비 배치에 른 생산 방식</a>
   <ul class="collapse">
   <li><a href="#sec-equipment-layout-type" id="toc-sec-equipment-layout-type" class="nav-link" data-scroll-target="#sec-equipment-layout-type">배치 유형</a></li>
   <li><a href="#sec-layout-analysis" id="toc-sec-layout-analysis" class="nav-link" data-scroll-target="#sec-layout-analysis">설비 배치 분석 기법</a></li>
   <li><a href="#sec-layout-analysis-computer" id="toc-sec-layout-analysis-computer" class="nav-link" data-scroll-target="#sec-layout-analysis-computer">컴퓨터를 활용한 분석</a></li>
+  </ul></li>
+  <li><a href="#sec-decoupling-point" id="toc-sec-decoupling-point" class="nav-link" data-scroll-target="#sec-decoupling-point">제품 납기에 따른 생산 방식</a>
+  <ul class="collapse">
+  <li><a href="#make-to-stock-mts-재고-후-생산" id="toc-make-to-stock-mts-재고-후-생산" class="nav-link" data-scroll-target="#make-to-stock-mts-재고-후-생산">Make to Stock (MTS) – 재고 후 생산</a></li>
+  <li><a href="#assemble-to-order-ato-조립-후-생산" id="toc-assemble-to-order-ato-조립-후-생산" class="nav-link" data-scroll-target="#assemble-to-order-ato-조립-후-생산">Assemble to Order (ATO) – 조립 후 생산</a></li>
+  <li><a href="#make-to-order-mto-주문-후-생산" id="toc-make-to-order-mto-주문-후-생산" class="nav-link" data-scroll-target="#make-to-order-mto-주문-후-생산">Make to Order (MTO) – 주문 후 생산</a></li>
+  <li><a href="#engineer-to-order-eto-설계-및-생산-후-주문" id="toc-engineer-to-order-eto-설계-및-생산-후-주문" class="nav-link" data-scroll-target="#engineer-to-order-eto-설계-및-생산-후-주문">Engineer to Order (ETO) – 설계 및 생산 후 주문</a></li>
+  <li><a href="#decoupling-point의-중요성" id="toc-decoupling-point의-중요성" class="nav-link" data-scroll-target="#decoupling-point의-중요성">Decoupling Point의 중요성</a></li>
+  </ul></li>
+  <li><a href="#제품-수명주기에-따른-생산-방식" id="toc-제품-수명주기에-따른-생산-방식" class="nav-link" data-scroll-target="#제품-수명주기에-따른-생산-방식">제품 수명주기에 따른 생산 방식</a>
+  <ul class="collapse">
+  <li><a href="#도입기" id="toc-도입기" class="nav-link" data-scroll-target="#도입기">도입기</a></li>
+  <li><a href="#성장기" id="toc-성장기" class="nav-link" data-scroll-target="#성장기">성장기</a></li>
+  <li><a href="#성숙기" id="toc-성숙기" class="nav-link" data-scroll-target="#성숙기">성숙기</a></li>
+  <li><a href="#쇠퇴기" id="toc-쇠퇴기" class="nav-link" data-scroll-target="#쇠퇴기">쇠퇴기</a></li>
+  </ul></li>
+  <li><a href="#대량-맞춤-생산" id="toc-대량-맞춤-생산" class="nav-link" data-scroll-target="#대량-맞춤-생산">대량 맞춤 생산</a>
+  <ul class="collapse">
+  <li><a href="#대량-맞춤-생산-구현-전략" id="toc-대량-맞춤-생산-구현-전략" class="nav-link" data-scroll-target="#대량-맞춤-생산-구현-전략">대량 맞춤 생산 구현 전략</a></li>
+  <li><a href="#대량-맞춤-생산의-장점과-단점" id="toc-대량-맞춤-생산의-장점과-단점" class="nav-link" data-scroll-target="#대량-맞춤-생산의-장점과-단점">대량 맞춤 생산의 장점과 단점</a></li>
+  </ul></li>
+  <li><a href="#다품종-소량생산" id="toc-다품종-소량생산" class="nav-link" data-scroll-target="#다품종-소량생산">다품종 소량생산</a>
+  <ul class="collapse">
+  <li><a href="#주요-도전-과제" id="toc-주요-도전-과제" class="nav-link" data-scroll-target="#주요-도전-과제">주요 도전 과제</a></li>
+  <li><a href="#대응-전략-및-시스템" id="toc-대응-전략-및-시스템" class="nav-link" data-scroll-target="#대응-전략-및-시스템">대응 전략 및 시스템</a></li>
+  <li><a href="#장점과-단점" id="toc-장점과-단점" class="nav-link" data-scroll-target="#장점과-단점">장점과 단점</a></li>
+  </ul></li>
+  <li><a href="#택트타임-생산-방식" id="toc-택트타임-생산-방식" class="nav-link" data-scroll-target="#택트타임-생산-방식">택트타임 생산 방식</a>
+  <ul class="collapse">
+  <li><a href="#takt-time-계산" id="toc-takt-time-계산" class="nav-link" data-scroll-target="#takt-time-계산">Takt Time 계산</a></li>
+  <li><a href="#takt-time-production의-목적과-개념" id="toc-takt-time-production의-목적과-개념" class="nav-link" data-scroll-target="#takt-time-production의-목적과-개념">Takt Time Production의 목적과 개념</a></li>
+  <li><a href="#takt-time-production의-운영-방식" id="toc-takt-time-production의-운영-방식" class="nav-link" data-scroll-target="#takt-time-production의-운영-방식">Takt Time Production의 운영 방식</a></li>
+  <li><a href="#takt-time-production의-장점과-단점" id="toc-takt-time-production의-장점과-단점" class="nav-link" data-scroll-target="#takt-time-production의-장점과-단점">Takt Time Production의 장점과 단점</a></li>
   </ul></li>
   </ul></li>
   </ul>
@@ -549,8 +610,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="생산-방식" class="level2">
 <h2 class="anchored" data-anchor-id="생산-방식">생산 방식</h2>
 <p><strong>생산 방식</strong>(Production Systems)은 제품이나 서비스를 생산하는 데 사용되는 <strong>조직적, 기술적 접근 방법</strong>을 의미한다. 기업은 제품 특성, 생산량, 고객 요구, 기술 수준 등에 따라 적합한 생산 방식을 선택하며, 이는 생산 효율성, 품질, 원가, 납기 등에 직접적인 영향을 미친다.</p>
-<section id="주요-생산-방식-유형" class="level3">
-<h3 class="anchored" data-anchor-id="주요-생산-방식-유형">주요 생산 방식 유형</h3>
+<p>주요 생산 방식 유형은 설비 배치에 따른 생산 방식과 완제품 전환 시점에 따른 생상 방식 등이 있다.</p>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 97-2-1, 106-2-4, 109-4-3, 112-3-6, 121-3-3">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -564,9 +624,8 @@ ul.task-list li input[type="checkbox"] {
 
 </div>
 </div>
-</section>
 <section id="sec-equipment-layout" class="level3">
-<h3 class="anchored" data-anchor-id="sec-equipment-layout">설비 배치에 다른 생산 방식</h3>
+<h3 class="anchored" data-anchor-id="sec-equipment-layout">설비 배치에 른 생산 방식</h3>
 <p><strong>설비 배치</strong>는 사업장 내에서 경제적 활동을 위해 <font color="blue">물리적으로 설비를 배치하는 의사결정</font>이다. 설비 배치 대상은 <font color="blue">공간을 필요로 하는 모든 자원(작업자, 기계, 작업장, 부서, 통로, 창고 등)</font>이 된다.</p>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
@@ -1599,11 +1658,675 @@ style SLP fill:#eef
 </tbody>
 </table>
 <p>활동관련도는 공장 레이아웃 설계에서 <strong>공정의 효율성, 자재 흐름, 작업 동선</strong>을 개선하는 중요한 기준이다. 이를 통해 <strong>불필요한 이동을 줄이고, 생산성을 높이며, 비용을 절감</strong>할 수 있다.</p>
+</section>
+</section>
+</section>
+</section>
+<section id="sec-decoupling-point" class="level3">
+<h3 class="anchored" data-anchor-id="sec-decoupling-point">제품 납기에 따른 생산 방식</h3>
+<p><strong>Decoupling Point(디커플링 포인트)</strong>는 생산 및 공급망 관리에서 매우 중요한 개념으로, <strong>고객 주문과 생산 활동이 연결되는 시점</strong>을 의미한다. 즉, 고객의 주문 신호가 공급망과 생산 프로세스에 전달되어 생산 방식이나 재고 운영 방식에 영향을 주는 지점을 말한다.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://yeonkyupark.github.io/pepc2e/images/production_by_decoupling.png" class="img-fluid figure-img"></p>
+<figcaption>분리재고에 따른 생산방식</figcaption>
+</figure>
+</div>
+<section id="make-to-stock-mts-재고-후-생산" class="level4">
+<h4 class="anchored" data-anchor-id="make-to-stock-mts-재고-후-생산">Make to Stock (MTS) – 재고 후 생산</h4>
+<ul>
+<li><strong>Decoupling Point 위치</strong>: 최종 완제품 재고 지점 (고객 주문 이전)<br>
+</li>
+<li><strong>특징</strong>:
+<ul>
+<li>제품은 수요 예측에 따라 미리 생산되고 재고로 보관<br>
+</li>
+<li>고객 주문 시 즉시 배송 가능<br>
+</li>
+</ul></li>
+<li><strong>장점</strong>: 신속한 납기 대응, 고객 만족도 향상<br>
+</li>
+<li><strong>단점</strong>: 재고 비용 발생, 수요 예측 오류 시 재고 과잉 또는 부족 발생 가능<br>
+</li>
+<li><strong>적용 예</strong>: 식료품, 대중 소비재, 기본 가전제품</li>
+</ul>
+</section>
+<section id="assemble-to-order-ato-조립-후-생산" class="level4">
+<h4 class="anchored" data-anchor-id="assemble-to-order-ato-조립-후-생산">Assemble to Order (ATO) – 조립 후 생산</h4>
+<ul>
+<li><strong>Decoupling Point 위치</strong>: 최종 조립 단계 직전<br>
+</li>
+<li><strong>특징</strong>:
+<ul>
+<li>주요 부품 및 모듈은 미리 생산하여 재고로 보유<br>
+</li>
+<li>고객 주문이 들어오면 부품을 조립하여 완제품 생산 및 출고<br>
+</li>
+</ul></li>
+<li><strong>장점</strong>: 다양한 제품 조합 제공 가능, 납기 단축<br>
+</li>
+<li><strong>단점</strong>: 부품 재고 관리의 복잡성, 조립 공정의 신속성 요구<br>
+</li>
+<li><strong>적용 예</strong>: 컴퓨터, 자동차 일부 모델, 맞춤형 가전제품</li>
+</ul>
+</section>
+<section id="make-to-order-mto-주문-후-생산" class="level4">
+<h4 class="anchored" data-anchor-id="make-to-order-mto-주문-후-생산">Make to Order (MTO) – 주문 후 생산</h4>
+<ul>
+<li><strong>Decoupling Point 위치</strong>: 생산 시작 시점 (고객 주문 후)<br>
+</li>
+<li><strong>특징</strong>:
+<ul>
+<li>완제품 재고를 두지 않고 고객 주문이 들어온 후 생산 시작<br>
+</li>
+<li>고객 맞춤형 제품에 적합<br>
+</li>
+</ul></li>
+<li><strong>장점</strong>: 재고 비용 최소화, 고객 요구에 맞춘 맞춤 생산 가능<br>
+</li>
+<li><strong>단점</strong>: 긴 납기, 생산 계획 및 자원 관리 복잡<br>
+</li>
+<li><strong>적용 예</strong>: 맞춤형 기계, 고급 가구, 항공기 제작</li>
+</ul>
+</section>
+<section id="engineer-to-order-eto-설계-및-생산-후-주문" class="level4">
+<h4 class="anchored" data-anchor-id="engineer-to-order-eto-설계-및-생산-후-주문">Engineer to Order (ETO) – 설계 및 생산 후 주문</h4>
+<ul>
+<li><strong>Decoupling Point 위치</strong>: 설계 및 생산 시작 시점 (주문 후)<br>
+</li>
+<li><strong>특징</strong>:
+<ul>
+<li>고객 주문을 받은 후 제품 설계부터 시작하여 생산<br>
+</li>
+<li>고도의 맞춤화와 복잡한 설계가 요구되는 제품<br>
+</li>
+</ul></li>
+<li><strong>장점</strong>: 고객 요구에 완벽 부합하는 맞춤형 제품 제공<br>
+</li>
+<li><strong>단점</strong>: 매우 긴 납기, 높은 설계 및 생산 비용<br>
+</li>
+<li><strong>적용 예</strong>: 대형 플랜트, 맞춤형 산업장비, 특수 설비</li>
+</ul>
+</section>
+<section id="decoupling-point의-중요성" class="level4">
+<h4 class="anchored" data-anchor-id="decoupling-point의-중요성">Decoupling Point의 중요성</h4>
+<ul>
+<li><strong>공급망 반응 속도</strong>: Decoupling Point 위치에 따라 고객 주문에 대한 공급망의 반응 속도가 결정됨<br>
+</li>
+<li><strong>재고 관리</strong>: 재고가 어느 단계에 위치하느냐에 따라 재고 비용 및 서비스 수준에 영향<br>
+</li>
+<li><strong>생산 계획</strong>: 주문 기반 생산과 재고 기반 생산을 결정하며, 생산 스케줄링에 중요<br>
+</li>
+<li><strong>고객 만족도</strong>: 납기 및 맞춤화 수준에 직접적인 영향</li>
+</ul>
+<p>각 생산 방식을 요약하면 다음과 같다.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 18%">
+<col style="width: 19%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>생산 방식</th>
+<th>Decoupling Point 위치</th>
+<th>특징</th>
+<th>장점</th>
+<th>단점</th>
+<th>주요 적용 사례</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Make to Stock (MTS)</td>
+<td>완제품 재고 지점 (고객 주문 전)</td>
+<td>예측 생산, 즉시 출고 가능</td>
+<td>빠른 납기, 높은 고객 만족도</td>
+<td>재고 비용, 재고 위험</td>
+<td>식료품, 대중 소비재</td>
+</tr>
+<tr class="even">
+<td>Assemble to Order (ATO)</td>
+<td>최종 조립 직전</td>
+<td>부품 재고, 주문 시 조립 시작</td>
+<td>맞춤화 가능, 납기 단축</td>
+<td>부품 재고 관리 복잡</td>
+<td>컴퓨터, 자동차 일부 모델</td>
+</tr>
+<tr class="odd">
+<td>Make to Order (MTO)</td>
+<td>생산 시작 시점 (주문 후)</td>
+<td>주문 후 생산, 재고 없음</td>
+<td>재고 비용 절감, 맞춤화</td>
+<td>긴 납기, 생산 계획 복잡</td>
+<td>맞춤형 기계, 고급 가구</td>
+</tr>
+<tr class="even">
+<td>Engineer to Order (ETO)</td>
+<td>설계 시작 시점 (주문 후)</td>
+<td>주문 후 설계 및 생산</td>
+<td>완전 맞춤형 제품 제공</td>
+<td>매우 긴 납기, 높은 비용</td>
+<td>대형 플랜트, 특수 설비</td>
+</tr>
+</tbody>
+</table>
+<p>Decoupling Point는 생산 및 공급망 전략 수립에 있어 핵심적인 개념이다. 고객 주문과 생산 활동의 연결점을 명확히 함으로써, 기업은 재고 비용과 납기 요구 간 균형을 맞추고, 고객 만족도를 극대화할 수 있다.</p>
+</section>
+</section>
+<section id="제품-수명주기에-따른-생산-방식" class="level3">
+<h3 class="anchored" data-anchor-id="제품-수명주기에-따른-생산-방식">제품 수명주기에 따른 생산 방식</h3>
+<p>제품 수명주기(Product Life Cycle, PLC)는 제품이 시장에 도입되어 성장, 성숙, 쇠퇴 단계를 거치는 전 과정을 의미한다. 각 수명주기 단계에 따라 수요 특성, 생산량, 품질 요구 등이 변화하며, 이에 맞는 적절한 생산방식을 선택하는 것이 중요하다.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://yeonkyupark.github.io/pepc2e/images/plc.png" class="img-fluid figure-img"></p>
+<figcaption>제품 수명주기에 따른 생산 방식</figcaption>
+</figure>
+</div>
+<p><strong>제품 수명주기 단계별 특징과 생산방식</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 28%">
+<col style="width: 25%">
+<col style="width: 35%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>수명주기 단계</th>
+<th>특징</th>
+<th>적합한 생산방식</th>
+<th>생산 방식의 핵심 포인트</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>도입기</td>
+<td>- 수요 불확실성 높음<br>- 생산량 적음<br>- 시장 반응 관찰 필요</td>
+<td>프로젝트 생산 / 주문생산 (MTO, ETO)</td>
+<td>맞춤화 및 유연성 중시, 빠른 설계 변경 대응 필요</td>
+</tr>
+<tr class="even">
+<td>성장기</td>
+<td>- 수요 증가 및 안정화<br>- 생산량 증가<br>- 품질 및 납기 중요</td>
+<td>배치 생산 / 조립 생산 (ATO)</td>
+<td>생산 효율성 및 품질 관리 강화, 제품 변형 가능성 고려</td>
+</tr>
+<tr class="odd">
+<td>성숙기</td>
+<td>- 수요 안정적 대량화<br>- 가격 경쟁 심화<br>- 표준화 요구 증가</td>
+<td>연속 생산 / 조립 생산 (MTS)</td>
+<td>원가 절감과 대량 생산에 초점, 설비 효율 극대화</td>
+</tr>
+<tr class="even">
+<td>쇠퇴기</td>
+<td>- 수요 감소<br>- 제품 다양성 축소<br>- 비용 관리 중요</td>
+<td>배치 생산 / 주문생산 (MTO)</td>
+<td>생산량 감소에 따른 유연성 확보, 재고 최소화 및 비용 절감</td>
+</tr>
+</tbody>
+</table>
+<section id="도입기" class="level4">
+<h4 class="anchored" data-anchor-id="도입기">도입기</h4>
+<ul>
+<li><strong>주요 생산방식</strong>: 프로젝트 생산, 주문 생산(MTO, ETO)<br>
+</li>
+<li><strong>특징</strong>:
+<ul>
+<li>제품이 새로 개발되어 생산 공정과 설비가 안정화되지 않은 상태<br>
+</li>
+<li>고객 맞춤형 생산 요구 많음<br>
+</li>
+<li>소량 생산으로 비용이 높고, 품질 개선과 설계 변경이 빈번함<br>
+</li>
+</ul></li>
+<li><strong>전략 포인트</strong>: 생산 유연성 확보, 빠른 대응력, 품질 관리 강화</li>
+</ul>
+</section>
+<section id="성장기" class="level4">
+<h4 class="anchored" data-anchor-id="성장기">성장기</h4>
+<ul>
+<li><strong>주요 생산방식</strong>: 배치 생산, 조립 생산(ATO)<br>
+</li>
+<li><strong>특징</strong>:
+<ul>
+<li>수요가 급격히 증가하고 시장이 확장됨<br>
+</li>
+<li>생산량 확대와 품질 안정화가 중요<br>
+</li>
+<li>제품 변형과 옵션 다양화 증가<br>
+</li>
+</ul></li>
+<li><strong>전략 포인트</strong>: 생산 효율성과 품질 동시 확보, 생산 전환 시간 단축</li>
+</ul>
+</section>
+<section id="성숙기" class="level4">
+<h4 class="anchored" data-anchor-id="성숙기">성숙기</h4>
+<ul>
+<li><strong>주요 생산방식</strong>: 연속 생산, 조립 생산(MTS)<br>
+</li>
+<li><strong>특징</strong>:
+<ul>
+<li>수요가 안정되고 대량 생산 체계 확립<br>
+</li>
+<li>가격 경쟁 심화로 원가 절감 필수<br>
+</li>
+<li>제품 표준화 및 생산 자동화 진행<br>
+</li>
+</ul></li>
+<li><strong>전략 포인트</strong>: 대규모 설비 투자, 생산성 극대화, 재고 및 납기 관리 최적화</li>
+</ul>
+</section>
+<section id="쇠퇴기" class="level4">
+<h4 class="anchored" data-anchor-id="쇠퇴기">쇠퇴기</h4>
+<ul>
+<li><strong>주요 생산방식</strong>: 배치 생산, 주문 생산(MTO)<br>
+</li>
+<li><strong>특징</strong>:
+<ul>
+<li>수요 감소와 제품 다양성 축소<br>
+</li>
+<li>재고 부담과 비용 관리가 가장 중요한 과제<br>
+</li>
+<li>맞춤형 소량 생산으로 전환하는 경향<br>
+</li>
+</ul></li>
+<li><strong>전략 포인트</strong>: 생산 유연성 유지, 재고 최소화, 비용 절감</li>
+</ul>
+<p>제품 수명주기의 각 단계에 적합한 생산방식을 선택하고 운영하는 것은 생산 효율과 기업 경쟁력 확보에 매우 중요하다. 초기에는 유연성과 맞춤형 생산에 집중하고, 성장과 성숙기에는 생산 규모 확대와 원가 절감에 초점을 맞추며, 쇠퇴기에는 비용 절감과 재고 관리가 핵심이 된다.</p>
+</section>
+</section>
+<section id="대량-맞춤-생산" class="level3">
+<h3 class="anchored" data-anchor-id="대량-맞춤-생산">대량 맞춤 생산</h3>
+<p><strong>대량 맞춤 생산(Mass Customization)</strong>은 대량 생산의 효율성과 맞춤 생산의 다양성을 동시에 추구하는 생산 방식이다. 즉, 표준화된 생산 프로세스를 기반으로 하면서도 고객 개별의 다양한 요구를 반영하여 맞춤형 제품을 대량으로 생산하는 전략이다.</p>
+<p><strong>배경 및 필요성</strong></p>
+<ul>
+<li>소비자의 개별화·다양화된 요구가 증가함에 따라 단순한 대량 생산만으로는 고객 만족과 시장 경쟁력 확보에 한계가 발생<br>
+</li>
+<li>전통적인 맞춤 생산(MTO, ETO)은 고객 요구를 충족시키지만 비용과 납기 측면에서 비효율적<br>
+</li>
+<li>대량 맞춤 생산은 비용 절감과 신속한 대응이 모두 필요한 현대 시장 환경에 적합한 생산 방식</li>
+</ul>
+<p><strong>주요 특징</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 74%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>특징</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>대량 생산의 효율성</td>
+<td>표준화, 모듈화, 자동화된 생산 라인을 통해 대량 생산 효과 확보</td>
+</tr>
+<tr class="even">
+<td>맞춤화의 유연성</td>
+<td>제품 설계, 옵션, 기능 등 고객 요구에 따른 다양한 선택지 제공</td>
+</tr>
+<tr class="odd">
+<td>모듈화 설계</td>
+<td>공통 모듈 및 인터페이스를 활용해 다양한 제품 변형을 쉽게 구현</td>
+</tr>
+<tr class="even">
+<td>신속한 납기</td>
+<td>생산 프로세스의 표준화로 납기 단축과 고객 맞춤형 대응 동시 가능</td>
+</tr>
+</tbody>
+</table>
+<section id="대량-맞춤-생산-구현-전략" class="level4">
+<h4 class="anchored" data-anchor-id="대량-맞춤-생산-구현-전략">대량 맞춤 생산 구현 전략</h4>
+<p><strong>제품 모듈화</strong> (Product Modularization)</p>
+<ul>
+<li>제품을 여러 모듈 단위로 분해하여, 공통 모듈과 선택적 모듈을 조합하는 방식<br>
+</li>
+<li>모듈별 표준화로 생산 효율성과 맞춤화 모두 달성 가능</li>
+</ul>
+<p><strong>유연한 생산 시스템</strong> (Flexible Manufacturing System)</p>
+<ul>
+<li>생산 설비와 공정을 신속하게 변경할 수 있는 시스템 구축<br>
+</li>
+<li>다양한 제품 변형과 주문 변화에 빠르게 대응</li>
+</ul>
+<p><strong>정보기술(IT) 및 디지털화 활용</strong></p>
+<ul>
+<li>고객 주문 데이터와 생산 정보를 실시간으로 연계 관리<br>
+</li>
+<li>CAD/CAM, ERP, SCM 시스템 통합 운영으로 설계부터 생산까지 신속화</li>
+</ul>
+<p><strong>고객과의 협력 강화</strong></p>
+<ul>
+<li>고객 요구를 정확히 반영하기 위한 커스터마이제이션 플랫폼 구축<br>
+</li>
+<li>고객 참여형 설계(co-design)와 맞춤형 옵션 제공</li>
+</ul>
+</section>
+<section id="대량-맞춤-생산의-장점과-단점" class="level4">
+<h4 class="anchored" data-anchor-id="대량-맞춤-생산의-장점과-단점">대량 맞춤 생산의 장점과 단점</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 6%">
+<col style="width: 46%">
+<col style="width: 46%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>구분</th>
+<th>장점</th>
+<th>단점</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>비용</td>
+<td>표준화된 모듈과 대량 생산으로 단가 절감</td>
+<td>초기 시스템 구축 비용 및 설계 복잡성 증가</td>
+</tr>
+<tr class="even">
+<td>납기</td>
+<td>생산 프로세스 최적화로 납기 단축 가능</td>
+<td>주문 다양성 증가에 따른 생산 관리 복잡성</td>
+</tr>
+<tr class="odd">
+<td>품질</td>
+<td>모듈화로 품질 일관성 확보</td>
+<td>맞춤화에 따른 품질 편차 관리 필요</td>
+</tr>
+<tr class="even">
+<td>고객 만족</td>
+<td>고객 맞춤화로 높은 만족도 및 충성도 확보</td>
+<td>고객 요구 과도 시 생산 부담 증가</td>
+</tr>
+</tbody>
+</table>
+<p><strong>적용 사례</strong></p>
+<ul>
+<li><strong>컴퓨터 산업</strong>: 델(Dell)은 고객이 온라인에서 구성 옵션을 선택하면, 공장에서 신속하게 조립하는 대량 맞춤 생산 모델을 구현<br>
+</li>
+<li><strong>자동차 산업</strong>: 토요타, 폭스바겐 등은 공통 플랫폼과 모듈화를 통해 다양한 고객 맞춤형 차량 모델 제공<br>
+</li>
+<li><strong>의류 산업</strong>: 맞춤형 사이즈와 디자인을 제공하는 패션 브랜드들이 디지털 주문 시스템과 유연 생산 도입</li>
+</ul>
+<p>대량 맞춤 생산은 현대 제조업에서 고객 요구 다양화와 생산 효율성 간의 균형을 맞추는 핵심 전략이다.</p>
+</section>
+</section>
+<section id="다품종-소량생산" class="level3">
+<h3 class="anchored" data-anchor-id="다품종-소량생산">다품종 소량생산</h3>
+<p><strong>다품종 소량생산(High-Mix Low-Volume, HMLV)</strong>은 다양한 종류의 제품을 <strong>소량씩 반복 또는 비반복적으로 생산</strong>하는 방식을 의미한다. 현대 제조환경에서는 고객 맞춤화 수요 증가와 제품 수명주기 단축 등의 영향으로 <strong>소량·다변화 생산</strong>이 일반화되고 있으며, 이에 따라 HMLV는 매우 중요한 생산 전략이 되고 있다.</p>
+<p><strong>특징</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 21%">
+<col style="width: 78%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>제품 종류</td>
+<td>매우 다양 (수십~수천 종)</td>
+</tr>
+<tr class="even">
+<td>생산량</td>
+<td>품목별로 소량 (일회성 또는 소량 반복)</td>
+</tr>
+<tr class="odd">
+<td>수요 예측</td>
+<td>어려움, 주문생산 기반이 많음</td>
+</tr>
+<tr class="even">
+<td>생산 방식</td>
+<td>주문생산(MTO), 배치생산, 셀 생산 등 유연한 생산 방식 활용</td>
+</tr>
+<tr class="odd">
+<td>납기 및 품질</td>
+<td>단납기 요구, 품질 및 유연성 동시 확보 필요</td>
+</tr>
+<tr class="even">
+<td>설비 및 인력 운영</td>
+<td>고도의 유연성 및 빠른 셋업 전환 필요</td>
+</tr>
+</tbody>
+</table>
+<p><strong>적용 산업 예시</strong></p>
+<ul>
+<li><strong>정밀 부품 제조</strong>: 반도체, 항공 부품, 의료기기 등<br>
+</li>
+<li><strong>특수 목적 기계</strong>: 자동화 장비, 금형, 공작기계<br>
+</li>
+<li><strong>전자제품 ODM</strong>: 고객별 요구 사양 반영한 기기 제조<br>
+</li>
+<li><strong>커스터마이즈 산업</strong>: 주문형 가구, 프린팅, 소량 출판 등</li>
+</ul>
+<section id="주요-도전-과제" class="level4">
+<h4 class="anchored" data-anchor-id="주요-도전-과제">주요 도전 과제</h4>
+<p><strong>생산 계획의 복잡성</strong></p>
+<ul>
+<li>수요가 불확실하고 제품 종류가 많아 생산 계획 및 일정 수립이 어려움<br>
+</li>
+<li>제품 간 납기 요구 및 우선순위가 상이하여 유연한 대응 필요</li>
+</ul>
+<p><strong>자재 관리의 어려움</strong></p>
+<ul>
+<li>제품이 다양하므로 수많은 BOM과 부품을 관리해야 함<br>
+</li>
+<li>자재의 과잉 또는 부족으로 인한 생산 지연 위험 존재</li>
+</ul>
+<p><strong>잦은 셋업(Setup)과 생산 전환</strong></p>
+<ul>
+<li>품목 변경 시마다 셋업 시간이 필요<br>
+</li>
+<li>셋업 최소화 및 빠른 전환(SMED: Single-Minute Exchange of Dies) 기술이 중요</li>
+</ul>
+<p><strong>품질 유지 및 추적성</strong></p>
+<ul>
+<li>다양한 제품을 동일 설비에서 생산하므로 품질 편차 관리 필요<br>
+</li>
+<li>각 제품에 대한 이력 및 트레이서빌리티 확보 필요</li>
+</ul>
+</section>
+<section id="대응-전략-및-시스템" class="level4">
+<h4 class="anchored" data-anchor-id="대응-전략-및-시스템">대응 전략 및 시스템</h4>
+<p><strong>셀 생산 방식 도입</strong></p>
+<ul>
+<li>다기능 작업자가 셀 내에서 여러 공정을 수행하여 다양한 제품을 유연하게 생산<br>
+</li>
+<li>소량 다품종 환경에 적합한 생산 조직 구성 가능</li>
+</ul>
+<p><strong>ERP / MES 시스템 활용</strong></p>
+<ul>
+<li>복잡한 BOM과 생산 지시를 시스템적으로 통합 관리<br>
+</li>
+<li>실시간 생산 진척, 납기, 재고 상황 파악 가능</li>
+</ul>
+<p><strong>생산 표준화 및 모듈화</strong></p>
+<ul>
+<li>유사한 공정은 표준화하여 반복성과 품질 안정 확보<br>
+</li>
+<li>모듈화된 부품 또는 프로세스를 활용해 설계 및 생산 단순화</li>
+</ul>
+<p><strong>셋업 시간 단축(SMED)</strong></p>
+<ul>
+<li>셋업 작업의 내부/외부 활동을 구분하고 사전 준비를 통해 전환 시간 단축<br>
+</li>
+<li>생산 유연성 향상과 납기 준수를 동시에 달성</li>
+</ul>
+</section>
+<section id="장점과-단점" class="level4">
+<h4 class="anchored" data-anchor-id="장점과-단점">장점과 단점</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 5%">
+<col style="width: 46%">
+<col style="width: 47%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>구분</th>
+<th>장점</th>
+<th>단점</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>유연성</td>
+<td>다양한 고객 요구 대응 가능, 맞춤형 생산에 유리</td>
+<td>생산 계획, 공정, 자재 운영의 복잡성 증가</td>
+</tr>
+<tr class="even">
+<td>납기</td>
+<td>주문형 대응으로 단납기 전략 수립 가능</td>
+<td>생산 전환 시간 증가, 셋업 부담</td>
+</tr>
+<tr class="odd">
+<td>경쟁력</td>
+<td>틈새시장 및 고부가가치 시장에 적합</td>
+<td>대량 생산 대비 원가 경쟁력 낮을 수 있음</td>
+</tr>
+</tbody>
+</table>
+<p>다품종 소량생산은 고객 중심 시대의 핵심 제조 전략 중 하나로, 유연한 생산 시스템, 표준화, 셋업 단축, IT 시스템 통합 등의 전사적 대응이 필요하다.</p>
+</section>
+</section>
+<section id="택트타임-생산-방식" class="level3">
+<h3 class="anchored" data-anchor-id="택트타임-생산-방식">택트타임 생산 방식</h3>
+<p><strong>택트타임(Takt Time)</strong>은 고객 수요에 맞춰 생산 속도를 조절하기 위한 개념으로, <strong>“하나의 제품이 생산되어야 하는 시간 간격”</strong>을 의미한다. <strong>Takt Time Production</strong>은 이러한 택트타임을 기준으로 <strong>생산 공정과 작업량을 균형 있게 배분</strong>하여, <strong>라인의 흐름을 최적화하고 낭비를 제거하는 생산 방식</strong>이다.</p>
+<ul>
+<li>Takt는 독일어 <em>Taktzeit(박자 시간)</em>에서 유래<br>
+</li>
+<li>음악의 박자처럼 일정한 리듬으로 제품을 생산해야 한다는 의미</li>
+</ul>
+<section id="takt-time-계산" class="level4">
+<h4 class="anchored" data-anchor-id="takt-time-계산">Takt Time 계산</h4>
+<p>택트타임 계산식은 다음과 같다.</p>
+<p><span class="math display">\[
+\text{Takt Time = 가용 생산 시간 / 고객 수요량}
+\]</span></p>
+<ul>
+<li>가용 생산 시간: 일정 기간 동안 실제 생산에 투입 가능한 시간 (휴식, 점검 제외)</li>
+<li>고객 수요량: 해당 기간 동안 고객이 요구하는 생산 수량</li>
+</ul>
+<p><strong>예시</strong></p>
+<ul>
+<li>하루 8시간 근무 (480분), 휴식 60분 제외 → 가용 시간: 420분</li>
+<li>고객 수요: 하루 210개 → Takt Time = 420분 / 210개 = 2분/개</li>
+</ul>
+<p>즉, 2분마다 하나씩 제품을 생산해야 고객 수요를 충족할 수 있음</p>
+</section>
+<section id="takt-time-production의-목적과-개념" class="level4">
+<h4 class="anchored" data-anchor-id="takt-time-production의-목적과-개념">Takt Time Production의 목적과 개념</h4>
+<p><strong>목적</strong></p>
+<ul>
+<li>고객 수요에 맞는 생산 리듬 확보<br>
+</li>
+<li>공정 간 작업 시간 균형화 (라인 밸런싱)<br>
+</li>
+<li>과잉 생산, 재공품(WIP) 증가 방지<br>
+</li>
+<li>납기 정확성 향상</li>
+</ul>
+<p><strong>핵심 개념</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 24%">
+<col style="width: 75%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>요소</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Takt Time</strong></td>
+<td>고객 수요 기반의 생산 주기</td>
+</tr>
+<tr class="even">
+<td><strong>Cycle Time</strong></td>
+<td>실제 각 공정의 작업 소요 시간</td>
+</tr>
+<tr class="odd">
+<td><strong>Line Balancing</strong></td>
+<td>모든 공정의 Cycle Time이 Takt Time에 맞도록 균형 조정</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="takt-time-production의-운영-방식" class="level4">
+<h4 class="anchored" data-anchor-id="takt-time-production의-운영-방식">Takt Time Production의 운영 방식</h4>
+<p><strong>생산라인 구성</strong></p>
+<ul>
+<li>작업 공정을 Takt Time에 맞춰 분할<br>
+</li>
+<li>각 작업자가 동일한 시간 내에 각 공정을 완료하도록 라인 구성<br>
+</li>
+<li><strong>이상적인 상태</strong>: 모든 공정의 사이클 타임 = Takt Time</li>
+</ul>
+<p><strong>병목 최소화</strong></p>
+<ul>
+<li>특정 공정이 Takt Time을 초과할 경우 전체 라인이 지연<br>
+</li>
+<li>병목 공정 개선 또는 작업 분할로 시간 맞춤</li>
+</ul>
+<p><strong>유연한 대응</strong></p>
+<ul>
+<li>수요 변화 시 Takt Time 재조정 → 작업 인원·설비 재배치<br>
+</li>
+<li>표준작업(Standard Work) 기반의 유연한 라인 운영 필요</li>
+</ul>
+</section>
+<section id="takt-time-production의-장점과-단점" class="level4">
+<h4 class="anchored" data-anchor-id="takt-time-production의-장점과-단점">Takt Time Production의 장점과 단점</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 9%">
+<col style="width: 42%">
+<col style="width: 48%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>구분</th>
+<th>장점</th>
+<th>단점</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>납기</strong></td>
+<td>고객 수요에 맞춘 납기 준수 용이</td>
+<td>수요 급변 시 라인 재구성 필요</td>
+</tr>
+<tr class="even">
+<td><strong>품질</strong></td>
+<td>일정한 작업 리듬 유지 → 품질 안정</td>
+<td>공정별 시간 균형 어려울 경우 불균형 발생</td>
+</tr>
+<tr class="odd">
+<td><strong>효율성</strong></td>
+<td>WIP 최소화, 리드타임 단축</td>
+<td>작업자 유연성 및 표준작업 체계 구축 필수</td>
+</tr>
+<tr class="even">
+<td><strong>안정성</strong></td>
+<td>생산 계획과 실적 예측 가능</td>
+<td>설비 이상 발생 시 전체 라인 정지 위험</td>
+</tr>
+</tbody>
+</table>
 <p><strong>각주</strong></p>
 
 
-</section>
-</section>
 </section>
 </section>
 </section>
