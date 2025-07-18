@@ -535,8 +535,15 @@ window.Quarto = {
    
   <ul>
   <li><a href="#생산-계획-구조" id="toc-생산-계획-구조" class="nav-link active" data-scroll-target="#생산-계획-구조">생산 계획 구조</a></li>
-  <li><a href="#sec-scheduling" id="toc-sec-scheduling" class="nav-link" data-scroll-target="#sec-scheduling">일정계획</a></li>
-  <li><a href="#sec-app" id="toc-sec-app" class="nav-link" data-scroll-target="#sec-app">APP</a>
+  <li><a href="#sec-scheduling" id="toc-sec-scheduling" class="nav-link" data-scroll-target="#sec-scheduling">일정계획</a>
+  <ul>
+  <li><a href="#공정관리-기능" id="toc-공정관리-기능" class="nav-link" data-scroll-target="#공정관리-기능">공정관리 기능</a>
+  <ul class="collapse">
+  <li><a href="#계획-기능" id="toc-계획-기능" class="nav-link" data-scroll-target="#계획-기능">계획 기능</a></li>
+  <li><a href="#통제-기능" id="toc-통제-기능" class="nav-link" data-scroll-target="#통제-기능">통제 기능</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#sec-app" id="toc-sec-app" class="nav-link" data-scroll-target="#sec-app">총괄생산계획(APP)</a>
   <ul>
   <li><a href="#총괄과-분해" id="toc-총괄과-분해" class="nav-link" data-scroll-target="#총괄과-분해">총괄과 분해</a>
   <ul class="collapse">
@@ -627,18 +634,25 @@ window.Quarto = {
 <ul>
 <li>총괄계획, 인력계획, 자재계획, 외주계획</li>
 </ul>
-<p><strong>단기계획(6개월 이내)</strong><br>
-- 생산계획(분기, 월별, 주별, 일별 예측)</p>
-<p>※ 생산계획 관련 주요 용어<br>
-- <a href="#sec-app" class="quarto-xref"><span>APP</span></a>, aggregate production planning - <a href="#sec-rrp" class="quarto-xref"><span>RRP</span></a>, resource requirements planning - <a href="#sec-mps" class="quarto-xref"><span>MPS</span></a>, master production schedule - <a href="#sec-rccp" class="quarto-xref"><span>RCCP</span></a>, rough cut capability planning - <a href="#sec-mrp" class="quarto-xref"><span>MRP</span></a>, material requirements planning - <a href="#sec-crp" class="quarto-xref"><span>CRP</span></a>, capacity requirements planning</p>
+<p><strong>단기계획(6개월 이내)</strong></p>
+<ul>
+<li>생산계획(분기, 월별, 주별, 일별 예측)</li>
+</ul>
+<p>※ 생산계획 관련 주요 용어</p>
+<ul>
+<li><a href="#sec-app" class="quarto-xref"><span>총괄생산계획(APP)</span></a>, aggregate production planning</li>
+<li><a href="#sec-rrp" class="quarto-xref"><span>RRP</span></a>, resource requirements planning</li>
+<li><a href="#sec-mps" class="quarto-xref"><span>MPS</span></a>, master production schedule</li>
+<li><a href="#sec-rccp" class="quarto-xref"><span>RCCP</span></a>, rough cut capability planning</li>
+<li><a href="#sec-mrp" class="quarto-xref"><span>MRP</span></a>, material requirements planning</li>
+<li><a href="#sec-crp" class="quarto-xref"><span>CRP</span></a>, capacity requirements planning</li>
+</ul>
 </section>
 <section id="sec-scheduling" class="level2">
 <h2 class="anchored" data-anchor-id="sec-scheduling">일정계획</h2>
 <p><strong>일정계획</strong>(scheduling)이란 <font color="blue">생산계획 내지 제조명령을 시간적으로 구체화 하는 과정</font>이다. 생산자원을 합리적으로 이용하여 생산할 품목과 생산량을 예정된 시간에 생산할 수 있도록 계획하고 통제하는 것이다.</p>
 <p><img src="images/Pasted image 20250412105255.png" class="img-fluid"></p>
-<dl>
-<dt>일정계획 종류</dt>
-<dd>
+<p><strong>일정계획 종류</strong></p>
 <ul>
 <li><strong>대 일정계획</strong>(master scheduling)<br>
 기준일정계획이라고도 하며 <font color="blue">수주에서 출하까지</font> 일정계획을 말함</li>
@@ -647,9 +661,7 @@ window.Quarto = {
 <li><strong>소 일정계획</strong>(detail scheduling)<br>
 세부일정계획으로 <font color="blue">작업자, 기계별 일정계획</font>을 말함</li>
 </ul>
-</dd>
-<dt>일정계획 주요 목적</dt>
-<dd>
+<p><strong>일정계획 주요 목적</strong></p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -680,9 +692,7 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-</dd>
-<dt>일정계획 계층 구조</dt>
-<dd>
+<p><strong>일정계획 계층 구조</strong></p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -729,9 +739,7 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-</dd>
-<dt>일정계획 주요 개념</dt>
-<dd>
+<p><strong>일정계획 주요 개념</strong></p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -768,9 +776,7 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-</dd>
-<dt>일정계획 주요 기법</dt>
-<dd>
+<p><strong>일정계획 주요 기법</strong></p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -807,7 +813,8 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-</dd>
+<p>{tbl-colwidths = [“20,40,40”]}</p>
+<dl>
 <dt>일정계획 핵심성과지표(KPI)</dt>
 <dd>
 <table class="caption-top table">
@@ -840,6 +847,7 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
+{tbl-colwidths = [“40,70”]}
 </dd>
 <dt>생산계획 시나리오</dt>
 <dd>
@@ -877,14 +885,15 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
+{tbl-colwidths = [“30,70”]}
 </dd>
-<dt>기준일정</dt>
-<dd>
+</dl>
+<p><strong>기준일정</strong></p>
 <ul>
 <li>작업시간 + 준비작업시간 + 여유시간 + 정체시간</li>
 </ul>
-</dd>
-</dl>
+<section id="공정관리-기능" class="level3">
+<h3 class="anchored" data-anchor-id="공정관리-기능">공정관리 기능</h3>
 <p>공정관리는 계획기능과 통제기능으로 구분할 수 있다.</p>
 <table class="caption-top table">
 <caption>공정관리 구분</caption>
@@ -909,9 +918,9 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-<dl>
-<dt>계획기능 요약</dt>
-<dd>
+<section id="계획-기능" class="level4">
+<h4 class="anchored" data-anchor-id="계획-기능">계획 기능</h4>
+<p><strong>계획기능 요약</strong></p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 25%">
@@ -954,27 +963,22 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-</dd>
-<dt>공정계획(routing)</dt>
-<dd>
+<p><strong>공정계획(routing)</strong></p>
 <ul>
 <li>작업계시에 앞서 능률적이고 경제적인 작업절차를 결정하기 위한 것(<font color="blue">작업방법과 순서가 정해짐</font>)</li>
 </ul>
-</dd>
-<dt>공수계획(작업부하할당, loading)</dt>
-<dd>
+<p><strong>공수계획(작업부하할당, loading)</strong></p>
 <ul>
 <li>생산계획량을 완성하는데 필요한 <font color="blue">인원이나 기계 부하를 결정</font>하게 됨</li>
 </ul>
-</dd>
-<dt>일정계획(scheduling)</dt>
-<dd>
+<p><strong>일정계획(scheduling)</strong></p>
 <ul>
 <li>작업순서와 방법이 결정되고(절차계획), 생산량이 공수로 환산되면(공수계획), 작업 <font color="blue">시작시간과 종료시간을 결정</font>하는 과정</li>
 </ul>
-</dd>
-<dt>통제기능 요약</dt>
-<dd>
+</section>
+<section id="통제-기능" class="level4">
+<h4 class="anchored" data-anchor-id="통제-기능">통제 기능</h4>
+<p><strong>통제기능 요약</strong></p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -1006,26 +1010,15 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-</dd>
-<dt>작업지시(dispatching)</dt>
-<dd>
+<p><strong>작업지시(dispatching)</strong></p>
 <ul>
 <li>절차계획과 일정계획표에 따라서 <font color="blue">생산을 개시</font>하도록 허락</li>
 </ul>
-</dd>
-<dt>능력관리(capacity control)</dt>
-<dd>
+<p><strong>능력관리(capacity control)</strong></p>
 <ul>
 <li>통제단계에서 <font color="blue">실제 능력과 부하를 조사</font>하여 양자 균형을 이루도록 조정</li>
 </ul>
-</dd>
-<dt>진도관리(expedition or follow up)</dt>
-<dd>
-<ul>
-<li>작업배정(작업지시)에 의해 <font color="blue">작업 진도상황이나 과정을 수량적으로 관리</font>하는 것</li>
-</ul>
-</dd>
-</dl>
+<p><strong>진도관리(expedition or follow up)</strong> - 작업배정(작업지시)에 의해 <font color="blue">작업 진도상황이나 과정을 수량적으로 관리</font>하는 것</p>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 112-1-11">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1040,16 +1033,16 @@ window.Quarto = {
 </div>
 </div>
 </section>
+</section>
+</section>
 <section id="sec-app" class="level2">
-<h2 class="anchored" data-anchor-id="sec-app">APP</h2>
+<h2 class="anchored" data-anchor-id="sec-app">총괄생산계획(APP)</h2>
 <p><strong>총괄생산계획</strong>(APP, aggregate production planning)은 중기 수요에 대응하여 산출물 공급을 계획하는 것으로 중기적으로 기업 전반적인 <font color="blue"><strong>생산수준</strong>, <strong>재고수준</strong>, <strong>고용수준</strong></font> 등을 설정한다.</p>
 <ul>
 <li>총괄계획 대상 기간은 6개월에서 2년 수준이며 평균적으로 1년(12개월) 단위로 <font color="blue">중기계획</font> 수립</li>
 <li>수요 충족을 위해 생산설비는 생산능력 범위 내에서 이뤄져야 하고 사업전략에 대한 관련 <font color="blue">비용이 최소</font>가 되도록 수립</li>
 </ul>
-<dl>
-<dt>총괄생산계획 주요 목표</dt>
-<dd>
+<p><strong>총괄생산계획 주요 목표</strong></p>
 <ul>
 <li>이익극대화</li>
 <li>생산비용 최소화</li>
@@ -1060,54 +1053,80 @@ window.Quarto = {
 <li>잔업 및 하청 최소화</li>
 <li>시설 및 설비 이용률 최대화</li>
 </ul>
-</dd>
-</dl>
 <p><strong>총괄생산계획 전략적 대안</strong>은 능동적 또는 수동적으로 수립할 수 있다.</p>
-<dl>
-<dt>능동적 대안</dt>
-<dd>
-<ul>
-<li>수요 이동 촉진</li>
-<li>수요 지연 촉진</li>
-<li>보완적 제품 개발</li>
-</ul>
-</dd>
-<dt>수동적 대안</dt>
-<dd>
-<ul>
-<li>재고수준 변경</li>
-<li>작업자 수준 변경</li>
-<li>생산율 변경</li>
-<li>시간제 작업자 활용</li>
-</ul>
-</dd>
-</dl>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th><strong>능동적 대안</strong></th>
+<th><strong>수동적 대안</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>수요 이동 촉진</td>
+<td>재고 수준 변경</td>
+</tr>
+<tr class="even">
+<td>수요 지연 촉진</td>
+<td>작업자 수준 변경</td>
+</tr>
+<tr class="odd">
+<td>보완적 제품 개발</td>
+<td>생산율 변경</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>시간제 작업자 활용</td>
+</tr>
+</tbody>
+</table>
 <p>총괄생산계획 입력과 산출은 다음과 같다.</p>
-<dl>
-<dt>입력(Input)</dt>
-<dd>
-<ul>
-<li>시장수요, 상황</li>
-<li>제도 및 법규</li>
-<li>경쟁업체 정보</li>
-<li>기술변화(Method)</li>
-<li>인력수급(Man)</li>
-<li>설비능력(Machine)</li>
-<li>재고수준(Material)</li>
-<li>기타 생산관련 정보</li>
-</ul>
-</dd>
-<dt>산출(Output)</dt>
-<dd>
-<ul>
-<li><font color="blue">재고수준</font></li>
-<li><font color="blue">인력 수준(고용/해고)</font></li>
-<li><font color="blue">정규 및 잔업/특근 시간</font></li>
-<li>하청 생산량</li>
-<li>기타 생산계획</li>
-</ul>
-</dd>
-</dl>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 26%">
+<col style="width: 73%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>입력 (Input)</th>
+<th>산출 (Output)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>시장 수요, 상황</td>
+<td><span style="color:blue">재고 수준</span></td>
+</tr>
+<tr class="even">
+<td>제도 및 법규</td>
+<td><span style="color:blue">인력 수준 (고용/해고)</span></td>
+</tr>
+<tr class="odd">
+<td>경쟁업체 정보</td>
+<td><span style="color:blue">정규 및 잔업/특근 시간</span></td>
+</tr>
+<tr class="even">
+<td>기술 변화 (Method)</td>
+<td>하청 생산량</td>
+</tr>
+<tr class="odd">
+<td>인력 수급 (Man)</td>
+<td>기타 생산 계획</td>
+</tr>
+<tr class="even">
+<td>설비 능력 (Machine)</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>재고 수준 (Material)</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>기타 생산 관련 정보</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 124-1-2">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1128,7 +1147,6 @@ window.Quarto = {
 <h4 class="anchored" data-anchor-id="총괄aggregation">총괄(Aggregation)</h4>
 <p>총괄 목적은 <font color="blue">전체 제품군을 대상</font>으로 생산 계획을 세우고, 이를 보다 단순화하여 자원의 배분을 효율적으로 할 수 있도록 한다. 총괄은 제품군을 전체적으로 묶어서 계획을 수립하는 접근 방식이다. 개별 제품의 세부적인 수요 예측을 제외하고, <font color="blue">전체적인 생산량을 고려하여 자원 배분</font>을 한다. 예를 들어, 여러 종류의 제품을 하나의 큰 그룹으로 묶어 생산 계획을 세우고, 이를 통해 자원을 배분하거나 생산능력을 설정한다.</p>
 <table class="caption-top table">
-<caption>총괄 장점과 단점</caption>
 <colgroup>
 <col style="width: 43%">
 <col style="width: 56%">
@@ -1159,7 +1177,6 @@ window.Quarto = {
 <h4 class="anchored" data-anchor-id="분해disaggregation">분해(Disaggregation)</h4>
 <p>분해 목적은 총괄 계획을 <font color="blue">세부적인 생산 계획으로 변환</font>하고, 각 제품에 대해 구체적인 생산량을 설정하여 <font color="blue">세밀한 자원 배분</font>을 한다. 분해는 총괄생산계획에서 설정한 목표나 계획을 개별 제품에 맞게 세분화하여 구체적인 생산 계획을 수립하는 방식이다. 각 제품군이나 제품별로 수요 예측을 반영하여 생산 계획을 세운다.</p>
 <table class="caption-top table">
-<caption>분행 장점과 단점</caption>
 <colgroup>
 <col style="width: 48%">
 <col style="width: 51%">
@@ -1194,29 +1211,11 @@ window.Quarto = {
 <li><strong>총괄(Aggregation)</strong>은 <font color="blue">넓은 범위에서 생산 계획을 설정</font>하며, <strong>분해(Disaggregation)</strong>는 이 <font color="blue">계획을 세부적으로 나누어 각 제품군별로 구체적인 실행 계획을 수립</font>한다.</li>
 <li>총괄은 생산 계획의 기본적인 틀을 제공하고, 분해는 그 틀을 실제 상황에 맞게 실행 가능하도록 변환한다.</li>
 </ul>
-<div class="callout callout-style-default callout-note no-icon callout-titled" title="총괄과 분해">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-총괄과 분해
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<dl>
-<dt><strong>총괄</strong></dt>
-<dd>
-회사는 전체적으로 1,000대의 자동차를 생산할 계획을 세운다. 이때, 총괄생산계획은 1,000대를 생산하는 목표를 설정한다.
-</dd>
-<dt><strong>분해</strong></dt>
-<dd>
-자동차를 3가지 모델(A, B, C)로 나누어 각각의 수요를 예측하고, 각 모델별로 생산 계획을 세운다. 예를 들어, 모델 A는 400대, 모델 B는 500대, 모델 C는 100대로 분해할 수 있다.
-</dd>
-</dl>
-<p><strong>총괄(Aggregation)</strong>은 대규모의 생산 계획을 간단히 설정하는 반면, <strong>분해(Disaggregation)</strong>는 세부적인 계획을 수립하여 실질적인 생산 현장에서 효율적으로 실행할 수 있게 한다. 두 접근 방식은 서로 보완적이며, 기업은 총괄과 분해를 적절히 결합하여 생산 계획을 수립하고 자원을 최적화한다.</p>
-</div>
-</div>
+<p><strong>총괄과 분해 예제</strong> &gt; <strong>총괄</strong> : 회사는 전체적으로 1,000대의 자동차를 생산할 계획을 세운다. 이때, 총괄생산계획은 1,000대를 생산하는 목표를 설정한다.</p>
+<pre><code>**분해**
+: 자동차를 3가지 모델(A, B, C)로 나누어 각각의 수요를 예측하고, 각 모델별로 생산 계획을 세운다. 예를 들어, 모델 A는 400대, 모델 B는 500대, 모델 C는 100대로 분해할 수 있다.
+
+**총괄(Aggregation)**은 대규모의 생산 계획을 간단히 설정하는 반면, **분해(Disaggregation)**는 세부적인 계획을 수립하여 실질적인 생산 현장에서 효율적으로 실행할 수 있게 한다. 두 접근 방식은 서로 보완적이며, 기업은 총괄과 분해를 적절히 결합하여 생산 계획을 수립하고 자원을 최적화한다.</code></pre>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 103-4-3, 112-2-3, 121-2-3">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
