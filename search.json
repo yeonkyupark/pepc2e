@@ -636,7 +636,7 @@
     "href": "0501생산계획수립.html",
     "title": "생산계획 수립",
     "section": "",
-    "text": "생산 계획 구조\n생산계획은 장기, 중기, 단기 계획으로 수립한다.",
+    "text": "생산 계획 구조\n생산계획은 장기, 중기, 단기 계획으로 수립한다.\n장기계획(2년 이상)\n중기계획(6개월 ~ 2년)\n단기계획(6개월 이내)\n- 생산계획(분기, 월별, 주별, 일별 예측)\n※ 생산계획 관련 주요 용어\n- APP, aggregate production planning - RRP, resource requirements planning - MPS, master production schedule - RCCP, rough cut capability planning - MRP, material requirements planning - CRP, capacity requirements planning",
     "crumbs": [
       "05. 공정관리",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>생산계획 수립</span>"
@@ -647,7 +647,7 @@
     "href": "0501생산계획수립.html#생산-계획-구조",
     "title": "생산계획 수립",
     "section": "",
-    "text": "총괄생산계획\n\n\n\n\n장기계획(2년 이상)\n\n\n기업전략 계획, 제품 시장 계획, 재무계획(공장입지, 생산능력계획, 설비투자계획, 사세 확장) 등\n\n\n중기계획(6개월 ~ 2년)\n\n\n총괄계획, 인력계획, 자재계획, 외주계획\n\n\n단기계획(6개월 이내)\n\n\n생산계획(분기, 월별, 주별, 일별 예측)\n\n\n\n\n\n\n\n\n\n생산계획 관련 용어\n\n\n\n\nAPP, aggregate production planning\nRRP, resource requirements planning\nMPS, master production schedule\nRCCP, rough cut capability planning\nMRP, material requirements planning\nCRP, capacity requirements planning",
+    "text": "총괄생산계획\n\n\n\n\n\n기업전략 계획, 제품 시장 계획, 재무계획(공장입지, 생산능력계획, 설비투자계획, 사세 확장) 등\n\n\n\n총괄계획, 인력계획, 자재계획, 외주계획",
     "crumbs": [
       "05. 공정관리",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>생산계획 수립</span>"
