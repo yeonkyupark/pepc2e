@@ -69,7 +69,7 @@ keywords: ["생산계획", "APP", "MPS", "MRP", "RRP", "RCCP", "CRP"]
 |4단계|**작업배정 (Job Assignment)**|작업장 내 세부 작업자/설비에 작업을 배분|
 |5단계|**작업순서결정 (Sequencing)**|각 작업장 내 작업의 실행 순서 결정|
 |6단계|**작업지시 (Dispatching)**|실제 작업 실행에 대한 지시 및 통제|
-: {tbl-colwidths = ["10,40,50"]}
+: {tbl-colwidths = "[10,40,50]"}
 
 **일정계획 주요 개념**
   
@@ -79,7 +79,7 @@ keywords: ["생산계획", "APP", "MPS", "MRP", "RRP", "RCCP", "CRP"]
 |**배정 (Assignment)**|할당된 작업을 어떤 개별 기계나 작업자에게 어떻게 배정할 것인가|라인 1의 작업자 김 씨에게 오전에 A작업 배정|
 |**Sequencing**|같은 작업장에서 작업의 수행 순서를 정하는 것|A → B → C 순으로 작업|
 |**Dispatching**|작업 지시를 실제로 실행하는 것|김 씨, 지금 A작업 시작하세요|
-: {tbl-colwidths = ["20,40,40"]}
+: {tbl-colwidths = "[20,40,40]"}
 
 **일정계획 주요 기법**
   
@@ -89,7 +89,7 @@ keywords: ["생산계획", "APP", "MPS", "MRP", "RRP", "RCCP", "CRP"]
 |동적 스케줄링|우선순위 규칙 (SPT, LPT, EDD 등)|작업 상황에 따라 실시간 우선순위 결정|
 |휴리스틱 기법|SPT(최단처리시간우선), EDD(납기우선) 등|단순 규칙 기반의 일정 결정 방식|
 |최적화 기법|선형계획법, 시뮬레이션, 제약이론(TOC)|수학적 모델 기반 최적 해 도출|
-{tbl-colwidths = ["20,40,40"]}
+{tbl-colwidths = "[20,40,40]"}
 
 일정계획 핵심성과지표(KPI)
 :  
@@ -100,7 +100,7 @@ keywords: ["생산계획", "APP", "MPS", "MRP", "RRP", "RCCP", "CRP"]
 |평균 리드타임|생산 시작부터 완료까지 소요 시간|
 |WIP 수준|생산 중인 재공품 수량|
 |대기시간|작업 간 대기 발생 시간의 총합|
-{tbl-colwidths = ["40,70"]}
+{tbl-colwidths = "[40,70]"}
 
 생산계획 시나리오
 :  
@@ -111,7 +111,7 @@ keywords: ["생산계획", "APP", "MPS", "MRP", "RRP", "RCCP", "CRP"]
 |작업 배정|1조 라인의 기계 M1: A제품 오전 생산1조 라인의 기계 M2: A제품 오후 생산|
 |Sequencing|M1: A1 → A2 → A3 순서로 작업|
 |Dispatching|M1 작업자에게 A1 작업 즉시 지시|
-{tbl-colwidths = ["30,70"]}
+{tbl-colwidths = "[30,70]"}
 
 **기준일정**  
 
@@ -216,7 +216,7 @@ keywords: ["생산계획", "APP", "MPS", "MRP", "RRP", "RCCP", "CRP"]
 | 설비 능력 (Machine)  |                                               |
 | 재고 수준 (Material) |                                               |
 | 기타 생산 관련 정보      |                                               |
-: {tbl-colwidths=["50,50"]}
+: {tbl-colwidths="[50,50]"}
 
 
 
