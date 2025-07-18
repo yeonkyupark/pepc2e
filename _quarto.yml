@@ -44,7 +44,7 @@ book:
       - 0302물류관리.qmd
     - part: "04. 재고관리"
       chapters:
-      - 0401재고관리.qmd
+      - 0401재고관리.md
     - part: "05. 공정관리"
       chapters:
       - 0501생산계획수립.qmd
