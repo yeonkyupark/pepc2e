@@ -510,7 +510,18 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#공정설계와-연계-개념" id="toc-공정설계와-연계-개념" class="nav-link" data-scroll-target="#공정설계와-연계-개념">공정설계와 연계 개념</a></li>
   <li><a href="#실무-적용-사례" id="toc-실무-적용-사례" class="nav-link" data-scroll-target="#실무-적용-사례">실무 적용 사례</a></li>
   </ul></li>
-  <li><a href="#참고자료" id="toc-참고자료" class="nav-link" data-scroll-target="#참고자료">참고자료</a></li>
+  <li><a href="#참고자료" id="toc-참고자료" class="nav-link" data-scroll-target="#참고자료">참고자료</a>
+  <ul>
+  <li><a href="#공정-fmea-분석-사례" id="toc-공정-fmea-분석-사례" class="nav-link" data-scroll-target="#공정-fmea-분석-사례">공정 FMEA 분석 사례</a>
+  <ul class="collapse">
+  <li><a href="#공정-fmea의-목적" id="toc-공정-fmea의-목적" class="nav-link" data-scroll-target="#공정-fmea의-목적">공정 FMEA의 목적</a></li>
+  <li><a href="#분석-절차-요약" id="toc-분석-절차-요약" class="nav-link" data-scroll-target="#분석-절차-요약">분석 절차 요약</a></li>
+  <li><a href="#fmea-평가-기준-예시" id="toc-fmea-평가-기준-예시" class="nav-link" data-scroll-target="#fmea-평가-기준-예시">FMEA 평가 기준 (예시)</a></li>
+  <li><a href="#공정-fmea-분석-사례-전자-부품-조립-공정" id="toc-공정-fmea-분석-사례-전자-부품-조립-공정" class="nav-link" data-scroll-target="#공정-fmea-분석-사례-전자-부품-조립-공정">공정 FMEA 분석 사례 – 전자 부품 조립 공정</a></li>
+  <li><a href="#개선-조치-예시" id="toc-개선-조치-예시" class="nav-link" data-scroll-target="#개선-조치-예시">개선 조치 예시</a></li>
+  <li><a href="#공정-fmea-활용-팁" id="toc-공정-fmea-활용-팁" class="nav-link" data-scroll-target="#공정-fmea-활용-팁">공정 FMEA 활용 팁</a></li>
+  </ul></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/yeonkyupark/pepc2e/edit/main/0502공정설계.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
     </div>
@@ -760,9 +771,222 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="참고자료" class="level2">
 <h2 class="anchored" data-anchor-id="참고자료">참고자료</h2>
+<section id="공정-fmea-분석-사례" class="level3">
+<h3 class="anchored" data-anchor-id="공정-fmea-분석-사례">공정 FMEA 분석 사례</h3>
+<p><strong>공정 FMEA(Process FMEA)</strong>는 제조 또는 조립 공정에서 <strong>잠재적인 실패 모드(Failure Mode)</strong>를 사전에 식별하고, 그 영향(Effect)과 원인(Cause)을 분석하여 <strong>사전 예방 조치와 우선순위</strong>를 결정하기 위한 체계적 기법이다.</p>
+<section id="공정-fmea의-목적" class="level4">
+<h4 class="anchored" data-anchor-id="공정-fmea의-목적">공정 FMEA의 목적</h4>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>목적</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>사전 예방</td>
+<td>실패 가능성을 사전에 제거 또는 완화</td>
+</tr>
+<tr class="even">
+<td>품질 향상</td>
+<td>불량률 저감, 공정 안정성 확보</td>
+</tr>
+<tr class="odd">
+<td>고객 클레임 방지</td>
+<td>중요 특성에 대한 리스크 관리</td>
+</tr>
+<tr class="even">
+<td>우선순위 기반 개선 활동</td>
+<td>높은 위험 항목에 자원 집중</td>
+</tr>
+<tr class="odd">
+<td>표준화 및 지속적 개선 기반 마련</td>
+<td>개선활동의 근거 확보 및 이력관리</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="분석-절차-요약" class="level4">
+<h4 class="anchored" data-anchor-id="분석-절차-요약">분석 절차 요약</h4>
+<ol type="1">
+<li>공정 단계(Process Step) 정의<br>
+</li>
+<li>잠재적 실패 모드(Failure Mode) 도출<br>
+</li>
+<li>실패 영향(Effect), 원인(Cause), 현재 관리 방법(Current Control) 기록<br>
+</li>
+<li>심각도(S), 발생도(O), 검출도(D) 평가 → RPN 산출<br>
+</li>
+<li>개선 조치 정의 및 후속 RPN 재산정</li>
+</ol>
+</section>
+<section id="fmea-평가-기준-예시" class="level4">
+<h4 class="anchored" data-anchor-id="fmea-평가-기준-예시">FMEA 평가 기준 (예시)</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 58%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>평가 항목</th>
+<th>설명</th>
+<th>점수 범위</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Severity (S)</strong></td>
+<td>실패 시 결과의 심각도</td>
+<td>1 (경미) ~ 10 (치명적)</td>
+</tr>
+<tr class="even">
+<td><strong>Occurrence (O)</strong></td>
+<td>실패가 발생할 가능성</td>
+<td>1 (거의 없음) ~ 10 (매우 빈번)</td>
+</tr>
+<tr class="odd">
+<td><strong>Detection (D)</strong></td>
+<td>실패 발생 시 탐지 가능성</td>
+<td>1 (쉽게 검출) ~ 10 (탐지 어려움)</td>
+</tr>
+<tr class="even">
+<td><strong>RPN</strong></td>
+<td>Risk Priority Number = S × O × D</td>
+<td>최대 1,000</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="공정-fmea-분석-사례-전자-부품-조립-공정" class="level4">
+<h4 class="anchored" data-anchor-id="공정-fmea-분석-사례-전자-부품-조립-공정">공정 FMEA 분석 사례 – 전자 부품 조립 공정</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 15%">
+<col style="width: 17%">
+<col style="width: 19%">
+<col style="width: 21%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 4%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>공정 단계</th>
+<th>잠재 실패 모드</th>
+<th>영향</th>
+<th>원인</th>
+<th>현재 통제수단</th>
+<th>S</th>
+<th>O</th>
+<th>D</th>
+<th>RPN</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>SMT 인쇄</td>
+<td>솔더 미인쇄</td>
+<td>납땜 불량, 오작동</td>
+<td>스퀴지 압력 부족</td>
+<td>인쇄기 설정 기준</td>
+<td>7</td>
+<td>4</td>
+<td>5</td>
+<td>140</td>
+</tr>
+<tr class="even">
+<td>부품 장착</td>
+<td>부품 방향 오류</td>
+<td>기능 불량, 고장</td>
+<td>방향 인식센서 미작동</td>
+<td>비전시스템, 수기 확인</td>
+<td>9</td>
+<td>3</td>
+<td>4</td>
+<td>108</td>
+</tr>
+<tr class="odd">
+<td>리플로우</td>
+<td>과열</td>
+<td>부품 손상</td>
+<td>온도 프로파일 오류</td>
+<td>자동 온도 제어</td>
+<td>8</td>
+<td>2</td>
+<td>3</td>
+<td>48</td>
+</tr>
+<tr class="even">
+<td>검사 공정</td>
+<td>불량 누락</td>
+<td>고객 클레임</td>
+<td>검사기 오작동</td>
+<td>AOI 검사 + 수기 확인</td>
+<td>10</td>
+<td>2</td>
+<td>6</td>
+<td>120</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="개선-조치-예시" class="level4">
+<h4 class="anchored" data-anchor-id="개선-조치-예시">개선 조치 예시</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 15%">
+<col style="width: 55%">
+<col style="width: 15%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>실패 모드</th>
+<th>조치 전 RPN</th>
+<th>개선 조치 예시</th>
+<th>조치 후 RPN</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>솔더 미인쇄</td>
+<td>140</td>
+<td>스퀴지 압력 자동 감지 및 경고 시스템 추가</td>
+<td>7×2×3 = 42</td>
+</tr>
+<tr class="even">
+<td>방향 오류</td>
+<td>108</td>
+<td>방향 인식 비전 알고리즘 개선 + 자동 Reject 기능</td>
+<td>9×2×2 = 36</td>
+</tr>
+<tr class="odd">
+<td>검사 누락</td>
+<td>120</td>
+<td>AOI 추가 카메라 보강 + 주기적 검교정</td>
+<td>10×1×2 = 20</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="공정-fmea-활용-팁" class="level4">
+<h4 class="anchored" data-anchor-id="공정-fmea-활용-팁">공정 FMEA 활용 팁</h4>
+<ul>
+<li>RPN이 높더라도 <strong>Severity 점수</strong>가 9 이상이면 반드시 조치 고려</li>
+<li>반복적 개선 활동 후에도 지속적 모니터링 필요</li>
+<li><strong>표준작업서(SOP)</strong>, <strong>교육훈련</strong>, <strong>작업장 감리</strong>와 병행 활용</li>
+<li>FMEA는 정적 문서가 아닌 <strong>Living Document</strong>로 관리</li>
+</ul>
 <p><em>_EOD_</em></p>
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->
