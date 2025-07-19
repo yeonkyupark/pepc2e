@@ -505,7 +505,17 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">목차</h2>
    
   <ul>
-  <li><a href="#sec-work-priority" id="toc-sec-work-priority" class="nav-link active" data-scroll-target="#sec-work-priority">작업순서</a>
+  <li><a href="#작업계획-수립" id="toc-작업계획-수립" class="nav-link active" data-scroll-target="#작업계획-수립">작업계획 수립</a>
+  <ul>
+  <li><a href="#목적" id="toc-목적" class="nav-link" data-scroll-target="#목적">목적</a></li>
+  <li><a href="#작업계획-수립의-계층-구조" id="toc-작업계획-수립의-계층-구조" class="nav-link" data-scroll-target="#작업계획-수립의-계층-구조">작업계획 수립의 계층 구조</a></li>
+  <li><a href="#작업계획-수립-절차" id="toc-작업계획-수립-절차" class="nav-link" data-scroll-target="#작업계획-수립-절차">작업계획 수립 절차</a></li>
+  <li><a href="#주요-스케줄링-방법" id="toc-주요-스케줄링-방법" class="nav-link" data-scroll-target="#주요-스케줄링-방법">5. 주요 스케줄링 방법</a></li>
+  <li><a href="#작업-우선순위-규칙-예시" id="toc-작업-우선순위-규칙-예시" class="nav-link" data-scroll-target="#작업-우선순위-규칙-예시">작업 우선순위 규칙 예시</a></li>
+  <li><a href="#고려해야-할-제약-조건" id="toc-고려해야-할-제약-조건" class="nav-link" data-scroll-target="#고려해야-할-제약-조건">고려해야 할 제약 조건</a></li>
+  <li><a href="#작업계획-수립의-성과지표-kpi" id="toc-작업계획-수립의-성과지표-kpi" class="nav-link" data-scroll-target="#작업계획-수립의-성과지표-kpi">작업계획 수립의 성과지표 (KPI)</a></li>
+  </ul></li>
+  <li><a href="#sec-work-priority" id="toc-sec-work-priority" class="nav-link" data-scroll-target="#sec-work-priority">작업 우선순서</a>
   <ul>
   <li><a href="#단일설비-기준" id="toc-단일설비-기준" class="nav-link" data-scroll-target="#단일설비-기준">단일설비 기준</a></li>
   <li><a href="#다중설비-기준" id="toc-다중설비-기준" class="nav-link" data-scroll-target="#다중설비-기준">다중설비 기준</a>
@@ -552,6 +562,234 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="작업계획-수립" class="level2">
+<h2 class="anchored" data-anchor-id="작업계획-수립">작업계획 수립</h2>
+<p>작업계획 수립(Work Scheduling / Shop Floor Scheduling)이란, <strong>공장에서의 구체적인 생산 작업을 일정에 따라 계획하고 통제</strong>하는 활동으로, 생산 자원을 적절히 배분하여 <strong>납기 준수, 자원 활용도 향상, 생산 흐름 안정화</strong>를 달성하는 것을 목표로 한다.</p>
+<section id="목적" class="level3">
+<h3 class="anchored" data-anchor-id="목적">목적</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>목적</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>납기 준수</strong></td>
+<td>고객 요구 일자에 맞춰 생산 작업을 계획</td>
+</tr>
+<tr class="even">
+<td><strong>설비 및 인력 활용 극대화</strong></td>
+<td>유휴 시간 최소화 및 부하 균형화</td>
+</tr>
+<tr class="odd">
+<td><strong>재공 재고 최소화</strong></td>
+<td>흐름 생산 실현 및 재고 비용 절감</td>
+</tr>
+<tr class="even">
+<td><strong>리드타임 단축</strong></td>
+<td>병목 제거 및 작업 간 대기시간 감소</td>
+</tr>
+<tr class="odd">
+<td><strong>생산 효율성 제고</strong></td>
+<td>체계적 일정 관리로 생산성 향상</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="작업계획-수립의-계층-구조" class="level3">
+<h3 class="anchored" data-anchor-id="작업계획-수립의-계층-구조">작업계획 수립의 계층 구조</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 21%">
+<col style="width: 35%">
+<col style="width: 42%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>계층</th>
+<th>주요 내용</th>
+<th>계획 단위</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>S&amp;OP</strong></td>
+<td>수요-공급 일치 전략 계획</td>
+<td>월 단위</td>
+</tr>
+<tr class="even">
+<td><strong>MPS</strong></td>
+<td>최종 제품별 생산 계획</td>
+<td>주 단위</td>
+</tr>
+<tr class="odd">
+<td><strong>MRP</strong></td>
+<td>부품, 자재 소요 계획</td>
+<td>주~일 단위</td>
+</tr>
+<tr class="even">
+<td><strong>RCCP/CRP</strong></td>
+<td>자원능력 확인</td>
+<td>주~일 단위</td>
+</tr>
+<tr class="odd">
+<td><strong>작업계획 (Detailed Scheduling)</strong></td>
+<td>작업 지시 및 작업 순서 계획</td>
+<td>일/시간 단위</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="작업계획-수립-절차" class="level3">
+<h3 class="anchored" data-anchor-id="작업계획-수립-절차">작업계획 수립 절차</h3>
+<ol type="1">
+<li><strong>작업 지시 접수</strong>
+<ul>
+<li>MRP 또는 MPS로부터 작업오더 생성</li>
+</ul></li>
+<li><strong>공정 라우팅(Routing) 확인</strong>
+<ul>
+<li>각 작업 오더의 작업 단계 및 소요시간 파악</li>
+</ul></li>
+<li><strong>설비 및 자원 가용성 확인</strong>
+<ul>
+<li>설비, 인력, 재료 등의 사용 가능 시간 확인</li>
+</ul></li>
+<li><strong>우선순위 결정</strong>
+<ul>
+<li>납기일, 중요도, FIFO 등 기준에 따라 우선순위 부여</li>
+</ul></li>
+<li><strong>스케줄링 방식 선택</strong>
+<ul>
+<li>순차 작업, 병렬 작업 등 적합한 방식 적용</li>
+</ul></li>
+<li><strong>작업 할당</strong>
+<ul>
+<li>각 작업을 공정/설비/작업자에게 할당</li>
+</ul></li>
+<li><strong>진행 모니터링 및 재조정</strong>
+<ul>
+<li>실적 피드백 및 지연 발생 시 재계획</li>
+</ul></li>
+</ol>
+</section>
+<section id="주요-스케줄링-방법" class="level3">
+<h3 class="anchored" data-anchor-id="주요-스케줄링-방법">5. 주요 스케줄링 방법</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>방법</th>
+<th>설명</th>
+<th>특징</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Forward Scheduling</strong></td>
+<td>가능한 가장 빠른 시점에 시작</td>
+<td>납기보다 이른 완료 가능</td>
+</tr>
+<tr class="even">
+<td><strong>Backward Scheduling</strong></td>
+<td>납기일에 맞춰 역방향으로 계획</td>
+<td>재고 최소화, Just-in-Time</td>
+</tr>
+<tr class="odd">
+<td><strong>Infinite Loading</strong></td>
+<td>설비 능력 무시, 단순 시간 기준</td>
+<td>이론적 일정, 과부하 위험</td>
+</tr>
+<tr class="even">
+<td><strong>Finite Loading</strong></td>
+<td>설비 능력 고려하여 작업 할당</td>
+<td>실제 실행 가능한 계획 수립</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="작업-우선순위-규칙-예시" class="level3">
+<h3 class="anchored" data-anchor-id="작업-우선순위-규칙-예시">작업 우선순위 규칙 예시</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>규칙</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>FCFS (First Come First Served)</strong></td>
+<td>도착 순으로 작업</td>
+</tr>
+<tr class="even">
+<td><strong>EDD (Earliest Due Date)</strong></td>
+<td>가장 빠른 납기 기준</td>
+</tr>
+<tr class="odd">
+<td><strong>SPT (Shortest Processing Time)</strong></td>
+<td>가장 짧은 작업 먼저</td>
+</tr>
+<tr class="even">
+<td><strong>CR (Critical Ratio)</strong></td>
+<td>남은 시간 / 남은 작업량 기준</td>
+</tr>
+<tr class="odd">
+<td><strong>Slack Time</strong></td>
+<td>여유시간이 적은 작업 우선</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="고려해야-할-제약-조건" class="level3">
+<h3 class="anchored" data-anchor-id="고려해야-할-제약-조건">고려해야 할 제약 조건</h3>
+<ul>
+<li><strong>설비 가동 가능 시간</strong></li>
+<li><strong>작업자 숙련도 및 가용성</strong></li>
+<li><strong>재료 및 부품의 입고 일정</strong></li>
+<li><strong>설비 정비 계획</strong></li>
+<li><strong>우선 고객 및 긴급 주문 요청</strong></li>
+<li><strong>다품종 혼류생산 시 제품 전환 시간</strong></li>
+</ul>
+</section>
+<section id="작업계획-수립의-성과지표-kpi" class="level3">
+<h3 class="anchored" data-anchor-id="작업계획-수립의-성과지표-kpi">작업계획 수립의 성과지표 (KPI)</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>지표</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>납기준수율 (OTD)</strong></td>
+<td>제시간에 납품된 작업 비율</td>
+</tr>
+<tr class="even">
+<td><strong>설비가동률 (Utilization)</strong></td>
+<td>설비 유효 가동 시간 비율</td>
+</tr>
+<tr class="odd">
+<td><strong>스케줄 준수율</strong></td>
+<td>계획 대비 실제 작업 일정 수행률</td>
+</tr>
+<tr class="even">
+<td><strong>재공품 체류시간</strong></td>
+<td>공정 내 체류 재공 시간 평균</td>
+</tr>
+<tr class="odd">
+<td><strong>변동 대응율</strong></td>
+<td>계획 대비 변동에 대한 조정 능력</td>
+</tr>
+</tbody>
+</table>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 97-1-12, 106-2-6, 121-3-6">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -565,8 +803,10 @@ ul.task-list li input[type="checkbox"] {
 
 </div>
 </div>
+</section>
+</section>
 <section id="sec-work-priority" class="level2">
-<h2 class="anchored" data-anchor-id="sec-work-priority">작업순서</h2>
+<h2 class="anchored" data-anchor-id="sec-work-priority">작업 우선순서</h2>
 <p>주문생산은 다양한 일감을 상이한 순서로 작업하므로 <font color="#245bdb">작업순서 결정과 부하 결정</font> 문제가 생산성에 영향을 미친다. 통상 공장에서는 작업 순서가 동일할 경우를 대비하여 서너개의 작업 <font color="#245bdb">우선순위 규칙(Priority rule), 작업배정규칙(Dispatching rule)을 함께 사용</font>한다.</p>
 <p><strong>우선순위 규칙 평가 기준</strong>은 다음과 같다.</p>
 <ul>
@@ -631,66 +871,34 @@ ul.task-list li input[type="checkbox"] {
     22[최소여유시간 우선]
     23["잔여작업&lt;br&gt;최소여유시간 우선"]
     end
-  작업순서 --- s01 &amp; s02
+  s00[작업 우선순위] --- s01 &amp; s02
 </pre>
 </div>
 <p></p></figure><p></p>
 </div>
 </div>
 </div>
-<p>작업순서를 단일 설비이나 다중 설비냐에 따라 결정 방식을 적절히 선택한다.</p>
+<p>작업순서를 단일 설비냐 다중 설비냐에 따라 결정 방식을 적절히 선택한다.</p>
 <section id="단일설비-기준" class="level3">
 <h3 class="anchored" data-anchor-id="단일설비-기준">단일설비 기준</h3>
 <p><font color="blue"><strong>단일 설비 일정 계획 기준</strong></font> 다음과 같은 작업 순서 결정 방식이 있다.</p>
-<dl>
-<dt>작업순서 결정 방법</dt>
-<dd>
+<p><strong>작업순서 결정 방법</strong></p>
 <ul>
-<li><dl>
-<dt><strong>선착순 우선</strong>(FCFS, first come first served)</dt>
-<dd>
-도착 순서에 따라 처리
-</dd>
-</dl></li>
-<li><dl>
-<dt><strong>최단 처리 시간법</strong>(SPT, shortest process time)</dt>
-<dd>
-처리 시간이 짧은 작업부터 실행
-</dd>
-</dl></li>
-<li><dl>
-<dt><strong>납기 우선법</strong>(EDD, earliest due date)</dt>
-<dd>
-납기일이 도래하는 작업부터 실행
-</dd>
-</dl></li>
-<li><dl>
-<dt><strong>긴급률 법</strong>(CR, critical ratio)</dt>
-<dd>
+<li><strong>선착순 우선</strong>(FCFS, first come first served): 도착 순서에 따라 처리</li>
+<li><strong>최단 처리 시간법</strong>(SPT, shortest process time): 처리 시간이 짧은 작업부터 실행</li>
+<li><strong>납기 우선법</strong>(EDD, earliest due date): 납기일이 도래하는 작업부터 실행</li>
+<li><strong>긴급률 법</strong>(CR, critical ratio):
 <ul>
 <li>최종 잔여일까지 남은 시간과 작업을 처리하기 위해 소요되는 시간 간 비율을 나타내며 비율이 작은 작업부터 처리하는 규칙</li>
 <li>CR이 1보다 작으면 작업이 지연된 상태임</li>
-</ul>
-</dd>
-</dl></li>
-<li><dl>
-<dt><strong>최소 여유 시간법</strong>(s)</dt>
-<dd>
-납기일까지 남은 여유시간이 가장 짧은 작업부터 진행
-</dd>
-</dl></li>
-<li><dl>
-<dt><strong>잔여 작업 최소 여유시간 우선 처리법</strong>(STP/OP)</dt>
-<dd>
+</ul></li>
+<li><strong>최소 여유 시간법</strong>(s): 납기일까지 남은 여유시간이 가장 짧은 작업부터 진행</li>
+<li><strong>잔여 작업 최소 여유시간 우선 처리법</strong>(STP/OP):
 <ul>
 <li>(최종납기 잔여작업 처리 소요시간)/(잔여작업일수)</li>
 <li>잔여작업 평균유휴시간 크기를 산출하여 이 값이 가장 작은 것부터 처리함, 작업이 지연되는 경우 STP/OP 값이 음(-) 값을 가짐</li>
+</ul></li>
 </ul>
-</dd>
-</dl></li>
-</ul>
-</dd>
-</dl>
 <div class="callout callout-style-default callout-important no-icon callout-titled" title="작업우선순위 규칙">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -758,7 +966,6 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
-<hr>
 <dl>
 <dt>선착우선(FCFS)</dt>
 <dd>
@@ -911,10 +1118,10 @@ ul.task-list li input[type="checkbox"] {
 </table>
 </div>
 </div>
-<p><font color="blue"><strong>n개 작업을 2대 기계에서 작업할 경우</strong></font> 우선 순위 규칙은 <a href="#sec-johnson-rule" class="quarto-xref"><span>존슨법</span></a>(Johnson’s rule)을 적용할 수 있다.</p>
 </section>
 <section id="다중설비-기준" class="level3">
 <h3 class="anchored" data-anchor-id="다중설비-기준">다중설비 기준</h3>
+<p><font color="blue"><strong>n개 작업을 2대 기계에서 작업할 경우</strong></font> 우선 순위 규칙은 <a href="#sec-johnson-rule" class="quarto-xref"><span>존슨법</span></a>(Johnson’s rule)을 적용할 수 있다.</p>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 100-3-5, 103-1-11">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1126,8 +1333,7 @@ Petrov방법
 </section>
 <section id="참고자료" class="level2">
 <h2 class="anchored" data-anchor-id="참고자료">참고자료</h2>
-<hr>
-<p><strong>각주</strong></p>
+<p><em>_EOD_</em></p>
 
 
 </section>
