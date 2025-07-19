@@ -536,7 +536,34 @@ window.Quarto = {
   <ul>
   <li><a href="#sec-standard-time" id="toc-sec-standard-time" class="nav-link active" data-scroll-target="#sec-standard-time">표준시간</a>
   <ul>
-  <li><a href="#sec-rating" id="toc-sec-rating" class="nav-link" data-scroll-target="#sec-rating">레이팅</a></li>
+  <li><a href="#표준시간" id="toc-표준시간" class="nav-link" data-scroll-target="#표준시간">표준시간</a>
+  <ul class="collapse">
+  <li><a href="#표준시간의-구성" id="toc-표준시간의-구성" class="nav-link" data-scroll-target="#표준시간의-구성">표준시간의 구성</a></li>
+  <li><a href="#표준시간의-목적" id="toc-표준시간의-목적" class="nav-link" data-scroll-target="#표준시간의-목적">표준시간의 목적</a></li>
+  <li><a href="#표준시간-측정-방법" id="toc-표준시간-측정-방법" class="nav-link" data-scroll-target="#표준시간-측정-방법">표준시간 측정 방법</a></li>
+  <li><a href="#여유시간의-종류" id="toc-여유시간의-종류" class="nav-link" data-scroll-target="#여유시간의-종류">여유시간의 종류</a></li>
+  <li><a href="#예시-계산" id="toc-예시-계산" class="nav-link" data-scroll-target="#예시-계산">예시 계산</a></li>
+  <li><a href="#활용-사례" id="toc-활용-사례" class="nav-link" data-scroll-target="#활용-사례">활용 사례</a></li>
+  <li><a href="#주의사항-및-유의점" id="toc-주의사항-및-유의점" class="nav-link" data-scroll-target="#주의사항-및-유의점">주의사항 및 유의점</a></li>
+  </ul></li>
+  <li><a href="#sec-rating" id="toc-sec-rating" class="nav-link" data-scroll-target="#sec-rating">레이팅</a>
+  <ul class="collapse">
+  <li><a href="#레이팅의-필요성" id="toc-레이팅의-필요성" class="nav-link" data-scroll-target="#레이팅의-필요성">레이팅의 필요성</a></li>
+  <li><a href="#주요-레이팅-방식" id="toc-주요-레이팅-방식" class="nav-link" data-scroll-target="#주요-레이팅-방식">주요 레이팅 방식</a></li>
+  <li><a href="#레이팅-계수-예시" id="toc-레이팅-계수-예시" class="nav-link" data-scroll-target="#레이팅-계수-예시">레이팅 계수 예시</a></li>
+  <li><a href="#작업시간-산정-예시" id="toc-작업시간-산정-예시" class="nav-link" data-scroll-target="#작업시간-산정-예시">작업시간 산정 예시</a></li>
+  <li><a href="#레이팅-수행-시-유의사항" id="toc-레이팅-수행-시-유의사항" class="nav-link" data-scroll-target="#레이팅-수행-시-유의사항">레이팅 수행 시 유의사항</a></li>
+  </ul></li>
+  <li><a href="#주요-레이팅-방식-1" id="toc-주요-레이팅-방식-1" class="nav-link" data-scroll-target="#주요-레이팅-방식-1">주요 레이팅 방식</a>
+  <ul class="collapse">
+  <li><a href="#평준화법" id="toc-평준화법" class="nav-link" data-scroll-target="#평준화법">평준화법</a></li>
+  <li><a href="#westinghouse법" id="toc-westinghouse법" class="nav-link" data-scroll-target="#westinghouse법">Westinghouse법</a></li>
+  <li><a href="#속도-레이팅" id="toc-속도-레이팅" class="nav-link" data-scroll-target="#속도-레이팅">속도 레이팅</a></li>
+  <li><a href="#객관적-레이팅" id="toc-객관적-레이팅" class="nav-link" data-scroll-target="#객관적-레이팅">객관적 레이팅</a></li>
+  <li><a href="#합성-레이팅" id="toc-합성-레이팅" class="nav-link" data-scroll-target="#합성-레이팅">합성 레이팅</a></li>
+  <li><a href="#노력-평가법" id="toc-노력-평가법" class="nav-link" data-scroll-target="#노력-평가법">노력 평가법</a></li>
+  <li><a href="#sam-레이팅-필름" id="toc-sam-레이팅-필름" class="nav-link" data-scroll-target="#sam-레이팅-필름">SAM 레이팅 필름</a></li>
+  </ul></li>
   <li><a href="#sec-allowance-time" id="toc-sec-allowance-time" class="nav-link" data-scroll-target="#sec-allowance-time">여유시간</a></li>
   <li><a href="#여유율-계산" id="toc-여유율-계산" class="nav-link" data-scroll-target="#여유율-계산">여유율 계산</a></li>
   </ul></li>
@@ -573,7 +600,7 @@ window.Quarto = {
 <div>
   <div class="abstract">
     <div class="block-title">Abstract</div>
-    표준시간은 실 작업&gt;시간인 정미시간과 작업에 불가피한 여유시간 합으로 계산된다. 정미시간은 관측시간에 레이팅을 반영하여 계산하고 여유시간은 일반여유, 특수여유, 장려여유를 고혀한다. 표준이란 이익 또는 편의가 공정하게 얻어지도록 통일, 단순화를 목적으로 규정을 결정하는 것이고, 표준화는 표준을 설정하고 이것을 활용하는 조직적 행위를 의미한다.
+    표준시간은 실 작업 시간인 정미시간과 작업에 불가피한 여유시간 합으로 계산된다. 정미시간은 관측시간에 레이팅을 반영하여 계산하고 여유시간은 일반여유, 특수여유, 장려여유를 고혀한다. 표준이란 이익 또는 편의가 공정하게 얻어지도록 통일, 단순화를 목적으로 규정을 결정하는 것이고, 표준화는 표준을 설정하고 이것을 활용하는 조직적 행위를 의미한다.
   </div>
 </div>
 
@@ -616,6 +643,188 @@ window.Quarto = {
 <p><span id="eq-st"><span class="math display">\[
 표준시간(ST) = 정미시간(NT) + 여유시간(AT) = 관측시간 \times (1+레이팅) + 여유시간
 \tag{14.1}\]</span></span></p>
+<section id="표준시간" class="level3">
+<h3 class="anchored" data-anchor-id="표준시간">표준시간</h3>
+<p><strong>표준시간</strong>이란, 숙련된 작업자가 정상적인 작업 조건하에서 정해진 작업을 수행하는 데 필요한 <strong>합리적인 시간</strong>을 의미한다. 작업 계획, 스케줄링, 원가계산, 인원배치, 성과 평가 등 생산관리의 기준으로 활용되며 <strong>측정된 순작업 시간</strong>에 여러 보정 요소(여유율 등)를 고려하여 산정한다.</p>
+<section id="표준시간의-구성" class="level4">
+<h4 class="anchored" data-anchor-id="표준시간의-구성">표준시간의 구성</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 64%">
+<col style="width: 35%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>구성 요소</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>순수작업시간 (Normal Time)</strong></td>
+<td>실제 측정된 작업시간 × 성능평가 계수</td>
+</tr>
+<tr class="even">
+<td><strong>여유시간 (Allowance Time)</strong></td>
+<td>휴식, 지연, 피로 등을 고려한 시간</td>
+</tr>
+<tr class="odd">
+<td><strong>표준시간 (Standard Time)</strong></td>
+<td>순수작업시간 + 여유시간</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="blockquote">
+<p><code>표준시간 = 순수작업시간 × (1 + 여유율)</code></p>
+</blockquote>
+</section>
+<section id="표준시간의-목적" class="level4">
+<h4 class="anchored" data-anchor-id="표준시간의-목적">표준시간의 목적</h4>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>목적</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>생산 계획 수립</strong></td>
+<td>작업량 및 인력, 설비 필요 시간 산정</td>
+</tr>
+<tr class="even">
+<td><strong>스케줄링</strong></td>
+<td>생산 흐름 최적화 및 납기 계획</td>
+</tr>
+<tr class="odd">
+<td><strong>원가 계산</strong></td>
+<td>작업별 인건비 및 제조원가 추정</td>
+</tr>
+<tr class="even">
+<td><strong>성과 관리</strong></td>
+<td>작업자 평가 및 인센티브 기준 설정</td>
+</tr>
+<tr class="odd">
+<td><strong>생산성 분석</strong></td>
+<td>생산 효율성과 병목 원인 파악</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="표준시간-측정-방법" class="level4">
+<h4 class="anchored" data-anchor-id="표준시간-측정-방법">표준시간 측정 방법</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>방법</th>
+<th>설명</th>
+<th>특징</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>시간 연구 (Time Study)</strong></td>
+<td>스톱워치를 이용한 반복 관찰</td>
+<td>가장 널리 사용, 숙련 작업자 필요</td>
+</tr>
+<tr class="even">
+<td><strong>작업 표준화 분석법 (PMTS)</strong></td>
+<td>동작 단위를 기준으로 시간 합산</td>
+<td>미세 동작 분석 가능, 정밀도 높음</td>
+</tr>
+<tr class="odd">
+<td><strong>작업 샘플링 (Work Sampling)</strong></td>
+<td>무작위 관찰로 작업 비율 추정</td>
+<td>대량 데이터에 유리, 간접작업 측정에 적합</td>
+</tr>
+<tr class="even">
+<td><strong>경험치, 데이터베이스 활용</strong></td>
+<td>과거 자료나 ERP 기준시간 사용</td>
+<td>보정 필요, 빠른 산정 가능</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="여유시간의-종류" class="level4">
+<h4 class="anchored" data-anchor-id="여유시간의-종류">여유시간의 종류</h4>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>유형</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>필요(일반) 여유</strong></td>
+<td>피로 회복, 생리적 필요 등</td>
+</tr>
+<tr class="even">
+<td><strong>지연(특수) 여유</strong></td>
+<td>기계 고장, 재료 지연 등</td>
+</tr>
+<tr class="odd">
+<td><strong>기타 여유</strong></td>
+<td>작업 환경 변화, 보완 활동 등</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="예시-계산" class="level4">
+<h4 class="anchored" data-anchor-id="예시-계산">예시 계산</h4>
+<p>작업자가 반복 작업을 수행하며 평균 작업시간은 6분, 성능평가 계수는 1.1, 여유율은 15%라고 가정하면:</p>
+<ul>
+<li><strong>순수작업시간</strong> = 6분 × 1.1 = 6.6분<br>
+</li>
+<li><strong>표준시간</strong> = 6.6분 × (1 + 0.15) = <strong>7.59분</strong></li>
+</ul>
+</section>
+<section id="활용-사례" class="level4">
+<h4 class="anchored" data-anchor-id="활용-사례">활용 사례</h4>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>활용 분야</th>
+<th>활용 방식</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>생산 계획</strong></td>
+<td>표준시간 기준 생산량/설비 계획 수립</td>
+</tr>
+<tr class="even">
+<td><strong>작업자 배치</strong></td>
+<td>인력 수요 계산 및 라인 밸런싱</td>
+</tr>
+<tr class="odd">
+<td><strong>성과 평가</strong></td>
+<td>작업자 생산성 평가 및 보상 기준</td>
+</tr>
+<tr class="even">
+<td><strong>공정 개선</strong></td>
+<td>병목 공정 분석 및 Takt Time 조정</td>
+</tr>
+<tr class="odd">
+<td><strong>원가 계산</strong></td>
+<td>공임 계산, 표준 제조원가 산정 등</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="주의사항-및-유의점" class="level4">
+<h4 class="anchored" data-anchor-id="주의사항-및-유의점">주의사항 및 유의점</h4>
+<ul>
+<li>작업자 숙련도, 환경 변화에 따라 지속적 보정 필요</li>
+<li>여유율은 <strong>작업 종류별로 차등 적용</strong>해야 함</li>
+<li><strong>표준작업방법</strong>이 먼저 정의되어야 신뢰성 있는 표준시간 설정 가능</li>
+<li>작업표준서(SOP)와 연계 관리가 중요함</li>
+</ul>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 127-1-13">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -629,30 +838,597 @@ window.Quarto = {
 
 </div>
 </div>
+</section>
+</section>
 <section id="sec-rating" class="level3">
 <h3 class="anchored" data-anchor-id="sec-rating">레이팅</h3>
+<p><strong>레이팅(Rating)</strong>이란, 작업자가 수행한 실제 작업 속도를 <strong>정상적인 작업 속도와 비교하여 상대적인 성능 수준을 평가</strong>하는 방법이다. 이는 <strong>순수작업시간(Normal Time)</strong>을 산정할 때 반드시 필요한 보정 계수이다.</p>
+<blockquote class="blockquote">
+<p>순수작업시간 = 실제 측정 시간 × 레이팅 계수 (Performance Rating Factor)</p>
+</blockquote>
+<hr>
+<section id="레이팅의-필요성" class="level4">
+<h4 class="anchored" data-anchor-id="레이팅의-필요성">레이팅의 필요성</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>작업 속도 차이 보정</td>
+<td>개인의 숙련도, 피로도, 자세 등으로 인한 시간 차이 보정</td>
+</tr>
+<tr class="even">
+<td>표준화된 기준 확보</td>
+<td>공정하고 일관된 작업시간 산정을 위함</td>
+</tr>
+<tr class="odd">
+<td>인센티브 및 성과 평가</td>
+<td>능력 수준에 따른 보상 체계 형성</td>
+</tr>
+<tr class="even">
+<td>정확한 표준시간 산출</td>
+<td>계획, 배치, 원가에 영향을 주는 핵심 변수</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="주요-레이팅-방식" class="level4">
+<h4 class="anchored" data-anchor-id="주요-레이팅-방식">주요 레이팅 방식</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>방식</th>
+<th>설명</th>
+<th>특징</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Westinghouse System</strong></td>
+<td>능력, 노력, 상태, 일관성 4개 항목을 평가</td>
+<td>가장 체계적, 교육 필요</td>
+</tr>
+<tr class="even">
+<td><strong>Synthetic Rating</strong></td>
+<td>동작 시간 데이터와 성능 기준 데이터베이스 비교</td>
+<td>자료 기반 접근, 객관성 높음</td>
+</tr>
+<tr class="odd">
+<td><strong>Objective Rating</strong></td>
+<td>노력 수준 × 속도계수로 평가</td>
+<td>시간연구와 분리 가능, 독립적</td>
+</tr>
+<tr class="even">
+<td><strong>Speed Rating (속도비교법)</strong></td>
+<td>숙련 작업자의 표준 속도(100%) 기준 상대 속도 평가</td>
+<td>가장 보편적, 주관성 개입 우려</td>
+</tr>
+<tr class="odd">
+<td><strong>Standard Performance Rating</strong></td>
+<td>시간연구원 기준 숙련자 속도를 100으로 두고 평가</td>
+<td>일반적인 기준 시간 설정</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="레이팅-계수-예시" class="level4">
+<h4 class="anchored" data-anchor-id="레이팅-계수-예시">레이팅 계수 예시</h4>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>실제 작업 속도</th>
+<th>레이팅 계수</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>매우 느림 (80%)</td>
+<td>0.80</td>
+</tr>
+<tr class="even">
+<td>느림 (90%)</td>
+<td>0.90</td>
+</tr>
+<tr class="odd">
+<td>정상 (100%)</td>
+<td>1.00</td>
+</tr>
+<tr class="even">
+<td>빠름 (110%)</td>
+<td>1.10</td>
+</tr>
+<tr class="odd">
+<td>매우 빠름 (120%)</td>
+<td>1.20</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="작업시간-산정-예시" class="level4">
+<h4 class="anchored" data-anchor-id="작업시간-산정-예시">작업시간 산정 예시</h4>
+<blockquote class="blockquote">
+<p>실제 측정 시간: 5.5분<br>
+평가된 레이팅: 110%</p>
+</blockquote>
+<ul>
+<li><strong>순수작업시간</strong> = 5.5분 × 1.10 = <strong>6.05분</strong></li>
+<li>(이후 여유율 15% 적용 시)<br>
+</li>
+<li><strong>표준시간</strong> = 6.05분 × (1 + 0.15) = <strong>6.96분</strong></li>
+</ul>
+</section>
+<section id="레이팅-수행-시-유의사항" class="level4">
+<h4 class="anchored" data-anchor-id="레이팅-수행-시-유의사항">레이팅 수행 시 유의사항</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>숙련도 기준</strong></td>
+<td>’정상적인 숙련된 작업자’의 속도를 기준으로 삼아야 함</td>
+</tr>
+<tr class="even">
+<td><strong>평가자 일관성 확보</strong></td>
+<td>동일한 기준과 관찰력을 유지해야 함</td>
+</tr>
+<tr class="odd">
+<td><strong>주관성 최소화</strong></td>
+<td>기준 영상, DB, 동시 평가로 편차 축소</td>
+</tr>
+<tr class="even">
+<td><strong>동작별 분할 평가</strong></td>
+<td>전체 작업이 아닌 세부 동작별 레이팅 적용 가능</td>
+</tr>
+<tr class="odd">
+<td><strong>표준작업법 확보</strong></td>
+<td>표준 동작이 없으면 레이팅 신뢰도 하락</td>
+</tr>
+</tbody>
+</table>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
 <p></p><figure class="figure"><p></p>
 <div>
-<pre class="mermaid mermaid-js">flowchart LR
+<pre class="mermaid mermaid-js">flowchart TB
 
 00["레이팅 기법"]
-10["평준화법&lt;br&gt;Westing house법"]
+10["평준화법"]
+11["Westinghouse법"]
 20["속도 레이팅&lt;br&gt;(주관적 평가법)"]
 30["객관적 레이팅"]
 40["합성 레이팅"]
 50["노력 평가법"]
 60["SAM 레이팅 필름"]
 
-00 --- 10 &amp; 20 &amp; 30 &amp; 40 &amp; 50 &amp; 60
+00 --- 10 &amp; 11 &amp; 20 &amp; 30 &amp; 40 &amp; 50 &amp; 60
 </pre>
 </div>
 <p></p></figure><p></p>
 </div>
 </div>
 </div>
+</section>
+</section>
+<section id="주요-레이팅-방식-1" class="level3">
+<h3 class="anchored" data-anchor-id="주요-레이팅-방식-1">주요 레이팅 방식</h3>
+<section id="평준화법" class="level4">
+<h4 class="anchored" data-anchor-id="평준화법">평준화법</h4>
+<p><strong>평준화법(Normalization Method)</strong>은 시간연구(Time Study) 시 <strong>작업자의 실제 작업 속도를 정상적인 기준 속도(표준 속도)에 맞춰 조정(보정)</strong>하는 방식이다. 즉, <strong>실제 측정된 작업 시간에 레이팅 계수를 곱하여 ‘정상적’ 작업자가 수행할 것으로 기대되는 시간으로 환산</strong>하는 기법이다.</p>
+<blockquote class="blockquote">
+<p>핵심 목적: <strong>작업자의 능력 차이를 제거하고 공정한 시간 기준을 설정</strong>하기 위함</p>
+</blockquote>
+<section id="개념-공식" class="level5">
+<h5 class="anchored" data-anchor-id="개념-공식">개념 공식</h5>
+<blockquote class="blockquote">
+<p><strong>순수작업시간 (Normal Time) = 실제 시간 × 레이팅 계수</strong></p>
+</blockquote>
+<ul>
+<li>실제 시간이 빠르면 레이팅 계수는 1보다 크고,<br>
+</li>
+<li>느리면 레이팅 계수는 1보다 작다.</li>
+</ul>
+</section>
+<section id="절차-요약" class="level5">
+<h5 class="anchored" data-anchor-id="절차-요약">절차 요약</h5>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>단계</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>① 측정</td>
+<td>작업자의 실제 작업 시간을 스톱워치로 측정</td>
+</tr>
+<tr class="even">
+<td>② 평가</td>
+<td>관찰자가 작업자의 <strong>수행 속도를 기준 속도(100%)와 비교</strong>하여 레이팅 결정</td>
+</tr>
+<tr class="odd">
+<td>③ 보정</td>
+<td>실제 시간에 레이팅 계수를 곱하여 <strong>정상 작업 기준 시간(순수작업시간)</strong> 도출</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="예시" class="level5">
+<h5 class="anchored" data-anchor-id="예시">예시</h5>
+<blockquote class="blockquote">
+<ul>
+<li>측정 시간: 4.8분<br>
+</li>
+<li>작업자의 수행 속도는 기준보다 빠르다고 평가되어 <strong>레이팅 120% 적용</strong></li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>순수작업시간 = 4.8분 × 1.20 = 5.76분</strong></li>
+</ul>
+<blockquote class="blockquote">
+<p>이 순수작업시간에 여유율을 반영하면 표준시간이 된다.</p>
+</blockquote>
+</section>
+<section id="장점-및-특징" class="level5">
+<h5 class="anchored" data-anchor-id="장점-및-특징">장점 및 특징</h5>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>장점</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>작업자 숙련도 차이 제거</strong></td>
+<td>공정하고 비교 가능한 작업 시간 도출 가능</td>
+</tr>
+<tr class="even">
+<td><strong>표준 기준 확립</strong></td>
+<td>모든 시간 데이터가 동일한 기준(100%)으로 환산됨</td>
+</tr>
+<tr class="odd">
+<td><strong>시간연구와 연계 쉬움</strong></td>
+<td>스톱워치 기반 시간연구와 함께 자주 사용됨</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="한계-및-주의점" class="level5">
+<h5 class="anchored" data-anchor-id="한계-및-주의점">한계 및 주의점</h5>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>주관성 개입 위험</strong></td>
+<td>관찰자의 숙련도와 편향에 따라 레이팅 편차 발생 가능</td>
+</tr>
+<tr class="even">
+<td><strong>관찰자 간 일관성 필요</strong></td>
+<td>동일 작업이라도 평가자마다 다른 보정이 적용될 수 있음</td>
+</tr>
+<tr class="odd">
+<td><strong>표준 작업 정의 전제 필요</strong></td>
+<td>기준 작업 속도가 명확하지 않으면 기준이 불명확해짐</td>
+</tr>
+<tr class="even">
+<td><strong>정량적 기준 부족</strong></td>
+<td>정성적 평가가 주이므로 시스템화/자동화가 어려움</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="평준화법-vs-웨스팅하우스법-비교" class="level5">
+<h5 class="anchored" data-anchor-id="평준화법-vs-웨스팅하우스법-비교">평준화법 vs 웨스팅하우스법 비교</h5>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 8%">
+<col style="width: 36%">
+<col style="width: 54%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>구분</th>
+<th>평준화법 (Normalization)</th>
+<th>웨스팅하우스법 (Westinghouse System)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>평가 요소</td>
+<td>수행 속도 1가지</td>
+<td>능력, 노력, 상태, 일관성의 4가지</td>
+</tr>
+<tr class="even">
+<td>평가 방식</td>
+<td>직관적 속도 비교</td>
+<td>요소별 평가값 합산</td>
+</tr>
+<tr class="odd">
+<td>적용 방식</td>
+<td>스톱워치 시간에 보정계수 곱</td>
+<td>요소별 등급 매긴 후 합산하여 보정</td>
+</tr>
+<tr class="even">
+<td>장점</td>
+<td>단순, 신속</td>
+<td>세밀한 평가 가능</td>
+</tr>
+<tr class="odd">
+<td>단점</td>
+<td>주관성 큼, 정밀도 낮음</td>
+<td>복잡, 교육 필요</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="westinghouse법" class="level4">
+<h4 class="anchored" data-anchor-id="westinghouse법">Westinghouse법</h4>
+<p><strong>웨스팅하우스법(Westinghouse System)</strong>은 작업자의 수행 능력을 4가지 항목(능력, 노력, 작업 조건, 일관성)으로 분리하여 <strong>정성적으로 평가</strong>하고, 이를 기반으로 <strong>레이팅 계수</strong>를 결정하는 <strong>종합 레이팅 기법</strong>이다.</p>
+<blockquote class="blockquote">
+<p>목적: 작업자의 실제 수행 속도를 <strong>정상 숙련자 기준(100%)</strong>과 비교해 표준화된 시간 산정을 가능하게 함</p>
+</blockquote>
+<section id="평가-요소" class="level5">
+<h5 class="anchored" data-anchor-id="평가-요소">평가 요소</h5>
+<p>웨스팅하우스법은 다음 <strong>4가지 평가 항목</strong>을 사용하여 작업자의 성능을 종합적으로 판단한다.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>요소</th>
+<th>정의</th>
+<th>평가 기준</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Skill (능력)</strong></td>
+<td>신체 및 정신적 숙련도, 작업을 잘 수행하는 능력</td>
+<td>훈련 정도, 기술적 정확성</td>
+</tr>
+<tr class="even">
+<td><strong>Effort (노력)</strong></td>
+<td>작업자가 얼마나 열심히 집중하고 있는지</td>
+<td>집중도, 작업 의욕</td>
+</tr>
+<tr class="odd">
+<td><strong>Conditions (조건)</strong></td>
+<td>작업 환경과 도구 상태</td>
+<td>온도, 조도, 공구 성능, 소음 등</td>
+</tr>
+<tr class="even">
+<td><strong>Consistency (일관성)</strong></td>
+<td>작업 수행의 안정성과 반복성</td>
+<td>수행의 변동성, 리듬 유지</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="평가-등급-예시" class="level5">
+<h5 class="anchored" data-anchor-id="평가-등급-예시">평가 등급 예시</h5>
+<p>각 항목에 대해 <strong>기준값(100%)</strong>을 중심으로 평가 등급을 부여한다. 평가는 일반적으로 다음 범위로 진행된다.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>평가 수준</th>
+<th>보정값 (예시)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>매우 우수</td>
+<td>+6 ~ +10</td>
+</tr>
+<tr class="even">
+<td>우수</td>
+<td>+3 ~ +5</td>
+</tr>
+<tr class="odd">
+<td>보통 (기준)</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>미흡</td>
+<td>-3 ~ -5</td>
+</tr>
+<tr class="odd">
+<td>매우 미흡</td>
+<td>-6 ~ -10</td>
+</tr>
+</tbody>
+</table>
+<p>→ 4개 항목의 평가값을 모두 더한 후, <strong>총합을 기준값(100)에 더하여 최종 레이팅을 산정</strong>한다.</p>
+<blockquote class="blockquote">
+<p>예: Skill +5, Effort +5, Conditions 0, Consistency +2 → 레이팅 = 100 + 12 = <strong>112%</strong></p>
+</blockquote>
+</section>
+<section id="적용-절차" class="level5">
+<h5 class="anchored" data-anchor-id="적용-절차">적용 절차</h5>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>단계</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>① 실제 시간 측정</td>
+<td>스톱워치 등으로 작업자의 실제 작업시간 측정</td>
+</tr>
+<tr class="even">
+<td>② 4요소 평가</td>
+<td>Skill, Effort, Conditions, Consistency 항목별 평가</td>
+</tr>
+<tr class="odd">
+<td>③ 평가값 합산</td>
+<td>각 항목 보정값을 합산하여 레이팅 산출</td>
+</tr>
+<tr class="even">
+<td>④ 순수작업시간 산정</td>
+<td>순수작업시간 = 실제 시간 × 레이팅 계수</td>
+</tr>
+<tr class="odd">
+<td>⑤ 표준시간 산정</td>
+<td>순수작업시간에 여유율 적용하여 최종 표준시간 결정</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="예시-1" class="level5">
+<h5 class="anchored" data-anchor-id="예시-1">예시</h5>
+<blockquote class="blockquote">
+<p>실제 작업 시간: 4.5분<br>
+평가 결과:<br>
+- Skill +5<br>
+- Effort +4<br>
+- Conditions +2<br>
+- Consistency +1<br>
+→ 총 보정: +12 → 레이팅 112%</p>
+</blockquote>
+<ul>
+<li>순수작업시간 = 4.5분 × 1.12 = <strong>5.04분</strong><br>
+</li>
+<li>여유율 15% 적용 시 표준시간 = 5.04분 × (1 + 0.15) = <strong>5.8분</strong></li>
+</ul>
+</section>
+<section id="장단점" class="level5">
+<h5 class="anchored" data-anchor-id="장단점">장단점</h5>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>장점</th>
+<th>단점</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>정확성</strong></td>
+<td>다면적 평가로 보다 공정한 판단 가능</td>
+<td>주관성이 개입될 여지 있음</td>
+</tr>
+<tr class="even">
+<td><strong>체계성</strong></td>
+<td>평가 기준이 항목별로 분명하게 제시됨</td>
+<td>평가자 숙련도에 따라 편차 발생 가능</td>
+</tr>
+<tr class="odd">
+<td><strong>활용성</strong></td>
+<td>다양한 작업환경에 적용 가능</td>
+<td>복잡하고 시간 소요 큼</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="다른-레이팅-기법과의-비교" class="level5">
+<h5 class="anchored" data-anchor-id="다른-레이팅-기법과의-비교">다른 레이팅 기법과의 비교</h5>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>구분</th>
+<th><strong>웨스팅하우스법</strong></th>
+<th><strong>평준화법 (Normalization)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>평가 요소</td>
+<td>Skill, Effort, Condition, Consistency</td>
+<td>속도 1개</td>
+</tr>
+<tr class="even">
+<td>평가 방식</td>
+<td>정성적, 항목별</td>
+<td>직관적 속도 비교</td>
+</tr>
+<tr class="odd">
+<td>정확도</td>
+<td>높음</td>
+<td>낮음</td>
+</tr>
+<tr class="even">
+<td>주관성</td>
+<td>상대적으로 적음</td>
+<td>상대적으로 큼</td>
+</tr>
+<tr class="odd">
+<td>소요 시간</td>
+<td>길다</td>
+<td>짧다</td>
+</tr>
+<tr class="even">
+<td>적용 추천</td>
+<td>정밀 작업, 고위험 공정</td>
+<td>일반적인 작업 시간 추정</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="속도-레이팅" class="level4">
+<h4 class="anchored" data-anchor-id="속도-레이팅">속도 레이팅</h4>
+</section>
+<section id="객관적-레이팅" class="level4">
+<h4 class="anchored" data-anchor-id="객관적-레이팅">객관적 레이팅</h4>
+</section>
+<section id="합성-레이팅" class="level4">
+<h4 class="anchored" data-anchor-id="합성-레이팅">합성 레이팅</h4>
+</section>
+<section id="노력-평가법" class="level4">
+<h4 class="anchored" data-anchor-id="노력-평가법">노력 평가법</h4>
+</section>
+<section id="sam-레이팅-필름" class="level4">
+<h4 class="anchored" data-anchor-id="sam-레이팅-필름">SAM 레이팅 필름</h4>
 <p>구체적인 <strong>레이팅 기법</strong>은 다음과 같다.</p>
 <dl>
 <dt>평준화(leveling)법 또는 <font color="blue">Westing house법</font></dt>
@@ -802,6 +1578,7 @@ Westinghouse 레이팅 계수(Westinghouse Rating Factor)를 구하기 위한 �
 
 </div>
 </div>
+</section>
 </section>
 <section id="sec-allowance-time" class="level3">
 <h3 class="anchored" data-anchor-id="sec-allowance-time">여유시간</h3>
