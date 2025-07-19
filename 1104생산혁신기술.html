@@ -1538,7 +1538,7 @@ TOC의 버퍼 개념을 활용하여, <strong>재고를 지나치게 많이 또�
 <section id="sec-aps" class="level3">
 <h3 class="anchored" data-anchor-id="sec-aps">APS</h3>
 <p>APS(Advanced Planning and Scheduling)는 생산 계획 및 스케쥴링을 자동화 및 최적화하여 생산 효율성을 향상시키는 기법으로 DBR 기반 유한능력계획이다.</p>
-<p>2차 세계대전 이전에는 생산스케쥴링은 <a href="0401재고관리.html#sec-eoq" class="quarto-xref">EOQ&nbsp;<span>경제적 주문량 모형(EOQ)</span></a>, <a href="0401재고관리.html#sec-two-bin" class="quarto-xref">Two-Bin 시스템&nbsp;<span>투빈(Two Bin) 시스템</span></a> 또는 LP(Linear Programming)를 사용하여 수립하였다. 이후 생산 패러다임 전환으로 몇몇 기술, <a href="0501생산계획수립.html#sec-mrp" class="quarto-xref"><span>MRP</span></a>, <span class="quarto-unresolved-ref">?sec-jit</span>, <a href="#sec-toc" class="quarto-xref"><span>TOC</span></a> 등이 개발되어 실용화 되었다. 그러나 MRP, JIT와 같은 전통적인 도구는 생산 능력 제약을 충분히 고려하지 못해 현실적인 스케쥴을 제공하는데 한계가 있었다. 이를 해결하기 위해 <strong>유한능력스케쥴링</strong>(FCS, finite capacity scheduling)이 개발되었다. FCS는 단순히 자재 소요 계획을 수립하는 것이 아니라, 모든 생산 자원의 가용 능력을 고려하여 최적화된 스케줄을 생성하는 기법이다. 즉, 기존 MRP 시스템의 단점을 보완하여 생산 제약을 반영한 현실적인 작업 일정 수립이 가능해졌다. FCS는 다른 시스템의 계획 절차와 통합되어 공장의 실제 가용 능력 내에서 최적화된 생산 일정을 제공한다. 이를 위해 MRP의 기본 입력 요소인 BOM(자재 명세서)을 보강하고, 반제품(재공 재고) 및 완제품 재고 상태를 고려하여 최적의 생산 일정을 수립한다. 또한, 고객이 원하는 납기 가능 일자(<a href="#sec-ctp" class="quarto-xref"><span>CTP</span></a>, capable to promise)를 제공할 수 있는 기능을 갖추고 있어, 보다 신뢰성 높은 대 고객 서비스가 가능하다.</p>
+<p>2차 세계대전 이전에는 생산스케쥴링은 <a href="0401재고관리.html#sec-eoq" class="quarto-xref">EOQ&nbsp;<span>경제적 주문량 모형(EOQ)</span></a>, <a href="0401재고관리.html#sec-two-bin" class="quarto-xref">Two-Bin 시스템&nbsp;<span>투빈(Two Bin) 시스템</span></a> 또는 LP(Linear Programming)를 사용하여 수립하였다. 이후 생산 패러다임 전환으로 몇몇 기술, <a href="0501생산계획수립.html#sec-mrp" class="quarto-xref"><span>자재소요계획(MRP)</span></a>, <span class="quarto-unresolved-ref">?sec-jit</span>, <a href="#sec-toc" class="quarto-xref"><span>TOC</span></a> 등이 개발되어 실용화 되었다. 그러나 MRP, JIT와 같은 전통적인 도구는 생산 능력 제약을 충분히 고려하지 못해 현실적인 스케쥴을 제공하는데 한계가 있었다. 이를 해결하기 위해 <strong>유한능력스케쥴링</strong>(FCS, finite capacity scheduling)이 개발되었다. FCS는 단순히 자재 소요 계획을 수립하는 것이 아니라, 모든 생산 자원의 가용 능력을 고려하여 최적화된 스케줄을 생성하는 기법이다. 즉, 기존 MRP 시스템의 단점을 보완하여 생산 제약을 반영한 현실적인 작업 일정 수립이 가능해졌다. FCS는 다른 시스템의 계획 절차와 통합되어 공장의 실제 가용 능력 내에서 최적화된 생산 일정을 제공한다. 이를 위해 MRP의 기본 입력 요소인 BOM(자재 명세서)을 보강하고, 반제품(재공 재고) 및 완제품 재고 상태를 고려하여 최적의 생산 일정을 수립한다. 또한, 고객이 원하는 납기 가능 일자(<a href="#sec-ctp" class="quarto-xref"><span>CTP</span></a>, capable to promise)를 제공할 수 있는 기능을 갖추고 있어, 보다 신뢰성 높은 대 고객 서비스가 가능하다.</p>
 <dl>
 <dt>전통적인 스케줄링 방법 한계</dt>
 <dd>
@@ -1592,7 +1592,7 @@ TOC의 버퍼 개념을 활용하여, <strong>재고를 지나치게 많이 또�
 </div>
 <div class="callout-body-container callout-body">
 <dl>
-<dt><a href="0501생산계획수립.html#sec-mps" class="quarto-xref"><span>MPS</span></a> - <a href="0501생산계획수립.html#sec-rccp" class="quarto-xref"><span>RCCP</span></a> Process</dt>
+<dt><a href="0501생산계획수립.html#sec-mps" class="quarto-xref"><span>기준일정계획(MPS)</span></a> - <a href="0501생산계획수립.html#sec-rccp" class="quarto-xref"><span>RCCP</span></a> Process</dt>
 <dd>
 <ol type="1">
 <li>고객 주문 입력: 고객 주문을 통합하여 정리</li>
@@ -1601,7 +1601,7 @@ TOC의 버퍼 개념을 활용하여, <strong>재고를 지나치게 많이 또�
 <li>검증 - RCCP 결과에 따라 생산 계획이 달성 가능하지 않으면 자원 가용량을 고려한 자재 계획 수립, 이전 단계로 돌아가서 생산 계획을 재검토하고 RCCP를 다시 수집하여 달성 시까지 반복 수행</li>
 </ol>
 </dd>
-<dt><a href="0501생산계획수립.html#sec-mrp" class="quarto-xref"><span>MRP</span></a> - <a href="0501생산계획수립.html#sec-crp" class="quarto-xref"><span>CRP</span></a> Process</dt>
+<dt><a href="0501생산계획수립.html#sec-mrp" class="quarto-xref"><span>자재소요계획(MRP)</span></a> - <a href="0501생산계획수립.html#sec-crp" class="quarto-xref"><span>CRP</span></a> Process</dt>
 <dd>
 <ol type="1">
 <li>MRP 수립: 생산계획과 RCCP가 확정되면 BOM 상 모든 자재에 대한 수급계획을 수립</li>
