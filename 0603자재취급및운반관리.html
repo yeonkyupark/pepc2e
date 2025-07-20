@@ -501,7 +501,14 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">목차</h2>
    
   <ul>
-  <li><a href="#sec-activity-index" id="toc-sec-activity-index" class="nav-link active" data-scroll-target="#sec-activity-index">활성지수</a></li>
+  <li><a href="#sec-activity-index" id="toc-sec-activity-index" class="nav-link active" data-scroll-target="#sec-activity-index">활성지수</a>
+  <ul>
+  <li><a href="#산출식" id="toc-산출식" class="nav-link" data-scroll-target="#산출식">산출식</a></li>
+  <li><a href="#해석-및-활용" id="toc-해석-및-활용" class="nav-link" data-scroll-target="#해석-및-활용">해석 및 활용</a></li>
+  <li><a href="#활용-예시" id="toc-활용-예시" class="nav-link" data-scroll-target="#활용-예시">활용 예시</a></li>
+  <li><a href="#개선을-위한-활용-방법" id="toc-개선을-위한-활용-방법" class="nav-link" data-scroll-target="#개선을-위한-활용-방법">개선을 위한 활용 방법</a></li>
+  <li><a href="#연관-지표-및-개념" id="toc-연관-지표-및-개념" class="nav-link" data-scroll-target="#연관-지표-및-개념">연관 지표 및 개념</a></li>
+  </ul></li>
   <li><a href="#운반개선-5가지-원칙" id="toc-운반개선-5가지-원칙" class="nav-link" data-scroll-target="#운반개선-5가지-원칙">운반개선 5가지 원칙</a></li>
   <li><a href="#전용-용기-설계" id="toc-전용-용기-설계" class="nav-link" data-scroll-target="#전용-용기-설계">전용 용기 설계</a></li>
   <li><a href="#sec-ref-0603" id="toc-sec-ref-0603" class="nav-link" data-scroll-target="#sec-ref-0603">참고자료</a></li>
@@ -563,7 +570,7 @@ ul.task-list li input[type="checkbox"] {
 <figcaption>활성지수 분석 기호</figcaption>
 </figure>
 </div>
-<p><strong>활성지수</strong>는 물류 관리에서 <font color="blue">물건이 놓여 있는 상태로부터 이동에 들어가기까지의 수고의 정도를 나타내는 지수</font>로, 일반적으로 0에서 4까지의 척도로 측정된다. 이 지수는 물건의 운반 효율성을 평가하는 데 사용되며, 활성지수가 높을수록 하역 작업의 효율이 높아진다</p>
+<p><strong>활성지수(Activity Index)</strong>란 <strong>생산 활동 중 자재 이동의 비중 또는 빈도 및 거리의 영향을 수치로 표현한 계량적 지표</strong>이다. 이는 물류 시스템의 <strong>비효율 정도를 정량적으로 파악</strong>하고, 자재 취급 개선의 필요성을 판단하는 데 사용된다.</p>
 <dl>
 <dt>활성지수 0</dt>
 <dd>
@@ -595,15 +602,125 @@ ul.task-list li input[type="checkbox"] {
 <li>컨베이어, 슈트 등을 사용했을 때</li>
 </ul>
 </dd>
-<dt>활성지수 활용</dt>
-<dd>
-활성지수는 <font color="#245bdb">물류 활동의 효율성을 평가하고 개선하는 데 사용</font>된다. 예를 들어, 물건이 컨베이어 위에 있는 경우(활성지수 4)에는 이동에 거의 노력이 필요하지 않기 때문에, 이러한 상태가 많을수록 물류센터의 운영이 효율적이라고 할 수 있다. 반대로, 물건이 마루에 그냥 놓여 있는 경우(활성지수 0)에는 많은 노력이 필요하기 때문에, 이러한 상태를 최소화하는 것이 중요하다
-</dd>
-<dt>자재 취급 시스템과의 연관성</dt>
-<dd>
-자재 취급 시스템은 물류 작업을 자동화하여 인적 오류를 줄이고, 비용을 절감하는 데 기여한다. 활성지수와 자재 취급 시스템은 물류의 효율성을 높이는 데 상호 보완적인 역할을 한다. 활성지수를 높이기 위해서는 물건을 쉽게 이동할 수 있는 상태로 유지하는 것이 중요하며, 이를 위해 자재 취급 시스템을 도입하여 물류 작업을 자동화하는 것이 효과적이다
-</dd>
 </dl>
+<section id="산출식" class="level3">
+<h3 class="anchored" data-anchor-id="산출식">산출식</h3>
+<pre class="math"><code>Activity\ Index = \sum (f_{ij} \times d_{ij})</code></pre>
+<ul>
+<li>( f_{ij} ): 작업장 (i)에서 (j)로의 <strong>이동 빈도</strong> (또는 물동량)</li>
+<li>( d_{ij} ): 작업장 (i)에서 (j)로의 <strong>이동 거리</strong></li>
+<li>(): 모든 자재 흐름 경로에 대해 합산</li>
+</ul>
+<p>즉, <strong>빈도 × 거리의 총합</strong>으로 나타내며, 이 값이 클수록 <strong>운반 작업이 비효율적</strong>임을 나타낸다.</p>
+</section>
+<section id="해석-및-활용" class="level3">
+<h3 class="anchored" data-anchor-id="해석-및-활용">해석 및 활용</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 43%">
+<col style="width: 18%">
+<col style="width: 37%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>지표 값 수준</th>
+<th>해석</th>
+<th>조치 방향</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>높음</strong></td>
+<td>이동 거리와 빈도가 많아 물류비가 크고 비효율적</td>
+<td>레이아웃 개선, 작업장 재배치</td>
+</tr>
+<tr class="even">
+<td><strong>보통</strong></td>
+<td>특정 흐름에 편중된 물류</td>
+<td>병목 구간 개선, 적재 효율 향상</td>
+</tr>
+<tr class="odd">
+<td><strong>낮음</strong></td>
+<td>자재 흐름이 안정적이고 최소화됨</td>
+<td>현재 구조 유지 또는 미세 조정</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="활용-예시" class="level3">
+<h3 class="anchored" data-anchor-id="활용-예시">활용 예시</h3>
+<ul>
+<li><strong>공장 레이아웃 설계 시</strong>: 작업장 간 위치를 최적화하여 이동 거리 최소화</li>
+<li><strong>물류 흐름 분석 시</strong>: 주요 흐름선을 파악하여 AGV, 컨베이어 등 운반 설비 배치 근거로 사용</li>
+<li><strong>ROI 분석의 기초 데이터</strong>: 창고 또는 설비 투자 타당성 분석 시 핵심 참고 지표</li>
+</ul>
+</section>
+<section id="개선을-위한-활용-방법" class="level3">
+<h3 class="anchored" data-anchor-id="개선을-위한-활용-방법">개선을 위한 활용 방법</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>단계</th>
+<th>활동</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>①</td>
+<td>각 공정 간 이동 빈도와 거리 조사</td>
+</tr>
+<tr class="even">
+<td>②</td>
+<td>활성지수(Activity Index) 계산</td>
+</tr>
+<tr class="odd">
+<td>③</td>
+<td>전체 흐름에서 비효율이 큰 구간 추출</td>
+</tr>
+<tr class="even">
+<td>④</td>
+<td>설비 재배치 시뮬레이션 또는 Flow 개선</td>
+</tr>
+<tr class="odd">
+<td>⑤</td>
+<td>개선안 적용 후 활성지수 변화 비교 분석</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="연관-지표-및-개념" class="level3">
+<h3 class="anchored" data-anchor-id="연관-지표-및-개념">연관 지표 및 개념</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>개념</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>운반비율(Material Handling Ratio)</strong></td>
+<td>총 이동거리 / 생산공정거리</td>
+</tr>
+<tr class="even">
+<td><strong>From-To Chart</strong></td>
+<td>작업장 간 이동 빈도와 흐름 방향을 정리한 표</td>
+</tr>
+<tr class="odd">
+<td><strong>Load-Distance Score</strong></td>
+<td>활성지수와 유사 개념. 물동량 × 거리로 점수화</td>
+</tr>
+<tr class="even">
+<td><strong>물류강도(Logistics Intensity)</strong></td>
+<td>물류비 / 총생산비로 물류 부담 수준을 평가</td>
+</tr>
+</tbody>
+</table>
+</section>
 </section>
 <section id="운반개선-5가지-원칙" class="level2">
 <h2 class="anchored" data-anchor-id="운반개선-5가지-원칙">운반개선 5가지 원칙</h2>
@@ -689,6 +806,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="sec-ref-0603" class="level2">
 <h2 class="anchored" data-anchor-id="sec-ref-0603">참고자료</h2>
+<p><em>_EOD_</em></p>
 
 
 </section>
