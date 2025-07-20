@@ -501,7 +501,20 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">목차</h2>
    
   <ul>
-  <li><a href="#공정분석-및-개선을-위한-도표" id="toc-공정분석-및-개선을-위한-도표" class="nav-link active" data-scroll-target="#공정분석-및-개선을-위한-도표">공정분석 및 개선을 위한 도표</a></li>
+  <li><a href="#공정개선" id="toc-공정개선" class="nav-link active" data-scroll-target="#공정개선">공정개선</a>
+  <ul>
+  <li><a href="#공정개선의-필요성" id="toc-공정개선의-필요성" class="nav-link" data-scroll-target="#공정개선의-필요성">공정개선의 필요성</a></li>
+  <li><a href="#공정개선-접근-방법" id="toc-공정개선-접근-방법" class="nav-link" data-scroll-target="#공정개선-접근-방법">공정개선 접근 방법</a>
+  <ul class="collapse">
+  <li><a href="#시스템적-접근" id="toc-시스템적-접근" class="nav-link" data-scroll-target="#시스템적-접근">시스템적 접근</a></li>
+  <li><a href="#실무적-개선-도구" id="toc-실무적-개선-도구" class="nav-link" data-scroll-target="#실무적-개선-도구">실무적 개선 도구</a></li>
+  </ul></li>
+  <li><a href="#공정개선-단계" id="toc-공정개선-단계" class="nav-link" data-scroll-target="#공정개선-단계">공정개선 단계</a></li>
+  <li><a href="#공정개선의-7대-낭비-항목-lean-기준" id="toc-공정개선의-7대-낭비-항목-lean-기준" class="nav-link" data-scroll-target="#공정개선의-7대-낭비-항목-lean-기준">공정개선의 7대 낭비 항목 (Lean 기준)</a></li>
+  <li><a href="#공정개선-사례" id="toc-공정개선-사례" class="nav-link" data-scroll-target="#공정개선-사례">공정개선 사례</a></li>
+  <li><a href="#공정개선과-연계되는-시스템" id="toc-공정개선과-연계되는-시스템" class="nav-link" data-scroll-target="#공정개선과-연계되는-시스템">공정개선과 연계되는 시스템</a></li>
+  </ul></li>
+  <li><a href="#공정분석-및-개선을-위한-도표" id="toc-공정분석-및-개선을-위한-도표" class="nav-link" data-scroll-target="#공정분석-및-개선을-위한-도표">공정분석 및 개선을 위한 도표</a></li>
   <li><a href="#참고자료" id="toc-참고자료" class="nav-link" data-scroll-target="#참고자료">참고자료</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/yeonkyupark/pepc2e/edit/main/0505공정개선.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
@@ -534,6 +547,301 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="공정개선" class="level2">
+<h2 class="anchored" data-anchor-id="공정개선">공정개선</h2>
+<p>공정개선(Process Improvement)이란, <strong>제품 또는 서비스가 생산되는 전 과정에서의 낭비 요소를 제거하고 효율성과 품질을 향상시키는 활동</strong>을 말한다. 공정개선은 다음의 목표를 중심으로 수행된다.</p>
+<ul>
+<li><strong>품질 향상</strong></li>
+<li><strong>원가 절감</strong></li>
+<li><strong>리드타임 단축</strong></li>
+<li><strong>유연성 확보</strong></li>
+<li><strong>고객 만족 증대</strong></li>
+</ul>
+<section id="공정개선의-필요성" class="level3">
+<h3 class="anchored" data-anchor-id="공정개선의-필요성">공정개선의 필요성</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>구분</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>품질문제</strong></td>
+<td>불량률 증가, 재작업/폐기 발생</td>
+</tr>
+<tr class="even">
+<td><strong>효율성 저하</strong></td>
+<td>병목공정, 비효율 동선, 낭비 존재</td>
+</tr>
+<tr class="odd">
+<td><strong>시장 변화 대응</strong></td>
+<td>다품종 소량, 납기 단축 요구 증가</td>
+</tr>
+<tr class="even">
+<td><strong>작업자 편차</strong></td>
+<td>표준화 미비로 작업자 간 품질 차이</td>
+</tr>
+<tr class="odd">
+<td><strong>설비 노후화</strong></td>
+<td>설비 불균형, 유지보수 비용 증가</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="공정개선-접근-방법" class="level3">
+<h3 class="anchored" data-anchor-id="공정개선-접근-방법">공정개선 접근 방법</h3>
+<section id="시스템적-접근" class="level4">
+<h4 class="anchored" data-anchor-id="시스템적-접근">시스템적 접근</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 42%">
+<col style="width: 57%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>접근법</th>
+<th>주요 특징</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>6시그마</strong></td>
+<td>품질 중심, 통계기법 활용 (DMAIC 사이클)</td>
+</tr>
+<tr class="even">
+<td><strong>린 생산</strong></td>
+<td>낭비 제거 중심, JIT, 표준작업 등 적용</td>
+</tr>
+<tr class="odd">
+<td><strong>TPM</strong></td>
+<td>설비 중심 개선, 자주보전과 예방보전</td>
+</tr>
+<tr class="even">
+<td><strong>IE(Industrial Engineering)</strong></td>
+<td>동작연구, 시간연구, 작업분석 기법 활용</td>
+</tr>
+<tr class="odd">
+<td><strong>스파게티 다이어그램</strong></td>
+<td>공정 동선 시각화 및 비효율 제거</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="실무적-개선-도구" class="level4">
+<h4 class="anchored" data-anchor-id="실무적-개선-도구">실무적 개선 도구</h4>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>도구</th>
+<th>활용 목적</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Flowchart</strong></td>
+<td>공정 흐름 시각화 및 문제 구간 식별</td>
+</tr>
+<tr class="even">
+<td><strong>P-Q 분석</strong></td>
+<td>생산량(P)과 품목수(Q)에 따른 생산 방식 검토</td>
+</tr>
+<tr class="odd">
+<td><strong>Pareto 분석</strong></td>
+<td>불량, 낭비 등 개선 우선순위 결정</td>
+</tr>
+<tr class="even">
+<td><strong>Fishbone Diagram</strong></td>
+<td>문제의 원인요소 체계적 도출</td>
+</tr>
+<tr class="odd">
+<td><strong>5Why 분석</strong></td>
+<td>근본 원인 추적을 통한 개선 방향 수립</td>
+</tr>
+<tr class="even">
+<td><strong>VSM (Value Stream Mapping)</strong></td>
+<td>흐름상의 부가가치 vs 낭비 시각화</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="공정개선-단계" class="level3">
+<h3 class="anchored" data-anchor-id="공정개선-단계">공정개선 단계</h3>
+<p>공정개선은 DMAIC, PDCA 등과 같은 기법을 적용할 수 있다.</p>
+<p><strong>DMAIC</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>단계</th>
+<th>주요 활동</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>D (Define)</strong></td>
+<td>개선대상 선정, 프로젝트 정의</td>
+</tr>
+<tr class="even">
+<td><strong>M (Measure)</strong></td>
+<td>현재 성능 측정, 기준 정립</td>
+</tr>
+<tr class="odd">
+<td><strong>A (Analyze)</strong></td>
+<td>문제의 원인 분석 (통계, 5Why 등)</td>
+</tr>
+<tr class="even">
+<td><strong>I (Improve)</strong></td>
+<td>개선안 도출 및 실행</td>
+</tr>
+<tr class="odd">
+<td><strong>C (Control)</strong></td>
+<td>성과 모니터링, 표준화 및 정착화</td>
+</tr>
+</tbody>
+</table>
+<p><strong>PDCA</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>단계</th>
+<th>의미</th>
+<th>주요 활동</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>P (Plan)</strong></td>
+<td>계획</td>
+<td>문제 인식, 원인 분석, 개선 목표 및 방안 수립</td>
+</tr>
+<tr class="even">
+<td><strong>D (Do)</strong></td>
+<td>실행</td>
+<td>계획한 개선안의 파일럿 실행 또는 실제 적용</td>
+</tr>
+<tr class="odd">
+<td><strong>C (Check)</strong></td>
+<td>점검</td>
+<td>개선 결과에 대한 평가 및 성과 분석</td>
+</tr>
+<tr class="even">
+<td><strong>A (Act)</strong></td>
+<td>조치</td>
+<td>표준화 또는 미흡 시 재계획 수립</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="공정개선의-7대-낭비-항목-lean-기준" class="level3">
+<h3 class="anchored" data-anchor-id="공정개선의-7대-낭비-항목-lean-기준">공정개선의 7대 낭비 항목 (Lean 기준)</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>낭비 항목</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>과잉생산</td>
+<td>수요보다 많이 생산</td>
+</tr>
+<tr class="even">
+<td>재고</td>
+<td>불필요한 자재, 반제품, 완제품</td>
+</tr>
+<tr class="odd">
+<td>동작</td>
+<td>불필요한 작업자 움직임</td>
+</tr>
+<tr class="even">
+<td>운반</td>
+<td>자재나 제품의 불필요한 이동</td>
+</tr>
+<tr class="odd">
+<td>가공</td>
+<td>불필요하거나 과도한 공정</td>
+</tr>
+<tr class="even">
+<td>대기</td>
+<td>작업자, 자재, 설비의 대기 시간</td>
+</tr>
+<tr class="odd">
+<td>불량</td>
+<td>재작업, 폐기 등 품질 미흡</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="공정개선-사례" class="level3">
+<h3 class="anchored" data-anchor-id="공정개선-사례">공정개선 사례</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 19%">
+<col style="width: 29%">
+<col style="width: 32%">
+<col style="width: 19%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>구분</th>
+<th>개선 전</th>
+<th>개선 후</th>
+<th>효과</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A공정 자재이송</td>
+<td>수작업 이송, 대기 다수</td>
+<td>AGV 도입, 동선 최적화</td>
+<td>납기 20% 단축</td>
+</tr>
+<tr class="even">
+<td>B공정 작업표준</td>
+<td>작업자별 동작 상이</td>
+<td>표준작업서 도입, 동작 최소화</td>
+<td>불량률 50% 감소</td>
+</tr>
+<tr class="odd">
+<td>C공정 검사</td>
+<td>불량 발생 후 검사</td>
+<td>전수 모니터링 도입</td>
+<td>불량 조기 차단</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="공정개선과-연계되는-시스템" class="level3">
+<h3 class="anchored" data-anchor-id="공정개선과-연계되는-시스템">공정개선과 연계되는 시스템</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>시스템</th>
+<th>관련성</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>MES</strong></td>
+<td>생산 공정 실시간 모니터링 및 분석</td>
+</tr>
+<tr class="even">
+<td><strong>ERP</strong></td>
+<td>자재 흐름, 생산계획, 공정통제 연계</td>
+</tr>
+<tr class="odd">
+<td><strong>QMS</strong></td>
+<td>품질 기준 및 이탈 원인 분석</td>
+</tr>
+<tr class="even">
+<td><strong>EHS</strong></td>
+<td>안전·보건 관점 개선 요소 도출</td>
+</tr>
+</tbody>
+</table>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 106-3-1">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -547,29 +855,25 @@ ul.task-list li input[type="checkbox"] {
 
 </div>
 </div>
+</section>
+</section>
 <section id="공정분석-및-개선을-위한-도표" class="level2">
 <h2 class="anchored" data-anchor-id="공정분석-및-개선을-위한-도표">공정분석 및 개선을 위한 도표</h2>
 <p>공정분석 및 개선을 위한 대표적인 도표는 다음과 같다. 참고로 조립도, 공정흐름도, 작업공정도 등에 사용되는 기호와 의미는 다음과 같다.</p>
 <p><img src="images/공정기호.png" class="img-fluid"></p>
-<dl>
-<dt>조립도표(Assembly Chart)</dt>
-<dd>
+<p><strong>조립도표(Assembly Chart)</strong></p>
 <ul>
 <li>제품 결합방법, 즉 조립순서 및 제품 전반적인 구조 등을 나타내 주는 도표</li>
-<li>작업을 나타내는 ○ 기호와 검사를 나타내는 □ 기호를 이용하여 조립순서에 따라 선으로 연결 (왼쪽에서 오른쪽, 위에서 아래)</li>
+<li>작업을 나타내는 <code>○</code> 기호와 검사를 나타내는 <code>□</code> 기호를 이용하여 조립순서에 따라 선으로 연결 (왼쪽에서 오른쪽, 위에서 아래)</li>
 <li>제품 생산을 위한 전반적인 조립 흐름을 쉽게 파악</li>
 </ul>
-</dd>
-</dl>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/조립도표.png" class="img-fluid figure-img"></p>
 <figcaption>조립도표</figcaption>
 </figure>
 </div>
-<dl>
-<dt>작업공정도표(Operation Process Chart)</dt>
-<dd>
+<p><strong>작업공정도표(Operation Process Chart)</strong></p>
 <ul>
 <li>원자재가 들어오는 곳으로 부터 완제품이 나오는 곳까지 수행되는 작업과 검사 및 이들 작업순서를 나타내 주는 도표</li>
 <li>사용되는 기호는 조립도표에서와 같고 다만 각 활동 내용과 소요시간이 활동 양 옆에 명시되고 작업 및 검사 일련 번호가 부여됨</li>
@@ -580,9 +884,7 @@ ul.task-list li input[type="checkbox"] {
 <figcaption>작업공정도표</figcaption>
 </figure>
 </div>
-</dd>
-<dt>흐름공정도표(Flow Process Chart)</dt>
-<dd>
+<p><strong>흐름공정도표(Flow Process Chart)</strong></p>
 <ul>
 <li>작업, 운반, 검사, 지연 및 저장 등 다섯 가지 표준공정분석 기호를 이용하여 작업대상물 흐름이나 움직임을 상세하게 나타낸 도표</li>
 <li>비생산적 활동(검사, 운반, 지연, 저장) 파악이 용이하고 공정 효율성 분석, 개선 제안 가능</li>
@@ -593,14 +895,10 @@ ul.task-list li input[type="checkbox"] {
 <figcaption>흐름공정도표<br>http://business.chosun.ac.kr</figcaption>
 </figure>
 </div>
-</dd>
-<dt>경로도(Flow Diagram)</dt>
-<dd>
+<p><strong>경로도(Flow Diagram)</strong></p>
 <ul>
 <li>공정분석 대상이 되는 부분품, 재료, 제품 이동경로를 작업장 배치도상에 기입한 도표</li>
 </ul>
-</dd>
-</dl>
 <p>조립도, 흐름공정도, 작업공정도를 상호 비교하면 다음과 같다.</p>
 <table class="caption-top table">
 <colgroup>
@@ -653,8 +951,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="참고자료" class="level2">
 <h2 class="anchored" data-anchor-id="참고자료">참고자료</h2>
-<hr>
-<p><strong>각주</strong></p>
+<p><em>_EOD_</em></p>
 
 
 </section>
