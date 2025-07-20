@@ -503,13 +503,25 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#공장자동화" id="toc-공장자동화" class="nav-link active" data-scroll-target="#공장자동화">공장자동화</a>
   <ul>
-  <li><a href="#자동화-유형" id="toc-자동화-유형" class="nav-link" data-scroll-target="#자동화-유형">자동화 유형</a></li>
-  <li><a href="#자동화-변천" id="toc-자동화-변천" class="nav-link" data-scroll-target="#자동화-변천">자동화 변천</a></li>
+  <li><a href="#공장자동화의-분류" id="toc-공장자동화의-분류" class="nav-link" data-scroll-target="#공장자동화의-분류">공장자동화의 분류</a></li>
+  <li><a href="#공장자동화-구성요소" id="toc-공장자동화-구성요소" class="nav-link" data-scroll-target="#공장자동화-구성요소">공장자동화 구성요소</a></li>
+  <li><a href="#공장자동화의-이점" id="toc-공장자동화의-이점" class="nav-link" data-scroll-target="#공장자동화의-이점">공장자동화의 이점</a></li>
+  <li><a href="#공장자동화-수준" id="toc-공장자동화-수준" class="nav-link" data-scroll-target="#공장자동화-수준">공장자동화 수준</a></li>
+  <li><a href="#주요-자동화-기술" id="toc-주요-자동화-기술" class="nav-link" data-scroll-target="#주요-자동화-기술">주요 자동화 기술</a></li>
+  <li><a href="#공장자동화-도입-시-고려사항" id="toc-공장자동화-도입-시-고려사항" class="nav-link" data-scroll-target="#공장자동화-도입-시-고려사항">공장자동화 도입 시 고려사항</a></li>
+  <li><a href="#최신-동향" id="toc-최신-동향" class="nav-link" data-scroll-target="#최신-동향">최신 동향</a></li>
+  <li><a href="#관련-시스템-연계" id="toc-관련-시스템-연계" class="nav-link" data-scroll-target="#관련-시스템-연계">관련 시스템 연계</a></li>
   </ul></li>
-  <li><a href="#sec-fms" id="toc-sec-fms" class="nav-link" data-scroll-target="#sec-fms">FMS</a>
+  <li><a href="#자동화-5대-요소" id="toc-자동화-5대-요소" class="nav-link" data-scroll-target="#자동화-5대-요소">자동화 5대 요소</a></li>
+  <li><a href="#자동화-유형" id="toc-자동화-유형" class="nav-link" data-scroll-target="#자동화-유형">자동화 유형</a>
   <ul>
-  <li><a href="#sec-dnc" id="toc-sec-dnc" class="nav-link" data-scroll-target="#sec-dnc">DNC</a></li>
+  <li><a href="#고정형-자동화fixed-automation" id="toc-고정형-자동화fixed-automation" class="nav-link" data-scroll-target="#고정형-자동화fixed-automation">고정형 자동화(Fixed automation)</a></li>
+  <li><a href="#프로그램-자동화programmable-automation" id="toc-프로그램-자동화programmable-automation" class="nav-link" data-scroll-target="#프로그램-자동화programmable-automation">프로그램 자동화(Programmable automation)</a></li>
+  <li><a href="#유연형-자동화flexible-automation" id="toc-유연형-자동화flexible-automation" class="nav-link" data-scroll-target="#유연형-자동화flexible-automation">유연형 자동화(Flexible automation)</a></li>
   </ul></li>
+  <li><a href="#자동화-변천" id="toc-자동화-변천" class="nav-link" data-scroll-target="#자동화-변천">자동화 변천</a></li>
+  <li><a href="#sec-fms" id="toc-sec-fms" class="nav-link" data-scroll-target="#sec-fms">FMS</a></li>
+  <li><a href="#sec-dnc" id="toc-sec-dnc" class="nav-link" data-scroll-target="#sec-dnc">DNC</a></li>
   <li><a href="#sec-ref-0606" id="toc-sec-ref-0606" class="nav-link" data-scroll-target="#sec-ref-0606">참고자료</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/yeonkyupark/pepc2e/edit/main/0606공장자동화기술.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
@@ -557,71 +569,277 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <section id="공장자동화" class="level2">
 <h2 class="anchored" data-anchor-id="공장자동화">공장자동화</h2>
-<p><strong>자동화</strong>(Automation)는 <font color="#245bdb">생산을 운영하고 통제하기 위해 기계, 전자, 컴퓨터 시스템의 응용과 관련된 일체 기술</font>을 말한다.</p>
-<dl>
-<dt>협의의 개념</dt>
-<dd>
-컴퓨터와 각종 공작기계, 계측장비 등을 이용하여 <font color="#245bdb">공장 생산을 자동화한 시스템</font>
-</dd>
-<dt>광의의 개념</dt>
-<dd>
-수주에서 설계, 제조, 검사 및 출하에 이르는 <font color="#245bdb">일체 생산 활동을 효율적, 유기적으로 결합시키는 시스템 기술</font>
-</dd>
-</dl>
-<p>일반적으로 기계화와 자동화는 인간이 수행하는 직무를 기계 또는 전자기기를 사용하여 운영하는 것이다. 기계화와 자동화는 서로 구별 없이 자주 사용되기도 한다. <font color="#245bdb">기계화에 비해</font> 자동화는 <strong>피드백(feedback)</strong> 기능을 가지고 있다. 피드백 기능이란 <font color="blue">변동이 발생할 때, 자동적으로 기계가 원래 상태로 환원할 수 있는 능력</font>을 말한다.</p>
-<dl>
-<dt>자동화 배경</dt>
-<dd>
-<ol type="1">
-<li>환경, 안전 법규</li>
-<li>생산노동력 감소, 3D 업종 인력 부족</li>
-<li>단납기 신속 대응, 고객 요구 납기 만족 - 기업 경쟁력 심화 및 소비자 욕구 다양화</li>
-<li>기계 가동률 향상, 생산성 향상</li>
-<li>안정된 품질 확보 - 높은 정확도를 요구하는 경우</li>
-<li>노사 이해 대립</li>
-<li>생산 시스템 거대화 - 원재료, 에너지 비용 상승</li>
-<li>재공품 재고 축소</li>
-</ol>
-</dd>
-<dt>자동화 필요성</dt>
-<dd>
-<ol type="1">
-<li>저성장 고착화로 <strong>비용 절감</strong> 요구</li>
-<li>변동성(고객 Needs 등)증가로 제품 수명주기 단축 - <strong>맞춤형 대량생산</strong> 필요</li>
-<li>안전, 노동력 부족, 높은 노무비 - <strong>숙련노동인력 부족과 인적자원 고령화</strong></li>
-<li><strong>생산성 향상, 품질 향상, 생산 리드타임 감소</strong></li>
-<li><strong>원자재 효율적 사용</strong></li>
-<li>재공품 <strong>재고 감소</strong></li>
-</ol>
-</dd>
-<dt>자동화 목적</dt>
-<dd>
-<ol type="1">
-<li>작업환경 개선 및 <strong>인력자원 부족 해결</strong></li>
-<li>제품 <strong>품질 균질화</strong>를 통한 소비자 신뢰 확보</li>
-<li><strong>생산효율 향상</strong>(생산시간 단축 → 생산성 향상 → 품질향상 → 재공품 감소)을 통한 이익 극대화</li>
-<li>생산 시스템 <strong>효율적 운영</strong> - 공장, 설비 간 정보 흐름 원활화 추구</li>
-<li><strong>원가절감</strong>을 통한 제품 가격 인하</li>
-<li>다양한 제품, <strong>유연한 납기</strong> 대응력</li>
-</ol>
-</dd>
-<dt>추진방향</dt>
-<dd>
+<p><strong>공장자동화(Factory Automation)</strong>란 생산공정의 작업을 <strong>기계, 전자제어, 정보기술</strong> 등을 활용하여 <strong>인간의 개입 없이 자동으로 수행</strong>되도록 하는 시스템 또는 기술을 의미한다. 자동화의 목적은 <strong>생산성 향상, 품질 안정화, 비용 절감, 안전 확보, 납기 단축</strong> 등이다.</p>
+<section id="공장자동화의-분류" class="level3">
+<h3 class="anchored" data-anchor-id="공장자동화의-분류">공장자동화의 분류</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>구분</th>
+<th>설명</th>
+<th>예시</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>기초자동화</strong></td>
+<td>개별 장비 단위의 자동화</td>
+<td>CNC, 로봇, 자동포장기</td>
+</tr>
+<tr class="even">
+<td><strong>부분자동화</strong></td>
+<td>일부 공정 또는 라인의 자동화</td>
+<td>SMT라인, 조립 셀, 반송시스템</td>
+</tr>
+<tr class="odd">
+<td><strong>전면자동화</strong></td>
+<td>전체 생산라인의 자동화</td>
+<td>완전 무인화 생산라인</td>
+</tr>
+<tr class="even">
+<td><strong>지능형자동화</strong></td>
+<td>센서, IoT, AI 등을 이용한 자율제어</td>
+<td>스마트팩토리, 디지털 트윈 기반 생산</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="공장자동화-구성요소" class="level3">
+<h3 class="anchored" data-anchor-id="공장자동화-구성요소">공장자동화 구성요소</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>구성요소</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>하드웨어</strong></td>
+<td>자동화 설비, 로봇, 컨베이어, 센서, 제어기기</td>
+</tr>
+<tr class="even">
+<td><strong>제어시스템</strong></td>
+<td>PLC, DCS, SCADA, HMI 등</td>
+</tr>
+<tr class="odd">
+<td><strong>정보기술</strong></td>
+<td>MES, ERP, WMS 등 생산정보시스템</td>
+</tr>
+<tr class="even">
+<td><strong>데이터 수집</strong></td>
+<td>센서, RFID, 비전시스템, IoT 디바이스</td>
+</tr>
+<tr class="odd">
+<td><strong>통신 인프라</strong></td>
+<td>산업용 네트워크 (Ethernet/IP, Profinet 등)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="공장자동화의-이점" class="level3">
+<h3 class="anchored" data-anchor-id="공장자동화의-이점">공장자동화의 이점</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>구분</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>생산성 향상</strong></td>
+<td>반복 작업의 고속/정밀 수행으로 인한 산출량 증가</td>
+</tr>
+<tr class="even">
+<td><strong>품질 안정화</strong></td>
+<td>인간 오류 감소 및 일관된 작업 수행</td>
+</tr>
+<tr class="odd">
+<td><strong>원가 절감</strong></td>
+<td>인건비 절감, 자재 낭비 최소화</td>
+</tr>
+<tr class="even">
+<td><strong>납기 단축</strong></td>
+<td>자동화된 흐름으로 리드타임 단축</td>
+</tr>
+<tr class="odd">
+<td><strong>산업안전 향상</strong></td>
+<td>유해작업의 대체, 인간-기계 분리 가능</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="공장자동화-수준" class="level3">
+<h3 class="anchored" data-anchor-id="공장자동화-수준">공장자동화 수준</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>수준</th>
+<th>정의</th>
+<th>특징</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Level 1</strong></td>
+<td>장비 자동화</td>
+<td>수동작업 일부 자동화, 독립적 운영</td>
+</tr>
+<tr class="even">
+<td><strong>Level 2</strong></td>
+<td>셀/라인 자동화</td>
+<td>작업 셀 혹은 생산라인 단위 자동화</td>
+</tr>
+<tr class="odd">
+<td><strong>Level 3</strong></td>
+<td>공정 자동화</td>
+<td>다공정 통합, 공정 간 연계</td>
+</tr>
+<tr class="even">
+<td><strong>Level 4</strong></td>
+<td>공장 자동화</td>
+<td>전공정 및 정보 통합, MES/ERP 연계</td>
+</tr>
+<tr class="odd">
+<td><strong>Level 5</strong></td>
+<td>스마트 공장</td>
+<td>AI, IoT 기반의 자율 운영 시스템</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="주요-자동화-기술" class="level3">
+<h3 class="anchored" data-anchor-id="주요-자동화-기술">주요 자동화 기술</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>기술</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>PLC (Programmable Logic Controller)</strong></td>
+<td>공정 제어를 위한 핵심 제어 장치</td>
+</tr>
+<tr class="even">
+<td><strong>SCADA (Supervisory Control and Data Acquisition)</strong></td>
+<td>원격 모니터링 및 제어 시스템</td>
+</tr>
+<tr class="odd">
+<td><strong>AGV/AMR</strong></td>
+<td>무인 운반 차량을 통한 자재 자동 이동</td>
+</tr>
+<tr class="even">
+<td><strong>산업용 로봇</strong></td>
+<td>용접, 조립, 페인팅 등 다기능 수행 장치</td>
+</tr>
+<tr class="odd">
+<td><strong>비전 시스템</strong></td>
+<td>카메라 및 인공지능을 통한 검사 자동화</td>
+</tr>
+<tr class="even">
+<td><strong>IoT/센서</strong></td>
+<td>실시간 데이터 수집 및 예지보전 기반 마련</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="공장자동화-도입-시-고려사항" class="level3">
+<h3 class="anchored" data-anchor-id="공장자동화-도입-시-고려사항">공장자동화 도입 시 고려사항</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>공정 적합성 분석</strong></td>
+<td>자동화 가능성 및 ROI 검토</td>
+</tr>
+<tr class="even">
+<td><strong>표준화 및 모듈화</strong></td>
+<td>설비 및 부품의 표준화 필요</td>
+</tr>
+<tr class="odd">
+<td><strong>설비 인터페이스</strong></td>
+<td>기존 설비와의 통신 및 데이터 호환성 확보</td>
+</tr>
+<tr class="even">
+<td><strong>보전체계 구축</strong></td>
+<td>예지보전(PdM), TPM 연계 운영 필수</td>
+</tr>
+<tr class="odd">
+<td><strong>인력 재배치</strong></td>
+<td>자동화로 인한 인적 자원 재설계 필요</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="최신-동향" class="level3">
+<h3 class="anchored" data-anchor-id="최신-동향">최신 동향</h3>
 <ul>
-<li>데이터 기반 의사결정이 실시간 이행과 총체적인 관점에서 최적화</li>
-<li>제조와 ICT 융합으로 인간과 로봇이 공유하여 무결점 제품 생산</li>
+<li><strong>스마트 팩토리</strong>: IoT, AI, 빅데이터 기반의 지능형 생산 시스템</li>
+<li><strong>디지털 트윈</strong>: 물리적 설비의 디지털 복제 모델을 통한 시뮬레이션 기반 운영</li>
+<li><strong>AI 기반 품질검사</strong>: 머신러닝을 통한 불량 자동 검출</li>
+<li><strong>에너지 자동화</strong>: EMS(Energy Management System) 통합</li>
 </ul>
-</dd>
-</dl>
+</section>
+<section id="관련-시스템-연계" class="level3">
+<h3 class="anchored" data-anchor-id="관련-시스템-연계">관련 시스템 연계</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 57%">
+<col style="width: 42%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>시스템</th>
+<th>역할</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>MES (Manufacturing Execution System)</strong></td>
+<td>생산 실행 관리 및 실시간 공정 모니터링</td>
+</tr>
+<tr class="even">
+<td><strong>ERP (Enterprise Resource Planning)</strong></td>
+<td>자재, 인력, 생산계획 등 전사 자원 통합</td>
+</tr>
+<tr class="odd">
+<td><strong>WMS (Warehouse Management System)</strong></td>
+<td>창고 및 자재 입출고 자동화</td>
+</tr>
+<tr class="even">
+<td><strong>CMMS (Computerized Maintenance Management System)</strong></td>
+<td>설비보전 이력 및 예지보전 관리</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="자동화-5대-요소" class="level2">
+<h2 class="anchored" data-anchor-id="자동화-5대-요소">자동화 5대 요소</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/automation_5_componets.png" class="img-fluid figure-img"></p>
 <figcaption>자동화 5대 요소</figcaption>
 </figure>
 </div>
-<dl>
-<dt>5대 요소</dt>
-<dd>
+<p><strong>5대 요소</strong></p>
 <ol type="1">
 <li><strong>감지기</strong>, 작업 수행을 위한 정보 수집</li>
 <li><strong>액츄에이터</strong>, 작업 수행</li>
@@ -629,75 +847,17 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>프로세서</strong>(제어신호 처리장치), 공정 절차에 따른 수행</li>
 <li><strong>프로그램</strong>(소프트웨어 기술), 공정 절차에 따른 수행</li>
 </ol>
-</dd>
-<dt>자동화 대상</dt>
-<dd>
+<p><strong>자동화 대상</strong></p>
 <ul>
 <li><strong>생산관리</strong> - 공정관리, 품질관리, 자재관리, 원가관리, 노무관리</li>
 <li><strong>반복작업</strong> - 가공물 운반, 자재 반입 및 반출 등</li>
 <li><strong>숙련작업</strong> - 용접 작업, 각종 자동장치 및 조립 작업 등</li>
 </ul>
-</dd>
-</dl>
-<p>자동화 장단점은 아래와 같다.</p>
-<table class="caption-top table">
-<caption>자동화 장점과 단점</caption>
-<colgroup>
-<col style="width: 15%">
-<col style="width: 40%">
-<col style="width: 45%">
-</colgroup>
-<thead>
-<tr class="header">
-<th><strong>구분</strong></th>
-<th><strong>장점</strong></th>
-<th><strong>단점</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>생산성</strong></td>
-<td>가동률 향상, 사이클 타임 단축</td>
-<td>제품 품질 변동 시 설비 정지 및 가동률 저하</td>
-</tr>
-<tr class="even">
-<td><strong>작업 환경</strong></td>
-<td>작업 편의성 증가, 위험 요소 제거</td>
-<td>높은 기술 수준 요구, 유지·보수 비용 증가</td>
-</tr>
-<tr class="odd">
-<td><strong>품질</strong></td>
-<td>제품 일관성 향상(균일화, 표준화), 불량률 저감</td>
-<td>제품 품질 산포 불안정 시 자동화 효율 감소</td>
-</tr>
-<tr class="even">
-<td><strong>비용</strong></td>
-<td>노동력 절감, 생산설비 수명 연장, 원가 절감</td>
-<td>초기 투자비용이 크고 중복투자 우려</td>
-</tr>
-<tr class="odd">
-<td><strong>유연성</strong></td>
-<td>표준화된 공정 운영 가능</td>
-<td>제품 수명 단축 및 생산 환경 변화에 대한 대응력 부족</td>
-</tr>
-<tr class="even">
-<td><strong>운영 및 보안</strong></td>
-<td>지속적인 생산 가능</td>
-<td>보안 취약, 성인화·무인화 실패 시 인력 증가 가능</td>
-</tr>
-<tr class="odd">
-<td><strong>라인 밸런싱</strong></td>
-<td>생산 계획의 정밀한 제어 가능</td>
-<td>일관화 부족 시 재공 재고 증가 및 라인 밸런싱 로스 발생</td>
-</tr>
-</tbody>
-</table>
-<p>자동화는 <font color="blue">생산성 및 품질 향상, 비용 절감 등의 이점</font>을 제공하지만, <font color="red">초기 투자비용, 유연성 문제, 유지·보수 난이도 증가 등의 단점</font>도 존재한다. 이를 고려하여 공정과 제품 특성에 적합한 자동화 전략을 수립하는 것이 중요하다.</p>
-<section id="자동화-유형" class="level3">
-<h3 class="anchored" data-anchor-id="자동화-유형">자동화 유형</h3>
-<dl>
-<dt>고정형 자동화(Fixed automation)</dt>
-<dd>
+</section>
+<section id="자동화-유형" class="level2">
+<h2 class="anchored" data-anchor-id="자동화-유형">자동화 유형</h2>
+<section id="고정형-자동화fixed-automation" class="level3">
+<h3 class="anchored" data-anchor-id="고정형-자동화fixed-automation">고정형 자동화(Fixed automation)</h3>
 <ul>
 <li><font color="#245bdb">성숙기 제품에 대해 표준화된 대량 생산</font> (소품종/저원가/대량생산)</li>
 <li>노무비 절감, 생산 소요시간 단축</li>
@@ -706,17 +866,17 @@ ul.task-list li input[type="checkbox"] {
 <li>가공(조립) 작업 순서가 설비 배치에 의해 고정</li>
 <li>복잡한 많은 동작이 한 가지 설비로 통합, 조정</li>
 </ul>
-</dd>
-<dt>프로그램 자동화(Programmable automation)</dt>
-<dd>
+</section>
+<section id="프로그램-자동화programmable-automation" class="level3">
+<h3 class="anchored" data-anchor-id="프로그램-자동화programmable-automation">프로그램 자동화(Programmable automation)</h3>
 <ul>
 <li>프로그램 지시에 의해 <font color="#245bdb">다양한 작업을 수행</font>(산업로봇, NC 공작기계)</li>
 <li>다양한 제품, 배치 소량 생산</li>
 <li>작업순서 변경 가능한 성능 보유한 생산설비</li>
 </ul>
-</dd>
-<dt>유연형 자동화(Flexible automation)</dt>
-<dd>
+</section>
+<section id="유연형-자동화flexible-automation" class="level3">
+<h3 class="anchored" data-anchor-id="유연형-자동화flexible-automation">유연형 자동화(Flexible automation)</h3>
 <ul>
 <li><font color="#245bdb">다품종소량 생산 목적</font></li>
 <li>프로그램 가능 자동화보다 더 맞춤화된 장비 사용, 장비 준비, 교체 시간이 짧아 제품을 여러 조합으로 생산</li>
@@ -725,8 +885,6 @@ ul.task-list li input[type="checkbox"] {
 <li>기종 변경 시 대기시간없이 다양한 제품 생산 가능</li>
 <li>시스템이 재프로그램밍되고 물리적 설정 변경에 다른 생산시간 낭비가 없음</li>
 </ul>
-</dd>
-</dl>
 <table class="caption-top table">
 <caption>고정형 자동화와 유연형 자동화 시스템</caption>
 <colgroup>
@@ -770,8 +928,9 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 </section>
-<section id="자동화-변천" class="level3">
-<h3 class="anchored" data-anchor-id="자동화-변천">자동화 변천</h3>
+</section>
+<section id="자동화-변천" class="level2">
+<h2 class="anchored" data-anchor-id="자동화-변천">자동화 변천</h2>
 <table class="caption-top table">
 <caption>자동화 변천</caption>
 <colgroup>
@@ -836,17 +995,13 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
-<dl>
-<dt>자동화 도입 시 유의사항</dt>
-<dd>
+<p><strong>자동화 도입 시 유의사항</strong></p>
 <ul>
 <li>생산 전략은 기업 전략과 일관성유지</li>
 <li>생산 관련 의사결정은 기업 전체 입장에서 경쟁력 제고 방향으로</li>
 <li>도입 시스템에 대한 관리능력 보유</li>
 <li>자동화 투자 여부 결정 시 비용 절감 외 시장 적응성, 고객 서비스 등에 대한 평가 중시</li>
 </ul>
-</dd>
-</dl>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 121-1-8">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -861,13 +1016,10 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </section>
-</section>
 <section id="sec-fms" class="level2">
 <h2 class="anchored" data-anchor-id="sec-fms">FMS</h2>
 <p><strong>FMS</strong>(Flexible Manufacturing System, 유연 제조 시스템)은 <font color="blue">다양한 제품을 자동으로 생산할 수 있는 제조 시스템</font>으로, 생산 라인이 <font color="blue">유연하게 재구성되어 다품종 소량 생산이 가능</font>하다. 변화하는 시장 수요에 신속하게 대응할 수 있도록 설계된 시스템이다.</p>
-<dl>
-<dt>FMS의 주요 특징</dt>
-<dd>
+<p><strong>FMS의 주요 특징</strong></p>
 <ol type="1">
 <li><strong>유연성(Flexibility)</strong>
 <ul>
@@ -895,32 +1047,34 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>비가동 시간 최소화</strong> 및 <strong>설비 활용률 극대화</strong>.</li>
 </ul></li>
 </ol>
-</dd>
-</dl>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://img.brainkart.com/imagebk7/CefCAxV.jpg" class="img-fluid figure-img"></p>
 <figcaption>FMS구성요소<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></figcaption>
 </figure>
 </div>
-<dl>
-<dt>FMS 구성 요소</dt>
-<dd>
+<p><strong>FMS 구성 요소</strong></p>
 <ol type="1">
-<li><strong>가공 기계(Machine Tools)</strong><br>
-- CNC 밀링, 선반, 드릴링 등 다양한 가공 장비로 구성<br>
+<li><strong>가공 기계(Machine Tools)</strong>
+<ul>
+<li>CNC 밀링, 선반, 드릴링 등 다양한 가공 장비로 구성<br>
 </li>
-<li><strong>로봇 및 운반 시스템</strong><br>
-- 로봇과 AGV가 원자재 및 제품을 자동으로 이송<br>
+</ul></li>
+<li><strong>로봇 및 운반 시스템</strong>
+<ul>
+<li>로봇과 AGV가 원자재 및 제품을 자동으로 이송<br>
 </li>
-<li><strong>소프트웨어 시스템</strong><br>
-- 생산 스케줄링, 품질 관리, 공정 모니터링을 담당<br>
+</ul></li>
+<li><strong>소프트웨어 시스템</strong>
+<ul>
+<li>생산 스케줄링, 품질 관리, 공정 모니터링을 담당<br>
 </li>
-<li><strong>자동 보관 및 출고 시스템(AS/RS)</strong><br>
-- 재료 및 완성품을 자동으로 저장하고 필요한 시점에 출고</li>
+</ul></li>
+<li><strong>자동 보관 및 출고 시스템(AS/RS)</strong>
+<ul>
+<li>재료 및 완성품을 자동으로 저장하고 필요한 시점에 출고</li>
+</ul></li>
 </ol>
-</dd>
-</dl>
 <table class="caption-top table">
 <caption>FMS 장점과 단점</caption>
 <colgroup>
@@ -964,9 +1118,7 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 <p>FMS는 <font color="blue">유연성과 생산성 향상, 재고 감소 및 품질 개선</font> 등의 이점을 제공하지만, <font color="red">초기 투자비, 복잡성 및 유지보수 문제</font>와 같은 단점도 존재한다. 기업의 생산 전략과 재정 상태에 맞추어 도입 여부를 신중히 결정해야 한다.</p>
-<dl>
-<dt>FMS의 활용 분야</dt>
-<dd>
+<p><strong>FMS의 활용 분야</strong></p>
 <ul>
 <li><strong>자동차 산업</strong>: 다양한 모델 및 사양의 자동차 부품 생산<br>
 </li>
@@ -976,8 +1128,6 @@ ul.task-list li input[type="checkbox"] {
 </li>
 <li><strong>기계 산업</strong>: 다품종 소량 생산이 필요한 산업군</li>
 </ul>
-</dd>
-</dl>
 <p>FMS는 <font color="blue">변화하는 시장 요구에 신속하게 대응할 수 있는 제조 시스템</font>으로, <font color="blue">효율성과 생산성을 높이는 핵심 기술</font>이다. 4차 산업혁명 시대에 <strong>스마트 팩토리</strong>와 결합되어 <strong>지능형 제조 시스템</strong>으로 발전하고 있다.</p>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출 106-1-9">
 <div class="callout-header d-flex align-content-center">
@@ -992,8 +1142,9 @@ ul.task-list li input[type="checkbox"] {
 
 </div>
 </div>
-<section id="sec-dnc" class="level3">
-<h3 class="anchored" data-anchor-id="sec-dnc">DNC</h3>
+</section>
+<section id="sec-dnc" class="level2">
+<h2 class="anchored" data-anchor-id="sec-dnc">DNC</h2>
 <p><strong>DNC</strong>(Direct Numerical Control)는 NC(수치제어, Numeric Control) 기술이 발전한 형태이다. NC 기술은 공작기계에 적용해서 기계가공을 자동으로 행하는 것으로 수치제어가공은 NC공작기계가 중심이 된다. NC공작기계는 정보처리 정도에 따라 다음과 같이 분류할 수 있다.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1001,23 +1152,19 @@ ul.task-list li input[type="checkbox"] {
 <figcaption>https://mellowpine.com/nc-vs-cnc-vs-dnc/</figcaption>
 </figure>
 </div>
-<dl>
-<dt>DNC 분류</dt>
-<dd>
+<p><strong>DNC 분류</strong></p>
 <ul>
 <li>일반 NC공작기계(Conventional NC Machine)</li>
 <li>머시닝 센터(Machine Center)</li>
 <li>컴퓨터 수치제어(CNC, Computer Numerical Control)</li>
 <li>직접 수치제어(DNC, Direct Numerical Control)</li>
 </ul>
-</dd>
-</dl>
 <p>DNC 기계군은 <font color="blue">여러 대 NC 기계를 컴퓨터에 연결하여 외부 기억장치에 저장된 NC용 가공지령정보를 필요에 따라 컴퓨터를 통해 전달받아 공작기계를 움직여 작업을 수행</font>한다.</p>
 <p><strong>CNC</strong>는 <font color="blue">각 기계가 독립적인 프로그램을 가지고 있어 개별적으로 작동</font>한다. 즉 한 번에 작업 하나만을 처리할 수 있다. 이에 반해 <strong>DNC</strong>는 <font color="blue">여러 기계가 네트워크로 연결되어 중앙 서버로부터 명령을 받아 작업을 수행</font>한다. 이로 인해 DNC에서는 한 번에 여러 작업을 동시에 진행할 수 있어 생산성이 향상된다. 또한 DNC는 중앙 서버에서 데이터를 관리하기 때문에 프로그램 업데이트나 변경 사항이 있을 경우 개별 기계 프로그램을 수정정하지 않고 서버에서만 수정하면 되므로 관리가 용이하다는 장점이 있다.</p>
 </section>
-</section>
 <section id="sec-ref-0606" class="level2">
 <h2 class="anchored" data-anchor-id="sec-ref-0606">참고자료</h2>
+<p><em>_EOD_</em></p>
 
 
 </section>
