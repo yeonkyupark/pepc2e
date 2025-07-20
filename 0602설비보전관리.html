@@ -579,7 +579,13 @@ window.Quarto = {
   <li><a href="#주요-비교" id="toc-주요-비교" class="nav-link" data-scroll-target="#주요-비교">주요 비교</a></li>
   <li><a href="#tpm-관점에서의-접근" id="toc-tpm-관점에서의-접근" class="nav-link" data-scroll-target="#tpm-관점에서의-접근">TPM 관점에서의 접근</a></li>
   </ul></li>
-  <li><a href="#돌발로스와-만성로스" id="toc-돌발로스와-만성로스" class="nav-link" data-scroll-target="#돌발로스와-만성로스">돌발로스와 만성로스</a></li>
+  <li><a href="#돌발로스와-만성로스" id="toc-돌발로스와-만성로스" class="nav-link" data-scroll-target="#돌발로스와-만성로스">돌발로스와 만성로스</a>
+  <ul>
+  <li><a href="#주요-비교-1" id="toc-주요-비교-1" class="nav-link" data-scroll-target="#주요-비교-1">주요 비교</a></li>
+  <li><a href="#tpm에서의-대응" id="toc-tpm에서의-대응" class="nav-link" data-scroll-target="#tpm에서의-대응">TPM에서의 대응</a></li>
+  <li><a href="#사례-예시" id="toc-사례-예시" class="nav-link" data-scroll-target="#사례-예시">사례 예시</a></li>
+  <li><a href="#개선-접근법" id="toc-개선-접근법" class="nav-link" data-scroll-target="#개선-접근법">개선 접근법</a></li>
+  </ul></li>
   <li><a href="#고장강도율" id="toc-고장강도율" class="nav-link" data-scroll-target="#고장강도율">고장강도율</a></li>
   <li><a href="#sec-am-7-steps" id="toc-sec-am-7-steps" class="nav-link" data-scroll-target="#sec-am-7-steps">자주보전 7단계</a></li>
   <li><a href="#sec-6-big-losses" id="toc-sec-6-big-losses" class="nav-link" data-scroll-target="#sec-6-big-losses">설비 6대 로스</a>
@@ -2024,8 +2030,6 @@ Note&nbsp;17.1 TBM vs.&nbsp;CBM
 </tr>
 </tbody>
 </table>
-</blockquote>
-<blockquote class="blockquote">
 <dl>
 <dt>사례비교</dt>
 <dd>
@@ -2076,39 +2080,182 @@ Note&nbsp;17.1 TBM vs.&nbsp;CBM
 <figcaption>Visualizing the Effects of Chronic Versus Sporadic Losses in Manufacturing Industries – A Case Study</figcaption>
 </figure>
 </div>
+<p>설비 및 생산 시스템에서 발생하는 손실(loss)은 발생 양상과 대처 방식에 따라 <strong>돌발로스(Sporadic Loss)</strong>와 <strong>만성로스(Chronic Loss)</strong>로 구분된다. 이 구분은 TPM 활동, 품질 개선, 설비 효율화 등의 핵심 개념이다.</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 13%">
-<col style="width: 42%">
-<col style="width: 44%">
+<col style="width: 50%">
+<col style="width: 50%">
 </colgroup>
 <thead>
 <tr class="header">
-<th><strong>구분</strong></th>
-<th><strong>돌발로스 (Sudden Loss)</strong></th>
-<th><strong>만성로스 (Chronic Loss)</strong></th>
+<th>구분</th>
+<th>정의</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>정의</strong></td>
-<td>예기치 않게 발생하는 고장이나 문제로 인한 손실</td>
-<td>지속적이고 반복적으로 발생하는 문제로 인한 손실</td>
+<td><strong>돌발로스 (Sporadic Loss)</strong></td>
+<td>갑자기 비정상적인 현상이 발생하여 즉각적인 문제로 나타나는 손실</td>
 </tr>
 <tr class="even">
-<td><strong>특징</strong></td>
-<td>갑자기 발생하여 예측 불가능함</td>
-<td>지속적으로 문제 발생, 반복적이고 일정함</td>
+<td><strong>만성로스 (Chronic Loss)</strong></td>
+<td>오랜 시간 동안 지속되어 왔으며, 명확한 원인이 즉각적으로 식별되지 않는 손실</td>
+</tr>
+</tbody>
+</table>
+<section id="주요-비교-1" class="level3">
+<h3 class="anchored" data-anchor-id="주요-비교-1">주요 비교</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 9%">
+<col style="width: 45%">
+<col style="width: 45%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>돌발로스 (Sporadic Loss)</th>
+<th>만성로스 (Chronic Loss)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>발생 형태</strong></td>
+<td>갑작스러운 이상/고장 발생</td>
+<td>서서히 누적되는 성능 저하</td>
+</tr>
+<tr class="even">
+<td><strong>원인</strong></td>
+<td>비교적 명확, 특정 이벤트</td>
+<td>불명확, 구조적·복합적 문제</td>
+</tr>
+<tr class="odd">
+<td><strong>발견 난이도</strong></td>
+<td>비교적 쉬움 (눈에 띔)</td>
+<td>어려움 (일상화되어 인식 안 됨)</td>
+</tr>
+<tr class="even">
+<td><strong>대응 방식</strong></td>
+<td>신속한 조치로 복구 (소방적 대응)</td>
+<td>원인 분석 및 개선 활동 필요</td>
 </tr>
 <tr class="odd">
 <td><strong>예시</strong></td>
-<td>전원 문제, 제어 시스템 오류, 외부 환경 변화 등</td>
-<td>설비 부품 마모, 설비 설계 문제 등</td>
+<td>설비 급정지, 제품 불량 급증</td>
+<td>지속적인 사이클타임 증가, 낮은 작업 효율</td>
 </tr>
 <tr class="even">
-<td><strong>개선 방법</strong></td>
-<td>· 예방 점검을 통해 고장을 미리 방지한다.<br>· 안전장치나 경고 시스템을 추가하여 빠르게 대응한다.<br>· 훈련과 교육을 통해 작업자들이 돌발 상황에 신속하게 대응하도록 한다.</td>
-<td>· 설비 디자인을 개선하여 문제를 반복적으로 발생하지 않게 한다.<br>· 정기적인 유지보수를 통해 성능 저하를 방지한다.<br>· 데이터를 분석하여 문제를 사전에 예방한다.<br>· 낡은 부품이나 설비를 업그레이드하거나 교체한다.</td>
+<td><strong>개선 활동</strong></td>
+<td>문제 해결 중심</td>
+<td>체계적 개선 활동 필요 (KAIZEN, 5WHY 등)</td>
+</tr>
+<tr class="odd">
+<td><strong>측정 방법</strong></td>
+<td>설비 가동률, 불량률 급변 등</td>
+<td>트렌드 분석, 베이스라인 비교 등</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="tpm에서의-대응" class="level3">
+<h3 class="anchored" data-anchor-id="tpm에서의-대응">TPM에서의 대응</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 31%">
+<col style="width: 34%">
+<col style="width: 34%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>TPM 활동 영역</th>
+<th>돌발로스 대응</th>
+<th>만성로스 대응</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>자주보전</strong></td>
+<td>이물 제거, 청결 상태 유지 등 일상점검 강화</td>
+<td>설비 기초조건 회복, 표준작업 준수</td>
+</tr>
+<tr class="even">
+<td><strong>계획보전</strong></td>
+<td>긴급보전/응급대응 프로세스 구축</td>
+<td>설비 수명 데이터 축적, 예지보전</td>
+</tr>
+<tr class="odd">
+<td><strong>개선활동(KAIZEN)</strong></td>
+<td>원인 제거를 통한 재발방지</td>
+<td>장기적인 개선과제 도출 및 실행</td>
+</tr>
+<tr class="even">
+<td><strong>교육훈련</strong></td>
+<td>비상조치 숙련도 향상</td>
+<td>문제 인식력 및 개선역량 향상</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="사례-예시" class="level3">
+<h3 class="anchored" data-anchor-id="사례-예시">사례 예시</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>구분</th>
+<th>사례</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>돌발로스</strong></td>
+<td>모터 고장으로 생산라인 정지, 컨베이어 벨트 파손, 불량률 급증</td>
+</tr>
+<tr class="even">
+<td><strong>만성로스</strong></td>
+<td>작업 전 준비시간 증가, 반복적인 셋업 미숙, 조작 미세불량 누적, 불필요한 동작시간</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="개선-접근법" class="level3">
+<h3 class="anchored" data-anchor-id="개선-접근법">개선 접근법</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>단계</th>
+<th>활동</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>①</td>
+<td><strong>로스 파악</strong></td>
+<td>데이터 기반으로 손실 유형 분류</td>
+</tr>
+<tr class="even">
+<td>②</td>
+<td><strong>문제 유형화</strong></td>
+<td>돌발 vs 만성 구분</td>
+</tr>
+<tr class="odd">
+<td>③</td>
+<td><strong>우선순위 결정</strong></td>
+<td>영향도, 빈도 등 고려</td>
+</tr>
+<tr class="even">
+<td>④</td>
+<td><strong>개선 방식 적용</strong></td>
+<td>돌발: 즉시조치 / 만성: 근본 개선</td>
+</tr>
+<tr class="odd">
+<td>⑤</td>
+<td><strong>표준화 및 교육</strong></td>
+<td>재발방지 및 작업자 정착</td>
 </tr>
 </tbody>
 </table>
@@ -2125,6 +2272,7 @@ Note&nbsp;17.1 TBM vs.&nbsp;CBM
 
 </div>
 </div>
+</section>
 </section>
 <section id="고장강도율" class="level2">
 <h2 class="anchored" data-anchor-id="고장강도율">고장강도율</h2>
@@ -2597,41 +2745,44 @@ Note&nbsp;17.1 TBM vs.&nbsp;CBM
 <tr class="odd">
 <td><strong>가동 손실</strong></td>
 <td><strong>고장 손실</strong></td>
-<td>- 베어링 마모- 센서 불량- 윤활 불량</td>
-<td>- 자주보전 강화- 예지보전 도입- 고장이력 분석 및 약점 개선- 설비 표준화</td>
+<td>- 베어링 마모<br>- 센서 불량<br>- 윤활 불량</td>
+<td>- 자주보전 강화<br>- 예지보전 도입<br>- 고장이력 분석 및 약점 개선<br>- 설비 표준화</td>
 </tr>
 <tr class="even">
 <td></td>
 <td><strong>단치 전환 손실</strong></td>
-<td>- 금형 교환 시간 지연- 작업자 숙련도 부족- 비효율적인 셋업 절차</td>
-<td>- SMED(단축교환) 기법 적용- 셋업 매뉴얼 개선 및 교육- 셋업 작업 표준화 및 도구 정리</td>
+<td>- 금형 교환 시간 지연<br>- 작업자 숙련도 부족<br>- 비효율적인 셋업 절차</td>
+<td>- SMED(단축교환) 기법 적용<br>- 셋업 매뉴얼 개선 및 교육<br>- 셋업 작업 표준화 및 도구 정리</td>
 </tr>
 <tr class="odd">
 <td><strong>속도 손실</strong></td>
 <td><strong>공정 정지/가동 불안정 손실</strong></td>
-<td>- 일시 정지 반복- 센서 민감도 오류- 원자재 이송 불량</td>
-<td>- 센서 감도 및 위치 최적화- 이송 시스템 유지보수 강화- 현장 원인별 정지 분석 및 개선</td>
+<td>- 일시 정지 반복<br>- 센서 민감도 오류<br>- 원자재 이송 불량</td>
+<td>- 센서 감도 및 위치 최적화<br>- 이송 시스템 유지보수 강화<br>- 현장 원인별 정지 분석 및 개선</td>
 </tr>
 <tr class="even">
 <td></td>
 <td><strong>속도 저하 손실</strong></td>
-<td>- 부품 마모- 설비 설정 값 미흡- 작업자의 조심 운전</td>
-<td>- 설비 상태 기준 설정- 속도저하 원인 추적 및 재설계- 표준작업 정착 및 교육 강화</td>
+<td>- 부품 마모<br>- 설비 설정 값 미흡<br>- 작업자의 조심 운전</td>
+<td>- 설비 상태 기준 설정<br>- 속도저하 원인 추적 및 재설계<br>- 표준작업 정착 및 교육 강화</td>
 </tr>
 <tr class="odd">
 <td><strong>품질 손실</strong></td>
 <td><strong>초품 손실</strong></td>
-<td>- 기동 시 온도·압력 안정화 부족- 조정 미흡- 윤활 불량</td>
-<td>- 자동 조정 시스템 도입- 기동조건 최적화 및 예열 기준 설정- 조정 작업 매뉴얼화</td>
+<td>- 기동 시 온도·압력 안정화 부족<br>- 조정 미흡<br>- 윤활 불량</td>
+<td>- 자동 조정 시스템 도입<br>- 기동조건 최적화 및 예열 기준 설정<br>- 조정 작업 매뉴얼화</td>
 </tr>
 <tr class="even">
 <td></td>
 <td><strong>가공 불량 손실</strong></td>
-<td>- 공구 마모- 치수 편차- 오염물 부착</td>
-<td>- 공구 수명 관리- 자동 치수 측정 시스템 도입- 청정환경 유지 및 원인별 QC 활동</td>
+<td>- 공구 마모<br>- 치수 편차<br>- 오염물 부착</td>
+<td>- 공구 수명 관리<br>- 자동 치수 측정 시스템 도입<br>- 청정환경 유지 및 원인별 QC 활동</td>
 </tr>
 </tbody>
 </table>
+</dd>
+<dd>
+{tbl-colwidths=“[10,20,30,40]”}
 </dd>
 <dt>설비 6대 로스 예시</dt>
 <dd>
@@ -2803,9 +2954,9 @@ Note&nbsp;17.1 TBM vs.&nbsp;CBM
 <p>각 손실별 개선방향은 다음과 같다.</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
+<col style="width: 20%">
+<col style="width: 40%">
+<col style="width: 40%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -2896,6 +3047,9 @@ Note&nbsp;17.1 TBM vs.&nbsp;CBM
 </tr>
 </tbody>
 </table>
+</dd>
+<dd>
+{tbl-colwidths=“[20,40,40]”}
 </dd>
 </dl>
 </section>
@@ -3180,10 +3334,10 @@ MTBF = \frac{정상가동총시간}{고장횟수}
 <p>참고로 고장률 모델별 의미는 다음과 같다.</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
+<col style="width: 10%">
+<col style="width: 20%">
+<col style="width: 35%">
+<col style="width: 35%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -3283,9 +3437,9 @@ RAMS --- 신뢰성 &amp; 가용성 &amp; 유지보수성 &amp; 안전성
 </div>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
+<col style="width: 20%">
+<col style="width: 40%">
+<col style="width: 40%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -3320,10 +3474,10 @@ RAMS --- 신뢰성 &amp; 가용성 &amp; 유지보수성 &amp; 안전성
 <p>RAMS 항목별 평가 지표는 다음과 같다.</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
+<col style="width: 10%">
+<col style="width: 20%">
+<col style="width: 35%">
+<col style="width: 35%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -3426,9 +3580,9 @@ RAMS --- 신뢰성 &amp; 가용성 &amp; 유지보수성 &amp; 안전성
 <p>참고로 안전성 평가 도구인 FMEA와 FTA를 비교하면 다음과 같다.</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
+<col style="width: 20%">
+<col style="width: 40%">
+<col style="width: 40%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -3541,9 +3695,9 @@ FTA로 특정 중요 고장에 대해 심층 분석하는 방식이 자주 사�
 <table class="caption-top table">
 <caption>설비 문제 해결 8단계 절차</caption>
 <colgroup>
-<col style="width: 4%">
-<col style="width: 22%">
-<col style="width: 73%">
+<col style="width: 10%">
+<col style="width: 20%">
+<col style="width: 70%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -3611,8 +3765,7 @@ FTA로 특정 중요 고장에 대해 심층 분석하는 방식이 자주 사�
 </section>
 <section id="sec-ref-0602" class="level2">
 <h2 class="anchored" data-anchor-id="sec-ref-0602">참고자료</h2>
-<hr>
-<p><strong>각주</strong></p>
+<p><em>_EOD_</em></p>
 
 
 </section>
