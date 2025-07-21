@@ -549,9 +549,17 @@ window.Quarto = {
   <li><a href="#품질경영-4대-절대-조건" id="toc-품질경영-4대-절대-조건" class="nav-link" data-scroll-target="#품질경영-4대-절대-조건">품질경영 4대 절대 조건</a></li>
   <li><a href="#신뢰성-관리" id="toc-신뢰성-관리" class="nav-link" data-scroll-target="#신뢰성-관리">신뢰성 관리</a>
   <ul>
+  <li><a href="#신뢰성-종류" id="toc-신뢰성-종류" class="nav-link" data-scroll-target="#신뢰성-종류">신뢰성 종류</a></li>
+  <li><a href="#신뢰성-비율" id="toc-신뢰성-비율" class="nav-link" data-scroll-target="#신뢰성-비율">신뢰성 비율</a></li>
   <li><a href="#신뢰성-설계" id="toc-신뢰성-설계" class="nav-link" data-scroll-target="#신뢰성-설계">신뢰성 설계</a></li>
   </ul></li>
-  <li><a href="#aql" id="toc-aql" class="nav-link" data-scroll-target="#aql">AQL</a></li>
+  <li><a href="#aql과-aqol" id="toc-aql과-aqol" class="nav-link" data-scroll-target="#aql과-aqol">AQL과 AQOL</a>
+  <ul>
+  <li><a href="#aql-acceptable-quality-level" id="toc-aql-acceptable-quality-level" class="nav-link" data-scroll-target="#aql-acceptable-quality-level">AQL (Acceptable Quality Level)</a></li>
+  <li><a href="#aqol-acceptable-quality-of-limit" id="toc-aqol-acceptable-quality-of-limit" class="nav-link" data-scroll-target="#aqol-acceptable-quality-of-limit">AQOL (Acceptable Quality of Limit)</a></li>
+  <li><a href="#aql-vs-aqol-비교" id="toc-aql-vs-aqol-비교" class="nav-link" data-scroll-target="#aql-vs-aqol-비교">AQL vs AQOL 비교</a></li>
+  <li><a href="#활용-예시" id="toc-활용-예시" class="nav-link" data-scroll-target="#활용-예시">활용 예시</a></li>
+  </ul></li>
   <li><a href="#sec-q-cost" id="toc-sec-q-cost" class="nav-link" data-scroll-target="#sec-q-cost">품질비용</a></li>
   <li><a href="#sec-msa" id="toc-sec-msa" class="nav-link" data-scroll-target="#sec-msa">측정시스템분석 오차</a></li>
   <li><a href="#sec-quality-evaluation" id="toc-sec-quality-evaluation" class="nav-link" data-scroll-target="#sec-quality-evaluation">품질평가</a>
@@ -1962,15 +1970,15 @@ UCL = \bar{u} + 3\sqrt{\frac{\bar{u}}{n}} = 2.92 + 3\sqrt{\frac{2.92}{1.7}} = 6.
 <p><strong>신뢰도</strong>는 <font color="#245bdb">신뢰성에 대한 양적 표시</font>로 임무기간 중 일어나는 단위시간당 고장회수로 나타내는 것이 일반적이며 이를 시간 함수로 볼 때 R(t)로 나타낸다. 이것은 제품이 t 시간 동안 고장이 나지 않는 확률이다. 즉, 제품을 사용하기 시작해서 어느 시점까지 전체 몇 %가 고장나지 않고 남아 있는가 하는 잔존률에 해당한다.</p>
 <p><strong>신뢰성관리</strong>는 성능과 신뢰성, 보전성 그리고 가동성이 높은 제품을 경제적으로 제조하기 위해서 제품 개발로부터 설계, 제조, 사용 및 보전에 이르기까지 제품 전 생명 주기(life cycle)에 걸쳐 미리 설정된 신뢰성 계획에 따라 <font color="#245bdb">제품 신뢰성을 확보하고 유지하기 위한 종합적인 관리활동</font>을 가리킨다.이를 위하여 신뢰성을 정량적으로 측정할 수 있는 척도를 설정하고 이를 바탕으로 불량원인을 발견하고 고장 원인을 찾아내서 개선하여 가능한 그 영향을 줄이거나 제거시키고자 하는 활동이다.</p>
 <p>품질경영적 관점에서 볼 때 신뢰성은 품질특성 중 하나이고 품질보증 기능을 한다. 따라서 신뢰성관리는 품질경영과 함께 상호 유기적인 관계에서 전개되어야 한다.</p>
+<section id="신뢰성-종류" class="level3">
+<h3 class="anchored" data-anchor-id="신뢰성-종류">신뢰성 종류</h3>
 <p>신뢰성은 고유 신뢰성과 사용 신뢰성으로 구분할 수 있다. 고유 신뢰성과 사용 신뢰성은 제품이나 시스템의 신뢰성을 평가할 때 사용하는 <strong>서로 다른 관점의 개념</strong>이다. 아래에서 두 개념을 <strong>정의</strong>, <strong>차이점</strong>, <strong>예시</strong>, <strong>적용 시점</strong> 등으로 체계적으로 비교 설명한다.</p>
-<dl>
-<dt>정의 비교</dt>
-<dd>
+<p><strong>정의 비교</strong></p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
+<col style="width: 20%">
+<col style="width: 40%">
+<col style="width: 40%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -1997,17 +2005,12 @@ UCL = \bar{u} + 3\sqrt{\frac{\bar{u}}{n}} = 2.92 + 3\sqrt{\frac{2.92}{1.7}} = 6.
 </tr>
 </tbody>
 </table>
-</dd>
-<dd>
-{tbl-colwidths=“[20,40,40]”}
-</dd>
-<dt>비교 설명</dt>
-<dd>
+<p><strong>비교 설명</strong></p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
+<col style="width: 20%">
+<col style="width: 40%">
+<col style="width: 40%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -2044,17 +2047,12 @@ UCL = \bar{u} + 3\sqrt{\frac{\bar{u}}{n}} = 2.92 + 3\sqrt{\frac{2.92}{1.7}} = 6.
 </tr>
 </tbody>
 </table>
-</dd>
-<dd>
-{tbl-colwidths=“[20,40,40]”}
-</dd>
-<dt>예시</dt>
-<dd>
+<p><strong>예시</strong></p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
+<col style="width: 20%">
+<col style="width: 40%">
+<col style="width: 40%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -2076,17 +2074,12 @@ UCL = \bar{u} + 3\sqrt{\frac{\bar{u}}{n}} = 2.92 + 3\sqrt{\frac{2.92}{1.7}} = 6.
 </tr>
 </tbody>
 </table>
-</dd>
-<dd>
-{tbl-colwidths=“[20,40,40]”}
-</dd>
-<dt>적용 시점</dt>
-<dd>
+<p><strong>적용 시점</strong></p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
+<col style="width: 20%">
+<col style="width: 40%">
+<col style="width: 40%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -2113,21 +2106,12 @@ UCL = \bar{u} + 3\sqrt{\frac{\bar{u}}{n}} = 2.92 + 3\sqrt{\frac{2.92}{1.7}} = 6.
 </tr>
 </tbody>
 </table>
-</dd>
-<dd>
-{tbl-colwidths=“[20,40,40]”}
-</dd>
-<dt>고유 신뢰성과 사용 신뢰성 간의 관계</dt>
-<dd>
+<p><strong>고유 신뢰성과 사용 신뢰성 간의 관계</strong></p>
 <ul>
 <li><strong>고유 신뢰성은 사용 신뢰성의 기반</strong><br>
-→ 고유 신뢰성이 낮으면 사용 신뢰성도 낮을 가능성이 큼</li>
-</ul>
-</dd>
-</dl>
-<ul>
-<li><p><strong>사용 신뢰성은 고유 신뢰성 + 운용 환경 영향</strong></p>
-<p><span class="math inline">\(\text{사용 신뢰성} = \text{고유 신뢰성} \times \text{환경 계수} \times \text{운용 계수}\)</span></p></li>
+→ 고유 신뢰성이 낮으면 사용 신뢰성도 낮을 가능성이 큼<br>
+</li>
+<li><strong>사용 신뢰성은 고유 신뢰성 + 운용 환경 영향</strong> <span class="math inline">\(\text{사용 신뢰성} = \text{고유 신뢰성} \times \text{환경 계수} \times \text{운용 계수}\)</span></li>
 </ul>
 <p>주요 내용을 정리하면 다음과 같다.</p>
 <table class="caption-top table">
@@ -2166,24 +2150,23 @@ UCL = \bar{u} + 3\sqrt{\frac{\bar{u}}{n}} = 2.92 + 3\sqrt{\frac{2.92}{1.7}} = 6.
 </tr>
 </tbody>
 </table>
-<dl>
-<dt>실무 활용 예시</dt>
-<dd>
+<p>실무 활용 예시</p>
 <ul>
-<li><p><strong>스마트팩토리 시스템 구축 시</strong></p></li>
-<li><p>고유 신뢰성: 제어 시스템 설계 시 부품의 MTBF 기준으로 구성</p></li>
-<li><p>사용 신뢰성: 실제 생산 라인 온도/습도/진동 조건에서 운영 후 현장 고장률 수집하여 평가</p></li>
-</ul>
-</dd>
-</dl>
+<li><strong>스마트팩토리 시스템 구축 시</strong>
 <ul>
-<li><p><strong>가전제품 개발 시</strong></p>
+<li>고유 신뢰성: 제어 시스템 설계 시 부품의 MTBF 기준으로 구성</li>
+<li>사용 신뢰성: 실제 생산 라인 온도/습도/진동 조건에서 운영 후 현장 고장률 수집하여 평가</li>
+</ul></li>
+<li><strong>가전제품 개발 시</strong>
 <ul>
-<li><p>고유 신뢰성: 소비자 사용 전 85℃/85% 습도 조건에서 고장 시간 예측</p></li>
-<li><p>사용 신뢰성: 고객 CS 데이터를 바탕으로 현장 고장률 피드백 받아 차기 설계 개선</p></li>
+<li>고유 신뢰성: 소비자 사용 전 85℃/85% 습도 조건에서 고장 시간 예측</li>
+<li>사용 신뢰성: 고객 CS 데이터를 바탕으로 현장 고장률 피드백 받아 차기 설계 개선</li>
 </ul></li>
 </ul>
 <p>두 개념을 혼동하지 않고 적절히 구분하여 활용하면, 제품 설계 개선과 고객 만족도 향상 모두에 기여할 수 있다.</p>
+</section>
+<section id="신뢰성-비율" class="level3">
+<h3 class="anchored" data-anchor-id="신뢰성-비율">신뢰성 비율</h3>
 <p>고장 통계에 따른 신뢰성 비율은 다음과 같다.</p>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
@@ -2210,55 +2193,96 @@ UCL = \bar{u} + 3\sqrt{\frac{\bar{u}}{n}} = 2.92 + 3\sqrt{\frac{2.92}{1.7}} = 6.
 </div>
 </div>
 </div>
+</section>
 <section id="신뢰성-설계" class="level3">
 <h3 class="anchored" data-anchor-id="신뢰성-설계">신뢰성 설계</h3>
 <p>신뢰성 설계 3요소는 <strong>고유 기술적 요소</strong>, <strong>수리 통계적 요소</strong>, <strong>관리 기술적 요소</strong>이다.</p>
-<dl>
-<dt>고유 기술적 요소</dt>
-<dd>
-<ul>
-<li>내 스트레스 설계</li>
-<li>실용 설계</li>
-<li>내 소음 설계</li>
-<li><strong>중복 설계</strong>(redundancy)</li>
-<li><strong>fail safe 설계</strong></li>
-<li><strong>fool proof 설계</strong></li>
-<li><strong>derating설계</strong></li>
-<li>안전 설계</li>
-<li>FMEA</li>
-<li>FTA</li>
-<li>보전성 설계</li>
-<li>신뢰성 시험</li>
-<li>스크리닝</li>
-<li>고장 해석 등</li>
-</ul>
-</dd>
-<dt>수리 통계적 요소</dt>
-<dd>
-<ul>
-<li>신뢰도 예측</li>
-<li>신뢰도 배분</li>
-<li>신뢰성 발취 시험</li>
-<li>데이터 해석</li>
-<li>실험계획법</li>
-<li>시뮬레이션</li>
-<li>다구치 설계</li>
-<li>SQC 등</li>
-</ul>
-</dd>
-<dt>관리 기술적 요소</dt>
-<dd>
-<ul>
-<li>설계심사(DR)</li>
-<li>Check List</li>
-<li>표준화</li>
-<li>Trade off</li>
-<li>Configuration관리</li>
-<li>TQC</li>
-<li>QC 신 7가지 도구</li>
-</ul>
-</dd>
-</dl>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 41%">
+<col style="width: 20%">
+<col style="width: 37%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>고유 기술적 요소</th>
+<th>수리 통계적 요소</th>
+<th>관리 기술적 요소</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>내 스트레스 설계</td>
+<td>신뢰도 예측</td>
+<td>설계심사(DR)</td>
+</tr>
+<tr class="even">
+<td>실용 설계</td>
+<td>신뢰도 배분</td>
+<td>Check List</td>
+</tr>
+<tr class="odd">
+<td>내 소음 설계</td>
+<td>신뢰성 발취 시험</td>
+<td>표준화</td>
+</tr>
+<tr class="even">
+<td>중복 설계 (Redundancy)</td>
+<td>데이터 해석</td>
+<td>Trade Off</td>
+</tr>
+<tr class="odd">
+<td>Fail Safe 설계</td>
+<td>실험계획법</td>
+<td>Configuration 관리</td>
+</tr>
+<tr class="even">
+<td>Fool Proof 설계</td>
+<td>시뮬레이션</td>
+<td>TQC</td>
+</tr>
+<tr class="odd">
+<td>Derating 설계</td>
+<td>다구치 설계</td>
+<td>QC 신 7가지 도구</td>
+</tr>
+<tr class="even">
+<td>안전 설계</td>
+<td>SQC 등</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>FMEA</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>FTA</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>보전성 설계</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>신뢰성 시험</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>스크리닝</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>고장 해석 등</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 109-1-10">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -2274,78 +2298,136 @@ UCL = \bar{u} + 3\sqrt{\frac{\bar{u}}{n}} = 2.92 + 3\sqrt{\frac{2.92}{1.7}} = 6.
 </div>
 </section>
 </section>
-<section id="aql" class="level2">
-<h2 class="anchored" data-anchor-id="aql">AQL</h2>
-<p><strong>AQL</strong>(Acceptable quality level)은 <font color="blue">합격판정 샘플링검사에서 공정평균 품질수준으로 구매자가 만족할 수 있는 최대 불량률</font>을 뜻하며, 흔히 <strong>합격품질지수</strong>라고 부른다. 이 때 로트 합격확률은 보통 95% 수준이다.</p>
-<p><strong>AOQL</strong>(Average outgoing quality limit)은 <font color="blue">AQL이 최대가 되는 출하품질</font>을 뜻한다. 즉, 입고 제품 최대불량률(%)을 나타낸다.</p>
+<section id="aql과-aqol" class="level2">
+<h2 class="anchored" data-anchor-id="aql과-aqol">AQL과 AQOL</h2>
+<p><strong>AQL (Acceptable Quality Level)</strong>과 <strong>AQOL (Acceptable Quality of Limit)</strong>은 <strong>로트(LOT) 단위 품질검사 시 샘플링 기준</strong>을 설정할 때 사용되는 통계적 개념이다. 품질보증, 수입검사, 공급자 관리 등 <strong>검사 기반 의사결정 체계</strong>의 핵심 지표로 활용된다.</p>
+<section id="aql-acceptable-quality-level" class="level3">
+<h3 class="anchored" data-anchor-id="aql-acceptable-quality-level">AQL (Acceptable Quality Level)</h3>
 <table class="caption-top table">
-<caption>AQL과 AOQL 비교</caption>
 <colgroup>
-<col style="width: 10%">
-<col style="width: 42%">
-<col style="width: 46%">
+<col style="width: 50%">
+<col style="width: 50%">
 </colgroup>
 <thead>
 <tr class="header">
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>정의</td>
+<td><strong>허용 가능한 평균 불량률</strong>로, 구매자가 수용 가능한 최소한의 품질 수준</td>
+</tr>
+<tr class="even">
+<td>목적</td>
+<td>생산자가 공급한 제품이 일정 수준 이상의 품질임을 보장</td>
+</tr>
+<tr class="odd">
+<td>단위</td>
+<td>% 또는 ppm (불량률 기준)</td>
+</tr>
+<tr class="even">
+<td>적용 방식</td>
+<td>MIL-STD-105E, ISO 2859, KS Q 9001 등에 기반한 샘플링 검사 계획에 사용</td>
+</tr>
+<tr class="odd">
+<td>대표 예시</td>
+<td>AQL = 1.0% → 평균적으로 100개 중 1개까지는 불량 허용</td>
+</tr>
+</tbody>
+</table>
+<p><strong>AQL의 특징</strong></p>
+<ul>
+<li><strong>낮을수록 품질 수준이 높음</strong></li>
+<li>검사 수준(Level I~III 또는 S-1~S-4)에 따라 샘플 수량과 기준이 달라짐</li>
+<li>일반적으로 <strong>구매자</strong>가 설정</li>
+</ul>
+</section>
+<section id="aqol-acceptable-quality-of-limit" class="level3">
+<h3 class="anchored" data-anchor-id="aqol-acceptable-quality-of-limit">AQOL (Acceptable Quality of Limit)</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>정의</td>
+<td><strong>허용 가능한 최대 불량률 한계값</strong>, 실질적으로 AQL의 <strong>상한선 개념</strong></td>
+</tr>
+<tr class="even">
+<td>목적</td>
+<td>검사 시점에서 받아들일 수 있는 최대한의 불량 허용치로 판단</td>
+</tr>
+<tr class="odd">
+<td>단위</td>
+<td>% 또는 ppm</td>
+</tr>
+<tr class="even">
+<td>적용 방식</td>
+<td>주로 LTPD (Lot Tolerance Percent Defective)나 RQL (Rejectable Quality Level)과 유사 개념으로 사용됨</td>
+</tr>
+<tr class="odd">
+<td>대표 예시</td>
+<td>AQOL = 2.5% → 검사에서 이 수준을 초과하면 로트는 불합격 처리됨</td>
+</tr>
+</tbody>
+</table>
+<p><strong>AQOL의 특징</strong></p>
+<ul>
+<li>AQL보다 <strong>보수적</strong>인 개념</li>
+<li>검사자가 <strong>실제 수락 여부를 판단</strong>할 때 적용</li>
+<li>공급자의 품질수준이 <strong>이 한계를 넘으면</strong> 로트는 거부됨</li>
+</ul>
+</section>
+<section id="aql-vs-aqol-비교" class="level3">
+<h3 class="anchored" data-anchor-id="aql-vs-aqol-비교">AQL vs AQOL 비교</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
 <th>구분</th>
-<th>AQL (Acceptance Quality Limit)</th>
-<th>AOQL (Average Outgoing Quality Limit)</th>
+<th>AQL</th>
+<th>AQOL</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>의미</td>
-<td>허용 가능한 최대 불량률</td>
-<td>출하되는 제품의 평균 최대 불량률</td>
+<td>평균적인 허용 품질 수준</td>
+<td>최대 허용 가능한 불량 수준</td>
 </tr>
 <tr class="even">
 <td>목적</td>
-<td>샘플링 검사에서 합격 여부를 결정하는 기준</td>
-<td>전체 검사 및 선별 과정 후 출하 품질을 평가하는 기준</td>
+<td>계약 상 품질 기준 설정</td>
+<td>수락/거절 결정 시 실질 판단 기준</td>
 </tr>
 <tr class="odd">
 <td>적용 시점</td>
-<td>샘플링 검사 단계</td>
-<td>출하 단계 (검사 후)</td>
+<td>사전 품질관리 기준</td>
+<td>검사 시 수락여부 결정</td>
 </tr>
 <tr class="even">
-<td>검사 방식</td>
-<td>샘플에서 불량률이 AQL 이하이면 로트(생산 단위)를 합격</td>
-<td>전체 검사 후 재검 및 선별을 거친 후 최악의 경우를 가정한 평균 불량률</td>
-</tr>
-<tr class="odd">
-<td>보완 조치</td>
-<td>샘플이 AQL 기준을 초과하면 전체 로트를 불합격 처리하거나 100% 검사</td>
-<td>AOQL은 불합격 로트가 선별 과정을 거쳐 출하되므로 최종 불량률이 낮아짐</td>
-</tr>
-<tr class="even">
-<td>공식</td>
-<td>AQL은 기준 불량률 자체를 의미</td>
-<td>AOQL = 전체 출하품에서 발생할 수 있는 최대 평균 불량률</td>
+<td>관련 개념</td>
+<td>생산자 중심 품질</td>
+<td>구매자 중심 위험관리</td>
 </tr>
 </tbody>
 </table>
-<dl>
-<dt>예시</dt>
-<dd>
-<ol type="1">
-<li><strong>AQL (허용 가능한 품질 한계)</strong>
+</section>
+<section id="활용-예시" class="level3">
+<h3 class="anchored" data-anchor-id="활용-예시">활용 예시</h3>
 <ul>
-<li>한 박스(1,000개)에서 10개(1%)까지는 불량이 있어도 허용<br>
-</li>
-<li>샘플링 검사에서 불량이 1% 이하이면 합격, 초과하면 불합격<br>
-</li>
-</ul></li>
-<li><strong>AOQL (평균 출하 품질 한계)</strong>
-<ul>
-<li>샘플링 검사 후 <font color="blue">불합격된 제품을 추가로 100% 검사하여 선별</font><br>
-</li>
-<li>최종 출하되는 제품에서 나올 수 있는 불량률의 최대 평균값</li>
-</ul></li>
-</ol>
-</dd>
-</dl>
-<p>즉, AQL은 검사에서 합격할 수 있는 최대 허용 불량률이고, AOQL은 최종 출하되는 제품에서 발생할 수 있는 최대 평균 불량률을 의미한다.</p>
+<li><strong>AQL 1.0% 기준 샘플링 검사</strong>: 샘플 중 불량 2개까지는 수락, 3개 이상이면 거절</li>
+<li><strong>AQOL 2.5% 기준 검사</strong>: 검사 결과가 2.5%를 초과하면 품질 불량으로 간주</li>
+</ul>
+<p><strong>AQL은 품질계약 및 표준화 기준</strong>, <strong>AQOL은 검사 수락 판정 기준</strong>으로 서로 보완적인 관계에 있다. 샘플링 검사에서 이 두 개념은 품질과 위험을 균형 있게 관리하는 데 필수적이며 기업은 <strong>제품 특성, 고객 요구, 법적 요건</strong>을 고려해 적절한 AQL/AQOL 기준을 설정해야 한다.</p>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 112-4-1, 118-4-2, 127-3-2">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -2359,6 +2441,7 @@ UCL = \bar{u} + 3\sqrt{\frac{\bar{u}}{n}} = 2.92 + 3\sqrt{\frac{2.92}{1.7}} = 6.
 
 </div>
 </div>
+</section>
 </section>
 <section id="sec-q-cost" class="level2">
 <h2 class="anchored" data-anchor-id="sec-q-cost">품질비용</h2>
@@ -2385,60 +2468,38 @@ UCL = \bar{u} + 3\sqrt{\frac{\bar{u}}{n}} = 2.92 + 3\sqrt{\frac{2.92}{1.7}} = 6.
 </div>
 </div>
 </div>
-<dl>
-<dt>예방비용 (Prevention Costs)</dt>
-<dd>
+<p><strong>예방비용 (Prevention Costs)</strong></p>
 <ul>
-<li>예방비용은 품질 문제를 미리 방지하기 위한 활동에 드는 비용이다. 이는 품질을 향상시키고 결함을 사전에 제거하는 데 투입되는 자원이다.
-<ul>
+<li>예방비용은 품질 문제를 미리 방지하기 위한 활동에 드는 비용이다. 이는 품질을 향상시키고 결함을 사전에 제거하는 데 투입되는 자원이다.</li>
 <li>교육 및 훈련: 직원들에게 품질 관리 및 프로세스 개선에 대한 교육을 제공하는 비용</li>
 <li>품질 계획 및 설계: 품질 기준을 설정하고, 제품 개발 초기에 품질을 고려하여 설계하는 비용</li>
-</ul></li>
 </ul>
-</dd>
-<dt>평가비용 (Appraisal Costs)</dt>
-<dd>
+<p><strong>평가비용 (Appraisal Costs)</strong></p>
 <ul>
-<li>평가비용은 제품이나 서비스 품질을 측정하고 검사하는 과정에서 발생하는 비용이다. 품질을 확인하고 유지하기 위해 필요한 검사 및 테스트 비용이 포함된다.
-<ul>
+<li>평가비용은 제품이나 서비스 품질을 측정하고 검사하는 과정에서 발생하는 비용이다. 품질을 확인하고 유지하기 위해 필요한 검사 및 테스트 비용이 포함된다.</li>
 <li>시험 및 검사: 제품이 생산된 후 품질을 검사하고 시험하는 데 드는 비용 (예: 생산라인에서의 품질 검사)</li>
 <li>감사 및 평가: 내부 품질 감사나 외부 인증 기관에 의한 품질 평가 비용</li>
-</ul></li>
 </ul>
-</dd>
-<dt>내부 실패비용 (Internal Failure Costs)</dt>
-<dd>
+<p><strong>내부 실패비용 (Internal Failure Costs)</strong></p>
 <ul>
-<li>내부 실패비용은 제품이 고객에게 전달되기 전에 발생하는 결함을 수정하는 데 드는 비용이다. 즉, 내부에서 품질 문제가 발견되어 이를 해결하기 위한 비용이다.
-<ul>
+<li>내부 실패비용은 제품이 고객에게 전달되기 전에 발생하는 결함을 수정하는 데 드는 비용이다. 즉, 내부에서 품질 문제가 발견되어 이를 해결하기 위한 비용이다.</li>
 <li>불량품 재작업: 생산 과정 중 결함이 발견되어 제품을 수정하거나 재작업하는 데 드는 비용</li>
 <li>폐기 비용: 품질 기준에 미달한 불량품을 폐기하는 데 드는 비용</li>
-</ul></li>
 </ul>
-</dd>
-<dt>외부 실패비용 (External Failure Costs)</dt>
-<dd>
+<p><strong>외부 실패비용 (External Failure Costs)</strong></p>
 <ul>
-<li>외부 실패비용은 제품이나 서비스가 고객에게 전달된 후에 발생하는 품질 문제로 인한 비용이다. 고객 불만이나 반환, 리콜 등과 관련된 비용이 포함된다.
-<ul>
+<li>외부 실패비용은 제품이나 서비스가 고객에게 전달된 후에 발생하는 품질 문제로 인한 비용이다. 고객 불만이나 반환, 리콜 등과 관련된 비용이 포함된다.</li>
 <li>리콜 비용: 품질 문제가 있는 제품을 시장에서 회수하는 데 드는 비용</li>
 <li>고객 불만 처리 및 보상: 품질 문제로 인해 고객에게 불만을 처리하고 보상하는 데 드는 비용 (예: 환불, 교환 등)</li>
-</ul></li>
 </ul>
-</dd>
-</dl>
 <p>간단히 요약하면 다음과 같다.</p>
-<dl>
-<dt>요약</dt>
-<dd>
+<p><strong>요약</strong></p>
 <ul>
 <li>예방비용: 품질 문제를 사전에 예방하기 위한 비용</li>
 <li>평가비용: 품질을 측정하고 검사하는 데 드는 비용</li>
 <li>내부 실패비용: 제품이 고객에게 전달되기 전 발생한 품질 문제 수정 비용</li>
 <li>외부 실패비용: 제품이 고객에게 전달된 후 발생한 품질 문제 처리 비용</li>
 </ul>
-</dd>
-</dl>
 <p>이 네 가지 품질비용 카테고리는 제품이나 서비스 품질 향상을 위해 적절한 관리와 투자로 문제를 최소화하는 데 중요한 역할을 한다.</p>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 115-1-13, 130-3-6">
 <div class="callout-header d-flex align-content-center">
@@ -2457,9 +2518,7 @@ UCL = \bar{u} + 3\sqrt{\frac{\bar{u}}{n}} = 2.92 + 3\sqrt{\frac{2.92}{1.7}} = 6.
 <section id="sec-msa" class="level2">
 <h2 class="anchored" data-anchor-id="sec-msa">측정시스템분석 오차</h2>
 <p>측정시스템에서 측정오차 유형에는 정확도 관련 오차 3가지, 정밀도 관련 오차 2가지가 있다.</p>
-<dl>
-<dt>정확도(Accuracy) 관련 오차: 측정값이 실제 참값(True Value)과 얼마나 가까운지</dt>
-<dd>
+<p><strong>정확도(Accuracy) 관련 오차: 측정값이 실제 참값(True Value)과 얼마나 가까운지</strong></p>
 <ol type="1">
 <li><strong>정확성(Bias)</strong><br>
 동일한 계측기로 동일한 시료를 측정한 경우, 측정치 평균과 기준값(참값) 간 차이로 정확성, 치우침, 편의라고도 한다.<br>
@@ -2474,9 +2533,7 @@ UCL = \bar{u} + 3\sqrt{\frac{\bar{u}}{n}} = 2.92 + 3\sqrt{\frac{2.92}{1.7}} = 6.
 하루 동안 반복 측정 시 결과가 점차 변하는 저울 경우가 해당된다.<br>
 <img src="https://sixsigmastudyguide.com/wp-content/uploads/2021/04/msa6.png" class="img-fluid" alt="https://sixsigmastudyguide.com/measurement-systems-analysis/"></li>
 </ol>
-</dd>
-<dt>정밀도(Precision) 관련 오차: 동일한 조건에서 반복 측정했을 때 측정값이 얼마나 일관되게 나오는지</dt>
-<dd>
+<p><strong>정밀도(Precision) 관련 오차: 동일한 조건에서 반복 측정했을 때 측정값이 얼마나 일관되게 나오는지</strong></p>
 <ol start="4" type="1">
 <li><strong>반복성(Repeatability)</strong><br>
 동일한 측정자가 동일한 시료로 여러 번 측정하여 얻은 데이터 산포 크기를 의미하며 산포 크기가 작을수록 반복성이 좋다고 하며 정밀도라고도 한다.<br>
@@ -2488,8 +2545,6 @@ UCL = \bar{u} + 3\sqrt{\frac{\bar{u}}{n}} = 2.92 + 3\sqrt{\frac{2.92}{1.7}} = 6.
 A 작업자와 B 작업자가 같은 제품을 같은 캘리퍼스로 측정했을 때 결과가 다르게 나오는 경우가 해당된다.<br>
 <img src="https://sixsigmastudyguide.com/wp-content/uploads/2021/04/msa8.png" class="img-fluid" alt="https://sixsigmastudyguide.com/measurement-systems-analysis/"></li>
 </ol>
-</dd>
-</dl>
 <p>측정 시스템 분석(Measurement System Analysis, MSA)에서 오차란, 측정 과정에서 발생하는 불확실성을 의미하며, 이를 통해 측정 시스템의 신뢰성을 평가할 수 있다. 측정 시스템 오차는 크게 <strong>정확도(Accuracy) 관련 오차</strong>와 <strong>정밀도(Precision) 관련 오차</strong>로 나뉜다.</p>
 <table class="caption-top table">
 <caption>측정 시스템 오차의 시각적 비교</caption>
@@ -2799,8 +2854,7 @@ A 작업자와 B 작업자가 같은 제품을 같은 캘리퍼스로 측정했�
 </tbody>
 </table>
 <p>PDCA 사이클은 단순하면서도 강력한 품질 개선 도구로, 기업과 조직의 경쟁력을 높이는 핵심 방법론 중 하나이다.</p>
-<hr>
-<p><strong>각주</strong></p>
+<p><em>_EOD_</em></p>
 
 
 </section>
