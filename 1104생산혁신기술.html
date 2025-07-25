@@ -1650,33 +1650,16 @@ N = \frac{100 \times 2.2}{50} = \frac{220}{50} = 4.4
 </section>
 <section id="sec-mta" class="level3">
 <h3 class="anchored" data-anchor-id="sec-mta">MTA</h3>
-<p>MTA(Make to Availability)는 <strong>제약이론(TOC: Theory of Constraints)</strong>에서 제안한 생산 전략으로, 특정 제품을 고객 주문 전에 미리 생산하여 <font color="blue">시장 수요를 충족할 수 있도록 가용 재고를 유지하는 방식</font>이다. TOC의 창시자인 엘리 골드랫(Eliyahu M. Goldratt)이 개발한 이 전략은 기존의 <strong>Make to Stock(MTS)</strong> 및 <strong>Make to Order(MTO)</strong> 방식과 차별화된다.</p>
-<dl>
-<dt>MTA의 핵심 개념</dt>
-<dd>
+<p>MTA(Make to Availability)는 <strong>제약이론(TOC: Theory of Constraints)</strong>에서 제안한 생산 전략으로, <span class="hl">특정 제품을 고객 주문 전에 미리 생산하여 시장 수요를 충족할 수 있도록 가용 재고를 유지하는 방식</span>이다. TOC의 창시자인 엘리 골드랫(Eliyahu M. Goldratt)이 개발한 이 전략은 기존의 <strong>Make to Stock(MTS)</strong> 및 <strong>Make to Order(MTO)</strong> 방식과 차별화된다.</p>
+<p><strong>MTA의 핵심 개념</strong></p>
 <ul>
-<li><dl>
-<dt><strong>수요 기반 재고 관리</strong></dt>
-<dd>
-단순한 MTS 방식과 달리, MTA는 시장 수요를 면밀히 모니터링하며 <strong>재고 수준을 동적으로 조정</strong>한다.
-</dd>
-</dl></li>
-<li><dl>
-<dt><strong>Buffer Management(완충재고 관리)</strong></dt>
-<dd>
-TOC의 버퍼 개념을 활용하여, <strong>재고를 지나치게 많이 또는 적게 유지하지 않고 적정 수준을 유지</strong>한다.
-</dd>
-</dl></li>
-<li><dl>
-<dt><strong>Throughput(처리량) 극대화</strong></dt>
-<dd>
-생산 흐름을 최적화하여 <strong>시장에 신속하게 대응</strong>할 수 있도록 설계한다.
-</dd>
-</dl></li>
+<li><strong>수요 기반 재고 관리</strong> 단순한 MTS 방식과 달리, MTA는 시장 수요를 면밀히 모니터링하며 <strong>재고 수준을 동적으로 조정</strong>한다.<br>
+</li>
+<li><strong>Buffer Management(완충재고 관리)</strong> TOC의 버퍼 개념을 활용하여, <strong>재고를 지나치게 많이 또는 적게 유지하지 않고 적정 수준을 유지</strong>한다.<br>
+</li>
+<li><strong>Throughput(처리량) 극대화</strong> 생산 흐름을 최적화하여 <strong>시장에 신속하게 대응</strong>할 수 있도록 설계한다.</li>
 </ul>
-</dd>
-<dt>MTA와 기존 생산 방식 비교</dt>
-<dd>
+<p><strong>MTA와 기존 생산 방식 비교</strong></p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 10%">
@@ -1725,7 +1708,7 @@ TOC의 버퍼 개념을 활용하여, <strong>재고를 지나치게 많이 또�
 </tr>
 </tbody>
 </table>
-</dd>
+<dl>
 <dt>MTA의 적용 방법</dt>
 <dd>
 <ol type="1">
@@ -1928,7 +1911,7 @@ TOC의 버퍼 개념을 활용하여, <strong>재고를 지나치게 많이 또�
 <section id="sec-aps" class="level3">
 <h3 class="anchored" data-anchor-id="sec-aps">APS</h3>
 <p>APS(Advanced Planning and Scheduling)는 생산 계획 및 스케쥴링을 자동화 및 최적화하여 생산 효율성을 향상시키는 기법으로 DBR 기반 유한능력계획이다.</p>
-<p>2차 세계대전 이전에는 생산스케쥴링은 <a href="0401재고관리.html#sec-eoq" class="quarto-xref">EOQ&nbsp;<span>경제적 주문량 모형(EOQ)</span></a>, <a href="0401재고관리.html#sec-two-bin" class="quarto-xref">Two-Bin 시스템&nbsp;<span>투빈(Two Bin) 시스템</span></a> 또는 LP(Linear Programming)를 사용하여 수립하였다. 이후 생산 패러다임 전환으로 몇몇 기술, <a href="0501생산계획수립.html#sec-mrp" class="quarto-xref"><span>자재소요계획(MRP)</span></a>, <span class="quarto-unresolved-ref">?sec-jit</span>, <a href="#sec-toc" class="quarto-xref"><span>TOC</span></a> 등이 개발되어 실용화 되었다. 그러나 MRP, JIT와 같은 전통적인 도구는 생산 능력 제약을 충분히 고려하지 못해 현실적인 스케쥴을 제공하는데 한계가 있었다. 이를 해결하기 위해 <strong>유한능력스케쥴링</strong>(FCS, finite capacity scheduling)이 개발되었다. FCS는 단순히 자재 소요 계획을 수립하는 것이 아니라, 모든 생산 자원의 가용 능력을 고려하여 최적화된 스케줄을 생성하는 기법이다. 즉, 기존 MRP 시스템의 단점을 보완하여 생산 제약을 반영한 현실적인 작업 일정 수립이 가능해졌다. FCS는 다른 시스템의 계획 절차와 통합되어 공장의 실제 가용 능력 내에서 최적화된 생산 일정을 제공한다. 이를 위해 MRP의 기본 입력 요소인 BOM(자재 명세서)을 보강하고, 반제품(재공 재고) 및 완제품 재고 상태를 고려하여 최적의 생산 일정을 수립한다. 또한, 고객이 원하는 납기 가능 일자(<a href="#sec-ctp" class="quarto-xref"><span>CTP</span></a>, capable to promise)를 제공할 수 있는 기능을 갖추고 있어, 보다 신뢰성 높은 대 고객 서비스가 가능하다.</p>
+<p>2차 세계대전 이전에는 생산스케쥴링은 EOQ, Two-Bin 시스템 또는 LP(Linear Programming)를 사용하여 수립하였다. 이후 생산 패러다임 전환으로 몇몇 기술, MRP, JIT, TOC 등이 개발되어 실용화 되었다. 그러나 MRP, JIT와 같은 전통적인 도구는 생산 능력 제약을 충분히 고려하지 못해 현실적인 스케쥴을 제공하는데 한계가 있었다. 이를 해결하기 위해 <strong>유한능력스케쥴링</strong>(FCS, finite capacity scheduling)이 개발되었다. FCS는 단순히 자재 소요 계획을 수립하는 것이 아니라, 모든 생산 자원의 가용 능력을 고려하여 최적화된 스케줄을 생성하는 기법이다. 즉, 기존 MRP 시스템의 단점을 보완하여 생산 제약을 반영한 현실적인 작업 일정 수립이 가능해졌다. FCS는 다른 시스템의 계획 절차와 통합되어 공장의 실제 가용 능력 내에서 최적화된 생산 일정을 제공한다. 이를 위해 MRP의 기본 입력 요소인 BOM(자재 명세서)을 보강하고, 반제품(재공 재고) 및 완제품 재고 상태를 고려하여 최적의 생산 일정을 수립한다. 또한, 고객이 원하는 납기 가능 일자(<a href="#sec-ctp" class="quarto-xref"><span>CTP</span></a>, capable to promise)를 제공할 수 있는 기능을 갖추고 있어, 보다 신뢰성 높은 대 고객 서비스가 가능하다.</p>
 <dl>
 <dt>전통적인 스케줄링 방법 한계</dt>
 <dd>
@@ -2320,136 +2303,39 @@ TOC의 버퍼 개념을 활용하여, <strong>재고를 지나치게 많이 또�
 <figcaption>https://ko.wikipedia.org/wiki/가치_흐름_지도</figcaption>
 </figure>
 </div>
-<p><strong>가치흐름도(Value Stream Mapping, VSM)</strong>는 <font color="blue">제품이나 서비스가 생산되는 과정에서 발생하는 모든 가치 창출 활동과 비가치 활동을 시각적으로 나타내는 도구</font>이다. 이를 통해 <strong>불필요한 낭비(Waste)</strong>를 찾아내고, <strong>효율성</strong>을 높이며, <strong>고객 가치를 증대시키는 방법</strong>을 모색할 수 있다. VSM은 Lean 제조 방식에서 매우 중요한 도구로 사용된다.</p>
-<dl>
-<dt>가치흐름도의 주요 목표</dt>
-<dd>
+<p><strong>가치흐름도(Value Stream Mapping, VSM)</strong>는 <span class="hl">제품이나 서비스가 생산되는 과정에서 발생하는 모든 가치 창출 활동과 비가치 활동을 시각적으로 나타내는 도구</span>이다. 이를 통해 <strong>불필요한 낭비(Waste)</strong>를 찾아내고, <strong>효율성</strong>을 높이며, <strong>고객 가치를 증대시키는 방법</strong>을 모색할 수 있다. VSM은 Lean 제조 방식에서 매우 중요한 도구로 사용된다.</p>
+<p><strong>가치흐름도의 주요 목표</strong></p>
 <ul>
-<li><dl>
-<dt>가치 창출 활동과 비가치 활동 구분</dt>
-<dd>
-가치를 창출하는 활동과 그렇지 않은 활동을 구분하여 <strong>낭비를 제거</strong>하는 방향으로 개선한다.
-</dd>
-</dl></li>
-<li><dl>
-<dt>현재 상태 분석</dt>
-<dd>
-현재의 생산 흐름을 시각화하여 문제점을 발견하고, 개선할 영역을 식별한다.
-</dd>
-</dl></li>
-<li><dl>
-<dt>미래 상태 설정</dt>
-<dd>
-이상적인 가치 흐름을 정의하여, 향후 개선 목표를 설정하고 이를 달성할 계획을 수립한다.
-</dd>
-</dl></li>
-<li><dl>
-<dt>리드 타임 단축</dt>
-<dd>
-전체 생산 공정에서 발생하는 <font color="blue">불필요한 지연을 줄여 리드 타임을 단축</font>하고, 고객의 요구를 빠르게 충족시킨다.
-</dd>
-</dl></li>
+<li><strong>가치 창출 활동과 비가치 활동 구분</strong> 가치를 창출하는 활동과 그렇지 않은 활동을 구분하여 <strong>낭비를 제거</strong>하는 방향으로 개선한다.</li>
+<li><strong>현재 상태 분석</strong> 현재의 생산 흐름을 시각화하여 문제점을 발견하고, 개선할 영역을 식별한다.</li>
+<li><strong>미래 상태 설정</strong> 이상적인 가치 흐름을 정의하여, 향후 개선 목표를 설정하고 이를 달성할 계획을 수립한다.</li>
+<li><strong>리드 타임 단축</strong> 전체 생산 공정에서 발생하는 <font color="blue">불필요한 지연을 줄여 리드 타임을 단축</font>하고, 고객의 요구를 빠르게 충족시킨다.</li>
 </ul>
-</dd>
-<dt>가치흐름도 구성 요소</dt>
-<dd>
+<p><strong>가치흐름도 구성 요소</strong></p>
 <ul>
-<li><dl>
-<dt>정보 흐름 (Information Flow)</dt>
-<dd>
-생산 및 공급망의 <strong>정보 흐름</strong>을 시각적으로 나타내어, <strong>의사소통</strong>과 <strong>데이터 전달 방식</strong>을 파악한다. 예를 들어, 생산 계획, 주문, 재고 관리 등의 정보가 어떻게 전달되는지 보여준다.
-</dd>
-</dl></li>
-<li><dl>
-<dt>물리적 흐름 (Physical Flow)</dt>
-<dd>
-원자재, 반제품, 완제품이 생산 라인을 통해 <strong>물리적으로 흐르는 경로</strong>를 나타낸다. 각 단계에서의 <strong>처리 시간, 대기 시간</strong> 등을 기록한다.
-</dd>
-</dl></li>
-<li><dl>
-<dt>시간 요소 (Time Elements)</dt>
-<dd>
-<strong>가치 창출 시간</strong>과 <strong>대기 시간</strong>을 구분하여 각 작업 단계에서 걸리는 시간을 시각화한다. 이를 통해 각 작업이 얼마나 효율적인지, 비효율적인지 분석한다.
-</dd>
-</dl></li>
+<li><strong>정보 흐름</strong> (Information Flow) 생산 및 공급망의 <strong>정보 흐름</strong>을 시각적으로 나타내어, <strong>의사소통</strong>과 <strong>데이터 전달 방식</strong>을 파악한다. 예를 들어, 생산 계획, 주문, 재고 관리 등의 정보가 어떻게 전달되는지 보여준다.</li>
+<li><strong>물리적 흐름</strong> (Physical Flow) 원자재, 반제품, 완제품이 생산 라인을 통해 <strong>물리적으로 흐르는 경로</strong>를 나타낸다. 각 단계에서의 <strong>처리 시간, 대기 시간</strong> 등을 기록한다.</li>
+<li><strong>시간 요소</strong> (Time Elements) <strong>가치 창출 시간</strong>과 <strong>대기 시간</strong>을 구분하여 각 작업 단계에서 걸리는 시간을 시각화한다. 이를 통해 각 작업이 얼마나 효율적인지, 비효율적인지 분석한다.</li>
 </ul>
-</dd>
-<dt>가치흐름도 작성 단계</dt>
-<dd>
+<p><strong>가치흐름도 작성 단계</strong></p>
 <ul>
-<li><dl>
-<dt>현재 상태 맵 그리기</dt>
-<dd>
-첫 번째 단계는 현재 상태를 파악하고, 이를 그림으로 나타내는 것이다. 물리적 흐름과 정보 흐름을 모두 시각화하여, 현재 시스템에서 발생하는 <strong>문제점</strong>을 확인한다.
-</dd>
-</dl></li>
-<li><dl>
-<dt>문제점 분석 및 개선 기회 도출</dt>
-<dd>
-비가치 활동을 찾고, 낭비(Waste) 요소를 식별하여 개선할 기회를 찾는다. 예를 들어, 과잉 생산, 불필요한 대기 시간, 과도한 재고 등이 낭비로 포함될 수 있다.
-</dd>
-</dl></li>
-<li><dl>
-<dt>미래 상태 맵 그리기</dt>
-<dd>
-개선할 점을 반영하여 <strong>미래 상태 맵</strong>을 설계한다. <strong>효율적인 정보 흐름</strong>과 <strong>최적화된 생산 흐름</strong>을 기반으로 리드 타임을 단축시킬 수 있는 방안을 제시한다.
-</dd>
-</dl></li>
-<li><dl>
-<dt>행동 계획 수립 및 실행</dt>
-<dd>
-미래 상태 맵을 구현하기 위한 구체적인 <strong>행동 계획</strong>을 수립하고, 이를 실행에 옮긴다. 이때, 각 단계별로 개선해야 할 사항을 명확하게 정의하고, 점진적으로 실행한다.
-</dd>
-</dl></li>
+<li>현재 상태 맵 그리기 첫 번째 단계는 현재 상태를 파악하고, 이를 그림으로 나타내는 것이다. 물리적 흐름과 정보 흐름을 모두 시각화하여, 현재 시스템에서 발생하는 <strong>문제점</strong>을 확인한다.</li>
+<li>문제점 분석 및 개선 기회 도출 비가치 활동을 찾고, 낭비(Waste) 요소를 식별하여 개선할 기회를 찾는다. 예를 들어, 과잉 생산, 불필요한 대기 시간, 과도한 재고 등이 낭비로 포함될 수 있다.</li>
+<li>미래 상태 맵 그리기 개선할 점을 반영하여 <strong>미래 상태 맵</strong>을 설계한다. <strong>효율적인 정보 흐름</strong>과 <strong>최적화된 생산 흐름</strong>을 기반으로 리드 타임을 단축시킬 수 있는 방안을 제시한다.</li>
+<li>행동 계획 수립 및 실행 미래 상태 맵을 구현하기 위한 구체적인 <strong>행동 계획</strong>을 수립하고, 이를 실행에 옮긴다. 이때, 각 단계별로 개선해야 할 사항을 명확하게 정의하고, 점진적으로 실행한다.</li>
 </ul>
-</dd>
-<dt>VSM의 주요 이점</dt>
-<dd>
+<p><strong>VSM의 주요 이점</strong></p>
 <ul>
-<li><dl>
-<dt>비효율성 제거</dt>
-<dd>
-불필요한 작업이나 낭비를 제거하여 <strong>운영 효율성</strong>을 높일 수 있다.
-</dd>
-</dl></li>
-<li><dl>
-<dt>고객 가치를 증대</dt>
-<dd>
-<strong>가치 창출 활동에 집중</strong>하여 고객에게 제공되는 가치를 극대화할 수 있다.
-</dd>
-</dl></li>
-<li><dl>
-<dt>리드 타임 단축</dt>
-<dd>
-불필요한 대기 시간이나 작업 시간을 줄여서 <strong>빠른 생산 주기</strong>를 달성한다.
-</dd>
-</dl></li>
-<li><dl>
-<dt>지속적인 개선</dt>
-<dd>
-VSM은 지속적인 개선을 위한 기초 자료를 제공하므로 <strong>Lean 관리</strong>를 쉽게 적용할 수 있다.
-</dd>
-</dl></li>
+<li>비효율성 제거 불필요한 작업이나 낭비를 제거하여 <strong>운영 효율성</strong>을 높일 수 있다.</li>
+<li>고객 가치를 증대 <strong>가치 창출 활동에 집중</strong>하여 고객에게 제공되는 가치를 극대화할 수 있다.</li>
+<li>리드 타임 단축 불필요한 대기 시간이나 작업 시간을 줄여서 <strong>빠른 생산 주기</strong>를 달성한다.</li>
+<li>지속적인 개선 VSM은 지속적인 개선을 위한 기초 자료를 제공하므로 <strong>Lean 관리</strong>를 쉽게 적용할 수 있다.</li>
 </ul>
-</dd>
-<dt>VSM의 한계</dt>
-<dd>
+<p><strong>VSM의 한계</strong></p>
 <ul>
-<li><dl>
-<dt>복잡한 시스템에서의 어려움</dt>
-<dd>
-매우 복잡한 생산 시스템에서는 VSM을 작성하는 것이 시간이 많이 걸릴 수 있다.
-</dd>
-</dl></li>
-<li><dl>
-<dt>단기적 관점에 집중</dt>
-<dd>
-VSM은 <strong>현재 상태와 미래 상태</strong>의 개선을 목표로 하지만, 장기적인 전략적인 관점이 부족할 수 있다.
-</dd>
-</dl></li>
+<li>복잡한 시스템에서의 어려움 매우 복잡한 생산 시스템에서는 VSM을 작성하는 것이 시간이 많이 걸릴 수 있다.</li>
+<li>단기적 관점에 집중 VSM은 <strong>현재 상태와 미래 상태</strong>의 개선을 목표로 하지만, 장기적인 전략적인 관점이 부족할 수 있다.</li>
 </ul>
-</dd>
-</dl>
 <p><strong>가치흐름도(VSM)</strong>는 Lean 제조 및 <strong>지속적인 개선</strong>을 위한 중요한 도구로, 생산성과 효율성을 극대화하기 위해 <font color="blue">불필요한 낭비를 식별하고 가치 창출 활동에 집중</font>하는 방법을 제시한다. 이를 통해 기업은 <font color="blue">고객 만족도를 높이고, 운영 효율성을 향상</font>시킬 수 있다.</p>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 100-2-2">
 <div class="callout-header d-flex align-content-center">
@@ -2471,30 +2357,10 @@ VSM은 <strong>현재 상태와 미래 상태</strong>의 개선을 목표로 �
 <p><strong>TRIZ</strong>는 러시아어로 Teoriya(이론), Reshniya(해결), Izobretatelskikh(발명), Zadatch(문제) 앞 철자로, 영어로는 Theory of Inventive Problem Solving이다. 즉, <font color="blue">발명문제 해결을 위한 체계적인 방법론</font>으로 풀이할 수 있다.</p>
 <p>러시아 겐리히 알츠슐러가 1960년대 구 소련 해군에서 특허를 심사하는 업무를 할 당시 군 관련 기술적인 문제를 해결하면서 발명에는 어떤 공통 법칙과 패턴이 있음을 알게 되었다. 그는 누구나 창의적으로 문제를 해결할 수 있는 일반적이고 체계적인 문제 해결책을 강구하게 되었다. 그는 전 세계 특허 150만건 중 창의적인 특허 4만건을 추출 분석한 결과 다음 <font color="blue">4가지 중요한 사실</font>을 발견하게 되었다.</p>
 <ul>
-<li><dl>
-<dt>창조적 문제 정의</dt>
-<dd>
-하나 이상 모순이 존재하는 문제
-</dd>
-</dl></li>
-<li><dl>
-<dt>해결안 수준</dt>
-<dd>
-특허 등에서 제시된 해결안 수준을 5단계(해법, 개선, 혁신, 발명, 발견)로 구분
-</dd>
-</dl></li>
-<li><dl>
-<dt>발명 규칙성</dt>
-<dd>
-동일한 해법이 다른 분야에서 반복적으로 재사용
-</dd>
-</dl></li>
-<li><dl>
-<dt>진화 법칙</dt>
-<dd>
-기술 시스템은 일정한 유형에 따라 진화 또는 발전
-</dd>
-</dl></li>
+<li><strong>창조적 문제 정의</strong> 하나 이상 모순이 존재하는 문제</li>
+<li><strong>해결안 수준</strong> 특허 등에서 제시된 해결안 수준을 5단계(해법, 개선, 혁신, 발명, 발견)로 구분</li>
+<li><strong>발명 규칙성</strong> 동일한 해법이 다른 분야에서 반복적으로 재사용</li>
+<li><strong>진화 법칙</strong> 기술 시스템은 일정한 유형에 따라 진화 또는 발전</li>
 </ul>
 <p><strong>발명 5가지 수준</strong></p>
 <table class="caption-top table">
@@ -2559,42 +2425,15 @@ VSM은 <strong>현재 상태와 미래 상태</strong>의 개선을 목표로 �
 </tr>
 </tbody>
 </table>
-<dl>
-<dt>문제해결을 위한 5가지 개념</dt>
-<dd>
+<p><strong>문제해결을 위한 5가지 개념</strong></p>
 <ul>
-<li><dl>
-<dt>모순</dt>
-<dd>
-문제를 해결한다는 것은 모순을 제거하는 것
-</dd>
-</dl></li>
-<li><dl>
-<dt>자원</dt>
-<dd>
-시스템 내부/외부 모든 자원 활용
-</dd>
-</dl></li>
-<li><dl>
-<dt>이상적 최종 결과</dt>
-<dd>
-모순을 해결하였을 때 달성
-</dd>
-</dl></li>
-<li><dl>
-<dt>진화 유형</dt>
-<dd>
-시스템은 우연히 되는 것이 아니라 어떤 유형에 따라 진화
-</dd>
-</dl></li>
-<li><dl>
-<dt>혁신 원리</dt>
-<dd>
-해결책에 대한 구체적인 단서를 제공하고 유형이 의미하는 것을 설명
-</dd>
-</dl></li>
+<li>모순 문제를 해결한다는 것은 모순을 제거하는 것</li>
+<li>자원 시스템 내부/외부 모든 자원 활용</li>
+<li>이상적 최종 결과 모순을 해결하였을 때 달성</li>
+<li>진화 유형 시스템은 우연히 되는 것이 아니라 어떤 유형에 따라 진화</li>
+<li>혁신 원리 해결책에 대한 구체적인 단서를 제공하고 유형이 의미하는 것을 설명</li>
 </ul>
-</dd>
+<dl>
 <dt>문제해결 절차 9단계</dt>
 <dd>
 <ol type="1">
@@ -2644,7 +2483,7 @@ VSM은 <strong>현재 상태와 미래 상태</strong>의 개선을 목표로 �
 <h2 class="anchored" data-anchor-id="sec-ref-1104">참고자료</h2>
 <section id="sec-ctp" class="level3">
 <h3 class="anchored" data-anchor-id="sec-ctp">CTP</h3>
-<p>CTP(Capable to Promise)는 <font color="blue">제조 및 공급망 관리에서 특정 주문을 충족할 수 있는 능력을 평가하고, 현실적인 납기 일정을 약속하는 개념</font>이다. 기존의 ATP(Available to Promise)와 차별화되며, 기업이 <font color="blue">실제 생산 역량과 자원 가용성을 고려하여 고객에게 약속 가능한 납기를 제공</font>하는 것이 핵심이다.</p>
+<p><strong>CTP</strong>(Capable to Promise)는 <span class="hl">제조 및 공급망 관리에서 특정 주문을 충족할 수 있는 능력을 평가하고, 현실적인 납기 일정을 약속하는 개념</span>이다. 기존의 ATP(Available to Promise)와 차별화되며, 기업이 <font color="blue">실제 생산 역량과 자원 가용성을 고려하여 고객에게 약속 가능한 납기를 제공</font>하는 것이 핵심이다.</p>
 <dl>
 <dt>CTP와 ATP 비교</dt>
 <dd>
