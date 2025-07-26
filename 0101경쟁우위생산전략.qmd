@@ -379,7 +379,7 @@ SWOT 분석 등을 통해 시장 내외 환경을 고려하여 전략을 선택 
 
 #### 테일러 시스템 {#sec-taylor-system}
 
-![https://ko.wikipedia.org/wiki/과학적_관리법](https://commons.wikimedia.org/wiki/File:슬라이드1.PNG)
+![https://ko.wikipedia.org/wiki/과학적_관리법](https://upload.wikimedia.org/wikipedia/commons/d/dc/슬라이드1.PNG)
 
 테일러 시스템(Taylor System, 과학적 관리법)은 미국의 프레더릭 윈슬로 테일러(Frederick Winslow Taylor)가 20세기 초 제안한 <span class='hl'>과학적 관리법(Scientific Management)에 기반한 생산 및 작업 관리 체계</span>이다. 이는 경험이나 직관에 의존하던 기존의 작업 방식을 과학적으로 분석하고 표준화함으로써 생산성을 극대화하고자 한 접근 방식이다.
 
