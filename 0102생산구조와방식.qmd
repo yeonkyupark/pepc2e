@@ -711,7 +711,7 @@ Takt Time Production 목적과 개념은 다음과 같이 정리할 수 있다.
 
 기종장제 실행 과정은 다음과 같다.  
 
-```mermaid
+```{mermaid}
 flowchart LR
     1[기종 선정]
     2[기종장 배치]
