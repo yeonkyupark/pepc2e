@@ -628,61 +628,48 @@ window.Quarto = {
 </header>
 
 
-<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 97-2-2, 97-4-6, 103-2-2, 106-3-5, 118-2-2">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-기출: 97-2-2, 97-4-6, 103-2-2, 106-3-5, 118-2-2
-</div>
-</div>
-<div class="callout-body-container callout-body">
-
-</div>
-</div>
 <section id="수요예측-기법" class="level2">
 <h2 class="anchored" data-anchor-id="수요예측-기법">수요예측 기법</h2>
-<p>수요예측은 미래 제품이나 서비스에 대한 고객 수요를 과거 데이터와 다양한 분석기법을 활용하여 예측하는 과정이다. 수요예측 기법에는 <strong>정량적 예측기법과 정성적 예측기법</strong>이 있다. 정량적 예측기법은 <font color="#245bdb">과거 데이터와 통계적 분석을 기반으로 수요를 예측</font>하며 시계열 예측기법과 인과관계 예측기법이 있다. 반면 정성적 예측기법은 <font color="#245bdb">과거 데이터가 부족하거나 데이터만으로 설명하기 어려운 상황에서 전문가 지식, 경험, 직관 등을 활용해 수요를 예측</font>하는 방식이다. 대표적인 방법으로 델파이법, 시장조사법, 자료 유추법이 있다.</p>
+<p>수요예측은 <span class="hl">미래 제품이나 서비스에 대한 고객 수요를 과거 데이터와 다양한 분석기법을 활용하여 예측하는 과정</span>이다. 수요예측 기법에는 정량적 예측기법과 정성적 예측기법이 있다. 정량적 예측기법은 <span class="hl">과거 데이터와 통계적 분석을 기반으로 수요를 예측</span>하며 시계열 예측기법과 인과관계 예측기법이 있다. 반면 정성적 예측기법은 <span class="hl">과거 데이터가 부족하거나 데이터만으로 설명하기 어려운 상황에서 전문가 지식, 경험, 직관 등을 활용해 수요를 예측</span>하는 방식이다. 대표적인 방법으로 델파이법, 시장조사법, 자료 유추법이 있다.</p>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
 <p></p><figure class="figure"><p></p>
 <div>
 <pre class="mermaid mermaid-js">flowchart LR
-subgraph s1["   "]
-10["정성적 예측법&lt;br&gt;(질적 예측 기법)"]
-11["직관을 이용한 예측"]
-12["시장 조사에 의한 예측"]
-13["유추에 의한 예측"]
-11 --- 111("델파이법")
-11 --- 112("판매원 의견 종합법")
-11 --- 113("경영자 판단법")
-11 --- 114("위원회 홥의법, 패널 동의법")
-12 --- 121("시장조사법")
-13 --- 131("라이프 사이클 유추법")
-13 --- 132("자료 유추법")
-10 --- 11 &amp; 12 &amp; 13
-end
+    subgraph s1["   "]
+    10["정성적 예측법&lt;br&gt;(질적 예측 기법)"]
+    11["직관을 이용한 예측"]
+    12["시장 조사에 의한 예측"]
+    13["유추에 의한 예측"]
+    11 --- 111("델파이법")
+    11 --- 112("판매원 의견 종합법")
+    11 --- 113("경영자 판단법")
+    11 --- 114("위원회 홥의법, 패널 동의법")
+    12 --- 121("시장조사법")
+    13 --- 131("라이프 사이클 유추법")
+    13 --- 132("자료 유추법")
+    10 --- 11 &amp; 12 &amp; 13
+    end
 
-subgraph s2["   "]
-20["정량적 예측법&lt;br&gt;(양적 예측 기법)"]
-21["시계열 예측기법"]
-22["인과관계 예측기법"]
-21 --- 211("이동 평균법")
-21 --- 212("지수 평활법")
-21 --- 213("수학적 모형")
-21 --- 214("Box-Jenkins")
-21 --- 215("추세 분석법")
-22 --- 221("회귀분석")
-22 --- 222("계량경제모델")
-22 --- 223("투입-산출 모형")
-22 --- 224("시뮬레이션 모형")
-22 --- 225("선도지표법")
-20 --- 21 &amp; 22
-end
+    subgraph s2["   "]
+    20["정량적 예측법&lt;br&gt;(양적 예측 기법)"]
+    21["시계열 예측기법"]
+    22["인과관계 예측기법"]
+    21 --- 211("이동 평균법")
+    21 --- 212("지수 평활법")
+    21 --- 213("수학적 모형")
+    21 --- 214("Box-Jenkins")
+    21 --- 215("추세 분석법")
+    22 --- 221("회귀분석")
+    22 --- 222("계량경제모델")
+    22 --- 223("투입-산출 모형")
+    22 --- 224("시뮬레이션 모형")
+    22 --- 225("선도지표법")
+    20 --- 21 &amp; 22
+    end
 
-예측기법 --- 10 &amp; 20
+    예측기법 --- 10 &amp; 20
 
 style 20 fill:#efefff
 style 10 fill:#efffef
@@ -695,60 +682,37 @@ style 예측기법 fill:#d0e8f1
 </div>
 <section id="sec-qualitative-methods" class="level3">
 <h3 class="anchored" data-anchor-id="sec-qualitative-methods">정성적 기법</h3>
-<p>정성적 기법(Qualitative Methods)은 <font color="blue">과거 데이터가 부족하거나 데이터만으로 설명하기 어려운 상황에서 전문가의 지식, 경험, 직관 등을 활용해 수요를 예측하는 방법</font>이다.</p>
+<p>정성적 기법(Qualitative Methods)은 <span class="hl">과거 데이터가 부족하거나 데이터만으로 설명하기 어려운 상황에서 전문가의 지식, 경험, 직관 등을 활용해 수요를 예측하는 방법</span>이다.</p>
 <section id="sec-delphi" class="level4">
 <h4 class="anchored" data-anchor-id="sec-delphi">델파이법</h4>
-<p><strong>델파이법(Delphi Method)</strong>은 <font color="#245bdb">전문가들의 의견을 체계적으로 수집하고 종합하여 미래의 사건이나 수요를 예측하는 정성적 수요예측 기법</font>이다. 이 방법은 <strong>반복적인 설문조사와 피드백 과정</strong>을 통해 의견을 수렴하고, 전문가들 간의 <strong>합의에 도달</strong>하는 것을 목표로 한다.</p>
-<dl>
-<dt>델파이법의 특징</dt>
-<dd>
+<p>델파이법(Delphi Method)은 <span class="hl">전문가들의 의견을 체계적으로 수집하고 종합하여 미래의 사건이나 수요를 예측하는 정성적 수요예측 기법</span>이다. 이 방법은 반복적인 설문조사와 피드백 과정을 통해 의견을 수렴하고, 전문가들 간의 합의에 도달하는 것을 목표로 한다.</p>
+<p>정성적 기법 중 대표적인 기법인 델파이법은 다음과 같은 특징을 갖는다.</p>
 <ul>
-<li><dl>
-<dt><strong>전문가 집단의 의견 수렴</strong></dt>
-<dd>
-다양한 분야의 전문가들이 익명으로 참여하여 편향을 최소화함
-</dd>
-</dl></li>
-<li><dl>
-<dt><strong>반복적인 피드백</strong></dt>
-<dd>
-여러 차례의 라운드를 통해 의견을 조정하고 합의 도출
-</dd>
-</dl></li>
-<li><dl>
-<dt><strong>익명성 보장</strong></dt>
-<dd>
-개인의 지위나 권위에 영향을 받지 않고 자유롭게 의견 제시 가능
-</dd>
-</dl></li>
-<li><dl>
-<dt><strong>정성적 접근</strong></dt>
-<dd>
-수량화된 데이터보다 전문가의 지식과 경험을 기반으로 분석
-</dd>
-</dl></li>
+<li><strong>전문가 집단의 의견 수렴</strong><br>
+다양한 분야의 전문가들이 익명으로 참여하여 편향을 최소화함<br>
+</li>
+<li><strong>반복적인 피드백</strong><br>
+여러 차례의 라운드를 통해 의견을 조정하고 합의 도출<br>
+</li>
+<li><strong>익명성 보장</strong><br>
+개인의 지위나 권위에 영향을 받지 않고 자유롭게 의견 제시 가능<br>
+</li>
+<li><strong>정성적 접근</strong><br>
+수량화된 데이터보다 전문가의 지식과 경험을 기반으로 분석</li>
 </ul>
-</dd>
-</dl>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/delphi.png" class="img-fluid figure-img"></p>
 <figcaption>델파이법 진행 절차</figcaption>
 </figure>
 </div>
-<dl>
-<dt>델파이법 진행 절차</dt>
-<dd>
+<p>델파이법 진행 절차는 다음과 같다.</p>
 <ol type="1">
 <li><strong>전문가 선정</strong>
 <ul>
 <li>예측하고자 하는 분야의 지식과 경험이 풍부한 전문가 그룹 구성</li>
 <li>다양한 관점을 반영하기 위해 10~20명 정도의 인원이 적절함</li>
 </ul></li>
-</ol>
-</dd>
-</dl>
-<ol start="2" type="1">
 <li><strong>1차 설문조사</strong>
 <ul>
 <li>미래 사건이나 수요에 대한 초기 의견 수집</li>
@@ -770,8 +734,9 @@ style 예측기법 fill:#d0e8f1
 <li>수요 예측, 정책 결정, 기술 전망 등에 활용</li>
 </ul></li>
 </ol>
+<p>델파이법 장점과 단점을 정리하면 다음 표와 같다.</p>
 <table class="caption-top table">
-<caption>델파이법 장점과 단점</caption>
+<caption>델파이법 장단점</caption>
 <colgroup>
 <col style="width: 50%">
 <col style="width: 49%">
@@ -784,26 +749,24 @@ style 예측기법 fill:#d0e8f1
 </thead>
 <tbody>
 <tr class="odd">
-<td>전문가의 집단 지혜를 활용하여 <font color="#245bdb">신뢰성 높은 예측</font> 가능</td>
-<td>전문가 선정 과정에서 <font color="#d83931">주관적 편향 발생 가능성</font> 있음</td>
+<td>전문가의 집단 지혜를 활용하여 신뢰성 높은 예측 가능</td>
+<td>전문가 선정 과정에서 주관적 편향 발생 가능성 있음</td>
 </tr>
 <tr class="even">
-<td>익명성을 보장해 <font color="#245bdb">자유롭고 솔직한 의견 개진</font> 가능</td>
-<td>설문조사와 반복 과정으로 <font color="#d83931">시간과 비용이 많이 소요</font>됨</td>
+<td>익명성을 보장해 자유롭고 솔직한 의견 개진 가능</td>
+<td>설문조사와 반복 과정으로 시간과 비용이 많이 소요됨</td>
 </tr>
 <tr class="odd">
-<td><font color="#245bdb">반복적인 피드백</font>을 통해 의견 수렴 및 합의 도출 가능</td>
-<td>전문가 간 의견 불일치 시 <font color="#d83931">최종 합의 도출이 어려울 수</font> 있음</td>
+<td>반복적인 피드백을 통해 의견 수렴 및 합의 도출 가능</td>
+<td>전문가 간 의견 불일치 시 최종 합의 도출이 어려울 수 있음</td>
 </tr>
 <tr class="even">
-<td><font color="#245bdb">수량적 데이터 부족 시에도 유용</font>하게 활용 가능</td>
-<td>정성적 방법이므로 <font color="#d83931">객관적 데이터 기반의 예측에 한계</font> 있음</td>
+<td>수량적 데이터 부족 시에도 유용하게 활용 가능</td>
+<td>정성적 방법이므로 객관적 데이터 기반의 예측에 한계 있음</td>
 </tr>
 </tbody>
 </table>
-<dl>
-<dt>델파이법의 활용 사례</dt>
-<dd>
+<p>델파이법의 주요 활용 사례는 다음과 같다.</p>
 <ul>
 <li><strong>수요 예측:</strong> 신제품 출시 전 시장 반응 예측, 장기 수요 전망<br>
 </li>
@@ -813,40 +776,25 @@ style 예측기법 fill:#d0e8f1
 </li>
 <li><strong>리스크 관리:</strong> 기업의 위기 대응 시나리오 개발 및 평가</li>
 </ul>
-</dd>
-</dl>
-<p>델파이법은 미래 예측이 어려운 상황에서 전문가의 지식과 경험을 효과적으로 활용할 수 있는 강력한 도구이다. 특히 <font color="blue">정량적 데이터가 부족하거나 불확실성이 높은 분야</font>에서 전략적 의사결정에 중요한 역할을 한다. 다만, <font color="red">시간과 자원이 많이 소요</font>되는 만큼 효율적인 진행을 위해 전문가 선정과 의견 수렴 과정의 체계적 관리가 필요하다.</p>
+<p>델파이법은 미래 예측이 어려운 상황에서 전문가의 지식과 경험을 효과적으로 활용할 수 있는 강력한 도구이다. 특히 정량적 데이터가 부족하거나 불확실성이 높은 분야에서 전략적 의사결정에 중요한 역할을 한다. 다만, 시간과 자원이 많이 소요되는 만큼 효율적인 진행을 위해 전문가 선정과 의견 수렴 과정의 체계적 관리가 필요하다.</p>
 </section>
 <section id="sec-executive-judgement" class="level4">
 <h4 class="anchored" data-anchor-id="sec-executive-judgement">중역판단법</h4>
-<p><strong>중역판단법</strong>(Executive Judgment Method) 또는 경영진 의견 종합법은 <font color="blue">조직의 중역 또는 고위 경영진의 경험과 직관을 기반으로 미래 수요를 예측하는 정성적 수요예측 기법</font>이다. 이 방법은 특히 <font color="blue">신속한 의사결정이 필요하거나 과거 데이터가 부족한 상황에서 활용</font>된다.</p>
-<dl>
-<dt>중역판단법의 특징</dt>
-<dd>
+<p>중역판단법(Executive Judgment Method) 또는 경영진 의견 종합법은 <span class="hl">조직의 중역 또는 고위 경영진의 경험과 직관을 기반으로 미래 수요를 예측하는 정성적 수요예측 기법</span>이다. 이 방법은 특히 신속한 의사결정이 필요하거나 과거 데이터가 부족한 상황에서 활용된다.</p>
+<p>중역판단법의 주요 특징은 다음과 같다.</p>
 <ul>
-<li><dl>
-<dt><strong>경영진의 경험과 직관 활용</strong></dt>
-<dd>
-데이터보다는 조직 내 고위층의 시장 통찰력과 전략적 사고에 의존
-</dd>
-</dl></li>
-<li><dl>
-<dt><strong>간단한 의사결정 과정</strong></dt>
-<dd>
-복잡한 통계 분석 없이 빠르게 수요를 예측할 수 있음
-</dd>
-</dl></li>
-<li><dl>
-<dt><strong>유연한 적용 가능</strong></dt>
-<dd>
-정형화된 절차가 없으며 다양한 상황에 적용 가능
-</dd>
-</dl></li>
+<li><strong>경영진의 경험과 직관 활용</strong><br>
+데이터보다는 조직 내 고위층의 시장 통찰력과 전략적 사고에 의존<br>
+</li>
+<li><strong>간단한 의사결정 과정</strong><br>
+복잡한 통계 분석 없이 빠르게 수요를 예측할 수 있음<br>
+</li>
+<li><strong>유연한 적용 가능</strong><br>
+정형화된 절차가 없으며 다양한 상황에 적용 가능<br>
+</li>
 <li><strong>신제품 개발, 시장 진입 전략 수립 등에서 유용</strong></li>
 </ul>
-</dd>
-<dt>중역판단법의 절차</dt>
-<dd>
+<p>중역판단법의 절차는 다음과 같다.</p>
 <ol type="1">
 <li><strong>중역 및 전문가 선정</strong>
 <ul>
@@ -869,10 +817,9 @@ style 예측기법 fill:#d0e8f1
 <li>합의된 수요 예측 결과를 바탕으로 의사결정 및 계획 수립</li>
 </ul></li>
 </ol>
-</dd>
-</dl>
+<p>중역판단법 장점과 단점을 정리하면 다음 표와 같다.</p>
 <table class="caption-top table">
-<caption>중역판단법 장점과 단점</caption>
+<caption>중역판단법 장단점</caption>
 <colgroup>
 <col style="width: 50%">
 <col style="width: 50%">
@@ -885,8 +832,8 @@ style 예측기법 fill:#d0e8f1
 </thead>
 <tbody>
 <tr class="odd">
-<td><font color="blue">빠른 의사결정이 가능하여 긴급한 상황에서 효과적</font></td>
-<td>개인의 직관과 경험에 의존하여 <font color="red">주관적 편향 발생 가능성</font> 있음</td>
+<td>빠른 의사결정이 가능하여 긴급한 상황에서 효과적</td>
+<td>개인의 직관과 경험에 의존하여 주관적 편향 발생 가능성 있음</td>
 </tr>
 <tr class="even">
 <td>과거 데이터가 부족한 신제품, 신시장 분석에 유용</td>
@@ -902,9 +849,7 @@ style 예측기법 fill:#d0e8f1
 </tr>
 </tbody>
 </table>
-<dl>
-<dt>중역판단법의 활용 사례</dt>
-<dd>
+<p>중역판단법의 주요 활용 사례는 다음과 같다.</p>
 <ul>
 <li><strong>신제품 출시:</strong> 과거 데이터가 부족한 신제품 수요 예측<br>
 </li>
@@ -914,16 +859,12 @@ style 예측기법 fill:#d0e8f1
 </li>
 <li><strong>프로젝트 초기 단계:</strong> 초기 데이터 수집 전 대략적인 수요 예측</li>
 </ul>
-</dd>
-</dl>
-<p><strong>중역판단법</strong>은 <font color="blue">빠른 의사결정과 전략적 통찰력</font>이 중요한 상황에서 효과적인 수요예측 방법이다. 특히 데이터가 부족하거나 급변하는 시장 환경에서 유용하게 활용된다. 그러나 <font color="red">주관적 편향과 의견 지배의 위험성</font>을 최소화하기 위해 다양한 관점의 균형 있는 의견 수렴과 비판적 사고가 필요하다. <a href="#sec-delphi" class="quarto-xref"><span>델파이법</span></a>이나 <a href="#sec-quantitative-methods" class="quarto-xref"><span>정량적 기법</span></a>과 병행하면 더 신뢰성 있는 예측이 가능하다.</p>
+<p>중역판단법은 빠른 의사결정과 전략적 통찰력이 중요한 상황에서 효과적인 수요예측 방법이다. 특히 데이터가 부족하거나 급변하는 시장 환경에서 유용하게 활용된다. 그러나 주관적 편향과 의견 지배의 위험성을 최소화하기 위해 다양한 관점의 균형 있는 의견 수렴과 비판적 사고가 필요하다. 델파이법이나 정량적 기법과 병행하면 더 신뢰성 있는 예측이 가능하다.</p>
 </section>
 <section id="판매원-추정법" class="level4">
 <h4 class="anchored" data-anchor-id="판매원-추정법">판매원 추정법</h4>
-<p><strong>판매원 추정법</strong>(Sales Force Composite Method)은 수요예측 기법 중 하나로, <font color="blue">현장에서 활동하는 판매원들의 의견과 추정을 바탕으로 미래의 수요를 예측</font>하는 방법이다. 이 방법은 특히 직접 고객과 접촉하는 영업사원이 고객의 수요 변화를 빠르게 파악할 수 있다는 점에 착안하여 개발된 기법이다.</p>
-<dl>
-<dt>판매원 추정법 과정</dt>
-<dd>
+<p>판매원 추정법(Sales Force Composite Method)은 수요예측 기법 중 하나로, <span class="hl">현장에서 활동하는 판매원들의 의견과 추정을 바탕으로 미래의 수요를 예측</span>하는 방법이다. 이 방법은 특히 직접 고객과 접촉하는 영업사원이 고객의 수요 변화를 빠르게 파악할 수 있다는 점에 착안하여 개발된 기법이다.</p>
+<p>판매원 추정법 수행 과정은 다음과 같다.</p>
 <ol type="1">
 <li><strong>개별 판매원의 수요 예측</strong>
 <ul>
@@ -944,10 +885,9 @@ style 예측기법 fill:#d0e8f1
 <li>필요한 경우, 추가적인 분석이나 조정 과정을 거쳐 최종 수요를 확정</li>
 </ul></li>
 </ol>
-</dd>
-</dl>
+<p>판매원 추정법 장점과 단점을 정리하면 다음 표와 같다.</p>
 <table class="caption-top table">
-<caption>판매원 추정법 장점과 단점</caption>
+<caption>판매원 추정법 장단점</caption>
 <colgroup>
 <col style="width: 50%">
 <col style="width: 50%">
@@ -977,18 +917,14 @@ style 예측기법 fill:#d0e8f1
 </tr>
 </tbody>
 </table>
-<dl>
-<dt>판매원 추정법의 활용 사례</dt>
-<dd>
+<p>판매원 추정법의 주요 활용 사례는 다음과 같다.</p>
 <ul>
 <li><strong>B2B 산업</strong>: 영업사원이 고객사와 긴밀한 관계를 유지하고 있어 수요 변화 예측이 효과적<br>
 </li>
 <li><strong>신제품 출시 초기</strong>: 과거 데이터가 부족한 상황에서 영업 현장의 의견이 중요</li>
 <li><strong>지역 특화 제품</strong>: 특정 지역 시장의 특수한 수요를 반영할 때 유용</li>
 </ul>
-</dd>
-<dt>효과적인 활용을 위한 팁</dt>
-<dd>
+<p>판매원 추정법을 효과적으로 활용하기 위해서는 다음과 같은 방안을 고려한다.</p>
 <ul>
 <li><strong>판매원 교육 강화</strong>: 객관적이고 현실적인 수요 예측을 위해 판매원들에게 예측 기법 교육 실시<br>
 </li>
@@ -996,16 +932,12 @@ style 예측기법 fill:#d0e8f1
 </li>
 <li><strong>정량적 기법과의 병행</strong>: 객관성을 높이기 위해 정량적 데이터와 병행하여 활용</li>
 </ul>
-</dd>
-</dl>
-<p>판매원 추정법은 현장 정보와 직관을 빠르게 활용할 수 있는 장점이 있지만, 주관적 편향의 위험이 존재한다. 따라서 <font color="blue">관리자의 검토 과정과 정량적 데이터의 보완</font>을 통해 더 정확한 수요 예측이 가능하다.</p>
+<p>판매원 추정법은 현장 정보와 직관을 빠르게 활용할 수 있는 장점이 있지만, 주관적 편향의 위험이 존재한다. 따라서 관리자의 검토 과정과 정량적 데이터의 보완을 통해 더 정확한 수요 예측이 가능하다.</p>
 </section>
 <section id="소비자-조사법" class="level4">
 <h4 class="anchored" data-anchor-id="소비자-조사법">소비자 조사법</h4>
-<p><strong>소비자 조사법</strong>(Consumer Survey Method)은 수요예측 기법 중 하나로, <font color="blue">직접 소비자를 대상으로 설문조사, 인터뷰, 또는 피드백을 수집</font>하여 미래의 수요를 예측하는 방법이다. 이 방법은 <font color="blue">소비자의 구매 의향, 선호도, 기대치를 파악</font>함으로써 보다 정확한 수요 예측이 가능하다는 점에서 유용하다.</p>
-<dl>
-<dt>소비자 조사법 주요 방법</dt>
-<dd>
+<p>소비자 조사법(Consumer Survey Method)은 수요예측 기법 중 하나로, <span class="hl">직접 소비자를 대상으로 설문조사, 인터뷰, 또는 피드백을 수집하여 미래의 수요를 예측하는 방법</span>이다. 이 방법은 소비자의 구매 의향, 선호도, 기대치를 파악함으로써 보다 정확한 수요 예측이 가능하다는 점에서 유용하다.</p>
+<p>소비자 조사법 주요 방법은 다음과 같다.</p>
 <ol type="1">
 <li><strong>설문조사 (Surveys)</strong>
 <ul>
@@ -1031,10 +963,9 @@ style 예측기법 fill:#d0e8f1
 <li>오프라인 매장이나 온라인 쇼핑몰에서 활용 가능</li>
 </ul></li>
 </ol>
-</dd>
-</dl>
+<p>소비자 조사법 장점과 단점을 정리하면 다음 표와 같다.</p>
 <table class="caption-top table">
-<caption>소비자 조사법 장점과 단점</caption>
+<caption>소비자 조사법 장단점</caption>
 <colgroup>
 <col style="width: 46%">
 <col style="width: 53%">
@@ -1064,92 +995,39 @@ style 예측기법 fill:#d0e8f1
 </tr>
 </tbody>
 </table>
-<dl>
-<dt>소비자 조사법의 활용 사례</dt>
-<dd>
+<p>소비자 조사법의 주요 활용 사례는 다음과 같다.</p>
 <ul>
-<li><dl>
-<dt><strong>신제품 출시 전 수요 예측</strong></dt>
-<dd>
-소비자의 구매 의향 파악을 통해 초기 수요 예측
-</dd>
-</dl></li>
-<li><dl>
-<dt><strong>브랜드 리뉴얼 또는 마케팅 전략 수립</strong></dt>
-<dd>
-소비자의 인식과 반응을 기반으로 전략 수립
-</dd>
-</dl></li>
-<li><dl>
-<dt><strong>서비스 개선</strong></dt>
-<dd>
-기존 제품/서비스에 대한 소비자 만족도 조사로 개선 포인트 도출
-</dd>
-</dl></li>
-<li><dl>
-<dt><strong>특정 타겟 시장 분석</strong></dt>
-<dd>
-특정 연령대, 지역, 또는 관심사 기반 소비자 집단의 수요 분석
-</dd>
-</dl></li>
+<li><strong>신제품 출시 전 수요 예측</strong> 소비자의 구매 의향 파악을 통해 초기 수요 예측<br>
+</li>
+<li><strong>브랜드 리뉴얼 또는 마케팅 전략 수립</strong> 소비자의 인식과 반응을 기반으로 전략 수립<br>
+</li>
+<li><strong>서비스 개선</strong> 기존 제품/서비스에 대한 소비자 만족도 조사로 개선 포인트 도출<br>
+</li>
+<li><strong>특정 타겟 시장 분석</strong> 특정 연령대, 지역, 또는 관심사 기반 소비자 집단의 수요 분석</li>
 </ul>
-</dd>
-<dt>효과적인 활용을 위한 팁</dt>
-<dd>
+<p>소비자 소사법을 효과적으로 활용하기 위한 방안으로 다음을 고려할 수 있다.</p>
 <ul>
-<li><dl>
-<dt><strong>표본의 대표성 확보</strong></dt>
-<dd>
-시장을 잘 대변할 수 있는 다양한 소비자 그룹 선정
-</dd>
-</dl></li>
-<li><dl>
-<dt><strong>질문 설계의 객관성 유지</strong></dt>
-<dd>
-편향된 질문을 피하고 명확한 질문 구성
-</dd>
-</dl></li>
-<li><dl>
-<dt><strong>정량적·정성적 데이터의 병행 활용</strong></dt>
-<dd>
-설문조사(정량)와 심층 인터뷰(정성)를 병행하여 심층적 분석
-</dd>
-</dl></li>
-<li><dl>
-<dt><strong>정기적인 조사 수행</strong></dt>
-<dd>
-소비자 행동은 시간에 따라 변화하기 때문에 정기적으로 조사 업데이트
-</dd>
-</dl></li>
+<li><strong>표본의 대표성 확보</strong> 시장을 잘 대변할 수 있는 다양한 소비자 그룹 선정<br>
+</li>
+<li><strong>질문 설계의 객관성 유지</strong> 편향된 질문을 피하고 명확한 질문 구성<br>
+</li>
+<li><strong>정량적·정성적 데이터의 병행 활용</strong> 설문조사(정량)와 심층 인터뷰(정성)를 병행하여 심층적 분석<br>
+</li>
+<li><strong>정기적인 조사 수행</strong> 소비자 행동은 시간에 따라 변화하기 때문에 정기적으로 조사 업데이트</li>
 </ul>
-</dd>
-</dl>
-<p>소비자 조사법은 <font color="blue">직접적인 소비자 의견을 바탕으로 수요를 예측</font>하기 때문에 시장 변화에 민감하게 대응할 수 있다. 그러나 <font color="red">높은 비용과 시간 소요, 응답 신뢰성 문제</font> 등을 고려하여 다른 수요 예측 기법과 병행하는 것이 효과적이다.</p>
+<p>소비자 조사법은 직접적인 소비자 의견을 바탕으로 수요를 예측하기 때문에 시장 변화에 민감하게 대응할 수 있다. 그러나 높은 비용과 시간 소요, 응답 신뢰성 문제 등을 고려하여 다른 수요 예측 기법과 병행하는 것이 효과적이다.</p>
 </section>
 </section>
 <section id="sec-quantitative-methods" class="level3">
 <h3 class="anchored" data-anchor-id="sec-quantitative-methods">정량적 기법</h3>
-<p><strong>정량적 기법</strong>(Quantitative Methods)은 <font color="blue">과거의 수치 데이터와 통계적 분석을 기반</font>으로 수요를 예측하는 방법이다. 주로 수학적 모델, 통계 분석, 데이터 처리를 활용하며 예측의 객관성과 정확성이 높다.</p>
-<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 109-1-9, 124-4-4">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-기출: 109-1-9, 124-4-4
-</div>
-</div>
-<div class="callout-body-container callout-body">
-
-</div>
-</div>
+<p>정량적 기법(Quantitative Methods)은 <span class="hl">과거의 수치 데이터와 통계적 분석을 기반으로 수요를 예측하는 방법</span>이다. 주로 수학적 모델, 통계 분석, 데이터 처리를 활용하며 예측의 객관성과 정확성이 높다.</p>
 <section id="sec-time-series-analysis" class="level4">
 <h4 class="anchored" data-anchor-id="sec-time-series-analysis">시계열 분석</h4>
-<p><strong>시계열 분석</strong>(Time Series Analysis) 기법은 <font color="blue">과거 자료를 근거하여 시간에 따른 수요변동 형태를 분석하고, 수요 패턴을 파악</font>하여 미래에 투영하여 수요를 예측한다.</p>
+<p>시계열 분석(Time Series Analysis) 기법은 <span class="hl">과거 자료를 근거하여 시간에 따른 수요변동 형태를 분석하고, 수요 패턴을 파악하여 미래에 투영하여 수요를 예측</span>한다. 시계열 분석에는 이동평균법, 지수평활법 등이 있으며 예측오차와 예측 유효성을 관리하는 추적지표 등이 있다.</p>
 </section>
 <section id="이동평균법" class="level4">
 <h4 class="anchored" data-anchor-id="이동평균법">이동평균법</h4>
-<p><strong>이동평균법</strong>(Moving average method)은 전기수요법을 좀 더 발전시킨 것으로 과거 <font color="#245bdb">일정 기간 실적을 평균해서 예측하는 방법</font>으로 단순이동평균법과 가중이동 평균법이 있다.</p>
+<p>이동평균법(Moving average method)은 전기수요법[^전기수요법]을 좀 더 발전시킨 것으로 <span class="hl">과거 일정 기간 실적을 평균해서 예측하는 방법</span>으로 단순이동평균법과 가중이동 평균법이 있다.</p>
 <dl>
 <dt>단순이동평균법(Simple moving average method)</dt>
 <dd>
