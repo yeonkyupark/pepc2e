@@ -564,8 +564,6 @@ window.Quarto = {
   <li><a href="#sec-bullship-effect" id="toc-sec-bullship-effect" class="nav-link" data-scroll-target="#sec-bullship-effect">채찍효과</a>
   <ul class="collapse">
   <li><a href="#채찍효과-발생-원인" id="toc-채찍효과-발생-원인" class="nav-link" data-scroll-target="#채찍효과-발생-원인">채찍효과 발생 원인</a></li>
-  <li><a href="#채찍효과의-문제점" id="toc-채찍효과의-문제점" class="nav-link" data-scroll-target="#채찍효과의-문제점">채찍효과의 문제점</a></li>
-  <li><a href="#채찍효과-완화-방안" id="toc-채찍효과-완화-방안" class="nav-link" data-scroll-target="#채찍효과-완화-방안">채찍효과 완화 방안</a></li>
   </ul></li>
   <li><a href="#주요-수요변동-관리-방안" id="toc-주요-수요변동-관리-방안" class="nav-link" data-scroll-target="#주요-수요변동-관리-방안">주요 수요변동 관리 방안</a>
   <ul class="collapse">
@@ -586,16 +584,7 @@ window.Quarto = {
   </ul></li>
   <li><a href="#sec-ref-0201" id="toc-sec-ref-0201" class="nav-link" data-scroll-target="#sec-ref-0201">참고자료</a>
   <ul>
-  <li><a href="#애자일-생산관리-agile-manufacturing" id="toc-애자일-생산관리-agile-manufacturing" class="nav-link" data-scroll-target="#애자일-생산관리-agile-manufacturing">애자일 생산관리 (Agile Manufacturing)</a>
-  <ul class="collapse">
-  <li><a href="#등장-배경" id="toc-등장-배경" class="nav-link" data-scroll-target="#등장-배경">등장 배경</a></li>
-  <li><a href="#애자일-생산의-4대-핵심-요소-agility-enablers" id="toc-애자일-생산의-4대-핵심-요소-agility-enablers" class="nav-link" data-scroll-target="#애자일-생산의-4대-핵심-요소-agility-enablers">애자일 생산의 4대 핵심 요소 (Agility Enablers)</a></li>
-  <li><a href="#전통-생산방식과의-비교" id="toc-전통-생산방식과의-비교" class="nav-link" data-scroll-target="#전통-생산방식과의-비교">전통 생산방식과의 비교</a></li>
-  <li><a href="#애자일-생산-전략-요소" id="toc-애자일-생산-전략-요소" class="nav-link" data-scroll-target="#애자일-생산-전략-요소">애자일 생산 전략 요소</a></li>
-  <li><a href="#애자일과-린lean-생산의-관계" id="toc-애자일과-린lean-생산의-관계" class="nav-link" data-scroll-target="#애자일과-린lean-생산의-관계">애자일과 린(Lean) 생산의 관계</a></li>
-  <li><a href="#애자일-생산-적용-사례" id="toc-애자일-생산-적용-사례" class="nav-link" data-scroll-target="#애자일-생산-적용-사례">애자일 생산 적용 사례</a></li>
-  <li><a href="#애자일-생산-도입-시-고려-과제" id="toc-애자일-생산-도입-시-고려-과제" class="nav-link" data-scroll-target="#애자일-생산-도입-시-고려-과제">애자일 생산 도입 시 고려 과제</a></li>
-  </ul></li>
+  <li><a href="#애자일-생산관리-agile-manufacturing" id="toc-애자일-생산관리-agile-manufacturing" class="nav-link" data-scroll-target="#애자일-생산관리-agile-manufacturing">애자일 생산관리 (Agile Manufacturing)</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/yeonkyupark/pepc2e/edit/main/0201수요예측.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
@@ -1032,16 +1021,12 @@ style 예측기법 fill:#d0e8f1
 <li>단순이동평균법(Simple moving average method)
 <ul>
 <li>과거 여러 기간 실적치에 동일한 가중치를 부여하는 방법</li>
-<li>공식 <span id="eq-moving-average"><span class="math display">\[
-  F_t = \frac{\sum_{i=1}^{n}{A_{t-i}}}{n}
-   \tag{6.1}\]</span></span> <span class="math display">\[{단, \ F_t = t기간 예측치, \quad A_{i-i} = (t-i) 기간 실적치, \quad n = 기간 수}\]</span></li>
+<li>공식 <span id="eq-moving-average"><span class="math display">\[F_t = \frac{\sum_{i=1}^{n}{A_{t-i}}}{n} \tag{6.1}\]</span></span> <span class="math display">\[{단, \ F_t = t기간 예측치, \quad A_{i-i} = (t-i) 기간 실적치, \quad n = 기간 수}\]</span></li>
 </ul></li>
 <li>가중이동평균법(Weighted moving average method)
 <ul>
 <li>단순이동평균법에서 추세경향을 고려한 수요 예측기법</li>
-<li>공식 <span id="eq-weighted-moving-average"><span class="math display">\[
-  F_{t+1} = w_tA_t + w_{t-1}A_{t-1} + ... + w_{t-N}A_{t-N}
-   \tag{6.2}\]</span></span> <span class="math display">\[단, \ \sum_{i=1}^{n}{w_i} = 1\]</span></li>
+<li>공식 <span id="eq-weighted-moving-average"><span class="math display">\[F_{t+1} = w_tA_t + w_{t-1}A_{t-1} + ... + w_{t-N}A_{t-N} \tag{6.2}\]</span></span> <span class="math display">\[단, \ \sum_{i=1}^{n}{w_i} = 1\]</span></li>
 </ul></li>
 </ul>
 </section>
@@ -1049,10 +1034,7 @@ style 예측기법 fill:#d0e8f1
 <h4 class="anchored" data-anchor-id="지수평활법">지수평활법</h4>
 <p>지수평활법(Exponential smoothing)은 최소자승법이나 이동평균법에는 장기간 과거실적을 필요로 하지만 지수평활법(Exponential smoothing)은 최근 데이터만으로 예측이 가능한 장점이 있다.<span class="hl">현 시점에 가까운 실측치에 큰 비중을 주면서 과거로 거슬러 올라갈수록 그 비중을 지수적으로 적게 주는 지수가중 이동평균법</span>이다.</p>
 <p>즉, 차기 예측치 = 당기 예측치 + <span class="math inline">\(\alpha\)</span>(당기실적치 - 당기예측치)로 계산되며 공식은 아래와 같다.</p>
-<p><span id="eq-exponential-smoothing"><span class="math display">\[
-F_t = F_{t-1} + \alpha (A_{t-1} - F_{t-1}) = \alpha A_{t-1} + (1-\alpha)F_{t-1}
-\tag{6.3}\]</span></span></p>
-<p><span class="math display">\[단, \ \alpha는 \ 지수평활계수로 \ 0 &lt; \alpha &lt; 1\]</span></p>
+<p><span id="eq-exponential-smoothing"><span class="math display">\[F_t = F_{t-1} + \alpha (A_{t-1} - F_{t-1}) = \alpha A_{t-1} + (1-\alpha)F_{t-1} \tag{6.3}\]</span></span> <span class="math display">\[단, \ \alpha는 \ 지수평활계수로 \ 0 &lt; \alpha &lt; 1\]</span></p>
 </section>
 <section id="예측오차" class="level4">
 <h4 class="anchored" data-anchor-id="예측오차">예측오차</h4>
@@ -1073,42 +1055,25 @@ F_t = F_{t-1} + \alpha (A_{t-1} - F_{t-1}) = \alpha A_{t-1} + (1-\alpha)F_{t-1}
 <section id="sec-forecast-error-index" class="level4">
 <h4 class="anchored" data-anchor-id="sec-forecast-error-index">예측오차 지표</h4>
 <p>예측오차에 있어 대표적인 지표는 다음과 같다.</p>
-<dl>
-<dt>예측오차</dt>
-<dd>
-<span id="eq-e"><span class="math display">\[E_t = A_t - F_t \ = \ \text{(t시점 실적치)} - \text{(t시점 예측치)} \tag{6.4}\]</span></span>
-</dd>
-<dt>평균절대편차(MAD, Mean Absolute Deviation)</dt>
-<dd>
-<span id="eq-mad"><span class="math display">\[
-MAD = \frac{\sum_{t=1}^{n}|A_t - F_t|}{n}
-\tag{6.5}\]</span></span>
-</dd>
-<dt>누적예측오차(RSFE, running sum of forcasting errors / CFE, cumulative sum of forecast errors)</dt>
-<dd>
-<span id="eq-rsfe"><span class="math display">\[RSFE(or \ CFE) = \sum{E_t} \tag{6.6}\]</span></span>
-</dd>
-<dt>평균절대오차(MAE, mean absolute error)</dt>
-<dd>
-<span id="eq-mae"><span class="math display">\[MAE = \frac{\sum{|E_t|}}{n} \tag{6.7}\]</span></span>
-</dd>
-<dt>평균제곱오차(MSE, mean squared error)</dt>
-<dd>
-<span id="eq-mse"><span class="math display">\[MSE = \frac{\sum{|(E_t)^2|}}{n-1} \tag{6.8}\]</span></span>
-</dd>
-<dt>평균절대백분율오차(MAPE, mean absolute percentage error)</dt>
-<dd>
-<span id="eq-mape"><span class="math display">\[ MAPE = \frac{\sum{\frac{|E_t|}{A_t}}}{n} \times 100 \tag{6.9}\]</span></span>
-</dd>
-<dt>추적지표(TS, tracking signal)</dt>
-<dd>
-<span id="eq-ts"><span class="math display">\[TS = \frac{RSFE}{MAD} \tag{6.10}\]</span></span>
-</dd>
-</dl>
+<ul>
+<li><p>예측오차(Forcast Error)<br>
+<span id="eq-e"><span class="math display">\[E_t = A_t - F_t \ = \ \text{(t시점 실적치)} - \text{(t시점 예측치)} \tag{6.4}\]</span></span></p></li>
+<li><p>평균절대편차(MAD, Mean Absolute Deviation)<br>
+<span id="eq-mad"><span class="math display">\[MAD = \frac{\sum_{t=1}^{n}|A_t - F_t|}{n} \tag{6.5}\]</span></span></p></li>
+<li><p>누적예측오차(RSFE, running sum of forcasting errors / CFE, cumulative sum of forecast errors)<br>
+<span id="eq-rsfe"><span class="math display">\[RSFE(or \ CFE) = \sum{E_t} \tag{6.6}\]</span></span></p></li>
+<li><p>평균절대오차(MAE, mean absolute error)<br>
+<span id="eq-mae"><span class="math display">\[MAE = \frac{\sum{|E_t|}}{n} \tag{6.7}\]</span></span></p></li>
+<li><p>평균제곱오차(MSE, mean squared error)<br>
+<span id="eq-mse"><span class="math display">\[MSE = \frac{\sum{|(E_t)^2|}}{n-1} \tag{6.8}\]</span></span></p></li>
+<li><p>평균절대백분율오차(MAPE, mean absolute percentage error) <span id="eq-mape"><span class="math display">\[ MAPE = \frac{\sum{\frac{|E_t|}{A_t}}}{n} \times 100 \tag{6.9}\]</span></span></p></li>
+<li><p>추적지표(TS, tracking signal)<br>
+<span id="eq-ts"><span class="math display">\[TS = \frac{RSFE}{MAD} \tag{6.10}\]</span></span></p></li>
+</ul>
 </section>
 <section id="추적지표" class="level4">
 <h4 class="anchored" data-anchor-id="추적지표">추적지표</h4>
-<p><strong>추적지표</strong>(TS)는 <font color="blue">예측기법이 실제 수요변화를 정확히 예측하고 있는지</font>를 나타내는 지표이다. <font color="blue">예측치가 실측치를 잘 따라가고 있으면 TS는 0에 가까운 값을 갖는다</font>. 예측치가 실제치보다 작은 경우(A-F&gt;0) TS는 양수값을 갖게 되고 이는 과소예측을 의미한다. 반면 예측치가 실측치보다 큰 경우(A-F&lt;0) TS는 음수값을 가지며 과다예측을 의미한다.</p>
+<p>추적지표(TS, Tracking signal)는 <span class="hl">예측기법이 실제 수요변화를 정확히 예측하고 있는지를 나타내는 지표</span>이다. 예측치가 실측치를 잘 따라가고 있으면 TS는 0에 가까운 값을 갖는다. 예측치가 실제치보다 작은 경우(<span class="math inline">\(A-F &gt; 0\)</span>) TS는 양수값을 갖게 되고 이는 과소예측을 의미한다. 반면 예측치가 실측치보다 큰 경우(<span class="math inline">\(A-F &lt; 0\)</span>) TS는 음수값을 가지며 과다예측을 의미한다.</p>
 <div class="callout callout-style-default callout-important no-icon callout-titled" title="추적지표">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1190,7 +1155,6 @@ MAD = \frac{\sum_{t=1}^{n}|A_t - F_t|}{n}
 </tr>
 </tbody>
 </table>
-<hr>
 <p>산식에 따라 계산하면 다음과 같다.</p>
 <table class="caption-top table">
 <colgroup>
@@ -1422,19 +1386,6 @@ MAD = \frac{\sum_{t=1}^{n}|A_t - F_t|}{n}
 <p>TS가 ±4MAD 내 관리되므로 예측모델이 유효하다고 판단할 수 있다.</p>
 </div>
 </div>
-<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 106-2-3">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-기출: 106-2-3
-</div>
-</div>
-<div class="callout-body-container callout-body">
-
-</div>
-</div>
 </section>
 </section>
 </section>
@@ -1442,10 +1393,12 @@ MAD = \frac{\sum_{t=1}^{n}|A_t - F_t|}{n}
 <h2 class="anchored" data-anchor-id="수요-불확실성-감소-방안">수요 불확실성 감소 방안</h2>
 <section id="수요-예측-불확실성" class="level3">
 <h3 class="anchored" data-anchor-id="수요-예측-불확실성">수요 예측 불확실성</h3>
-<p>수요예측 불확실성이란 제품이나 서비스에 대한 미래 수요를 정확하게 예측하는 데 있어서 발생하는 오차나 변동성을 의미한다. 이는 소비자 행동, 시장 환경, 경쟁 상황 등 다양한 요인에 의해 발생하며, 기업의 생산 계획, 재고 관리, 공급망 운영 등에 큰 영향을 미친다.</p>
+<p>수요예측 불확실성이란 <span class="hl">제품이나 서비스에 대한 미래 수요를 정확하게 예측하는 데 있어서 발생하는 오차나 변동성을 의미</span>한다. 이는 소비자 행동, 시장 환경, 경쟁 상황 등 다양한 요인에 의해 발생하며, 기업의 생산 계획, 재고 관리, 공급망 운영 등에 큰 영향을 미친다.</p>
 <section id="수요예측-불확실성의-원인" class="level4">
 <h4 class="anchored" data-anchor-id="수요예측-불확실성의-원인">수요예측 불확실성의 원인</h4>
+<p>수요예측 불확실성에 대한 원인을 살펴보면 다음 표와 같다.</p>
 <table class="caption-top table">
+<caption>수요예측 불확실성 원인</caption>
 <colgroup>
 <col style="width: 27%">
 <col style="width: 72%">
@@ -1486,6 +1439,7 @@ MAD = \frac{\sum_{t=1}^{n}|A_t - F_t|}{n}
 </section>
 <section id="수요예측-불확실성의-영향" class="level4">
 <h4 class="anchored" data-anchor-id="수요예측-불확실성의-영향">수요예측 불확실성의 영향</h4>
+<p>수요예측 불확실성은 다음과 같은 영향을 준다.</p>
 <ul>
 <li><strong>재고 과잉 또는 부족</strong>: 재고 유지 비용 상승 또는 판매 기회 상실<br>
 </li>
@@ -1500,65 +1454,46 @@ MAD = \frac{\sum_{t=1}^{n}|A_t - F_t|}{n}
 </section>
 <section id="불확실성-관리-방안" class="level4">
 <h4 class="anchored" data-anchor-id="불확실성-관리-방안">불확실성 관리 방안</h4>
-<section id="예측-기법-다변화-및-정교화" class="level5">
-<h5 class="anchored" data-anchor-id="예측-기법-다변화-및-정교화">예측 기법 다변화 및 정교화</h5>
+<p>불확실성에 의한 영향을 최소화 하기 위해 다양한 방법으로 수요예측을 관리한다.</p>
+<ul>
+<li>예측 기법 다변화 및 정교화
 <ul>
 <li>통계적 방법(이동평균, 지수평활법 등)과 AI, 머신러닝 기반 예측 병행<br>
 </li>
 <li>여러 시나리오 분석 및 민감도 분석 활용</li>
-</ul>
-</section>
-<section id="실시간-데이터-활용" class="level5">
-<h5 class="anchored" data-anchor-id="실시간-데이터-활용">실시간 데이터 활용</h5>
+</ul></li>
+<li>실시간 데이터 활용
 <ul>
 <li>POS, IoT, SNS 등 실시간 수요 데이터 수집 및 반영<br>
 </li>
 <li>빠른 정보 공유 및 피드백 시스템 구축</li>
-</ul>
-</section>
-<section id="수요-변동성-완화-전략" class="level5">
-<h5 class="anchored" data-anchor-id="수요-변동성-완화-전략">수요 변동성 완화 전략</h5>
+</ul></li>
+<li>수요 변동성 완화 전략
 <ul>
 <li>안전재고 설정 및 유연한 생산 시스템 도입<br>
 </li>
 <li>공급망 다변화 및 협력 강화</li>
-</ul>
-</section>
-<section id="협업-예측-collaborative-forecasting" class="level5">
-<h5 class="anchored" data-anchor-id="협업-예측-collaborative-forecasting">협업 예측 (Collaborative Forecasting)</h5>
+</ul></li>
+<li>협업 예측 (Collaborative Forecasting)
 <ul>
 <li>공급자, 유통업체 등과의 수요 정보 공유 및 공동 예측 수행</li>
-</ul>
-</section>
-<section id="민첩한-대응-체계-구축" class="level5">
-<h5 class="anchored" data-anchor-id="민첩한-대응-체계-구축">민첩한 대응 체계 구축</h5>
+</ul></li>
+<li>민첩한 대응 체계 구축
 <ul>
 <li>생산 및 물류의 신속한 조정, 긴급 대응 프로세스 마련</li>
+</ul></li>
 </ul>
-<p>수요예측 불확실성은 모든 기업이 직면하는 현실적 문제로, 이를 효과적으로 관리하지 못하면 비용 상승과 고객 만족도 저하로 이어진다. 다양한 예측 기법과 실시간 데이터 활용, 공급망 협력 강화 등을 통해<br>
-불확실성을 최소화하고 민첩하게 대응하는 것이 경쟁력 확보의 핵심이다.</p>
-<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출 112-1-4">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-기출 112-1-4
-</div>
-</div>
-<div class="callout-body-container callout-body">
-
-</div>
-</div>
-</section>
+<p>수요예측 불확실성은 모든 기업이 직면하는 현실적 문제로, 이를 효과적으로 관리하지 못하면 비용 상승과 고객 만족도 저하로 이어진다. 다양한 예측 기법과 실시간 데이터 활용, 공급망 협력 강화 등을 통해 불확실성을 최소화하고 민첩하게 대응하는 것이 경쟁력 확보의 핵심이다.</p>
 </section>
 </section>
 <section id="sec-bullship-effect" class="level3">
 <h3 class="anchored" data-anchor-id="sec-bullship-effect">채찍효과</h3>
-<p><strong>채찍효과</strong>(Bullwhip Effect)는 공급망 내에서 소비자의 수요 변동이 점차 상위 단계로 올라갈수록 증폭되어 나타나는 현상을 말한다. 즉, 최종 소비자 수요의 작은 변화가 공급자, 제조업체, 유통업체 등 공급망의 각 단계에서 점점 더 크게 확대되어 재고 과잉, 납기 지연, 비용 상승 등 부정적 결과를 초래한다.</p>
+<p>채찍효과(Bullwhip Effect)는 <span class="hl">공급망 내에서 소비자의 수요 변동이 점차 상위 단계로 올라갈수록 증폭되어 나타나는 현상</span>을 말한다. 즉, 최종 소비자 수요의 작은 변화가 공급자, 제조업체, 유통업체 등 공급망의 각 단계에서 점점 더 크게 확대되어 재고 과잉, 납기 지연, 비용 상승 등 부정적 결과를 초래한다.</p>
 <section id="채찍효과-발생-원인" class="level4">
 <h4 class="anchored" data-anchor-id="채찍효과-발생-원인">채찍효과 발생 원인</h4>
+<p>채찍효과가 발생하는 주요 원인은 다음과 같다.</p>
 <table class="caption-top table">
+<caption>채찍효과 주요 원인</caption>
 <colgroup>
 <col style="width: 33%">
 <col style="width: 66%">
@@ -1596,9 +1531,7 @@ MAD = \frac{\sum_{t=1}^{n}|A_t - F_t|}{n}
 </tr>
 </tbody>
 </table>
-</section>
-<section id="채찍효과의-문제점" class="level4">
-<h4 class="anchored" data-anchor-id="채찍효과의-문제점">채찍효과의 문제점</h4>
+<p>채찍효과 발생 시 나타날 수 있는 주요 문제점은 다음과 같다.</p>
 <ul>
 <li><strong>재고 과잉 및 부족</strong>: 비효율적인 재고 운용으로 비용 증가와 서비스 저하<br>
 </li>
@@ -1610,10 +1543,9 @@ MAD = \frac{\sum_{t=1}^{n}|A_t - F_t|}{n}
 </li>
 <li><strong>고객 만족도 저하</strong>: 제품 부족 또는 과잉 재고로 서비스 품질 저하</li>
 </ul>
-</section>
-<section id="채찍효과-완화-방안" class="level4">
-<h4 class="anchored" data-anchor-id="채찍효과-완화-방안">채찍효과 완화 방안</h4>
+<p>채찍효과 완화하는 방안을 정리하면 다음과 같다.</p>
 <table class="caption-top table">
+<caption>채찍효과 완화 방안</caption>
 <colgroup>
 <col style="width: 32%">
 <col style="width: 67%">
@@ -1656,7 +1588,7 @@ MAD = \frac{\sum_{t=1}^{n}|A_t - F_t|}{n}
 </section>
 <section id="주요-수요변동-관리-방안" class="level3">
 <h3 class="anchored" data-anchor-id="주요-수요변동-관리-방안">주요 수요변동 관리 방안</h3>
-<p>시계열 분석을 통해 수요 변동을 예측할 때, <strong>추세(Trend), 계절성(Seasonality), 주기적 변동(Cyclic Variation), 불규칙 변동(Irregular Variation)</strong> 등 네 가지 요인이 영향을 미친다.</p>
+<p>수요변동 관리 방안으로 시계열 분석을 통해 수요 변동을 예측할 수 있으며, <strong>추세(Trend), 계절성(Seasonality), 주기적 변동(Cyclic Variation), 불규칙 변동(Irregular Variation)</strong> 등 네 가지 요인이 수요 변동에 영향을 미치게 된다.</p>
 <section id="수요변동-형태" class="level4">
 <h4 class="anchored" data-anchor-id="수요변동-형태">수요변동 형태</h4>
 <p>시계열 수요 자료에서 관찰할 수 있는 수요 변동 형태는 과거 데이터를 분석해 미래 수요를 예측하는 데 중요한 역할을 한다. 이러한 변동 형태는 주로 네 가지로 구분된다.</p>
@@ -1669,7 +1601,7 @@ MAD = \frac{\sum_{t=1}^{n}|A_t - F_t|}{n}
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/time_series_decomposed.png" height="400" class="figure-img"></p>
-<figcaption>시계열 분석 결과</figcaption>
+<figcaption>시계열 분석을 통한 변동 형태</figcaption>
 </figure>
 </div>
 <table class="caption-top table">
@@ -1690,53 +1622,39 @@ MAD = \frac{\sum_{t=1}^{n}|A_t - F_t|}{n}
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>추세 (Trend)</strong></td>
-<td><font color="#245bdb">수요가 장기간에 걸쳐 일정한 방향으로 증가하거나 감소하는 패턴</font>을 의미.</td>
-<td>시간이 지남에 따라 꾸준히 변화하며, 직선형 또는 곡선형으로 나타날 수 있음.</td>
-<td>기술 발전에 따라 스마트폰 판매량이 지속적으로 증가하는 경우.</td>
+<td>추세 (Trend</td>
+<td>수요가 장기간에 걸쳐 일정한 방향으로 증가하거나 감소하는 패턴을 의미</td>
+<td>시간이 지남에 따라 꾸준히 변화하며, 직선형 또는 곡선형으로 나타날 수 있음</td>
+<td>기술 발전에 따라 스마트폰 판매량이 지속적으로 증가하는 경우</td>
 </tr>
 <tr class="even">
-<td><strong>계절성 (Seasonality)</strong></td>
-<td><font color="#245bdb">일정 주기로 반복되는 수요 변동 형태</font>로, 주기적으로 수요가 높아지거나 낮아짐.</td>
-<td>연간, 분기별, 월별 등 특정 기간에 반복되는 패턴이 명확하게 나타남.</td>
-<td>여름철 에어컨 판매 증가, 연말 쇼핑 시즌의 매출 급증.</td>
+<td>계절성 (Seasonality)</td>
+<td>일정 주기로 반복되는 수요 변동 형태로, 주기적으로 수요가 높아지거나 낮아짐</td>
+<td>연간, 분기별, 월별 등 특정 기간에 반복되는 패턴이 명확하게 나타남</td>
+<td>여름철 에어컨 판매 증가, 연말 쇼핑 시즌의 매출 급증</td>
 </tr>
 <tr class="odd">
-<td><strong>주기적 변동 (Cyclic Variation)</strong></td>
-<td>경제 환경이나 시장 변화에 따라 발생하는 <font color="#245bdb">장기적인 수요 변동</font>을 의미.</td>
-<td>계절성과 달리 불규칙하고, 주기가 길며 경기 순환에 따라 발생하는 경우가 많음.</td>
-<td>경기 호황기와 불황기에 따른 자동차 판매량 변화.</td>
+<td>주기적 변동 (Cyclic Variation)</td>
+<td>경제 환경이나 시장 변화에 따라 발생하는 장기적인 수요 변동을 의미</td>
+<td>계절성과 달리 불규칙하고, 주기가 길며 경기 순환에 따라 발생하는 경우가 많음</td>
+<td>경기 호황기와 불황기에 따른 자동차 판매량 변화</td>
 </tr>
 <tr class="even">
-<td><strong>불규칙 변동 (Irregular Variation)</strong></td>
-<td><font color="#245bdb">예측 불가능한 외부 요인</font>으로 발생하는 비정상적인 수요 변동.</td>
-<td>갑작스럽고 예측이 어렵기 때문에 일반적인 패턴으로 설명되지 않음.</td>
-<td>코로나19 팬데믹으로 인한 마스크 및 의료용품 수요 급증.</td>
+<td>불규칙 변동 (Irregular Variation)</td>
+<td>예측 불가능한 외부 요인으로 발생하는 비정상적인 수요 변동</td>
+<td>갑작스럽고 예측이 어렵기 때문에 일반적인 패턴으로 설명되지 않음</td>
+<td>코로나19 팬데믹으로 인한 마스크 및 의료용품 수요 급증</td>
 </tr>
 </tbody>
 </table>
 <p>이러한 변동 형태를 파악하면 기업은 수요 예측을 보다 정확하게 수행하고, 재고 관리 및 생산 계획을 효율적으로 수립할 수 있다. 특히, 계절성과 추세는 예측 모델에서 중요한 요소로 반영된다.</p>
-<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 106-3-6">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-기출: 106-3-6
-</div>
-</div>
-<div class="callout-body-container callout-body">
-
-</div>
-</div>
 </section>
 <section id="수요-변동-공급-관리" class="level4">
 <h4 class="anchored" data-anchor-id="수요-변동-공급-관리">수요 변동 공급 관리</h4>
 <p>수요 변동에 따라 효율적인 공급 관리 전략을 수립하는 것이 중요하다.</p>
+<section id="추세" class="level5">
+<h5 class="anchored" data-anchor-id="추세">추세</h5>
 <p><strong>추세</strong>는 장기적인 관점에서 수요가 증가하거나 감소하는 패턴을 의미한다.</p>
-<dl>
-<dt>관리 방안</dt>
-<dd>
 <ul>
 <li><strong>수요 증가 시</strong>
 <ul>
@@ -1756,12 +1674,10 @@ MAD = \frac{\sum_{t=1}^{n}|A_t - F_t|}{n}
 <li><strong>시장 다변화</strong>: 신제품 개발, 신규 시장 진출</li>
 </ul></li>
 </ul>
-</dd>
-</dl>
+</section>
+<section id="계절성" class="level5">
+<h5 class="anchored" data-anchor-id="계절성">계절성</h5>
 <p><strong>계절성</strong>은 일정한 주기(월별, 계절별)로 반복되는 수요 변동을 의미한다.</p>
-<dl>
-<dt>관리 방안</dt>
-<dd>
 <ul>
 <li><strong>시즌별 생산 전략</strong>
 <ul>
@@ -1783,12 +1699,10 @@ MAD = \frac{\sum_{t=1}^{n}|A_t - F_t|}{n}
 <li><strong>유연한 인력 배치</strong>: 성수기 단기 계약직 채용</li>
 </ul></li>
 </ul>
-</dd>
-</dl>
+</section>
+<section id="주기적-변동" class="level5">
+<h5 class="anchored" data-anchor-id="주기적-변동">주기적 변동</h5>
 <p><strong>주기적 변동</strong>은 경기 변화, 시장 트렌드 변화 등과 관련된 장기적인 수요 변동을 의미한다.</p>
-<dl>
-<dt>관리 방안</dt>
-<dd>
 <ul>
 <li><strong>장기적 생산 계획 수립</strong>
 <ul>
@@ -1811,12 +1725,10 @@ MAD = \frac{\sum_{t=1}^{n}|A_t - F_t|}{n}
 <li><strong>제품 포트폴리오 조정</strong>: 수요 변화에 따라 생산 아이템 조정</li>
 </ul></li>
 </ul>
-</dd>
-</dl>
+</section>
+<section id="불규칙-변동" class="level5">
+<h5 class="anchored" data-anchor-id="불규칙-변동">불규칙 변동</h5>
 <p><strong>불규칙 변동</strong>은 자연재해, 팬데믹, 정치적 요인 등 예측하기 어려운 돌발적인 수요 변화를 의미한다.</p>
-<dl>
-<dt><strong>관리 방안</strong></dt>
-<dd>
 <ul>
 <li><strong>리스크 대응 체계 구축</strong>
 <ul>
@@ -1839,9 +1751,8 @@ MAD = \frac{\sum_{t=1}^{n}|A_t - F_t|}{n}
 <li><strong>실시간 데이터 분석 활용</strong>: AI 및 IoT를 활용한 수요 변동 모니터링</li>
 </ul></li>
 </ul>
-</dd>
-</dl>
-<p>수요 변동 요인에 따라 적절한 공급 관리 전략을 수립하는 것이 중요하며, 이를 위해 <strong>유연한 생산 시스템, 재고 관리 최적화, 공급망 리스크 관리</strong> 등의 접근법을 병행하는 것이 효과적이다.</p>
+<p>수요 변동 요인에 따라 적절한 공급 관리 전략을 수립하는 것이 중요하며, 이를 위해 유연한 생산 시스템, 재고 관리 최적화, 공급망 리스크 관리 등의 접근법을 병행하는 것이 효과적이다.</p>
+</section>
 </section>
 </section>
 <section id="수요예측-개선" class="level3">
@@ -1883,9 +1794,10 @@ MAD = \frac{\sum_{t=1}^{n}|A_t - F_t|}{n}
 </section>
 <section id="신속대응" class="level3">
 <h3 class="anchored" data-anchor-id="신속대응">신속대응</h3>
-<p><strong>신속대응</strong>(QR: Quick Response)은 고객의 수요 변화에 빠르게 반응하여 재고를 최소화하고 납기 단축, 고객 만족도 향상을 목표로 하는 경영 및 생산 관리 전략이다. 주로 유통, 제조, 패션 등 수요 변동이 심한 산업에서 활용된다.</p>
+<p>신속대응(QR: Quick Response)은 <span class="hl">고객의 수요 변화에 빠르게 반응하여 재고를 최소화하고 납기 단축, 고객 만족도 향상을 목표로 하는 경영 및 생산 관리 전략</span>이다. 주로 유통, 제조, 패션 등 수요 변동이 심한 산업에서 활용된다.</p>
 <section id="신속대응의-목적" class="level4">
 <h4 class="anchored" data-anchor-id="신속대응의-목적">신속대응의 목적</h4>
+<p>신속대응 목적은 다음과 같다.</p>
 <ul>
 <li><strong>재고 비용 절감</strong>: 과잉 재고 및 재고 부족 문제 최소화<br>
 </li>
@@ -1898,7 +1810,9 @@ MAD = \frac{\sum_{t=1}^{n}|A_t - F_t|}{n}
 </section>
 <section id="신속대응의-핵심-요소" class="level4">
 <h4 class="anchored" data-anchor-id="신속대응의-핵심-요소">신속대응의 핵심 요소</h4>
+<p>신속대응에 있어 주요 핵심 요소는 다음과 같다.</p>
 <table class="caption-top table">
+<caption>신속대응 주요 핵심 요소</caption>
 <colgroup>
 <col style="width: 23%">
 <col style="width: 76%">
@@ -1935,6 +1849,7 @@ MAD = \frac{\sum_{t=1}^{n}|A_t - F_t|}{n}
 </section>
 <section id="신속대응-실행-전략" class="level4">
 <h4 class="anchored" data-anchor-id="신속대응-실행-전략">신속대응 실행 전략</h4>
+<p>신속대응 실행 전략을 다음과 같다.</p>
 <ul>
 <li><strong>소비자 중심의 수요 관리</strong>: POS 데이터 기반 수요 분석과 예측<br>
 </li>
@@ -1949,7 +1864,9 @@ MAD = \frac{\sum_{t=1}^{n}|A_t - F_t|}{n}
 </section>
 <section id="신속대응의-장점과-한계" class="level4">
 <h4 class="anchored" data-anchor-id="신속대응의-장점과-한계">신속대응의 장점과 한계</h4>
+<p>신속대응 장점과 단점을 정리하면 다음 표와 같다.</p>
 <table class="caption-top table">
+<caption>신속대응 장단점</caption>
 <colgroup>
 <col style="width: 7%">
 <col style="width: 48%">
@@ -1988,6 +1905,7 @@ MAD = \frac{\sum_{t=1}^{n}|A_t - F_t|}{n}
 </section>
 <section id="신속대응-적용-사례" class="level4">
 <h4 class="anchored" data-anchor-id="신속대응-적용-사례">신속대응 적용 사례</h4>
+<p>산업별 신용대응 주요 적용 사례이다.</p>
 <ul>
 <li><strong>패션 산업</strong>: 빠른 디자인 변경과 소량 생산으로 유행에 신속 대응<br>
 </li>
@@ -1998,171 +1916,81 @@ MAD = \frac{\sum_{t=1}^{n}|A_t - F_t|}{n}
 <li><strong>전자제품</strong>: 변화하는 기술 수요에 맞춘 유연한 생산 체계</li>
 </ul>
 <p>신속대응(QR)은 급변하는 시장과 소비자 요구에 빠르게 적응하는 핵심 경쟁 전략이다. 정보 공유와 공급망 협력을 기반으로 한 유연한 생산과 물류 체계를 구축함으로써, 기업은 비용을 절감하고 고객 만족도를 높이며 시장 변화에 능동적으로 대응할 수 있다.</p>
-<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 115-1-8">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-기출: 115-1-8
-</div>
-</div>
-<div class="callout-body-container callout-body">
-
-</div>
-</div>
 </section>
 </section>
 <section id="sec-delayed-differentiation" class="level3">
 <h3 class="anchored" data-anchor-id="sec-delayed-differentiation">차별화 지연</h3>
-<p><strong>차별화 지연</strong>(Delayed Differentiation)은 <font color="blue">제품이나 서비스에 있어 기본적인 형태를 먼저 생산한 후, 고객 요구에 맞게 최종 제품이나 서비스를 맞춤화하는 전략</font>이다. 이는 생산 효율성을 높이고, 고객 수요에 맞는 개인화된 서비스를 제공하기 위해 사용된다. 차별화 지연은 <strong>모듈러 디자인(Modular Design)</strong> 또는 <strong>지연된 맞춤화</strong>라고도 불리며, 특정 시점까지는 표준화된 생산을 유지하고, 그 후에 고객 요구에 맞춰 차별화된 제품이나 서비스를 제공하는 방식을 의미한다.</p>
-<dl>
-<dt>차별화 지연의 주요 특징</dt>
-<dd>
+<p>차별화 지연(Delayed Differentiation)은 <span class="hl">제품이나 서비스에 있어 기본적인 형태를 먼저 생산한 후, 고객 요구에 맞게 최종 제품이나 서비스를 맞춤화하는 전략</span>이다. 이는 생산 효율성을 높이고, 고객 수요에 맞는 개인화된 서비스를 제공하기 위해 사용된다. 차별화 지연은 모듈러 디자인(Modular Design) 또는 지연된 맞춤화라고도 불리며, 특정 시점까지는 표준화된 생산을 유지하고, 그 후에 고객 요구에 맞춰 차별화된 제품이나 서비스를 제공하는 방식을 의미한다.</p>
+<p>차별화 지연의 주요 특징은 다음과 같다.</p>
 <ol type="1">
-<li><dl>
-<dt><strong>표준화된 생산</strong></dt>
-<dd>
-초기에는 대부분의 부품이나 프로세스가 표준화되어 생산된다. 이때, 제품의 핵심 기능이나 기본적인 디자인이 결정된다.
-</dd>
-</dl></li>
-<li><dl>
-<dt><strong>고객 맞춤화</strong></dt>
-<dd>
-고객의 요구나 특성에 맞는 차별화는 제품이나 서비스의 최종 단계를 통해 이루어진다. 고객의 요구가 명확히 드러나기 전까지는 표준화된 형태로 생산한다.
-</dd>
-</dl></li>
-<li><dl>
-<dt><strong>생산 효율성</strong></dt>
-<dd>
-표준화된 부품과 생산 과정을 사용하여 생산 효율성을 높이고, 생산 비용을 절감할 수 있다.
-</dd>
-</dl></li>
-<li><dl>
-<dt><strong>수요에 따른 유연성</strong></dt>
-<dd>
-고객이 특정 요구를 제시하기 전에 제품을 표준화하여 생산하고, 최종적으로 고객의 요구에 맞춰 제품을 완성할 수 있다. 이는 생산 과정에서의 유연성을 제공한다.
-</dd>
-</dl></li>
+<li><strong>표준화된 생산</strong><br>
+초기에는 대부분의 부품이나 프로세스가 표준화되어 생산된다. 이때, 제품의 핵심 기능이나 기본적인 디자인이 결정된다.</li>
+<li><strong>고객 맞춤화</strong><br>
+고객의 요구나 특성에 맞는 차별화는 제품이나 서비스의 최종 단계를 통해 이루어진다. 고객의 요구가 명확히 드러나기 전까지는 표준화된 형태로 생산한다.</li>
+<li><strong>생산 효율성</strong><br>
+표준화된 부품과 생산 과정을 사용하여 생산 효율성을 높이고, 생산 비용을 절감할 수 있다.</li>
+<li><strong>수요에 따른 유연성</strong><br>
+고객이 특정 요구를 제시하기 전에 제품을 표준화하여 생산하고, 최종적으로 고객의 요구에 맞춰 제품을 완성할 수 있다. 이는 생산 과정에서의 유연성을 제공한다.</li>
 </ol>
-</dd>
-<dt>차별화 지연의 적용 예시</dt>
-<dd>
+<p>산업별 차별화 지연의 적용 예시이다.</p>
 <ol type="1">
-<li><dl>
-<dt><strong>자동차 산업</strong></dt>
-<dd>
-자동차 제조에서 차별화 지연 전략을 적용할 수 있다. 예를 들어, 자동차 제조사가 기본 차체와 주요 부품을 표준화하여 생산한 후, 고객이 선택한 색상, 내장재, 엔진 타입 등에 맞게 마지막 단계에서 차별화를 추가한다.
-</dd>
-</dl></li>
-<li><dl>
-<dt><strong>컴퓨터 및 전자 제품</strong></dt>
-<dd>
-컴퓨터와 같은 전자 제품에서도 차별화 지연이 사용된다. 기본적인 하드웨어를 표준화된 부품을 사용하여 조립한 후, 고객이 원하는 소프트웨어나 기능을 추가하는 방식이다.
-</dd>
-</dl></li>
-<li><dl>
-<dt><strong>패션 산업</strong></dt>
-<dd>
-의류 브랜드는 기본적인 옷을 대량 생산한 후, 고객의 요구에 맞는 디자인 수정이나 맞춤화를 통해 최종 제품을 제공할 수 있다.
-</dd>
-</dl></li>
-<li><dl>
-<dt><strong>음식 및 외식 산업</strong></dt>
-<dd>
-패스트푸드 체인에서는 기본적인 식사 메뉴를 표준화하여 미리 준비해두고, 고객이 주문할 때마다 소스나 추가 토핑 등을 선택하여 차별화된 제품을 제공한다.
-</dd>
-</dl></li>
+<li><strong>자동차 산업</strong><br>
+자동차 제조에서 차별화 지연 전략을 적용할 수 있다. 예를 들어, 자동차 제조사가 기본 차체와 주요 부품을 표준화하여 생산한 후, 고객이 선택한 색상, 내장재, 엔진 타입 등에 맞게 마지막 단계에서 차별화를 추가한다.</li>
+<li><strong>컴퓨터 및 전자 제품</strong><br>
+컴퓨터와 같은 전자 제품에서도 차별화 지연이 사용된다. 기본적인 하드웨어를 표준화된 부품을 사용하여 조립한 후, 고객이 원하는 소프트웨어나 기능을 추가하는 방식이다.</li>
+<li><strong>패션 산업</strong><br>
+의류 브랜드는 기본적인 옷을 대량 생산한 후, 고객의 요구에 맞는 디자인 수정이나 맞춤화를 통해 최종 제품을 제공할 수 있다.</li>
+<li><strong>음식 및 외식 산업</strong><br>
+패스트푸드 체인에서는 기본적인 식사 메뉴를 표준화하여 미리 준비해두고, 고객이 주문할 때마다 소스나 추가 토핑 등을 선택하여 차별화된 제품을 제공한다.</li>
 </ol>
-</dd>
-<dt>차별화 지연의 장점</dt>
-<dd>
-<ol type="1">
-<li><dl>
-<dt><strong>비용 절감</strong></dt>
-<dd>
-표준화된 부품이나 서비스를 사용하여 생산 과정에서의 비용을 절감할 수 있다. 후속 맞춤화 작업만 수행하기 때문에 초기 생산이 효율적이다.
-</dd>
-</dl></li>
-<li><dl>
-<dt><strong>수요 예측</strong></dt>
-<dd>
-고객의 개별 요구 사항을 정확히 예측하기 어려운 경우, 차별화 지연 전략을 통해 고객의 실제 요구가 명확해질 때까지 대량 생산을 진행할 수 있다.
-</dd>
-</dl></li>
-<li><dl>
-<dt><strong>재고 관리 용이</strong></dt>
-<dd>
-제품의 기본 형태를 대량으로 생산해두어야 하므로, 일정량 이상의 재고를 보유해야 할 수 있다. 이는 창고 비용이나 재고 관리에 부담을 줄 수 있다.
-</dd>
-</dl></li>
-<li><dl>
-<dt><strong>고객 맞춤화 가능</strong></dt>
-<dd>
-고객의 요구에 맞춰 제품을 차별화하여, 고객 만족도를 높이고 브랜드의 차별화를 꾀할 수 있다.
-</dd>
-</dl></li>
-<li><dl>
-<dt><strong>운영 효율성</strong></dt>
-<dd>
-대량 생산 후 마지막 단계에서 맞춤화를 진행하기 때문에, 생산과 배송의 효율성을 동시에 유지할 수 있다.
-</dd>
-</dl></li>
-</ol>
-</dd>
-<dt>차별화 지연의 한계</dt>
-<dd>
-<ol type="1">
-<li><dl>
-<dt><strong>최종 맞춤화 시간 지연</strong></dt>
-<dd>
-고객이 요구 사항을 전달한 후에 맞춤화가 이루어지므로, 이로 인해 서비스나 제품 제공 시간이 지연될 수 있다.
-</dd>
-</dl></li>
-<li><dl>
-<dt><strong>재고 부담</strong></dt>
-<dd>
-제품의 기본 형태를 대량으로 생산해두어야 하므로, 일정량 이상의 재고를 보유해야 할 수 있다. 이는 창고 비용이나 재고 관리에 부담을 줄 수 있다.
-</dd>
-</dl></li>
-<li><dl>
-<dt><strong>고객 맞춤화 한계</strong></dt>
-<dd>
-제품을 표준화하여 대량 생산하는 방식이기 때문에, 고객의 요구 사항이 지나치게 구체적일 경우 맞춤화가 어려운 경우가 있을 수 있다.
-</dd>
-</dl></li>
-<li><dl>
-<dt><strong>고객의 기대 관리 어려움</strong></dt>
-<dd>
-고객이 차별화된 제품을 기대하는 수준에 맞춰 맞춤화를 진행하려면 고객의 요구 사항을 잘 반영해야 하며, 이를 잘못 처리할 경우 고객 불만이 발생할 수 있다.
-</dd>
-</dl></li>
-</ol>
-</dd>
-<dt>차별화 지연의 활용 방안</dt>
-<dd>
+<table class="caption-top table">
+<caption>차별화 지연 장점과 한계</caption>
+<colgroup>
+<col style="width: 42%">
+<col style="width: 57%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>차별화 지연의 장점</strong></th>
+<th><strong>차별화 지연의 한계</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>비용 절감</strong>: 표준 부품 사용 및 초기 생산 효율로 전체 비용 절감 가능</td>
+<td><strong>최종 맞춤화 시간 지연</strong>: 고객 요구 반영 이후에 맞춤화가 이루어져 납기 지연 가능</td>
+</tr>
+<tr class="even">
+<td><strong>수요 예측 유리</strong>: 실제 수요 파악 전까지 표준 제품으로 대량 생산 가능</td>
+<td><strong>재고 부담</strong>: 기본 형태의 제품 재고를 일정량 이상 보유해야 하므로 창고 비용 증가 및 관리 부담 발생</td>
+</tr>
+<tr class="odd">
+<td><strong>재고 관리 용이</strong>: 표준 제품 기준 재고 운영으로 계획 수립 및 관리가 용이</td>
+<td><strong>고객 맞춤화 한계</strong>: 표준 제품 구조상 고객 요구가 지나치게 세부적인 경우 맞춤 대응에 한계 존재</td>
+</tr>
+<tr class="even">
+<td><strong>고객 맞춤화 가능</strong>: 후공정 맞춤화를 통해 고객 만족도와 브랜드 차별화 가능</td>
+<td><strong>고객 기대 관리 어려움</strong>: 요구사항 반영 실패 시 고객 불만 발생 가능</td>
+</tr>
+<tr class="odd">
+<td><strong>운영 효율성 향상</strong>: 대량 생산과 개별 맞춤화의 장점을 모두 활용 가능</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>차별화 지연의 주요 활용 방안은 다음과 같다.</p>
 <ul>
-<li><dl>
-<dt><strong>모듈화 전략</strong></dt>
-<dd>
-제품이나 서비스의 각 부품을 모듈화하여 고객이 원하는 최종 조합을 선택할 수 있게 만든다. 예를 들어, 컴퓨터의 하드웨어 부품, 자동차의 색상 및 옵션 등을 모듈화하여 최종 제품을 구성한다.
-</dd>
-</dl></li>
-<li><dl>
-<dt><strong>디지털 기술 활용</strong></dt>
-<dd>
-온라인 플랫폼을 통해 고객이 쉽게 요구 사항을 입력하고, 이를 기반으로 맞춤형 제품을 제공하는 방안을 설계할 수 있다. 예를 들어, 온라인 맞춤화 서비스(예: 옷, 신발, 액세서리 등)에서 차별화 지연을 활용할 수 있다.
-</dd>
-</dl></li>
+<li><strong>모듈화 전략</strong><br>
+제품이나 서비스의 각 부품을 모듈화하여 고객이 원하는 최종 조합을 선택할 수 있게 만든다. 예를 들어, 컴퓨터의 하드웨어 부품, 자동차의 색상 및 옵션 등을 모듈화하여 최종 제품을 구성한다.</li>
+<li><strong>디지털 기술 활용</strong><br>
+온라인 플랫폼을 통해 고객이 쉽게 요구 사항을 입력하고, 이를 기반으로 맞춤형 제품을 제공하는 방안을 설계할 수 있다. 예를 들어, 온라인 맞춤화 서비스(예: 옷, 신발, 액세서리 등)에서 차별화 지연을 활용할 수 있다.</li>
 </ul>
-</dd>
-</dl>
-<p><strong>차별화 지연</strong>은 <font color="blue">표준화된 생산 과정과 고객 맞춤화를 결합한 전략</font>으로, 생산 효율성을 높이면서도 고객의 개별 요구를 충족시킬 수 있는 방법이다. 이를 통해 기업은 생산 비용을 절감하면서도 고객 만족도를 높일 수 있으며, 수요 예측이 어려운 시장에서 유용한 전략으로 활용된다.</p>
+<p>차별화 지연은 표준화된 생산 과정과 고객 맞춤화를 결합한 전략으로, 생산 효율성을 높이면서도 고객의 개별 요구를 충족시킬 수 있는 방법이다. 이를 통해 기업은 생산 비용을 절감하면서도 고객 만족도를 높일 수 있으며, 수요 예측이 어려운 시장에서 유용한 전략으로 활용된다.</p>
 </section>
 <section id="sec-tailored-sourcing" class="level3">
 <h3 class="anchored" data-anchor-id="sec-tailored-sourcing">맞춤보충</h3>
-<p><strong>맞춤보충(Tailored Sourcing)</strong>은 <font color="blue">특정 요구 사항과 조건에 맞게 제품이나 서비스를 공급하는 전략적 접근법</font>을 말한다. 이 방식은 일반적인 공급망 전략을 넘어, 각 고객의 개별적인 니즈를 충족시킬 수 있는 맞춤형 공급망을 구축하는 데 초점을 맞춘다. 이를 통해 기업은 경쟁력을 높이고, 고객 맞춤형 솔루션을 제공할 수 있다.</p>
-<p><strong>주요 특징</strong></p>
+<p>맞춤보충(Tailored Sourcing)은 <span class="hl">특정 요구 사항과 조건에 맞게 제품이나 서비스를 공급하는 전략적 접근법</span>을 말한다. 이 방식은 일반적인 공급망 전략을 넘어, 각 고객의 개별적인 니즈를 충족시킬 수 있는 맞춤형 공급망을 구축하는 데 초점을 맞춘다. 이를 통해 기업은 경쟁력을 높이고, 고객 맞춤형 솔루션을 제공할 수 있다.</p>
+<p>맞춤 보충에 대한 주요 특징은 다음과 같다.</p>
 <ol type="1">
 <li><p><strong>고객 중심의 맞춤형 공급망 구축</strong><br>
 <strong>고객의 요구사항에 따라 공급망을 조정</strong>하여 제품이나 서비스를 제공한다. 예를 들어, 특정 산업이나 시장에 맞는 제품, 재료 또는 서비스를 공급하기 위해 파트너를 선정하는 방식이다.</p></li>
@@ -2175,7 +2003,7 @@ MAD = \frac{\sum_{t=1}^{n}|A_t - F_t|}{n}
 </ol>
 <p>맞춤보충 장점과 단점은 다음과 같다.</p>
 <table class="caption-top table">
-<caption>맞춤보충 장점과 단점점</caption>
+<caption>맞춤보충 장단점</caption>
 <colgroup>
 <col style="width: 50%">
 <col style="width: 50%">
@@ -2201,9 +2029,7 @@ MAD = \frac{\sum_{t=1}^{n}|A_t - F_t|}{n}
 </tr>
 </tbody>
 </table>
-<dl>
-<dt>적용 사례</dt>
-<dd>
+<p>산업별 주요 적용 사례이다.</p>
 <ul>
 <li><strong>자동차 산업</strong><br>
 특정 자동차 모델의 부품을 맞춤형으로 공급하는 방식, 고객의 요구에 맞는 기능이나 디자인을 제공하는 부품을 제작</li>
@@ -2212,18 +2038,16 @@ MAD = \frac{\sum_{t=1}^{n}|A_t - F_t|}{n}
 <li><strong>IT 솔루션 제공</strong><br>
 기업의 업무 환경에 맞춘 소프트웨어나 기술 지원을 제공하는 방식</li>
 </ul>
-</dd>
-</dl>
 </section>
 </section>
 <section id="sec-ref-0201" class="level2">
 <h2 class="anchored" data-anchor-id="sec-ref-0201">참고자료</h2>
 <section id="애자일-생산관리-agile-manufacturing" class="level3">
 <h3 class="anchored" data-anchor-id="애자일-생산관리-agile-manufacturing">애자일 생산관리 (Agile Manufacturing)</h3>
-<p><strong>애자일 생산관리(Agile Manufacturing)</strong>는 변화하는 고객 수요와 시장 환경에 신속하고 유연하게 대응할 수 있도록 설계된 생산 시스템 및 전략이다. 이는 <strong>속도(Speed)</strong>, <strong>유연성(Flexibility)</strong>, <strong>품질(Quality)</strong>, <strong>고객 중심(Customization)</strong>을 동시에 달성하고자 하는 <strong>통합형 생산관리 체계</strong>이다.</p>
-<section id="등장-배경" class="level4">
-<h4 class="anchored" data-anchor-id="등장-배경">등장 배경</h4>
+<p>애자일 생산관리(Agile Manufacturing)는 <span class="hl">변화하는 고객 수요와 시장 환경에 신속하고 유연하게 대응할 수 있도록 설계된 생산 시스템 및 전략</span>이다. 이는 속도(Speed), 유연성(Flexibility), 품질(Quality), 고객 중심(Customization)을 동시에 달성하고자 하는 통합형 생산관리 체계이다.</p>
+<p>애자일 생산관리 등장 배경을 정리하면 다음 표와 같다.</p>
 <table class="caption-top table">
+<caption>애자일 생산관리 등장 배경경</caption>
 <colgroup>
 <col style="width: 83%">
 <col style="width: 16%">
@@ -2257,10 +2081,9 @@ MAD = \frac{\sum_{t=1}^{n}|A_t - F_t|}{n}
 </tr>
 </tbody>
 </table>
-</section>
-<section id="애자일-생산의-4대-핵심-요소-agility-enablers" class="level4">
-<h4 class="anchored" data-anchor-id="애자일-생산의-4대-핵심-요소-agility-enablers">애자일 생산의 4대 핵심 요소 (Agility Enablers)</h4>
+<p>애자일 생산의 4대 핵심 요소(Agility Enablers)는 고객 중심, 협업 기반, 조직 유연성, 그리고 기술 통합이다.</p>
 <table class="caption-top table">
+<caption>애자일 생산 4대 핵심 요소</caption>
 <colgroup>
 <col style="width: 80%">
 <col style="width: 19%">
@@ -2290,10 +2113,9 @@ MAD = \frac{\sum_{t=1}^{n}|A_t - F_t|}{n}
 </tr>
 </tbody>
 </table>
-</section>
-<section id="전통-생산방식과의-비교" class="level4">
-<h4 class="anchored" data-anchor-id="전통-생산방식과의-비교">전통 생산방식과의 비교</h4>
+<p>애자일 생산방식과 전통 생산방식과을 간략히 비교하면 다음 표와 같다.</p>
 <table class="caption-top table">
+<caption>전통적 생산과 애자일 생산산</caption>
 <colgroup>
 <col style="width: 24%">
 <col style="width: 34%">
@@ -2334,10 +2156,9 @@ MAD = \frac{\sum_{t=1}^{n}|A_t - F_t|}{n}
 </tr>
 </tbody>
 </table>
-</section>
-<section id="애자일-생산-전략-요소" class="level4">
-<h4 class="anchored" data-anchor-id="애자일-생산-전략-요소">애자일 생산 전략 요소</h4>
+<p>애자일 생산에 있어 전략 요소는 다음과 같다.</p>
 <table class="caption-top table">
+<caption>애자일 생산방식 전략 요소</caption>
 <colgroup>
 <col style="width: 78%">
 <col style="width: 21%">
@@ -2371,10 +2192,9 @@ MAD = \frac{\sum_{t=1}^{n}|A_t - F_t|}{n}
 </tr>
 </tbody>
 </table>
-</section>
-<section id="애자일과-린lean-생산의-관계" class="level4">
-<h4 class="anchored" data-anchor-id="애자일과-린lean-생산의-관계">애자일과 린(Lean) 생산의 관계</h4>
+<p>참고로, 애자일과 린(Lean) 생산의 관계는 다음 표와 같이 정리할 수 있다.</p>
 <table class="caption-top table">
+<caption>Lean vs.&nbsp;Agile</caption>
 <colgroup>
 <col style="width: 15%">
 <col style="width: 40%">
@@ -2405,15 +2225,16 @@ MAD = \frac{\sum_{t=1}^{n}|A_t - F_t|}{n}
 </tr>
 </tbody>
 </table>
+<blockquote class="blockquote">
 <p><strong>Leagile 전략</strong></p>
 <ul>
 <li>공급망의 상류는 Lean, 하류는 Agile 전략을 병행 적용<br>
 → 예: 표준 제품 생산은 효율 중심(Lean), 고객 주문 이후는 유연 대응(Agile)</li>
 </ul>
-</section>
-<section id="애자일-생산-적용-사례" class="level4">
-<h4 class="anchored" data-anchor-id="애자일-생산-적용-사례">애자일 생산 적용 사례</h4>
+</blockquote>
+<p>애자일 생산 방식의 주요 적용 사례는 다음과 같다.</p>
 <table class="caption-top table">
+<caption>기업별 애자일 생산 방식</caption>
 <thead>
 <tr class="header">
 <th>기업</th>
@@ -2439,9 +2260,7 @@ MAD = \frac{\sum_{t=1}^{n}|A_t - F_t|}{n}
 </tr>
 </tbody>
 </table>
-</section>
-<section id="애자일-생산-도입-시-고려-과제" class="level4">
-<h4 class="anchored" data-anchor-id="애자일-생산-도입-시-고려-과제">애자일 생산 도입 시 고려 과제</h4>
+<p>애자일 생산 도입 시 다음 사항을 고려해야 한다.</p>
 <ul>
 <li>제품 및 시장 특성 분석 (예: 수요 예측 정확도 낮은 제품에 적합)</li>
 <li>유연한 설비 및 인력 구조 필요</li>
@@ -2452,7 +2271,6 @@ MAD = \frac{\sum_{t=1}^{n}|A_t - F_t|}{n}
 <p><em>_EOD_</em></p>
 
 
-</section>
 </section>
 </section>
 <section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
