@@ -1028,31 +1028,27 @@ style 예측기법 fill:#d0e8f1
 <section id="이동평균법" class="level4">
 <h4 class="anchored" data-anchor-id="이동평균법">이동평균법</h4>
 <p>이동평균법(Moving average method)은 전기수요법<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>을 좀 더 발전시킨 것으로 <span class="hl">과거 일정 기간 실적을 평균해서 예측하는 방법</span>으로 단순이동평균법과 가중이동 평균법이 있다.</p>
-<dl>
-<dt>단순이동평균법(Simple moving average method)</dt>
-<dd>
+<ul>
+<li>단순이동평균법(Simple moving average method)
 <ul>
 <li>과거 여러 기간 실적치에 동일한 가중치를 부여하는 방법</li>
 <li>공식 <span id="eq-moving-average"><span class="math display">\[
-F_t = \frac{\sum_{i=1}^{n}{A_{t-i}}}{n}
-\tag{6.1}\]</span></span> <span class="math display">\[{단, \ F_t = t기간 예측치, \quad A_{i-i} = (t-i) 기간 실적치, \quad n = 기간 수}\]</span></li>
-</ul>
-</dd>
-<dt>가중이동평균법(Weighted moving average method)</dt>
-<dd>
+  F_t = \frac{\sum_{i=1}^{n}{A_{t-i}}}{n}
+   \tag{6.1}\]</span></span> <span class="math display">\[{단, \ F_t = t기간 예측치, \quad A_{i-i} = (t-i) 기간 실적치, \quad n = 기간 수}\]</span></li>
+</ul></li>
+<li>가중이동평균법(Weighted moving average method)
 <ul>
 <li>단순이동평균법에서 추세경향을 고려한 수요 예측기법</li>
 <li>공식 <span id="eq-weighted-moving-average"><span class="math display">\[
-F_{t+1} = w_tA_t + w_{t-1}A_{t-1} + ... + w_{t-N}A_{t-N}
-\tag{6.2}\]</span></span> <span class="math display">\[단, \ \sum_{i=1}^{n}{w_i} = 1\]</span></li>
+  F_{t+1} = w_tA_t + w_{t-1}A_{t-1} + ... + w_{t-N}A_{t-N}
+   \tag{6.2}\]</span></span> <span class="math display">\[단, \ \sum_{i=1}^{n}{w_i} = 1\]</span></li>
+</ul></li>
 </ul>
-</dd>
-</dl>
 </section>
 <section id="지수평활법" class="level4">
 <h4 class="anchored" data-anchor-id="지수평활법">지수평활법</h4>
-<p><strong>지수평활법</strong>(Exponential smoothing)은 최소자승법이나 이동평균법에는 장기간 과거실적을 필요로 하지만 지수평활법(Exponential smoothing)은 최근 데이터만으로 예측이 가능한 장점이 있다. <font color="blue">현 시점에 가까운 실측치에 큰 비중을 주면서 과거로 거슬러 올라갈수록 그 비중을 지수적으로 적게 주는</font> 지수가중 이동평균법이다.</p>
-<p><font color="blue">차기 예측치 = 당기 예측치 + <span class="math inline">\(\alpha\)</span>(당기실적치 - 당기예측치)</font>로 계산되며 공식은 아래와 같다.</p>
+<p>지수평활법(Exponential smoothing)은 최소자승법이나 이동평균법에는 장기간 과거실적을 필요로 하지만 지수평활법(Exponential smoothing)은 최근 데이터만으로 예측이 가능한 장점이 있다.<span class="hl">현 시점에 가까운 실측치에 큰 비중을 주면서 과거로 거슬러 올라갈수록 그 비중을 지수적으로 적게 주는 지수가중 이동평균법</span>이다.</p>
+<p>즉, 차기 예측치 = 당기 예측치 + <span class="math inline">\(\alpha\)</span>(당기실적치 - 당기예측치)로 계산되며 공식은 아래와 같다.</p>
 <p><span id="eq-exponential-smoothing"><span class="math display">\[
 F_t = F_{t-1} + \alpha (A_{t-1} - F_{t-1}) = \alpha A_{t-1} + (1-\alpha)F_{t-1}
 \tag{6.3}\]</span></span></p>
@@ -1060,20 +1056,18 @@ F_t = F_{t-1} + \alpha (A_{t-1} - F_{t-1}) = \alpha A_{t-1} + (1-\alpha)F_{t-1}
 </section>
 <section id="예측오차" class="level4">
 <h4 class="anchored" data-anchor-id="예측오차">예측오차</h4>
-<p><strong>정의</strong></p>
 <p>예측오차(Forecast error)는 실제 수요와 예측된 수요 간 차이를 의미하며, 수요예측 정확도를 평가하는 데 사용되는 지표이다.</p>
-<p><strong>발생원인</strong></p>
 <p>예측오차가 발생하는 원인은 다음과 같다.</p>
 <ul>
-<li><font color="#245bdb">예측모형에 사용한 변수 처리를 적절하게 하지 못한 경우</font>
+<li>예측모형에 사용한 변수 처리를 적절하게 하지 못한 경우
 <ul>
 <li>중요한 변수 생략</li>
 <li>예측모형이 처리할 수 없는 변수 변동이나 움직임(추세나 순환변동이 갑자기 발생)</li>
 <li>새로운 변수 발생(신규 경쟁자 등)으로 인해 모형이 부적절한 경우</li>
 </ul></li>
-<li>이상 기후나 기타 자연적 현상, 일시적인 과부족이나 고장, 재난, 기타 사유로 인한 <font color="#245bdb">불규칙 변동이 발생한 경우</font></li>
-<li><font color="#245bdb">예측기법을 잘못 사용하였거나 결과를 잘못 해석한 경우</font></li>
-<li>다른 모든 변동요인들로 설명되고 난 <font color="#245bdb">나머지 내재적인 우연변동</font></li>
+<li>이상 기후나 기타 자연적 현상, 일시적인 과부족이나 고장, 재난, 기타 사유 등 불규칙 변동이 발생한 경우</li>
+<li>예측기법을 잘못 사용하였거나 결과를 잘못 해석한 경우</li>
+<li>다른 모든 변동요인들로 설명되고 난 나머지 내재적인 우연변동</li>
 </ul>
 </section>
 <section id="sec-forecast-error-index" class="level4">
