@@ -676,10 +676,10 @@ classDef transclass fill:#fcfcfc, stroke:#fcfcfc
 <p></p><figure class="figure"><p></p>
 <div>
 <pre class="mermaid mermaid-js">flowchart LR
-    A[수요 계획&lt;br/&gt;(Demand Planning)] --&gt; B[공급 계획&lt;br/&gt;(Supply Planning)]
-    B --&gt; C[생산 계획&lt;br/&gt;(Production Planning)]
-    C --&gt; D[유통 계획&lt;br/&gt;(Distribution Planning)]
-    D --&gt; E[운송 및 배송&lt;br/&gt;(Logistics Execution)]
+    A["수요 계획&lt;br/&gt;(Demand Planning)"] --&gt; B["공급 계획&lt;br/&gt;(Supply Planning)"]
+    B --&gt; C["생산 계획&lt;br/&gt;(Production Planning)"]
+    C --&gt; D["유통 계획&lt;br/&gt;(Distribution Planning)"]
+    D --&gt; E["운송 및 배송&lt;br/&gt;(Logistics Execution)"]
 </pre>
 </div>
 <p></p></figure><p></p>
@@ -694,8 +694,8 @@ classDef transclass fill:#fcfcfc, stroke:#fcfcfc
 <table class="caption-top table">
 <caption>SCM 관련 주요 개념</caption>
 <colgroup>
-<col style="width: 30%">
-<col style="width: 70%">
+<col style="width: 50%">
+<col style="width: 50%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -798,14 +798,25 @@ classDef transclass fill:#fcfcfc, stroke:#fcfcfc
 </section>
 <section id="push-pull-전략의-통합-구조" class="level4">
 <h4 class="anchored" data-anchor-id="push-pull-전략의-통합-구조">Push-Pull 전략의 통합 구조</h4>
-<pre class="mermaid"><code>flowchart LR
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
     subgraph Push 영역
         A[공급자] --&gt; B[제조] --&gt; C[유통센터]
     end
 
     subgraph Pull 영역
         C --&gt; D[소매점] --&gt; E[소비자]
-    end</code></pre>
+    end
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
 <p>Deccouling Point에 따라 Push-Pull 전략이 전환되는 지점이 달라지게 된다.</p>
 <blockquote class="blockquote">
 <p><strong>Push-Pull Decoupling Point (분리점)</strong></p>
@@ -968,8 +979,8 @@ classDef transclass fill:#fcfcfc, stroke:#fcfcfc
 <table class="caption-top table">
 <caption>SQCM 주요 목표</caption>
 <colgroup>
-<col style="width: 30%">
-<col style="width: 70%">
+<col style="width: 50%">
+<col style="width: 50%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -1007,8 +1018,8 @@ classDef transclass fill:#fcfcfc, stroke:#fcfcfc
 <table class="caption-top table">
 <caption>SQCM 주요 구성 요소</caption>
 <colgroup>
-<col style="width: 30%">
-<col style="width: 70%">
+<col style="width: 50%">
+<col style="width: 50%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -1111,8 +1122,8 @@ classDef transclass fill:#fcfcfc, stroke:#fcfcfc
 <table class="caption-top table">
 <caption>SQCM 주요 품질 지표</caption>
 <colgroup>
-<col style="width: 30%">
-<col style="width: 70%">
+<col style="width: 50%">
+<col style="width: 50%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -1150,8 +1161,8 @@ classDef transclass fill:#fcfcfc, stroke:#fcfcfc
 <table class="caption-top table">
 <caption>SQCM 주요 기법 및 표준</caption>
 <colgroup>
-<col style="width: 30%">
-<col style="width: 70%">
+<col style="width: 50%">
+<col style="width: 50%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -1197,15 +1208,15 @@ classDef transclass fill:#fcfcfc, stroke:#fcfcfc
 <h2 class="anchored" data-anchor-id="sec-ref-0301">참고자료</h2>
 <section id="채찍효과" class="level3">
 <h3 class="anchored" data-anchor-id="채찍효과">채찍효과</h3>
-<p>채찍효과(Bullwhip effect)란 공급망에서 최종 소비자의 작은 수요 변동이 제조업자에게 전달될 때, 소비자와 제조업자가 각각 미래 소요에 대해 서로 다른 예측을 하게 되면서 발생하는 수요정보 왜곡 현상을 말한다. 즉, SCM 하류(downstream)의 고객 주문 정보가 상류(upstream)로 전달되면서 정보가 왜곡되는 현상을 말한다. 다음과 같은 원인으로 발생하게 된다.</p>
+<p>채찍효과(Bullwhip effect)란 <span class="hl">공급망에서 최종 소비자의 작은 수요 변동이 제조업자에게 전달될 때, 소비자와 제조업자가 각각 미래 소요에 대해 서로 다른 예측을 하게 되면서 발생하는 수요정보 왜곡 현상</span>을 말한다. 즉, SCM 하류(downstream)의 고객 주문 정보가 상류(upstream)로 전달되면서 정보가 왜곡되는 현상을 말한다. 다음과 같은 원인으로 발생하게 된다.</p>
 <ul>
-<li><p>전통적인 수요 예측(Multiple Forecasting)<br>
+<li><p><strong>전통적인 수요 예측</strong>(Multiple Forecasting)<br>
 소비자 실제 수요에 의존하지 않고 공급망 각 주체들이 자사에 들어온 주문량에 근거해 독립적으로 수요를 예측 → 실제 수요는 무시하고 개별 기업 관점에서 의사결정이 이뤄지기 때문에 공급망 전체 왜곡 현상 발생 → 중복 수요 예측 원인으로 작용한다.</p></li>
-<li><p>일괄주문방식(Order Batching)<br>
+<li><p><strong>일괄주문방식</strong>(Order Batching)<br>
 일반적으로 기업은 재고가 떨어졌을 때 수요에 맞춰 공급기업에 주문을 한다. 하지만 실제 시장에서는 여러가지 이유로 이러한 방식 대신 일괄 주문 형태를 이용하는데 이처럼 특정 일정에 맞춰 한꺼번에 많은 양을 주문하는 것은 수요와 공급량을 일치시키지 못해 재고가 없거나, 반대로 재고가 너무 많이 남는 현상이 발생하게 된다.</p></li>
-<li><p>유동적인 가격변동(Price Fluctuation)<br>
+<li><p><strong>유동적인 가격변동</strong>(Price Fluctuation)<br>
 생산업체는 다양한 상황에 따라 가격을 올리거나 혹은 할인을 해 줄 때가 있다. 예를 들어 추석, 설, 크리스마스 등 성수기 시즌에는 가격을 일시적으로 올리고 계절이 끝나가는 시즌에는 할인을 하는 방식이다. 때문에 도소매 업체들은 가격이 저렴할 때 한꺼번에 많은 물량을 구매해서 재고를 쌓아드고 몇달 동안 주문을 하지 않곤 한다. 저렴할 때 구매하는 것이 합리적이라고 생각하기 때문이다. 하지만 이러한 방식은 실제 수요를 반영하지 못하기 때문에 수요가 불규칙하고 왜곡되고 결국 채찍효과를 야기시키게 된다.</p></li>
-<li><p>분배 문제 - 할당 게임(Rationing, Shortage gaming)<br>
+<li><p><strong>분배 문제 - 할당 게임</strong>(Rationing, Shortage gaming)<br>
 특정 제품에 대한 수요가 폭등하게 되면 제조업체는 도소매 별로 할당(allocation)을 해야 하는 이슈가 발생한다. 이 때 도소매 업체는 제품이 충분하지 않다는 것을 알기 때문에 실 수요보다 더 많은 양을 주문하게 되고 이는 가수요를 발생하게 한다. 또한 제조업체는 이 가수요만큼 초과생산을 하게되고 이는 다음 시기에 고스란히 재고로 남아 주문량이 급감하는 결과를 초래한다.</p></li>
 </ul>
 <p><em>_EOD_</em></p>
