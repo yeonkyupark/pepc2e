@@ -548,15 +548,13 @@ window.Quarto = {
   <li><a href="#sec-cpm" id="toc-sec-cpm" class="nav-link" data-scroll-target="#sec-cpm">CPM</a></li>
   <li><a href="#sec-ccm" id="toc-sec-ccm" class="nav-link" data-scroll-target="#sec-ccm">CCM</a></li>
   </ul></li>
-  <li><a href="#pert-vs.-cpm" id="toc-pert-vs.-cpm" class="nav-link" data-scroll-target="#pert-vs.-cpm">PERT vs.&nbsp;CPM</a>
-  <ul class="collapse">
-  <li><a href="#pertcpm-전개-단계" id="toc-pertcpm-전개-단계" class="nav-link" data-scroll-target="#pertcpm-전개-단계">PERT/CPM 전개 단계</a></li>
-  </ul></li>
+  <li><a href="#pert-vs.-cpm" id="toc-pert-vs.-cpm" class="nav-link" data-scroll-target="#pert-vs.-cpm">PERT vs.&nbsp;CPM</a></li>
   <li><a href="#cpm-vs.-ccm" id="toc-cpm-vs.-ccm" class="nav-link" data-scroll-target="#cpm-vs.-ccm">CPM vs.&nbsp;CCM</a></li>
   </ul></li>
   <li><a href="#sec-ref-0202" id="toc-sec-ref-0202" class="nav-link" data-scroll-target="#sec-ref-0202">참고자료</a>
   <ul>
   <li><a href="#프로젝트와-프로세스-차이" id="toc-프로젝트와-프로세스-차이" class="nav-link" data-scroll-target="#프로젝트와-프로세스-차이">프로젝트와 프로세스 차이</a></li>
+  <li><a href="#pertcost" id="toc-pertcost" class="nav-link" data-scroll-target="#pertcost">PERT/COST</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/yeonkyupark/pepc2e/edit/main/0202프로세스진도관리.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
@@ -589,25 +587,10 @@ window.Quarto = {
 </header>
 
 
-<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 97-1-7">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-기출: 97-1-7
-</div>
-</div>
-<div class="callout-body-container callout-body">
-
-</div>
-</div>
 <section id="진도관리" class="level2">
 <h2 class="anchored" data-anchor-id="진도관리">진도관리</h2>
-<p><strong>공정진도관리</strong>는 <font color="blue">생산 공정에서 각 작업이 계획된 일정에 따라 원활하게 진행되도록 관리하는 활동</font>을 의미한다. 이는 생산 일정의 지연을 방지하고, 원활한 자원 배분을 통해 <strong>납기 준수</strong>와 <strong>생산 효율성 향상</strong>을 목표로 한다.</p>
-<dl>
-<dt>공정진도관리의 목적</dt>
-<dd>
+<p>공정진도관리는 <span class="hl">생산 공정에서 각 작업이 계획된 일정에 따라 원활하게 진행되도록 관리하는 활동</span>을 의미한다. 이는 생산 일정의 지연을 방지하고, 원활한 자원 배분을 통해 납기 준수와 생산 효율성 향상을 목표로 한다.</p>
+<p>공정진도관리 목적을 정리하면 다음과 같다.</p>
 <ol type="1">
 <li><strong>납기 준수</strong><br>
 고객과 약속한 <strong>납기 기한을 지키기 위해 생산 일정</strong>을 효과적으로 관리한다.</li>
@@ -618,9 +601,7 @@ window.Quarto = {
 <li><strong>자원 활용 극대화</strong><br>
 인력, 기계, 자재 등의 자원을 효율적으로 배분하여 <strong>생산성 향상을 도모</strong>한다.</li>
 </ol>
-</dd>
-</dl>
-<p>공정진도관리 방법에는 <strong>일정계획법</strong>, <strong>MRP</strong>, <strong>TOC 기반 관리</strong>, <strong>진도 통제</strong>, 그리고 <strong>JIT 생산방식</strong> 등이 있다.</p>
+<p>공정진도관리 방법에는 일정계획법, MRP, TOC 기반 관리, 진도 통제, 그리고 JIT 생산방식 등이 있다.</p>
 <table class="caption-top table">
 <caption>공정진도관리 방법</caption>
 <colgroup>
@@ -656,99 +637,54 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-<dl>
-<dt>공정진도관리 도구</dt>
-<dd>
+<p>공정진도관리를 위하 주요 도구는 다음과 같다.</p>
 <ol type="1">
-<li><dl>
-<dt><strong>간트 차트(Gantt Chart)</strong></dt>
-<dd>
-작업 일정과 진행 상황을 한눈에 볼 수 있도록 시각적으로 표현한 도구이다.
-</dd>
-</dl></li>
-<li><dl>
-<dt><a href="#sec-pert" class="quarto-xref"><span>PERT</span></a> / <a href="#sec-cpm" class="quarto-xref"><span>CPM</span></a> (네트워크 기법)</dt>
-<dd>
-공정 간 상호 관계를 고려하여 일정 계획을 최적화하는 기법이다.
-</dd>
-</dl></li>
-<li><dl>
-<dt><a href="1101정보화활용기술.html#sec-erp" class="quarto-xref"><span>ERP</span></a> 시스템</dt>
-<dd>
-기업 내 모든 자원을 통합적으로 관리하여 실시간으로 공정 진행을 모니터링한다.
-</dd>
-</dl></li>
+<li><p>간트 차트(Gantt Chart)<br>
+작업 일정과 진행 상황을 한눈에 볼 수 있도록 시각적으로 표현한 도구이다.</p></li>
+<li><p>PERT/CPM (네트워크 기법)<br>
+공정 간 상호 관계를 고려하여 일정 계획을 최적화하는 기법이다.</p></li>
+<li><p>ERP 시스템<br>
+기업 내 모든 자원을 통합적으로 관리하여 실시간으로 공정 진행을 모니터링한다.</p></li>
 </ol>
-</dd>
-<dt>공정진도관리의 효과</dt>
-<dd>
+<p>공정진도관리 시 기대할 수 있는 효과는 다음과 같다.</p>
 <ul>
 <li>납기 준수를 통한 <strong>고객 신뢰도 향상</strong></li>
 <li>생산 지연 최소화를 통한 <strong>원가 절감</strong></li>
 <li>자원의 최적 배분으로 <strong>생산 효율성 증가</strong></li>
 <li>실시간 모니터링으로 <strong>문제 발생 시 신속한 대응 가능</strong></li>
 </ul>
-</dd>
-</dl>
-<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 97-3-6, 100-3-1, 103-4-4, 115-1-5, 130-4-6">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-기출: 97-3-6, 100-3-1, 103-4-4, 115-1-5, 130-4-6
-</div>
-</div>
-<div class="callout-body-container callout-body">
-
-</div>
-</div>
 </section>
 <section id="네트워크-기법" class="level2">
 <h2 class="anchored" data-anchor-id="네트워크-기법">네트워크 기법</h2>
-<p><strong>네트워크 기법</strong>(Network, 화살도 arrow diagram, 활동 네트워크 activity network diagram)은 <font color="blue">필요한 활동 선후관계를 네트워크로 표시하는 방식</font>으로 간트차트 결점을 보완하기 위하여 개발되었다. 대표적인 기법으로 <a href="#sec-pert" class="quarto-xref"><span>PERT</span></a> (Program Evaluation &amp; Review Technique)와 <a href="#sec-cpm" class="quarto-xref"><span>CPM</span></a> (Critical Path Method)이 있다.</p>
-<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 118-4-6">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-기출: 118-4-6
-</div>
-</div>
-<div class="callout-body-container callout-body">
-
-</div>
-</div>
+<p>네트워크 기법(Network, 화살도 arrow diagram, 활동 네트워크 activity network diagram)은 <span class="hl">필요한 활동 선후관계를 네트워크로 표시하는 방식</span>으로 간트차트 결점을 보완하기 위하여 개발되었다. 대표적인 기법으로 PERT(Program Evaluation &amp; Review Technique)와 CPM(Critical Path Method)이 있다.</p>
 <section id="sec-critical-path" class="level3">
 <h3 class="anchored" data-anchor-id="sec-critical-path">주경로</h3>
-<p>네트워크 기법에서 <strong>주경로</strong>(critical path)는 다음과 같이 정의한다.</p>
+<p>먼저 네트워크 기법에서 주경로(critical path)는 다음과 같이 정의한다.</p>
+<center>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
 <p></p><figure class="figure"><p></p>
 <div>
 <pre class="mermaid mermaid-js">  flowchart LR
-  
-  A --&gt; B 
-  A ==&gt; C 
-  B --&gt; D
-  C ==&gt; D ==&gt; E ==&gt; H
-  C --&gt; F --&gt; H
+      A --&gt; B 
+      A ==&gt; C 
+      B --&gt; D
+      C ==&gt; D ==&gt; E ==&gt; H
+      C --&gt; F --&gt; H
 </pre>
 </div>
 <p></p></figure><p></p>
 </div>
 </div>
 </div>
+</center>
 <ul>
-<li><font color="blue">여유시간 값이 최소가 되는 단계를 연결한 경로</font></li>
-<li>최소 여유 단계에서 활동이 계획 일정보다 늦어지면 최종 단계에서 프로젝트 완성이 그만큰 지연되므로 <font color="red">주경로 상의 공정을 <strong>애로공정</strong>이라고 함</font></li>
+<li>여유시간 값이 최소가 되는 단계를 연결한 경로</li>
+<li>최소 여유 단계에서 활동이 계획 일정보다 늦어지면 최종 단계에서 프로젝트 완성이 그만큰 지연되므로 주경로 상의 공정을 애로공정이라고 함</li>
 <li>네트워크상 주공정은 굵은 색으로 표시하여 중점 관리 함</li>
 </ul>
-<dl>
-<dt>주공정 계산 방법</dt>
-<dd>
+<p>주공정은 다음과 같은 방법으로 계산한다.</p>
 <ol type="1">
 <li>작업 나열 및 의존 관계 정의</li>
 <li>작업 소요 시간 추정</li>
@@ -756,10 +692,8 @@ window.Quarto = {
 <li>전진계산(Forward pass) - 가장 빠른 완료 시간(Early Times, ES)</li>
 <li>후진계산(Backward pass) - 가장 늦은 완료 시간(Late Times, LS)</li>
 <li>여유 시간(부동소요, LS - ES) 계산</li>
-<li>크리티컬 패스 도출</li>
+<li>주경로(critical path) 도출</li>
 </ol>
-</dd>
-</dl>
 <div class="callout callout-style-default callout-important no-icon callout-titled" title="주경로 계산">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -808,23 +742,11 @@ window.Quarto = {
 <p>따라서 주공정은 여유시간이 최소가 되는 경로인 ⓪ → ① → ③ → ④ → ⑦ → ⑧이며, 총소요일은 20일이다.</p>
 </div>
 </div>
-<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 124-3-2">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-기출: 124-3-2
-</div>
-</div>
-<div class="callout-body-container callout-body">
-
-</div>
-</div>
 </section>
 <section id="네트워크-구성" class="level3">
 <h3 class="anchored" data-anchor-id="네트워크-구성">네트워크 구성</h3>
-<p>네트워크 기법은 네트워크 작성 방법에 따라 <a href="#sec-aoa" class="quarto-xref"><span>AOA 네트워크</span></a>와 <a href="#sec-aon" class="quarto-xref"><span>AON 네트워크</span></a> 방식으로 나뉜다.</p>
+<p>네트워크 기법은 네트워크 작성 방법에 따라 AOA 네트워크와 AON 네크워크 방식으로 나뉜다.</p>
+<center>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
@@ -845,38 +767,32 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<dl>
-<dt>단계(Event), 마디(Node)</dt>
-<dd>
+</center>
+<p>네트워크 기법은 단계 또는 마디, 활동, 결합점, 호 등의 구성요소를 갖는다.</p>
+<ul>
+<li>단계(Event), 마디(Node)
 <ul>
 <li>작업 활동을 수행함에 있어 활동 개시 또는 완료되는 시점을 나타냄</li>
 <li>활동 개시 시점을 착수단계(beginning event), 활동 완료 시점을 완료 단계(ending event)라고 함</li>
-</ul>
-</dd>
-<dt>활동(Activity)</dt>
-<dd>
+</ul></li>
+<li>활동(Activity)
 <ul>
 <li>과업 수행 상 시간 및 자원(인력, 물자, 설비 등)이 소비되는 작업</li>
 <li>PERT 상 활동은 활동방향에 따라 실선 화살표로 표시</li>
 <li>활동에 따라 단계가 분리되거나 연결되기도 하는데 분리되는 경우 분리단계(burst event), 연결되는 경우 병합단계(merge event)라 함</li>
-</ul>
-</dd>
-<dt>결합점(Node)</dt>
-<dd>
+</ul></li>
+<li>결합점(Node)
 <ul>
 <li>네크워크에서 마디(○)를 나타내는 것으로 AOA 방식에서는 단계(event)를 나타내며 AON 방식에서는 마디로 작업이나 활동을 나타냄</li>
-</ul>
-</dd>
-<dt>호(Arc)</dt>
-<dd>
+</ul></li>
+<li>호(Arc)
 <ul>
 <li>네트워크에서 가지(→)로 활동을 나타내는 것으로 AOA 방식에서는 활동을, AON 방식에서는 활동 선후관계(단계)를 나타냄</li>
+</ul></li>
 </ul>
-</dd>
-</dl>
 <section id="sec-aoa" class="level4">
 <h4 class="anchored" data-anchor-id="sec-aoa">AOA 네트워크</h4>
-<p><strong>AOA</strong>(activity on arrow/arc)는 <font color="#245bdb">프로젝트에 필요한 활동을 화살표(arrow 또는 arc)로 표시하고 착수 완료 시점을 마디(node)로 표현</font>하는 방법이다.</p>
+<p>AOA(activity on arrow/arc)는 <span class="hl">프로젝트에 필요한 활동을 화살표(arrow 또는 arc)로 표시하고 착수 완료 시점을 마디(node)로 표현</span>하는 방법이다.</p>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
@@ -892,11 +808,9 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<p>활동이 시작되는 시점이나 완료되는 시점을 단계(event)로 정의하고 이를 원(○)으로 된 마디로 표시한다. 화살표와 마디를 활동 간 선행 관계에 따라 연결함으로써 프로젝트를 네트워크로 나타낸다. 활동을 화살표 위에 나타내고 활동 시작과 완료를 마디로 표시하여 활동 선행 관계를 <code>마디 → 화살표 → 마디</code> 형태로 연결하여 표현한다. 단계를 나타내는 마디에서는 시간과 비용이 소요되지 않고 <font color="blue">화살표 선상에 활동명과 활동 소요시간을 표시</font>한다.</p>
-<p>AOA 기법은 활동 간 연결점을 중시하므로 <strong>사상 지향적</strong>이라고 하고 선후 관계는 모든 선행활동이 완료되기 전까지는 사상이 일어날 수 없음을 뜻한다. 일반적으로 사상 번호는 좌측에서 우측으로 관행적으로 나열한다. 참고로, 사상은 활동이 하나 이상 완료되고 다른 활동이 시작되는 점을 뜻한다.</p>
-<dl>
-<dt>AOA 작성 시 원칙</dt>
-<dd>
+<p>활동이 시작되는 시점이나 완료되는 시점을 단계(event)로 정의하고 이를 원(○)으로 된 마디로 표시한다. 화살표와 마디를 활동 간 선행 관계에 따라 연결함으로써 프로젝트를 네트워크로 나타낸다. 활동을 화살표 위에 나타내고 활동 시작과 완료를 마디로 표시하여 활동 선행 관계를 [ 마디 → 화살표 → 마디 ] 형태로 연결하여 표현한다. 단계를 나타내는 마디에서는 시간과 비용이 소요되지 않고 화살표 선상에 활동명과 활동 소요시간을 표시한다.</p>
+<p>AOA 기법은 활동 간 연결점을 중시하므로 사상 지향적이라고 하고 선후 관계는 모든 선행활동이 완료되기 전까지는 사상이 일어날 수 없음을 뜻한다. 일반적으로 사상 번호는 좌측에서 우측으로 관행적으로 나열한다. 참고로, 사상은 활동이 하나 이상 완료되고 다른 활동이 시작되는 점을 뜻한다.</p>
+<p>AOA 작성 시 주요 원칙은 다음과 같다.</p>
 <ul>
 <li>마디 사이는 오직 화살표 하나만 연결</li>
 <li>공정 순서는 화살표 방향, 화살표 길이는 소요시간과 무관</li>
@@ -904,9 +818,7 @@ window.Quarto = {
 <li>첫마디 하나에서 시작하여 끝마디 하나에서 완료</li>
 <li>부득이 가상 활동(dummy activity) 표기 시 소요시간은 0, 화살표는 점선을 사용</li>
 </ul>
-</dd>
-<dt>주 공정 파악 절차</dt>
-<dd>
+<p>AOA 네트워크에서 주 공정 파악 절차는 다음과 같다.</p>
 <ol type="1">
 <li>활동 수행 소요 시간과 선행 관계를 고려하여 네트워크 구성</li>
 <li>각 단계 시작 시간과 종료시간 계산
@@ -923,8 +835,6 @@ window.Quarto = {
 </ul></li>
 <li>프로젝트 최단 완료 시간과 주공정 계산</li>
 </ol>
-</dd>
-</dl>
 <div class="callout callout-style-default callout-important no-icon callout-titled" title="주공정 계산">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1054,32 +964,17 @@ window.Quarto = {
 </div>
 <div class="callout-body-container callout-body">
 <p>최적화를 위한 프로젝트 관리 목표로 제시되는 3가지 요소는 다음과 같다.</p>
-<dl>
-<dt>범위(scope)</dt>
-<dd>
 <ul>
-<li>프로젝트 결과물의 품질, 세부사항, 규모 측면에서 본 프로젝트 크기이다.</li>
+<li><p>범위(scope) 프로젝트 결과물의 품질, 세부사항, 규모 측면에서 본 프로젝트 크기이다.</p></li>
+<li><p>비용(cost) 프로젝트를 위해 지출되는 금액 뿐만아니라 프로젝트 완료에 필요한 각종 도구, 장비, 지원 등이 포함된다.</p></li>
+<li><p>시간(time) 다른 요소와 균형을 맞춰 계획 단계 단축, 일정 조정, 마감일 연장 등이 필요하다.</p></li>
 </ul>
-</dd>
-<dt>비용(cost)</dt>
-<dd>
-<ul>
-<li>프로젝트를 위해 지출되는 금액 뿐만아니라 프로젝트 완료에 필요한 각종 도구, 장비, 지원 등이 포함된다.</li>
-</ul>
-</dd>
-<dt>시간(time)</dt>
-<dd>
-<ul>
-<li>다른 요소와 균형을 맞춰 계획 단계 단축, 일정 조정, 마감일 연장 등이 필요하다.</li>
-</ul>
-</dd>
-</dl>
 </div>
 </div>
 </section>
 <section id="sec-aon" class="level4">
 <h4 class="anchored" data-anchor-id="sec-aon">AON 네트워크</h4>
-<p><strong>AON</strong>(activity on node)는 <font color="blue">활동을 마디로 표시하고 가지(화살표)는 활동 선후관계</font>를 나타낸다. 이 기법은 <strong>활동 지향적</strong>이다.</p>
+<p>AON(activity on node)는 <span class="hl">활동을 마디로 표시하고 가지(화살표)는 활동 선후관계</span>를 나타낸다. 이 기법은 활동 지향적이다.</p>
 <p>네트워크 구성 절차는 다음과 같다.</p>
 <ol type="1">
 <li>프로젝트 수행에 필요한 모든 활동을 세로로 나열한다(먼저 착수해야 할 선행 작업부터 나열).</li>
@@ -1087,7 +982,6 @@ window.Quarto = {
 <li>화살표와 마디를 이용하여 네트워크도를 작성한다.</li>
 <li>필요하다면 주경로, 완료 일자를 추정한다.</li>
 </ol>
-<p><br></p>
 <div class="callout callout-style-default callout-important no-icon callout-titled" title="기출: 100-3-1">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1104,21 +998,21 @@ window.Quarto = {
 <p></p><figure class="figure"><p></p>
 <div>
 <pre class="mermaid mermaid-js">flowchart LR
-1([1])
-2([2])
-3([3])
-4([4])
-5([5])
-6([6])
-
-1 --3,4,5--&gt; 2
-2 --4,5,6--&gt;3
-1 --4,6,8--&gt;3
-2 --5,7,9--&gt;4
-4 --d1--&gt;5
-3 --3,6,9--&gt;5
-4 --7,8,15--&gt;6
-5 --6,8,16--&gt;6
+    1([1])
+    2([2])
+    3([3])
+    4([4])
+    5([5])
+    6([6])
+    
+    1 --3,4,5--&gt; 2
+    2 --4,5,6--&gt;3
+    1 --4,6,8--&gt;3
+    2 --5,7,9--&gt;4
+    4 --d1--&gt;5
+    3 --3,6,9--&gt;5
+    4 --7,8,15--&gt;6
+    5 --6,8,16--&gt;6
 </pre>
 </div>
 <p></p></figure><p></p>
@@ -1214,9 +1108,7 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-<p><span class="math display">\[
-기대시간(t_e) = \frac{a + 4m + b}{6},  \quad 분산(\sigma^2) = (\frac{b-a}{6})^2
-\]</span></p>
+<p><span class="math display">\[기대시간(t_e) = \frac{a + 4m + b}{6},  \quad 분산(\sigma^2) = (\frac{b-a}{6})^2\]</span></p>
 <p>단순열거법으로 주경로를 찾게되면 1 - 2 - 3 - 5 - 6이고 기대완료 시간은 24(4+5+6+9)일이다.</p>
 <p>프로젝트를 24일만에 끝낼 확률을 구하기 위해서는 정규분포 z 값을 계산한다.</p>
 <p><span class="math display">\[
@@ -1527,8 +1419,9 @@ I --&gt; J
 <p>진도관리를 위한 네트워크 주요 기법은 PERT, CPM, CCPM 등이 있다.</p>
 <section id="sec-pert" class="level4">
 <h4 class="anchored" data-anchor-id="sec-pert">PERT</h4>
-<p><strong>PERT</strong>(program evaluation and review technique, 프로그램 평가 검토 기법)은 <font color="#0000CD">1958년 미국 해군에서 Polaris missile 프로젝트 일정 계획 및 통제를 위한 관리 기법</font>으로 개발되었으며, <font color="#0000CD">시간을 가장 중요한 요소로 통제</font>하는 프로젝트 관리 방법이다. 연구 개발 프로세스에서 프로젝트 진행 상황을 통계 방법을 활용하여 파악하고 이를 통해 일정 계획 및 통제 수단으로 활용되었다. <font color="#0000CD">과거 경험이 없는 불확실한 대상</font>이나 여러 가지 유형의 프로그램 연구 개발에 적합하다.</p>
+<p><strong>PERT</strong>(program evaluation and review technique, 프로그램 평가 검토 기법)은 <span class="hl">1958년 미국 해군에서 Polaris missile 프로젝트 일정 계획 및 통제를 위한 관리 기법</span>으로 개발되었으며, 시간을 가장 중요한 요소로 통제하는 프로젝트 관리 방법이다. 연구 개발 프로세스에서 프로젝트 진행 상황을 통계 방법을 활용하여 파악하고 이를 통해 일정 계획 및 통제 수단으로 활용되었다. 과거 경험이 없는 불확실한 대상이나 여러 가지 유형의 프로그램 연구 개발에 적합하다.</p>
 <table class="caption-top table">
+<caption>PERT 장단점</caption>
 <colgroup>
 <col style="width: 50%">
 <col style="width: 50%">
@@ -1541,40 +1434,20 @@ I --&gt; J
 </thead>
 <tbody>
 <tr class="odd">
-<td><font color="#0000CD">프로젝트 완료 시간을 예측</font>하고 전체 프로세스를 관리할 수 있다.</td>
-<td><font color="red">주관적인 판단에 의해 결정된 활동 예상 시간</font>을 바탕으로 프로젝트 완료 예상 시점 혹은 기간을 결정하기 때문에 판단자의 주관적인 요소에 따라 예측 결과가 달라질 수 있다.</td>
+<td>프로젝트 완료 시간을 예측하고 전체 프로세스를 관리할 수 있다.</td>
+<td>주관적인 판단에 의해 결정된 활동 예상 시간을 바탕으로 프로젝트 완료 예상 시점 혹은 기간을 결정하기 때문에 판단자의 주관적인 요소에 따라 예측 결과가 달라질 수 있다.</td>
 </tr>
 <tr class="even">
-<td>확률적으로 계산한 것이기 때문에 <font color="#0000CD">예측한 시간에 비해 더 빨리 프로젝트를 완료</font>할 수도 있다.</td>
-<td>활동 소요 시간이 적절하게 예측되었더라도 PERT에서는 소요 시간을 확률적으로 고려하게 된다. 실제 확률분포와 베타분포의 상관관계가 낮을수록 <font color="red">예측한 결과와 실제 소요 시간 오차는 커질 수</font> 있다.</td>
+<td>확률적으로 계산한 것이기 때문에 예측한 시간에 비해 더 빨리 프로젝트를 완료할 수도 있다.</td>
+<td>활동 소요 시간이 적절하게 예측되었더라도 PERT에서는 소요 시간을 확률적으로 고려하게 된다. 실제 확률분포와 베타분포의 상관관계가 낮을수록 예측한 결과와 실제 소요 시간 오차는 커질 수 있다.</td>
 </tr>
 <tr class="odd">
-<td>주공정이 아니면서 여유시간이 있는 활동을 완료한 이후 <font color="#0000CD">잉여 시간이나 자원을 주공정에 투입함</font>으로써 프로젝트 완료 기간을 단축시킬 수 있다.</td>
-<td>다른 프로젝트 경로에 있는 활동이 연기될 경우 주공정 자체가 변할 수 있으며, 이로 인해 PERT에서 <font color="red">예측한 소요 시간은 실제 예측 시간보다 더 짧아진다</font>는 단점이 있다.</td>
+<td>주공정이 아니면서 여유시간이 있는 활동을 완료한 이후 잉여 시간이나 자원을 주공정에 투입함으로써 프로젝트 완료 기간을 단축시킬 수 있다.</td>
+<td>다른 프로젝트 경로에 있는 활동이 연기될 경우 주공정 자체가 변할 수 있으며, 이로 인해 PERT에서 예측한 소요 시간은 실제 예측 시간보다 더 짧아진다는 단점이 있다.</td>
 </tr>
 </tbody>
 </table>
-<p><strong>네트워크 구성 절차</strong>는 다음과 같다.</p>
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">graph TD
-    classDef uniformStyle fill:#E3F2FD,stroke:#90CAF9,stroke-width:2px,font-size:14px
-
-    A[프로젝트 수행 시 &lt;br&gt;필수적인 과정과 활동 선정]:::uniformStyle --&gt; 
-    B[각각 관리점과 활동 순서를 결정]:::uniformStyle --&gt; 
-    C[결정된 순서를 고려하여 &lt;br&gt;네트워크 개략도 작성]:::uniformStyle --&gt; 
-    D[각 과정에 소요되는 시간 예측]:::uniformStyle --&gt; 
-    E["소요시간 정보를 고려하여 &lt;br&gt;주공정(critical path) 결정"]:::uniformStyle --&gt; 
-    F[프로젝트 진행에 따라 &lt;br&gt;PERT Chart 업데이트]:::uniformStyle
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
+<p>PERT 네트워크 구성 절차는 다음과 같다.</p>
 <ol type="1">
 <li><p><strong>프로젝트 수행 시 필수적인 과정과 활동 선정</strong><br>
 활동은 프로젝트를 완수하는데 필요한 업무이고 주요 관리점은 활동 시작과 끝 지점으로 정의된다.</p></li>
@@ -1610,36 +1483,14 @@ I --&gt; J
 <li>예상 소요 시간을 실제 소요 시간으로 업데이트하고 추가적으로 요구되는 활용 혹은 제외 가능한 활동 등을 고려하여 PERT Chart를 새로운 상황에 맞게 지속적으로 업데이트 수행</li>
 </ul></li>
 </ol>
-<div id="nte-pert-cost" class="callout callout-style-default callout-note no-icon callout-titled" title="PERT/COST">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note&nbsp;7.1 PERT/COST
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>PERT/COST는 <font color="blue">프로젝트가 최소비용으로 완료될 수 있도록 일정 계획을 수립하는 기법</font>이다.</p>
-<p>프로젝트 비용은 직접 비용과 간접 비용으로 구성된다. 직접 비용은 각 활동 완료에 소요되는 비용을 뜻하며, 간접 비용은 프로젝트 완료 시간이 길어짐에 따라 증가하는 비용을 뜻한다. 예를 들면 이자, 설비 사용료, 보험료와 같은 간접 경비가 이에 속한다.</p>
-<p>일반적으로 프로젝트 기간이 길어지면 직접 비용 감소하지만 간접비용은 증가하게 된다. 반대로 프로젝트 일정을 단축하게 되면 그 만큼 직접 비용이 발생하게 된다.</p>
-<p>분석 절차는 다음과 같다.</p>
-<ol type="1">
-<li>전체 프로젝트를 단계 별로 분리한 작업분해도(WBS) 작성</li>
-<li>기능적으로 독립된 Work Package 단위가지 세분화</li>
-<li>Work Package가 포함된 각 활동을 토대로 PERT 계획공정도 작성</li>
-<li>각 공정 추정 시간치(<span class="math inline">\(t_e\)</span>)와 단계 시간(<span class="math inline">\(T_e, \ TL, \ S\)</span>)을 구하여 프로젝트 일정 계획을 수립</li>
-<li>각 활동 일정 계획이 수립되면 비용 견적과 예산화(budgeting) 수행</li>
-</ol>
-</div>
-</div>
 </section>
 <section id="sec-cpm" class="level4">
 <h4 class="anchored" data-anchor-id="sec-cpm">CPM</h4>
-<p><strong>CPM</strong>(critical path method)은 프로젝트에 있어 각 활동 시작과 종료 시점을 나타내는 방법으로 <font color="blue">프로젝트를 완수하는데 필요한 활동과 각 활동 완수 시 소요되는 시간을 모두 알고 있는 상태에서 진행 순서를 최적으로 도출해 내는 관리 기법</font>이다.</p>
-<p>1957년 미국 Remington-Rand 사 J.E. Kelly와 Du Pont 사 M.R. Walker에 의해 개발된 기법으로 Dupont 사에서 화공 플랜트 장비를 위해 가동 중단 시간과 정비, 정비 후 재가동 시간을 효율적으로 관리하기 위해 개발한 프로젝트 관리 기법이다. <a href="#sec-pert" class="quarto-xref"><span>PERT</span></a>가 주로 불확실성 하에서 프로젝트를 관리하는 기법인데 반해 CPM은 과거 경험했던 공법, 기술, 또는 상업적 프로젝트에 응용되는 계획 관리기술이다.</p>
+<p>CPM(critical path method)은 프로젝트에 있어 각 활동 시작과 종료 시점을 나타내는 방법으로 <span class="hl">프로젝트를 완수하는데 필요한 활동과 각 활동 완수 시 소요되는 시간을 모두 알고 있는 상태에서 진행 순서를 최적으로 도출해 내는 관리 기법</span>이다.</p>
+<p>1957년 미국 Remington-Rand 사 J.E. Kelly와 Du Pont 사 M.R. Walker에 의해 개발된 기법으로 Dupont 사에서 화공 플랜트 장비를 위해 가동 중단 시간과 정비, 정비 후 재가동 시간을 효율적으로 관리하기 위해 개발한 프로젝트 관리 기법이다. PERT가 주로 불확실성 하에서 프로젝트를 관리하는 기법인데 반해 CPM은 과거 경험했던 공법, 기술, 또는 상업적 프로젝트에 응용되는 계획 관리기술이다.</p>
 <p>CPM 장단점은 다음과 같다.</p>
 <table class="caption-top table">
+<caption>CPM 장단점</caption>
 <colgroup>
 <col style="width: 50%">
 <col style="width: 50%">
@@ -1652,27 +1503,21 @@ Note&nbsp;7.1 PERT/COST
 </thead>
 <tbody>
 <tr class="odd">
-<td>프로젝트 진행상황을 <font color="blue">시각적으로 표현</font>할 수 있으며 프로젝트를 완수하는데 <font color="blue">필요한 시간을 비교적 정확하게 예측</font>할 수 있다. 또한 어떤 활동이 프로젝트 진행 일정 및 다른 활동 완수에 영향을 미치는지 분석이 가능하다.</td>
-<td>기법은 복잡하지만 변화 가능성이 적은 프로젝트를 수행할 때 프로젝트 완수 시간 불확실성을 해소하기 위해 개발되었기 때문에 <font color="red">프로젝트 수행 방법이나 과정이 달라지기 쉬운 경우에는 CPM 기법을 통한 예측 활용성은 제한적</font>일 수 밖에 없다.</td>
+<td>프로젝트 진행상황을 시각적으로 표현할 수 있으며 프로젝트를 완수하는데 필요한 시간을 비교적 정확하게 예측할 수 있다. 또한 어떤 활동이 프로젝트 진행 일정 및 다른 활동 완수에 영향을 미치는지 분석이 가능하다.</td>
+<td>기법은 복잡하지만 변화 가능성이 적은 프로젝트를 수행할 때 프로젝트 완수 시간 불확실성을 해소하기 위해 개발되었기 때문에 프로젝트 수행 방법이나 과정이 달라지기 쉬운 경우에는 CPM 기법을 통한 예측 활용성은 제한적일 수 밖에 없다.</td>
 </tr>
 </tbody>
 </table>
-<dl>
-<dt>진행 순서</dt>
-<dd>
+<p>CPM은 다음과 같은 순서로 진행한다.</p>
 <ol type="1">
 <li>개별 활동 명시</li>
 <li>각 활동 순서 결정</li>
 <li>결정된 순서를 고려하여 네트워크 개략도 작성</li>
 <li>각 과정에 소요되는 시간 예측</li>
-<li>소요 시간 정보를 고려하여 주공정(critical path) 결정
-<ul>
-<li>활동 네트워크 상 가장 오래 걸리는 공정 경로</li>
-</ul></li>
+<li>소요 시간 정보를 고려하여 주공정(critical path) 결정<br>
+- 활동 네트워크 상 가장 오래 걸리는 공정 경로</li>
 <li>프로젝트 진행에 따라 CPM diagram 업데이트</li>
 </ol>
-</dd>
-</dl>
 <div class="callout callout-style-default callout-important no-icon callout-titled" title="네트워크 기법">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1859,24 +1704,11 @@ Note&nbsp;7.1 PERT/COST
 </dl>
 </div>
 </div>
-<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 115-1-3">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-기출: 115-1-3
-</div>
-</div>
-<div class="callout-body-container callout-body">
-
-</div>
-</div>
 </section>
 <section id="sec-ccm" class="level4">
 <h4 class="anchored" data-anchor-id="sec-ccm">CCM</h4>
-<p><strong>CCM</strong>(critical chain method) 또는 CCPM (critical chain project management)은 <font color="blue">TOC 제약 이론을 기반</font>으로 한 프로젝트 관리 기법이다.</p>
-<p>제품 Life cycle이 날로 짧아지고 고객 요구가 다양해 짐에 따라 신제품 개발, 신규 사업 추진 등 급변하는 사업 환경에 대응하기 위해서 프로젝트성 업무가 급증하는 추세이다. 프로젝트는 과제 특성상 <font color="red">완료 시간이 불확실하여 계획 단계에서 준수 확룔을 높이기 위해 안전 여유를 감안하여 예상 소요 시간을 길게 수립</font>한다. 프로제특 관리자는 제한된 자원, 즉 인력, 비용, 시간 등으로 여러 프로젝트를 동시에 관리하여 프로젝트를 기한 내 원활히 수행하기 위한 효과적인 관리기법이 필요하게 되었다.</p>
+<p>CCM(critical chain method) 또는 CCPM (critical chain project management)은 <span class="hl">TOC 제약 이론을 기반으로 한 프로젝트 관리 기법</span>이다.</p>
+<p>제품 Life cycle이 날로 짧아지고 고객 요구가 다양해 짐에 따라 신제품 개발, 신규 사업 추진 등 급변하는 사업 환경에 대응하기 위해서 프로젝트성 업무가 급증하는 추세이다. 프로젝트는 과제 특성상 완료 시간이 불확실하여 계획 단계에서 준수 확룔을 높이기 위해 안전 여유를 감안하여 예상 소요 시간을 길게 수립한다. 프로제특 관리자는 제한된 자원, 즉 인력, 비용, 시간 등으로 여러 프로젝트를 동시에 관리하여 프로젝트를 기한 내 원활히 수행하기 위한 효과적인 관리기법이 필요하게 되었다.</p>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="예상 기간 장기화 문제 원인">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1933,58 +1765,49 @@ Note&nbsp;7.1 PERT/COST
 </dl>
 </div>
 </div>
-<p>CCM 목표는 <font color="blue">프로젝트 기간 단축과 예상 기간 준수</font>이다. 작업 기반 버퍼로 네트워크 경로 상 개별 활동 일정을 미시적으로 관리하는 대신 모든 작업 체인에 따라 자원 가용성 및 종속성을 고려하고 보호하기 위해 <font color="blue">체인에 있는 전반적인 모든 활동 버퍼를 관리</font>하는데 중점을 둔다. <font color="blue">암시적인 개별 작업 버퍼를 제거</font>하고 일정 위험을 낮춤으로써 보다 효율성 있게 프로젝트를 관리할 수 있다.</p>
+<p>CCM 목표는 프로젝트 기간 단축과 예상 기간 준수이다. 작업 기반 버퍼로 네트워크 경로 상 개별 활동 일정을 미시적으로 관리하는 대신 모든 작업 체인에 따라 자원 가용성 및 종속성을 고려하고 보호하기 위해 체인에 있는 전반적인 모든 활동 버퍼를 관리하는데 중점을 둔다. 암시적인 개별 작업 버퍼를 제거하고 일정 위험을 낮춤으로써 보다 효율성 있게 프로젝트를 관리할 수 있다.</p>
 <p>일정 단축 기법은 다음과 같다.</p>
-<dl>
-<dt>크래싱(crashing)</dt>
-<dd>
 <ul>
-<li><font color="#245bdb">자원과 비용을 더 투입하여 일정을 단축하는 기법</font></li>
+<li>크래싱(crashing)
+<ul>
+<li>자원과 비용을 더 투입하여 일정을 단축하는 기법</li>
 <li>프로젝트 전체 기간 중 CP(critical path) 구간에 자원을 먼저 할당하여 프로젝트 전체 일정을 줄이는 기법으로 프로젝트 원가가 상승한다는 단점이 있음</li>
-</ul>
-</dd>
-<dt>Fast tracking</dt>
-<dd>
+</ul></li>
+<li>Fast tracking
 <ul>
-<li><font color="#245bdb">순차적으로 진행되는 활동 간 연관관계를 병렬로 작업함으로써 일정을 단축시키는 기법</font></li>
+<li>순차적으로 진행되는 활동 간 연관관계를 병렬로 작업함으로써 일정을 단축시키는 기법</li>
 <li>프로젝트 리스크가 증가할 수 있으며 재작업을 해야 하는 단점이 있음</li>
+</ul></li>
 </ul>
-</dd>
-</dl>
 <section id="ccm-관리-버퍼" class="level5">
 <h5 class="anchored" data-anchor-id="ccm-관리-버퍼">CCM 관리 버퍼</h5>
-<p>CCM에서 관리하는 버퍼는 다음과 같다.</p>
+<p>CCM에서는 일정 관리를 위해 프로젝트 버퍼, 피딩 버퍼, 자원 버퍼를 운영한다.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*8hU9kP_ZY6GChMbJ3FmbBw.png" class="img-fluid figure-img"></p>
 <figcaption>https://parati-in.medium.com/exploring-project-management-models-at-an-enterprise-level-9cd8b3a84dfe</figcaption>
 </figure>
 </div>
-<dl>
-<dt>프로젝트 버퍼(project buffer)</dt>
-<dd>
+<ul>
+<li>프로젝트 버퍼(project buffer)
 <ul>
 <li>critical chain 활동 상에서 확보한 버퍼를 chain 끝에 두어 관리</li>
 <li>안전영역, 모니터링 (버퍼 감시) 영역, 행동 영역(버퍼 통제)으로 나누어 관리</li>
-</ul>
-</dd>
-<dt>피딩 버퍼(feeding buffer)</dt>
-<dd>
+</ul></li>
+<li>피딩 버퍼(feeding buffer)
 <ul>
 <li>non-critical chain에 대한 버퍼를 non-critical chain 끝에 두어 관리</li>
 <li>non-critical chain 작업 완료 지연에 따른 critical chain 차수 지연 방지</li>
-</ul>
-</dd>
-<dt>자원 버퍼(resource buffer)</dt>
-<dd>
+</ul></li>
+<li>자원 버퍼(resource buffer)
 <ul>
 <li>경보장치 일종으로 critical chain 착수 전 해당 자원에게 수행 시기를 알려 줌</li>
+</ul></li>
 </ul>
-</dd>
-</dl>
 </section>
-<section id="추진-절차" class="level5">
-<h5 class="anchored" data-anchor-id="추진-절차">추진 절차</h5>
+<section id="수행-절차" class="level5">
+<h5 class="anchored" data-anchor-id="수행-절차">수행 절차</h5>
+<p>CCM은 다음 절차로 수행한다.</p>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
@@ -1992,56 +1815,47 @@ Note&nbsp;7.1 PERT/COST
 <div>
 <pre class="mermaid mermaid-js">flowchart LR
 
-1[프로젝트 버퍼 설정]
-2["합류 버퍼 및 &lt;br&gt;자원 버퍼 설정"]
-3[CC 찾기]
-4[CC 활용]
-5["합류 버퍼 위치 &lt;br&gt;조정 및 관리"]
+    1[프로젝트 버퍼 설정]
+    2["합류 버퍼 및 &lt;br&gt;자원 버퍼 설정"]
+    3[CC 찾기]
+    4[CC 활용]
+    5["합류 버퍼 위치 &lt;br&gt;조정 및 관리"]
 
-1--&gt;2--&gt;3--&gt;4--&gt;5
+    1--&gt;2--&gt;3--&gt;4--&gt;5
 </pre>
 </div>
 <p></p></figure><p></p>
 </div>
 </div>
 </div>
-<dl>
-<dt>프로젝트 버퍼 설정</dt>
-<dd>
+<ul>
+<li>프로젝트 버퍼 설정
 <ul>
 <li>집중관리를 위해 critical path에 프로젝트 버퍼 설정</li>
-</ul>
-</dd>
-<dt>합류 버퍼 및 자원 버퍼 설정</dt>
-<dd>
+</ul></li>
+<li>합류 버퍼 및 자원 버퍼 설정
 <ul>
 <li>합류하는 작업에 대한 합류 버퍼(feeding buffer)를 추가로 설정</li>
 <li>예약하는 자원에 대한 자원 버퍼(resource buffer) 설정</li>
-</ul>
-</dd>
-<dt>Critical Chain 찾기</dt>
-<dd>
+</ul></li>
+<li>Critical Chain 찾기
 <ul>
 <li>multi tasking 단계드을찾아 작업 순서를 정하고 집중 관리할 대상을 명백히 함</li>
-</ul>
-</dd>
-<dt>Critical Chain 활용</dt>
-<dd>
+</ul></li>
+<li>Critical Chain 활용
 <ul>
 <li>multi tasking 작업들에 대해 경합이 일어나지 않토록 작업 순서를 정해 일정을 수립</li>
-</ul>
-</dd>
-<dt>합류 버퍼 위치 조정 및 관리</dt>
-<dd>
+</ul></li>
+<li>합류 버퍼 위치 조정 및 관리
 <ul>
 <li>일정을 좌우하는 것은 critical chain으로 프로젝트 제약조건임</li>
 <li>제약조건은 보호되어야 하므로 합류버퍼 위치를 조정</li>
+</ul></li>
 </ul>
-</dd>
-</dl>
 </section>
 <section id="일정-수립-절차" class="level5">
 <h5 class="anchored" data-anchor-id="일정-수립-절차">일정 수립 절차</h5>
+<p>일정 수립 절차는 다음 표과 같이 정리할 수 있다.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 24%">
@@ -2168,58 +1982,21 @@ Note&nbsp;7.1 PERT/COST
 </tr>
 </tbody>
 </table>
-<dl>
-<dt>TE</dt>
-<dd>
+<p>주요 개념은 다음과 같다. - TE<br>
+전진계산방식, 각 단계가 가장 빨리 시작될 수 있는 시기로 최초시간이라 함</p>
 <ul>
-<li>전진계산방식, 각 단계가 가장 빨리 시작될 수 있는 시기로 최초시간이라 함</li>
-</ul>
-</dd>
-<dt>TL</dt>
-<dd>
-<ul>
-<li>후진계산방식, TE에서 계산한 시기에 맞도록 역산하여 각 단계가 가장 늦게 시작해도 좋은 시기로 최저시간이라 함</li>
-</ul>
-</dd>
-<dt>TF</dt>
-<dd>
-<ul>
-<li>FF + DF = 총여유 = LTF - ETF</li>
-</ul>
-</dd>
-<dt>FF</dt>
-<dd>
-<ul>
-<li>자유여유 = 후속 EST - EFT</li>
-</ul>
-</dd>
-<dt>DF</dt>
-<dd>
-<ul>
-<li>종속여유 = TF - FF</li>
-</ul>
-</dd>
-<dt>그 외</dt>
-<dd>
+<li><p>TL 후진계산방식, TE에서 계산한 시기에 맞도록 역산하여 각 단계가 가장 늦게 시작해도 좋은 시기로 최저시간이라 함</p></li>
+<li><p>TF FF + DF = 총여유 = LTF - ETF</p></li>
+<li><p>FF 자유여유 = 후속 EST - EFT</p></li>
+<li><p>DF 종속여유 = TF - FF</p></li>
+<li><p>그 외</p>
 <ul>
 <li>EST: 작업을 시작하는 가장 빠른 시간</li>
 <li>EFT: 작업을 종료하는 가장 빠른 시간</li>
 <li>LST: 작업을 시작하는 가장 늦은 시간</li>
 <li>LFT: 작업을 종료하는 가장 늦은 시간</li>
+</ul></li>
 </ul>
-</dd>
-</dl>
-<section id="pertcpm-전개-단계" class="level4">
-<h4 class="anchored" data-anchor-id="pertcpm-전개-단계">PERT/CPM 전개 단계</h4>
-<pre><code>1.프로젝트에서 수행되어야 할 모든 활동 파악 및 정의
-2.활동 간 선행 관계 결정
-3.활동 간 선행 관계 네트워크도 작성
-4.각 단계에서 소요되는 시간 추정 (평균, 분산 계산)
-5.각 단계에서 가장 빠른 시간과 가장 늦은 시간 계산
-6.프로젝트 완료 시간과 critical path 결정
-7.정해진 기간 내 프로젝트 완성 확률 계산
-8.프로젝트 수행에 따른 정보 업데이트</code></pre>
-</section>
 </section>
 <section id="cpm-vs.-ccm" class="level3">
 <h3 class="anchored" data-anchor-id="cpm-vs.-ccm">CPM vs.&nbsp;CCM</h3>
@@ -2231,10 +2008,11 @@ Note&nbsp;7.1 PERT/COST
 </figure>
 </div>
 <table class="caption-top table">
+<caption>CPM vs.&nbsp;CCM</caption>
 <colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
+<col style="width: 10%">
+<col style="width: 45%">
+<col style="width: 45%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -2344,6 +2122,20 @@ Note&nbsp;7.1 PERT/COST
 </tr>
 </tbody>
 </table>
+</section>
+<section id="pertcost" class="level3">
+<h3 class="anchored" data-anchor-id="pertcost">PERT/COST</h3>
+<p>PERT/COST는 <span class="hl">프로젝트가 최소비용으로 완료될 수 있도록 일정 계획을 수립하는 기법</span>이다.</p>
+<p>프로젝트 비용은 직접 비용과 간접 비용으로 구성된다. 직접 비용은 각 활동 완료에 소요되는 비용을 뜻하며, 간접 비용은 프로젝트 완료 시간이 길어짐에 따라 증가하는 비용을 뜻한다. 예를 들면 이자, 설비 사용료, 보험료와 같은 간접 경비가 이에 속한다.</p>
+<p>일반적으로 프로젝트 기간이 길어지면 직접 비용 감소하지만 간접비용은 증가하게 된다. 반대로 프로젝트 일정을 단축하게 되면 그 만큼 직접 비용이 발생하게 된다.</p>
+<p>분석 절차는 다음과 같다.</p>
+<ol type="1">
+<li>전체 프로젝트를 단계 별로 분리한 작업분해도(WBS) 작성</li>
+<li>기능적으로 독립된 Work Package 단위가지 세분화</li>
+<li>Work Package가 포함된 각 활동을 토대로 PERT 계획공정도 작성</li>
+<li>각 공정 추정 시간치(<span class="math inline">\(t_e\)</span>)와 단계 시간(<span class="math inline">\(T_e, \ TL, \ S\)</span>)을 구하여 프로젝트 일정 계획을 수립</li>
+<li>각 활동 일정 계획이 수립되면 비용 견적과 예산화(budgeting) 수행</li>
+</ol>
 <p><em>_EOD_</em></p>
 
 
