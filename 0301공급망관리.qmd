@@ -49,10 +49,10 @@ SCM은 다음과 같은 주요 구성 요소로 이루어진다.
 
 ```{mermaid}
 flowchart LR
-    A[수요 계획<br/>(Demand Planning)] --> B[공급 계획<br/>(Supply Planning)]
-    B --> C[생산 계획<br/>(Production Planning)]
-    C --> D[유통 계획<br/>(Distribution Planning)]
-    D --> E[운송 및 배송<br/>(Logistics Execution)]
+    A["수요 계획<br/>(Demand Planning)"] --> B["공급 계획<br/>(Supply Planning)"]
+    B --> C["생산 계획<br/>(Production Planning)"]
+    C --> D["유통 계획<br/>(Distribution Planning)"]
+    D --> E["운송 및 배송<br/>(Logistics Execution)"]
 ```
 
 SCM 프로세스는 수요 계획, 공급 계획, 생산 계획, 유통 계획, 운송 및 배송 순으로 이루어진다.
@@ -71,7 +71,7 @@ SCM 관련 주요 개념을 정리하면 다음과 같다.
 | WMS (Warehouse Management System) | 창고 운영을 최적화하는 시스템 |
 | ERP (Enterprise Resource Planning) | 기업 자원 전반을 통합 관리하는 시스템 |
 | APS (Advanced Planning and Scheduling) | 고급 수요/공급 계획 및 일정 최적화 도구 |
-: SCM 관련 주요 개념 {tbl-colwidths="[30,70]"}
+: SCM 관련 주요 개념 {tbl-colwidths="[50,50]"}
 
 ### 주요 SCM 시스템 및 기술
 
@@ -103,7 +103,7 @@ Push 방식과 Pull 방식 전략을 비교하면 다음 표와 같다.
 
 #### Push-Pull 전략의 통합 구조
 
-```mermaid
+```{mermaid}
 flowchart LR
     subgraph Push 영역
         A[공급자] --> B[제조] --> C[유통센터]
@@ -189,7 +189,7 @@ SQCM 주요 목표를 정리하면 다음 표와 같다.
 | 품질 관련 비용 절감   | 재작업, 반품, 클레임 등 품질 실패 비용 최소화 |
 | 공급망 리스크 감소   | 품질 이슈로 인한 공급 중단, 브랜드 손상 방지 |
 | 지속적 개선          | PDCA 사이클 및 Six Sigma 등을 활용한 개선 활동 수행 |
-: SQCM 주요 목표 {tbl-colwidths="[30,70]"}
+: SQCM 주요 목표 {tbl-colwidths="[50,50]"}
 
 
 #### SCQM 주요 구성 요소
@@ -203,7 +203,7 @@ SQCM 주요 구성 요소를 정리하면 다음 표와 같다.
 | 품질 통제 (Quality Control) | 생산 및 조달 과정에서의 품질 측정, 검사, 테스트 |
 | 품질 개선 (Quality Improvement) | 문제 분석 및 개선활동 (예: Six Sigma, Kaizen 등) |
 | 공급자 품질 관리 (Supplier Quality Management) | 공급자의 품질 능력 평가 및 지속적 개선 협력 |
-: SQCM 주요 구성 요소 {tbl-colwidths="[30,70]"}
+: SQCM 주요 구성 요소 {tbl-colwidths="[50,50]"}
 
 #### SCQM 적용 단계 
 
@@ -238,7 +238,7 @@ SQCM에서 품질을 측정하는 주요 지표는 다음 표와 같다.
 | 납품품질수준 (Delivery Quality Level) | 규격에 맞는 제품의 납품 비율 |
 | 재작업률 (Rework Rate)       | 재작업이 필요한 작업 비율 |
 | 공급업체 품질 성적 (Supplier Quality Scorecard) | 공급업체별 품질 지표 종합 평가 점수 |
-: SQCM 주요 품질 지표 {tbl-colwidths="[30,70]"}
+: SQCM 주요 품질 지표 {tbl-colwidths="[50,50]"}
 
 #### SCQM과 관련된 주요 기법 및 표준
 
@@ -253,24 +253,24 @@ SQCM 관련 주요 기법과 표준은 다음 표와 같다.
 | FMEA (Failure Mode and Effects Analysis) | 고장 모드 사전 분석 및 대응 설계 |
 | Control Plan           | 품질 관리 활동을 문서화한 계획서 |
 | PPAP (Production Part Approval Process) | 부품 생산 적합성 사전 승인 절차 (주로 자동차 산업) |
-: SQCM 주요 기법 및 표준 {tbl-colwidths="[30,70]"}
+: SQCM 주요 기법 및 표준 {tbl-colwidths="[50,50]"}
 
 ## 참고자료 {#sec-ref-0301}
 
 ### 채찍효과
 
-채찍효과(Bullwhip effect)란 공급망에서 최종 소비자의 작은 수요 변동이 제조업자에게 전달될 때, 소비자와 제조업자가 각각 미래 소요에 대해 서로 다른 예측을 하게 되면서 발생하는 수요정보 왜곡 현상을 말한다. 즉, SCM 하류(downstream)의 고객 주문 정보가 상류(upstream)로 전달되면서 정보가 왜곡되는 현상을 말한다. 다음과 같은 원인으로 발생하게 된다.
+채찍효과(Bullwhip effect)란 <span class='hl'>공급망에서 최종 소비자의 작은 수요 변동이 제조업자에게 전달될 때, 소비자와 제조업자가 각각 미래 소요에 대해 서로 다른 예측을 하게 되면서 발생하는 수요정보 왜곡 현상</span>을 말한다. 즉, SCM 하류(downstream)의 고객 주문 정보가 상류(upstream)로 전달되면서 정보가 왜곡되는 현상을 말한다. 다음과 같은 원인으로 발생하게 된다.
 
-- 전통적인 수요 예측(Multiple Forecasting)  
+- **전통적인 수요 예측**(Multiple Forecasting)  
   소비자 실제 수요에 의존하지 않고 공급망 각 주체들이 자사에 들어온 주문량에 근거해 독립적으로 수요를 예측 → 실제 수요는 무시하고 개별 기업 관점에서 의사결정이 이뤄지기 때문에 공급망 전체 왜곡 현상 발생 → 중복 수요 예측 원인으로 작용한다.
 
-- 일괄주문방식(Order Batching)  
+- **일괄주문방식**(Order Batching)  
   일반적으로 기업은 재고가 떨어졌을 때 수요에 맞춰 공급기업에 주문을 한다. 하지만 실제 시장에서는 여러가지 이유로 이러한 방식 대신 일괄 주문 형태를 이용하는데 이처럼 특정 일정에 맞춰 한꺼번에 많은 양을 주문하는 것은 수요와 공급량을 일치시키지 못해 재고가 없거나, 반대로 재고가 너무 많이 남는 현상이 발생하게 된다.
 
-- 유동적인 가격변동(Price Fluctuation)  
+- **유동적인 가격변동**(Price Fluctuation)  
   생산업체는 다양한 상황에 따라 가격을 올리거나 혹은 할인을 해 줄 때가 있다. 예를 들어 추석, 설, 크리스마스 등 성수기 시즌에는 가격을 일시적으로 올리고 계절이 끝나가는 시즌에는 할인을 하는 방식이다. 때문에 도소매 업체들은 가격이 저렴할 때 한꺼번에 많은 물량을 구매해서 재고를 쌓아드고 몇달 동안 주문을 하지 않곤 한다. 저렴할 때 구매하는 것이 합리적이라고 생각하기 때문이다. 하지만 이러한 방식은 실제 수요를 반영하지 못하기 때문에 수요가 불규칙하고 왜곡되고 결국 채찍효과를 야기시키게 된다.
 
-- 분배 문제 - 할당 게임(Rationing, Shortage gaming)  
+- **분배 문제 - 할당 게임**(Rationing, Shortage gaming)  
   특정 제품에 대한 수요가 폭등하게 되면 제조업체는 도소매 별로 할당(allocation)을 해야 하는 이슈가 발생한다. 이 때 도소매 업체는 제품이 충분하지 않다는 것을 알기 때문에 실 수요보다 더 많은 양을 주문하게 되고 이는 가수요를 발생하게 한다. 또한 제조업체는 이 가수요만큼 초과생산을 하게되고 이는 다음 시기에 고스란히 재고로 남아 주문량이 급감하는 결과를 초래한다.
 
 
