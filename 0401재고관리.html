@@ -538,16 +538,7 @@ window.Quarto = {
   <ul>
   <li><a href="#재고의-유형" id="toc-재고의-유형" class="nav-link" data-scroll-target="#재고의-유형">재고의 유형</a></li>
   <li><a href="#재고관리의-목표" id="toc-재고관리의-목표" class="nav-link" data-scroll-target="#재고관리의-목표">재고관리의 목표</a></li>
-  <li><a href="#주요-관리-기법" id="toc-주요-관리-기법" class="nav-link" data-scroll-target="#주요-관리-기법">주요 관리 기법</a>
-  <ul class="collapse">
-  <li><a href="#eoq-economic-order-quantity" id="toc-eoq-economic-order-quantity" class="nav-link" data-scroll-target="#eoq-economic-order-quantity">EOQ (Economic Order Quantity)</a></li>
-  <li><a href="#abc-분석" id="toc-abc-분석" class="nav-link" data-scroll-target="#abc-분석">ABC 분석</a></li>
-  <li><a href="#정량발주-시스템-q-시스템" id="toc-정량발주-시스템-q-시스템" class="nav-link" data-scroll-target="#정량발주-시스템-q-시스템">정량발주 시스템 (Q 시스템)</a></li>
-  <li><a href="#정기발주-시스템-p-시스템" id="toc-정기발주-시스템-p-시스템" class="nav-link" data-scroll-target="#정기발주-시스템-p-시스템">정기발주 시스템 (P 시스템)</a></li>
-  <li><a href="#jit-just-in-time" id="toc-jit-just-in-time" class="nav-link" data-scroll-target="#jit-just-in-time">JIT (Just in Time)</a></li>
-  <li><a href="#vmi-vendor-managed-inventory" id="toc-vmi-vendor-managed-inventory" class="nav-link" data-scroll-target="#vmi-vendor-managed-inventory">VMI (Vendor Managed Inventory)</a></li>
-  <li><a href="#rfid-및-iot-기반-실시간-재고관리" id="toc-rfid-및-iot-기반-실시간-재고관리" class="nav-link" data-scroll-target="#rfid-및-iot-기반-실시간-재고관리">RFID 및 IoT 기반 실시간 재고관리</a></li>
-  </ul></li>
+  <li><a href="#주요-관리-기법" id="toc-주요-관리-기법" class="nav-link" data-scroll-target="#주요-관리-기법">주요 관리 기법</a></li>
   <li><a href="#재고-관련-비용" id="toc-재고-관련-비용" class="nav-link" data-scroll-target="#재고-관련-비용">재고 관련 비용</a></li>
   <li><a href="#성과지표-kpi" id="toc-성과지표-kpi" class="nav-link" data-scroll-target="#성과지표-kpi">성과지표 (KPI)</a></li>
   <li><a href="#재고관리-전략" id="toc-재고관리-전략" class="nav-link" data-scroll-target="#재고관리-전략">재고관리 전략</a></li>
@@ -635,29 +626,18 @@ style 재고관리 fill:#EEF
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 97-4-1, 106-4-1, 112-2-2, 118-4-1">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-기출: 97-4-1, 106-4-1, 112-2-2, 118-4-1
-</div>
-</div>
-<div class="callout-body-container callout-body">
-
-</div>
-</div>
 <section id="sec-inventory-management" class="level2">
 <h2 class="anchored" data-anchor-id="sec-inventory-management">재고관리</h2>
-<p><strong>재고관리</strong>(Inventory Management)는 기업의 생산과 유통, 서비스 과정에서 필요한 자재, 반제품, 완제품 등을 적정 수준으로 유지하면서, <strong>서비스 수준 확보와 비용 최적화</strong>를 동시에 달성하기 위한 관리 기법이다.</p>
+<p><strong>재고관리</strong>(Inventory Management)는 <span class="hl">기업의 생산과 유통, 서비스 과정에서 필요한 자재, 반제품, 완제품 등을 적정 수준으로 유지하면서, 서비스 수준 확보와 비용 최적화를 동시에 달성하기 위한 관리 기법</span>이다.</p>
 <section id="재고의-유형" class="level3">
 <h3 class="anchored" data-anchor-id="재고의-유형">재고의 유형</h3>
+<p>재고는 흐름과 기능 기준으로 나눌 수 있으며 각 기준에 따른 유형이 있다.</p>
 <table class="caption-top table">
+<caption>재고 유형</caption>
 <colgroup>
-<col style="width: 39%">
-<col style="width: 46%">
-<col style="width: 14%">
+<col style="width: 10%">
+<col style="width: 20%">
+<col style="width: 70%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -712,6 +692,7 @@ style 재고관리 fill:#EEF
 </section>
 <section id="재고관리의-목표" class="level3">
 <h3 class="anchored" data-anchor-id="재고관리의-목표">재고관리의 목표</h3>
+<p>재고관리 주요 목표는 서비스 수준 확보, 총비용 최소화, 운영 효율성 제고, 리드다임 단축과 유연성 확보이다.</p>
 <ul>
 <li><strong>서비스 수준 확보</strong>: 고객에게 제품을 적시에 공급</li>
 <li><strong>총비용 최소화</strong>: 보관, 주문, 부족, 폐기 비용 최적화</li>
@@ -721,14 +702,13 @@ style 재고관리 fill:#EEF
 </section>
 <section id="주요-관리-기법" class="level3">
 <h3 class="anchored" data-anchor-id="주요-관리-기법">주요 관리 기법</h3>
-<section id="eoq-economic-order-quantity" class="level4">
-<h4 class="anchored" data-anchor-id="eoq-economic-order-quantity">EOQ (Economic Order Quantity)</h4>
+<p>주요 관리 기법은 다음과 같다.</p>
+<ul>
+<li>EOQ (Economic Order Quantity)
 <ul>
 <li>경제적 주문량: 총비용(주문비용 + 보관비용)을 최소화하는 1회 주문량</li>
 <li>공식:<br>
-<span class="math display">\[
-EOQ = \sqrt{\frac{2DS}{H}}
-\]</span>
+<span class="math display">\[EOQ = \sqrt{\frac{2DS}{H}}\]</span>
 <ul>
 <li>D: 연간 수요량<br>
 </li>
@@ -736,44 +716,32 @@ EOQ = \sqrt{\frac{2DS}{H}}
 </li>
 <li>H: 단위당 연간 보관비용</li>
 </ul></li>
-</ul>
-</section>
-<section id="abc-분석" class="level4">
-<h4 class="anchored" data-anchor-id="abc-분석">ABC 분석</h4>
+</ul></li>
+<li>ABC 분석
 <ul>
 <li><strong>재고를 중요도에 따라 분류하여 집중 관리</strong> | 등급 | 기준 | 관리 방식 | |——|—————————|———–| | A | 중요 품목, 매출의 70~80% | 엄격한 관리 | | B | 중간 품목, 매출의 15~25% | 일반적 관리 | | C | 비중 낮은 품목, 5% 이하 | 단순 관리 |</li>
-</ul>
-</section>
-<section id="정량발주-시스템-q-시스템" class="level4">
-<h4 class="anchored" data-anchor-id="정량발주-시스템-q-시스템">정량발주 시스템 (Q 시스템)</h4>
+</ul></li>
+<li>정량발주 시스템 (Q 시스템)
 <ul>
 <li>일정량(Q)을 주문하고, 재고가 재주문점(R)에 도달할 때 발주</li>
-</ul>
-</section>
-<section id="정기발주-시스템-p-시스템" class="level4">
-<h4 class="anchored" data-anchor-id="정기발주-시스템-p-시스템">정기발주 시스템 (P 시스템)</h4>
+</ul></li>
+<li>정기발주 시스템 (P 시스템)
 <ul>
 <li>일정 주기(P)마다 재고량을 점검하고 보충</li>
-</ul>
-</section>
-<section id="jit-just-in-time" class="level4">
-<h4 class="anchored" data-anchor-id="jit-just-in-time">JIT (Just in Time)</h4>
+</ul></li>
+<li>JIT (Just in Time)
 <ul>
 <li>필요한 시점에 필요한 양만큼만 공급 → 재고 최소화</li>
-</ul>
-</section>
-<section id="vmi-vendor-managed-inventory" class="level4">
-<h4 class="anchored" data-anchor-id="vmi-vendor-managed-inventory">VMI (Vendor Managed Inventory)</h4>
+</ul></li>
+<li>VMI (Vendor Managed Inventory)
 <ul>
 <li><strong>공급업체가 고객의 재고를 대신 관리</strong>하는 시스템</li>
-</ul>
-</section>
-<section id="rfid-및-iot-기반-실시간-재고관리" class="level4">
-<h4 class="anchored" data-anchor-id="rfid-및-iot-기반-실시간-재고관리">RFID 및 IoT 기반 실시간 재고관리</h4>
+</ul></li>
+<li>RFID 및 IoT 기반 실시간 재고관리
 <ul>
 <li>실시간 재고 상태 파악 및 예측</li>
+</ul></li>
 </ul>
-</section>
 </section>
 <section id="재고-관련-비용" class="level3">
 <h3 class="anchored" data-anchor-id="재고-관련-비용">재고 관련 비용</h3>
