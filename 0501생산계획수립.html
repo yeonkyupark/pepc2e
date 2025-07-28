@@ -567,7 +567,7 @@ window.Quarto = {
   <li><a href="#생산능력-계획-고려사항" id="toc-생산능력-계획-고려사항" class="nav-link" data-scroll-target="#생산능력-계획-고려사항">생산능력 계획 고려사항</a></li>
   <li><a href="#생산능력-전략-사전-검토-사항" id="toc-생산능력-전략-사전-검토-사항" class="nav-link" data-scroll-target="#생산능력-전략-사전-검토-사항">생산능력 전략 사전 검토 사항</a></li>
   <li><a href="#전략-대안-평가" id="toc-전략-대안-평가" class="nav-link" data-scroll-target="#전략-대안-평가">전략 대안 평가</a></li>
-  <li><a href="#능력비율cr-capacity-ratio" id="toc-능력비율cr-capacity-ratio" class="nav-link" data-scroll-target="#능력비율cr-capacity-ratio">능력비율(CR, capacity ratio)</a></li>
+  <li><a href="#능력비율" id="toc-능력비율" class="nav-link" data-scroll-target="#능력비율">능력비율</a></li>
   </ul></li>
   </ul></li>
   <li><a href="#sec-mps" id="toc-sec-mps" class="nav-link" data-scroll-target="#sec-mps">기준일정계획(MPS)</a>
@@ -2331,7 +2331,7 @@ end
 <figcaption>사전 확장 전략과 사후 증설(두고보기) 전략</figcaption>
 </figure>
 </div>
-<p><strong>확장 시기와 규모(Timing and sizing Expansion)</strong>는 유유능력 크기와 상황에 따라 사전확장 전략과 사후증설 전략으로 나눌 수 있다.</p>
+<p><strong>확장 시기와 규모(Timing and sizing Expansion)</strong>는 여유능력 크기와 상황에 따라 사전확장 전략과 사후증설 전략으로 나눌 수 있다.</p>
 <ul>
 <li><strong>사전 확장 전략</strong>(proactive capacity strategy)
 <ul>
@@ -2349,20 +2349,21 @@ end
 <li>사후 증설 전략은 투자 위험을 줄일 수 있으나 수요에 뒤처지며 생산능력 부족을 메우기 위한 잔업, 임시고용, 하청 등 단기적인 대안에 의존하는 경우가 많다.</li>
 <li>이 전략은 능력 이용률 높지만 시장 위치가 불안한 기업에서 흔히 채택된다.</li>
 <li>경쟁업체에서 동시에 생산능력을 증대시키게 되어 많은 잉여 능력을 유발하여 경쟁은 더울 치열해진다.</li>
+</ul></li>
 <li><strong>기대 가치 유지 전략</strong>(Expected Capacity Strategy)
 <ul>
 <li>기대 수요에 근접한 능력 유지(사전/사후 절충형)</li>
 <li>사전 확장, 사후 증설 전략을 절충한 접근 방식으로 가급적 기대 수요에 근접한 능력을 유지하려는 전략</li>
 <li>이 경우 충분한 능력을 갖지 못한 가능성만큼(잉여) 능력을 가질 가능성을 만들어 손실을 상쇄하는 전략</li>
 </ul></li>
-</ul></li>
 </ul>
 </section>
 </section>
 <section id="전략-대안-평가" class="level4">
 <h4 class="anchored" data-anchor-id="전략-대안-평가">전략 대안 평가</h4>
-<p>간편한 전략평가 방법으로 단위당 품절 손실과 함게 잉여 능력 비용을 추정하는 능력비율(Capacity Ratio, CR)을 산정하여 판단할 수 있다.</p>
+<p>간편한 전략평가 방법으로 단위당 품절 손실과 함께 잉여 능력 비용을 추정하는 능력비율(Capacity Ratio, CR)을 산정하여 판단할 수 있다.</p>
 <table class="caption-top table">
+<caption>전략 평가 요인</caption>
 <colgroup>
 <col style="width: 56%">
 <col style="width: 43%">
@@ -2396,7 +2397,8 @@ end
 </tr>
 </tbody>
 </table>
-<p><strong>용량 계획 평가 도구</strong></p>
+<ul>
+<li><strong>용량 계획 평가 도구</strong>
 <ul>
 <li>수요 불확실성과 변동을 보다 공식적으로 분석 가능한 도구
 <ul>
@@ -2404,8 +2406,8 @@ end
 <li>시뮬레이션 - 복잡한 대기 열 문제를 시뮬레이션을 통해 프로세스 병목과 여유 용량을 찾아냄</li>
 <li>의사결정 나무 - 수요가 불확실하고 이어지는 의사결정이 포함될 경우 다양한 설비확장안 평가 시 사용</li>
 </ul></li>
-</ul>
-<p><strong>생산능력 결정 기법</strong></p>
+</ul></li>
+<li><strong>생산능력 결정 기법</strong>
 <ul>
 <li>생산능력 결정 기법으로 일반적인 방법은 선형계획법과 확률계획법이다.
 <ul>
@@ -2414,11 +2416,12 @@ end
 </ul></li>
 <li>생산능력은 조직 전체에 걸쳐 전략 및 프로세스와 밀접하게 연계되어야 함</li>
 <li>입지 문제, 자원 유연성, 재고 같은 분야의 의사결정을 할 때 여유 용량에 미치는 효과를 고려함</li>
+</ul></li>
 </ul>
 </section>
-<section id="능력비율cr-capacity-ratio" class="level4">
-<h4 class="anchored" data-anchor-id="능력비율cr-capacity-ratio">능력비율(CR, capacity ratio)</h4>
-<p>CR은 단위당 품절 손실과 함게 잉여 능력을 추정하여 능력 비율을 산정, 평가하는 지표이다.</p>
+<section id="능력비율" class="level4">
+<h4 class="anchored" data-anchor-id="능력비율">능력비율</h4>
+<p>능력비율(CR, capacity ratio)은 단위당 품절 손실과 함께 잉여 능력을 추정하여 능력 비율을 산정, 평가하는 지표이다.</p>
 <p><span id="eq-cr"><span class="math display">\[
 능력비율(CR) = \frac{(C_s - C_e)}{C_s}
 \tag{11.1}\]</span></span></p>
@@ -2427,31 +2430,18 @@ end
 \]</span></p>
 <p><strong>CR에 따른 생산능력 전략</strong></p>
 <p>​- <span class="math inline">\(CR \ge 0.5\)</span> - <font color="blue">품절비용 &gt; 2 x 잉여 능력 비용</font> - 사전 확장 전략 - <span class="math inline">\(-0.5 &lt; CR &lt; 0.5\)</span> - 기대 가치 유지 전략 - <span class="math inline">\(CR \le -0.5\)</span> - <font color="blue">품절 비용 &lt; 0.67 x 잉여 능력 유지 비용</font> - 사후 증설 전략</p>
-<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 112-3-1">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-기출: 112-3-1
-</div>
-</div>
-<div class="callout-body-container callout-body">
-
-</div>
-</div>
 </section>
 </section>
 </section>
 <section id="sec-mps" class="level2">
 <h2 class="anchored" data-anchor-id="sec-mps">기준일정계획(MPS)</h2>
-<p><strong>기준(주)일정계획</strong>(MPS, master production schedule)이란 생산시스템에서 생산되는 <font color="blue">개별 최종품목에 대한 단기생산계획으로 주단위로 총괄수요를 분해한 개별품목 수요에 대한 충족계획</font>이다.</p>
-<p><strong>MPS 수립 목표</strong></p>
+<p><strong>기준(주)일정계획</strong>(MPS, master production schedule)이란 <span class="hl">생산시스템에서 생산되는 개별 최종품목에 대한 단기생산계획으로 주단위로 총괄수요를 분해한 개별품목 수요에 대한 충족계획</span>이다.</p>
+<p>MPS 수립 목표는 다음과 같다.</p>
 <ul>
 <li><strong>납기준수</strong>: 고객과 약속한 일정에 맞출 수 있는지 일정 수립 → 생산 신속성</li>
 <li><strong>생산비용 최소화</strong>: 생산설비에 대한 과중한 부하 또는 적정한 생산 능력 효율적 활용 → 생산비용 최소화</li>
 </ul>
-<p><strong>주요 특성</strong></p>
+<p>MPS 주요 특성은 다음과 같다.</p>
 <ol type="1">
 <li>총괄생산계획을 세분화하고 구체화시킨 생산계획이다.</li>
 <li>자재소요을 발생시킨다.</li>
@@ -2459,7 +2449,7 @@ end
 <li>작업이나 주문 우선순위가 결정된다.</li>
 <li>타 부서 일정계획에 활용할 수 있다.</li>
 </ol>
-<p><strong>MPS 시간 구역</strong></p>
+<p>MPS는 시점에 따라 시간 구역을 동결된, 확정된, 채워진, 개방된 구간으로 나눈다.</p>
 <ul>
 <li><strong>동결된 시간</strong>(frozen): 특별상황 관리책임자 허가 없이 생산일정 변경 불가</li>
 <li><strong>확정된 구간</strong>(fixed): 예외적인 상황 발생에 한하여 변경 가능</li>
@@ -2467,15 +2457,16 @@ end
 <li><strong>개방된 구간</strong>(open): 새 주문을 자유롭게 반영 가능, 아지 생산능력 미 반영</li>
 </ul>
 <p>MPS 작성 절차는 다음과 같다.</p>
-<pre><code>1. 재고량 예측치 및 확정된 주문량에 따라 예측 보유재고량 산출
-2. 수요량 대비 재고 부족 시 생산 LOT 크기 감안하여 MPS 수량 계획 수립</code></pre>
-<p><span id="eq-number-of-inventory"><span class="math display">\[
-\text{예측된 재고보유 수량 = (직전기간 말 재고 수준) + (MPS 수량) - max(수요예측치, 확정주문량)}
-\tag{11.2}\]</span></span></p>
+<ol type="1">
+<li>재고량 예측치 및 확정된 주문량에 따라 예측 보유재고량 산출</li>
+<li>수요량 대비 재고 부족 시 생산 LOT 크기 감안하여 MPS 수량 계획 수립</li>
+</ol>
+<p><span id="eq-number-of-inventory"><span class="math display">\[\text{예측된 재고보유 수량 = (직전기간 말 재고 수준) + (MPS 수량) - max(수요예측치, 확정주문량)} \tag{11.2}\]</span></span></p>
 <section id="atp" class="level3">
 <h3 class="anchored" data-anchor-id="atp">ATP</h3>
-<p><strong>약속 가능수량</strong>(ATP, available to promise quantities)은 고객과 약속한 제품이나 서비스 수량을 의미하며 다음과 같이 계산한다.</p>
-<p><span class="math display">\[ATP = \text{(기초재고보유량) + (MPS 수량) -\sum{확정주문량_{t(다음MPS전까지)}}, 첫째 주}\]</span> <span id="eq-atp"><span class="math display">\[ATP = \text{(이전주재고량)+(MPS 수량) - \sum{확정주문량_{t(다음MPS전까지)}}, MPS가 계획된 주} \tag{11.3}\]</span></span></p>
+<p><strong>약속 가능수량</strong>(ATP, available to promise quantities)은 <span class="hl">고객과 약속한 제품이나 서비스 수량</span>을 의미하며 다음과 같이 계산한다.</p>
+<p><span class="math display">\[ATP = \text{(기초재고보유량) + (MPS 수량) -\sum{확정주문량_{t(다음MPS전까지)}}, 첫째 주}\]</span><br>
+<span id="eq-atp"><span class="math display">\[ATP = \text{(이전주재고량)+(MPS 수량) - \sum{확정주문량_{t(다음MPS전까지)}}, MPS가 계획된 주} \tag{11.3}\]</span></span></p>
 <div class="callout callout-style-default callout-important no-icon callout-titled" title="MPS 작성">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
