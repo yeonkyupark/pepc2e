@@ -786,8 +786,8 @@ $$\text{예측된 재고보유 수량 = (직전기간 말 재고 수준) + (MPS 
 
 **약속 가능수량**(ATP, available to promise quantities)은 <span class='hl'>고객과 약속한 제품이나 서비스 수량</span>을 의미하며 다음과 같이 계산한다.
 
-$$ATP = (기초재고보유량) + (MPS 수량) -\sum(확정주문량_{(다음MPS전까지)}), 첫째 주}$$  
-$$ATP = (이전주재고량) + (MPS 수량) - \sum(확정주문량_{t(다음MPS전까지)}), MPS가 계획된 주}$$ {#eq-atp}
+$$ATP = (기초재고보유량) + (MPS 수량) -\sum{확정주문량_{다음MPS전까지})}, 첫째 주$$
+$$ATP = (이전주재고량) + (MPS 수량) - \sum{확정주문량_{다음MPS전까지})}, MPS가 계획된 주$$ {#eq-atp}
 
 :::{.callout-important icon=false title="MPS 작성"}
 제품 Lot 사이즈는 200개, 리드타임은 1주, 안전재고는 없고 현재고가 60개일 때 MPS는 다음과 같이 작성할 수 있다.
