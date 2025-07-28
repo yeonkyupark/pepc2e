@@ -559,12 +559,7 @@ window.Quarto = {
   </ul></li>
   <li><a href="#sec-rrp" id="toc-sec-rrp" class="nav-link" data-scroll-target="#sec-rrp">RRP</a>
   <ul class="collapse">
-  <li><a href="#rrp의-위치" id="toc-rrp의-위치" class="nav-link" data-scroll-target="#rrp의-위치">RRP의 위치</a></li>
-  <li><a href="#목적-및-기능" id="toc-목적-및-기능" class="nav-link" data-scroll-target="#목적-및-기능">목적 및 기능</a></li>
-  <li><a href="#주요-투입-및-산출-요소" id="toc-주요-투입-및-산출-요소" class="nav-link" data-scroll-target="#주요-투입-및-산출-요소">주요 투입 및 산출 요소</a></li>
-  <li><a href="#rrp-vs-rccp-vs-crp" id="toc-rrp-vs-rccp-vs-crp" class="nav-link" data-scroll-target="#rrp-vs-rccp-vs-crp">RRP vs RCCP vs CRP</a></li>
   <li><a href="#rrp-수행-절차" id="toc-rrp-수행-절차" class="nav-link" data-scroll-target="#rrp-수행-절차">RRP 수행 절차</a></li>
-  <li><a href="#소프트웨어-적용-예" id="toc-소프트웨어-적용-예" class="nav-link" data-scroll-target="#소프트웨어-적용-예">소프트웨어 적용 예</a></li>
   </ul></li>
   <li><a href="#sec-productibility-strategy" id="toc-sec-productibility-strategy" class="nav-link" data-scroll-target="#sec-productibility-strategy">생산능력 결정 전략</a>
   <ul class="collapse">
@@ -671,18 +666,15 @@ window.Quarto = {
 </figure>
 </div>
 <p>생산계획은 장기, 중기, 단기 계획으로 수립한다.</p>
-<p><strong>장기계획(2년 이상)</strong></p>
 <ul>
-<li>기업전략 계획, 제품 시장 계획, 재무계획(공장입지, 생산능력계획, 설비투자계획, 사세 확장) 등</li>
+<li>장기계획(2년 이상)<br>
+기업전략 계획, 제품 시장 계획, 재무계획(공장입지, 생산능력계획, 설비투자계획, 사세 확장) 등</li>
+<li>중기계획(6개월 ~ 2년)<br>
+총괄계획, 인력계획, 자재계획, 외주계획</li>
+<li>단기계획(6개월 이내)<br>
+생산계획(분기, 월별, 주별, 일별 예측)</li>
 </ul>
-<p><strong>중기계획(6개월 ~ 2년)</strong></p>
-<ul>
-<li>총괄계획, 인력계획, 자재계획, 외주계획</li>
-</ul>
-<p><strong>단기계획(6개월 이내)</strong></p>
-<ul>
-<li>생산계획(분기, 월별, 주별, 일별 예측)</li>
-</ul>
+<blockquote class="blockquote">
 <p>※ 생산계획 관련 주요 용어</p>
 <ul>
 <li><a href="#sec-app" class="quarto-xref"><span>총괄생산계획(APP)</span></a>, aggregate production planning</li>
@@ -692,10 +684,11 @@ window.Quarto = {
 <li><a href="#sec-mrp" class="quarto-xref"><span>자재소요계획(MRP)</span></a>, material requirements planning</li>
 <li><a href="#sec-crp" class="quarto-xref"><span>CRP</span></a>, capacity requirements planning</li>
 </ul>
+</blockquote>
 </section>
 <section id="sec-scheduling" class="level2">
 <h2 class="anchored" data-anchor-id="sec-scheduling">일정계획</h2>
-<p><strong>일정계획</strong>(scheduling)이란 <font color="blue">생산계획 내지 제조명령을 시간적으로 구체화 하는 과정</font>이다. 생산자원을 합리적으로 이용하여 생산할 품목과 생산량을 예정된 시간에 생산할 수 있도록 계획하고 통제하는 것이다.</p>
+<p><strong>일정계획</strong>(scheduling)이란 <span class="hl">생산계획 내지 제조명령을 시간적으로 구체화 하는 과정</span>이다. 생산자원을 합리적으로 이용하여 생산할 품목과 생산량을 예정된 시간에 생산할 수 있도록 계획하고 통제하는 것이다.</p>
 <p><img src="images/Pasted image 20250412105255.png" class="img-fluid"></p>
 <p><strong>일정계획 종류</strong></p>
 <ul>
@@ -706,8 +699,9 @@ window.Quarto = {
 <li><strong>소 일정계획</strong>(detail scheduling)<br>
 세부일정계획으로 <font color="blue">작업자, 기계별 일정계획</font>을 말함</li>
 </ul>
-<p><strong>일정계획 주요 목적</strong></p>
+<p>일정계획 주요 목적은 납기 준수와 자원 효율화에 있다.</p>
 <table class="caption-top table">
+<caption>일정계획 주요 목적</caption>
 <thead>
 <tr class="header">
 <th>목적</th>
@@ -737,12 +731,13 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-<p><strong>일정계획 계층 구조</strong></p>
+<p>일정계획을 구조적으로 계층화하면 총괄생산계획, 주생산계획, 작업할당, 작업배정, 작업순서결정, 그리고 작업 지시 순으로 나열된다.</p>
 <table class="caption-top table">
+<caption>일정계획 계층 구조</caption>
 <colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
+<col style="width: 10%">
+<col style="width: 40%">
+<col style="width: 50%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -784,12 +779,13 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-<p><strong>일정계획 주요 개념</strong></p>
+<p>일정계획에는 할당, 배정, 순서, 작업지시 등과 같은 주요 개념이 있다.</p>
 <table class="caption-top table">
+<caption>일정계획 주요 개념</caption>
 <colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
+<col style="width: 20%">
+<col style="width: 40%">
+<col style="width: 40%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -821,12 +817,13 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-<p><strong>일정계획 주요 기법</strong></p>
+<p>일정계획 주요 기법에는 정적 스케쥴링, 동적 스케쥴링, 휴리스틱 그리고 최적화 기법 등이 있다.</p>
 <table class="caption-top table">
+<caption>일정계획 주요 기법</caption>
 <colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
+<col style="width: 20%">
+<col style="width: 40%">
+<col style="width: 40%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -858,10 +855,13 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-<dl>
-<dt>일정계획 핵심성과지표(KPI)</dt>
-<dd>
+<p>일정계획 관리를 위한 핵심성과 지표(KPI)로 납기 준수율, 기계 가동률, 평균 리드타임, WIP 수준, 대기시간 등이 있다.</p>
 <table class="caption-top table">
+<caption>일정계획 핵심 성과 지표(KPI)</caption>
+<colgroup>
+<col style="width: 36%">
+<col style="width: 64%">
+</colgroup>
 <thead>
 <tr class="header">
 <th>지표</th>
@@ -891,16 +891,12 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-</dd>
-<dd>
-{tbl-colwidths = “[40,70]”}
-</dd>
-<dt>생산계획 시나리오</dt>
-<dd>
+<p>생산계획 주요 시나리오는 다음과 같다.</p>
 <table class="caption-top table">
+<caption>생산계획 시나리오</caption>
 <colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
+<col style="width: 30%">
+<col style="width: 70%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -931,18 +927,13 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-</dd>
-<dd>
-{tbl-colwidths = “[30,70]”}
-</dd>
-</dl>
-<p><strong>기준일정</strong></p>
+<p>일정계획에 있어 기준일정을 다음과 같이 정의할 수 있다.</p>
 <ul>
 <li>작업시간 + 준비작업시간 + 여유시간 + 정체시간</li>
 </ul>
 <section id="공정관리-기능" class="level3">
 <h3 class="anchored" data-anchor-id="공정관리-기능">공정관리 기능</h3>
-<p>공정관리는 계획기능과 통제기능으로 구분할 수 있다.</p>
+<p>공정관리는 크게 <strong>계획기능</strong>과 <strong>통제기능</strong>으로 구분할 수 있다.</p>
 <table class="caption-top table">
 <caption>공정관리 구분</caption>
 <thead>
@@ -968,8 +959,9 @@ window.Quarto = {
 </table>
 <section id="계획-기능" class="level4">
 <h4 class="anchored" data-anchor-id="계획-기능">계획 기능</h4>
-<p><strong>계획기능 요약</strong></p>
+<p>계획기능을 요약/정리하면 다음과 같다.</p>
 <table class="caption-top table">
+<caption>공정관리의 계획 기능</caption>
 <colgroup>
 <col style="width: 25%">
 <col style="width: 25%">
@@ -1011,23 +1003,20 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-<p><strong>공정계획(routing)</strong></p>
 <ul>
-<li>작업계시에 앞서 능률적이고 경제적인 작업절차를 결정하기 위한 것(<font color="blue">작업방법과 순서가 정해짐</font>)</li>
-</ul>
-<p><strong>공수계획(작업부하할당, loading)</strong></p>
-<ul>
-<li>생산계획량을 완성하는데 필요한 <font color="blue">인원이나 기계 부하를 결정</font>하게 됨</li>
-</ul>
-<p><strong>일정계획(scheduling)</strong></p>
-<ul>
-<li>작업순서와 방법이 결정되고(절차계획), 생산량이 공수로 환산되면(공수계획), 작업 <font color="blue">시작시간과 종료시간을 결정</font>하는 과정</li>
+<li><p><strong>공정계획(routing)</strong><br>
+작업계시에 앞서 능률적이고 경제적인 작업절차를 결정하기 위한 것(<font color="blue">작업방법과 순서가 정해짐</font>)</p></li>
+<li><p><strong>공수계획(작업부하할당, loading)</strong><br>
+생산계획량을 완성하는데 필요한 <font color="blue">인원이나 기계 부하를 결정</font>하게 됨</p></li>
+<li><p><strong>일정계획(scheduling)</strong><br>
+작업순서와 방법이 결정되고(절차계획), 생산량이 공수로 환산되면(공수계획), 작업 <font color="blue">시작시간과 종료시간을 결정</font>하는 과정</p></li>
 </ul>
 </section>
 <section id="통제-기능" class="level4">
 <h4 class="anchored" data-anchor-id="통제-기능">통제 기능</h4>
-<p><strong>통제기능 요약</strong></p>
+<p>통제기능을 요약/정리하면 다음과 같다.</p>
 <table class="caption-top table">
+<caption>공정관리의 통제 기능</caption>
 <colgroup>
 <col style="width: 33%">
 <col style="width: 33%">
@@ -1058,39 +1047,22 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-<p><strong>작업지시(dispatching)</strong></p>
 <ul>
-<li>절차계획과 일정계획표에 따라서 <font color="blue">생산을 개시</font>하도록 허락</li>
+<li><strong>작업지시(dispatching)</strong> 절차계획과 일정계획표에 따라서 <font color="blue">생산을 개시</font>하도록 허락</li>
+<li><strong>능력관리(capacity control)</strong> 통제단계에서 <font color="blue">실제 능력과 부하를 조사</font>하여 양자 균형을 이루도록 조정</li>
+<li><strong>진도관리(expedition or follow up)</strong> 작업배정(작업지시)에 의해 <font color="blue">작업 진도상황이나 과정을 수량적으로 관리</font>하는 것</li>
 </ul>
-<p><strong>능력관리(capacity control)</strong></p>
-<ul>
-<li>통제단계에서 <font color="blue">실제 능력과 부하를 조사</font>하여 양자 균형을 이루도록 조정</li>
-</ul>
-<p><strong>진도관리(expedition or follow up)</strong> - 작업배정(작업지시)에 의해 <font color="blue">작업 진도상황이나 과정을 수량적으로 관리</font>하는 것</p>
-<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 112-1-11">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-기출: 112-1-11
-</div>
-</div>
-<div class="callout-body-container callout-body">
-
-</div>
-</div>
 </section>
 </section>
 </section>
 <section id="sec-app" class="level2">
 <h2 class="anchored" data-anchor-id="sec-app">총괄생산계획(APP)</h2>
-<p><strong>총괄생산계획</strong>(APP, aggregate production planning)은 중기 수요에 대응하여 산출물 공급을 계획하는 것으로 중기적으로 기업 전반적인 <font color="blue"><strong>생산수준</strong>, <strong>재고수준</strong>, <strong>고용수준</strong></font> 등을 설정한다.</p>
+<p><strong>총괄생산계획</strong>(APP, aggregate production planning)은 <span class="hl">중기 수요에 대응하여 산출물 공급을 계획하는 것으로 중기적으로 기업 전반적인 생산수준, 재고수준, 고용수준 등을 설정</span>한다.</p>
 <ul>
 <li>총괄계획 대상 기간은 6개월에서 2년 수준이며 평균적으로 1년(12개월) 단위로 <font color="blue">중기계획</font> 수립</li>
 <li>수요 충족을 위해 생산설비는 생산능력 범위 내에서 이뤄져야 하고 사업전략에 대한 관련 <font color="blue">비용이 최소</font>가 되도록 수립</li>
 </ul>
-<p><strong>총괄생산계획 주요 목표</strong></p>
+<p>총괄생산계획 주요 목표는 다음과 같다.</p>
 <ul>
 <li>이익극대화</li>
 <li>생산비용 최소화</li>
@@ -1101,8 +1073,9 @@ window.Quarto = {
 <li>잔업 및 하청 최소화</li>
 <li>시설 및 설비 이용률 최대화</li>
 </ul>
-<p><strong>총괄생산계획 전략적 대안</strong>은 능동적 또는 수동적으로 수립할 수 있다.</p>
+<p><strong>총괄생산계획 전략적 대안</strong>은 상황에 따라 능동적 또는 수동적으로 수립할 수 있다.</p>
 <table class="caption-top table">
+<caption>총괄생산계획 전략</caption>
 <thead>
 <tr class="header">
 <th><strong>능동적 대안</strong></th>
@@ -1128,8 +1101,9 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-<p>총괄생산계획 입력과 산출은 다음과 같다.</p>
+<p>총괄생산계획 수립에 있어 입력과 산출은 다음과 같다.</p>
 <table class="caption-top table">
+<caption>총괄생산계획 입력과 산출</caption>
 <colgroup>
 <col style="width: 50%">
 <col style="width: 50%">
@@ -1175,26 +1149,14 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 124-1-2">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-기출: 124-1-2
-</div>
-</div>
-<div class="callout-body-container callout-body">
-
-</div>
-</div>
 <section id="총괄과-분해" class="level3">
 <h3 class="anchored" data-anchor-id="총괄과-분해">총괄과 분해</h3>
 <p>총괄생산계획은 생산 계획을 수립하는 과정에서 중요한 두 가지 접근 방식인 <strong>총괄(Aggregation)</strong>과 <strong>분해(Disaggregation)</strong>를 사용한다. 각 접근 방식은 생산 계획을 어떻게 수립할지에 대한 전략적 차이를 나타내며, 생산 계획의 효율성과 유연성에 큰 영향을 미친다.</p>
 <section id="총괄aggregation" class="level4">
 <h4 class="anchored" data-anchor-id="총괄aggregation">총괄(Aggregation)</h4>
-<p>총괄 목적은 <font color="blue">전체 제품군을 대상</font>으로 생산 계획을 세우고, 이를 보다 단순화하여 자원의 배분을 효율적으로 할 수 있도록 한다. 총괄은 제품군을 전체적으로 묶어서 계획을 수립하는 접근 방식이다. 개별 제품의 세부적인 수요 예측을 제외하고, <font color="blue">전체적인 생산량을 고려하여 자원 배분</font>을 한다. 예를 들어, 여러 종류의 제품을 하나의 큰 그룹으로 묶어 생산 계획을 세우고, 이를 통해 자원을 배분하거나 생산능력을 설정한다.</p>
+<p>총괄 목적은 전체 제품군을 대상으로 생산 계획을 세우고, 이를 보다 단순화하여 자원의 배분을 효율적으로 할 수 있도록 한다. 총괄은 제품군을 전체적으로 묶어서 계획을 수립하는 접근 방식이다. 개별 제품의 세부적인 수요 예측을 제외하고, 전체적인 생산량을 고려하여 자원 배분을 한다. 예를 들어, 여러 종류의 제품을 하나의 큰 그룹으로 묶어 생산 계획을 세우고, 이를 통해 자원을 배분하거나 생산능력을 설정한다.</p>
 <table class="caption-top table">
+<caption>총괄 장단점</caption>
 <colgroup>
 <col style="width: 43%">
 <col style="width: 56%">
@@ -1225,6 +1187,7 @@ window.Quarto = {
 <h4 class="anchored" data-anchor-id="분해disaggregation">분해(Disaggregation)</h4>
 <p>분해 목적은 총괄 계획을 <font color="blue">세부적인 생산 계획으로 변환</font>하고, 각 제품에 대해 구체적인 생산량을 설정하여 <font color="blue">세밀한 자원 배분</font>을 한다. 분해는 총괄생산계획에서 설정한 목표나 계획을 개별 제품에 맞게 세분화하여 구체적인 생산 계획을 수립하는 방식이다. 각 제품군이나 제품별로 수요 예측을 반영하여 생산 계획을 세운다.</p>
 <table class="caption-top table">
+<caption>분해 장단점</caption>
 <colgroup>
 <col style="width: 48%">
 <col style="width: 51%">
@@ -1256,7 +1219,7 @@ window.Quarto = {
 </figure>
 </div>
 <ul>
-<li><strong>총괄(Aggregation)</strong>은 <font color="blue">넓은 범위에서 생산 계획을 설정</font>하며, <strong>분해(Disaggregation)</strong>는 이 <font color="blue">계획을 세부적으로 나누어 각 제품군별로 구체적인 실행 계획을 수립</font>한다.</li>
+<li><span class="hl">총괄(Aggregation)은 넓은 범위에서 생산 계획을 설정</span>하며, <span class="hl">분해(Disaggregation)는 이 계획을 세부적으로 나누어 각 제품군별로 구체적인 실행 계획을 수립</span>한다.</li>
 <li>총괄은 생산 계획의 기본적인 틀을 제공하고, 분해는 그 틀을 실제 상황에 맞게 실행 가능하도록 변환한다.</li>
 </ul>
 <p><strong>총괄과 분해 예제</strong></p>
@@ -1271,19 +1234,6 @@ window.Quarto = {
 </ul>
 </blockquote>
 <p><strong>총괄(Aggregation)</strong>은 대규모의 생산 계획을 간단히 설정하는 반면, <strong>분해(Disaggregation)</strong>는 세부적인 계획을 수립하여 실질적인 생산 현장에서 효율적으로 실행할 수 있게 한다. 두 접근 방식은 서로 보완적이며, 기업은 총괄과 분해를 적절히 결합하여 생산 계획을 수립하고 자원을 최적화한다.</p>
-<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 103-4-3, 112-2-3, 121-2-3">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-기출: 103-4-3, 112-2-3, 121-2-3
-</div>
-</div>
-<div class="callout-body-container callout-body">
-
-</div>
-</div>
 </section>
 </section>
 <section id="총괄생산-전략-종류" class="level3">
@@ -1361,15 +1311,15 @@ end
 </table>
 <section id="수요추종-전략" class="level4">
 <h4 class="anchored" data-anchor-id="수요추종-전략">수요추종 전략</h4>
-<p><strong>수요추종전략(Chase Production Strategy)</strong>은 생산량을 실제 수요에 <strong>맞춰 유연하게 조정</strong>하는 전략으로, 총괄생산계획(Aggregate Production Planning)에서 수요 변동을 재고 없이 대응하고자 할 때 사용된다.</p>
-<dl>
-<dt>수요추종전략의 정의</dt>
-<dd>
-수요의 증감에 따라 <strong>생산량, 작업시간, 인력 수준을 조정</strong>하여, 고객 수요를 최대한 실시간으로 따라가는 전략 , <strong>재고를 최소화</strong>하고 <strong>납기 준수율</strong>을 높이는 것을 목표로 한다.
-</dd>
-<dt>주요 특징</dt>
-<dd>
+<p><strong>수요추종전략(Chase Production Strategy)</strong>은 <span class="hl">생산량을 실제 수요에 맞춰 유연하게 조정하는 전략</span>으로, 총괄생산계획(Aggregate Production Planning)에서 수요 변동을 재고 없이 대응하고자 할 때 사용된다.</p>
+<blockquote class="blockquote">
+<ul>
+<li>수요추종전략의 정의 수요의 증감에 따라 <strong>생산량, 작업시간, 인력 수준을 조정</strong>하여, 고객 수요를 최대한 실시간으로 따라가는 전략 , <strong>재고를 최소화</strong>하고 <strong>납기 준수율</strong>을 높이는 것을 목표로 한다.</li>
+</ul>
+</blockquote>
+<p>수요추종 전략 주요 특징은 다음과 같다.</p>
 <table class="caption-top table">
+<caption>수요추종 전략 주요 특징</caption>
 <thead>
 <tr class="header">
 <th>구분</th>
@@ -1399,9 +1349,7 @@ end
 </tr>
 </tbody>
 </table>
-</dd>
-<dt>운영 방식</dt>
-<dd>
+<p>수요추종 전략 주요 운영 방식은 다음과 같다.</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -1424,9 +1372,7 @@ end
 </tr>
 </tbody>
 </table>
-</dd>
-<dt>예시 시나리오</dt>
-<dd>
+<p>다음은 예시 시나리오이다.</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -1457,13 +1403,10 @@ end
 </tr>
 </tbody>
 </table>
-</dd>
-</dl>
 <p>이처럼 매월 수요 변화에 따라 생산량과 자원을 조정한다.</p>
-<dl>
-<dt>장점과 단점</dt>
-<dd>
+<p>수요추종 전략에 대한 장점과 단점은 다음과 같다.</p>
 <table class="caption-top table">
+<caption>수요추종 전략 장단점</caption>
 <colgroup>
 <col style="width: 33%">
 <col style="width: 33%">
@@ -1499,10 +1442,9 @@ end
 </tr>
 </tbody>
 </table>
-</dd>
-<dt>수요추종전략이 적합한 상황</dt>
-<dd>
+<p>다음과 같은 조건에서는 수요추종 전략이 적합한 상황이다.</p>
 <table class="caption-top table">
+<caption>수요추종 전략 조건</caption>
 <thead>
 <tr class="header">
 <th>조건</th>
@@ -1528,10 +1470,9 @@ end
 </tr>
 </tbody>
 </table>
-</dd>
-<dt>수요추종전략 vs 생산평준화전략 비교</dt>
-<dd>
+<p>수요추종전략과 생산평준화전략을 간략히 비교하면 다음과 같다.</p>
 <table class="caption-top table">
+<caption>수요추종 전략 vs.&nbsp;생산평준화 전략</caption>
 <thead>
 <tr class="header">
 <th>항목</th>
@@ -1567,8 +1508,6 @@ end
 </tr>
 </tbody>
 </table>
-</dd>
-</dl>
 <p>주요 내용을 정리하면 다음과 같다.</p>
 <table class="caption-top table">
 <thead>
@@ -1600,22 +1539,18 @@ end
 </tr>
 </tbody>
 </table>
-<p>이 전략은 <strong>JIT(Just-In-Time)</strong> 생산 방식이나 <strong>Make-to-Order</strong> 모델과도 밀접한 관련이 있으며, 민첩한 공급망 운영이 필요한 기업에서 유용하게 활용된다.</p>
+<p>이 전략은 <strong>JIT(Just-In-Time)</strong> 생산 방식이나 <strong>Make-to-Order</strong>(MTO) 모델과도 밀접한 관련이 있으며, 민첩한 공급망 운영이 필요한 기업에서 유용하게 활용된다.</p>
 </section>
 <section id="생산평준화-전략" class="level4">
 <h4 class="anchored" data-anchor-id="생산평준화-전략">생산평준화 전략</h4>
-<p><strong>생산평준화 전략(Level Production Strategy)</strong>은 총괄생산계획(APP: Aggregate Production Planning)에서 <strong>수요 변동에 관계없이 일정한 생산량을 유지</strong>하여 운영 안정성을 확보하는 전략이다. 자원의 효율적 사용과 비용 절감을 목표로 하며, 대표적으로 <strong>재고를 활용하여 수요 변동을 흡수</strong>한다.</p>
-<dl>
-<dt>생산평준화 전략의 정의</dt>
-<dd>
-일정한 생산량을 유지하면서 <strong>수요의 변동은 재고나 백로그(backlog)로 흡수</strong>하는 생산 전략, 생산계획을 안정적으로 운영하며, <strong>설비, 인력 등 내부 자원을 균등하게 활용</strong>하는 데 중점을 둔다.
-</dd>
-<dt>주요 특징</dt>
-<dd>
+<p><strong>생산평준화 전략(Level Production Strategy)</strong>은 <span class="hl">총괄생산계획(APP: Aggregate Production Planning)에서 수요 변동에 관계없이 일정한 생산량을 유지하여 운영 안정성을 확보하는 전략</span>이다. 자원의 효율적 사용과 비용 절감을 목표로 하며, 대표적으로 <strong>재고를 활용하여 수요 변동을 흡수</strong>한다.</p>
+<p>생산평준화 전략은 일정한 생산량을 유지하면서 <strong>수요의 변동은 재고나 백로그(backlog)로 흡수</strong>하는 생산 전략, 생산계획을 안정적으로 운영하며, <strong>설비, 인력 등 내부 자원을 균등하게 활용</strong>하는 데 중점을 둔다.</p>
+<p>생산평준화 전략 주요 특징은 다음과 같다.</p>
 <table class="caption-top table">
+<caption>생산평준화 전략 주요 특징</caption>
 <colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
+<col style="width: 20%">
+<col style="width: 80%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -1650,9 +1585,7 @@ end
 </tr>
 </tbody>
 </table>
-</dd>
-<dt>운영 메커니즘 예시</dt>
-<dd>
+<p>다음은 예시 시나리오이다.</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -1687,17 +1620,14 @@ end
 </tr>
 </tbody>
 </table>
-</dd>
-</dl>
 <ul>
 <li><strong>생산량은 고정(1,100)</strong>이고</li>
 <li>수요가 적을 땐 재고가 증가하고,</li>
 <li>수요가 많을 땐 재고를 소진한다.</li>
 </ul>
-<dl>
-<dt>장점과 단점</dt>
-<dd>
+<p>생산평준화 전략의 장점과 단점은 다음과 같다.</p>
 <table class="caption-top table">
+<caption>생산평준화 전략 장단점</caption>
 <colgroup>
 <col style="width: 33%">
 <col style="width: 33%">
@@ -1733,10 +1663,9 @@ end
 </tr>
 </tbody>
 </table>
-</dd>
-<dt>생산평준화 전략이 적합한 상황</dt>
-<dd>
+<p>다음과 같은 조건에서 생산평준화 전략이 적합하다.</p>
 <table class="caption-top table">
+<caption>생산평준화 전략이 적합한 조건</caption>
 <colgroup>
 <col style="width: 50%">
 <col style="width: 50%">
@@ -1766,10 +1695,9 @@ end
 </tr>
 </tbody>
 </table>
-</dd>
-</dl>
-<p>생산평준화 전략 vs 수요추종전략 비교</p>
+<p>생산평준화 전략과 수요추종전략을 간략히 비교하면 다음과 같다.</p>
 <table class="caption-top table">
+<caption>생산평준화 전략 vs.&nbsp;수요추종 전략</caption>
 <thead>
 <tr class="header">
 <th>항목</th>
@@ -1854,12 +1782,10 @@ end
 <section id="혼합전략" class="level4">
 <h4 class="anchored" data-anchor-id="혼합전략">혼합전략</h4>
 <p><strong>혼합전략(Mixed Production Strategy)</strong>은 생산관리에서 <strong>수요추종 전략(Chase Strategy)</strong>과 <strong>생산평준화 전략(Level Strategy)</strong>의 장단점을 적절히 결합하여, 생산비용과 고객서비스 수준을 균형 있게 유지하려는 <strong>총괄생산계획</strong> 기법이다.</p>
-<p><strong>혼합전략의 정의</strong></p>
-<ul>
-<li>수요 변화에 따라 일부 생산량을 조정하면서도, 일정 수준의 생산 안정성과 재고 활용을 유지하는 전략, 즉 <strong>생산량 조정 + 재고 활용 + 인력/외주 등 다양한 수단을 병행</strong>하여 수요에 대응</li>
-</ul>
-<p><strong>혼합전략 운영 방식</strong></p>
+<p>혼합전략은 수요 변화에 따라 일부 생산량을 조정하면서도, 일정 수준의 생산 안정성과 재고 활용을 유지하는 전략, 즉 <strong>생산량 조정 + 재고 활용 + 인력/외주 등 다양한 수단을 병행</strong>하여 수요에 대응한다.</p>
+<p>다음은 혼합전략의 주요 운영 방식이다.</p>
 <table class="caption-top table">
+<caption>혼합전략 주요 운영 방식</caption>
 <colgroup>
 <col style="width: 20%">
 <col style="width: 80%">
@@ -1889,7 +1815,7 @@ end
 </tr>
 </tbody>
 </table>
-<p><strong>혼합전략의 사례</strong></p>
+<p>혼합전략의 시나리오 예시이다.</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -1928,8 +1854,9 @@ end
 <li>일정 수준의 기본 생산은 유지하고, 수요가 많은 달은 외주 또는 잔업 등으로 보완</li>
 <li>수요보다 적은 달에는 재고를 축적하여 다음 기간 대응</li>
 </ul>
-<p><strong>장점과 단점</strong></p>
+<p>혼합전략의 장점과 단점이다.</p>
 <table class="caption-top table">
+<caption>혼합전략 장단점</caption>
 <colgroup>
 <col style="width: 20%">
 <col style="width: 40%">
@@ -1965,8 +1892,9 @@ end
 </tr>
 </tbody>
 </table>
-<p><strong>혼합전략이 적합한 상황</strong></p>
+<p>다음과 같은 조건에서 혼합전략이 적합한다.</p>
 <table class="caption-top table">
+<caption>혼합전략 적합 조건</caption>
 <colgroup>
 <col style="width: 50%">
 <col style="width: 50%">
@@ -1996,8 +1924,9 @@ end
 </tr>
 </tbody>
 </table>
-<p><strong>3가지 전략 비교</strong></p>
+<p>다음은 3가지 전략을 간단히 비교한 것이다.</p>
 <table class="caption-top table">
+<caption>수요추종 전략 vs.&nbsp;생산평준화 전략 vs.&nbsp;혼합 전</caption>
 <thead>
 <tr class="header">
 <th>항목</th>
@@ -2085,9 +2014,8 @@ end
 </section>
 <section id="sec-rrp" class="level3">
 <h3 class="anchored" data-anchor-id="sec-rrp">RRP</h3>
-<p><strong>RRP(Resource Requirements Planning, 자원소요계획)</strong>은 중장기 생산계획을 기준으로, 기업이 필요로 하는 <strong>주요 생산 자원(인력, 설비, 공간, 주요 자재)</strong>의 <strong>용량을 총괄적으로 계획</strong>하는 상위 수준의 자원계획 시스템이다. S&amp;OP 또는 Business Plan을 기반으로, 제품군 단위의 생산 계획에 대해 필요 자원의 총괄적 수요를 산정하고, 중장기적으로 자원 확보 가능성을 판단한다. 이는 설비 투자, 인력 계획, 공간 확보 등의 전략적 의사결정을 지원하며, 보다 상세한 자원 검토는 RCCP에서 수행된다.</p>
-<section id="rrp의-위치" class="level4">
-<h4 class="anchored" data-anchor-id="rrp의-위치">RRP의 위치</h4>
+<p><strong>RRP(Resource Requirements Planning, 자원소요계획)</strong>은 <span class="hl">중장기 생산계획을 기준으로, 기업이 필요로 하는 주요 생산 자원(인력, 설비, 공간, 주요 자재)의 용량을 총괄적으로 계획하는 상위 수준의 자원계획 시스템</span>이다. S&amp;OP 또는 Business Plan을 기반으로, 제품군 단위의 생산 계획에 대해 필요 자원의 총괄적 수요를 산정하고, 중장기적으로 자원 확보 가능성을 판단한다. 이는 설비 투자, 인력 계획, 공간 확보 등의 전략적 의사결정을 지원하며, 보다 상세한 자원 검토는 RCCP에서 수행된다.</p>
+<p>RRP는 생산계획 수준에서 총괄생산계획, 즉 MPS와 S&amp;OP 사이에 위치한다.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 14%">
@@ -2113,9 +2041,9 @@ end
 <td>제품군 단위 수급 균형</td>
 </tr>
 <tr class="odd">
-<td>주계획</td>
-<td>MPS (Master Production Schedule)</td>
-<td>품목 단위 생산계획</td>
+<td>총괄 계획</td>
+<td>APP (Aggregate Production Planning)</td>
+<td>제품군별 중기 계획 수립</td>
 </tr>
 <tr class="even">
 <td>자원 계획</td>
@@ -2123,11 +2051,16 @@ end
 <td>총괄 자원 수요 산정</td>
 </tr>
 <tr class="odd">
+<td>주계획</td>
+<td>MPS (Master Production Schedule)</td>
+<td>품목 단위 생산계획</td>
+</tr>
+<tr class="even">
 <td>능력 계획</td>
 <td>RCCP (Rough-Cut Capacity Planning)</td>
 <td>자원 별 초벌 용량 검토</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>세부 계획</td>
 <td>CRP (Capacity Requirements Planning)</td>
 <td>작업 단위 세부 자원 산정</td>
@@ -2135,10 +2068,9 @@ end
 </tbody>
 </table>
 <p>→ <strong>RRP는 MPS와 S&amp;OP 사이 또는 상위에서 운영되는 자원 검토 프로세스</strong>로서, <strong>장기적이고 전략적인 자원 투자 판단</strong>에 활용됨.</p>
-</section>
-<section id="목적-및-기능" class="level4">
-<h4 class="anchored" data-anchor-id="목적-및-기능">목적 및 기능</h4>
+<p>RRP는 APP 수립 시 자원 부족을 예측하고 운영 계획 현실성을 확보하는 데 그 목적이 있다.</p>
 <table class="caption-top table">
+<caption>RRP 목적과 기능능</caption>
 <thead>
 <tr class="header">
 <th>항목</th>
@@ -2164,10 +2096,9 @@ end
 </tr>
 </tbody>
 </table>
-</section>
-<section id="주요-투입-및-산출-요소" class="level4">
-<h4 class="anchored" data-anchor-id="주요-투입-및-산출-요소">주요 투입 및 산출 요소</h4>
+<p>RRP 주요 투입 및 산출 요소는 다음과 같다.</p>
 <table class="caption-top table">
+<caption>RRP 주요 투입 및 산출</caption>
 <colgroup>
 <col style="width: 62%">
 <col style="width: 37%">
@@ -2184,7 +2115,7 @@ end
 <td><strong>자원군(Resource Group)별 총 수요량</strong></td>
 </tr>
 <tr class="even">
-<td><strong>제품군별 생산 목표량</strong></td>
+<td><strong>APP(제품군별 생산 목표량)</strong></td>
 <td><strong>장기적 자원 초과/부족 구간 식별</strong></td>
 </tr>
 <tr class="odd">
@@ -2201,10 +2132,9 @@ end
 </tr>
 </tbody>
 </table>
-</section>
-<section id="rrp-vs-rccp-vs-crp" class="level4">
-<h4 class="anchored" data-anchor-id="rrp-vs-rccp-vs-crp">RRP vs RCCP vs CRP</h4>
+<p>다음은 RRP, RCCP, CRP 간 비교한 내용이다.</p>
 <table class="caption-top table">
+<caption>RRP vs.&nbsp;RCCP vs.&nbsp;CRP</caption>
 <colgroup>
 <col style="width: 12%">
 <col style="width: 28%">
@@ -2246,44 +2176,30 @@ end
 </tr>
 </tbody>
 </table>
-</section>
 <section id="rrp-수행-절차" class="level4">
 <h4 class="anchored" data-anchor-id="rrp-수행-절차">RRP 수행 절차</h4>
+<p>RRP는 다음과 같은 절차로 수행한다.</p>
 <ol type="1">
-<li><strong>MPS 수립</strong>: 생산량, 일정 수립</li>
+<li><strong>APP 수립</strong>: 생산량, 일정 수립</li>
 <li><strong>Resource Bill 구축</strong>: 제품군별 자원 정보 정의</li>
 <li><strong>용량 산정</strong>: 자원별 필요량 계산</li>
 <li><strong>가용 자원 파악</strong>: 기존 자원 능력과 비교</li>
 <li><strong>부족/초과 확인</strong>: 투자 여부 또는 외주 판단</li>
 <li><strong>피드백</strong>: 상위 계획에 반영하여 조정</li>
 </ol>
-</section>
-<section id="소프트웨어-적용-예" class="level4">
-<h4 class="anchored" data-anchor-id="소프트웨어-적용-예">소프트웨어 적용 예</h4>
+<p>RRP는 다음과 같이 소프트웨어 적용하여 지원할 수 있다.</p>
 <ul>
 <li>ERP 시스템 내 <strong>APS(Advanced Planning &amp; Scheduling)</strong> 모듈에서 지원</li>
 <li>SAP, Oracle SCM Cloud, Microsoft Dynamics 등에서 활용 가능</li>
 </ul>
-<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 100-2-5, 112-3-4">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-기출: 100-2-5, 112-3-4
-</div>
-</div>
-<div class="callout-body-container callout-body">
-
-</div>
-</div>
 </section>
 </section>
 <section id="sec-productibility-strategy" class="level3">
 <h3 class="anchored" data-anchor-id="sec-productibility-strategy">생산능력 결정 전략</h3>
 <p>생산시스템을 신설, 확장 시 생산능력을 결정하게 된다. 생산능력 결정 시 여유 능력 크기는 얼마로 할 것인가? 증설 시기는 언제로, 규모는 얼마로 할 것인가 등을 검토해야 한다.</p>
-<p><strong>생산능력</strong>이란 <font color="blue">제조환경에서 일정 기간 동안 생산할 수 있는 최대 산출량</font>을 의미한다. 일반적으로 시간당 단위 또는 일일 단위로 측정되며, 공장이나 설비 최대 출력 수준을 나타낸다. 생산능력은 생산 계획, 자원 할당, 재고 관리 등에 중요한 역할을 한다. 또한 생산능력을 초과하지 않도록 관리하는 것이 중요하다. 그렇지 않으면 생산 지연이 발생하거나 품질이 저하될 수 있다.</p>
+<p><strong>생산능력</strong>이란 <span class="hl">제조환경에서 일정 기간 동안 생산할 수 있는 최대 산출량</span>을 의미한다. 일반적으로 시간당 단위 또는 일일 단위로 측정되며, 공장이나 설비 최대 출력 수준을 나타낸다. 생산능력은 생산 계획, 자원 할당, 재고 관리 등에 중요한 역할을 한다. 또한 생산능력을 초과하지 않도록 관리하는 것이 중요하다. 그렇지 않으면 생산 지연이 발생하거나 품질이 저하될 수 있다.</p>
 <table class="caption-top table">
+<caption>생산능력 분</caption>
 <colgroup>
 <col style="width: 9%">
 <col style="width: 90%">
@@ -2309,12 +2225,19 @@ end
 </tr>
 </tbody>
 </table>
-<p><strong>유효성 평가(측정 방법)</strong> - <strong>이용률</strong> = 실제능력/설계능력 - <strong>효율</strong> = 실제능력/유효능력</p>
-<p><strong>최적조업도</strong>는 <font color="blue">적정조업도라고도 하며 기업 산출량 단위당 평균비용이 최저가 되는 조업도</font>를 말한다. 최적조업도는 기술적으로 가장 유리한 조업도를 나타낼 뿐, 그것이 경제적으로 가장 유리한 조업도라는 것은 아니다.</p>
+<p>생산 능력 유효성은 다음과 같이 평가(측정 방법)할 수 있다.</p>
+<ul>
+<li><strong>이용률</strong> = 실제능력/설계능력</li>
+<li><strong>효율</strong> = 실제능력/유효능력</li>
+</ul>
+<blockquote class="blockquote">
+<p><strong>최적조업도</strong>는 <span class="hl">적정조업도라고도 하며 기업 산출량 단위당 평균비용이 최저가 되는 조업도</span>를 말한다. 최적조업도는 기술적으로 가장 유리한 조업도를 나타낼 뿐, 그것이 경제적으로 가장 유리한 조업도라는 것은 아니다.</p>
+</blockquote>
 <section id="생산능력-결정-요인" class="level4">
 <h4 class="anchored" data-anchor-id="생산능력-결정-요인">생산능력 결정 요인</h4>
 <p>생산능력 결정 요인은 크게 영향요인과 제약요인이 있다.</p>
-<p><strong>영향요인</strong></p>
+<ul>
+<li><strong>영향요인</strong>
 <ul>
 <li><strong>시설요인</strong>(Pysical Factors)<br>
 공정 및 시설 입지, 공정설계 및 건물, 시설 및 설비 배치, 공장 환경, 운반시설 등</li>
@@ -2326,19 +2249,21 @@ end
 직무설계, 직무내용, 작업방법, 작업강도, 작업환경, 교육 및 경험, 동기부여, 보상 등</li>
 <li>기타 요인<br>
 시스템 가동 상의 요인, 설비보전, 일정관리,품질관리 등 생산 시스템 관리 기준</li>
-</ul>
-<p><strong>제약요인</strong></p>
+</ul></li>
+<li><strong>제약요인</strong>
 <ul>
 <li>시장</li>
 <li>원자재</li>
 <li>자금</li>
 <li>노동력</li>
+</ul></li>
 </ul>
 </section>
 <section id="생산능력-계획-고려사항" class="level4">
 <h4 class="anchored" data-anchor-id="생산능력-계획-고려사항">생산능력 계획 고려사항</h4>
-<p>기간별 생산능력 계획시 고려사항은 다음과 같다.</p>
-<p><strong>단기 생산능력 계획</strong></p>
+<p>기간별 생산능력 계획 시 고려사항은 다음과 같다.</p>
+<ul>
+<li><strong>단기 생산능력 계획</strong>
 <ul>
 <li>가격조정</li>
 <li>정비 계획 조정</li>
@@ -2348,8 +2273,8 @@ end
 <li>종업원 교육</li>
 <li>고용수준 가동률 변동</li>
 <li>고융수준 변동</li>
-</ul>
-<p><strong>장기 생산능력 계획</strong></p>
+</ul></li>
+<li><strong>장기 생산능력 계획</strong>
 <ul>
 <li><strong>공격전략</strong><br>
 장기적인 시장 확보 및 시장점유율 향상, 여유능력으로 불확실한 수요에 대한 대응이 가능하며 납기지연이 줄어 들어 고객에게 신뢰감을 주어 안정적인 구매자 확보 가능</li>
@@ -2357,13 +2282,15 @@ end
 생산능력 효율 향상으로 투자에대한 수익률 향상, 장기적으로 시장점유율을 잠식당할 위험 존재</li>
 <li><strong>평균전략</strong><br>
 간의 초과 능력과 수요 부족을 허용하는 생산계획이 바람직</li>
+</ul></li>
 </ul>
 <p>장기적으로 이익을 최대화하는 관점에서 <strong>장기 생산능력 의사결정에 대한 체계계적인 접근</strong>은 다음과 같다.</p>
-<p><strong>대규모 접근법</strong></p>
+<ul>
+<li><strong>대규모 접근법</strong>
 <ul>
 <li>규모의 경제로 연간 생산 소비를 감소시킬 수 있으나 고정비 부담이 크고 수요 변동이나 제품 믹스 시 유연성이 떨어진다</li>
-</ul>
-<p><strong>점진적 접근법</strong></p>
+</ul></li>
+<li><strong>점진적 접근법</strong>
 <ul>
 <li>단계적으로 작은 단위로 확장하는 것으로 소요자금이 적게 들며 유연성이 큼</li>
 <li>필요 생산용량 추정</li>
@@ -2376,8 +2303,9 @@ end
 <li>정량적 평가 - 현금 흐름</li>
 </ul></li>
 </ul></li>
+</ul></li>
 </ul>
-<p><strong>생산시설에 대한 의사결정 절차</strong></p>
+<p>생산능력 결정 시 생산시설에 대한 의사결정도 중요하다.</p>
 <ul>
 <li>시설 규모 결정: 최적 규모 설정</li>
 <li>입지 설정: 관련된 모든 비용 합이 최소가 되도록 결정</li>
@@ -2386,25 +2314,41 @@ end
 <section id="생산능력-전략-사전-검토-사항" class="level4">
 <h4 class="anchored" data-anchor-id="생산능력-전략-사전-검토-사항">생산능력 전략 사전 검토 사항</h4>
 <p>경영자는 생산능력을 결정하기 앞서 생산능력 전략 차원에서 <strong>여유능력 크기</strong>와 <strong>확장 시기 및 규모</strong>를 검토해야 한다.</p>
-<p><strong>여유능력 결정(Sizing Capacity Cushion)</strong></p>
+<section id="여유능력-크기" class="level5">
+<h5 class="anchored" data-anchor-id="여유능력-크기">여유능력 크기</h5>
+<p><strong>여유능력 결정(Sizing Capacity Cushion)</strong> 다음과 같은 상황을 고려한다.</p>
 <ul>
 <li><strong>여유능력</strong>(capacity cushion)은 <font color="blue">기대를 초과하는 잉여 능력</font>으로 최적 여유 능력은 산업 분야별 차이가 있다.</li>
 <li>충분한 여유능력은 수요가 증가하는 추세에 있거나 불확실한 경우 또는 안정적인 공급을 요하는 경우에 필요하다.</li>
 <li>지나친 여유능력은 과대한 유지비용으로 수익률을 저하시킬 수 있다.</li>
 </ul>
+</section>
+<section id="확장-시기-및-규모" class="level5">
+<h5 class="anchored" data-anchor-id="확장-시기-및-규모">확장 시기 및 규모</h5>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/capacity_strategy.png" class="img-fluid figure-img"></p>
 <figcaption>사전 확장 전략과 사후 증설(두고보기) 전략</figcaption>
 </figure>
 </div>
-<p><strong>확장 시기와 규모(Timing and sizing Expansion)</strong></p>
+<p><strong>확장 시기와 규모(Timing and sizing Expansion)</strong>는 유유능력 크기와 상황에 따라 사전확장 전략과 사후증설 전략으로 나눌 수 있다.</p>
 <ul>
-<li><strong>사전 확장 전략</strong>(proactive capacity strategy)<br>
-- <font color="blue">재고 부족 손실 &gt; 잉어 능력 비용 x 2배</font> - 여유 내지 초과 능력을 유지하는 비용보다 재고 부족(품질) 손실이 상당히 높을 때, 고성장 산업에서 보통 채택되는 확장주의 전략(Expansionist Strategy) - 수요에 앞서가는 사전 확장 전략은 규모의 경제와 학습효과가 강한 경우 생산능력 크기가 상대적으로 크므로 능력 부족으로 인한 판매기획 상실을 줄일 수 있다. - 이들 산업에서 여유 능력을 갖고 있는 기업은 능력이 한정된 경쟁업체들로부터 시장점유율을 잠재적으로 확보할 수 있다.</li>
-<li><strong>사후 증설 전략</strong>(Reactive Capacity Strategy)<br>
-- <font color="blue">재고 부족 손실 &lt; 잉여 능력 비용 x 0.67</font> - 여유 능력 유지 비용이 품절 비용을 초과할 때 채택되는 전략으로 수요를 관망하다가 증설하는 보수 전략 - 능력 이용률은 높지만 시장 위치가 불안한 기업에서 채택 - 수요를 관망(wait and see)하다가 증설하는 보수적인 증설 전략으로 관망 기간 중 어느 정도 부족 능력은 감수해야 한다. - 사후 증설 전략은 투자 위험을 줄일 수 있으나 수요에 뒤처지며 생산능력 부족을 메우기 위한 잔업, 임시고용, 하청 등 단기적인 대안에 의존하는 경우가 많다. - 이 전략은 능력 이용률 높지만 시장 위치가 불안한 기업에서 흔히 채택된다. - 경쟁업체에서 동시에 생산능력을 증대시키게 되어 많은 잉여 능력을 유발하여 경쟁은 더울 치열해진다.
+<li><strong>사전 확장 전략</strong>(proactive capacity strategy)
 <ul>
+<li><font color="blue">재고 부족 손실 &gt; 잉어 능력 비용 x 2배</font></li>
+<li>여유 내지 초과 능력을 유지하는 비용보다 재고 부족(품질) 손실이 상당히 높을 때, 고성장 산업에서 보통 채택되는 확장주의 전략(Expansionist Strategy)</li>
+<li>수요에 앞서가는 사전 확장 전략은 규모의 경제와 학습효과가 강한 경우 생산능력 크기가 상대적으로 크므로 능력 부족으로 인한 판매기획 상실을 줄일 수 있다.</li>
+<li>이들 산업에서 여유 능력을 갖고 있는 기업은 능력이 한정된 경쟁업체들로부터 시장점유율을 잠재적으로 확보할 수 있다.</li>
+</ul></li>
+<li><strong>사후 증설 전략</strong>(Reactive Capacity Strategy)
+<ul>
+<li><font color="blue">재고 부족 손실 &lt; 잉여 능력 비용 x 0.67</font></li>
+<li>여유 능력 유지 비용이 품절 비용을 초과할 때 채택되는 전략으로 수요를 관망하다가 증설하는 보수 전략</li>
+<li>능력 이용률은 높지만 시장 위치가 불안한 기업에서 채택</li>
+<li>수요를 관망(wait and see)하다가 증설하는 보수적인 증설 전략으로 관망 기간 중 어느 정도 부족 능력은 감수해야 한다.</li>
+<li>사후 증설 전략은 투자 위험을 줄일 수 있으나 수요에 뒤처지며 생산능력 부족을 메우기 위한 잔업, 임시고용, 하청 등 단기적인 대안에 의존하는 경우가 많다.</li>
+<li>이 전략은 능력 이용률 높지만 시장 위치가 불안한 기업에서 흔히 채택된다.</li>
+<li>경쟁업체에서 동시에 생산능력을 증대시키게 되어 많은 잉여 능력을 유발하여 경쟁은 더울 치열해진다.</li>
 <li><strong>기대 가치 유지 전략</strong>(Expected Capacity Strategy)
 <ul>
 <li>기대 수요에 근접한 능력 유지(사전/사후 절충형)</li>
@@ -2413,6 +2357,7 @@ end
 </ul></li>
 </ul></li>
 </ul>
+</section>
 </section>
 <section id="전략-대안-평가" class="level4">
 <h4 class="anchored" data-anchor-id="전략-대안-평가">전략 대안 평가</h4>
