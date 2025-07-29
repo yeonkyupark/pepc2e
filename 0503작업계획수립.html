@@ -507,8 +507,6 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#작업계획-수립" id="toc-작업계획-수립" class="nav-link active" data-scroll-target="#작업계획-수립">작업계획 수립</a>
   <ul>
-  <li><a href="#목적" id="toc-목적" class="nav-link" data-scroll-target="#목적">목적</a></li>
-  <li><a href="#작업계획-수립의-계층-구조" id="toc-작업계획-수립의-계층-구조" class="nav-link" data-scroll-target="#작업계획-수립의-계층-구조">작업계획 수립의 계층 구조</a></li>
   <li><a href="#작업계획-수립-절차" id="toc-작업계획-수립-절차" class="nav-link" data-scroll-target="#작업계획-수립-절차">작업계획 수립 절차</a></li>
   <li><a href="#주요-스케줄링-방법" id="toc-주요-스케줄링-방법" class="nav-link" data-scroll-target="#주요-스케줄링-방법">5. 주요 스케줄링 방법</a></li>
   <li><a href="#작업-우선순위-규칙-예시" id="toc-작업-우선순위-규칙-예시" class="nav-link" data-scroll-target="#작업-우선순위-규칙-예시">작업 우선순위 규칙 예시</a></li>
@@ -564,10 +562,9 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="작업계획-수립" class="level2">
 <h2 class="anchored" data-anchor-id="작업계획-수립">작업계획 수립</h2>
-<p>작업계획 수립(Work Scheduling / Shop Floor Scheduling)이란, <strong>공장에서의 구체적인 생산 작업을 일정에 따라 계획하고 통제</strong>하는 활동으로, 생산 자원을 적절히 배분하여 <strong>납기 준수, 자원 활용도 향상, 생산 흐름 안정화</strong>를 달성하는 것을 목표로 한다.</p>
-<section id="목적" class="level3">
-<h3 class="anchored" data-anchor-id="목적">목적</h3>
+<p>작업계획 수립(Work Scheduling / Shop Floor Scheduling)이란 <span class="hl">공장에서의 구체적인 생산 작업을 일정에 따라 계획하고 통제하는 활동</span>으로, 생산 자원을 적절히 배분하여 <strong>납기 준수, 자원 활용도 향상, 생산 흐름 안정화</strong>를 달성하는 것을 목표로 한다.</p>
 <table class="caption-top table">
+<caption>작업계획 목</caption>
 <thead>
 <tr class="header">
 <th>목적</th>
@@ -597,14 +594,12 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
-</section>
-<section id="작업계획-수립의-계층-구조" class="level3">
-<h3 class="anchored" data-anchor-id="작업계획-수립의-계층-구조">작업계획 수립의 계층 구조</h3>
+<p>작업계획은 일정계획 계층 구조<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>에 있어 MRP 하위에서 수립하게 된다.</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 21%">
-<col style="width: 35%">
-<col style="width: 42%">
+<col style="width: 62%">
+<col style="width: 28%">
+<col style="width: 8%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -615,33 +610,37 @@ ul.task-list li input[type="checkbox"] {
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>S&amp;OP</strong></td>
-<td>수요-공급 일치 전략 계획</td>
-<td>월 단위</td>
+<td><strong>S&amp;OP (Sales and Operations Planning)</strong></td>
+<td>수요-공급 전략 수립, 조직 간 조율 및 의사결정</td>
+<td>월~분기 단위</td>
 </tr>
 <tr class="even">
-<td><strong>MPS</strong></td>
+<td><strong>APP (Aggregate Production Planning, 총괄생산계획)</strong></td>
+<td>제품군 수준에서 생산량, 인력, 재고 계획</td>
+<td>월 단위</td>
+</tr>
+<tr class="odd">
+<td><strong>MPS (Master Production Schedule)</strong></td>
 <td>최종 제품별 생산 계획</td>
 <td>주 단위</td>
 </tr>
+<tr class="even">
+<td><strong>MRP (Material Requirements Planning)</strong></td>
+<td>부품 및 자재 소요 계획</td>
+<td>주~일 단위</td>
+</tr>
 <tr class="odd">
-<td><strong>MRP</strong></td>
-<td>부품, 자재 소요 계획</td>
+<td><strong>RCCP / CRP (Rough Cut / Capacity Requirements Planning)</strong></td>
+<td>생산 자원 및 능력 검토</td>
 <td>주~일 단위</td>
 </tr>
 <tr class="even">
-<td><strong>RCCP/CRP</strong></td>
-<td>자원능력 확인</td>
-<td>주~일 단위</td>
-</tr>
-<tr class="odd">
 <td><strong>작업계획 (Detailed Scheduling)</strong></td>
-<td>작업 지시 및 작업 순서 계획</td>
+<td>작업 지시, 작업 순서 계획</td>
 <td>일/시간 단위</td>
 </tr>
 </tbody>
 </table>
-</section>
 <section id="작업계획-수립-절차" class="level3">
 <h3 class="anchored" data-anchor-id="작업계획-수립-절차">작업계획 수립 절차</h3>
 <ol type="1">
@@ -812,7 +811,7 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>납기 이행</li>
 <li>작업 진행 시간(flow time) 최소화</li>
-<li>재공작업 내지 재공품(WIP<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>) 최소화</li>
+<li>재공작업 내지 재공품(WIP<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>) 최소화</li>
 <li>기계/작업 유휴시간 최소화</li>
 </ul>
 <table class="caption-top table">
@@ -1340,7 +1339,9 @@ Petrov방법
 <section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn1"><p>Work In Progress, WIP란 생산 공정 중에 있어 아직 완성되지 않은 반제품 또는 재공품을 의미한다.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>일정계획 계층 구조<br>
+S&amp;OP (전사적 전략 계획) └── APP (총괄생산계획 - 제품군 단위) └── MPS (최종제품 생산계획) ├── MRP (자재 소요 계획) └── RCCP/CRP (자원능력 검토) └── Detailed Scheduling (작업계획)<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Work In Progress, WIP란 생산 공정 중에 있어 아직 완성되지 않은 반제품 또는 재공품을 의미한다.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 
