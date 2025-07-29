@@ -79,6 +79,35 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-diagram/mermaid-init.js"></script>
 <link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -505,14 +534,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">목차</h2>
    
   <ul>
-  <li><a href="#작업계획-수립" id="toc-작업계획-수립" class="nav-link active" data-scroll-target="#작업계획-수립">작업계획 수립</a>
-  <ul>
-  <li><a href="#작업계획-수립-절차" id="toc-작업계획-수립-절차" class="nav-link" data-scroll-target="#작업계획-수립-절차">작업계획 수립 절차</a></li>
-  <li><a href="#주요-스케줄링-방법" id="toc-주요-스케줄링-방법" class="nav-link" data-scroll-target="#주요-스케줄링-방법">5. 주요 스케줄링 방법</a></li>
-  <li><a href="#작업-우선순위-규칙-예시" id="toc-작업-우선순위-규칙-예시" class="nav-link" data-scroll-target="#작업-우선순위-규칙-예시">작업 우선순위 규칙 예시</a></li>
-  <li><a href="#고려해야-할-제약-조건" id="toc-고려해야-할-제약-조건" class="nav-link" data-scroll-target="#고려해야-할-제약-조건">고려해야 할 제약 조건</a></li>
-  <li><a href="#작업계획-수립의-성과지표-kpi" id="toc-작업계획-수립의-성과지표-kpi" class="nav-link" data-scroll-target="#작업계획-수립의-성과지표-kpi">작업계획 수립의 성과지표 (KPI)</a></li>
-  </ul></li>
+  <li><a href="#작업계획-수립" id="toc-작업계획-수립" class="nav-link active" data-scroll-target="#작업계획-수립">작업계획 수립</a></li>
   <li><a href="#sec-work-priority" id="toc-sec-work-priority" class="nav-link" data-scroll-target="#sec-work-priority">작업 우선순서</a>
   <ul>
   <li><a href="#단일설비-기준" id="toc-단일설비-기준" class="nav-link" data-scroll-target="#단일설비-기준">단일설비 기준</a></li>
@@ -596,10 +618,11 @@ ul.task-list li input[type="checkbox"] {
 </table>
 <p>작업계획은 일정계획 계층 구조<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>에 있어 MRP 하위에서 수립하게 된다.</p>
 <table class="caption-top table">
+<caption>일정계획 계층 구조</caption>
 <colgroup>
-<col style="width: 62%">
-<col style="width: 28%">
-<col style="width: 8%">
+<col style="width: 40%">
+<col style="width: 40%">
+<col style="width: 20%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -641,8 +664,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
-<section id="작업계획-수립-절차" class="level3">
-<h3 class="anchored" data-anchor-id="작업계획-수립-절차">작업계획 수립 절차</h3>
+<p>작업계획 수립 절차는 다음과 같다.</p>
 <ol type="1">
 <li><strong>작업 지시 접수</strong>
 <ul>
@@ -673,10 +695,9 @@ ul.task-list li input[type="checkbox"] {
 <li>실적 피드백 및 지연 발생 시 재계획</li>
 </ul></li>
 </ol>
-</section>
-<section id="주요-스케줄링-방법" class="level3">
-<h3 class="anchored" data-anchor-id="주요-스케줄링-방법">5. 주요 스케줄링 방법</h3>
+<p>다음은 주요 스케줄링 방법이다.</p>
 <table class="caption-top table">
+<caption>주요 스케줄링 방법법</caption>
 <colgroup>
 <col style="width: 33%">
 <col style="width: 33%">
@@ -712,10 +733,9 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
-</section>
-<section id="작업-우선순위-규칙-예시" class="level3">
-<h3 class="anchored" data-anchor-id="작업-우선순위-규칙-예시">작업 우선순위 규칙 예시</h3>
+<p>대표적인 작업 우선순위 규칙은 다음과 같다.</p>
 <table class="caption-top table">
+<caption>작업 우선순위 규칙</caption>
 <thead>
 <tr class="header">
 <th>규칙</th>
@@ -745,9 +765,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
-</section>
-<section id="고려해야-할-제약-조건" class="level3">
-<h3 class="anchored" data-anchor-id="고려해야-할-제약-조건">고려해야 할 제약 조건</h3>
+<p>다음은 작업계획에 있어 고려해야 할 제약 조건이다.</p>
 <ul>
 <li><strong>설비 가동 가능 시간</strong></li>
 <li><strong>작업자 숙련도 및 가용성</strong></li>
@@ -756,10 +774,9 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>우선 고객 및 긴급 주문 요청</strong></li>
 <li><strong>다품종 혼류생산 시 제품 전환 시간</strong></li>
 </ul>
-</section>
-<section id="작업계획-수립의-성과지표-kpi" class="level3">
-<h3 class="anchored" data-anchor-id="작업계획-수립의-성과지표-kpi">작업계획 수립의 성과지표 (KPI)</h3>
+<p>작업계획 수립 시 고려해야 할 성과지표 (KPI)이다.</p>
 <table class="caption-top table">
+<caption>작업계획 주요 성과지표표</caption>
 <thead>
 <tr class="header">
 <th>지표</th>
@@ -789,25 +806,11 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
-<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 97-1-12, 106-2-6, 121-3-6">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-기출: 97-1-12, 106-2-6, 121-3-6
-</div>
-</div>
-<div class="callout-body-container callout-body">
-
-</div>
-</div>
-</section>
 </section>
 <section id="sec-work-priority" class="level2">
 <h2 class="anchored" data-anchor-id="sec-work-priority">작업 우선순서</h2>
-<p>주문생산은 다양한 일감을 상이한 순서로 작업하므로 <font color="#245bdb">작업순서 결정과 부하 결정</font> 문제가 생산성에 영향을 미친다. 통상 공장에서는 작업 순서가 동일할 경우를 대비하여 서너개의 작업 <font color="#245bdb">우선순위 규칙(Priority rule), 작업배정규칙(Dispatching rule)을 함께 사용</font>한다.</p>
-<p><strong>우선순위 규칙 평가 기준</strong>은 다음과 같다.</p>
+<p>주문생산은 다양한 일감을 상이한 순서로 작업하므로 작업순서 결정과 부하 결정 문제가 생산성에 영향을 미친다. 통상 공장에서는 작업 순서가 동일할 경우를 대비하여 서너개의 작업 우선순위 규칙(Priority rule), 작업 배정규칙(Dispatching rule)을 함께 사용한다.</p>
+<p>일반적ㅇ니 <strong>우선순위 규칙 평가 기준</strong>은 다음과 같다.</p>
 <ul>
 <li>납기 이행</li>
 <li>작업 진행 시간(flow time) 최소화</li>
@@ -831,27 +834,28 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td>총소요시간(Makespan)</td>
-<td>일련 <font color="#245bdb">작업 수행에 소요되는 시간</font></td>
+<td>일련 작업 수행에 소요되는 시간</td>
 <td>소요시간 최소화</td>
 </tr>
 <tr class="even">
 <td>작업진행시간(Flow time)</td>
-<td><font color="#245bdb">특정 작업을 시작해서 끝나는 시간</font></td>
+<td>특정 작업을 시작해서 끝나는 시간</td>
 <td>평균흐름 시간 최소화</td>
 </tr>
 <tr class="odd">
 <td>지연시간(Tardiness)</td>
-<td>그 작업이 <font color="#245bdb">납기를 초과한 시간</font> 분량</td>
+<td>그 작업이 납기를 초과한 시간 분량</td>
 <td>작업지연과 최대지연 최소화</td>
 </tr>
 <tr class="even">
 <td>늦은시간(Lateness)</td>
-<td><font color="#245bdb">납기와 작업 완료 시간 차이</font></td>
+<td>납기와 작업 완료 시간 차이</td>
 <td>지각시간 최소화</td>
 </tr>
 </tbody>
 </table>
-<p>작업순서 결정하는 방법은 크게 지역특성을 고려한 방법과 전체특성을 고려한 방법이 있다. <strong>지역특성 순위규칙</strong>(local sequencing rule)은 <font color="blue">현재 작업장에서 주어진 상황을 고려</font>하여 작업순서를 결정하는 방식이고 <strong>전체특성 순위규칙</strong>(global sequencing rule)은 <font color="blue">후속 잔여 작업장 특성까지 고려</font>하여 작업우선순위를 결정하는 방식이다.</p>
+<p>작업순서 결정하는 방법은 크게 지역특성을 고려한 방법과 전체특성을 고려한 방법이 있다. <span class="hl">지역특성 순위규칙(local sequencing rule)은 현재 작업장에서 주어진 상황을 고려하여 작업순서를 결정</span>하는 방식이고 <span class="hl">전체특성 순위규칙(global sequencing rule)은 후속 잔여 작업장 특성까지 고려하여 작업우선순위를 결정</span>하는 방식이다.</p>
+<center>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
@@ -864,38 +868,40 @@ ul.task-list li input[type="checkbox"] {
     12[최소작업시간 우선]
     13[최소납기우선]
     end
+
     subgraph s02[전체특성 순위규칙]
     direction LR
     21[긴급률법]
     22[최소여유시간 우선]
     23["잔여작업&lt;br&gt;최소여유시간 우선"]
     end
-  s00[작업 우선순위] --- s01 &amp; s02
+
+    s00[작업 우선순위] --- s01 &amp; s02
 </pre>
 </div>
 <p></p></figure><p></p>
 </div>
 </div>
 </div>
+</center>
 <p>작업순서를 단일 설비냐 다중 설비냐에 따라 결정 방식을 적절히 선택한다.</p>
 <section id="단일설비-기준" class="level3">
 <h3 class="anchored" data-anchor-id="단일설비-기준">단일설비 기준</h3>
-<p><font color="blue"><strong>단일 설비 일정 계획 기준</strong></font> 다음과 같은 작업 순서 결정 방식이 있다.</p>
-<p><strong>작업순서 결정 방법</strong></p>
+<p><strong>단일 설비 일정 계획 기준</strong> 다음과 같은 작업 순서 결정 방식이 있다.</p>
 <ul>
 <li><strong>선착순 우선</strong>(FCFS, first come first served): 도착 순서에 따라 처리</li>
 <li><strong>최단 처리 시간법</strong>(SPT, shortest process time): 처리 시간이 짧은 작업부터 실행</li>
 <li><strong>납기 우선법</strong>(EDD, earliest due date): 납기일이 도래하는 작업부터 실행</li>
+<li><strong>최소 여유 시간법</strong>(s): 납기일까지 남은 여유시간이 가장 짧은 작업부터 진행</li>
 <li><strong>긴급률 법</strong>(CR, critical ratio):
 <ul>
-<li>최종 잔여일까지 남은 시간과 작업을 처리하기 위해 소요되는 시간 간 비율을 나타내며 비율이 작은 작업부터 처리하는 규칙</li>
-<li>CR이 1보다 작으면 작업이 지연된 상태임</li>
+<li><span class="math inline">\(CR = 잔여납기일수 / 잔여작업일수\)</span>, 즉 최종 잔여일까지 남은 시간과 작업을 처리하기 위해 소요되는 시간 간 비율을 나타내며 비율이 작은 작업부터 처리하는 규칙</li>
+<li><strong>CR이 1보다 작으면(CR &lt; 1) 작업이 지연된 상태임</strong></li>
 </ul></li>
-<li><strong>최소 여유 시간법</strong>(s): 납기일까지 남은 여유시간이 가장 짧은 작업부터 진행</li>
 <li><strong>잔여 작업 최소 여유시간 우선 처리법</strong>(STP/OP):
 <ul>
-<li>(최종납기 잔여작업 처리 소요시간)/(잔여작업일수)</li>
-<li>잔여작업 평균유휴시간 크기를 산출하여 이 값이 가장 작은 것부터 처리함, 작업이 지연되는 경우 STP/OP 값이 음(-) 값을 가짐</li>
+<li><span class="math inline">\(잔여 작업 최소 여유시간 = \text{(최종납기 잔여작업 처리 소요시간)}/(잔여작업일수)\)</span></li>
+<li>잔여작업 평균유휴시간 크기를 산출하여 이 값이 가장 작은 것부터 처리함, <strong>작업이 지연되는 경우 STP/OP 값이 음(-) 값을 가짐</strong></li>
 </ul></li>
 </ul>
 <div class="callout callout-style-default callout-important no-icon callout-titled" title="작업우선순위 규칙">
@@ -1069,11 +1075,11 @@ ul.task-list li input[type="checkbox"] {
 <table class="caption-top table">
 <caption>우선순위 규칙별 작업 평가</caption>
 <colgroup>
-<col style="width: 23%">
-<col style="width: 27%">
-<col style="width: 19%">
 <col style="width: 15%">
-<col style="width: 13%">
+<col style="width: 15%">
+<col style="width: 30%">
+<col style="width: 30%">
+<col style="width: 10%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -1120,25 +1126,12 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="다중설비-기준" class="level3">
 <h3 class="anchored" data-anchor-id="다중설비-기준">다중설비 기준</h3>
-<p><font color="blue"><strong>n개 작업을 2대 기계에서 작업할 경우</strong></font> 우선 순위 규칙은 <a href="#sec-johnson-rule" class="quarto-xref"><span>존슨법</span></a>(Johnson’s rule)을 적용할 수 있다.</p>
-<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 100-3-5, 103-1-11">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-기출: 100-3-5, 103-1-11
-</div>
-</div>
-<div class="callout-body-container callout-body">
-
-</div>
-</div>
+<p><strong>n개 작업을 2대 기계에서 작업할 경우</strong> 우선 순위 규칙은 존슨법(Johnson’s rule)을 적용할 수 있다.</p>
 <section id="sec-johnson-rule" class="level4">
 <h4 class="anchored" data-anchor-id="sec-johnson-rule">존슨법</h4>
 <p>존슨법은 두 개 사업장을 거치는 경우 또는 2대 기계에서 작업을 할 경우 우선순위를 결정하는 방법이다.</p>
 <p>다음과 같은 가정과 기준으로 수행한다.</p>
-<ul>
+<ol type="1">
 <li>각 작업이 동일한 순서로 두 개 작업장을 거침
 <ul>
 <li>작업장(기계)1 → 작업장(기계)2</li>
@@ -1147,7 +1140,7 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>두 작업장 총유휴 시간 최소화</li>
 </ul></li>
-</ul>
+</ol>
 <p><strong>우선 순위 규칙</strong>은 다음과 같다.</p>
 <ol type="1">
 <li>작업장별 작업 시간치를 표에 기입</li>
@@ -1159,6 +1152,34 @@ ul.task-list li input[type="checkbox"] {
 <li>위 2.에서 순위가 결정된 작업은 고려 대상에서 제외</li>
 <li>모든 작업 순서가 결정될 때까지 2와 3을 반복</li>
 </ol>
+<center>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[시작] --&gt; B[작업장별 작업 시간치 입력]
+    B --&gt; C[남은 작업 중&lt;br&gt;가장 짧은 작업시간 찾기]
+    C --&gt; D{작업장1 vs 작업장2&lt;br&gt;최소 작업시간 위치 확인}
+    
+    D -- 작업장1 --&gt; E[해당 작업을&lt;br&gt;가장 앞 순위에 배치]
+    D -- 작업장2 --&gt; F[해당 작업을&lt;br&gt;가장 뒤 순위에 배치]
+
+    E --&gt; G[작업을 고려 대상에서 제외]
+    F --&gt; G
+
+    G --&gt; H{모든 작업의 순서 결정 완료?}
+    H -- 아니오 --&gt; C
+    H -- 예 --&gt; I[작업 순서 확정]
+    I --&gt; J[종료]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</center>
 <table class="caption-top table">
 <thead>
 <tr class="header">
