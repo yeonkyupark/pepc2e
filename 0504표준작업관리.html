@@ -622,19 +622,6 @@ window.Quarto = {
 </header>
 
 
-<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 121-4-4, 127-2-2, 130-2-5">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-기출: 121-4-4, 127-2-2, 130-2-5
-</div>
-</div>
-<div class="callout-body-container callout-body">
-
-</div>
-</div>
 <section id="sec-standard-time" class="level2">
 <h2 class="anchored" data-anchor-id="sec-standard-time">표준시간</h2>
 <p><strong>표준시간</strong>(ST, standard time)이란</p>
@@ -647,9 +634,9 @@ window.Quarto = {
 </ul>
 <p>필요한 시간을 말한다.</p>
 <p>표준시간은 <strong>정미작업시간</strong>(NT, normal time)과 <strong>여유시간</strong>(AT, allowance time)으로 구성된다.</p>
-<p><strong>정미(작업)시간</strong>은 <strong>레이팅</strong>(rating 또는 normalizing, 정상화)을 반영한다. 여기서 레이팅이란 <font color="blue">관측대상 작업속도와 정상적인 속도를 비교, 판단하여 관측시간치를 수정</font>하는 것이다. 레이팅은 시간분석자 자격요건 일환으로 여러 가지가 개발되어 운용되고 있다.</p>
+<p><strong>정미(작업)시간</strong>은 <strong>레이팅</strong>(rating 또는 normalizing, 정상화)을 반영한다. 여기서 <span class="hl">레이팅이란 관측대상 작업속도와 정상적인 속도를 비교, 판단하여 관측시간치를 수정</span>하는 것이다. 레이팅은 시간분석자 자격요건 일환으로 여러 가지가 개발되어 운용되고 있다.</p>
 <blockquote class="blockquote">
-<p><span id="eq-st"><span class="math display">\[표준시간(ST) = 정미시간(NT) + 여유시간(AT) = 관측시간 \times (1+레이팅) + 여유시간 \tag{14.1}\]</span></span></p>
+<p><span class="math inline">\(표준시간(ST) = 정미시간(NT) + 여유시간(AT) = 관측시간 \times (1+레이팅) + 여유시간\)</span> {#eq-st}</p>
 </blockquote>
 <section id="표준시간" class="level3">
 <h3 class="anchored" data-anchor-id="표준시간">표준시간</h3>
@@ -2588,11 +2575,11 @@ end
 <p>여유율은 외경법과 내경법으로 구분하여 계산할 수 있다.</p>
 <p><strong>외경법</strong></p>
 <ul>
-<li><strong>정미시간에 대한 비율</strong>을 여유율로 사용함 <span id="eq-ext-at"><span class="math display">\[여유율(A) = (여유시간/정미시간)\times100 = (AT/NT)\times100(\%) \tag{14.2}\]</span></span></li>
+<li><strong>정미시간에 대한 비율</strong>을 여유율로 사용함 <span id="eq-ext-at"><span class="math display">\[여유율(A) = (여유시간/정미시간)\times100 = (AT/NT)\times100(\%) \tag{14.1}\]</span></span></li>
 </ul>
 <p><strong>내경법</strong></p>
 <ul>
-<li><strong>실동시간에 대한 비율</strong>을 여유율로 사용함 <span class="math display">\[여유율(A) = (여유시간/실동시간)\times 100 \]</span> <span id="eq-int-at"><span class="math display">\[= \frac{여유시간}{(정미시간+여유시간)}\times100 = \frac{AT}{NT+AT}\times100(\%) \tag{14.3}\]</span></span></li>
+<li><strong>실동시간에 대한 비율</strong>을 여유율로 사용함 <span class="math display">\[여유율(A) = (여유시간/실동시간)\times 100 \]</span> <span id="eq-int-at"><span class="math display">\[= \frac{여유시간}{(정미시간+여유시간)}\times100 = \frac{AT}{NT+AT}\times100(\%) \tag{14.2}\]</span></span></li>
 </ul>
 <div class="callout callout-style-default callout-important no-icon callout-titled" title="내경법과 외경법">
 <div class="callout-header d-flex align-content-center">
@@ -2614,8 +2601,8 @@ end
 <p><strong>평균관측치</strong> = (2.54 + 2.57 + … + 2.60)/10 = 2.61(분)</p>
 <p><strong>정미시간</strong> = 평균관측치 x 레이팅 계수 = 2.61 x 0.85 = 2.22(분)</p>
 <ul>
-<li><p><strong>외경법</strong>(<a href="#eq-ext-at" class="quarto-xref">수식&nbsp;<span>14.2</span></a> 참고) 표준시간 = <span class="math inline">\(정미시간 \times (1+여유율) = 2.22 \times (1+0.25) = 2.77\)</span>(분)</p></li>
-<li><p><strong>내경법</strong>(<a href="#eq-int-at" class="quarto-xref">수식&nbsp;<span>14.3</span></a> 참고) 표준시간 = <span class="math inline">\(정미시간 \times(\frac{1}{1-여유율}) = 2.22 \times (\frac{1}{1-0.25}) = 2.96\)</span>(분)</p></li>
+<li><p><strong>외경법</strong>(<a href="#eq-ext-at" class="quarto-xref">수식&nbsp;<span>14.1</span></a> 참고) 표준시간 = <span class="math inline">\(정미시간 \times (1+여유율) = 2.22 \times (1+0.25) = 2.77\)</span>(분)</p></li>
+<li><p><strong>내경법</strong>(<a href="#eq-int-at" class="quarto-xref">수식&nbsp;<span>14.2</span></a> 참고) 표준시간 = <span class="math inline">\(정미시간 \times(\frac{1}{1-여유율}) = 2.22 \times (\frac{1}{1-0.25}) = 2.96\)</span>(분)</p></li>
 </ul>
 </div>
 </div>
