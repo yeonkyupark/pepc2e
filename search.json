@@ -801,7 +801,7 @@
     "href": "0503작업계획수립.html#footnotes",
     "title": "작업계획 수립",
     "section": "",
-    "text": "일정계획 계층 구조\nS&OP (전사적 전략 계획) └── APP (총괄생산계획 - 제품군 단위) └── MPS (최종제품 생산계획) ├── MRP (자재 소요 계획) └── RCCP/CRP (자원능력 검토) └── Detailed Scheduling (작업계획)↩︎\nWork In Progress, WIP란 생산 공정 중에 있어 아직 완성되지 않은 반제품 또는 재공품을 의미한다.↩︎",
+    "text": "일정계획 계층 구조\nS&OP (전사적 전략 계획)\n└── APP (총괄생산계획 - 제품군 단위)\n└── MPS (최종제품 생산계획)\n├── MRP (자재 소요 계획)\n└── RCCP/CRP (자원능력 검토)\n└── Detailed Scheduling (작업계획)↩︎\nWork In Progress, WIP란 생산 공정 중에 있어 아직 완성되지 않은 반제품 또는 재공품을 의미한다.↩︎",
     "crumbs": [
       "05. 공정관리",
       "<span class='chapter-number'>13</span>  <span class='chapter-title'>작업계획 수립</span>"
