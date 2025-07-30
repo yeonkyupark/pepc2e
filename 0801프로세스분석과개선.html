@@ -538,11 +538,8 @@ window.Quarto = {
   <li><a href="#sec-line-balancing" id="toc-sec-line-balancing" class="nav-link" data-scroll-target="#sec-line-balancing">라인 밸런싱</a></li>
   <li><a href="#sec-exchange-die" id="toc-sec-exchange-die" class="nav-link" data-scroll-target="#sec-exchange-die">준비교체 개선활동</a></li>
   <li><a href="#sec-less-engineering" id="toc-sec-less-engineering" class="nav-link" data-scroll-target="#sec-less-engineering">Less Engineering</a></li>
-  <li><a href="#정-5s" id="toc-정-5s" class="nav-link" data-scroll-target="#정-5s">3정 5S</a>
-  <ul>
-  <li><a href="#sec-3stable" id="toc-sec-3stable" class="nav-link" data-scroll-target="#sec-3stable">3정(三定)</a></li>
-  <li><a href="#sec-5s" id="toc-sec-5s" class="nav-link" data-scroll-target="#sec-5s">5S 활동</a></li>
-  </ul></li>
+  <li><a href="#sec-ecrs" id="toc-sec-ecrs" class="nav-link" data-scroll-target="#sec-ecrs">개선 4원칙</a></li>
+  <li><a href="#정-5s" id="toc-정-5s" class="nav-link" data-scroll-target="#정-5s">3정 5S</a></li>
   <li><a href="#sec-ref-0801" id="toc-sec-ref-0801" class="nav-link" data-scroll-target="#sec-ref-0801">참고자료</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/yeonkyupark/pepc2e/edit/main/0801프로세스분석과개선.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
@@ -595,33 +592,20 @@ window.Quarto = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/flow_chart_symbols.png" class="img-fluid figure-img"></p>
-<figcaption>공정기호<br>https://youtu.be/RXpHGa9ToAE?si=DWZPs-bZQBpXmd3P</figcaption>
+<figcaption>공정기호 - https://youtu.be/RXpHGa9ToAE?si=DWZPs-bZQBpXmd3P</figcaption>
 </figure>
 </div>
 <p>아래는 공정기호를 이용한 공정도표 작성 예제이다.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/process_flow_chart.png" class="img-fluid figure-img"></p>
-<figcaption>공정도표<br>http://business.chosun.ac.kr</figcaption>
+<figcaption>공정도표 - http://business.chosun.ac.kr</figcaption>
 </figure>
-</div>
-<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 112-2-6">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-기출: 112-2-6
-</div>
-</div>
-<div class="callout-body-container callout-body">
-
-</div>
 </div>
 </section>
 <section id="sec-line-balancing" class="level2">
 <h2 class="anchored" data-anchor-id="sec-line-balancing">라인 밸런싱</h2>
-<p><strong>라인 밸런싱</strong>은 공정 분석에 있어 중요한 요소이다. <font color="blue">작업장 내 여러 작업 사이에 균형을 맞추는 활동</font>이다. 이는 각 작업이 동일한 시간 동안 수행되도록 하여 전체 라인 효율성을 높이는데 목표를 두고 있다. 라인 밸런싱을 통해 <font color="blue">생산 시간을 줄이고 병목 현상을 방지하며 자원 활용을 최적화</font>할 수 있다.</p>
+<p><strong>라인 밸런싱</strong>은 공정 분석에 있어 중요한 요소이다. <span class="hl">작업장 내 여러 작업 사이에 균형을 맞추는 활동</span>이다. 이는 각 작업이 동일한 시간 동안 수행되도록 하여 전체 라인 효율성을 높이는데 목표를 두고 있다. 라인 밸런싱을 통해 <font color="blue">생산 시간을 줄이고 병목 현상을 방지하며 자원 활용을 최적화</font>할 수 있다.</p>
 <p>라인 밸런스 효율은 다음과 같이 계산할 수 있다.</p>
 <p><span id="eq-line-balance"><span class="math display">\[
 E_b = \frac{\sum{T_i}}{n \times c_T}
@@ -712,69 +696,47 @@ E_b = \frac{\sum{T_i}}{n \times c_T} = \frac{236}{10 \times 32} \times 100 = 73.
 \]</span></p>
 </div>
 </div>
-<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 97-1-1, 109-2-5, 130-2-2">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-기출: 97-1-1, 109-2-5, 130-2-2
-</div>
-</div>
-<div class="callout-body-container callout-body">
-
-</div>
-</div>
 </section>
 <section id="sec-exchange-die" class="level2">
 <h2 class="anchored" data-anchor-id="sec-exchange-die">준비교체 개선활동</h2>
-<p><strong>준비교체 시간</strong>이란 <font color="blue">현 제품 생산 종료 시점으로부터 다음 제품으로 교체/조정을 하여 완전히 양품이 생산되기까지의 시간</font>을 말한다. 치공구 해체, 청소, 다음 제품에 사용할 치공구 준비, 금형류 준비, 세팅, 시가공, 조정, 측정 시간 등을 포함한다.</p>
-<dl>
-<dt>준비교체 시간 단축 필요성</dt>
-<dd>
-시장 요구에 맞춰 다품종화 되면서 가동률이 저하되는 추이를 보였다. 빈번한 기종 교체에 대응 및 준비 교체 시간 단축으로 가동률 향상을 위해 준비교체 시간 개선이 필요하게 되었다.
-</dd>
-</dl>
-<p>준비교체시 발생하는 3대 낭비는 다음과 같다.</p>
+<p><strong>준비교체 시간</strong>이란 <span class="hl">현 제품 생산 종료 시점으로부터 다음 제품으로 교체/조정을 하여 완전한 양품이 생산되기까지의 시간</span>을 말한다. 치공구 해체, 청소, 다음 제품에 사용할 치공구 준비, 금형류 준비, 세팅, 시가공, 조정, 측정 시간 등을 포함한다.</p>
+<p>시장 요구에 맞춰 다품종화 되면서 가동률이 저하되는 추이를 보였다. 그로 인해 기종 교체에 대응 및 준비 교체 시간 단축으로 가동률 향상을 위해 준비교체 시간 개선이 필요하게 되었다.</p>
+<p>준비교체 시 발생하는 3대 낭비는 다음과 같다.</p>
+<center>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
 <p></p><figure class="figure"><p></p>
 <div>
 <pre class="mermaid mermaid-js">flowchart TB
-0[준비작업 낭비] --- 1[내준비교체&lt;br&gt;작업 낭비] &amp; 2[외준비교체&lt;br&gt;작업 낭비]
-1 --- 11[**교환 낭비**] &amp; 12[**조정 낭비**]
-2 --- 21[사전 **준비 낭비**] &amp; 22[후처리 낭비]
+    0[준비작업 낭비] --- 1[내준비교체&lt;br&gt;작업 낭비] &amp; 2[외준비교체&lt;br&gt;작업 낭비]
+    1 --- 11[**교환 낭비**] &amp; 12[**조정 낭비**]
+    2 --- 21[사전 **준비 낭비**] &amp; 22[후처리 낭비]
 </pre>
 </div>
 <p></p><figcaption> 준비교체 낭비</figcaption> </figure><p></p>
 </div>
 </div>
 </div>
+</center>
 <p>내준비 시 <strong>교환 낭비</strong>, <strong>조정 낭비</strong>가, 외준비 시 <strong>준비 낭비</strong> 발생한다.</p>
-<dl>
-<dt>교환 낭비</dt>
-<dd>
+<ul>
+<li>교환 낭비
 <ul>
 <li>치공구 교환, Press 금형/성형 등 금형 준비, Drill 등 교환</li>
 <li>조립라인의 조립품이나 부품 교체, 가공라인의 재료 교체 준비</li>
-</ul>
-</dd>
-<dt>조정 낭비</dt>
-<dd>
+</ul></li>
+<li>조정 낭비
 <ul>
 <li>정밀 절삭 가공이나 화학 장치 등에서 기준을 변경 및 조정하는 작업</li>
 <li>준비 작업자 테크닉을 발휘할 수 있는 조정 작업</li>
-</ul>
-</dd>
-<dt>준비 낭비</dt>
-<dd>
+</ul></li>
+<li>준비 낭비
 <ul>
 <li>생산 시작 전에 여러 가지 준비 작업</li>
 <li>작업자나 기계 준비, 도면 확인, 청소 등 후처리를 포함</li>
+</ul></li>
 </ul>
-</dd>
-</dl>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="준비시간">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -785,20 +747,10 @@ E_b = \frac{\sum{T_i}}{n \times c_T} = \frac{236}{10 \times 32} \times 100 = 73.
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<dl>
-<dt>내준비 시간</dt>
-<dd>
 <ul>
-<li>현재 가공이 끝날 때부터 다음 가공을 위해 양품이 나올 때까지의 시간으로 기계가 가공물에 부가가치를 생성하지 않는 시간</li>
+<li><p>내준비 시간 현재 가공이 끝날 때부터 다음 가공을 위해 양품이 나올 때까지의 시간으로 기계가 가공물에 부가가치를 생성하지 않는 시간</p></li>
+<li><p>외준비 시간 기계가 가동하고 있을 때 기계 밖에서 준비 교체를 위한 사전 준비, 후처리를 하는 시간</p></li>
 </ul>
-</dd>
-<dt>외준준비 시간</dt>
-<dd>
-<ul>
-<li>기계가 가동하고 있을 때 기계 밖에서 준비 교체를 위한 사전 준비, 후처리를 하는 시간</li>
-</ul>
-</dd>
-</dl>
 </div>
 </div>
 <div class="quarto-figure quarto-figure-center">
@@ -807,9 +759,7 @@ E_b = \frac{\sum{T_i}}{n \times c_T} = \frac{236}{10 \times 32} \times 100 = 73.
 <figcaption>준비교체 시간 개선</figcaption>
 </figure>
 </div>
-<dl>
-<dt>개선 절차</dt>
-<dd>
+<p>개선 절차는다음과 같다.</p>
 <ol type="1">
 <li>현상 파악
 <ul>
@@ -833,20 +783,13 @@ E_b = \frac{\sum{T_i}}{n \times c_T} = \frac{236}{10 \times 32} \times 100 = 73.
 <li>외준비 시간도 단축하여 준비교체 총 시간을 단축한다.</li>
 </ul></li>
 </ol>
-</dd>
-</dl>
 <p>준비교체 시간 단축은 로트 사이즈를 작게 하여 고객 요구에 맞는 생산 진행으로 재고를 줄이고 리드타임을 단축하여 시장 경쟁력을 향상시킬 수 있다.</p>
-<dl>
-<dt>단축효과</dt>
-<dd>
 <ul>
 <li><strong>재공품</strong>(WIP, Work In Process) 최소화 - 대기시간 단축</li>
 <li><strong>생산 소요시간</strong>(Lead time) 단축 - Lead time = 가공 + 정체시간</li>
 <li><strong>가동률 및 생산성</strong> 향상(준비 교체 유실 감소)</li>
 </ul>
-</dd>
-<dt>교체준비 시간 단축 추진 절차</dt>
-<dd>
+<p>교체준비 시간 단축 추진 절차는 다음과 같다.</p>
 <ol type="1">
 <li>준비 시간 실태 파악</li>
 <li>준비 개선 추진팀 편성</li>
@@ -856,8 +799,6 @@ E_b = \frac{\sum{T_i}}{n \times c_T} = \frac{236}{10 \times 32} \times 100 = 73.
 <li>개선 실시</li>
 <li>평가결과 횡전재</li>
 </ol>
-</dd>
-</dl>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="SMED">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -946,140 +887,40 @@ SMED
 </section>
 <section id="sec-less-engineering" class="level2">
 <h2 class="anchored" data-anchor-id="sec-less-engineering">Less Engineering</h2>
-<p>Less Engineering은 <font color="blue">불필요한 엔지니어링 작업을 최소화하고, 꼭 필요한 기술적 개선에 집중하는 접근 방식</font>이다. Lean Manufacturing과 Agile 개발 원칙에서 파생된 개념으로, 복잡성을 줄이고 낭비를 최소화하여 효율적인 제품 개발 및 생산을 목표로 한다.</p>
-<dl>
-<dt>핵심 원칙</dt>
-<dd>
+<p>Less Engineering은 <span class="hl">불필요한 엔지니어링 작업을 최소화하고, 꼭 필요한 기술적 개선에 집중하는 접근 방식</span>이다. Lean Manufacturing과 Agile 개발 원칙에서 파생된 개념으로, 복잡성을 줄이고 낭비를 최소화하여 효율적인 제품 개발 및 생산을 목표로 한다.</p>
+<p>핵심 원칙은 다음과 같다.</p>
 <ul>
-<li><dl>
-<dt><strong>필요한 것만 설계</strong></dt>
-<dd>
-과도한 기능이나 불필요한 설계를 배제하고, 최소한의 엔지니어링으로 목표 달성
-</dd>
-</dl></li>
-<li><dl>
-<dt><strong>단순한 해결책 우선</strong></dt>
-<dd>
-복잡한 설계보다 검증된 간단한 솔루션을 먼저 고려
-</dd>
-</dl></li>
-<li><dl>
-<dt><strong>반복적 개선(Iterative Improvement)</strong></dt>
-<dd>
-한 번에 완벽한 설계를 만들려 하지 않고, 지속적인 피드백을 통해 점진적 개선
-</dd>
-</dl></li>
-<li><dl>
-<dt><strong>표준화된 설계 활용</strong></dt>
-<dd>
-기존의 표준 부품과 검증된 설계를 적극 활용하여 개발 속도를 높이고 오류를 줄임
-</dd>
-</dl></li>
-<li><dl>
-<dt><strong>필요한 부분에만 엔지니어링 자원 집중</strong></dt>
-<dd>
-가치가 높은 영역에 엔지니어링 리소스를 집중 배치
-</dd>
-</dl></li>
+<li><strong>필요한 것만 설계</strong><br>
+과도한 기능이나 불필요한 설계를 배제하고, 최소한의 엔지니어링으로 목표 달성<br>
+</li>
+<li><strong>단순한 해결책 우선</strong><br>
+복잡한 설계보다 검증된 간단한 솔루션을 먼저 고려<br>
+</li>
+<li><strong>반복적 개선(Iterative Improvement)</strong><br>
+한 번에 완벽한 설계를 만들려 하지 않고, 지속적인 피드백을 통해 점진적 개선<br>
+</li>
+<li><strong>표준화된 설계 활용</strong><br>
+기존의 표준 부품과 검증된 설계를 적극 활용하여 개발 속도를 높이고 오류를 줄임<br>
+</li>
+<li><strong>필요한 부분에만 엔지니어링 자원 집중</strong><br>
+가치가 높은 영역에 엔지니어링 리소스를 집중 배치</li>
 </ul>
-</dd>
-<dt>적용 효과</dt>
-<dd>
+<p>Less Engineering 적용 시 다음과 같은 효과를 기대할 수 있다.</p>
 <ul>
-<li><dl>
-<dt><strong>개발 속도 향상</strong></dt>
-<dd>
-불필요한 작업을 줄여 제품 개발 및 개선 시간을 단축
-</dd>
-</dl></li>
-<li><dl>
-<dt><strong>비용 절감</strong></dt>
-<dd>
-불필요한 연구, 개발, 프로토타이핑 비용 절감
-</dd>
-</dl></li>
-<li><dl>
-<dt><strong>유지보수 용이</strong></dt>
-<dd>
-단순한 설계는 문제 해결과 유지보수를 쉽게 함
-</dd>
-</dl></li>
-<li><dl>
-<dt><strong>생산 효율 향상</strong></dt>
-<dd>
-제조 공정에서도 불필요한 복잡성을 제거하여 생산성을 높임
-</dd>
-</dl></li>
+<li><strong>개발 속도 향상</strong><br>
+불필요한 작업을 줄여 제품 개발 및 개선 시간을 단축<br>
+</li>
+<li><strong>비용 절감</strong><br>
+불필요한 연구, 개발, 프로토타이핑 비용 절감<br>
+</li>
+<li><strong>유지보수 용이</strong><br>
+단순한 설계는 문제 해결과 유지보수를 쉽게 함<br>
+</li>
+<li><strong>생산 효율 향상</strong><br>
+제조 공정에서도 불필요한 복잡성을 제거하여 생산성을 높임</li>
 </ul>
-</dd>
-</dl>
-<p>Less Engineering은 <font color="blue">“적을수록 더 좋다(Less is More)”</font>는 원칙을 따르며, Lean Thinking과 Agile 개발 방식에서 중요한 역할을 한다.</p>
-<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 130-1-12">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-기출: 130-1-12
-</div>
-</div>
-<div class="callout-body-container callout-body">
-
-</div>
-</div>
-<div id="nte-ecrs" class="callout callout-style-default callout-note no-icon callout-titled" title="개선 4원칙(ECRS)">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note&nbsp;23.1 개선 4원칙(ECRS)
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>ECRS는 효율성 개선을 위한 4가지 기본 원칙으로 다음과 같은 개념을 포함한다.</p>
-<ol type="1">
-<li><dl>
-<dt><strong>제거 (Eliminate)</strong></dt>
-<dd>
-<ul>
-<li>불필요한 재고를 줄이기 위해 적시 생산 시스템(JIT)을 도입한다.</li>
-<li>작업장에서 불필요한 이동을 줄이기 위해 작업 공간을 최적화한다.</li>
-<li>생산 과정에서 발생하는 비효율적인 단계를 제거한다.</li>
-</ul>
-</dd>
-</dl></li>
-<li><dl>
-<dt><strong>병합 (Combine)</strong></dt>
-<dd>
-<ul>
-<li>유사한 작업을 한 번에 처리하도록 작업 순서를 병합한다.</li>
-<li>기계 및 장비를 다기능화하여 다양한 작업을 한 번에 처리한다.</li>
-</ul>
-</dd>
-</dl></li>
-<li><dl>
-<dt><strong>재배치 (Rearrange)</strong></dt>
-<dd>
-<ul>
-<li>작업 순서를 분석하고 최적의 순서로 재배치하여 작업 시간을 단축한다.</li>
-<li>생산 라인을 재설계하여 물류 흐름을 개선한다.</li>
-</ul>
-</dd>
-</dl></li>
-<li><dl>
-<dt><strong>단순화 (Simplify)</strong></dt>
-<dd>
-<ul>
-<li>복잡한 작업을 간소화하여 작업자의 업무 부담을 줄인다.</li>
-<li>표준 작업 절차를 도입하여 일관성을 높이고 오류를 줄인다.</li>
-</ul>
-</dd>
-</dl></li>
-</ol>
-</div>
-</div>
-<p>다음은 Less Engineering 유형이다.</p>
+<p>Less Engineering은 “적을수록 더 좋다(Less is More)”는 원칙을 따르며, Lean Thinking과 Agile 개발 방식에서 중요한 역할을 한다.</p>
+<p>다음은 Less Engineering 대표적인 유형이다.</p>
 <ul>
 <li><strong>Walk Less</strong> - 보행 낭비 없애기</li>
 <li><strong>Search Less</strong> - 찾는 낭비 없애기</li>
@@ -1090,6 +931,7 @@ Note&nbsp;23.1 개선 4원칙(ECRS)
 <li><strong>Dust Less</strong> - 분진방지, 먼지 발생 원인 없애기</li>
 <li><strong>Rough Motion Less</strong> - 불필요한 동작 없애기</li>
 </ul>
+<p>다음은 Less Engineering을 4M 기준으로 구분한 예제이다.</p>
 <table class="caption-top table">
 <caption>4M과 Less Engineering</caption>
 <colgroup>
@@ -1133,6 +975,7 @@ Note&nbsp;23.1 개선 4원칙(ECRS)
 </tr>
 </tbody>
 </table>
+<p>그외 Less Engineering을 적용한 사례이다</p>
 <table class="caption-top table">
 <caption>Less Engineering 사례</caption>
 <colgroup>
@@ -1176,16 +1019,39 @@ Note&nbsp;23.1 개선 4원칙(ECRS)
 </tbody>
 </table>
 <p>Less Engineering은 <strong>불필요한 엔지니어링을 줄이고 핵심 요소에 집중하여 효율성을 극대화하는 전략</strong>이다.</p>
-<div class="caalout-tip" data-icon="false" title="기출: 118-1-12, 130-3-2">
-
-</div>
+</section>
+<section id="sec-ecrs" class="level2">
+<h2 class="anchored" data-anchor-id="sec-ecrs">개선 4원칙</h2>
+<p>ECRS는 효율성 개선을 위한 4가지 기본 원칙으로 다음과 같은 개념을 포함한다.</p>
+<ol type="1">
+<li><strong>제거 (Eliminate)</strong>
+<ul>
+<li>불필요한 재고를 줄이기 위해 적시 생산 시스템(JIT)을 도입한다.</li>
+<li>작업장에서 불필요한 이동을 줄이기 위해 작업 공간을 최적화한다.</li>
+<li>생산 과정에서 발생하는 비효율적인 단계를 제거한다.</li>
+</ul></li>
+<li><strong>병합 (Combine)</strong>
+<ul>
+<li>유사한 작업을 한 번에 처리하도록 작업 순서를 병합한다.</li>
+<li>기계 및 장비를 다기능화하여 다양한 작업을 한 번에 처리한다.</li>
+</ul></li>
+<li><strong>재배치 (Rearrange)</strong>
+<ul>
+<li>작업 순서를 분석하고 최적의 순서로 재배치하여 작업 시간을 단축한다.</li>
+<li>생산 라인을 재설계하여 물류 흐름을 개선한다.</li>
+</ul></li>
+<li><strong>단순화 (Simplify)</strong>
+<ul>
+<li>복잡한 작업을 간소화하여 작업자의 업무 부담을 줄인다.</li>
+<li>표준 작업 절차를 도입하여 일관성을 높이고 오류를 줄인다.</li>
+</ul></li>
+</ol>
 </section>
 <section id="정-5s" class="level2">
 <h2 class="anchored" data-anchor-id="정-5s">3정 5S</h2>
-<p><strong>3정 5S</strong>는 제조업 및 생산 관리에서 <font color="blue">작업 환경을 정리하고 효율성을 극대화하는 기본 개념</font>으로, <strong>정리(整理), 정돈(整頓), 청소(清掃), 청결(清潔), 습관(習慣)</strong>을 강조하는 관리 기법이다.</p>
-<section id="sec-3stable" class="level3">
-<h3 class="anchored" data-anchor-id="sec-3stable">3정(三定)</h3>
-<p><font color="blue">“정해진 것을, 정해진 위치에, 정해진 양만큼 둔다”</font>는 원칙으로, 업무 효율성을 높이고 낭비를 줄이기 위해 사용됨.</p>
+<p><strong>3정 5S</strong>는 제조업 및 생산 관리에서 작업 환경을 정리하고 효율성을 극대화하는 기본 개념으로, <strong>정리(整理), 정돈(整頓), 청소(清掃), 청결(清潔), 습관(習慣)</strong>을 강조하는 관리 기법이다.</p>
+<ul>
+<li><p>3정(三定) {#sec-3stable} “정해진 것을, 정해진 위치에, 정해진 양만큼 둔다”는 원칙으로, 업무 효율성을 높이고 낭비를 줄이기 위해 사용된다.</p>
 <table class="caption-top table">
 <caption>3정(三定)</caption>
 <colgroup>
@@ -1212,11 +1078,8 @@ Note&nbsp;23.1 개선 4원칙(ECRS)
 <td>물건을 사용하기 쉽도록 일정한 위치에 배치</td>
 </tr>
 </tbody>
-</table>
-</section>
-<section id="sec-5s" class="level3">
-<h3 class="anchored" data-anchor-id="sec-5s">5S 활동</h3>
-<p>일본에서 시작된 작업장 정리·정돈 기법으로, <font color="blue">낭비를 없애고 생산성을 향상</font>시키는 데 초점을 둔다.</p>
+</table></li>
+<li><p>5S 활동 {#sec-5s} 일본에서 시작된 작업장 정리·정돈 기법으로, <font color="blue">낭비를 없애고 생산성을 향상</font>시키는 데 초점을 둔다.</p>
 <table class="caption-top table">
 <caption>5S 활동</caption>
 <colgroup>
@@ -1265,10 +1128,9 @@ Note&nbsp;23.1 개선 4원칙(ECRS)
 <td>5S 활동을 반복하여 문화로 정착</td>
 </tr>
 </tbody>
-</table>
-<dl>
-<dt><strong>3정 5S의 효과</strong></dt>
-<dd>
+</table></li>
+</ul>
+<p>3정 5S의 효과는 다음과 같다.</p>
 <ul>
 <li><strong>작업 효율성 향상</strong>: 필요한 물건을 빠르게 찾을 수 있어 생산성 증가<br>
 </li>
@@ -1278,15 +1140,11 @@ Note&nbsp;23.1 개선 4원칙(ECRS)
 </li>
 <li><strong>품질 향상</strong>: 깨끗한 환경 유지로 제품 품질 안정</li>
 </ul>
-</dd>
-</dl>
-<p>3정 5S는 <font color="blue">공장뿐만 아니라 사무실, 창고, 서비스 업종 등 다양한 분야에서 활용</font>되며, 지속적인 실천이 중요한 관리 기법이다.</p>
-</section>
+<p>3정 5S는 공장뿐만 아니라 사무실, 창고, 서비스 업종 등 다양한 분야에서 활용되며, 지속적인 실천이 중요한 관리 기법이다.</p>
 </section>
 <section id="sec-ref-0801" class="level2">
 <h2 class="anchored" data-anchor-id="sec-ref-0801">참고자료</h2>
-<hr>
-<p><strong>각주</strong></p>
+<p><em>_EOD_</em></p>
 
 
 </section>
