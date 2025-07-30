@@ -33,6 +33,7 @@ figcaption {
 }
 
 table.caption-top.table {
+  margin-top: 24px;
   margin-bottom: 24px;
 }
 
@@ -61,7 +62,8 @@ h4.anchored {
 }
 --*/
 tr, td {
-  font-size: 14px;
+  // font-size: 14px;
+  font-size: 1em;
 }
 
 /*
@@ -255,7 +257,7 @@ h5 {
 .hl {
     background-color: gray;
     color: white;
-    font-size: 0.95em;
+    font-size: 1em;
     padding: 0 5px 0 5px;
   }
 
