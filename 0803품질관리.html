@@ -821,8 +821,12 @@ window.Quarto = {
 <li>불가피한 원인, 제거 불가능(경제적 관점)</li>
 <li>재료, 기기, 작업자 변동(통제 불가능한 수준)</li>
 </ul></li>
-<li><strong>이상원인</strong>(특별원인 by Deming)<br>
-- 체계가 관리상태가 아닌 경우 - 관리도 주요 관심 대상</li>
+<li><strong>이상원인</strong>(특별원인 by Deming)
+<ul>
+<li>체계가 관리상태가 아닌 경우<br>
+</li>
+<li>관리도 주요 관심 대상</li>
+</ul></li>
 </ul>
 <section id="관리도-종류" class="level3">
 <h3 class="anchored" data-anchor-id="관리도-종류">관리도 종류</h3>
@@ -853,15 +857,40 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-<p>또한 품질 특성 값에 따라 계수형(계수치) 관리도와 계량형(계량치) 관리도로 나눌 수 있다. - <strong>계수형(계수치)</strong><br>
-연속량으로 측정되는 품질 특성 값(예, 길이, 무게, 온도, 전류 등)</p>
-<pre><code>| **관리도 종류**                  | **설명**                                                        |
-| --------------------------- | ------------------------------------------------------------- |
-| **X̄-R 관리도** (평균-범위 관리도)    | 소집단의 평균(X̄)과 범위(R)를 동시에 관리할 때 사용. 대표적인 연속형 관리도.               |
-| **X̄-s 관리도** (평균-표준편차 관리도)  | 평균(X̄)과 표준편차(s)를 사용하는 관리도. 측정값의 분산이 중요한 경우 사용.                |
-| **I-MR 관리도** (개별값-이동범위 관리도) | 측정값이 1개씩 나올 때 사용. 평균 대신 **개별값(I)**과 **이동범위(MR)**를 사용. |
-| **X 관리도** (단일값 관리도)         | 단일 특성치의 평균만 관리할 때 사용. I-MR과 유사.                               |</code></pre>
+<p>또한 품질 특성 값에 따라 계수형(계수치) 관리도와 계량형(계량치) 관리도로 나눌 수 있다.</p>
 <ul>
+<li><p><strong>계수형(계수치)</strong><br>
+연속량으로 측정되는 품질 특성 값(예, 길이, 무게, 온도, 전류 등)</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 30%">
+<col style="width: 69%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>관리도 종류</strong></th>
+<th><strong>설명</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>X̄-R 관리도</strong> (평균-범위 관리도)</td>
+<td>소집단의 평균(X̄)과 범위(R)를 동시에 관리할 때 사용. 대표적인 연속형 관리도.</td>
+</tr>
+<tr class="even">
+<td><strong>X̄-s 관리도</strong> (평균-표준편차 관리도)</td>
+<td>평균(X̄)과 표준편차(s)를 사용하는 관리도. 측정값의 분산이 중요한 경우 사용.</td>
+</tr>
+<tr class="odd">
+<td><strong>I-MR 관리도</strong> (개별값-이동범위 관리도)</td>
+<td>측정값이 1개씩 나올 때 사용. 평균 대신 <strong>개별값(I)</strong>과 <strong>이동범위(MR)</strong>를 사용.</td>
+</tr>
+<tr class="even">
+<td><strong>X 관리도</strong> (단일값 관리도)</td>
+<td>단일 특성치의 평균만 관리할 때 사용. I-MR과 유사.</td>
+</tr>
+</tbody>
+</table></li>
 <li><p><strong>계량형(계량치)</strong><br>
 유효한 값으로 표시되는 수치 값(예, 1개, 2개 등 이산적으로 셀 수 있는 값)</p>
 <table class="caption-top table">
@@ -1272,7 +1301,7 @@ window.Quarto = {
 </blockquote>
 <p><strong>계량형 vs 계수형 관리도 비교 요약</strong>하면 다음과 같다.</p>
 <table class="caption-top table">
-<caption>계량형 vs.&nbsp;계수형 관리도도</caption>
+<caption>계량형 vs.&nbsp;계수형 관리도</caption>
 <thead>
 <tr class="header">
 <th>항목</th>
