@@ -844,9 +844,9 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<dl>
-<dt>변수(variable)</dt>
-<dd>
+<p>수학적 모델에서는 구성요소로 변수와 상수가 있으며 자세한 내용은 다음과 같다.</p>
+<ul>
+<li><strong>변수</strong>(variable)
 <ul>
 <li>시간이나 조건에 따라 값이 변할 수 있는 것</li>
 <li><font color="blue">독립변수</font>(independent variable)
@@ -860,16 +860,13 @@ window.Quarto = {
 <li>독립변수 값에 영향을 받는 변수</li>
 <li>총이익</li>
 </ul></li>
-</ul>
-</dd>
-<dt>상수(constant), 매개변수(parameter)</dt>
-<dd>
+</ul></li>
+<li><strong>상수</strong>(constant), 매개변수(parameter)
 <ul>
 <li>시간이나 조건에 따라 변하지 않고 고정된 값</li>
 <li>원주율, 자연로그 등</li>
+</ul></li>
 </ul>
-</dd>
-</dl>
 <p>수학적 모델 분류는 다음과 같다.</p>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
@@ -877,32 +874,32 @@ window.Quarto = {
 <p></p><figure class="figure"><p></p>
 <div>
 <pre class="mermaid mermaid-js">flowchart TB
-0[수학적 모델]
-subgraph g1[" "]
-11[규범적 모델]
-12[서술적 모델]
-end
+    0[수학적 모델]
+    subgraph g1[" "]
+    11[규범적 모델]
+    12[서술적 모델]
+    end
 
-subgraph g2[" "]
-21[확정적 모델]
-22[확률적 모델]
-end
+    subgraph g2[" "]
+    21[확정적 모델]
+    22[확률적 모델]
+    end
 
-subgraph g3[" "]
-31[분석적 모델]
-32[시뮬레이션 모델]
-end
+    subgraph g3[" "]
+    31[분석적 모델]
+    32[시뮬레이션 모델]
+    end
 
-0 --- g1 &amp; g2 &amp; g3
+    0 --- g1 &amp; g2 &amp; g3
 </pre>
 </div>
 <p></p></figure><p></p>
 </div>
 </div>
 </div>
-<dl>
-<dt>규범적 모델과 서술적 모델</dt>
-<dd>
+<p>수학적 모델별 내용은 다음과 같다.</p>
+<ul>
+<li>규범적 모델과 서술적 모델
 <ul>
 <li>규범적 모델 (normative model), 최적화 모델 (optimization model)
 <ul>
@@ -916,10 +913,8 @@ end
 <li>여러 대안 결과, 즉 시스템 성과 또는 효과성을 조사하기 위하여 사용하며, 만족해(satisficing solution)를 제공함</li>
 <li>대기행렬, 마이코브 분석, 시뮬레이션 모델 등</li>
 </ul></li>
-</ul>
-</dd>
-<dt>확정적 모델과 확률적 모델</dt>
-<dd>
+</ul></li>
+<li>확정적 모델과 확률적 모델
 <ul>
 <li>확정적 모델 (deterministic model)
 <ul>
@@ -931,10 +926,8 @@ end
 <li>통제불능변수 값이 불확실하고 변동하는 경우에 사용하는 모델</li>
 <li>재고관리 모델, 대기행렬 모델, 시뮬레이션 모델 등</li>
 </ul></li>
-</ul>
-</dd>
-<dt>분석적 모델과 시뮬레이션 모델</dt>
-<dd>
+</ul></li>
+<li>분석적 모델과 시뮬레이션 모델
 <ul>
 <li>분석적 모델 (analytic model)
 <ul>
@@ -946,53 +939,40 @@ end
 <li>해가 연역적으로 구해지는 것이 아니고 어떤 조건 하에서 모델에 통제가능한 변수 특정값을 대입하여 종속변수에 미치는 영향을 관찰찰함으로써 실험하는 모델</li>
 <li>슈퍼마켓 계산대 수가 고객 도착률에 따라 총비용에 미치는 영향 실험 등등</li>
 </ul></li>
+</ul></li>
 </ul>
-</dd>
-</dl>
-<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 124-2-4, 127-3-6">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-기출: 124-2-4, 127-3-6
-</div>
-</div>
-<div class="callout-body-container callout-body">
-
-</div>
-</div>
 </section>
 </section>
 <section id="의사결정-도구" class="level2">
 <h2 class="anchored" data-anchor-id="의사결정-도구">의사결정 도구</h2>
+<p>의사결정 도구는 불확실성 하에서 미래를 예측하거나 여러 가지 대안을 평가하거나 상호 영향에서 최선의 선택을 도와준다.</p>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
 <p></p><figure class="figure"><p></p>
 <div>
 <pre class="mermaid mermaid-js">flowchart TD
-0[의사결정 도구]
-subgraph s1[불확실성 하 미래예측]
-direction LR
-11[의사결정론]
-12[의사결정나무]
-13[몬테카를로 시뮬레이션]
-14[마코프 체인 분석]
-end
-subgraph s2[여러 가지 대안 평가]
-direction LR
-21[손인분기점 평가]
-22[선호도 행렬]
-23[선형/비선형 계획법]
-24[AHP/ANP]
-end
-subgraph s3[상호 영향]
-direction LR
-31[게임이론]
-end
+    0[의사결정 도구]
+    subgraph s1[불확실성 하 미래예측]
+    direction LR
+    11[의사결정론]
+    12[의사결정나무]
+    13[몬테카를로 시뮬레이션]
+    14[마코프 체인 분석]
+    end
+    subgraph s2[여러 가지 대안 평가]
+    direction LR
+    21[손인분기점 평가]
+    22[선호도 행렬]
+    23[선형/비선형 계획법]
+    24[AHP/ANP]
+    end
+    subgraph s3[상호 영향]
+    direction LR
+    31[게임이론]
+    end
 
-0 --&gt; s1 &amp; s2 &amp; s3
+    0 --&gt; s1 &amp; s2 &amp; s3
 
 style s1 fill:#f9f9f9
 </pre>
@@ -1001,21 +981,9 @@ style s1 fill:#f9f9f9
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 106-2-1">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-기출: 106-2-1
-</div>
-</div>
-<div class="callout-body-container callout-body">
-
-</div>
-</div>
 <section id="의사결정-환경" class="level3">
 <h3 class="anchored" data-anchor-id="의사결정-환경">의사결정 환경</h3>
+<p>의사결정 환경은 크게 확실성하, 위험하, 불확실성하 그리고 상충하에서의 의사결정이 있다.</p>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
@@ -1023,150 +991,115 @@ style s1 fill:#f9f9f9
 <div>
 <pre class="mermaid mermaid-js">flowchart TD
 
-00[의사결정 환경]
+    00[의사결정 환경]
 
-subgraph s10[확실성하 의사결정]
-direction LR
-선형계획법
-수송법
-할당법
-동적계획법
-s11[　] 
-style s11 fill:transparent,stroke:none
-end 
+    subgraph s10[확실성하 의사결정]
+    direction LR
+        선형계획법
+        수송법
+        할당법
+        동적계획법
+        s11[　] 
+        style s11 fill:transparent,stroke:none
+    end 
 
-subgraph s20[위험하 의사결정]
-direction LR
-s29[PERT/CPM]
-대기행렬이론
-시뮬레이션
-마크브연쇄모형
-s21[　] 
-style s21 fill:transparent,stroke:none
-end
+    subgraph s20[위험하 의사결정]
+    direction LR
+        s29[PERT/CPM]
+        대기행렬이론
+        시뮬레이션
+        마크브연쇄모형
+        s21[　] 
+        style s21 fill:transparent,stroke:none
+    end
 
-subgraph s30[불화길성하 의사결정]
-direction LR
-맥시맥스준거
-맥시민준거
-후르비치준거
-유감준거
-라플라스준거
-end
+    subgraph s30[불확실성하 의사결정]
+    direction LR
+        맥시맥스준거
+        맥시민준거
+        후르비치준거
+        유감준거
+        라플라스준거
+    end
 
-subgraph s40[상충하 의사결정]
-direction LR
-게임이론
-s41["　"] 
-s42["　"] 
-s43["　"] 
-s44["　"] 
-style s41 fill:transparent,stroke:none
-style s42 fill:transparent,stroke:none
-style s43 fill:transparent,stroke:none
-style s44 fill:transparent,stroke:none
-end
+    subgraph s40[상충하 의사결정]
+    direction LR
+        게임이론
+        s41["　"] 
+        s42["　"] 
+        s43["　"] 
+        s44["　"] 
+        style s41 fill:transparent,stroke:none
+        style s42 fill:transparent,stroke:none
+        style s43 fill:transparent,stroke:none
+        style s44 fill:transparent,stroke:none
+    end
 
-00 --&gt; s10 &amp; s20 &amp; s30 &amp; s40
+    00 --&gt; s10 &amp; s20 &amp; s30 &amp; s40
 </pre>
 </div>
 <p></p></figure><p></p>
 </div>
 </div>
 </div>
-<dl>
-<dt>확실성하 의사결정</dt>
-<dd>
+<ul>
+<li>확실성하 의사결정
 <ul>
 <li>대안을 선택할 때 어떤한 상황이 발생할 것인지를 확실하게 알고 있는 경우</li>
 <li>고전적 최적화 기법, 손익분기점분석, 선형계획법, 비선형계획법, 수송법, 할당법(배정법), 목표 계획법, 정수계획법, 동적계획법 등</li>
-</ul>
-</dd>
-<dt>위험하 의사결정</dt>
-<dd>
+</ul></li>
+<li>위험하 의사결정
 <ul>
 <li>대안을 선택할 때 상황 발생 여부를 확률적으로 알고 있는 경우</li>
 <li>사전정보를 이용한 의사결정, 의사결정, 재고모형이론</li>
 <li>사전정보와 표본정보를 이용한 의사결정, PERT/CPM, 대기행렬이론, 시뮬레이션, 마코브연쇄모형 등</li>
-</ul>
-</dd>
-<dt>불확실성하 의사결정</dt>
-<dd>
+</ul></li>
+<li>불확실성하 의사결정
 <ul>
 <li>대안을 선택할 때 상황발생 확률을 전혀 모르는 경우</li>
 <li>라플라스 준거, 맥시맥스 준거, 맥시민 준거, 후르비츠 준거, 유감 준거</li>
+</ul></li>
 </ul>
-</dd>
-<dt>상충하 의사결정</dt>
-<dd>
-<ul>
-<li>서로 상충적인 이해관계를 가진 의사결정자들이 상대방에 대응하여 의사결정을 하게 되는 경우(게임모형, Game Mode)</li>
-<li>게임이론</li>
-</ul>
-</dd>
-</dl>
-<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 100-2-1, 103-1-6, 106-2-1">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-기출: 100-2-1, 103-1-6, 106-2-1
-</div>
-</div>
-<div class="callout-body-container callout-body">
-
-</div>
-</div>
+<p>-상충하 의사결정 - 서로 상충적인 이해관계를 가진 의사결정자들이 상대방에 대응하여 의사결정을 하게 되는 경우(게임모형, Game Mode) - 게임이론</p>
 </section>
 <section id="불확실성하-의사결정" class="level3">
 <h3 class="anchored" data-anchor-id="불확실성하-의사결정">불확실성하 의사결정</h3>
-<p>어떠한 사건에 대해 과거 경험이 전무하여 발생 가능확률이 알려지지 않아거나 미래에 대한 확실한 근거를 가지고 예측하기 매우 어려운 경우에 이루어지는 의사결정으로 경영활동 상 대부분이 이 경우에 해당된다.</p>
+<p>불확실성하 의사결정은 <span class="hl">어떠한 사건에 대해 과거 경험이 전무하여 발생 가능확률이 알려지지 않아거나 미래에 대한 확실한 근거를 가지고 예측하기 매우 어려운 경우에 이루어지는 의사결정</span>으로 경영활동 상 대부분이 이 경우에 해당된다.</p>
 <section id="의사결정론" class="level4">
 <h4 class="anchored" data-anchor-id="의사결정론">의사결정론</h4>
 <p>의사결정론에 있어 <strong>의사결정</strong>이란 <font color="blue">무엇을 어떻게 결정해야 하느냐에 대한 물음에 답하는 것</font>으로 의사결정자가 선택할 행위가 복수개여야 한다. 참고로, 관리 불가능 변수란 의사 결정권자 결정과는 관계없이 의사결정 결과에 영향을 주는 요소를 의미한다.</p>
 <p>불확실한 상황 하에서의 의사결정은 선택 가능한 대안, 발생 가능성, 여러 상황에 있어 각 대안들 간 수익성 그리고 알려지지 않은 여러 상황들의 발생 확률 속에서 의사결정자 성향이나 의사결정 상황에 따라 기준이 마련된다.</p>
-<dl>
-<dt>최대최소(Maximin, Wald) 기준</dt>
-<dd>
+<ul>
+<li>최대최소(Maximin, Wald) 기준
 <ul>
 <li><font color="blue">비관적인 관점에서 미래 수요가 낮은 것을 선택</font></li>
 <li>미래에 대해 비관적인 예측에 준해 의사결정한 <font color="blue">최악의 대안 중 가장 좋은 결과</font>를 보상해 주는 대안을 선택</li>
 <li>안전제일 주장으로 각 상황별로 손실이 가장 작은 경우를 의사결정 기준으로 삼음</li>
-</ul>
-</dd>
-<dt>최대최대(Maximax) 기준</dt>
-<dd>
+</ul></li>
+<li>최대최대(Maximax) 기준
 <ul>
 <li><font color="blue">최대로 낙관적인 수익을 예상하며 미래 수요가 높은 것을 선택</font></li>
 <li>미래에 대해 낙관적인 예측에 준해 의사결정한 <font color="blue">최상의 대안 중 가장 좋은 결과</font>를 보상해 주는 대안을 선택</li>
-</ul>
-</dd>
-<dt>라플라스(Laplace) 기준</dt>
-<dd>
+</ul></li>
+<li>라플라스(Laplace) 기준
 <ul>
 <li><font color="blue">가중평균 보상이 가장 좋은 것을 선택</font></li>
 <li>미래를 정확히 예측할 수 없기 때문에 <font color="blue">모든 상황이 동일한 확률로 발생한다는 가정(사건이 n가지일 경우 각 사건 비중은 1/n 임)하</font>에 각 대안별로 기댓값을 계산하여 가장 좋은 값을 갖는 대안을 선택</li>
 <li>“불충분 이유 원칙”이라고 하며 각 상황에 따른 평균을 의사결정 기준으로 삼음</li>
-</ul>
-</dd>
-<dt>최소최대후회(Minimax Regret, 세비지 Savage) 기준</dt>
-<dd>
+</ul></li>
+<li>최소최대후회(Minimax Regret, 세비지 Savage) 기준
 <ul>
 <li><font color="blue">최악의 후회(최소 투자를 하였는데 수요가 많은 경우)가 가장 작은 대안을 선택</font></li>
 <li>최대후회 최소화(minimax, savage) 원칙은 의사결정자가 자기 행동 결과를 후회하지 않으려 하며 적어도 <font color="blue">의사결정에서 오는 최대 후회를 최소화</font> 하려고 하는 가정에 근거</li>
 <li>결과표를 후회표(주어진 사건 하에서 최선 대안안인 최대치에서 해당 값을 빼주어 얼마나 손해 보는가를 나타냄)로 전환하여 그 중 가장 작은 값을 가지는 대안 선택</li>
-</ul>
-</dd>
-<dt>후르비치(Huwicz) 기준</dt>
-<dd>
+</ul></li>
+<li>후르비치(Huwicz) 기준
 <ul>
 <li><font color="blue">최대최대원책과 최대최소원칙의 가중평균</font></li>
 <li>대부분 의사결정자는 현실적으로 극단적으로 비관적 또는 낙관적 기준이 아닌 중간 어느 지점을 선택함</li>
 <li>비관주의와 낙관주의를 절충하기 위해서 의사결정자가 으느 정도 미래에 대한 낙관적인 견해를 가지고 있는 정도를 나타내는 <font color="blue">낙관지수(<span class="math inline">\(\alpha\)</span>)를 가중치로 사용하며 이 지수는 0 ~ 1 사이 값</font>을 가지고 낙관지수가 0일 때는 의사결정자가 자연 결과에 대해 비관적(최대최소원칙)이며, 반면 1일 때는 자연에 대낙관적(최대최대)이라는 것을 의미함</li>
+</ul></li>
 </ul>
-</dd>
-</dl>
 <div class="callout callout-style-default callout-important no-icon callout-titled" title="최선 대안">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1694,48 +1627,19 @@ Laplace 기준 의사결정
 <p>중규모 대안을 선택한다.</p>
 </div>
 </div>
-<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 97-3-3">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-기출: 97-3-3
-</div>
-</div>
-<div class="callout-body-container callout-body">
-
-</div>
-</div>
 </section>
 <section id="의사결정-나무" class="level4">
 <h4 class="anchored" data-anchor-id="의사결정-나무">의사결정 나무</h4>
-<p><strong>의사결정 나무</strong>(decision tree) 기법은 <font color="blue">의사결정이 단계별로 연속적으로 이루어지는 경우</font>에 사용할 수 있는 분석 기법으로 1964년 매기(J.F. Magee)에 의해 제기되었다. 생산규모 확장 시기 결정에 이용되는 확률적 기법으로 의사결정에서 고려되는 대체안 구조를 여러 갈래 가지와 마디를 작고 있는 나무 모양으로 나타낸 방식이다.</p>
+<p><strong>의사결정 나무</strong>(decision tree) 기법은 <span class="hl">의사결정이 단계별로 연속적으로 이루어지는 경우에 사용할 수 있는 분석 기법으로 1964년 매기(J.F. Magee)에 의해 제기</span>되었다. 생산규모 확장 시기 결정에 이용되는 확률적 기법으로 의사결정에서 고려되는 대체안 구조를 여러 갈래 가지와 마디를 작고 있는 나무 모양으로 나타낸 방식이다.</p>
 <p>수요가 불확실하고 순차적으로 여러 의사결정을 내려야 하는 다양한 경우를 평가하는데 유용하다.</p>
-<section id="작성방법" class="level5">
-<h5 class="anchored" data-anchor-id="작성방법">작성방법</h5>
+<p>의사결정나무 작성방법은 다음과 같다.</p>
 <p>아래 기호를 이용하여 도식화 한다.</p>
-<dl>
-<dt>(□) 사각형 결정 마디</dt>
-<dd>
 <ul>
-<li>어떤 결정이 필요한 상태를 나타내는 의사결정 지점</li>
+<li><p>(□) 사각형 결정 마디 어떤 결정이 필요한 상태를 나타내는 의사결정 지점</p></li>
+<li><p>(○) 원형 사건 마디 의사결정 선택과 상황 간 결과를 설명하는 상황 발생점</p></li>
+<li><p>(ㅡ) 가지 의사결정 또는 상황 발생점에서 뻗어 나온 가지로 의사결정 대안을 표시하기도 하고 선택과 상황이 이루어질 때 다양한 결과를 의미하기도 함</p></li>
 </ul>
-</dd>
-<dt>(○) 원형 사건 마디</dt>
-<dd>
-<ul>
-<li>의사결정 선택과 상황 간 결과를 설명하는 상황 발생점</li>
-</ul>
-</dd>
-<dt>(ㅡ) 가지</dt>
-<dd>
-<ul>
-<li>의사결정 또는 상황 발생점에서 뻗어 나온 가지로 의사결정 대안을 표시하기도 하고 선택과 상황이 이루어질 때 다양한 결과를 의미하기도 함</li>
-</ul>
-</dd>
-</dl>
-<p>작성 절차는 다음과 같다.</p>
+<p>의사결정 나무 작성 작성 절차는 다음과 같다.</p>
 <ol type="1">
 <li>사건 마디에 대해 각 사건 가지 보상과 확률을 곱하고 이들을 모두 더하여 <font color="blue">사건 마디 기대 보상을 계산</font>
 <ul>
@@ -1786,30 +1690,15 @@ Laplace 기준 의사결정
 <p>따라서 투자비를 고려한 기대수익은 <strong>대규모투자</strong> 시 3.8억, 소규모투자 시 3.4억이므로대규모 투자가 유리한 전략이다.</p>
 </div>
 </div>
-<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 112-3-5">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-기출: 112-3-5
-</div>
-</div>
-<div class="callout-body-container callout-body">
-
-</div>
-</div>
-</section>
 </section>
 </section>
 <section id="위험하-의사결정" class="level3">
 <h3 class="anchored" data-anchor-id="위험하-의사결정">위험하 의사결정</h3>
+<p>위험하 의사결정 도구로는 시뮬레이션과 대기행렬이론 등이 있다.</p>
 <section id="시뮬레이션" class="level4">
 <h4 class="anchored" data-anchor-id="시뮬레이션">시뮬레이션</h4>
-<p><strong>시뮬레이션</strong>이란 최적해를 도출하는 기법이라기보다 <font color="#245bdb">어떤 실제 현상을 모형화하여 제작한 후 그 모형에 대한 실험을 수행함으로써 관계되는 결과치를 도출하고 이를 실제 현상에 적용하기 위한 방법</font>이다. 시뮬레이션을 사용하는 이유는 실제 상황에 대한 실험이 비실용적이거나 불가능할 경우, 수학적인 표현이나 모델 해를 제시하기에 실제 상황이 너무 복잡할 경우에 사용하게 된다.</p>
-<dl>
-<dt>의의</dt>
-<dd>
+<p><strong>시뮬레이션</strong>이란 <span class="hl">최적해를 도출하는 기법이라기보다 어떤 실제 현상을 모형화하여 제작한 후 그 모형에 대한 실험을 수행함으로써 관계되는 결과치를 도출하고 이를 실제 현상에 적용하기 위한 방법</span>이다. 시뮬레이션을 사용하는 이유는 실제 상황에 대한 실험이 비실용적이거나 불가능할 경우, 수학적인 표현이나 모델 해를 제시하기에 실제 상황이 너무 복잡할 경우에 사용하게 된다.</p>
+<p>시뮬레이션 의의는 다음과 같다.</p>
 <ul>
 <li><strong>비용 절감 및 리스크 최소화</strong><br>
 실제 생산 시스템을 변경하거나 실험하는 대신 시뮬레이션을 사용하여 다양한 상황을 미리 실험할 수 있다. 이를 통해 실험에 필요한 비용이나 리스크를 줄일 수 있다.</li>
@@ -1820,84 +1709,33 @@ Laplace 기준 의사결정
 </li>
 <li><strong>시스템 이해</strong> 시뮬레이션을 통해 복잡한 생산 시스템을 더 잘 이해하고, 각 구성 요소가 어떻게 상호작용하는지 파악할 수 있다. 이는 시스템 개선을 위한 중요한 통찰을 제공한다.</li>
 </ul>
-</dd>
-<dt><font color="blue">장점</font></dt>
-<dd>
+<p>시뮬레이션 <strong>장점</strong>은 다음과 같다.</p>
 <ul>
-<li><dl>
-<dt>위험 없이 실험 가능</dt>
-<dd>
-실제 생산 환경에서 발생할 수 있는 위험을 피하면서 시스템을 시험하고 실험할 수 있다. 예를 들어, 생산 라인을 멈추지 않고도 새로운 공정이나 변화의 영향을 테스트할 수 있다.
-</dd>
-</dl></li>
-<li><dl>
-<dt>시간과 공간 절약</dt>
-<dd>
-실험을 실제로 진행하는 것보다 빠르고 효율적으로 결과를 도출할 수 있. 또한, 물리적인 공간이나 리소스를 사용하지 않으므로 시간과 비용을 절감할 수 있다.
-</dd>
-</dl></li>
-<li><dl>
-<dt>다양한 변수 실험 가능</dt>
-<dd>
-시뮬레이션을 통해 다양한 변수나 조건을 변경하면서 그 영향을 쉽게 분석할 수 있다. 이는 실제 환경에서 실험하기 어려운 변수들을 포함할 수 있는 장점이 있다.
-</dd>
-</dl></li>
-<li><dl>
-<dt>시나리오 비교</dt>
-<dd>
-여러 가지 시나리오를 동시에 비교하여 최적의 운영 방안을 도출할 수 있다. 예를 들어, 다른 생산 일정이나 자원 배분 방식을 비교하여 가장 효율적인 방법을 선택할 수 있다.
-</dd>
-</dl></li>
+<li>위험 없이 실험 가능<br>
+실제 생산 환경에서 발생할 수 있는 위험을 피하면서 시스템을 시험하고 실험할 수 있다. 예를 들어, 생산 라인을 멈추지 않고도 새로운 공정이나 변화의 영향을 테스트할 수 있다.</li>
+<li>시간과 공간 절약<br>
+실험을 실제로 진행하는 것보다 빠르고 효율적으로 결과를 도출할 수 있. 또한, 물리적인 공간이나 리소스를 사용하지 않으므로 시간과 비용을 절감할 수 있다.</li>
+<li>다양한 변수 실험 가능<br>
+시뮬레이션을 통해 다양한 변수나 조건을 변경하면서 그 영향을 쉽게 분석할 수 있다. 이는 실제 환경에서 실험하기 어려운 변수들을 포함할 수 있는 장점이 있다.</li>
+<li>시나리오 비교<br>
+여러 가지 시나리오를 동시에 비교하여 최적의 운영 방안을 도출할 수 있다. 예를 들어, 다른 생산 일정이나 자원 배분 방식을 비교하여 가장 효율적인 방법을 선택할 수 있다.</li>
 </ul>
-</dd>
-<dt><font color="red">단점</font></dt>
-<dd>
+<p>이에 반해 다음과 같은 단점을 갖는다.</p>
 <ul>
-<li><dl>
-<dt>모델링의 정확성 문제</dt>
-<dd>
-시뮬레이션은 실제 시스템을 모델링한 결과이기 때문에 모델이 정확하지 않으면 시뮬레이션 결과도 신뢰할 수 없다. 시스템의 복잡성이 클수록 정확한 모델링이 어려워질 수 있다.
-</dd>
-</dl></li>
-<li><dl>
-<dt>고도의 전문성 요구</dt>
-<dd>
-시뮬레이션을 효과적으로 사용하려면 관련 도구와 기술에 대한 높은 수준의 이해와 전문성이 필요하다. 잘못된 설정이나 이해로 인해 잘못된 결론을 도출할 위험이 있다.
-</dd>
-</dl></li>
-<li><dl>
-<dt>실제 환경과의 차이</dt>
-<dd>
-시뮬레이션은 현실을 그대로 반영하는 것이 아니므로, 실제 환경에서 발생할 수 있는 예기치 않은 변수나 상호작용을 완벽하게 재현하는 데 한계가 있을 수 있다.
-</dd>
-</dl></li>
-<li><dl>
-<dt>비용과 시간</dt>
-<dd>
-시뮬레이션 시스템을 구축하고 운영하는 데 시간이 오래 걸리고 비용이 들 수 있다. 특히, 복잡한 시스템이나 정확한 모델링을 요구하는 경우 더 많은 자원이 소모된다.
-</dd>
-</dl></li>
+<li>모델링의 정확성 문제<br>
+시뮬레이션은 실제 시스템을 모델링한 결과이기 때문에 모델이 정확하지 않으면 시뮬레이션 결과도 신뢰할 수 없다. 시스템의 복잡성이 클수록 정확한 모델링이 어려워질 수 있다.</li>
+<li>고도의 전문성 요구<br>
+시뮬레이션을 효과적으로 사용하려면 관련 도구와 기술에 대한 높은 수준의 이해와 전문성이 필요하다. 잘못된 설정이나 이해로 인해 잘못된 결론을 도출할 위험이 있다.</li>
+<li>실제 환경과의 차이<br>
+시뮬레이션은 현실을 그대로 반영하는 것이 아니므로, 실제 환경에서 발생할 수 있는 예기치 않은 변수나 상호작용을 완벽하게 재현하는 데 한계가 있을 수 있다.</li>
+<li>비용과 시간<br>
+시뮬레이션 시스템을 구축하고 운영하는 데 시간이 오래 걸리고 비용이 들 수 있다. 특히, 복잡한 시스템이나 정확한 모델링을 요구하는 경우 더 많은 자원이 소모된다.</li>
 </ul>
-</dd>
-</dl>
 <p>결론적으로, 생산 시스템에 시뮬레이션을 적용하면 여러 이점을 제공하지만, 그 효용성을 최대화하려면 정확한 모델링과 적절한 해석이 필요하다.</p>
-<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 97-3-5, 103-2-3">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-기출: 97-3-5, 103-2-3
-</div>
-</div>
-<div class="callout-body-container callout-body">
-
-</div>
-</div>
 </section>
 <section id="대기행렬이론" class="level4">
 <h4 class="anchored" data-anchor-id="대기행렬이론">대기행렬이론</h4>
-<p><strong>대기행렬이론</strong>(Queueing Theory)은 <font color="blue">고객과 서비스 시설 간 관계를 확률 이론을 적용</font>하여 모형을 작성하고 고객 도착 상황에 대응할 수 있는 경제적 규모를 결정하고자 하는 의사결정 기법이다. 총 대기 비용을 최소화시키는 최적 서비스 시설 결정을 위한 기법으로 대기행렬 분석에 따라 프로세스 설계, 용량 계획, 프로세스 성과가 달라지게 된다. 다음과 같은 경우 대기행렬이 생기거나 서비스 시설이 휴지상태에 이르게 된다.</p>
+<p><strong>대기행렬이론</strong>(Queueing Theory)은 <span class="hl">고객과 서비스 시설 간 관계를 확률 이론을 적용하여 모형을 작성하고 고객 도착 상황에 대응할 수 있는 경제적 규모를 결정하고자 하는 의사결정 기법</span>이다. 총 대기 비용을 최소화시키는 최적 서비스 시설 결정을 위한 기법으로 대기행렬 분석에 따라 프로세스 설계, 용량 계획, 프로세스 성과가 달라지게 된다. 다음과 같은 경우 대기행렬이 생기거나 서비스 시설이 휴지상태에 이르게 된다.</p>
 <ul>
 <li>불규칙한 고객 요구(도착)</li>
 <li>서비스 능력 크기</li>
@@ -1912,6 +1750,7 @@ Laplace 기준 의사결정
 <p>대기행렬 분석 목적은 고객 도착 상황에 잘 대응할 수 있는 능력 내지 규모를 경제적으로 결정하여 서비스 비용을 최소화 하는데 있다.</p>
 <p>일반적인 대기행렬 시스템 기본 구조는 다음과 같다.</p>
 <table class="caption-top table">
+<caption>대기행렬 시스템 구조</caption>
 <colgroup>
 <col style="width: 33%">
 <col style="width: 33%">
@@ -1965,20 +1804,16 @@ Laplace 기준 의사결정
 <section id="대기행렬-가정" class="level5">
 <h5 class="anchored" data-anchor-id="대기행렬-가정">대기행렬 가정</h5>
 <p>대기행렬 이론 가정은 다음과 같다.</p>
-<dl>
-<dt>고객 수 분포</dt>
-<dd>
+<ul>
+<li>고객 수 분포
 <ul>
 <li>시간당 고객 도착 수는 <strong>포아송 분포</strong>를 따른다.</li>
-</ul>
-</dd>
-<dt>서비스 시간 분포</dt>
-<dd>
+</ul></li>
+<li>서비스 시간 분포
 <ul>
 <li>고객이 도착하는 시간 간격은 <strong>지수 분포</strong>를 따른다.</li>
+</ul></li>
 </ul>
-</dd>
-</dl>
 <p>단일경로 단일과정 대기행렬 시스템일 경우 대기행렬 평균 길이는 다음과 같이 계산된다.</p>
 <p><span id="eq-queueing-theory"><span class="math display">\[
 대기행렬 \ 평균길이 \ L_q \ = \ \frac{\lambda^2}{\mu(\mu - \lambda)}
@@ -1987,16 +1822,14 @@ Laplace 기준 의사결정
 </section>
 <section id="대기행렬-모형" class="level5">
 <h5 class="anchored" data-anchor-id="대기행렬-모형">대기행렬 모형</h5>
-<dl>
-<dt>M/M/1</dt>
-<dd>
+<ul>
+<li>M/M/1
 <ul>
 <li>M: 고객도착 시간 간격으로 포아송 분포를 따른다.</li>
 <li>M: 서비스 시간 간격으로 지수 분포를 따른다.</li>
 <li>1: 단일경로 단일과정 시스템으로 서비스 시설은 하나다.</li>
+</ul></li>
 </ul>
-</dd>
-</dl>
 <div class="callout callout-style-default callout-important no-icon callout-titled" title="대기행렬 시스템">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -2038,19 +1871,6 @@ W = W_q + \frac{1}{\mu}
 \tag{29.2}\]</span></span> 로 계산할 수 있다.</p>
 </div>
 </div>
-<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 97-2-5, 103-4-2, 121-1-11, 121-2-5">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-기출: 97-2-5, 103-4-2, 121-1-11, 121-2-5
-</div>
-</div>
-<div class="callout-body-container callout-body">
-
-</div>
-</div>
 </section>
 </section>
 </section>
@@ -2058,18 +1878,17 @@ W = W_q + \frac{1}{\mu}
 <h3 class="anchored" data-anchor-id="확실성하-의사결정">확실성하 의사결정</h3>
 <section id="선형계획법" class="level4">
 <h4 class="anchored" data-anchor-id="선형계획법">선형계획법</h4>
-<p>확실성 하에서의 의사결정 모델 중 하나인 <strong>선형 계획법(Linear Programming, LP)</strong>은 제한된 자원을 효율적으로 배분하여 목표함수(Objective Function) 를 최대화하거나 최소화하는 수학적 기법이다. 확실성이란, 모든 변수(자원, 수요, 비용 등)가 명확하게 알려져 있으며, 변화하지 않는 상황을 의미한다.</p>
-<dl>
-<dt>수리계획법(mathematical programming)</dt>
-<dd>
+<p>확실성 하에서의 의사결정 모델 중 하나인 <strong>선형 계획법(Linear Programming, LP)</strong>은 <span class="hl">제한된 자원을 효율적으로 배분하여 목표함수(Objective Function) 를 최대화하거나 최소화하는 수학적 기법</span>이다. 확실성이란, 모든 변수(자원, 수요, 비용 등)가 명확하게 알려져 있으며, 변화하지 않는 상황을 의미한다.</p>
+<ul>
+<li>수리계획법(mathematical programming)
 <ul>
 <li>의사결정자가 실현하고자 하는 목적을 최적화(최대화 또는 최소화)하고자 문제를 모델화해서 그 해결 절차에 따라 최적해를 찾아내려는 과정</li>
 <li>programming은 계획한다(planning) 또는 최적화 한다(optimizing)를 의미</li>
+</ul></li>
 </ul>
-</dd>
-</dl>
 <p>일반적인 선형계획 모델 구조는 다음과 같다.</p>
 <table class="caption-top table">
+<caption>선형계획 구조</caption>
 <colgroup>
 <col style="width: 48%">
 <col style="width: 51%">
@@ -2113,9 +1932,8 @@ a_{m1}x_1 \ + \ a_{m2}x_2 \ + \ ... \ a_{m_n}x_n \ \le \ b_m \\
 where \ x_1 \ge 0, \ x_2 \ge 0, \ , \ ... \ , \ x_n \ge 0
 \end{align}  \tag{29.5}\]</span></span></p>
 <p>일반 구조 구성요소는 다음과 같다.</p>
-<dl>
-<dt>결정변수(decision variable)</dt>
-<dd>
+<ul>
+<li><strong>결정변수</strong>(decision variable)
 <ul>
 <li><span class="math inline">\(x_1, x_2, ..., x_n\)</span></li>
 <li>기업이 수행하는 활동 수준을 나타내는 기호
@@ -2123,10 +1941,8 @@ where \ x_1 \ge 0, \ x_2 \ge 0, \ , \ ... \ , \ x_n \ge 0
 <li>제품 1 생산량, 제품 2 생산량 등</li>
 </ul></li>
 <li>아직 알지 못하는 변수 양을 나타내는 기호</li>
-</ul>
-</dd>
-<dt>목적함수(objective function)</dt>
-<dd>
+</ul></li>
+<li><strong>목적함수</strong>(objective function)
 <ul>
 <li>위 수식 (<a href="#eq-lp-eq1" class="quarto-xref"><span>29.3</span></a>)</li>
 <li>의사결정자가 달성하고자 하는 목적을 최대화(maximize) 또는 최소화(minimize)하려는 선형 함수식
@@ -2134,10 +1950,8 @@ where \ x_1 \ge 0, \ x_2 \ge 0, \ , \ ... \ , \ x_n \ge 0
 <li>최대화: 이익, 수입, 시장점유율, 투자수익 등</li>
 <li>최소화: 비용, 시간, 거리 등</li>
 </ul></li>
-</ul>
-</dd>
-<dt>제약조건(constraint)</dt>
-<dd>
+</ul></li>
+<li><strong>제약조건</strong>(constraint)
 <ul>
 <li>결정변수 값을 결정하려는 의사결정자 능력은 자원 가용성, 법적 또는 계약 요구, 기술적 요구, 고객 주문, 수요 예측, 회사정책 등에 따라 제약</li>
 <li>제약 조건은 이러한 제약을 반영하여 선형 부등식 또는 선형 등식으로 표현</li>
@@ -2151,10 +1965,8 @@ where \ x_1 \ge 0, \ x_2 \ge 0, \ , \ ... \ , \ x_n \ge 0
 <li>결정변수 값이 음수이면 안된다는 제약조건</li>
 <li>위 수식 (<a href="#eq-lp-eq3" class="quarto-xref"><span>29.5</span></a>)</li>
 </ul></li>
-</ul>
-</dd>
-<dt>매개변수</dt>
-<dd>
+</ul></li>
+<li><strong>매개변수</strong>
 <ul>
 <li>계수(coefficient)
 <ul>
@@ -2162,9 +1974,8 @@ where \ x_1 \ge 0, \ x_2 \ge 0, \ , \ ... \ , \ x_n \ge 0
 <li>기술 계수(technology coefficient), 투입-산출계수(input-output coefficient): <span class="math inline">\(a_{11}, a_{12}, ..., a_{mn}\)</span></li>
 </ul></li>
 <li>우변상수(right hand side value): <span class="math inline">\(b_1, b_2, ..., b_m\)</span></li>
+</ul></li>
 </ul>
-</dd>
-</dl>
 <div class="callout callout-style-default callout-important no-icon callout-titled" title="최적화 모델 예제">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -2449,78 +2260,49 @@ x_1 \ge 0, \ x_2 \ge 0
 </div>
 </div>
 <p><strong>선형계획법(Linear Programming, LP)</strong>은 <strong>최적화 문제</strong>를 해결하는 수학적 방법으로, 주로 자원 배분이나 의사결정에 있어 최적의 해를 구하는 데 사용된다. 이 방법은 <strong>목표 함수</strong>와 <strong>제약 조건</strong>이 모두 선형인 경우에 적용된다. 선형계획법은 다양한 분야에서 효과적으로 활용되고 있다.</p>
-<dl>
-<dt><strong>산업 생산 계획</strong></dt>
-<dd>
+<ul>
+<li><strong>산업 생산 계획</strong>
 <ul>
 <li>선형계획법은 <strong>제조업</strong>에서 <strong>자원 할당, 생산 계획, 재고 관리</strong> 등 최적화 문제를 해결하는 데 사용된다.</li>
 <li>예를 들어, 다양한 제품을 생산하는 공장에서 각 제품을 위한 <strong>원자재 사용량, 생산 시간, 인력 배분</strong> 등을 고려하여 생산 계획을 최적화할 수 있다.</li>
-</ul>
-</dd>
-<dt><strong>운송 및 물류</strong></dt>
-<dd>
+</ul></li>
+<li><strong>운송 및 물류</strong>
 <ul>
 <li><strong>물류 네트워크 최적화</strong>: 제품을 제조지에서 소비지로 이동시키는 과정에서 <strong>운송비용 최소화</strong>를 목표로 한다.</li>
 <li><strong>창고 관리</strong>: 여러 창고와 배급처에서 제품을 효율적으로 분배하여 운송 비용을 줄이는 문제를 해결한다.</li>
-</ul>
-</dd>
-<dt><strong>금융 및 투자 관리</strong></dt>
-<dd>
+</ul></li>
+<li><strong>금융 및 투자 관리</strong>
 <ul>
 <li><strong>포트폴리오 최적화</strong>: 주식, 채권 등 다양한 금융 자산을 조합하여 <strong>위험을 최소화하고, 수익을 최대화</strong>하는 포트폴리오를 구성한다.</li>
 <li><strong>자산 배분</strong>: 투자 가능한 자금을 여러 투자처에 분배하여 리스크를 관리하고 최적의 수익을 추구한다.</li>
-</ul>
-</dd>
-<dt><strong>인적 자원 관리</strong></dt>
-<dd>
+</ul></li>
+<li><strong>인적 자원 관리</strong>
 <ul>
 <li><strong>인력 배치</strong>: 각 직무나 프로젝트에 대해 필요한 인력을 최적의 방법으로 배치하여 <strong>인건비 절감</strong>과 <strong>업무 효율성 향상</strong>을 도모한다.</li>
 <li><strong>근로 시간 관리</strong>: 노동 시간이나 인력 배치 최적화를 통해 <strong>생산성 향상</strong> 및 <strong>비용 절감</strong>을 추구한다.</li>
-</ul>
-</dd>
-<dt><strong>농업</strong></dt>
-<dd>
+</ul></li>
+<li><strong>농업</strong>
 <ul>
 <li><strong>농작물 재배 계획</strong>: 다양한 농작물을 재배할 때, <strong>토지 면적</strong>, <strong>비료 사용량</strong>, <strong>노동력</strong> 등의 자원을 고려하여 <strong>최적의 재배 계획</strong>을 수립한다.</li>
 <li><strong>수확량 최적화</strong>: 농업 자원을 효율적으로 배분하여 생산성을 극대화하는 데 사용된다.</li>
-</ul>
-</dd>
-<dt><strong>에너지 관리</strong></dt>
-<dd>
+</ul></li>
+<li><strong>에너지 관리</strong>
 <ul>
 <li><strong>전력 생산 및 분배</strong>: 여러 발전소에서 생산된 전기를 <strong>효율적으로 배분</strong>하여 에너지 비용을 최소화하고 안정적인 공급을 보장한다.</li>
 <li><strong>자원 최적화</strong>: 다양한 에너지 자원을 활용하여 <strong>최적의 생산 계획</strong>을 세우고 비용을 절감한다.</li>
-</ul>
-</dd>
-<dt><strong>서비스 운영 최적화</strong></dt>
-<dd>
+</ul></li>
+<li><strong>서비스 운영 최적화</strong>
 <ul>
 <li><strong>병원 스케줄링</strong>: 의료 인력과 장비를 <strong>효율적으로 배치</strong>하여 병원의 운영 효율성을 극대화한다.</li>
 <li><strong>호텔 예약 시스템</strong>: 객실 예약을 최적화하여 <strong>수익을 극대화</strong>하는 문제에 적용된다.</li>
-</ul>
-</dd>
-<dt><strong>마케팅 및 광고</strong></dt>
-<dd>
+</ul></li>
+<li><strong>마케팅 및 광고</strong>
 <ul>
 <li><strong>광고 예산 최적화</strong>: 다양한 매체를 활용하여 광고 예산을 <strong>효율적으로 분배</strong>하고 <strong>목표 시장</strong>에 맞는 광고 전략을 수립한다.</li>
 <li><strong>판매 전략</strong>: 제품이나 서비스의 가격, 프로모션, 판매 채널을 최적화하여 <strong>매출 증대</strong>를 도모한다.</li>
+</ul></li>
 </ul>
-</dd>
-</dl>
 <p>선형계획법은 다양한 분야에서 <strong>자원의 효율적인 배분</strong>을 위해 사용된다. <strong>산업 생산, 물류, 금융</strong> 등 많은 분야에서 최적의 해결책을 제공하며, <strong>비용 절감</strong>, <strong>수익 증대</strong>, <strong>효율적인 자원 관리</strong>를 위해 널리 활용된다.</p>
-<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 97-1-3, 121-1-3">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-기출: 97-1-3, 121-1-3
-</div>
-</div>
-<div class="callout-body-container callout-body">
-
-</div>
-</div>
 </section>
 </section>
 <section id="대안평가" class="level3">
@@ -2528,13 +2310,12 @@ x_1 \ge 0, \ x_2 \ge 0
 <section id="sec-ahp" class="level4">
 <h4 class="anchored" data-anchor-id="sec-ahp">AHP</h4>
 <p>AHP(Analytic Hierarchy Process, 계층 분석법)는 복잡한 의사결정 문제를 구조화하고 정량적으로 분석할 수 있도록 도와주는 다기준 의사결정(Multi-Criteria Decision Making, MCDM) 기법이다. 1970년대에 <strong>토마스 사아티(Thomas Saaty)</strong>가 개발하였으며, 정성적 요소를 수치화할 수 있다는 점에서 다양한 분야에서 폭넓게 사용된다.</p>
-<dl>
-<dt>AHP 특징</dt>
-<dd>
+<p>AHP 특징은 다음과 같다.</p>
 <table class="caption-top table">
+<caption>AHP 특징</caption>
 <colgroup>
-<col style="width: 10%">
-<col style="width: 89%">
+<col style="width: 30%">
+<col style="width: 70%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -2561,8 +2342,6 @@ x_1 \ge 0, \ x_2 \ge 0
 </tr>
 </tbody>
 </table>
-</dd>
-</dl>
 <section id="ahp-원리" class="level5">
 <h5 class="anchored" data-anchor-id="ahp-원리">AHP 원리</h5>
 <p>인간이 의사결정 시 두뇌가 단계적 또는 위계적 분석 과정을 활용한다는 사실에 착안하여 개발되었다. 연구 결과에 따르면 사람은 문제를 해결할 때 다음 세가지 원칙을 따른다.</p>
@@ -2571,24 +2350,16 @@ x_1 \ge 0, \ x_2 \ge 0
 <li>상대적 중요도(weight) 설정</li>
 <li>논리적 일관성 (logical consistency) 유지</li>
 </ol>
-<dl>
-<dt>계층적 구조 설정</dt>
-<dd>
-인간은 복작한 현상을 그 구성요소 별로 나아가 더 작은 부분으로 나누어 종국적으로 계층 구조를 설정한다. 가장 기본적으로 맨 윗부분은 <strong>목적(goal)</strong>을 두고, 그 밑에 판단기준이 되는 <strong>기준(criteria)</strong>을, 그리고 가장 아래 계층에 <strong>대안(alternatives)</strong>을 두는 구조이다. 판단기준은 분석 대상에 따라 하위 계층을 두어 복잡한 구조를 가질 수도 있다.
-</dd>
-<dt>상대적 중요도 설정</dt>
-<dd>
-인간은 관측한 사물 사이의 관계를 인식하고 유사한 사물들을 짝으로 묶어 특정 기준에 대하여 비교하고 그 짝의 구성 인자 사이의 선호도를 판단하는 능력을 소유하고 있다. 최종적으로 상상이나 논리적 과정을 통하여 그들이 내린 판단을 종합하여 전체 시스템에 대한 이해를 보다 강화한다. AHP 특징은 많은 의사결정 요소 간 가중치 또는 중요도(weight)를 간단한 <strong>쌍대비교(1:1)</strong>를 통해 산출해 내는데 있다.
-</dd>
-<dt>논리적 일관성 유지</dt>
-<dd>
-인간은 사물이나 생각을 논리적 일관성을 갖도록 관계를 설정하는 능력을 갖고 있다. 일관성은 두 가지 의미를 갖는데 유사한 사물이나 생각을 동질성이나 관련성에 따라 묶는 것과 특정한 기준이 있을 경우 생각이나 사물 간 강약을 기준에 따라 논리적인 방법으로 구성한다는 것이다.
-</dd>
-</dl>
+<ul>
+<li><p>계층적 구조 설정 인간은 복작한 현상을 그 구성요소 별로 나아가 더 작은 부분으로 나누어 종국적으로 계층 구조를 설정한다. 가장 기본적으로 맨 윗부분은 <strong>목적(goal)</strong>을 두고, 그 밑에 판단기준이 되는 <strong>기준(criteria)</strong>을, 그리고 가장 아래 계층에 <strong>대안(alternatives)</strong>을 두는 구조이다. 판단기준은 분석 대상에 따라 하위 계층을 두어 복잡한 구조를 가질 수도 있다.</p></li>
+<li><p>상대적 중요도 설정 인간은 관측한 사물 사이의 관계를 인식하고 유사한 사물들을 짝으로 묶어 특정 기준에 대하여 비교하고 그 짝의 구성 인자 사이의 선호도를 판단하는 능력을 소유하고 있다. 최종적으로 상상이나 논리적 과정을 통하여 그들이 내린 판단을 종합하여 전체 시스템에 대한 이해를 보다 강화한다. AHP 특징은 많은 의사결정 요소 간 가중치 또는 중요도(weight)를 간단한 <strong>쌍대비교(1:1)</strong>를 통해 산출해 내는데 있다.</p></li>
+<li><p>논리적 일관성 유지 인간은 사물이나 생각을 논리적 일관성을 갖도록 관계를 설정하는 능력을 갖고 있다. 일관성은 두 가지 의미를 갖는데 유사한 사물이나 생각을 동질성이나 관련성에 따라 묶는 것과 특정한 기준이 있을 경우 생각이나 사물 간 강약을 기준에 따라 논리적인 방법으로 구성한다는 것이다.</p></li>
+</ul>
 </section>
 <section id="가지-공리" class="level5">
 <h5 class="anchored" data-anchor-id="가지-공리">4가지 공리</h5>
 <p>기본적인 4가지 공리는 다음과 같다.</p>
+<center>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
@@ -2596,8 +2367,8 @@ x_1 \ge 0, \ x_2 \ge 0
 <div>
 <pre class="mermaid mermaid-js">flowchart TB
 
-가[4가지 공리]
-가 --- 나0[상호비교] &amp; 나1[동질성] &amp; 나2[독립성] &amp; 나3[기대성]
+    가[4가지 공리]
+    가 --- 나0[상호비교] &amp; 나1[동질성] &amp; 나2[독립성] &amp; 나3[기대성]
 
 </pre>
 </div>
@@ -2605,32 +2376,17 @@ x_1 \ge 0, \ x_2 \ge 0
 </div>
 </div>
 </div>
-<dl>
-<dt>상호비교(reciprocal comparison)</dt>
-<dd>
+</center>
 <ul>
-<li>의사결정자의 두 대상에 대한 상호 비교가 반드시 가능해야 하며 중요성 정도를 나타낼 수 있어야 한다. 이 중요성 정도는 반드시 역조건을 성립시켜야 한다. 즉 A가 B보다 x배 중요하다면 B는 A보다 (1/x)배 중요시되어야 한다.</li>
+<li><p><strong>상호비교</strong>(reciprocal comparison)<br>
+의사결정자의 두 대상에 대한 상호 비교가 반드시 가능해야 하며 중요성 정도를 나타낼 수 있어야 한다. 이 중요성 정도는 반드시 역조건을 성립시켜야 한다. 즉 A가 B보다 x배 중요하다면 B는 A보다 (1/x)배 중요시되어야 한다.</p></li>
+<li><p><strong>동질성</strong>(homogeneity)<br>
+중요성 정도는 한정된 범위 내 정해진 척도를 통해 표현되어야 한다. 즉 비교대상 간 비교 가능한 일정한 범위를 갖는 기준들이 존재해야 한다.</p></li>
+<li><p><strong>독립성</strong>(independence)<br>
+상대적 중요도를 평가하는 동일 수준 요인들은 특성이나 내용 측면에서 서로 관련성이 없어야 한다.</p></li>
+<li><p><strong>기대성</strong>(expectation)<br>
+계층구조는 의사결정에 필요한 모든 사항들을 완전하게 포함하는 것을 가정한다. 즉 의사결정자의 합리적 기대에 부합하는 완전한 계층구조를 갖고 있어야 한다. 반면 수준 수가 많아 계층 구조가 깊으면 계산상 복잡성을 유발시키므로 일반적으로 3-7 수준으로 계층을 형성한다.</p></li>
 </ul>
-</dd>
-<dt>동질성(homogeneity)</dt>
-<dd>
-<ul>
-<li>중요성 정도는 한정된 범위 내 정해진 척도를 통해 표현되어야 한다. 즉 비교대상 간 비교 가능한 일정한 범위를 갖는 기준들이 존재해야 한다.</li>
-</ul>
-</dd>
-<dt>독립성(independence)</dt>
-<dd>
-<ul>
-<li>상대적 중요도를 평가하는 동일 수준 요인들은 특성이나 내용 측면에서 서로 관련성이 없어야 한다.</li>
-</ul>
-</dd>
-<dt>기대성(expectation)</dt>
-<dd>
-<ul>
-<li>계층구조는 의사결정에 필요한 모든 사항들을 완전하게 포함하는 것을 가정한다. 즉 의사결정자의 합리적 기대에 부합하는 완전한 계층구조를 갖고 있어야 한다. 반면 수준 수가 많아 계층 구조가 깊으면 계산상 복잡성을 유발시키므로 일반적으로 3-7 수준으로 계층을 형성한다.</li>
-</ul>
-</dd>
-</dl>
 <p>각 공리는 이론적 또는 실제 이용 측면에서 <strong>타당성</strong>을 가지기 위해 필요하다. 그 <strong>근거</strong>는 다음과 같다.</p>
 <p><strong>상호비교</strong> 위배는 모호한 질문 때문에 의사결장가 질문을 이해하지 못하는 경우 발생한다. 판단이나 상대비교를 이끌어 내는데 사용되는 질문이 명백하지 않거나 질문이 올바르게 언급되지 않았다면 쌍대비교가 성립될 수 없다는 것을 의미한다.</p>
 <p><strong>동질성</strong>을 만족하지 못한다면 비교되는 요소는 동일하지 못하게 되어 쌍대비교가 성립할 수 없다. 즉, 동질성이란 비교 대상들이 비교 가능하다는 것을 의미한다.</p>
@@ -2651,42 +2407,29 @@ x_1 \ge 0, \ x_2 \ge 0
 <p></p><figure class="figure"><p></p>
 <div>
 <pre class="mermaid mermaid-js">flowchart TB
-subgraph 목표
-0[스마트폰 구입]
-end
-subgraph 평가기준
-11[디자인]
-12[가격]
-13[성능]
-14[서비스]
-end
-subgraph 대안
-21[삼성]
-22[샤오미]
-23[애플]
-end
-0 --- 11 &amp; 12 &amp; 13 &amp; 14
-11 --- 21 &amp; 22 &amp; 23
-12 --- 21 &amp; 22 &amp; 23
-13 --- 21 &amp; 22 &amp; 23
-14 --- 21 &amp; 22 &amp; 23
+    subgraph 목표
+    0[스마트폰 구입]
+    end
+    subgraph 평가기준
+    11[디자인]
+    12[가격]
+    13[성능]
+    14[서비스]
+    end
+    subgraph 대안
+    21[삼성]
+    22[샤오미]
+    23[애플]
+    end
+    0 --- 11 &amp; 12 &amp; 13 &amp; 14
+    11 --- 21 &amp; 22 &amp; 23
+    12 --- 21 &amp; 22 &amp; 23
+    13 --- 21 &amp; 22 &amp; 23
+    14 --- 21 &amp; 22 &amp; 23
 </pre>
 </div>
 <p></p></figure><p></p>
 </div>
-</div>
-</div>
-<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 115-1-2">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-기출: 115-1-2
-</div>
-</div>
-<div class="callout-body-container callout-body">
-
 </div>
 </div>
 </section>
@@ -2695,9 +2438,10 @@ end
 <h4 class="anchored" data-anchor-id="sec-anp">ANP</h4>
 <p><strong>ANP(Analytic Network Process, 분석 네트워크 과정)</strong>는 AHP(Analytic Hierarchy Process)의 한계를 극복하기 위해 토마스 사아티(Saaty)가 확장한 의사결정 기법이다. AHP가 <strong>계층적 구조(Hierarchy)</strong>를 가정하는 반면, ANP는 요소 간 상호의존성(Interdependence)을 허용하는 <strong>네트워크 구조(Network)</strong>를 기반으로 한다.</p>
 <table class="caption-top table">
+<caption>ANP 개요</caption>
 <colgroup>
-<col style="width: 10%">
-<col style="width: 89%">
+<col style="width: 30%">
+<col style="width: 70%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -2724,10 +2468,9 @@ end
 </tr>
 </tbody>
 </table>
-<dl>
-<dt>AHP와 ANP 비교</dt>
-<dd>
+<p>AHP와 ANP를 비교하면 다음과 같이 정리할 수 있다.</p>
 <table class="caption-top table">
+<caption>AHP vs.&nbsp;ANP</caption>
 <colgroup>
 <col style="width: 15%">
 <col style="width: 38%">
@@ -2763,10 +2506,9 @@ end
 </tr>
 </tbody>
 </table>
-</dd>
-<dt>ANP 장점</dt>
-<dd>
+<p>다음은 ANP 장점이다.</p>
 <table class="caption-top table">
+<caption>ANP 장점</caption>
 <thead>
 <tr class="header">
 <th>장점</th>
@@ -2788,13 +2530,12 @@ end
 </tr>
 </tbody>
 </table>
-</dd>
-<dt>ANP 한계</dt>
-<dd>
+<p>다음은 ANP 한계이다.</p>
 <table class="caption-top table">
+<caption>ANP 한계</caption>
 <colgroup>
-<col style="width: 17%">
-<col style="width: 82%">
+<col style="width: 30%">
+<col style="width: 70%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -2817,57 +2558,44 @@ end
 </tr>
 </tbody>
 </table>
-</dd>
-</dl>
-<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 97-4-4, 103-3-4, 112-3-3, 121-1-10, 121-2-4, 127-3-5">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-기출: 97-4-4, 103-3-4, 112-3-3, 121-1-10, 121-2-4, 127-3-5
-</div>
-</div>
-<div class="callout-body-container callout-body">
-
-</div>
-</div>
 </section>
 </section>
 </section>
 <section id="투자안-평가" class="level2">
 <h2 class="anchored" data-anchor-id="투자안-평가">투자안 평가</h2>
-<p>투자안으로부터 예상되는 미래 현금흐름과 자본비용을 알고 있다고 가정할 때 각 투자안이 기업 가치 증가에 어느정도 공헌하는지에 따라 투자안 경제성을 평가한다. 미래 현금 흐름을 고려 유무에 따라 전통적인 분석방법과 현금흐름할인법(DCF, discounted cash flow)으로 구분할 수 있다.</p>
+<p>투자안으로부터 예상되는 미래 현금흐름과 자본비용을 알고 있다고 가정할 때 각 투자안이 기업 가치 증가에 어느 정도 공헌하는지에 따라 투자안 경제성을 평가한다. 미래 현금 흐름을 고려 유무에 따라 전통적인 분석방법과 현금흐름할인법(DCF, discounted cash flow)으로 구분할 수 있다.</p>
+<center>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
 <p></p><figure class="figure"><p></p>
 <div>
 <pre class="mermaid mermaid-js">flowchart TB
-0[경제성 평가방법]
-11[전통적 분석방법]
-12[현금흐름할인방법]
-13[원가비교법]
-21[회수기간법]
-22[회계적이익률법]
-23["순현가법(NPV)"]
-24["내부수익률법(IRR)"]
+    0[경제성 평가방법]
+    11[전통적 분석방법]
+    12[현금흐름할인방법]
+    13[원가비교법]
+    21[회수기간법]
+    22[회계적이익률법]
+    23["순현가법(NPV)"]
+    24["내부수익률법(IRR)"]
 
-0 --- 11 &amp; 12 &amp; 13
-11 --- 21 &amp; 22
-12 --- 23 &amp; 24
+    0 --- 11 &amp; 12 &amp; 13
+    11 --- 21 &amp; 22
+    12 --- 23 &amp; 24
 </pre>
 </div>
 <p></p></figure><p></p>
 </div>
 </div>
 </div>
+</center>
 <section id="전통적-분석방법" class="level3">
 <h3 class="anchored" data-anchor-id="전통적-분석방법">전통적 분석방법</h3>
-<p>전통적 분석방법에는 회수기간법화 회계적 이익률법이 있다.</p>
+<p>전통적 분석방법에는 <strong>회수기간법</strong>과 <strong>회계적 이익률법</strong>이 있다.</p>
 <section id="원가비교법" class="level4">
 <h4 class="anchored" data-anchor-id="원가비교법">원가비교법</h4>
-<p><strong>원가비교법(Minimum Cost Rule)</strong>은 최소비용법으로 Min{각 투자안의 투자액과 비용의 합계}로 대안을 선정하는 방법이다.</p>
+<p><strong>원가비교법(Minimum Cost Rule)</strong>은 최소비용법으로 <span class="math inline">\(\text{Min\{각 투자안의 투자액과 비용의 합계\}}\)</span>로 대안을 선정하는 방법이다.</p>
 </section>
 <section id="회수기간법" class="level4">
 <h4 class="anchored" data-anchor-id="회수기간법">회수기간법</h4>
@@ -2875,27 +2603,16 @@ end
 <p><span id="eq-payback-period-method"><span class="math display">\[
 회수기간 = \frac{투자액}{연간현금유입액}
 \tag{29.6}\]</span></span></p>
-<dl>
-<dt>의사결정 기준</dt>
-<dd>
+<p>의사결정 기준은 다음과 같다.</p>
 <ul>
-<li><dl>
-<dt>독립적 투자안</dt>
-<dd>
-목표회수기간보다 짧은 투자안을 선택
-</dd>
-</dl></li>
-<li><dl>
-<dt>상호배타적 투자안</dt>
-<dd>
-폭표회수기간보다 짧은 투자안들 중에서 회수기간이 가장 짧은 투자안 선택
-</dd>
-</dl></li>
+<li>독립적 투자안<br>
+목표회수기간보다 짧은 투자안을 선택</li>
+<li>상호배타적 투자안<br>
+목표회수기간보다 짧은 투자안들 중에서 회수기간이 가장 짧은 투자안 선택</li>
 </ul>
-</dd>
-</dl>
-<p>회수기간법은 다음과 같은 장단점을 갖는다.</p>
+<p>회수기간법은 다음과 같은 장점과 단점을 갖는다.</p>
 <table class="caption-top table">
+<caption>회수기간법 장단점</caption>
 <colgroup>
 <col style="width: 50%">
 <col style="width: 50%">
@@ -2937,8 +2654,7 @@ end
 </tr>
 </tbody>
 </table>
-<p><br></p>
-<p><strong>할인회수기간법(discounted payback period method)</strong>은 미래 현금유입의 현재가치로부터 투자원금을 회수하는데 소요되는 기간으로 투자의사결정을 하는 방법이다. 화폐의 시간가치가 감안되어 있으나 회수기간 이후의 현금흐름름이 무시된다는 단점이 여전히 존재한다.</p>
+<p><strong>할인회수기간법(discounted payback period method)</strong>은 미래 현금유입의 현재가치로부터 투자원금을 회수하는데 소요되는 기간으로 투자의사결정을 하는 방법이다. 화폐의 시간가치가 감안되어 있으나 회수기간 이후의 현금흐름이 무시된다는 단점이 여전히 존재한다.</p>
 <div class="callout callout-style-default callout-important no-icon callout-titled" title="예제">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -2989,7 +2705,8 @@ end
 \]</span></p>
 <p><span class="math display">\[
 할인현금흐름 = \frac{100}{9+17+23+27+(24)} = 1
-\]</span> 할인현금흐름인 경우, 5년차에 31만큼 현금흐름이 예상되나 실 필요한 현금흐름은 24이므로 <span class="math inline">\(24/31 \approx 0.8(개월)\)</span>만에 투자액이 회수 가능한다.</p>
+\]</span></p>
+<p>할인현금흐름인 경우, 5년차에 31만큼 현금흐름이 예상되나 실 필요한 현금흐름은 24이므로 <span class="math inline">\(24/31 \approx 0.8(개월)\)</span>만에 투자액이 회수 가능한다.</p>
 <p><span class="math inline">\(\therefore\)</span> ㅤ단순현금흐름인 경우 회수기간이 4년, 할인회수기간인 경우 회수기간이 약 4.8년으로 계산된다.</p>
 </div>
 </div>
@@ -3057,27 +2774,12 @@ end
 <p><span id="eq-accounting-rate-of-return"><span class="math display">\[
 회계적 \ 이익률 = \frac{연평균순이익}{연평균투자액(장부가치)}, \ 또는 \  \frac{연평균순이익}{\frac{총투자액}{2}}
 \tag{29.7}\]</span></span></p>
-<dl>
-<dt>의사결정 기준</dt>
-<dd>
-<ul>
-<li><dl>
-<dt>독립적 투자안</dt>
-<dd>
-목표회계적 이익률(요구수익률)보다 높은 투자안을 선택
-</dd>
-</dl></li>
-<li><dl>
-<dt>상호배타적인 투자안</dt>
-<dd>
-목표회계적 이익률보다 높은 투자안들 중에서 목표 회계적 이익률이 가장 높은 투자안을 선택
-</dd>
-</dl></li>
-</ul>
-</dd>
-</dl>
+<p>의사결정 기준은 다음과 같다. - 독립적 투자안<br>
+목표회계적 이익률(요구수익률)보다 높은 투자안을 선택 - 상호배타적인 투자안<br>
+목표회계적 이익률보다 높은 투자안들 중에서 목표 회계적 이익률이 가장 높은 투자안을 선택</p>
 <p>회계적 이익률법은 다음과 같은 장단점을 갖는다.</p>
 <table class="caption-top table">
+<caption>회계적 이익률법 장단점</caption>
 <colgroup>
 <col style="width: 50%">
 <col style="width: 50%">
@@ -3107,21 +2809,22 @@ end
 </section>
 <section id="현금흐름할인법" class="level3">
 <h3 class="anchored" data-anchor-id="현금흐름할인법">현금흐름할인법</h3>
-<p>현금흐름할인법에는 순현가(NPV)법과 내부수익률(IRR)법이 있다.</p>
+<p>현금흐름할인법에는 <strong>순현가(NPV)법</strong>과 <strong>내부수익률(IRR)법</strong>이 있다.</p>
 <section id="sec-npv" class="level4">
 <h4 class="anchored" data-anchor-id="sec-npv">순현가법</h4>
 <p><strong>순현가법(NPV method)</strong>은 투자안과 관련된 현금 흐름은 편익에 해당되는 현금유입과 비용(투자액)에 해당되는 현금유출로 구분이 가능하다.</p>
+<center>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
 <p></p><figure class="figure"><p></p>
 <div>
 <pre class="mermaid mermaid-js">flowchart TB
-01["현금흐름(CF, cash flow)"]
-11["현금유입(CI, cash inflow"]
-12["현금유출(CO, cash outflow"]
+    01["현금흐름(CF, cash flow)"]
+    11["현금유입(CI, cash inflow)"]
+    12["현금유출(CO, cash outflow)"]
 
-01 --- 11 &amp; 12
+    01 --- 11 &amp; 12
 
 </pre>
 </div>
@@ -3129,6 +2832,7 @@ end
 </div>
 </div>
 </div>
+</center>
 <p>순현가법은 순현재가치(NPV, net present value)를 근거로 투자안을 결정하는 방법이다. NPV는 투자로 인한 미래 기대현금유입을 적절한 할인율로 할인한 현재가치에서 투자액의 현재가치를 차감한 값을 의미한다.</p>
 <p>계산식은 다음과 같다.</p>
 <p><span class="math display">\[
@@ -3143,15 +2847,11 @@ NPV = \sum^{n}_{t=1}\frac{CI_t}{(1+R)^t} - I_0
 <li><span class="math inline">\(I_0\)</span> : 최초 투자액</li>
 <li><span class="math inline">\(R\)</span> : <strong>할인율</strong> 또는 요구수익률(RRR, 자본비용)</li>
 </ul>
-<dl>
-<dt>의사결정 기준</dt>
-<dd>
+<p>의사결정 기준은 다음과 같다.</p>
 <ul>
 <li>독립적 투자안: NPV &gt; 0이면 채택</li>
 <li>상호배타적 투자안: NPV &gt; 0이고 NPV가 가장 큰 투자안을 채택</li>
 </ul>
-</dd>
-</dl>
 <p>NPV법은 다음과 같은 특징을 갖는다.</p>
 <ul>
 <li>화폐의 시간가치가 고려된 방법</li>
@@ -3214,20 +2914,16 @@ B = \frac{300}{(1+0.1)^1} + \frac{450}{(1+0.1)^2} + \frac{750}{(1+0.1)^3} + \fra
 </section>
 <section id="sec-irr" class="level4">
 <h4 class="anchored" data-anchor-id="sec-irr">내부수익률법</h4>
-<p><strong>내부수익률(IRR, internal rate of return)법</strong>은 기대 현금 유입 현가와 현금 유출 현가를 동일하게 하는 할인률인 IRR을 기준으로 투자를 결정하는 방식이다. 즉, 내부수익률(IRR)과 요구수익률(R)를 비교하여 투자를 결정한다. 계산법은 좌변에 이익현가를 두고 우변에 투자액 현가를 두어 일치시키는 할인율로 화폐의 시간가치가 감안된 예상투자수익률을 계산한다.</p>
+<p><strong>내부수익률(IRR, internal rate of return)법</strong>은 <span class="hl">기대 현금 유입 현가와 현금 유출 현가를 동일하게 하는 할인률인 IRR을 기준으로 투자를 결정하는 방식</span>이다. 즉, 내부수익률(IRR)과 요구수익률(R)를 비교하여 투자를 결정한다. 계산법은 좌변에 이익현가를 두고 우변에 투자액 현가를 두어 일치시키는 할인율로 화폐의 시간가치가 감안된 예상투자수익률을 계산한다.</p>
 <p><span id="eq-irr"><span class="math display">\[
 \sum^{n}_{t=1}\frac{CI_t}{(1+IRR)^t} = \ I_0 \quad (여기서 \ 식을 \ 만족시키는 \ IRR \ 계산)
 \tag{29.9}\]</span></span></p>
 <p>IRR은 현가표를 이용하여 시행착오법으로 구하며, 현가표에 정확한 값이 없을 경우 보간법 또는 재무계산기나 Excel을 이용하여 계산할 수도 있다.</p>
-<dl>
-<dt>의사결정 기준</dt>
-<dd>
+<p>의사결정 기준은 다음과 같다.</p>
 <ul>
 <li>독리적인 투자안: IRR &gt; R이면 채택</li>
 <li>상호배타적 투자안: IRR &gt; R이고 IRR이 제일 큰 투자안 채택</li>
 </ul>
-</dd>
-</dl>
 <p>IRR법은 화폐의 시간가치가 감안된 평균투자수익률로 투자안을 평가한다는 특징이 있다.</p>
 <div class="callout callout-style-default callout-important no-icon callout-titled" title="예제">
 <div class="callout-header d-flex align-content-center">
@@ -3396,9 +3092,9 @@ IRR \approx 7.88
 <div class="callout-body-container callout-body">
 <table class="caption-top table">
 <colgroup>
-<col style="width: 26%">
-<col style="width: 37%">
-<col style="width: 36%">
+<col style="width: 18%">
+<col style="width: 41%">
+<col style="width: 41%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -3532,19 +3228,6 @@ IRR \approx 7.88
 </dl>
 </div>
 </div>
-<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 124-3-5">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-기출: 124-3-5
-</div>
-</div>
-<div class="callout-body-container callout-body">
-
-</div>
-</div>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="MARR">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -3555,7 +3238,7 @@ MARR
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>MARR(Minimum Attractive Rate of Return)</strong>는 투자나 프로젝트가 경제적으로 타당하다고 판단되기 위해 최소한으로 요구되는 수익률을 의미한다. 기업이나 투자자가 자금을 투자할 때 기대하는 최소 수익률로, 이를 초과해야만 투자가 진행된다.</p>
+<p><strong>MARR(Minimum Attractive Rate of Return)</strong>는 <span class="hl">투자나 프로젝트가 경제적으로 타당하다고 판단되기 위해 최소한으로 요구되는 수익률</span>을 의미한다. 기업이나 투자자가 자금을 투자할 때 기대하는 최소 수익률로, 이를 초과해야만 투자가 진행된다.</p>
 <p>MARR는 주로 다음과 같은 요소들을 고려해 설정된다.</p>
 <ul>
 <li><strong>자본 비용</strong>: 자금을 조달하는 데 드는 비용을 반영한다.<br>
@@ -3569,6 +3252,7 @@ MARR
 <p>반면, 이자율은 자금을 빌릴 때 지불해야 하는 비용 또는 자금을 예치했을 때 받게 되는 이익을 비율로 나타낸 것이다. 이는 시장에서 정해지며, 일반적으로 은행 대출, 채권, 예금 등에서 사용된다.</p>
 <p>주요 차이점은 다음과 같다.</p>
 <table class="caption-top table">
+<caption>MARR vs.&nbsp;이자율</caption>
 <colgroup>
 <col style="width: 13%">
 <col style="width: 44%">
@@ -3656,45 +3340,24 @@ MARR
 </tbody>
 </table>
 <hr>
-<dl>
-<dt>자본회수법</dt>
-<dd>
+<p><strong>자본회수법</strong></p>
 <ul>
 <li>자본회수기간 = <span class="math inline">\(\frac{순투자액}{연간이익+감가상각비}\)</span></li>
 <li>투자안 검토 - A = <span class="math inline">\(\frac{2470}{600 + 400} = 2.47\)</span> - B = <span class="math inline">\(\frac{2310}{650 + 500} = 2.01\)</span></li>
 <li>따라서 자본 회수 기간이 짧은 B기계 투자안이 효과적</li>
 </ul>
-</dd>
-<dt>투자이익률법</dt>
-<dd>
+<p><strong>투자이익률법</strong></p>
 <ul>
 <li>투자이익률 = <span class="math inline">\(\frac{평균이익액}{순투자액} \times 100\)</span></li>
 <li>투자안 검토 - A = <span class="math inline">\(\frac{600}{2470} \times 100 = 24.29\)</span>(%) - B = <span class="math inline">\(\frac{650}{2310} \times 100 = 28.14\)</span></li>
 <li>따라서 투자수익률이 높은 B기계 투자안이 효과적</li>
 </ul>
-</dd>
-<dt>자본비용(할인율)이 20%일 때 순현재가치법으로 경제성 검토</dt>
-<dd>
+<p><strong>자본비용(할인율)이 20%일 때 순현재가치법으로 경제성 검토</strong></p>
 <ul>
 <li>NPV 수식 참고(<a href="#eq-npv" class="quarto-xref"><span>29.8</span></a>)</li>
 <li>투자안 검토 - <span class="math inline">\(A = [\frac{2470}{(1+0.2)^1} + ... + \frac{2470}{(1+0.2)^5}] - \frac{2470}{(1+0.2)^0} = 411.27\)</span>(만원)$ - <span class="math inline">\(B = [\frac{2310}{(1+0.2)^1} + ... + \frac{2310}{(1+0.2)^4}] - \frac{2310}{(1+0.2)^0} = 504.62\)</span>(만원)$</li>
 <li>따라서 NPV가 큰 B기계 투자안이 효과적</li>
 </ul>
-</dd>
-</dl>
-</div>
-</div>
-<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 121-2-6">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-기출: 121-2-6
-</div>
-</div>
-<div class="callout-body-container callout-body">
-
 </div>
 </div>
 </section>
@@ -3705,9 +3368,7 @@ MARR
 <section id="sec-pugh-matrix" class="level3">
 <h3 class="anchored" data-anchor-id="sec-pugh-matrix">Pugh Matrix</h3>
 <p>Pugh Matrix는 여러 대안 중 최적의 선택을 하기 위해 각 대안을 기준에 따라 상대적으로 비교하는 방법이다. 기준 대안(Baseline Alternative)을 설정하고, 다른 대안들을 이에 비해 <strong>우수(+)</strong>, <strong>동등(0)</strong>, <strong>열등(-)</strong>으로 평가한다. 복잡한 수치 계산 없이 직관적으로 최적의 대안을 선정할 수 있다.</p>
-<dl>
-<dt>스마트폰 케이스 재료 선택</dt>
-<dd>
+<p>스마트폰 케이스 재료 선택을 예로 들면 다음과 같다.</p>
 <ul>
 <li><strong>목표:</strong> 가벼우면서도 내구성이 좋은 스마트폰 케이스 재료를 선정한다.<br>
 </li>
@@ -3733,10 +3394,9 @@ MARR
 <li>가공 용이성(생산 공정 난이도)</li>
 </ul></li>
 </ul>
-</dd>
-<dt>Pugh Matrix 작성 예시</dt>
-<dd>
+<p>위 내용을 Pugh Matrix로 작성하면 다음과 같다.</p>
 <table class="caption-top table">
+<caption>Pugh Matrix 작성 예</caption>
 <thead>
 <tr class="header">
 <th>평가 기준</th>
@@ -3787,18 +3447,12 @@ MARR
 <ul>
 <li><strong>기준 대안:</strong> 실리콘(0)<br>
 </li>
-<li><strong>평가 방식:</strong>
-<ul>
-<li><strong>“+”</strong>: 기준 대안(실리콘)보다 우수하다.<br>
-</li>
-<li><strong>“0”</strong>: 기준 대안과 동등하다.<br>
-</li>
-<li><strong>“-”</strong>: 기준 대안보다 열등하다.</li>
-</ul></li>
+<li><strong>평가 방식:</strong><br>
+- <strong>“+”</strong>: 기준 대안(실리콘)보다 우수하다.<br>
+- <strong>“0”</strong>: 기준 대안과 동등하다.<br>
+- <strong>“-”</strong>: 기준 대안보다 열등하다.</li>
 </ul>
-</dd>
-<dt>결과 분석 및 선택</dt>
-<dd>
+<p>결과 분석 및 선택 방법은 다음과 같다.</p>
 <ul>
 <li>탄소섬유, 플라스틱, 실리콘이 각각 +1로 가장 높은 평가를 받는다.<br>
 </li>
@@ -3808,9 +3462,7 @@ MARR
 </li>
 <li>비용 절감을 중시하는 경우에는 플라스틱을 선택한다.</li>
 </ul>
-</dd>
-<dt>Pugh Matrix 장점</dt>
-<dd>
+<p>Pugh Matrix 장점은 다음과 같다.</p>
 <ul>
 <li>복잡한 계산이 필요 없고 직관적으로 이해하기 쉽다.<br>
 </li>
@@ -3818,8 +3470,6 @@ MARR
 </li>
 <li>팀 의사결정 과정에서 명확하고 투명한 선택을 돕는다.</li>
 </ul>
-</dd>
-</dl>
 <p>Pugh Matrix는 재료 선택 과정에서 상대적 장단점을 명확하게 파악하고, 가장 적합한 재료를 선택하는 데 효과적인 방법이다.</p>
 </section>
 <section id="sec-must-want-matix" class="level3">
@@ -3830,17 +3480,13 @@ MARR
 </li>
 <li><strong>Want 기준</strong>: 바람직하지만 필수가 아닌 선택적 조건</li>
 </ul>
-<dl>
-<dt>특징</dt>
-<dd>
+<p>Must-Want 특징은 다음과 같다.</p>
 <ul>
 <li>Must 기준을 충족하지 못하는 대안은 바로 제외<br>
 </li>
 <li>Want 기준은 점수화하여 대안 중 우선순위를 결정</li>
 </ul>
-</dd>
-<dt>사례: 노트북 외장재 선택</dt>
-<dd>
+<p>노트북 외장재 선택을 사례로 들면 다음과 같다.</p>
 <ul>
 <li><strong>목표</strong>: 가벼우면서도 내구성이 높은 노트북 외장재 선정<br>
 </li>
@@ -3861,9 +3507,7 @@ MARR
 <li>디자인: 외관의 세련미와 고급스러움</li>
 </ul></li>
 </ul>
-</dd>
-<dt>Must-Want Matrix 작성</dt>
-<dd>
+<p>위 내용으로 Must-Want Matrix 작성하면 다음과 같다.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 32%">
@@ -3930,17 +3574,13 @@ MARR
 <li>탄소섬유: 4 + 2 + 5 = 11점</li>
 </ul></li>
 </ul>
-</dd>
-<dt>평가 및 결론</dt>
-<dd>
+<p>평가 및 결론은 다음과 같이 정리할 수 있다.</p>
 <ul>
 <li><strong>마그네슘 합금</strong>과 <strong>탄소섬유</strong>가 같은 점수를 받았으나, <strong>탄소섬유는 비용이 높은 단점</strong>이 있어 <strong>마그네슘 합금</strong>이 최종 선택됨.<br>
 </li>
 <li><strong>Must-Want Matrix</strong>를 통해 필수 기준을 충족하면서도 비용, 무게, 디자인에서 균형 잡힌 선택이 가능했음.</li>
 </ul>
-</dd>
-<dt>Must-Want Matrix 장점</dt>
-<dd>
+<p>Must-Want Matrix 장점은 다음과 같다.</p>
 <ul>
 <li><strong>효율성</strong>: 불필요한 대안을 조기에 제거해 의사결정 속도 향상<br>
 </li>
@@ -3948,27 +3588,12 @@ MARR
 </li>
 <li><strong>유연성</strong>: 다양한 제품 설계 및 재료 선택 과정에 적용 가능</li>
 </ul>
-</dd>
-</dl>
 <p>제품 개발 초기 단계에서 <strong>Must-Want Matrix</strong>는 명확한 기준을 바탕으로 신속하고 합리적인 결정을 내리는 데 효과적인 도구이다.</p>
-<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 121-4-2">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-기출: 121-4-2
-</div>
-</div>
-<div class="callout-body-container callout-body">
-
-</div>
-</div>
 </section>
 </section>
 <section id="sec-triz" class="level2">
 <h2 class="anchored" data-anchor-id="sec-triz">TRIZ</h2>
-<p>TRIZ(Theory of Inventive Problem Solving)는 러시아의 발명가이자 엔지니어인 <strong>Genrich Altshuller</strong>가 개발한 <font color="blue">창의적 문제해결 기법</font>이다. TRIZ는 주로 기술적 문제를 해결하기 위한 방법론으로, 발명의 패턴과 원리를 분석하여 문제를 창의적으로 해결할 수 있는 체계적인 접근법을 제공한다. TRIZ의 핵심 아이디어는 발명의 혁신적인 해결책이 반복되는 문제 해결의 패턴에 따라 발전한다는 것이다.</p>
+<p><strong>TRIZ</strong>(Theory of Inventive Problem Solving)는 <span class="hl">러시아의 발명가이자 엔지니어인 Genrich Altshuller가 개발한 창의적 문제해결 기법이다. TRIZ는 주로 기술적 문제를 해결하기 위한 방법론으로, 발명의 패턴과 원리를 분석하여 문제를 창의적으로 해결할 수 있는 체계적인 접근법을 제공한다. TRIZ의 핵심 아이디어는 발명의 혁신적인 해결책이 반복되는 문제 해결의 패턴에 따라 발전한다는 것이다.</span></p>
 <p>TRIZ는 문제의 본질을 파악하고 해결책을 도출하기 위해 다양한 도구와 방법을 제공한다. 그 중 중요한 요소는 <strong>모순 해결</strong>, <strong>발명적 원리</strong>, <strong>기술 시스템의 진화</strong>와 관련된 이론들이다.</p>
 <section id="triz-기법의-진행절차" class="level3">
 <h3 class="anchored" data-anchor-id="triz-기법의-진행절차">TRIZ 기법의 진행절차</h3>
@@ -4027,9 +3652,7 @@ TRIZ는 로봇 시스템과 자동화 기술의 문제를 해결하는 데도 �
 <section id="sec-fea" class="level3">
 <h3 class="anchored" data-anchor-id="sec-fea">FEA</h3>
 <p><strong>FEA</strong>(Financial effect analyst)는 기업이나 조직 내에서 재무적인 영향을 분석하고 평가하는 전문가이다. 이 직무는 조직의 재무 상태와 성과를 평가하고, 중요한 재무 결정을 내리기 위한 정보를 제공하는 역할을 한다. 주로 재무제표, 투자 분석, 예산 계획, 비용 분석 등을 통해 기업의 재무 건전성을 높이고 효율적인 경영을 지원하는 역할을 한다.</p>
-<dl>
-<dt>주요 역할과 업무</dt>
-<dd>
+<p>FEA 주요 역할과 업무는 다음과 같다.</p>
 <ol type="1">
 <li>재무 분석
 <ul>
@@ -4062,9 +3685,7 @@ TRIZ는 로봇 시스템과 자동화 기술의 문제를 해결하는 데도 �
 <li>분석을 통해 얻은 인사이트를 경영진에게 제공하여 전략적 결정을 내리도록 지원한다.</li>
 </ul></li>
 </ol>
-</dd>
-<dt>필요한 기술 및 자질</dt>
-<dd>
+<p>FEA로서 필요한 기술 및 자질은 다음과 같다.</p>
 <ul>
 <li>재무 및 회계 지식: 재무제표, 회계 원칙, 투자 분석 등에 대한 깊은 이해가 필요하다.</li>
 <li>분석적 사고: 데이터를 분석하고, 복잡한 문제를 해결하는 능력이 요구된다.</li>
@@ -4072,66 +3693,45 @@ TRIZ는 로봇 시스템과 자동화 기술의 문제를 해결하는 데도 �
 <li>커뮤니케이션 능력: 분석 결과를 명확하고 효과적으로 전달할 수 있는 능력이 필요하다. 경영진과의 커뮤니케이션이 중요하다.</li>
 <li>문제 해결 능력: 조직의 재무 상태를 개선하고, 비효율적인 부분을 찾아내는 문제 해결 능력이 중요하다.</li>
 </ul>
-</dd>
-<dt>FEA 역할 예시</dt>
+<dl>
+<dt>FEA 역할을 예로 들면 다음과 같다.</dt>
 <dd>
 <ul>
-<li>기업 합병 및 인수: 기업이 다른 회사를 인수하려는 경우, Financial Effect Analyst는 이 거래가 기업의 재무 상태에 미치는 영향을 분석하고, 리스크와 예상되는 수익성을 평가한다.</li>
-<li>신규 프로젝트 투자: 회사가 새로운 프로젝트에 투자하려 할 때, 이 프로젝트가 기업 재무에 미치는 영향을 분석하여, 투자 여부를 결정하는 데 필요한 데이터를 제공한다.</li>
-<li>예산 분석 및 조정: 각 부서의 예산이 초과되었을 때, 재무 분석가는 비용을 절감하기 위한 방안을 제시하고, 재무 목표에 맞게 예산을 재조정한다.</li>
+<li><strong>기업 합병 및 인수</strong>: 기업이 다른 회사를 인수하려는 경우, Financial Effect Analyst는 이 거래가 기업의 재무 상태에 미치는 영향을 분석하고, 리스크와 예상되는 수익성을 평가한다.</li>
+<li><strong>신규 프로젝트 투자</strong>: 회사가 새로운 프로젝트에 투자하려 할 때, 이 프로젝트가 기업 재무에 미치는 영향을 분석하여, 투자 여부를 결정하는 데 필요한 데이터를 제공한다.</li>
+<li><strong>예산 분석 및 조정</strong>: 각 부서의 예산이 초과되었을 때, 재무 분석가는 비용을 절감하기 위한 방안을 제시하고, 재무 목표에 맞게 예산을 재조정한다.</li>
 </ul>
 </dd>
 </dl>
 <p>FEA는 기업 재무 상태와 성과를 평가하고 전략적 의사결정을 지원하는 중요한 역할을 한다. 이를 위해 재무 분석, 예산 수립, 투자 평가 등 다양한 재무 활동을 수행하며, 경영진이 합리적인 결정을 내릴 수 있도록 돕는다. 이 직무는 재무적인 통찰력을 제공하고 기업 성장과 효율성을 극대화하는 데 기여한다.</p>
-<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출 100-1-6">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-기출 100-1-6
-</div>
-</div>
-<div class="callout-body-container callout-body">
-
-</div>
-</div>
 </section>
 <section id="sec-dea" class="level3">
 <h3 class="anchored" data-anchor-id="sec-dea">DEA</h3>
 <p><strong>DEA</strong>(Data Envelopment Analysis)는 1978년 Charnes, Cooper, Rhodes에 의해 처음으로 제안되었으며, OR/M(Operations Research/Management, 운영과학/경영)에서 가장 널리 활용되는 방법 중 하나이다. 생산운영 관리와 경영과학분야에 있어 효율성을 측정하기 위해 사용되는 비모수적 방법이다. 주로 여러 개 투입(input)과 산출(output)을 가지는 동일한 유형의 의사결정단위(DMU, Deceision Making Unit) 간 상대적 효율성을 평가하는데 사용한다.</p>
-<dl>
-<dt>핵심개념</dt>
-<dd>
+<p>DEA 핵심개념은 다음과 같다.</p>
 <ul>
 <li>의사결정단위(DMU): 병원, 학교, 공장, 점포 등 비교 대상이 되는 동일 유형 조직이나 부서</li>
 <li>투입(input): 자원, 예산, 인력 등 DMU가 사용하는 것</li>
 <li>산출(output): 제푸 수, 고객 만족도, 이익 등 DMU가 만들어 내는 결과</li>
 <li>효율성(efficency): 산출/투입 비율로 계산되며, DEA는 이를 상대적 기준으로 평가함</li>
 </ul>
-</dd>
-<dt>주요 특징</dt>
-<dd>
+<p>DEA 주요 특징은 다음과 같다.</p>
 <ul>
 <li>수학적 최적화 모델을 기반으로 한 평가 도구</li>
 <li>비모수적 방법: 자료 분포나 함수 형태를 가정하지 않음</li>
 <li>상대적 효율성 측정: 가장 효율적인 DMU를 기준으로 다른 단위 효율성을 평가</li>
 </ul>
-</dd>
-<dt>예시</dt>
-<dd>
-5개 학교가 있고, 각 학교는 교사 수(투입)와 졸업생 수(산출)를 가지고 있다고 할 때, DEA는 가장 효율적으로 졸업생을 많이 배출한 학교를 기준으로 삼고, 다른 학교의 상대적 효율성을 계산
-</dd>
-<dt>주요 활용 분야</dt>
-<dd>
+<p>예를 들어 보면 다음과 같다.</p>
+<ul>
+<li>5개 학교가 있고, 각 학교는 교사 수(투입)와 졸업생 수(산출)를 가지고 있다고 할 때, DEA는 가장 효율적으로 졸업생을 많이 배출한 학교를 기준으로 삼고, 다른 학교의 상대적 효율성을 계산</li>
+</ul>
+<p>DEA 주요 활용 분야는 다음과 같다.</p>
 <ul>
 <li>병원 간 서비스 효율 비교</li>
 <li>공공기간 성과 분석</li>
 <li>제조업체 생산성 비교</li>
 <li>교육기간 운영 효율 분석</li>
 </ul>
-</dd>
-</dl>
 <p><em>_EOD_</em></p>
 
 
