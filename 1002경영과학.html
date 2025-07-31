@@ -626,28 +626,18 @@ window.Quarto = {
 
 <section id="경영과학-이해" class="level2">
 <h2 class="anchored" data-anchor-id="경영과학-이해">경영과학 이해</h2>
-<p><strong>경영과학</strong>(operations research)은 복잡하고 불확실한 환경에서 발생하는 경영의사결정 문제 분석과 해결을 위하여 합리적이고 체계적인 계량적 방법을 적용한 학문이다.</p>
-<dl>
-<dt>목적</dt>
-<dd>
+<p><strong>경영과학</strong>(operations research)은 <span class="hl">복잡하고 불확실한 환경에서 발생하는 경영의사결정 문제 분석과 해결을 위하여 합리적이고 체계적인 계량적 방법을 적용한 학문</span>이다.</p>
 <ul>
-<li>여러 가지 모델과 기법들을 적용하여 경영자가 직면한 복잡하고 불확실한 경영문제를 합리적이고 체계적으로 해결함으로써 <font color="blue">좋은(옳은) 결정을 내릴 수 있도록 도와주는 것</font></li>
-</ul>
-</dd>
-<dt>특징</dt>
-<dd>
+<li><p>목적 여러 가지 모델과 기법들을 적용하여 경영자가 직면한 복잡하고 불확실한 경영문제를 합리적이고 체계적으로 해결함으로써 <font color="blue">좋은(옳은) 결정을 내릴 수 있도록 도와주는 것</font></p></li>
+<li><p>특징</p>
 <ul>
 <li>경영의사결정을 위한 과학적 방법 사용</li>
 <li>문제해결을 위한 계량적, 객관적, 수학적 모델(model) 사용</li>
 <li>문제해결을 위한 분석 도구(tool), 절차(algorithm), 기법(technique) 사용</li>
+</ul></li>
 </ul>
-</dd>
-</dl>
 <p>경영과학은 경영과학(management science), 결정과학(decision science), 계량경영학(quantitative management), OR(operations research), 산업공학(industrial engineering) 등 유사 용어로 사용된다.</p>
 <p>경영과학 발전 과정을 정리하면 다음과 같다.</p>
-<dl>
-<dt>발전 과정</dt>
-<dd>
 <ul>
 <li>1930년대 말 영국 군부에서 군사문제 해결을 위해 학제적 팀 적근법 사용</li>
 <li>2차 대전 중 미국이 영국의 작전연구(operational research) 모방, 작전분석을 위해 팀 워크 구성</li>
@@ -658,24 +648,7 @@ window.Quarto = {
 <li>1970년대 이후 MIS와 결합하여 DSS 탄생</li>
 <li>전문가 시스템, 인공지능 개발로 발전</li>
 </ul>
-</dd>
-</dl>
-<p>경영과학 특성은 다음과 같다.</p>
-<dl>
-<dt>특성</dt>
-<dd>
-<ul>
-<li>경영의사결정에 관심</li>
-<li>과학적 방법</li>
-<li>시스템적 접근 방법</li>
-<li>학제적 팀워크
-<ul>
-<li>수학적 모델 사용</li>
-<li>컴퓨터 활용</li>
-</ul></li>
-</ul>
-</dd>
-</dl>
+<p>경영과학 특성은 다음과 같다. - 경영의사결정에 관심 - 과학적 방법 - 시스템적 접근 방법 - 학제적 팀워크 - 수학적 모델 사용 - 컴퓨터 활용</p>
 </section>
 <section id="의사결정과-문제해결" class="level2">
 <h2 class="anchored" data-anchor-id="의사결정과-문제해결">의사결정과 문제해결</h2>
@@ -686,21 +659,21 @@ window.Quarto = {
 <div>
 <pre class="mermaid mermaid-js">flowchart LR
 
-문제해결 ----- 6 &amp; 7
-의사결정 ---- 1 &amp; 2 &amp; 3 &amp; 4 &amp; 5
-문제해결 ---- 의사결정 
+    문제해결 ----- 6 &amp; 7
+    의사결정 ---- 1 &amp; 2 &amp; 3 &amp; 4 &amp; 5
+    문제해결 ---- 의사결정 
 
-subgraph a2[ ]
-1["1.문제를 규명하고 정의한다."]
-2[2.여러 문제해결 대안을 결정한다.]
-3[3.대안을 평가할 기준을 결정한다.]
-4[4.대안을 평가한다.]
-5[5.가장 좋은 대안을 선정한다.]
-subgraph a1[" "]
-6[6.선정된 대안을 실행한다.]
-7[7.만족스런 해인지 결과를 평가한다.]
-end
-end
+    subgraph a2[ ]
+    1["1.문제를 규명하고 정의한다."]
+    2[2.여러 문제해결 대안을 결정한다.]
+    3[3.대안을 평가할 기준을 결정한다.]
+    4[4.대안을 평가한다.]
+    5[5.가장 좋은 대안을 선정한다.]
+        subgraph a1[" "]
+        6[6.선정된 대안을 실행한다.]
+        7[7.만족스런 해인지 결과를 평가한다.]
+        end
+    end
 </pre>
 </div>
 <p></p></figure><p></p>
@@ -709,20 +682,10 @@ end
 </div>
 <p><strong>문제해결</strong>(problem solving)은 <font color="blue">원하는 결과와 실제 결과 사이에 존재하는 차이를 규명하고 이 차이를 해결할 조치를 취하는 과정(process)</font>이다. <strong>의사결정</strong>(decision making)은 <font color="blue">문제를 정의하고, 대안을 결정하고, 결정 기준을 마련하고, 대안을 선정하는 과정</font>이다.</p>
 <p>의사결정 과정에는 질적분석과 수리적 분석이 있다.</p>
-<dl>
-<dt>질적 분석(qualitative analysis)</dt>
-<dd>
 <ul>
-<li>대안을 평가할 때 경영자 경험이나 판단력 같은 기예(art)에 의존하는 방법</li>
+<li><p>질적 분석(qualitative analysis) 대안을 평가할 때 경영자 경험이나 판단력 같은 기예(art)에 의존하는 방법</p></li>
+<li><p>수리적 분석(quantitative analysis) 대안을 평가할 때 계량적 자료와 수학적 모델 및 기법을 사용하는 방법</p></li>
 </ul>
-</dd>
-<dt>수리적 분석(quantitative analysis)</dt>
-<dd>
-<ul>
-<li>대안을 평가할 때 계량적 자료와 수학적 모델 및 기법을 사용하는 방법</li>
-</ul>
-</dd>
-</dl>
 <p>경영자는 더 좋은 경영문제 해결을 위해 질적 분석과 수리적 분석을 결합하여 사용한다.</p>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
@@ -731,14 +694,14 @@ end
 <div>
 <pre class="mermaid mermaid-js">flowchart LR
 
-subgraph g1[문제 구성]
-direction LR
-문제정의 ---&gt; 대안결정 ---&gt; 기준결정
-end
+    subgraph g1[문제 구성]
+    direction LR
+    문제정의 ---&gt; 대안결정 ---&gt; 기준결정
+    end
 
-subgraph g2[문제 분석]
-기준결정 ---&gt; 질적분석 &amp; 수리적분석 ---&gt; 요약평가 ---&gt; 의사결정
-end
+    subgraph g2[문제 분석]
+    기준결정 ---&gt; 질적분석 &amp; 수리적분석 ---&gt; 요약평가 ---&gt; 의사결정
+    end
 </pre>
 </div>
 <p></p></figure><p></p>
@@ -764,24 +727,24 @@ end
 <div>
 <pre class="mermaid mermaid-js">flowchart LR
 
-subgraph g1[의사결정과정]
-11[문제정의]
-12[대안설정]
-13[대안평가]
-14[의사결정]
-end
+    subgraph g1[의사결정과정]
+        11[문제정의]
+        12[대안설정]
+        13[대안평가]
+        14[의사결정]
+    end
 
-subgraph g2[과학적방법]
-21[문제정의]
-22[가설설정]
-23[실험 설계와 실행]
-24[가설 채택 또는 기각]
-end
+    subgraph g2[과학적방법]
+        21[문제정의]
+        22[가설설정]
+        23[실험 설계와 실행]
+        24[가설 채택 또는 기각]
+    end
 
-11 ---&gt; 21
-12 ---&gt; 22
-13 ---&gt; 23
-14 ---&gt; 24
+    11 ---&gt; 21
+    12 ---&gt; 22
+    13 ---&gt; 23
+    14 ---&gt; 24
 </pre>
 </div>
 <p></p></figure><p></p>
@@ -792,48 +755,34 @@ end
 <section id="시스템적-접근" class="level3">
 <h3 class="anchored" data-anchor-id="시스템적-접근">시스템적 접근</h3>
 <p>경영과학 특성 중 하나는 <strong>시스템적 접근 방법</strong>이다.</p>
-<dl>
-<dt>시스템</dt>
-<dd>
+<ul>
+<li>시스템
 <ul>
 <li>특정 목적을 달성하기 위하여 구성되는 상호 관련된, 독립적인 부분(하위 시스템, subsystem)의 전체(모임, 집합)</li>
 <li>하위 시스템도 시스템</li>
-</ul>
-</dd>
-<dt>시스템적 접근 방법</dt>
-<dd>
+</ul></li>
+<li>시스템적 접근 방법
 <ul>
 <li>전체 시스템 관점에서 하위 시스템 문제를 해결하는 것</li>
 <li>divide and conquer</li>
-</ul>
-</dd>
-<dt>최적화(optimization)</dt>
-<dd>
-<ul>
-<li>전체 최적화(global optimization)
-<ul>
-<li>전체 시스템 목적에 부합하는 해(global optimum)을 찾는 것</li>
 </ul></li>
-<li>부분 최적화(sub optimization)
+<li>최적화(optimization)
 <ul>
-<li>어느 하위 시스템 목적에는 부합하지만 전체 시스템 목적에는 부합하지 못하는 해(local optimum)를 찾는 것</li>
+<li>전체 최적화(global optimization) 전체 시스템 목적에 부합하는 해(global optimum)을 찾는 것</li>
+<li>부분 최적화(sub optimization) 어느 하위 시스템 목적에는 부합하지만 전체 시스템 목적에는 부합하지 못하는 해(local optimum)를 찾는 것</li>
 </ul></li>
 </ul>
-</dd>
-</dl>
 </section>
 <section id="수학적-모델" class="level3">
 <h3 class="anchored" data-anchor-id="수학적-모델">수학적 모델</h3>
 <p><strong>모델</strong>(model, 모형)은 실제 세계 특정 현상이나 실체를 단순하게 요약하여 표현한 것이다. 문제를 기술하고 표현하는 모델화(modelling, 모형화)는 여러 가지 혜택도 주지만 동시에 위함도 따르므로 현실 문제에 대한 통찰력이 필요하다. 또한 모든 모델은 가정을 수반하게 된다.</p>
-<dl>
-<dt>가정(assumption)</dt>
-<dd>
+<ul>
+<li>가정(assumption)
 <ul>
 <li>가정을 세우면 실제 문제 복잡성을 감소시켜 단순화 하는데 도움이 됨</li>
 <li>단순화 vs.&nbsp;정확성</li>
+</ul></li>
 </ul>
-</dd>
-</dl>
 <p>좋은 모델이란 모델이 표현하고자 하는 실체 핵심을 문제 해결 관점에서 단순하면서도 정확하게 나타낸 것이다.</p>
 <p>모델 종류는 다음과 같다.</p>
 <div class="cell" data-layout-align="default">
@@ -854,23 +803,18 @@ end
 </div>
 </div>
 </div>
-<dl>
-<dt>형상모델 (iconic model), 또는 축적 모델 (scale model)</dt>
-<dd>
+<ul>
+<li>형상모델 (iconic model), 또는 축적 모델 (scale model)
 <ul>
 <li><font color="blue">물리적으로 확대 또는 축소한 원형 복사판</font></li>
 <li>장난감, 사진, 생산라인 등</li>
-</ul>
-</dd>
-<dt>상사모델 (analog model)</dt>
-<dd>
+</ul></li>
+<li>상사모델 (analog model)
 <ul>
 <li><font color="blue">실제 시스템처럼 기능하는 모델</font></li>
 <li>diagram, 조직표, 청사진, 속도계, 온도계 등</li>
-</ul>
-</dd>
-<dt>수학적 모델 (mathematical model)</dt>
-<dd>
+</ul></li>
+<li>수학적 모델 (mathematical model)
 <ul>
 <li><font color="blue">실제 문제를 수학적 기호를 사용하여 방정식이나 수학적 설명 등을 함수적 관계로 표현한 모델</font></li>
 <li>장점
@@ -879,9 +823,8 @@ end
 <li>다양한 수학적 해결 절차를 적용할 수 있게 해 준다.</li>
 <li>실행하는 시스템에서 일을 하는 사람에게 해를 만들 수 있도록 도와 준다.</li>
 </ul></li>
+</ul></li>
 </ul>
-</dd>
-</dl>
 <p>수학적 모델 구성 요소는 다음과 같다.</p>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
