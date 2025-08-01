@@ -556,11 +556,7 @@ window.Quarto = {
   <li><a href="#제품-수명주기에-따른-생산-방식" id="toc-제품-수명주기에-따른-생산-방식" class="nav-link" data-scroll-target="#제품-수명주기에-따른-생산-방식">제품 수명주기에 따른 생산 방식</a></li>
   <li><a href="#대량-맞춤-생산" id="toc-대량-맞춤-생산" class="nav-link" data-scroll-target="#대량-맞춤-생산">대량 맞춤 생산</a></li>
   <li><a href="#sec-hmlv" id="toc-sec-hmlv" class="nav-link" data-scroll-target="#sec-hmlv">다품종 소량생산</a></li>
-  <li><a href="#택트타임-생산-방식" id="toc-택트타임-생산-방식" class="nav-link" data-scroll-target="#택트타임-생산-방식">택트타임 생산 방식</a>
-  <ul class="collapse">
-  <li><a href="#takt-time-production의-운영-방식" id="toc-takt-time-production의-운영-방식" class="nav-link" data-scroll-target="#takt-time-production의-운영-방식">Takt Time Production의 운영 방식</a></li>
-  <li><a href="#takt-time-production의-장점과-단점" id="toc-takt-time-production의-장점과-단점" class="nav-link" data-scroll-target="#takt-time-production의-장점과-단점">Takt Time Production의 장점과 단점</a></li>
-  </ul></li>
+  <li><a href="#택트타임-생산-방식" id="toc-택트타임-생산-방식" class="nav-link" data-scroll-target="#택트타임-생산-방식">택트타임 생산 방식</a></li>
   </ul></li>
   <li><a href="#sec-ref-0102" id="toc-sec-ref-0102" class="nav-link" data-scroll-target="#sec-ref-0102">참고자료</a>
   <ul>
@@ -1854,15 +1850,15 @@ style 0 fill:#fee
 <li><strong>가용 생산 시간</strong>: 일정 기간 동안 실제 생산에 투입 가능한 시간 (휴식, 점검 제외)</li>
 <li><strong>고객 수요량</strong>: 해당 기간 동안 고객이 요구하는 생산 수량</li>
 </ul>
-<p><strong>예시</strong></p>
+<blockquote class="blockquote">
 <ul>
 <li>하루 8시간 근무 (480분), 휴식 60분 제외 → 가용 시간: 420분</li>
-<li>고객 수요: 하루 210개<br>
-→ Takt Time = 420분 / 210개 = 2분/개</li>
+<li>고객 수요: 하루 210개 → Takt Time = 420분 / 210개 = 2분/개 즉, 2분마다 하나씩 제품을 생산해야 고객 수요를 충족할 수 있음</li>
 </ul>
-<p>즉, 2분마다 하나씩 제품을 생산해야 고객 수요를 충족할 수 있음</p>
+</blockquote>
 <p>Takt Time Production 목적과 개념은 다음과 같이 정리할 수 있다.</p>
-<p><strong>목적</strong></p>
+<ul>
+<li><p>목적</p>
 <ul>
 <li>고객 수요에 맞는 생산 리듬 확보<br>
 </li>
@@ -1871,8 +1867,8 @@ style 0 fill:#fee
 <li>과잉 생산, 재공품(WIP) 증가 방지<br>
 </li>
 <li>납기 정확성 향상</li>
-</ul>
-<p><strong>핵심 개념</strong></p>
+</ul></li>
+<li><p>핵심 개념</p>
 <table class="caption-top table">
 <caption>택트타임 주요 개념</caption>
 <colgroup>
@@ -1899,32 +1895,32 @@ style 0 fill:#fee
 <td>모든 공정의 Cycle Time이 Takt Time에 맞도록 균형 조정</td>
 </tr>
 </tbody>
-</table>
-<section id="takt-time-production의-운영-방식" class="level4">
-<h4 class="anchored" data-anchor-id="takt-time-production의-운영-방식">Takt Time Production의 운영 방식</h4>
-<p><strong>생산라인 구성</strong></p>
+</table></li>
+</ul>
+<p>택트타임 생산 방식은 생산라인 구성, 병목 최소화, 유연한 대응으로 구성된다.</p>
+<ul>
+<li><strong>생산라인 구성</strong>
 <ul>
 <li>작업 공정을 Takt Time에 맞춰 분할<br>
 </li>
 <li>각 작업자가 동일한 시간 내에 각 공정을 완료하도록 라인 구성<br>
 </li>
 <li><strong>이상적인 상태</strong>: 모든 공정의 사이클 타임 = Takt Time</li>
-</ul>
-<p><strong>병목 최소화</strong></p>
+</ul></li>
+<li><strong>병목 최소화</strong>
 <ul>
 <li>특정 공정이 Takt Time을 초과할 경우 전체 라인이 지연<br>
 </li>
 <li>병목 공정 개선 또는 작업 분할로 시간 맞춤</li>
-</ul>
-<p><strong>유연한 대응</strong></p>
+</ul></li>
+<li><strong>유연한 대응</strong>
 <ul>
 <li>수요 변화 시 Takt Time 재조정 → 작업 인원·설비 재배치<br>
 </li>
 <li>표준작업(Standard Work) 기반의 유연한 라인 운영 필요</li>
+</ul></li>
 </ul>
-</section>
-<section id="takt-time-production의-장점과-단점" class="level4">
-<h4 class="anchored" data-anchor-id="takt-time-production의-장점과-단점">Takt Time Production의 장점과 단점</h4>
+<p>택트타임 생산방식 장점과 단점은 다음과 같다.</p>
 <table class="caption-top table">
 <caption>택트타임 생산 방식 장단점</caption>
 <colgroup>
@@ -1964,32 +1960,33 @@ style 0 fill:#fee
 </table>
 </section>
 </section>
-</section>
 <section id="sec-ref-0102" class="level2">
 <h2 class="anchored" data-anchor-id="sec-ref-0102">참고자료</h2>
 <section id="기종장제" class="level3">
 <h3 class="anchored" data-anchor-id="기종장제">기종장제</h3>
 <p>기종장 제도는 <span class="hl">Cell 방식에서 업그레이드된 방식으로 같은 셀 또는 기종별 팀이 구성되어 자재조달부터 검사, 물류, 계획 등을 자율적으로 결정하는 방식</span>이다. 특정 제품군(기종)을 중심으로 생산 셀을 운영하며, 각 기종별로 책임자가 배치되는 체계이다. 일본에서 발전한 방식으로, 린 생산과 TPS에서 활용된다.</p>
 <p>기종장제 주요 특징을 정리하면 다음과 같다.</p>
-<p><strong>전담 책임자 배치</strong></p>
+<ul>
+<li><strong>전담 책임자 배치</strong>
 <ul>
 <li>각 기종마다 책임자(기종장)를 두어 생산 관리</li>
 <li>생산 품질과 일정 조정의 책임 명확화</li>
-</ul>
-<p><strong>유연한 생산 대응</strong></p>
+</ul></li>
+<li><strong>유연한 생산 대응</strong>
 <ul>
 <li>제품군별로 셀을 구성하여 소량 다품종 생산에 적합</li>
 <li>시장 수요 변화에 빠르게 대응 가능</li>
-</ul>
-<p><strong>자율성과 책임 강화</strong></p>
+</ul></li>
+<li><strong>자율성과 책임 강화</strong>
 <ul>
 <li>기종장이 생산 전반을 관리하여 문제 해결 속도 증가</li>
 <li>작업자의 다기능화와 지속적인 개선 활동 촉진</li>
-</ul>
-<p><strong>린 생산과의 연계</strong></p>
+</ul></li>
+<li><strong>린 생산과의 연계</strong>
 <ul>
 <li>JIT(Just-In-Time)와 결합하여 재고 최소화</li>
 <li>품질 개선 및 낭비 제거 효과 극대화</li>
+</ul></li>
 </ul>
 <p>기종장제를 도입할 경우 다음과 같은 효과를 기대할 수 있다.</p>
 <table class="caption-top table">
@@ -2043,37 +2040,39 @@ style 0 fill:#fee
 </div>
 </div>
 </div>
-<p><strong>기종 선정</strong></p>
+<ul>
+<li><strong>기종 선정</strong>
 <ul>
 <li>생산 공정을 분석하여 유사한 제품군을 분류<br>
 </li>
 <li>기종별로 적절한 생산 셀을 구성</li>
-</ul>
-<p><strong>기종장 배치</strong></p>
+</ul></li>
+<li><strong>기종장 배치</strong>
 <ul>
 <li>각 기종에 대한 책임자를 선정<br>
 </li>
 <li>기종장은 생산 일정, 품질, 작업자 교육을 담당</li>
-</ul>
-<p><strong>작업자 다기능화 교육</strong></p>
+</ul></li>
+<li><strong>작업자 다기능화 교육</strong>
 <ul>
 <li>작업자가 여러 공정을 수행할 수 있도록 교육<br>
 </li>
 <li>유연한 작업 배치 가능하도록 설계</li>
-</ul>
-<p><strong>린 생산 방식 적용</strong></p>
+</ul></li>
+<li><strong>린 생산 방식 적용</strong>
 <ul>
 <li>Just-In-Time(JIT) 및 칸반 시스템 활용<br>
 </li>
 <li>불필요한 재고 및 공정 낭비 제거</li>
-</ul>
-<p><strong>지속적 개선 활동</strong></p>
+</ul></li>
+<li><strong>지속적 개선 활동</strong>
 <ul>
 <li>작업자 의견 반영하여 지속적인 개선 진행<br>
 </li>
 <li>품질 및 생산성 향상을 위한 카이젠(Kaizen) 적용</li>
+</ul></li>
 </ul>
-<p>기종장제 도입 시 장단점은 다음과 같다.</p>
+<p>기종장제 도입 시 기대할 수 있는 장단점은 다음과 같다.</p>
 <table class="caption-top table">
 <caption>기종장제 장점과 단점</caption>
 <colgroup>
