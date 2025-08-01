@@ -589,7 +589,7 @@ window.Quarto = {
 
 <section id="진도관리" class="level2">
 <h2 class="anchored" data-anchor-id="진도관리">진도관리</h2>
-<p>공정진도관리는 <span class="hl">생산 공정에서 각 작업이 계획된 일정에 따라 원활하게 진행되도록 관리하는 활동</span>을 의미한다. 이는 생산 일정의 지연을 방지하고, 원활한 자원 배분을 통해 납기 준수와 생산 효율성 향상을 목표로 한다.</p>
+<p><strong>공정진도관리</strong>는 <span class="hl">생산 공정에서 각 작업이 계획된 일정에 따라 원활하게 진행되도록 관리하는 활동</span>을 의미한다. 이는 생산 일정의 지연을 방지하고, 원활한 자원 배분을 통해 납기 준수와 생산 효율성 향상을 목표로 한다.</p>
 <p>공정진도관리 목적을 정리하면 다음과 같다.</p>
 <ol type="1">
 <li><strong>납기 준수</strong><br>
@@ -632,18 +632,18 @@ window.Quarto = {
 <td>작업의 실제 진행 상황을 모니터링하고 지연이 발생할 경우 즉각적인 조치를 취함</td>
 </tr>
 <tr class="odd">
-<td><span class="quarto-unresolved-ref">?sec-jit</span> 방식</td>
+<td>JIT 방식</td>
 <td>필요할 때 필요한 만큼 생산하여 불필요한 재고를 최소화하고 공정 흐름을 최적화</td>
 </tr>
 </tbody>
 </table>
 <p>공정진도관리를 위하 주요 도구는 다음과 같다.</p>
 <ol type="1">
-<li><p>간트 차트(Gantt Chart)<br>
+<li><p><strong>간트 차트</strong>(Gantt Chart)<br>
 작업 일정과 진행 상황을 한눈에 볼 수 있도록 시각적으로 표현한 도구이다.</p></li>
-<li><p>PERT/CPM (네트워크 기법)<br>
+<li><p><strong>PERT/CPM</strong> (네트워크 기법)<br>
 공정 간 상호 관계를 고려하여 일정 계획을 최적화하는 기법이다.</p></li>
-<li><p>ERP 시스템<br>
+<li><p><strong>ERP 시스템</strong><br>
 기업 내 모든 자원을 통합적으로 관리하여 실시간으로 공정 진행을 모니터링한다.</p></li>
 </ol>
 <p>공정진도관리 시 기대할 수 있는 효과는 다음과 같다.</p>
@@ -656,7 +656,7 @@ window.Quarto = {
 </section>
 <section id="네트워크-기법" class="level2">
 <h2 class="anchored" data-anchor-id="네트워크-기법">네트워크 기법</h2>
-<p>네트워크 기법(Network, 화살도 arrow diagram, 활동 네트워크 activity network diagram)은 <span class="hl">필요한 활동 선후관계를 네트워크로 표시하는 방식</span>으로 간트차트 결점을 보완하기 위하여 개발되었다. 대표적인 기법으로 PERT(Program Evaluation &amp; Review Technique)와 CPM(Critical Path Method)이 있다.</p>
+<p><strong>네트워크 기법</strong>(Network, 화살도 arrow diagram, 활동 네트워크 activity network diagram)은 <span class="hl">필요한 활동 선후관계를 네트워크로 표시하는 방식</span>으로 간트차트 결점을 보완하기 위하여 개발되었다. 대표적인 기법으로 PERT(Program Evaluation &amp; Review Technique)와 CPM(Critical Path Method)이 있다.</p>
 <section id="sec-critical-path" class="level3">
 <h3 class="anchored" data-anchor-id="sec-critical-path">주경로</h3>
 <p>먼저 네트워크 기법에서 주경로(critical path)는 다음과 같이 정의한다.</p>
@@ -680,7 +680,7 @@ window.Quarto = {
 </div>
 </center>
 <ul>
-<li>여유시간 값이 최소가 되는 단계를 연결한 경로</li>
+<li><strong>여유시간 값이 최소가 되는 단계를 연결한 경로</strong></li>
 <li>최소 여유 단계에서 활동이 계획 일정보다 늦어지면 최종 단계에서 프로젝트 완성이 그만큰 지연되므로 주경로 상의 공정을 애로공정이라고 함</li>
 <li>네트워크상 주공정은 굵은 색으로 표시하여 중점 관리 함</li>
 </ul>
@@ -770,22 +770,22 @@ window.Quarto = {
 </center>
 <p>네트워크 기법은 단계 또는 마디, 활동, 결합점, 호 등의 구성요소를 갖는다.</p>
 <ul>
-<li>단계(Event), 마디(Node)
+<li><strong>단계(Event), 마디(Node)</strong>
 <ul>
 <li>작업 활동을 수행함에 있어 활동 개시 또는 완료되는 시점을 나타냄</li>
 <li>활동 개시 시점을 착수단계(beginning event), 활동 완료 시점을 완료 단계(ending event)라고 함</li>
 </ul></li>
-<li>활동(Activity)
+<li><strong>활동(Activity)</strong>
 <ul>
 <li>과업 수행 상 시간 및 자원(인력, 물자, 설비 등)이 소비되는 작업</li>
 <li>PERT 상 활동은 활동방향에 따라 실선 화살표로 표시</li>
 <li>활동에 따라 단계가 분리되거나 연결되기도 하는데 분리되는 경우 분리단계(burst event), 연결되는 경우 병합단계(merge event)라 함</li>
 </ul></li>
-<li>결합점(Node)
+<li><strong>결합점(Node)</strong>
 <ul>
 <li>네크워크에서 마디(○)를 나타내는 것으로 AOA 방식에서는 단계(event)를 나타내며 AON 방식에서는 마디로 작업이나 활동을 나타냄</li>
 </ul></li>
-<li>호(Arc)
+<li><strong>호(Arc)</strong>
 <ul>
 <li>네트워크에서 가지(→)로 활동을 나타내는 것으로 AOA 방식에서는 활동을, AON 방식에서는 활동 선후관계(단계)를 나타냄</li>
 </ul></li>
@@ -950,7 +950,7 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<p>단순열거법에 따라 주공정은 <code>A-C-E-I-J</code>이고, 기대완료시간은 21일(1+3+11+4+2)이다.</p>
+<p>단순열거법에 따라 주공정은 <strong>“A-C-E-I-J”</strong>이고, 기대완료시간은 21일(1+3+11+4+2)이다.</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="프로젝트 관리 목표">
@@ -965,9 +965,12 @@ window.Quarto = {
 <div class="callout-body-container callout-body">
 <p>최적화를 위한 프로젝트 관리 목표로 제시되는 3가지 요소는 다음과 같다.</p>
 <ul>
-<li><p>범위(scope) 프로젝트 결과물의 품질, 세부사항, 규모 측면에서 본 프로젝트 크기이다.</p></li>
-<li><p>비용(cost) 프로젝트를 위해 지출되는 금액 뿐만아니라 프로젝트 완료에 필요한 각종 도구, 장비, 지원 등이 포함된다.</p></li>
-<li><p>시간(time) 다른 요소와 균형을 맞춰 계획 단계 단축, 일정 조정, 마감일 연장 등이 필요하다.</p></li>
+<li><p><strong>범위</strong>(scope)<br>
+프로젝트 결과물의 품질, 세부사항, 규모 측면에서 본 프로젝트 크기이다.</p></li>
+<li><p><strong>비용</strong>(cost)<br>
+프로젝트를 위해 지출되는 금액 뿐만아니라 프로젝트 완료에 필요한 각종 도구, 장비, 지원 등이 포함된다.</p></li>
+<li><p><strong>시간</strong>(time)<br>
+다른 요소와 균형을 맞춰 계획 단계 단축, 일정 조정, 마감일 연장 등이 필요하다.</p></li>
 </ul>
 </div>
 </div>
@@ -1486,7 +1489,7 @@ I --&gt; J
 </section>
 <section id="sec-cpm" class="level4">
 <h4 class="anchored" data-anchor-id="sec-cpm">CPM</h4>
-<p>CPM(critical path method)은 프로젝트에 있어 각 활동 시작과 종료 시점을 나타내는 방법으로 <span class="hl">프로젝트를 완수하는데 필요한 활동과 각 활동 완수 시 소요되는 시간을 모두 알고 있는 상태에서 진행 순서를 최적으로 도출해 내는 관리 기법</span>이다.</p>
+<p><strong>CPM</strong>(critical path method)은 프로젝트에 있어 각 활동 시작과 종료 시점을 나타내는 방법으로 <span class="hl">프로젝트를 완수하는데 필요한 활동과 각 활동 완수 시 소요되는 시간을 모두 알고 있는 상태에서 진행 순서를 최적으로 도출해 내는 관리 기법</span>이다.</p>
 <p>1957년 미국 Remington-Rand 사 J.E. Kelly와 Du Pont 사 M.R. Walker에 의해 개발된 기법으로 Dupont 사에서 화공 플랜트 장비를 위해 가동 중단 시간과 정비, 정비 후 재가동 시간을 효율적으로 관리하기 위해 개발한 프로젝트 관리 기법이다. PERT가 주로 불확실성 하에서 프로젝트를 관리하는 기법인데 반해 CPM은 과거 경험했던 공법, 기술, 또는 상업적 프로젝트에 응용되는 계획 관리기술이다.</p>
 <p>CPM 장단점은 다음과 같다.</p>
 <table class="caption-top table">
@@ -1707,7 +1710,7 @@ I --&gt; J
 </section>
 <section id="sec-ccm" class="level4">
 <h4 class="anchored" data-anchor-id="sec-ccm">CCM</h4>
-<p>CCM(critical chain method) 또는 CCPM (critical chain project management)은 <span class="hl">TOC 제약 이론을 기반으로 한 프로젝트 관리 기법</span>이다.</p>
+<p><strong>CCM</strong>(critical chain method) 또는 <strong>CCPM</strong>(critical chain project management)은 <span class="hl">TOC 제약 이론을 기반으로 한 프로젝트 관리 기법</span>이다.</p>
 <p>제품 Life cycle이 날로 짧아지고 고객 요구가 다양해 짐에 따라 신제품 개발, 신규 사업 추진 등 급변하는 사업 환경에 대응하기 위해서 프로젝트성 업무가 급증하는 추세이다. 프로젝트는 과제 특성상 완료 시간이 불확실하여 계획 단계에서 준수 확룔을 높이기 위해 안전 여유를 감안하여 예상 소요 시간을 길게 수립한다. 프로제특 관리자는 제한된 자원, 즉 인력, 비용, 시간 등으로 여러 프로젝트를 동시에 관리하여 프로젝트를 기한 내 원활히 수행하기 위한 효과적인 관리기법이 필요하게 되었다.</p>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="예상 기간 장기화 문제 원인">
 <div class="callout-header d-flex align-content-center">
@@ -1719,61 +1722,26 @@ I --&gt; J
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<dl>
-<dt><strong>안전여유</strong></dt>
-<dd>
 <ul>
-<li>납기를 어기지 않기 위해 실제 예상 일정보다 여유 시간을 추가하여 계획 수립</li>
+<li><p><strong>안전여유</strong> 납기를 어기지 않기 위해 실제 예상 일정보다 여유 시간을 추가하여 계획 수립</p></li>
+<li><p><strong>자기방어</strong> 작업을 일찍 완료하게 되면 다른 작업을 할당 받게 되어 작업 완료를 숨기는 현상</p></li>
+<li><p><strong>학생증후군</strong> 과제 또는 시험 기간이 충분하더라도 마감 시간에 맞춰 시작하려는 현상</p></li>
+<li><p><strong>파킨슨 법칙</strong> 과제가 일찍 완료될 수 있더라도 마감일자까지 과제를 진행함</p></li>
+<li><p><strong>Multi-tasking</strong> 여러 작업을 동시에 진행하는 상황에서 단일 작업을 순차적으로 진행하는 것보다 시간 소요가 더 많이 발생하는 경우</p></li>
+<li><p><strong>후행공정</strong> 후속 작업이 준비되어 있지 않으면 준비 일정 단축이 어려움</p></li>
+<li><p><strong>자원병목</strong> 희소 자원 가용성 문제로 일정 지연 발생 가능</p></li>
 </ul>
-</dd>
-<dt><strong>자기방어</strong></dt>
-<dd>
-<ul>
-<li>작업을 일찍 완료하게 되면 다른 작업을 할당 받게 되어 작업 완료를 숨기는 현상</li>
-</ul>
-</dd>
-<dt><strong>학생증후군</strong></dt>
-<dd>
-<ul>
-<li>과제 또는 시험 기간이 충분하더라도 마감 시간에 맞춰 시작하려는 현상</li>
-</ul>
-</dd>
-<dt><strong>파킨슨 법칙</strong></dt>
-<dd>
-<ul>
-<li>과제가 일찍 완료될 수 있더라도 마감일자까지 과제를 진행함</li>
-</ul>
-</dd>
-<dt><strong>Multi-tasking</strong></dt>
-<dd>
-<ul>
-<li>여러 작업을 동시에 진행하는 상황에서 단일 작업을 순차적으로 진행하는 것보다 시간 소요가 더 많이 발생하는 경우</li>
-</ul>
-</dd>
-<dt><strong>후행공정</strong></dt>
-<dd>
-<ul>
-<li>후속 작업이 준비되어 있지 않으면 준비 일정 단축이 어려움</li>
-</ul>
-</dd>
-<dt><strong>자원병목</strong></dt>
-<dd>
-<ul>
-<li>희소 자원 가용성 문제로 일정 지연 발생 가능</li>
-</ul>
-</dd>
-</dl>
 </div>
 </div>
 <p>CCM 목표는 프로젝트 기간 단축과 예상 기간 준수이다. 작업 기반 버퍼로 네트워크 경로 상 개별 활동 일정을 미시적으로 관리하는 대신 모든 작업 체인에 따라 자원 가용성 및 종속성을 고려하고 보호하기 위해 체인에 있는 전반적인 모든 활동 버퍼를 관리하는데 중점을 둔다. 암시적인 개별 작업 버퍼를 제거하고 일정 위험을 낮춤으로써 보다 효율성 있게 프로젝트를 관리할 수 있다.</p>
 <p>일정 단축 기법은 다음과 같다.</p>
 <ul>
-<li>크래싱(crashing)
+<li><strong>크래싱</strong>(crashing)
 <ul>
 <li>자원과 비용을 더 투입하여 일정을 단축하는 기법</li>
 <li>프로젝트 전체 기간 중 CP(critical path) 구간에 자원을 먼저 할당하여 프로젝트 전체 일정을 줄이는 기법으로 프로젝트 원가가 상승한다는 단점이 있음</li>
 </ul></li>
-<li>Fast tracking
+<li><strong>Fast tracking</strong>
 <ul>
 <li>순차적으로 진행되는 활동 간 연관관계를 병렬로 작업함으로써 일정을 단축시키는 기법</li>
 <li>프로젝트 리스크가 증가할 수 있으며 재작업을 해야 하는 단점이 있음</li>
@@ -1781,7 +1749,7 @@ I --&gt; J
 </ul>
 <section id="ccm-관리-버퍼" class="level5">
 <h5 class="anchored" data-anchor-id="ccm-관리-버퍼">CCM 관리 버퍼</h5>
-<p>CCM에서는 일정 관리를 위해 프로젝트 버퍼, 피딩 버퍼, 자원 버퍼를 운영한다.</p>
+<p>CCM에서는 일정 관리를 위해 <strong>프로젝트 버퍼</strong>, <strong>피딩 버퍼</strong>, <strong>자원 버퍼</strong>를 운영한다.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*8hU9kP_ZY6GChMbJ3FmbBw.png" class="img-fluid figure-img"></p>
@@ -1789,17 +1757,17 @@ I --&gt; J
 </figure>
 </div>
 <ul>
-<li>프로젝트 버퍼(project buffer)
+<li><strong>프로젝트 버퍼</strong>(project buffer)
 <ul>
 <li>critical chain 활동 상에서 확보한 버퍼를 chain 끝에 두어 관리</li>
 <li>안전영역, 모니터링 (버퍼 감시) 영역, 행동 영역(버퍼 통제)으로 나누어 관리</li>
 </ul></li>
-<li>피딩 버퍼(feeding buffer)
+<li><strong>피딩 버퍼</strong>(feeding buffer)
 <ul>
 <li>non-critical chain에 대한 버퍼를 non-critical chain 끝에 두어 관리</li>
 <li>non-critical chain 작업 완료 지연에 따른 critical chain 차수 지연 방지</li>
 </ul></li>
-<li>자원 버퍼(resource buffer)
+<li><strong>자원 버퍼</strong>(resource buffer)
 <ul>
 <li>경보장치 일종으로 critical chain 착수 전 해당 자원에게 수행 시기를 알려 줌</li>
 </ul></li>
@@ -1982,13 +1950,18 @@ I --&gt; J
 </tr>
 </tbody>
 </table>
-<p>주요 개념은 다음과 같다. - TE<br>
-전진계산방식, 각 단계가 가장 빨리 시작될 수 있는 시기로 최초시간이라 함</p>
+<p>주요 개념은 다음과 같다.</p>
 <ul>
-<li><p>TL 후진계산방식, TE에서 계산한 시기에 맞도록 역산하여 각 단계가 가장 늦게 시작해도 좋은 시기로 최저시간이라 함</p></li>
-<li><p>TF FF + DF = 총여유 = LTF - ETF</p></li>
-<li><p>FF 자유여유 = 후속 EST - EFT</p></li>
-<li><p>DF 종속여유 = TF - FF</p></li>
+<li><p>TE<br>
+전진계산방식, 각 단계가 가장 빨리 시작될 수 있는 시기로 최초시간이라 함</p></li>
+<li><p>TL<br>
+후진계산방식, TE에서 계산한 시기에 맞도록 역산하여 각 단계가 가장 늦게 시작해도 좋은 시기로 최저시간이라 함</p></li>
+<li><p>TF<br>
+FF + DF = 총여유 = LTF - ETF</p></li>
+<li><p>FF<br>
+자유여유 = 후속 EST - EFT</p></li>
+<li><p>DF<br>
+종속여유 = TF - FF</p></li>
 <li><p>그 외</p>
 <ul>
 <li>EST: 작업을 시작하는 가장 빠른 시간</li>
@@ -2039,13 +2012,8 @@ I --&gt; J
 </tr>
 <tr class="even">
 <td>자원 제약</td>
-<td>- 활동 사이에 연관 관계 고려</td>
+<td>• 활동 사이에 연관 관계 고려<br>• 일정 계획 후 Resource Leveling 수행</td>
 <td>자원 제약 자체를 계획에 반영</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>- 일정 계획 후 Resource Leveling 수행</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -2058,14 +2026,12 @@ I --&gt; J
 <table class="caption-top table">
 <caption>프로젝트와 프로세스 차이</caption>
 <colgroup>
-<col style="width: 14%">
-<col style="width: 32%">
-<col style="width: 23%">
+<col style="width: 38%">
 <col style="width: 27%">
+<col style="width: 32%">
 </colgroup>
 <thead>
 <tr class="header">
-<th><strong>순서</strong></th>
 <th><strong>특성</strong></th>
 <th><strong>프로젝트</strong></th>
 <th><strong>프로세스</strong></th>
@@ -2073,49 +2039,41 @@ I --&gt; J
 </thead>
 <tbody>
 <tr class="odd">
-<td>1</td>
 <td>시작 및 종료</td>
 <td>명확한 시작과 끝</td>
 <td>계속적인 진행</td>
 </tr>
 <tr class="even">
-<td>2</td>
 <td>시간/비용/품질 목표</td>
 <td>목표를 달성하기 위해</td>
 <td>지속적인 가치 제공</td>
 </tr>
 <tr class="odd">
-<td>3</td>
 <td>범위 한정</td>
 <td>한정된 범위 내</td>
 <td>범위가 상대적으로 더 넓음</td>
 </tr>
 <tr class="even">
-<td>4</td>
 <td>자원 활용성</td>
 <td>임시적인 자원 활용</td>
 <td>영구적으로 할당된 자원 활용</td>
 </tr>
 <tr class="odd">
-<td>5</td>
 <td>특성별 비교</td>
 <td>시간, 비용, 품질에 초점</td>
 <td>지속적인 가치 제공에 초점</td>
 </tr>
 <tr class="even">
-<td>6</td>
 <td>결과와 목표 연결</td>
 <td>목표 달성으로 결과 산출</td>
 <td>지속적인 결과 창출</td>
 </tr>
 <tr class="odd">
-<td>7</td>
 <td>반복적 수행</td>
 <td>아님</td>
 <td>예</td>
 </tr>
 <tr class="even">
-<td>8</td>
 <td>주요 목표 달성 위한 리소스 최적화</td>
 <td>예</td>
 <td>아님</td>
