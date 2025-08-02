@@ -27,7 +27,7 @@ h1 {
 /* 서브 제목 계층 */
 h2, h3, h4, h5 {
   @extend .heading-marked;     /* SCSS인 경우, 일반 CSS에서는 class 추가 */
-  margin-bottom: 1em;
+  margin-bottom: 1em !important;
   margin-top: 1.2em;
 }
 
