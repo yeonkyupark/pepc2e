@@ -1,32 +1,74 @@
 /*-- scss:defaults --*/
 $headings-font-weight:  bold !default;
-
-/*-- scss:rules
-header.quarto-title-block{
-  position: relative;
-  color: white;
-  text-shadow: 0 -1px rgba(0,0,0,0.6);
-}
-
-div.quarto-title-meta-heading{
-  position: relative;
-  color: #354649;
-  text-shadow: 0 -1px rgba(255,255,255,0.6);
-}
-
-div.quarto-title-meta-contents{
-  position: relative;
-  color: #354649;
-  text-shadow: 0 -1px rgba(255,255,255,0.6);
-}
-
-#toc-title {
-  position: relative;
-  color: white;
-  text-shadow: 0 -1px rgba(0,0,0,0.6);
-}
---*/
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+/* Heading Style */
+
+/* 공통 제목 스타일 */
+.heading-marked {
+  border-left: 5px solid #5069eb;
+  padding-left: 0.6em;
+  line-height: 1.25;
+}
+
+/* 가장 큰 제목 (H1) - 별도 강조 */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-top: 2.2em;
+  margin-bottom: 1em;
+  color: #1a222c;              /* 진한 네이비 */
+  line-height: 1.2;
+  letter-spacing: -0.5px;      /* 한글 사용 시 0px 권장 */
+  border-bottom: 3px solid #5069eb;
+  padding-bottom: 0.3em;
+}
+
+/* 서브 제목 계층 */
+h2, h3, h4, h5 {
+  @extend .heading-marked;     /* SCSS인 경우, 일반 CSS에서는 class 추가 */
+  margin-bottom: 1em;
+  margin-top: 1.2em;
+}
+
+/* 각 제목별 세부 스타일 */
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #304066;              /* 연한 네이비 */
+  margin-top: 1.7em;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #0a3473;              /* 블루 포인트 */
+  margin-top: 1.3em;
+  border-bottom: 1px solid silver;
+}
+
+h4 {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #4b5876;              /* 옅은 블루/네이비 */
+  border-bottom: 1px solid silver;
+}
+
+h5 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #5f6979;              /* 대비를 고려한 약간 진한 그레이 */
+}
+
+/* 반응형 대응 (모바일 화면에서 제목 크기 축소) */
+@media (max-width: 600px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.25rem; }
+  h4 { font-size: 1rem; }
+  h5 { font-size: 0.9rem; }
+}
+
 
 figcaption {
   text-align: center;
@@ -37,222 +79,10 @@ table.caption-top.table {
   margin-bottom: 24px;
 }
 
-/*--
-h2.anchored{
-    padding-top: 12px;
-    padding-left: 12px;
-    border-top-left-radius: 12px;
-    background-color: rgba(31, 125, 230, .2);
-}
-
-h3.anchored {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-    border-top-left-radius: 12px;
-    background-color: rgba(31, 125, 230, .2);
-}
-
-h4.anchored {
-    padding-top: 8px;
-    padding-bottom: 8px;
-    padding-left: 8px;
-    border-top-left-radius: 12px;
-    background-color: rgba(31, 125, 230, .2);
-}
---*/
 tr, td {
   // font-size: 14px;
   font-size: 0.925em;
 }
-
-/*
-
-h1 {
-    font-size: 36px;
-    line-height: 40px;
-}
-
-h2 {
-    font-size: 30px;
-    line-height: 40px;
-}
-
-h3 {
-    font-size: 24px;
-    line-height: 40px;
-	text-underline-offset: 3px;
-	text-decoration-thickness: 2px;
-	padding-bottom: 2px;
-}
-
-h4 {
-    font-size: 18px;
-    line-height: 40px;
-}
-
-h1.title {
-text-align: center;
-position: relative;
-color: #000;
-margin: 0 -30px 30px -30px;
-padding: 10px 0;
-text-shadow: 1px 1px rgba(0,0,0,.8);
-background-color: #F2EFE7;
-background-image:  linear-gradient(rgba(255,255,255,.3), rgba(255,255,255,0));
-box-shadow: 0 2px 0 rgba(0,0,0,.3);
-}
-
-h1::before,
-h1::after {
-content: '';
-position: absolute;
-border-style: solid;
-border-color: transparent;
-bottom: -10px;
-}
-
-h1::before {
-border-width: 0 10px 10px 0;
-border-right-color: #222;
-left: 0;
-}
-
-h1::after {
-border-width: 0 0 10px 10px;
-border-left-color: #222;
-right: 0;
-}
-
-h2.anchored {
-	font-family: 'Noto Sans KR', sans-serif;
-	font-size: 48px;
-    font-weight: bold;
-	margin: 1em 0 0.5em 0;
-}
-
-h3.anchored {
-	font-family: 'Noto Sans KR', sans-serif;
-	font-size: 32px;
-    font-weight: bold;
-	margin: 1em 0 0.5em 0;
-}
-
-h4.anchored {
-	font-family: 'Noto Sans KR', sans-serif;
-	font-size: 24px;
-    font-weight: bold;
-	margin: 1em 0 0.5em 0;
-}
-
-h5.anchored {
-	font-family: 'Noto Sans KR', sans-serif;
-	font-size: 16px;
-    font-weight: bold;
-	margin: 1em 0 0.5em 0;
-}
-
-
-h2.anchored {
-	margin: 1em 0 0.5em 0;
-	font-weight: normal;
-	position: relative;
-	background: rgba(53,86,129, 0.8);
-	background: #9ACBD0;
-	border: 1px solid #fff;
-	padding: 5px 15px;
-	color: white;
-	border-radius: 10px 0 0 0;
-	font-family: 'Noto Sans KR', sans-serif;
-}
-
-h3.anchored {
-	margin: 1em 0 0.5em 0;
-	font-weight: normal;
-	position: relative;
-	background: rgba(53,86,129, 0.8);
-	background: #006A71;
-	border: 1px solid #fff;
-	padding: 5px 15px;
-	color: #ffffff;
-	border-radius: 10px 0 0 0;
-	font-family: 'Noto Sans KR', sans-serif;
-}
-
-
-h4.anchored {
-	margin: 1em 0 0.5em 0;
-	font-weight: normal;
-	position: relative;
-	background: rgba(53,86,129, 0.8);
-	background: #48A6A7;
-	border: 1px solid #fff;
-	padding: 5px 15px;
-	color: #ffffff;
-	border-radius: 10px 0 0 0;
-	font-family: 'Noto Sans KR', sans-serif;
-}
-*/
-
-h1 {
-  font-size: 2.5rem;       /* 가장 크게 */
-  font-weight: 800;        /* 매우 두껍게 */
-  margin-top: 2.2em;
-  margin-bottom: 1em;
-  color: #1a222c;          /* 진한 네이비 */
-  line-height: 1.2;
-  letter-spacing: -1px;
-  border-bottom: 3px solid #5069eb; /* 주요 제목 강조 */
-  padding-bottom: 0.3em;
-}
-
-h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-top: 1.7em;
-  margin-bottom: 1em !important;
-  color: #304066;          /* 약간 연한 네이비 */
-  line-height: 1.25;
-  border-left: 5px solid #5069eb;  /* 단순하고 대중적인 포인트 */
-  padding-left: 0.6em;
-}
-
-h3 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-top: 1.3em;
-  margin-bottom: 1em !important;
-  color: #0a3473;          /* 블루 포인트 */
-  line-height: 1.25;
-  border-left: 5px solid #5069eb;  /* 단순하고 대중적인 포인트 */
-  border-bottom: 1px solid silver;
-  padding-left: 0.6em;
-}
-
-h4 {
-  font-size: 1.15rem;
-  font-weight: 500;
-  margin-top: 1em;
-  margin-bottom: 1em !important;
-  color: #4b5876;          /* 옅은 블루/네이비 */
-  line-height: 1.25;
-  border-left: 5px solid #5069eb;  /* 단순하고 대중적인 포인트 */
-  border-bottom: 1px solid silver;
-  padding-left: 0.6em;
-}
-
-h5 {
-  font-size: 1rem;
-  font-weight: 500;
-  margin-top: 1em !important;
-  margin-bottom: 1em;
-  color: #788394;          /* 좀 더 옅고 잔잔하게 */
-  line-height: 1.25;
-  border-left: 5px solid #5069eb;  /* 단순하고 대중적인 포인트 */
-  /* border-bottom: 1px solid silver; */
-  padding-left: 0.6em;
-}
-
 
 .hl {
     background-color: gray;
