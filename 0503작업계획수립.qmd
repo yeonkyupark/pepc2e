@@ -10,7 +10,7 @@ keywords:
 
 ## 작업계획 수립
 
-작업계획 수립(Work Scheduling / Shop Floor Scheduling)이란 <span class='hl'>공장에서의 구체적인 생산 작업을 일정에 따라 계획하고 통제하는 활동</span>으로, 생산 자원을 적절히 배분하여 **납기 준수, 자원 활용도 향상, 생산 흐름 안정화**를 달성하는 것을 목표로 한다.
+**작업계획** 수립(Work Scheduling / Shop Floor Scheduling)이란 <span class='hl'>공장에서의 구체적인 생산 작업을 일정에 따라 계획하고 통제하는 활동</span>으로, 생산 자원을 적절히 배분하여 **납기 준수, 자원 활용도 향상, 생산 흐름 안정화**를 달성하는 것을 목표로 한다.
 
 | 목적 | 설명 |
 |------|------|
@@ -23,14 +23,15 @@ keywords:
 
 작업계획은 일정계획 계층 구조[^scheduling]에 있어 MRP 하위에서 수립하게 된다.
 
-| 계층                                                          | 주요 내용                       | 계획 단위    |
-| ----------------------------------------------------------- | --------------------------- | -------- |
-| **S\&OP (Sales and Operations Planning)**                   | 수요-공급 전략 수립, 조직 간 조율 및 의사결정 | 월\~분기 단위 |
-| **APP (Aggregate Production Planning, 총괄생산계획)**             | 제품군 수준에서 생산량, 인력, 재고 계획     | 월 단위     |
-| **MPS (Master Production Schedule)**                        | 최종 제품별 생산 계획                | 주 단위     |
-| **MRP (Material Requirements Planning)**                    | 부품 및 자재 소요 계획               | 주\~일 단위  |
-| **RCCP / CRP (Rough Cut / Capacity Requirements Planning)** | 생산 자원 및 능력 검토               | 주\~일 단위  |
-| **작업계획 (Detailed Scheduling)**                              | 작업 지시, 작업 순서 계획             | 일/시간 단위  |
+| 계층                                              | 주요 내용                       | 계획 단위    |
+| ----------------------------------------------- | --------------------------- | -------- |
+| **S\&OP (Sales and Operations Planning)**       | 수요-공급 전략 수립, 조직 간 조율 및 의사결정 | 월\~분기 단위 |
+| **APP (Aggregate Production Planning, 총괄생산계획)** | 제품군 수준에서 생산량, 인력, 재고 계획     | 월 단위     |
+| **MPS (Master Production Schedule)**            | 최종 제품별 생산 계획                | 주 단위     |
+| **RCCP (Rough-Cut Capacity Planning)**          | MPS 기준으로 주요 자원의 능력 초안 검토    | 주 단위     |
+| **MRP (Material Requirements Planning)**        | 부품 및 자재 소요 계획               | 주\~일 단위  |
+| **CRP (Capacity Requirements Planning)**        | 세부 작업 기준의 자원 요구량 분석         | 주\~일 단위  |
+| **작업계획 (Detailed Scheduling)**                  | 작업 지시, 작업 순서 계획             | 일/시간 단위  |
 : 일정계획 계층 구조 {tbl-colwidths="[40,40,20]"}
 
 [^scheduling]: 일정계획 계층 구조	
