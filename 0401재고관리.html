@@ -1233,11 +1233,35 @@ EOQ 항목 계산
 <li><span class="math inline">\(C_o\)</span>: overage cost (초과 주문 시 손해)</li>
 </ul>
 <blockquote class="blockquote">
-<p>예를 들면, 한 편의점에서 하루에 팔 도시락 수를 결정해야 한다. 도시락은 하루가 지나면 폐기해야 하며, 예상 수요는 정규분포를 따른다.<br>
-|항목|값| |—|—| |도시락 판매가|6,000원| |도시락 원가|3,000원| |남은 도시락 폐기 손실|3,000원 (원가)| |수요 분포|평균 100, 표준편차 15|</p>
+<p>예를 들면, 한 편의점에서 하루에 팔 도시락 수를 결정해야 한다. 도시락은 하루가 지나면 폐기해야 하며, 예상 수요는 정규분포를 따른다.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>값</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>도시락 판매가</td>
+<td>6,000원</td>
+</tr>
+<tr class="even">
+<td>도시락 원가</td>
+<td>3,000원</td>
+</tr>
+<tr class="odd">
+<td>남은 도시락 폐기 손실</td>
+<td>3,000원 (원가)</td>
+</tr>
+<tr class="even">
+<td>수요 분포</td>
+<td>평균 100, 표준편차 15</td>
+</tr>
+</tbody>
+</table>
+<p><span class="math inline">\(C_u = 6,000 - 3,000 = 3,000,\quad C_o = 3,000 \Rightarrow \frac{C_u}{C_u + C_o} = \frac{3,000}{6,000} = 0.5\)</span> <span class="math inline">\(\Rightarrow Q^* = \text{수요의 50\%} = 100개\)</span></p>
 </blockquote>
-<pre><code>$C_u = 6,000 - 3,000 = 3,000,\quad C_o = 3,000 \Rightarrow \frac{C_u}{C_u + C_o} = \frac{3,000}{6,000} = 0.5$
-$\Rightarrow Q^* = \text{수요의 50\%} = 100개$</code></pre>
 </section>
 <section id="베이스스톡-모형-base-stock-model" class="level4">
 <h4 class="anchored" data-anchor-id="베이스스톡-모형-base-stock-model">베이스스톡 모형 (Base Stock Model)</h4>
@@ -1257,16 +1281,34 @@ $\Rightarrow Q^* = \text{수요의 50\%} = 100개$</code></pre>
 </ul>
 <blockquote class="blockquote">
 <p>예를 들면, 부품을 보관하고 수요에 맞춰 공급해야 하는 공장에서, 리드타임이 2일인 부품의 일일 수요가 정규분포를 따른다.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>값</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>일일 평균 수요</td>
+<td>50개</td>
+</tr>
+<tr class="even">
+<td>일일 수요 표준편차</td>
+<td>10개</td>
+</tr>
+<tr class="odd">
+<td>리드타임</td>
+<td>2일</td>
+</tr>
+<tr class="even">
+<td>목표 서비스 수준</td>
+<td>95% (z=1.645)</td>
+</tr>
+</tbody>
+</table>
+<p><span class="math inline">\(\mu_L = 2 \cdot 50 = 100,\quad \sigma_L = \sqrt{2} \cdot 10 \approx 14.14\)</span> <span class="math inline">\(\Rightarrow S = 100 + 1.645 \cdot 14.14 \approx 123.27 \Rightarrow 124개\)</span></p>
 </blockquote>
-<pre><code>|항목|값|
-|---|---|
-|일일 평균 수요|50개|
-|일일 수요 표준편차|10개|
-|리드타임|2일|
-|목표 서비스 수준|95% (z=1.645)|
-
-$\mu_L = 2 \cdot 50 = 100,\quad \sigma_L = \sqrt{2} \cdot 10 \approx 14.14$
-$\Rightarrow S = 100 + 1.645 \cdot 14.14 \approx 123.27 \Rightarrow 124개$</code></pre>
 <p>뉴스밴더 모형과 베이스스톡 모형을 비교하면 다음과 같다.</p>
 <table class="caption-top table">
 <caption>뉴스밴터 모형 vs.&nbsp;베이스스톡 모형</caption>
