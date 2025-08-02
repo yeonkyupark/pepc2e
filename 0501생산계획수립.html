@@ -572,7 +572,7 @@ window.Quarto = {
   </ul></li>
   <li><a href="#sec-mps" id="toc-sec-mps" class="nav-link" data-scroll-target="#sec-mps">기준일정계획(MPS)</a>
   <ul>
-  <li><a href="#atp" id="toc-atp" class="nav-link" data-scroll-target="#atp">ATP</a></li>
+  <li><a href="#sec-atp" id="toc-sec-atp" class="nav-link" data-scroll-target="#sec-atp">ATP</a></li>
   <li><a href="#sec-rccp" id="toc-sec-rccp" class="nav-link" data-scroll-target="#sec-rccp">RCCP</a></li>
   </ul></li>
   <li><a href="#sec-mrp" id="toc-sec-mrp" class="nav-link" data-scroll-target="#sec-mrp">자재소요계획(MRP)</a>
@@ -640,7 +640,7 @@ window.Quarto = {
 <figcaption>총괄생산계획</figcaption>
 </figure>
 </div>
-<p>생산계획은 장기, 중기, 단기 계획으로 수립한다.</p>
+<p>생산계획은 일정 기간에 맞춰 장기, 중기, 단기로 계획을 수립한다.</p>
 <ul>
 <li>장기계획(2년 이상)<br>
 기업전략 계획, 제품 시장 계획, 재무계획(공장입지, 생산능력계획, 설비투자계획, 사세 확장) 등</li>
@@ -665,7 +665,7 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="sec-scheduling">일정계획</h2>
 <p><strong>일정계획</strong>(scheduling)이란 <span class="hl">생산계획 내지 제조명령을 시간적으로 구체화 하는 과정</span>이다. 생산자원을 합리적으로 이용하여 생산할 품목과 생산량을 예정된 시간에 생산할 수 있도록 계획하고 통제하는 것이다.</p>
 <p><img src="images/Pasted image 20250412105255.png" class="img-fluid"></p>
-<p><strong>일정계획 종류</strong></p>
+<p>일정계획은 수립 기간에 따라 대일정계획, 중일정계획, 소일정계획으로 나눌 수 있다.</p>
 <ul>
 <li><strong>대 일정계획</strong>(master scheduling)<br>
 기준일정계획이라고도 하며 <font color="blue">수주에서 출하까지</font> 일정계획을 말함</li>
@@ -706,13 +706,13 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-<p>일정계획을 구조적으로 계층화하면 총괄생산계획, 주생산계획, 작업할당, 작업배정, 작업순서결정, 그리고 작업 지시 순으로 나열된다.</p>
+<p>일반적인 일정계획을 구조적으로 계층화하면 총괄생산계획, 주생산계획, 작업할당, 작업배정, 작업순서결정, 그리고 작업 지시 순으로 나열된다.</p>
 <table class="caption-top table">
 <caption>일정계획 계층 구조</caption>
 <colgroup>
 <col style="width: 10%">
-<col style="width: 40%">
 <col style="width: 50%">
+<col style="width: 40%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -781,12 +781,12 @@ window.Quarto = {
 <td>라인 1의 작업자 김 씨에게 오전에 A작업 배정</td>
 </tr>
 <tr class="odd">
-<td><strong>Sequencing</strong></td>
+<td><strong>순서 (Sequencing)</strong></td>
 <td>같은 작업장에서 작업의 수행 순서를 정하는 것</td>
 <td>A → B → C 순으로 작업</td>
 </tr>
 <tr class="even">
-<td><strong>Dispatching</strong></td>
+<td><strong>지시 (Dispatching)</strong></td>
 <td>작업 지시를 실제로 실행하는 것</td>
 <td>김 씨, 지금 A작업 시작하세요</td>
 </tr>
@@ -893,19 +893,19 @@ window.Quarto = {
 <td>1조 라인의 기계 M1: A제품 오전 생산1조 라인의 기계 M2: A제품 오후 생산</td>
 </tr>
 <tr class="even">
-<td>Sequencing</td>
+<td>작업 순서</td>
 <td>M1: A1 → A2 → A3 순서로 작업</td>
 </tr>
 <tr class="odd">
-<td>Dispatching</td>
+<td>작업 지</td>
 <td>M1 작업자에게 A1 작업 즉시 지시</td>
 </tr>
 </tbody>
 </table>
-<p>일정계획에 있어 기준일정을 다음과 같이 정의할 수 있다.</p>
-<ul>
-<li>작업시간 + 준비작업시간 + 여유시간 + 정체시간</li>
-</ul>
+<p>일정계획에 있어 기준일정을 다음과 같이 정의 한다.</p>
+<blockquote class="blockquote">
+<p>기준일정 = 작업시간 + 준비작업시간 + 여유시간 + 정체시간</p>
+</blockquote>
 <section id="공정관리-기능" class="level3">
 <h3 class="anchored" data-anchor-id="공정관리-기능">공정관리 기능</h3>
 <p>공정관리는 크게 <strong>계획기능</strong>과 <strong>통제기능</strong>으로 구분할 수 있다.</p>
@@ -993,9 +993,9 @@ window.Quarto = {
 <table class="caption-top table">
 <caption>공정관리의 통제 기능</caption>
 <colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
+<col style="width: 30%">
+<col style="width: 35%">
+<col style="width: 35%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -1201,13 +1201,11 @@ window.Quarto = {
 <li>총괄은 생산 계획의 기본적인 틀을 제공하고, 분해는 그 틀을 실제 상황에 맞게 실행 가능하도록 변환한다.</li>
 </ul>
 <blockquote class="blockquote">
-<p><strong>총괄</strong></p>
 <ul>
-<li>회사는 전체적으로 1,000대의 자동차를 생산할 계획을 세운다. 이때, 총괄생산계획은 1,000대를 생산하는 목표를 설정한다.</li>
-</ul>
-<p><strong>분해</strong></p>
-<ul>
-<li>자동차를 3가지 모델(A, B, C)로 나누어 각각의 수요를 예측하고, 각 모델별로 생산 계획을 세운다. 예를 들어, 모델 A는 400대, 모델 B는 500대, 모델 C는 100대로 분해할 수 있다.</li>
+<li><p><strong>총괄</strong><br>
+회사는 전체적으로 1,000대의 자동차를 생산할 계획을 세운다. 이때, 총괄생산계획은 1,000대를 생산하는 목표를 설정한다.</p></li>
+<li><p><strong>분해</strong><br>
+자동차를 3가지 모델(A, B, C)로 나누어 각각의 수요를 예측하고, 각 모델별로 생산 계획을 세운다. 예를 들어, 모델 A는 400대, 모델 B는 500대, 모델 C는 100대로 분해할 수 있다.</p></li>
 </ul>
 </blockquote>
 <p><strong>총괄(Aggregation)</strong>은 대규모의 생산 계획을 간단히 설정하는 반면, <strong>분해(Disaggregation)</strong>는 세부적인 계획을 수립하여 실질적인 생산 현장에서 효율적으로 실행할 수 있게 한다. 두 접근 방식은 서로 보완적이며, 기업은 총괄과 분해를 적절히 결합하여 생산 계획을 수립하고 자원을 최적화한다.</p>
@@ -2098,7 +2096,7 @@ end
 <td><strong>장기적 자원 초과/부족 구간 식별</strong></td>
 </tr>
 <tr class="odd">
-<td><strong>Resource Bill (자원 명세서)</strong><br>(제품군 단위 자원 유형 및 소요량)</td>
+<td><strong>Resource Bill</strong> (자원 명세서, 제품군 단위 자원 유형 및 소요량)</td>
 <td><strong>설비 증설, 인력 채용 등 투자 계획 근거</strong></td>
 </tr>
 <tr class="even">
@@ -2113,7 +2111,7 @@ end
 </table>
 <p>다음은 RRP, RCCP, CRP 간 비교한 내용이다.</p>
 <table class="caption-top table">
-<caption>RRP vs.&nbsp;RCCP vs.&nbsp;CRP</caption>
+<caption>RRP vs.&nbsp;RCCP vs.&nbsp;CRP{tbl-colwidths=“[20,27,27,26]”}</caption>
 <colgroup>
 <col style="width: 12%">
 <col style="width: 28%">
@@ -2178,10 +2176,10 @@ end
 <p>생산시스템을 신설, 확장 시 생산능력을 결정하게 된다. 생산능력 결정 시 여유 능력 크기는 얼마로 할 것인가? 증설 시기는 언제로, 규모는 얼마로 할 것인가 등을 검토해야 한다.</p>
 <p><strong>생산능력</strong>이란 <span class="hl">제조환경에서 일정 기간 동안 생산할 수 있는 최대 산출량</span>을 의미한다. 일반적으로 시간당 단위 또는 일일 단위로 측정되며, 공장이나 설비 최대 출력 수준을 나타낸다. 생산능력은 생산 계획, 자원 할당, 재고 관리 등에 중요한 역할을 한다. 또한 생산능력을 초과하지 않도록 관리하는 것이 중요하다. 그렇지 않으면 생산 지연이 발생하거나 품질이 저하될 수 있다.</p>
 <table class="caption-top table">
-<caption>생산능력 분</caption>
+<caption>생산능력 분류</caption>
 <colgroup>
-<col style="width: 9%">
-<col style="width: 90%">
+<col style="width: 20%">
+<col style="width: 80%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -2205,10 +2203,71 @@ end
 </tbody>
 </table>
 <p>생산 능력 유효성은 다음과 같이 평가(측정 방법)할 수 있다.</p>
+<table class="caption-top table">
+<caption>생산성 평가</caption>
+<colgroup>
+<col style="width: 38%">
+<col style="width: 36%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>구분</th>
+<th>정의</th>
+<th>식</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>이용률 (Utilization)</td>
+<td>설계능력 대비 실제 생산 비율</td>
+<td>실제능력 ÷ 설계능력</td>
+</tr>
+<tr class="even">
+<td>효율 (Efficiency)</td>
+<td>유효능력 대비 실제 생산 비율</td>
+<td>실제능력 ÷ 유효능력</td>
+</tr>
+</tbody>
+</table>
+<p>여기서</p>
 <ul>
-<li><strong>이용률</strong> = 실제능력/설계능력</li>
-<li><strong>효율</strong> = 실제능력/유효능력</li>
+<li>실제능력(Actual Capacity)은 일정 기간 동안 실제로 생산된 제품이나 작업량을 의미</li>
+<li>설계능력(Design Capacity)은 설비나 시스템이 이론적으로 최대한도 내에서 최적 조건 하에서 낼 수 있는 최대 생산능력</li>
+<li>유효능력(Effective Capacity)은 실제 작업 조건, 계획된 휴식 시간, 점검 및 유지보수 등을 고려해 현실적으로 달성 가능한 최대 생산능</li>
 </ul>
+<table class="caption-top table">
+<caption>생산성 평가 관련 용어 정리</caption>
+<colgroup>
+<col style="width: 10%">
+<col style="width: 50%">
+<col style="width: 39%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>용어</th>
+<th>의미</th>
+<th>특성</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>설계능력</td>
+<td>최대 가능한 이론적 능력</td>
+<td>완벽 조건 하 최대 생산량</td>
+</tr>
+<tr class="even">
+<td>유효능력</td>
+<td>현실 조건 반영한 가능한 최대 능력</td>
+<td>휴식, 점검 등 고려</td>
+</tr>
+<tr class="odd">
+<td>실제능력</td>
+<td>실제 달성한 생산량</td>
+<td>현실 상황 반영 실제 생산량</td>
+</tr>
+</tbody>
+</table>
 <blockquote class="blockquote">
 <p><strong>최적조업도</strong>는 <span class="hl">적정조업도라고도 하며 기업 산출량 단위당 평균비용이 최저가 되는 조업도</span>를 말한다. 최적조업도는 기술적으로 가장 유리한 조업도를 나타낼 뿐, 그것이 경제적으로 가장 유리한 조업도라는 것은 아니다.</p>
 </blockquote>
@@ -2398,16 +2457,18 @@ end
 </section>
 <section id="능력비율" class="level4">
 <h4 class="anchored" data-anchor-id="능력비율">능력비율</h4>
-<p>능력비율(CR, capacity ratio)은 단위당 품절 손실과 함께 잉여 능력을 추정하여 능력 비율을 산정, 평가하는 지표이다.</p>
+<p><strong>능력비율</strong>(CR, capacity ratio)은 <span class="hl">단위당 품절 손실과 함께 잉여 능력을 추정하여 능력 비율을 산정, 평가하는 지표</span>이다.</p>
 <p><span id="eq-cr"><span class="math display">\[
 능력비율(CR) = \frac{(C_s - C_e)}{C_s}
 \tag{11.1}\]</span></span></p>
 <p><span class="math display">\[
 여기서 \ C_s는 \ 단위당 \ 품절 \ 손실, C_e는 \ 단위당 \ 잉여능력 \ 유지 \ 비용
 \]</span></p>
-<p><strong>CR에 따른 생산능력 전략</strong></p>
+<p>CR에 따라 다음과 같이 생산능력 전략을 수립할 수 있다.</p>
 <p>​- <span class="math inline">\(CR \ge 0.5\)</span><br>
-- 품절비용 &gt; 2 x 잉여 능력 비용 - 사전 확장 전략 - <span class="math inline">\(-0.5 &lt; CR &lt; 0.5\)</span> - 기대 가치 유지 전략 - <span class="math inline">\(CR \le -0.5\)</span> - 품절 비용 &lt; 0.67 x 잉여 능력 유지 비용 - 사후 증설 전략</p>
+- 품절비용 &gt; 2 x 잉여 능력 비용 - 사전 확장 전략 - <span class="math inline">\(-0.5 &lt; CR &lt; 0.5\)</span><br>
+- 기대 가치 유지 전략 - <span class="math inline">\(CR \le -0.5\)</span><br>
+- 품절 비용 &lt; 0.67 x 잉여 능력 유지 비용 - 사후 증설 전략</p>
 </section>
 </section>
 </section>
@@ -2427,23 +2488,87 @@ end
 <li>작업이나 주문 우선순위가 결정된다.</li>
 <li>타 부서 일정계획에 활용할 수 있다.</li>
 </ol>
-<p>MPS는 시점에 따라 시간 구역을 동결된, 확정된, 채워진, 개방된 구간으로 나눈다.</p>
-<ul>
-<li><strong>동결된 시간</strong>(frozen): 특별상황 관리책임자 허가 없이 생산일정 변경 불가</li>
-<li><strong>확정된 구간</strong>(fixed): 예외적인 상황 발생에 한하여 변경 가능</li>
-<li><strong>채워진 구간</strong>(full): 일정변경, 사용 가능한 생산능력 및 주문처리를 위해 할당되었으나 일정 변경으로 인한 비용에는 큰 영향을 미치지 않음</li>
-<li><strong>개방된 구간</strong>(open): 새 주문을 자유롭게 반영 가능, 아지 생산능력 미 반영</li>
-</ul>
+<p>MPS는 시점에 따라 시간 구역을 Frozen, Slushy, Open 구간으로 나눈다.</p>
+<table class="caption-top table">
+<caption>MPS 구간별 구분</caption>
+<colgroup>
+<col style="width: 10%">
+<col style="width: 8%">
+<col style="width: 81%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>구간명</th>
+<th>영문명</th>
+<th>특징 및 설명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Frozen 구간</strong></td>
+<td>Frozen Zone</td>
+<td>• 계획 변경이 거의 불가능한 확정 구간<br>• 생산 및 자재 준비가 완료되어 일정 고정<br>• 생산 공정에서 작업 지시가 이미 내려진 상태<br>• 안정적 생산 위해 계획 변경 최소화</td>
+</tr>
+<tr class="even">
+<td><strong>Slushy 구간</strong></td>
+<td>Slushy Zone</td>
+<td>• 일부 변경이 가능한 과도기 구간<br>• 상황에 따라 계획 조정 가능하지만 제한적<br>• 수요 변동, 긴급 주문 등 대응 위한 유연성 유지 구간</td>
+</tr>
+<tr class="odd">
+<td><strong>Open 구간</strong></td>
+<td>Open Zone</td>
+<td>• 자유롭게 계획 변경 가능한 구간<br>• 수요 예측 반영하며 계획 수립<br>• 장기 계획 및 전략적 생산 조정 구간</td>
+</tr>
+</tbody>
+</table>
+<p>일반적으로 MPS 구간은 다음과 같이 설정하며 변경 가능성은 구간별로 상이하다.</p>
+<table class="caption-top table">
+<caption>MPS 구간 사</caption>
+<colgroup>
+<col style="width: 14%">
+<col style="width: 21%">
+<col style="width: 21%">
+<col style="width: 41%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>구간명</th>
+<th>기간(예시)</th>
+<th>계획 변경 가능성</th>
+<th>주요 활동 및 특징</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Frozen</td>
+<td>0~2주</td>
+<td>거의 불가능</td>
+<td>작업 지시 확정, 생산 진행 중</td>
+</tr>
+<tr class="even">
+<td>Slushy</td>
+<td>2~4주</td>
+<td>제한적 가능</td>
+<td>긴급 변경 대응, 조정 가능</td>
+</tr>
+<tr class="odd">
+<td>Open</td>
+<td>1~3개월 이상</td>
+<td>자유롭게 가능</td>
+<td>수요 예측, 장기 계획 및 조정</td>
+</tr>
+</tbody>
+</table>
 <p>MPS 작성 절차는 다음과 같다.</p>
 <ol type="1">
 <li>재고량 예측치 및 확정된 주문량에 따라 예측 보유재고량 산출</li>
 <li>수요량 대비 재고 부족 시 생산 LOT 크기 감안하여 MPS 수량 계획 수립</li>
 </ol>
 <p><span id="eq-number-of-inventory"><span class="math display">\[\text{예측된 재고보유 수량 = (직전기간 말 재고 수준) + (MPS 수량) - max(수요예측치, 확정주문량)} \tag{11.2}\]</span></span></p>
-<section id="atp" class="level3">
-<h3 class="anchored" data-anchor-id="atp">ATP</h3>
+<section id="sec-atp" class="level3">
+<h3 class="anchored" data-anchor-id="sec-atp">ATP</h3>
 <p><strong>약속 가능수량</strong>(ATP, available to promise quantities)은 <span class="hl">고객과 약속한 제품이나 서비스 수량</span>을 의미하며 다음과 같이 계산한다.</p>
-<p><span class="math display">\[ATP = (기초재고보유량) + (MPS 수량) -\sum{확정주문량_{(다음MPS전까지)}}, 첫째 주\]</span> <span id="eq-atp"><span class="math display">\[ATP = (이전주재고량) + (MPS 수량) - \sum{확정주문량_{(다음MPS전까지)}}, MPS가 계획된 주 \tag{11.3}\]</span></span></p>
+<p><span class="math display">\[ATP = (기초재고보유량) + (MPS 수량) -\sum{확정주문량_{(다음MPS전까지)}}, \quad 첫째 \ 주\]</span> <span id="eq-atp"><span class="math display">\[ATP = (이전주재고량) + (MPS 수량) - \sum{확정주문량_{(다음MPS전까지)}}, \quad MPS가 \ 계획된 \ 주 \tag{11.3}\]</span></span></p>
 <div class="callout callout-style-default callout-important no-icon callout-titled" title="MPS 작성">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -2762,15 +2887,26 @@ ATP 계산
 <p>생산계획(MPS)이 실제 자원으로 실행 가능한지 <strong>사전 점검</strong>하는 단계</p>
 </blockquote>
 <p>RCCP는 자원계획 계층 구조 내에서 RRP와 CRP 사이에 위치한다.</p>
-<pre><code>[1] RRP (Resource Requirements Planning) - 전사/장기
-      ↓
-[2] RCCP (Rough-Cut Capacity Planning) - 중기/품목군
-      ↓
-[3] CRP (Capacity Requirements Planning) - 단기/공정별</code></pre>
+<center>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A["RRP&lt;br&gt;전사/장기"] --&gt; B["RCCP&lt;br&gt;중기/품목군"]
+    B --&gt; C["CRP&lt;br&gt;단기/공정별"]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</center>
 <ul>
-<li><strong>RRP</strong>: 전략계획 수준의 장기 자원 수요</li>
-<li><strong>RCCP</strong>: MPS와 연계된 대략적 자원 분석</li>
-<li><strong>CRP</strong>: 작업오더 기반의 상세 자원 수요</li>
+<li>RRP(Resource Requirements Planning): 전략계획 수준의 장기 자원 수요</li>
+<li><strong>RCCP</strong>(Rough-Cut Capacity Planning): MPS와 연계된 대략적 자원 분석</li>
+<li>CRP(Capacity Requirements Planning): 작업오더 기반의 상세 자원 수요</li>
 </ul>
 <p>RCCP 목적 및 필요성은 다음과 같다.</p>
 <table class="caption-top table">
@@ -2935,20 +3071,20 @@ ATP 계산
 <h3 class="anchored" data-anchor-id="mrp-입력물">MRP 입력물</h3>
 <p>MRP는 생산 계획을 지원하기 위한 시스템으로, 정확한 자재 소요를 산출하기 위해 3가지 핵심 입력 요소가 필요하다.</p>
 <ul>
-<li>기준 생산 일정 (MPS, Master Production Schedule)
+<li><strong>기준 생산 일정</strong> (MPS, Master Production Schedule)
 <ul>
 <li>최종 제품에 대한 <strong>생산 계획 일정</strong>을 의미한다.</li>
 <li>제품별, 기간별 생산량과 납기 일정이 포함된다.</li>
 <li>MPS가 없으면 MRP가 산출하는 자재 소요가 무의미해진다.</li>
 <li>MPS는 시장 수요, 판매 계획, 재고 수준을 기반으로 수립된다.</li>
 </ul></li>
-<li>부품 명세서 (BOM, Bill of Materials)
+<li><strong>부품 명세서</strong> (BOM, Bill of Materials)
 <ul>
 <li>완제품을 구성하는 모든 부품과 원재료의 <strong>구조 및 계층 관계</strong>를 명확히 나타낸 문서이다.</li>
 <li>각 부품의 소요량과 관계도를 통해 필요한 자재의 종류와 수량 산출에 활용된다.</li>
 <li>BOM은 다단계로 구성되어 있으며, 상위 제품에서 하위 부품으로 연결된다.</li>
 </ul></li>
-<li>재고 현황 파일 (Inventory Records File)
+<li><strong>재고 현황 파일</strong> (IRF, Inventory Records File)
 <ul>
 <li>현재 <strong>재고 수준, 입고 예정, 주문 예정</strong> 등의 자재 상태 정보를 담고 있다.</li>
 <li>실제 사용 가능한 재고량과 리드 타임, 안전 재고 등도 포함된다.</li>
@@ -2972,17 +3108,17 @@ ATP 계산
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>MPS (Master Production Schedule)</strong></td>
+<td><strong>MPS</strong></td>
 <td>최종 제품 생산 일정</td>
 <td>생산 목표와 일정 설정의 기준</td>
 </tr>
 <tr class="even">
-<td><strong>BOM (Bill of Materials)</strong></td>
+<td><strong>BOM</strong></td>
 <td>제품 구조 및 부품 관계</td>
 <td>필요한 자재 종류와 수량 산출</td>
 </tr>
 <tr class="odd">
-<td><strong>재고 현황 파일 (Inventory Records File)</strong></td>
+<td><strong>IRF</strong></td>
 <td>현재 재고 및 주문 상태 정보</td>
 <td>실제 자재 가용량 파악 및 계획 정확도 확보</td>
 </tr>
@@ -3009,8 +3145,8 @@ BOP
 <p>BOM(Bill of Materials, 자재명세서)은 제품을 생산하는 데 필요한 부품, 재료, 하위 조립품 등의 목록을 체계적으로 나열한 문서이다. 사용 목적이나 구성 방식에 따라 다양한 형태로 구분되며, 아래와 같이 주요 종류를 정리할 수 있다.</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 40%">
-<col style="width: 60%">
+<col style="width: 32%">
+<col style="width: 68%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -3057,32 +3193,21 @@ BOP
 </tr>
 </tbody>
 </table>
-<dl>
-<dt>내용별 구분</dt>
-<dd>
+<p>BOM을 내용별로 구분하면 다음과 같이 나눌 수 있다.</p>
 <ol type="1">
-<li><dl>
-<dt><strong>기능에 따른 구분</strong></dt>
-<dd>
+<li><strong>기능에 따른 구분</strong>
 <ul>
 <li>설계용, 생산용, 판매용, 서비스용 BOM으로 나뉨</li>
-<li>각 부서나 목적에 따라 BOM에 포함되는 정보가 달라짐</li>
-</ul>
-</dd>
-</dl></li>
-<li><dl>
-<dt><strong>구조에 따른 구분</strong></dt>
-<dd>
+<li>각 부서나 목적에 따라 BOM에 포함되는 정보가 달라짐<br>
+</li>
+</ul></li>
+<li><strong>구조에 따른 구분</strong>
 <ul>
 <li>단일 수준, 다중 수준, 모듈식, 변형 BOM 등 구성 방식에 따라 분류됨<br>
 </li>
 <li>제품 복잡성이나 제품 옵션 다양성에 따라 적절한 형태 사용</li>
-</ul>
-</dd>
-</dl></li>
+</ul></li>
 </ol>
-</dd>
-</dl>
 <div class="callout callout-style-default callout-important no-icon callout-titled" title="MRP 작성">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -3497,10 +3622,12 @@ MRP vs MRP II vs ERP
 </blockquote>
 <section id="규모의-경제의-발생-요인" class="level4">
 <h4 class="anchored" data-anchor-id="규모의-경제의-발생-요인">규모의 경제의 발생 요인</h4>
+<p>규모의 경제는 생산량 증가에 따른 여러 요인으로 발생한다.</p>
 <table class="caption-top table">
+<caption>규모의 경제 발생 요인</caption>
 <colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
+<col style="width: 30%">
+<col style="width: 70%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -3538,12 +3665,12 @@ MRP vs MRP II vs ERP
 </section>
 <section id="규모의-경제의-종류" class="level4">
 <h4 class="anchored" data-anchor-id="규모의-경제의-종류">규모의 경제의 종류</h4>
+<p>규모의 경제는 크게 내부 규모의 경제와 외부 규모의 경제로 나눌 수 있다.</p>
 <ol type="1">
-<li>내부 규모의 경제 (Internal Economies of Scale)
+<li><strong>내부 규모의 경제</strong> (Internal Economies of Scale)
 <ul>
-<li>한 기업의 자체 역량 증가로 인해 발생</li>
-<li>생산, 기술, 관리, 재무 등 다양한 내부 기능에서 구현</li>
-</ul>
+<li><p>한 기업의 자체 역량 증가로 인해 발생</p></li>
+<li><p>생산, 기술, 관리, 재무 등 다양한 내부 기능에서 구현</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 30%">
@@ -3578,10 +3705,10 @@ MRP vs MRP II vs ERP
 </tr>
 </tbody>
 </table></li>
-<li>외부 규모의 경제 (External Economies of Scale)
+</ul></li>
+<li><strong>외부 규모의 경제</strong> (External Economies of Scale)
 <ul>
-<li>산업 전체 또는 특정 지역의 성장으로 인해 개별 기업이 간접적으로 이익을 얻는 경우</li>
-</ul>
+<li><p>산업 전체 또는 특정 지역의 성장으로 인해 개별 기업이 간접적으로 이익을 얻는 경우</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 30%">
@@ -3608,12 +3735,14 @@ MRP vs MRP II vs ERP
 </tr>
 </tbody>
 </table></li>
+</ul></li>
 </ol>
 </section>
 <section id="규모의-불경제" class="level4">
 <h4 class="anchored" data-anchor-id="규모의-불경제">규모의 불경제</h4>
 <p>생산 규모가 일정 수준을 넘어서면, 오히려 <strong>평균 비용이 증가하는 현상</strong>이 발생할 수 있으며 이를 <strong>규모의 불경제</strong>(Diseconomies of Scale)라 한다.</p>
 <table class="caption-top table">
+<caption>규모의 불경제 발생 원</caption>
 <thead>
 <tr class="header">
 <th>원인</th>
@@ -3642,7 +3771,9 @@ MRP vs MRP II vs ERP
 </section>
 <section id="규모의-경제와-관련-개념" class="level4">
 <h4 class="anchored" data-anchor-id="규모의-경제와-관련-개념">규모의 경제와 관련 개념</h4>
+<p>규모의 경제는 학습곡선 효과, 범위의 경제, 규모의 불경제, 경험곡선 등과 연관이 된다.</p>
 <table class="caption-top table">
+<caption>규모의 경제와 관련된 개념</caption>
 <colgroup>
 <col style="width: 50%">
 <col style="width: 50%">
@@ -3676,6 +3807,7 @@ MRP vs MRP II vs ERP
 <section id="실무-적용-예시" class="level4">
 <h4 class="anchored" data-anchor-id="실무-적용-예시">실무 적용 예시</h4>
 <table class="caption-top table">
+<caption>산업별 규모의 경제</caption>
 <thead>
 <tr class="header">
 <th>산업</th>

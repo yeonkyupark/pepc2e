@@ -572,6 +572,7 @@ window.Quarto = {
   <li><a href="#공급업체-재고-관리" id="toc-공급업체-재고-관리" class="nav-link" data-scroll-target="#공급업체-재고-관리">공급업체 재고 관리</a>
   <ul>
   <li><a href="#sec-vmi" id="toc-sec-vmi" class="nav-link" data-scroll-target="#sec-vmi">VMI</a></li>
+  <li><a href="#sec-cmi" id="toc-sec-cmi" class="nav-link" data-scroll-target="#sec-cmi">CMI</a></li>
   <li><a href="#sec-cpfr" id="toc-sec-cpfr" class="nav-link" data-scroll-target="#sec-cpfr">CPFR</a></li>
   <li><a href="#sec-cock" id="toc-sec-cock" class="nav-link" data-scroll-target="#sec-cock">COCK</a></li>
   </ul></li>
@@ -1372,37 +1373,37 @@ EOQ 항목 계산
 <tr class="odd">
 <td>1</td>
 <td><strong>(Q, R) 모형</strong>(정량·재주문점 모형)</td>
-<td>- 고정된 주문량 QQ <br>- 재고가 임계치 RR 이하로 떨어지면 주문<br>- 서비스 수준 기반 재주문점 설정</td>
+<td>• 고정된 주문량 QQ <br>• 재고가 임계치 RR 이하로 떨어지면 주문<br>• 서비스 수준 기반 재주문점 설정</td>
 <td>공장 부품, 소매유통</td>
 </tr>
 <tr class="even">
 <td>2</td>
 <td><strong>(s, S) 모형</strong>(최소·최대 모형)</td>
-<td>- 재고가 임계치 ss 이하일 때 <br>- 재고를 최대치 SS까지 보충 <br>- 수요 변동이 클 때 유리</td>
+<td>• 재고가 임계치 ss 이하일 때 <br>• 재고를 최대치 SS까지 보충 <br>• 수요 변동이 클 때 유리</td>
 <td>고비용 부품, 항공부품</td>
 </tr>
 <tr class="odd">
 <td>3</td>
 <td><strong>(R, S) 모형</strong>(주기·최대 재고 보충 모형)</td>
-<td>- 고정된 주기 RR마다 <br>- 현재 재고를 최대치 SS까지 보충 <br>- 주기적 검토 시스템</td>
+<td>• 고정된 주기 RR마다 <br>• 현재 재고를 최대치 SS까지 보충 <br>• 주기적 검토 시스템</td>
 <td>정기 발주가 필요한 공급망</td>
 </tr>
 <tr class="even">
 <td>4</td>
 <td><strong>연속검토 vs 주기검토 모형</strong></td>
-<td>- 연속: 수시로 재고 수준 확인 <br>- 주기: 일정 주기로만 재고 확인</td>
+<td>• 연속: 수시로 재고 수준 확인 <br>• 주기: 일정 주기로만 재고 확인</td>
 <td>전자는 ERP 기반 공장, 후자는 오프라인 매장</td>
 </tr>
 <tr class="odd">
 <td>5</td>
 <td><strong>서비스 수준 기반 모델</strong></td>
-<td>- 목표 서비스 수준(예: 95%)을 만족시키는 재고 수준 결정 <br>- 재고 부족 리스크를 확률적으로 반영</td>
+<td>• 목표 서비스 수준(예: 95%)을 만족시키는 재고 수준 결정 <br>• 재고 부족 리스크를 확률적으로 반영</td>
 <td>병원, 고가 장비 재고</td>
 </tr>
 <tr class="even">
 <td>6</td>
 <td><strong>다기간 동적 모형 (Stochastic Dynamic Programming)</strong></td>
-<td>- 여러 기간에 걸쳐 수요 및 재고 상태를 고려해동적으로 정책 수립<br>- 수요가 시간에 따라 변화할 때 효과적</td>
+<td>• 여러 기간에 걸쳐 수요 및 재고 상태를 고려해동적으로 정책 수립<br>• 수요가 시간에 따라 변화할 때 효과적</td>
 <td>항공권, 시즌 재고, 리드타임이 가변적일 때</td>
 </tr>
 </tbody>
@@ -1528,10 +1529,10 @@ EOQ 항목 계산
 <p>대표적인 재고관리 모형으로 ABC 모형, 투빈(Two Bin)시스템, min-Max시스템 등이 있다.</p>
 <section id="sec-abc" class="level4">
 <h4 class="anchored" data-anchor-id="sec-abc">ABC 모형</h4>
-<p>ABC 모형은 <span class="hl">재고 품목을 중요도(또는 기여도)에 따라 분류하여 차별적 관리 전략을 적용하기 위한 기법</span>이다. 이는 재고 관리 효율을 높이고, <strong>한정된 자원을 중요한 품목에 집중</strong>하기 위한 매우 실용적인 방식이다.</p>
-<p><strong>ABC 모형 개념</strong></p>
+<p><strong>ABC 모형</strong>은 <span class="hl">재고 품목을 중요도(또는 기여도)에 따라 분류하여 차별적 관리 전략을 적용하기 위한 기법</span>이다. 이는 재고 관리 효율을 높이고, <strong>한정된 자원을 중요한 품목에 집중</strong>하기 위한 매우 실용적인 방식이다.</p>
+<p><strong>ABC 모형 개념</strong>은 다음과 같다.</p>
 <ul>
-<li>전체 재고 품목 중 <strong>소수의 품목이 전체 가치의 대부분을 차지</strong>하는 파레토 법칙(80/20 원칙)에 기반한 분류 방법이다.</li>
+<li>전체 재고 품목 중 <strong>소수의 품목이 전체 가치의 대부분을 차지</strong>하는 <strong>파레토 법칙(80/20 원칙)에 기반한 분류 방법</strong>이다.</li>
 <li>보통 연간 소비 금액(Annual Consumption Value = 연간 수요량 × 단가)을 기준으로 품목을 분류한다.</li>
 </ul>
 <table class="caption-top table">
@@ -1751,13 +1752,20 @@ EOQ 항목 계산
 </ul>
 </dd>
 </dl>
-<p><strong>구조와 작동 방식</strong></p>
-<pre><code>┌──────────────┐         ┌──────────────┐
-│   1st bin            │ 사용 →   │   2nd bin            │ ← 리드타임 동안 사용
-└──────────────┘         └──────────────┘
-       ↓                          ↓
-  재고가 0이 되면                     재주문 발주 → 2nd bin 사용 시작 
-                                   → 신규 재고 입고 → 2개 bin 다시 채움</code></pre>
+<p>구조와 동작방식은 다음과 같다.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A["1st bin"] --"1st bin 모두 소진 시 &lt;br&gt;2nd bin 사용"--&gt; B["2nd bBin"]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
 <ul>
 <li>1st bin: <strong>운영 재고(working stock)</strong></li>
 <li>2nd bin: <strong>보충 시점 재고(reorder point)</strong> 또는 <strong>안전 재고(safety stock)</strong></li>
@@ -1905,7 +1913,7 @@ EOQ 항목 계산
 </section>
 <section id="정량발주방식과-정기발주방식" class="level4">
 <h4 class="anchored" data-anchor-id="정량발주방식과-정기발주방식">정량발주방식과 정기발주방식</h4>
-<p><strong>정기발주방식</strong>과 <strong>정량발주방식</strong>은 발주 시점에 따라 구분된다.</p>
+<p>발주 시점에 따라 <strong>정기발주방식</strong>과 <strong>정량발주방식</strong>으로 구분할 수 있다.</p>
 <table class="caption-top table">
 <caption>정량발주시스템과 정기발주시스템</caption>
 <colgroup>
@@ -1959,10 +1967,12 @@ EOQ 항목 계산
 </div>
 <div class="callout-body-container callout-body">
 <p><strong>상황</strong></p>
-<pre><code>- 1일 평균 사용량: 100개
-- 평균구매에 걸리는 시간: 5일
-- 서비스율은 95%로 안전계수 1.65를 적용함
-- 연속 5일 동안 사용량 표준편차: 20개</code></pre>
+<ul>
+<li>1일 평균 사용량: 100개</li>
+<li>평균구매에 걸리는 시간: 5일</li>
+<li>서비스율은 95%로 안전계수 1.65를 적용함</li>
+<li>연속 5일 동안 사용량 표준편차: 20개</li>
+</ul>
 <hr>
 <p>발주점 = 조달기간 수요량(d x L) + 안전계수(<span class="math inline">\(u_{1-\alpha}\)</span>) x 조달기간 중 수요량 표준편차(<span class="math inline">\(\sigma_L\)</span>) = (100x5) + 1.65x20 = 533</p>
 <p>정량발주시스템에 따라 계속적인 재고실사를 통해 재고량이 533개가 남게되면 발저점에 도달한 것으로 판단하여 발주를 진행한다.</p>
@@ -1973,7 +1983,7 @@ EOQ 항목 계산
 <section id="min-max-시스템" class="level4">
 <h4 class="anchored" data-anchor-id="min-max-시스템">Min-Max 시스템</h4>
 <p><strong>Min-Max 시스템</strong>은 재고 관리에서 사용되는 간단하고 널리 보급된 <strong>주기 검토형(Periodic Review)</strong> 재고 통제 기법이다. <span class="hl">최소 재고 수준(Min)과 최대 재고 수준(Max)을 설정해 두고, 주기적으로 재고 수준을 확인하여 보충 발주하는 방식</span>이다.</p>
-<p><strong>Min-Max 시스템 개요</strong></p>
+<p>Min-Max 시스템의 주요 개요는 다음과 같다.</p>
 <ul>
 <li>재고가 <strong>최소 수준(Min) 이하</strong>로 내려가면 발주를 실시.</li>
 <li>발주량은 <strong>Max 수준까지 채우는 수량</strong>.</li>
@@ -2035,11 +2045,15 @@ EOQ 항목 계산
 </tbody>
 </table>
 <p>→ 현재 재고(350개) &lt; Min(400개)이므로 <strong>650개 발주</strong></p>
+<blockquote class="blockquote">
 <p>Min-Max 시스템 관련 수식을 정리하면 다음과 같다.</p>
 <ul>
-<li><strong>발주 조건</strong>: <span class="math inline">\(재고량 ≤ Min\text{재고량} \leq \text{Min}\)</span></li>
-<li><strong>발주량</strong>: <span class="math inline">\(주문량=Max−현재&nbsp;재고량\text{주문량} = \text{Max} - \text{현재 재고량}\)</span></li>
+<li><strong>발주 조건</strong>:<br>
+<span class="math inline">\(재고량 ≤ Min\text{재고량} \leq \text{Min}\)</span></li>
+<li><strong>발주량</strong>:<br>
+<span class="math inline">\(주문량=Max−현재&nbsp;재고량\text{주문량} = \text{Max} - \text{현재 재고량}\)</span></li>
 </ul>
+</blockquote>
 <p>Min-Max 시스템 장점과 단점은 다음과 같다.</p>
 <table class="caption-top table">
 <caption>Min-Max 시스템 장단점</caption>
@@ -2103,17 +2117,16 @@ EOQ 항목 계산
 </tbody>
 </table>
 </dd>
-<dt>예시</dt>
 <dd>
-<ul>
-<li>일일 수요: 50개</li>
-</ul>
+Min 및 Max 설정 방법
 </dd>
 </dl>
+<blockquote class="blockquote">
 <ul>
-<li><p>리드타임: 5일</p></li>
-<li><p>발주 주기: 7일</p></li>
-<li><p>안전계수: 1.65, 수요 표준편차: 10개</p></li>
+<li>일일 수요: 50개</li>
+<li>리드타임: 5일</li>
+<li>발주 주기: 7일</li>
+<li>안전계수: 1.65, 수요 표준편차: 10개</li>
 </ul>
 <ol type="1">
 <li>Min:<br>
@@ -2122,10 +2135,10 @@ EOQ 항목 계산
 <li>Max:<br>
 <span class="math inline">\(= 50 \cdot 7 + 287 = 350 + 287 = 637개\)</span></li>
 </ol>
-<dl>
-<dt>다른 시스템과 비교</dt>
-<dd>
+</blockquote>
+<p>기타 모형을 비교하면 다음과 같다.</p>
 <table class="caption-top table">
+<caption>Min-Max vs.&nbsp;Two-bin vs.&nbsp;(Q,R) 모형</caption>
 <colgroup>
 <col style="width: 25%">
 <col style="width: 25%">
@@ -2167,8 +2180,6 @@ EOQ 항목 계산
 </tr>
 </tbody>
 </table>
-</dd>
-</dl>
 <p>주요 적용 사례를 살펴보면 다음과 같다.</p>
 <ul>
 <li>병원 재고품, 사무용품, 간단한 소모성 부품<br>
@@ -2176,53 +2187,32 @@ EOQ 항목 계산
 <li>수요 예측이 어렵고, 재고 회전이 빠른 품목</li>
 <li>정기 발주 루틴이 정착된 공공기관이나 중소기업</li>
 </ul>
-<p>핵심 포인트를 정리하면 다음과 같다.</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>핵심 포인트</th>
-<th>설명</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>개념</td>
-<td>Min 이하일 때 Max까지 채우는 발주 시스템</td>
-</tr>
-<tr class="even">
-<td>조건</td>
-<td>정기적 검토가 가능하고 수요 패턴이 예측 가능할수록 효과적</td>
-</tr>
-<tr class="odd">
-<td>유용성</td>
-<td>ERP 시스템 없이도 수작업 또는 간단한 프로그램으로 운영 가능</td>
-</tr>
-</tbody>
-</table>
 <p>Min-Max 시스템은 <strong>운영이 간단하면서도 안전재고와 수요를 반영</strong>할 수 있어 실무에서 자주 활용되며, 특히 <strong>적시관리(JIT)가 필요하지 않은 환경</strong>에서 유용하다.</p>
 </section>
 </section>
 </section>
 <section id="sec-inventory-cost-kpi" class="level2">
 <h2 class="anchored" data-anchor-id="sec-inventory-cost-kpi">재고 비용 및 재고 성과 척도</h2>
+<center>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
 <p></p><figure class="figure"><p></p>
 <div>
 <pre class="mermaid mermaid-js">flowchart TB
-00[재고관련비용]
-01["주문비용&lt;br&gt;Procurement costs"]
-02["재고유지비용&lt;br&gt;Inventory carrying costs"]
-03["품절비용&lt;br&gt;Out-of-stock costs"]
-00 --- 01 &amp; 02 &amp; 03
+    00[재고관련비용]
+    01["주문비용&lt;br&gt;Procurement costs"]
+    02["재고유지비용&lt;br&gt;Inventory carrying costs"]
+    03["품절비용&lt;br&gt;Out-of-stock costs"]
+    00 --- 01 &amp; 02 &amp; 03
 </pre>
 </div>
 <p></p></figure><p></p>
 </div>
 </div>
 </div>
-<p><span id="eq-total-inventory-cost"><span class="math display">\[\text{총 재고비 = 재고비용 합 = 주문/구매 준비 비용 + 재고 유지 비용 + 품절 비용(재고 부족비)} \tag{10.13}\]</span></span></p>
+</center>
+<p><span id="eq-total-inventory-cost"><span class="math display">\[\text{총 재고비 = 재고비용 합 = (주문 또는 준비) 비용 + 재고 유지 비용 + 품절 비용(재고 부족비)} \tag{10.13}\]</span></span></p>
 <p>재고관련 비용은 일반적으로 제품 가치 15~35% 발생한다(이자, 보관비용, 세금, 보험료, 상품 훼손 비용 등).</p>
 <p><strong>주문/준비 비용</strong> (order/setup cost)</p>
 <ul>
@@ -2251,23 +2241,19 @@ EOQ 항목 계산
 <h3 class="anchored" data-anchor-id="재고-관리-척도">재고 관리 척도</h3>
 <p>재고 관리 측정을 위한 기본 형태로 다음 4가지가 있다.</p>
 <ul>
-<li><p>평균 총 재고액(Average aggregate inventory value)</p></li>
-<li><p>재고 회전율(Inventory turnover rate 또는 Inventory turnover ratio)</p></li>
-<li><p>재고 공급 주수(Weeks of supply 또는 Inventory weeks of supply)</p></li>
-<li><p>재고 공급일수(Day of supply)</p></li>
-<li><p>평균 총 재고액</p>
+<li><p><strong>평균 총 재고액</strong>(Average aggregate inventory value)</p>
 <ul>
 <li>현재 재고로 보유하고 있는 품목 가치 합, 재고 총 평균 가액</li>
 <li>기업이 어떤 기간 동안 재고로 보유하고 있는 모든 품목(원자재, 재공품, 완제품 등) 총 평균 가치(원가 기준)</li>
 <li>평균 총괄 재고가치는 기업이 얼마나 많은 자산이 재고에 묶여 있는가를 나타내는 지표</li>
 <li>총 자산 대비 평균적으로 제조업은 25%, 유통업체는 75% 수준 <span id="eq-aaiv"><span class="math display">\[평균총재고액 = \frac{기초재고액 + 기말재고액}{2} \tag{10.14}\]</span></span></li>
 </ul></li>
-<li><p>재고 공급일수</p>
+<li><p><strong>재고 공급일수</strong>(Day of supply)</p>
 <ul>
 <li>현재 보관 중인 재고를 이용할 경우 기대 판매 가능일 수(현재 재고로 며칠을 공급할 수 있는가) <span id="eq-dos"><span class="math display">\[재고 \ 공급일수 = \frac{평균재고가액}{일당매출원가} \tag{10.15}\]</span></span></li>
 </ul></li>
-<li><p>재고 공급주수 - 평균 총괄 재고 가치를 주당 매출원가로 나눈 값 <span id="eq-wos"><span class="math display">\[재고 \ 공급주수 = \frac{평균재고가액}{주당매출원가} \tag{10.16}\]</span></span></p></li>
-<li><p>재고 회전율</p>
+<li><p><strong>재고 공급주수</strong>(Weeks of supply 또는 Inventory weeks of supply) - 평균 총괄 재고 가치를 주당 매출원가로 나눈 값 <span id="eq-wos"><span class="math display">\[재고 \ 공급주수 = \frac{평균재고가액}{주당매출원가} \tag{10.16}\]</span></span></p></li>
+<li><p><strong>재고 회전율</strong>(Inventory turnover rate 또는 Inventory turnover ratio)</p>
 <ul>
 <li>연간 매출원가를 연간 평균 총재고액으로 나눈 재고 측정치</li>
 <li>회전율은 일정한 기간을 전제로 하고그 사이에 판매 활동이 어떻게 공헌했는지 측정하는 지표로 회전율이 높은수록 좋음 <span id="eq-itr"><span class="math display">\[회전율 = \frac{(연간)매출액(원가)}{(평균)재고액} \tag{10.17}\]</span></span></li>
@@ -2324,6 +2310,80 @@ EOQ 항목 계산
 <figure class="figure">
 <p><img src="images/vmi.png" class="img-fluid figure-img"></p>
 <figcaption>VMI</figcaption>
+</figure>
+</div>
+<p><strong>Vendor Managed Inventory (VMI)</strong>는 공급업체가 고객 재고 수준을 관리하는 시스템이다. 전통적인 재고 관리에서는 고객이 자신 재고를 모니터링하고 필요할 때 공급업체에 주문을 넣는 방식이지만, VMI에서는 <span class="hl">공급업체가 고객 재고 현황을 실시간으로 파악하고 재고가 부족할 때 자동으로 발주하여 필요한 상품을 공급하는 방식</span>이다.</p>
+<p>VMI의 주요 특징은 다음과 같다.</p>
+<ul>
+<li>재고 관리의 자동화
+<ul>
+<li>공급업체가 고객의 재고 수준을 직접 모니터링하고 재고가 부족할 경우 발주를 자동으로 처리</li>
+<li>고객은 재고 수준을 관리할 필요 없이 공급업체가 이를 대신한다.</li>
+</ul></li>
+<li>실시간 데이터 공유
+<ul>
+<li>VMI 시스템에서는 고객과 공급업체가 실시간으로 데이터를 공유</li>
+<li>고객의 재고 데이터, 판매 데이터 등이 공급업체에 전달되어 재고 수준과 수요를 예측하고 최적화된 발주 진행</li>
+</ul></li>
+<li>수요 예측 및 최적화
+<ul>
+<li>공급업체는 고객의 판매 패턴과 재고 수준을 분석하여 적절한 시점에 적절한 수량의 상품을 공급</li>
+<li>이를 통해 재고 부족이나 과잉을 방지하고 효율적인 재고 관리</li>
+</ul></li>
+<li>협력적인 관계
+<ul>
+<li>VMI는 공급업체와 고객 간의 긴밀한 협력을 기반</li>
+<li>공급업체는 고객의 재고를 관리하면서 고객의 필요에 맞춰 공급 일정을 조정</li>
+<li>고객은 더 이상 재고 관리에 신경 쓸 필요 없이 원활한 공급 제공</li>
+</ul></li>
+</ul>
+<p>VMI 장점과 단점은 다음과 같다.</p>
+<table class="caption-top table">
+<caption>VMI 장점과 단점</caption>
+<colgroup>
+<col style="width: 47%">
+<col style="width: 52%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>장점</th>
+<th>단점</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>재고 관리 효율성 향상</strong><br>재고 수준을 최적화하여 과잉 재고나 재고 부족을 방지할 수 있다.</td>
+<td><strong>정보 공유의 위험</strong><br>고객의 재고 데이터와 판매 데이터를 공급업체와 공유해야 하므로 보안에 대한 우려가 있을 수 있다.</td>
+</tr>
+<tr class="even">
+<td><strong>운영 비용 절감</strong><br>주문 및 재고 관리가 자동화되어 인건비나 물류 비용을 줄일 수 있다.</td>
+<td><strong>초기 설정 비용</strong><br>VMI 시스템 도입을 위한 초기 비용이 발생할 수 있으며 시스템 통합에 시간이 필요할 수 있다.</td>
+</tr>
+<tr class="odd">
+<td><strong>공급망 개선</strong><br>공급업체와 고객 간의 신뢰와 협력이 강화되어 공급망 효율성이 향상된다.</td>
+<td><strong>의존성</strong><br>공급업체에 의존하는 시스템이기 때문에, 공급업체의 관리 능력이 부족하면 문제가 발생할 수 있다.</td>
+</tr>
+<tr class="even">
+<td><strong>빠른 재고 회전율</strong><br>재고 수준을 정확히 예측하고 관리할 수 있어 빠른 재고 회전율을 유지할 수 있다.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>VMI의 적용 분야는 다음과 같다.</p>
+<ul>
+<li>VMI는 제조업체, 유통업체, 소매업체 등 다양한 산업에서 활용
+<ul>
+<li>예를 들어, 대형 슈퍼마켓이나 전자상거래 플랫폼에서는 재고 관리를 효율적으로 하기 위해 VMI를 많이 사용</li>
+</ul></li>
+<li>VMI 시스템은 고객과 공급업체 모두에게 이점을 제공하며, 재고 관리의 효율성을 높이고 공급망을 최적화하는 데 중요한 역할</li>
+</ul>
+</section>
+<section id="sec-cmi" class="level3">
+<h3 class="anchored" data-anchor-id="sec-cmi">CMI</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/cmi.png" class="img-fluid figure-img"></p>
+<figcaption>CMI</figcaption>
 </figure>
 </div>
 <p>CMI는 <strong>Co-Managed Inventory(공동 재고 관리)</strong>를 의미하며, 이는 <strong>수요자와 공급자가 함께 재고를 관리</strong>하는 방식으로, VMI(Vendor Managed Inventory)보다 유연하고, 재고 소유와 운영 책임을 일부 공유하는 협력적 재고 관리 방식이다.</p>
@@ -2816,7 +2876,7 @@ EOQ 항목 계산
 <section id="sec-cock" class="level3">
 <h3 class="anchored" data-anchor-id="sec-cock">COCK</h3>
 <p><strong>코크</strong>(COCK) 시스템은 <span class="hl">협력업체 간의 상호 협력과 정보 공유를 통해 공급망 전체의 효율성을 극대화하는 재고관리 시스템</span>이다. COCK은 “Cooperation, Optimization, Communication, Knowledge-sharing”의 약자로, 협력과 최적화를 기반으로 공급망 전반을 관리하는 데 중점을 둔다.</p>
-<p><strong>주요 특징</strong></p>
+<p>COCK 시스템의 <strong>주요 특징</strong>은 다음과 같다.</p>
 <ul>
 <li><strong>협력 중심 운영</strong><br>
 공급망에 참여하는 모든 협력업체가 정보를 공유하고 함께 의사결정한다.</li>
@@ -2827,7 +2887,7 @@ EOQ 항목 계산
 <li><strong>예측 및 유연성 강화</strong><br>
 <a href="1101정보화활용기술.html#sec-ai" class="quarto-xref"><span>인공지능(AI)</span></a>와 <a href="1101정보화활용기술.html#sec-bigdata" class="quarto-xref"><span>빅데이터</span></a> 분석을 통해 수요를 예측하고, 시장 변화에 신속하게 대응할 수 있다.</li>
 </ul>
-<p><strong>운영 방식</strong></p>
+<p>COCK 시스템 <strong>운영 방식</strong>은 다음과 같다.</p>
 <ul>
 <li><strong>데이터 통합</strong><br>
 협력업체 간의 생산, 재고, 물류 데이터를 클라우드 플랫폼에 통합하여 가시성을 확보한다.</li>
@@ -2838,7 +2898,7 @@ EOQ 항목 계산
 </ul>
 <p>COCK 시스템은 공급망 전체 가시성 확보라는 장점이 있지만 초기 구축 비용이 높고 기술적 역량이 필요하다는 한계가 있다.</p>
 <table class="caption-top table">
-<caption>COCK 장점과 단점</caption>
+<caption>COCK 장단점</caption>
 <colgroup>
 <col style="width: 50%">
 <col style="width: 50%">
@@ -2981,7 +3041,7 @@ COCK 시스템과 비교
 </figure>
 </div>
 <p><strong>CRP</strong>(Continuous Replenishment Program)는 <strong>지속적 보충 프로그램</strong>으로, <font color="blue">공급망에서 판매 데이터를 기반으로 자동으로 재고를 보충</font>하는 방식이다. 주로 제조업체와 소매업체 간 협력을 통해 실시간으로 수요를 분석하고 최적의 재고 수준을 유지하는 데 활용된다.</p>
-<p><strong>CRP의 특징</strong></p>
+<p><strong>CRP의 특징</strong>을 정리하면 다음과 같다.</p>
 <ul>
 <li><strong>실시간 또는 정기적인 데이터 공유</strong><br>
 POS(Point of Sale) 데이터를 활용하여 재고를 예측하고 자동으로 보충<br>
@@ -2993,7 +3053,7 @@ POS(Point of Sale) 데이터를 활용하여 재고를 예측하고 자동으로
 재고 수준 최적화를 통해 운영 효율 향상</li>
 </ul>
 <table class="caption-top table">
-<caption>CRP 장점과 단점</caption>
+<caption>CRP 장단점</caption>
 <colgroup>
 <col style="width: 50%">
 <col style="width: 50%">
@@ -3023,7 +3083,7 @@ POS(Point of Sale) 데이터를 활용하여 재고를 예측하고 자동으로
 </tr>
 </tbody>
 </table>
-<p><strong>CRP 적용 사례</strong></p>
+<p>다음은 <strong>CRP 적용 사례</strong>이다.</p>
 <ul>
 <li><strong>대형 마트(예: 월마트, 코스트코)</strong><br>
 POS 데이터를 기반으로 상품 재고를 자동 조정하여 부족 시 제조업체에서 즉시 보충<br>
