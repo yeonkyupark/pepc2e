@@ -530,12 +530,12 @@ window.Quarto = {
     <h2 id="toc-title">목차</h2>
    
   <ul>
-  <li><a href="#sec-kanban" id="toc-sec-kanban" class="nav-link active" data-scroll-target="#sec-kanban">칸판 생산방식</a>
+  <li><a href="#sec-kanban" id="toc-sec-kanban" class="nav-link active" data-scroll-target="#sec-kanban">칸반 생산방식</a>
   <ul>
-  <li><a href="#칸판-역할" id="toc-칸판-역할" class="nav-link" data-scroll-target="#칸판-역할">칸판 역할</a></li>
-  <li><a href="#칸판-종류" id="toc-칸판-종류" class="nav-link" data-scroll-target="#칸판-종류">칸판 종류</a></li>
-  <li><a href="#칸판-용기-수-산정" id="toc-칸판-용기-수-산정" class="nav-link" data-scroll-target="#칸판-용기-수-산정">칸판 용기 수 산정</a></li>
-  <li><a href="#칸판-운영-규칙" id="toc-칸판-운영-규칙" class="nav-link" data-scroll-target="#칸판-운영-규칙">칸판 운영 규칙</a></li>
+  <li><a href="#칸반-역할" id="toc-칸반-역할" class="nav-link" data-scroll-target="#칸반-역할">칸반 역할</a></li>
+  <li><a href="#칸반-종류" id="toc-칸반-종류" class="nav-link" data-scroll-target="#칸반-종류">칸반 종류</a></li>
+  <li><a href="#칸반-용기-수-산정" id="toc-칸반-용기-수-산정" class="nav-link" data-scroll-target="#칸반-용기-수-산정">칸반 용기 수 산정</a></li>
+  <li><a href="#칸반-운영-규칙" id="toc-칸반-운영-규칙" class="nav-link" data-scroll-target="#칸반-운영-규칙">칸반 운영 규칙</a></li>
   <li><a href="#칸반-운영-조건" id="toc-칸반-운영-조건" class="nav-link" data-scroll-target="#칸반-운영-조건">칸반 운영 조건</a></li>
   </ul></li>
   <li><a href="#sec-jit2" id="toc-sec-jit2" class="nav-link" data-scroll-target="#sec-jit2">JIT Ⅱ</a></li>
@@ -597,14 +597,14 @@ window.Quarto = {
 
 
 <section id="sec-kanban" class="level2">
-<h2 class="anchored" data-anchor-id="sec-kanban">칸판 생산방식</h2>
+<h2 class="anchored" data-anchor-id="sec-kanban">칸반 생산방식</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Kanban_principles.svg/1920px-Kanban_principles.svg.png" class="img-fluid figure-img"></p>
 <figcaption>https://en.wikipedia.org/wiki/Kanban</figcaption>
 </figure>
 </div>
-<p><strong>칸판</strong>(Kanban, 또는 간판으로 읽음)생산 방식은 <span class="hl">“필요한 것은 필요한 때에 필요한 만큼만”</span>이라는 JIT(Just In Time) 사상을 실현하기 위해 도요타에서 창안 되었다. JIT 생산시스템에 있어 정보 시스템 역할을 한다. 즉 어떤 제품이나 부품이 언제 얼마나 필요한가를 알려주는 기능이다.</p>
+<p><strong>칸반</strong>(Kanban, 또는 간판으로 읽음)생산 방식은 <span class="hl">“필요한 것은 필요한 때에 필요한 만큼만”</span>이라는 JIT(Just In Time) 사상을 실현하기 위해 도요타에서 창안 되었다. <span class="hl">JIT 생산시스템에 있어 정보 시스템 역할</span>을 한다. 즉 어떤 제품이나 부품이 언제 얼마나 필요한가를 알려주는 기능이다.</p>
 <p><strong>간판 기능을 통해 얻을 수 있는 이점</strong>은 다음과 같다.</p>
 <ul>
 <li>재고 최소화<br>
@@ -614,23 +614,23 @@ window.Quarto = {
 <li>유연한 생산<br>
 수요 변화에 맞춰 생산량을 조절할 수 있어, 변동성이 큰 시장 환경에 빠르게 대응할 수 있다.</li>
 </ul>
-<section id="칸판-역할" class="level3">
-<h3 class="anchored" data-anchor-id="칸판-역할">칸판 역할</h3>
-<p>칸판은 엽서 크기의 카드나 전표로 작업 지시표 내지 이동표 역할을 한다.</p>
+<section id="칸반-역할" class="level3">
+<h3 class="anchored" data-anchor-id="칸반-역할">칸반 역할</h3>
+<p>칸반은 엽서 크기의 카드나 전표로 작업 지시표 내지 이동표 역할을 한다.</p>
 <ol type="1">
-<li><font color="blue">재고 관리 및 생산 조정</font>
+<li><strong>재고 관리 및 생산 조정</strong>
 <ul>
 <li>필요한 물품 수량과 재고 수준을 실시간으로 파악하여 재고가 부족하지 않도록 저정하는 역할</li>
 <li>부품이나 자재가 필요할 때 즉각적으로 다음 단계 생산 라인에 재료를 요청하는 신호 역할을 하며, 생산이 지연되지 않도록 함</li>
 <li>과인생산이나 재고광잉을 방지하고 JIT원칙에 맞게 생산이 이루어지도록 함</li>
 </ul></li>
-<li><font color="blue">생산 흐름 원활한 제어</font>
+<li><strong>생산 흐름 원활한 제어</strong>
 <ul>
 <li>생산 라인 상에서 부품이나 제품이 이동하는 경로를 제어하며, 각 공정에서 필요한 부품을 적시에 공급하도록 함</li>
 <li>생산 라인 각 공정은 정해진 양만큼 자재를 일정한 주기로 받게 되어 과도한 자재가 쌓이지 않으며 생산 흐름이 원활하게 이루어짐</li>
 <li>공정 간 혼잡이나 지연을 방지</li>
 </ul></li>
-<li><font color="blue">통신 및 신호 역할</font>
+<li><strong>통신 및 신호 역할</strong>
 <ul>
 <li>생산과 물류 간 소통을 돕는 중용한 신호로 작용</li>
 <li>각 작업자나 생산 라인에서는 간판을 통해 부품 요청이 필요할 때 이를 다른 공정이나 공급자에게 전달</li>
@@ -639,36 +639,36 @@ window.Quarto = {
 </ul></li>
 </ol>
 </section>
-<section id="칸판-종류" class="level3">
-<h3 class="anchored" data-anchor-id="칸판-종류">칸판 종류</h3>
-<p>칸판 종류는 크게 생산지시 칸반과 인수 칸반이 있으며 구체적으로 다음과 같다.</p>
+<section id="칸반-종류" class="level3">
+<h3 class="anchored" data-anchor-id="칸반-종류">칸반 종류</h3>
+<p>칸반 종류는 크게 생산지시 칸반과 인수 칸반이 있으며 구체적으로 다음과 같다.</p>
 <ul>
-<li><strong>생산지시</strong> 칸판
+<li><strong>생산지시</strong> 칸반
 <ul>
 <li>작업지시표 역할, 생산부문에 대한 생산지시용</li>
 </ul></li>
-<li><strong>인수(이동)</strong> 칸판
+<li><strong>인수(이동)</strong> 칸반
 <ul>
 <li>현품표와 이동표 기능으로 뒷 공정이 앞공정으로부터 물품을 인수할 때 사용</li>
 </ul></li>
-<li><strong>임시</strong> 칸판
+<li><strong>임시</strong> 칸반
 <ul>
 <li>임시 생산 경우에 사용</li>
 </ul></li>
-<li><strong>전자</strong> 칸판
+<li><strong>전자</strong> 칸반
 <ul>
 <li>운반 기간이 3~4일 이상 걸리는 경우</li>
 </ul></li>
 <li>기타
 <ul>
-<li>칸판 역할을 수향할 수 있는 신호</li>
-<li>용기 시스템: 전용 용기를 칸판으로 사용</li>
-<li>무용기 시스템: 맥도널드 주문 접수원 금전 등록기에 입력한 정보가 주방으로 전달(칸판 역할)</li>
+<li>칸반 역할을 수향할 수 있는 신호</li>
+<li>용기 시스템: 전용 용기를 칸반으로 사용</li>
+<li>무용기 시스템: 맥도널드 주문 접수원 금전 등록기에 입력한 정보가 주방으로 전달(칸반 역할)</li>
 </ul></li>
 </ul>
 </section>
-<section id="칸판-용기-수-산정" class="level3">
-<h3 class="anchored" data-anchor-id="칸판-용기-수-산정">칸판 용기 수 산정</h3>
+<section id="칸반-용기-수-산정" class="level3">
+<h3 class="anchored" data-anchor-id="칸반-용기-수-산정">칸반 용기 수 산정</h3>
 <p>칸반 시스템에서 용기 수량을 계산하는 식은 다음과 같다.</p>
 <p><span id="eq-number-kanban"><span class="math display">\[
 \text{용기 수량} = \frac{\text{수요량} \times \text{리드 타임} + \text{안전 재고}}{\text{용기당 수량}}
@@ -749,16 +749,16 @@ N = \frac{100 \times 2.2}{50} = \frac{220}{50} = 4.4
 </div>
 </div>
 </section>
-<section id="칸판-운영-규칙" class="level3">
-<h3 class="anchored" data-anchor-id="칸판-운영-규칙">칸판 운영 규칙</h3>
-<p>칸판 운영 규칙은 다음과 같다.</p>
+<section id="칸반-운영-규칙" class="level3">
+<h3 class="anchored" data-anchor-id="칸반-운영-규칙">칸반 운영 규칙</h3>
+<p>칸반 운영 규칙은 다음과 같다.</p>
 <ol type="1">
-<li>모든 컨테이너 부품에 칸판을 부착한다.</li>
+<li>모든 컨테이너 부품에 칸반을 부착한다.</li>
 <li><font color="blue">뒷 공정에서 앞공정으로 가지러 간다</font>(필요 시 필요한 양만 생산하고 인수해 가도록 함).</li>
 <li><font color="blue">앞 공정은 뒷 공정에서 가져간 만큼만 생산한다</font>(공정품 재고를 최소로 하기 위함).</li>
-<li><font color="blue">불량품을 뒷 공정에 보내지 않는다</font>(불량으로 인한 솔실을 막고 칸판 흐름 보증).</li>
+<li><font color="blue">불량품을 뒷 공정에 보내지 않는다</font>(불량으로 인한 솔실을 막고 칸반 흐름 보증).</li>
 <li><font color="blue">생산을 평준화 한다</font>.</li>
-<li>칸판은 세부적인 조정이 가능하다(수요 변화 내지 생산현장 사정에 적응하는 능력 갖춤).</li>
+<li>칸반은 세부적인 조정이 가능하다(수요 변화 내지 생산현장 사정에 적응하는 능력 갖춤).</li>
 <li>공정을 안정화하고 합리화 한다(생산 안정성 유지와 낭비 제거).</li>
 </ol>
 </section>
@@ -772,13 +772,13 @@ N = \frac{100 \times 2.2}{50} = \frac{220}{50} = 4.4
 <li>U자형 설비배치와 다기능공 육성</li>
 </font><li><font color="blue">작업 표준화 </font></li>
 </ol>
-<div class="callout callout-style-default callout-warning no-icon callout-titled" title="칸판 방식 적용이 어려운 이융">
+<div class="callout callout-style-default callout-warning no-icon callout-titled" title="칸반 방식 적용이 어려운 이융">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-칸판 방식 적용이 어려운 이융
+칸반 방식 적용이 어려운 이융
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -786,7 +786,7 @@ N = \frac{100 \times 2.2}{50} = \frac{220}{50} = 4.4
 <li>원칙을 준수하며 속도 있게 진행하기 어려움</li>
 <li>거듭되는 시행착오에 의한 좌절, 피로감</li>
 <li>당장 혼란과 손해를 두려워함</li>
-<li>칸판 방식 적용을 기법적인 측면에서만 접근 (종업원 인식 부족)</li>
+<li>칸반 방식 적용을 기법적인 측면에서만 접근 (종업원 인식 부족)</li>
 <li>기법 적용과 접근 방법 오류</li>
 <li>지속적인 관리 부재</li>
 </ol>
@@ -805,9 +805,9 @@ N = \frac{100 \times 2.2}{50} = \frac{220}{50} = 4.4
 <table class="caption-top table">
 <caption>JIT vs.&nbsp;JIT II</caption>
 <colgroup>
-<col style="width: 31%">
-<col style="width: 26%">
-<col style="width: 42%">
+<col style="width: 10%">
+<col style="width: 45%">
+<col style="width: 45%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -848,8 +848,8 @@ N = \frac{100 \times 2.2}{50} = \frac{220}{50} = 4.4
 <table class="caption-top table">
 <caption>JIT II 핵심 요소</caption>
 <colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
+<col style="width: 20%">
+<col style="width: 80%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -881,7 +881,7 @@ N = \frac{100 \times 2.2}{50} = \frac{220}{50} = 4.4
 </blockquote>
 <p>JIT II의 도입 시 다음과 같은 효과를 기대할 수 있다.</p>
 <table class="caption-top table">
-<caption>JIT II 도입 효과과</caption>
+<caption>JIT II 도입 효과</caption>
 <thead>
 <tr class="header">
 <th>항목</th>
@@ -915,8 +915,8 @@ N = \frac{100 \times 2.2}{50} = \frac{220}{50} = 4.4
 <table class="caption-top table">
 <caption>JIT II 도입 조건 및 유의사항</caption>
 <colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
+<col style="width: 20%">
+<col style="width: 80%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -947,8 +947,8 @@ N = \frac{100 \times 2.2}{50} = \frac{220}{50} = 4.4
 <table class="caption-top table">
 <caption>JIT II 적용 사례</caption>
 <colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
+<col style="width: 20%">
+<col style="width: 80%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -985,7 +985,7 @@ N = \frac{100 \times 2.2}{50} = \frac{220}{50} = 4.4
 </ul>
 <section id="toc-개념" class="level3">
 <h3 class="anchored" data-anchor-id="toc-개념">TOC 개념</h3>
-<p>TOC는 한 단어 로압축하면 <strong>초점(focus)</strong>이다. 초점이란 <font color="blue">“해야 할 것을 하는 것”</font>이라고 단순하게 정의할 수 있다. 파레토는 20% 요소가 결과의 80%에 기여한다는 것을 증명했다. 모든 것을 할 수 없을 때 할 것을 적절하게 선택하는 것이 중요하다. 즉 무엇을 선택해 초점을 맞추느냐가 극히 중요하다.</p>
+<p>TOC는 한 단어로 압축하면 <strong>초점(focus)</strong>이다. 초점이란 <strong>“해야 할 것을 하는 것”</strong>이라고 단순하게 정의할 수 있다. 파레토는 20% 요소가 결과의 80%에 기여한다는 것을 증명했다. 모든 것을 할 수 없을 때 할 것을 적절하게 선택하는 것이 중요하다. 즉 무엇을 선택해 초점을 맞추느냐가 극히 중요하다.</p>
 <p>파레토 20-80법칙은 시스템 간 요소 상호의존성(independency)이 없을 때 적용된다. 상호의존성이 많을수록 그리고 변동성(variablity)이 클 수록 상황은 더 극단적이 된다. 조직에서는 수많은 상호의존성과 비교적 큰 변동성이 있어 시스템 성과를 결정하는 요수 수, 즉 제약 수는 극히 적다. TOC에서는 0.1% 요소가 결과의 99.9%를 결정한다고 할 수 있다.</p>
 <p>0.1% 제약을 선택해서 초점을 맞추는 것이 TOC 개념이다. 초점이란 말을 좀 더 구체적으로 정의한다면 해야할 것을 하며 또한 하지 않아야 할 것을 하지 않는다는 것이다(Eliyahu M. Goldratt).</p>
 <p>TOC에서 문제해결 도구는 흐름, 변화, 측정으로 분류할 수 있다.</p>
@@ -1873,11 +1873,11 @@ N = \frac{100 \times 2.2}{50} = \frac{220}{50} = 4.4
 </ol>
 <p>6 시그마의 장점과 한계을 정리하면 다음과 같다.</p>
 <table class="caption-top table">
-<caption>6 시그마 장점과 한</caption>
+<caption>6 시그마 장점과 한계</caption>
 <colgroup>
-<col style="width: 13%">
+<col style="width: 20%">
 <col style="width: 40%">
-<col style="width: 45%">
+<col style="width: 40%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -1915,19 +1915,6 @@ N = \frac{100 \times 2.2}{50} = \frac{220}{50} = 4.4
 </tbody>
 </table>
 <p><strong>6 시그마</strong>는 결함을 줄이고, 품질을 극대화하는 방법론으로, 고객 만족도와 프로세스 효율성을 동시에 향상시킬 수 있는 강력한 도구이다. 이를 통해 조직은 제품 품질을 지속적으로 개선하고, 비용을 절감하며, 경쟁력을 높일 수 있다.</p>
-<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 106-2-5">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-기출: 106-2-5
-</div>
-</div>
-<div class="callout-body-container callout-body">
-
-</div>
-</div>
 </section>
 <section id="sec-lean-6-sigma" class="level3">
 <h3 class="anchored" data-anchor-id="sec-lean-6-sigma">린 6시그마</h3>
@@ -2017,9 +2004,9 @@ N = \frac{100 \times 2.2}{50} = \frac{220}{50} = 4.4
 <table class="caption-top table">
 <caption>VSM 주요 이점 및 한계</caption>
 <colgroup>
-<col style="width: 13%">
-<col style="width: 43%">
-<col style="width: 43%">
+<col style="width: 20%">
+<col style="width: 40%">
+<col style="width: 40%">
 </colgroup>
 <thead>
 <tr class="header">
