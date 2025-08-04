@@ -394,16 +394,17 @@ flowchart TB
         D1[Design]
         Verify
     end
-    tyle 20 fill:#f9f9f9
+    style 10 fill:#f9f9f9
 
     subgraph 20[IDOV]
         Identify
         D2[Design]
         Optimize
         Validate
-        dummy01[투멍로드]
+        dummy01[투명로드]
     end
     style 20 fill:#f9f9f9
+
     style dummy01 fill:none,stroke:none,color:#fff,opacity:0
 
     00 --- 10 & 20    
