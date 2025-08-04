@@ -955,6 +955,7 @@ window.Quarto = {
 <section id="의사결정-도구" class="level2">
 <h2 class="anchored" data-anchor-id="의사결정-도구">의사결정 도구</h2>
 <p>의사결정 도구는 불확실성 하에서 미래를 예측하거나 여러 가지 대안을 평가하거나 상호 영향에서 최선의 선택을 도와준다.</p>
+<center>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
@@ -1005,9 +1006,11 @@ window.Quarto = {
 </div>
 </div>
 </div>
+</center>
 <section id="의사결정-환경" class="level3">
 <h3 class="anchored" data-anchor-id="의사결정-환경">의사결정 환경</h3>
 <p>의사결정 환경은 크게 확실성하, 위험하, 불확실성하 그리고 상충하에서의 의사결정이 있다.</p>
+<center>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
@@ -1023,8 +1026,8 @@ window.Quarto = {
         수송법
         할당법
         동적계획법
-        s11[　] 
-        style s11 fill:transparent,stroke:none
+        s11[투명노드] 
+        style s11 fill:transparent,stroke:none,color:#fff,opacity:0
     end 
 
     subgraph s20[위험하 의사결정]
@@ -1033,8 +1036,8 @@ window.Quarto = {
         대기행렬이론
         시뮬레이션
         마크브연쇄모형
-        s21[　] 
-        style s21 fill:transparent,stroke:none
+        s21[투명노드] 
+        style s21 fill:transparent,stroke:none,color:#fff,opacity:0
     end
 
     subgraph s30[불확실성하 의사결정]
@@ -1049,14 +1052,14 @@ window.Quarto = {
     subgraph s40[상충하 의사결정]
     direction LR
         게임이론
-        s41["　"] 
-        s42["　"] 
-        s43["　"] 
-        s44["　"] 
-        style s41 fill:transparent,stroke:none
-        style s42 fill:transparent,stroke:none
-        style s43 fill:transparent,stroke:none
-        style s44 fill:transparent,stroke:none
+        s41["투명노드"] 
+        s42["투명노드"] 
+        s43["투명노드"] 
+        s44["투명노드"] 
+        style s41 fill:transparent,stroke:none,color:#fff,opacity:0
+        style s42 fill:transparent,stroke:none,color:#fff,opacity:0
+        style s43 fill:transparent,stroke:none,color:#fff,opacity:0
+        style s44 fill:transparent,stroke:none,color:#fff,opacity:0
     end
 
     00 --&gt; s10 &amp; s20 &amp; s30 &amp; s40
@@ -1066,25 +1069,30 @@ window.Quarto = {
 </div>
 </div>
 </div>
+</center>
 <ul>
-<li>확실성하 의사결정
+<li><strong>확실성하 의사결정</strong>
 <ul>
 <li>대안을 선택할 때 어떤한 상황이 발생할 것인지를 확실하게 알고 있는 경우</li>
 <li>고전적 최적화 기법, 손익분기점분석, 선형계획법, 비선형계획법, 수송법, 할당법(배정법), 목표 계획법, 정수계획법, 동적계획법 등</li>
 </ul></li>
-<li>위험하 의사결정
+<li><strong>위험하 의사결정</strong>
 <ul>
 <li>대안을 선택할 때 상황 발생 여부를 확률적으로 알고 있는 경우</li>
 <li>사전정보를 이용한 의사결정, 의사결정, 재고모형이론</li>
 <li>사전정보와 표본정보를 이용한 의사결정, PERT/CPM, 대기행렬이론, 시뮬레이션, 마코브연쇄모형 등</li>
 </ul></li>
-<li>불확실성하 의사결정
+<li><strong>불확실성하 의사결정</strong>
 <ul>
 <li>대안을 선택할 때 상황발생 확률을 전혀 모르는 경우</li>
 <li>라플라스 준거, 맥시맥스 준거, 맥시민 준거, 후르비츠 준거, 유감 준거</li>
 </ul></li>
+<li><strong>상충하 의사결정</strong>
+<ul>
+<li>서로 상충적인 이해관계를 가진 의사결정자들이 상대방에 대응하여 의사결정을 하게 되는 경우(게임모형, Game Mode)</li>
+<li>게임이론</li>
+</ul></li>
 </ul>
-<p>-상충하 의사결정 - 서로 상충적인 이해관계를 가진 의사결정자들이 상대방에 대응하여 의사결정을 하게 되는 경우(게임모형, Game Mode) - 게임이론</p>
 </section>
 <section id="불확실성하-의사결정" class="level3">
 <h3 class="anchored" data-anchor-id="불확실성하-의사결정">불확실성하 의사결정</h3>
@@ -1094,30 +1102,30 @@ window.Quarto = {
 <p>의사결정론에 있어 <strong>의사결정</strong>이란 <font color="blue">무엇을 어떻게 결정해야 하느냐에 대한 물음에 답하는 것</font>으로 의사결정자가 선택할 행위가 복수개여야 한다. 참고로, 관리 불가능 변수란 의사 결정권자 결정과는 관계없이 의사결정 결과에 영향을 주는 요소를 의미한다.</p>
 <p>불확실한 상황 하에서의 의사결정은 선택 가능한 대안, 발생 가능성, 여러 상황에 있어 각 대안들 간 수익성 그리고 알려지지 않은 여러 상황들의 발생 확률 속에서 의사결정자 성향이나 의사결정 상황에 따라 기준이 마련된다.</p>
 <ul>
-<li>최대최소(Maximin, Wald) 기준
+<li><strong>최대최소(Maximin, Wald) 기준</strong>
 <ul>
 <li><font color="blue">비관적인 관점에서 미래 수요가 낮은 것을 선택</font></li>
 <li>미래에 대해 비관적인 예측에 준해 의사결정한 <font color="blue">최악의 대안 중 가장 좋은 결과</font>를 보상해 주는 대안을 선택</li>
 <li>안전제일 주장으로 각 상황별로 손실이 가장 작은 경우를 의사결정 기준으로 삼음</li>
 </ul></li>
-<li>최대최대(Maximax) 기준
+<li><strong>최대최대(Maximax) 기준</strong>
 <ul>
 <li><font color="blue">최대로 낙관적인 수익을 예상하며 미래 수요가 높은 것을 선택</font></li>
 <li>미래에 대해 낙관적인 예측에 준해 의사결정한 <font color="blue">최상의 대안 중 가장 좋은 결과</font>를 보상해 주는 대안을 선택</li>
 </ul></li>
-<li>라플라스(Laplace) 기준
+<li><strong>라플라스(Laplace) 기준</strong>
 <ul>
 <li><font color="blue">가중평균 보상이 가장 좋은 것을 선택</font></li>
 <li>미래를 정확히 예측할 수 없기 때문에 <font color="blue">모든 상황이 동일한 확률로 발생한다는 가정(사건이 n가지일 경우 각 사건 비중은 1/n 임)하</font>에 각 대안별로 기댓값을 계산하여 가장 좋은 값을 갖는 대안을 선택</li>
 <li>“불충분 이유 원칙”이라고 하며 각 상황에 따른 평균을 의사결정 기준으로 삼음</li>
 </ul></li>
-<li>최소최대후회(Minimax Regret, 세비지 Savage) 기준
+<li><strong>최소최대후회(Minimax Regret, 세비지 Savage) 기준</strong>
 <ul>
 <li><font color="blue">최악의 후회(최소 투자를 하였는데 수요가 많은 경우)가 가장 작은 대안을 선택</font></li>
 <li>최대후회 최소화(minimax, savage) 원칙은 의사결정자가 자기 행동 결과를 후회하지 않으려 하며 적어도 <font color="blue">의사결정에서 오는 최대 후회를 최소화</font> 하려고 하는 가정에 근거</li>
 <li>결과표를 후회표(주어진 사건 하에서 최선 대안안인 최대치에서 해당 값을 빼주어 얼마나 손해 보는가를 나타냄)로 전환하여 그 중 가장 작은 값을 가지는 대안 선택</li>
 </ul></li>
-<li>후르비치(Huwicz) 기준
+<li><strong>후르비치(Huwicz) 기준</strong>
 <ul>
 <li><font color="blue">최대최대원책과 최대최소원칙의 가중평균</font></li>
 <li>대부분 의사결정자는 현실적으로 극단적으로 비관적 또는 낙관적 기준이 아닌 중간 어느 지점을 선택함</li>
@@ -1659,9 +1667,12 @@ Laplace 기준 의사결정
 <p>의사결정나무 작성방법은 다음과 같다.</p>
 <p>아래 기호를 이용하여 도식화 한다.</p>
 <ul>
-<li><p>(□) 사각형 결정 마디 어떤 결정이 필요한 상태를 나타내는 의사결정 지점</p></li>
-<li><p>(○) 원형 사건 마디 의사결정 선택과 상황 간 결과를 설명하는 상황 발생점</p></li>
-<li><p>(ㅡ) 가지 의사결정 또는 상황 발생점에서 뻗어 나온 가지로 의사결정 대안을 표시하기도 하고 선택과 상황이 이루어질 때 다양한 결과를 의미하기도 함</p></li>
+<li><p><strong>(□) 사각형 결정 마디</strong><br>
+어떤 결정이 필요한 상태를 나타내는 의사결정 지점</p></li>
+<li><p><strong>(○) 원형 사건 마디</strong><br>
+의사결정 선택과 상황 간 결과를 설명하는 상황 발생점</p></li>
+<li><p><strong>(ㅡ) 가지</strong><br>
+의사결정 또는 상황 발생점에서 뻗어 나온 가지로 의사결정 대안을 표시하기도 하고 선택과 상황이 이루어질 때 다양한 결과를 의미하기도 함</p></li>
 </ul>
 <p>의사결정 나무 작성 작성 절차는 다음과 같다.</p>
 <ol type="1">
@@ -2333,7 +2344,7 @@ x_1 \ge 0, \ x_2 \ge 0
 <h3 class="anchored" data-anchor-id="대안평가">대안평가</h3>
 <section id="sec-ahp" class="level4">
 <h4 class="anchored" data-anchor-id="sec-ahp">AHP</h4>
-<p>AHP(Analytic Hierarchy Process, 계층 분석법)는 복잡한 의사결정 문제를 구조화하고 정량적으로 분석할 수 있도록 도와주는 다기준 의사결정(Multi-Criteria Decision Making, MCDM) 기법이다. 1970년대에 <strong>토마스 사아티(Thomas Saaty)</strong>가 개발하였으며, 정성적 요소를 수치화할 수 있다는 점에서 다양한 분야에서 폭넓게 사용된다.</p>
+<p><strong>AHP</strong>(Analytic Hierarchy Process, 계층 분석법)는 <span class="hl">복잡한 의사결정 문제를 구조화하고 정량적으로 분석할 수 있도록 도와주는 다기준 의사결정(Multi-Criteria Decision Making, MCDM) 기법</span>이다. 1970년대에 <strong>토마스 사아티(Thomas Saaty)</strong>가 개발하였으며, 정성적 요소를 수치화할 수 있다는 점에서 다양한 분야에서 폭넓게 사용된다.</p>
 <p>AHP 특징은 다음과 같다.</p>
 <table class="caption-top table">
 <caption>AHP 특징</caption>
@@ -2375,9 +2386,12 @@ x_1 \ge 0, \ x_2 \ge 0
 <li>논리적 일관성 (logical consistency) 유지</li>
 </ol>
 <ul>
-<li><p>계층적 구조 설정 인간은 복작한 현상을 그 구성요소 별로 나아가 더 작은 부분으로 나누어 종국적으로 계층 구조를 설정한다. 가장 기본적으로 맨 윗부분은 <strong>목적(goal)</strong>을 두고, 그 밑에 판단기준이 되는 <strong>기준(criteria)</strong>을, 그리고 가장 아래 계층에 <strong>대안(alternatives)</strong>을 두는 구조이다. 판단기준은 분석 대상에 따라 하위 계층을 두어 복잡한 구조를 가질 수도 있다.</p></li>
-<li><p>상대적 중요도 설정 인간은 관측한 사물 사이의 관계를 인식하고 유사한 사물들을 짝으로 묶어 특정 기준에 대하여 비교하고 그 짝의 구성 인자 사이의 선호도를 판단하는 능력을 소유하고 있다. 최종적으로 상상이나 논리적 과정을 통하여 그들이 내린 판단을 종합하여 전체 시스템에 대한 이해를 보다 강화한다. AHP 특징은 많은 의사결정 요소 간 가중치 또는 중요도(weight)를 간단한 <strong>쌍대비교(1:1)</strong>를 통해 산출해 내는데 있다.</p></li>
-<li><p>논리적 일관성 유지 인간은 사물이나 생각을 논리적 일관성을 갖도록 관계를 설정하는 능력을 갖고 있다. 일관성은 두 가지 의미를 갖는데 유사한 사물이나 생각을 동질성이나 관련성에 따라 묶는 것과 특정한 기준이 있을 경우 생각이나 사물 간 강약을 기준에 따라 논리적인 방법으로 구성한다는 것이다.</p></li>
+<li><p><strong>계층적 구조 설정</strong><br>
+인간은 복작한 현상을 그 구성요소 별로 나아가 더 작은 부분으로 나누어 종국적으로 계층 구조를 설정한다. 가장 기본적으로 맨 윗부분은 <strong>목적(goal)</strong>을 두고, 그 밑에 판단기준이 되는 <strong>기준(criteria)</strong>을, 그리고 가장 아래 계층에 <strong>대안(alternatives)</strong>을 두는 구조이다. 판단기준은 분석 대상에 따라 하위 계층을 두어 복잡한 구조를 가질 수도 있다.</p></li>
+<li><p><strong>상대적 중요도 설정</strong><br>
+인간은 관측한 사물 사이의 관계를 인식하고 유사한 사물들을 짝으로 묶어 특정 기준에 대하여 비교하고 그 짝의 구성 인자 사이의 선호도를 판단하는 능력을 소유하고 있다. 최종적으로 상상이나 논리적 과정을 통하여 그들이 내린 판단을 종합하여 전체 시스템에 대한 이해를 보다 강화한다. AHP 특징은 많은 의사결정 요소 간 가중치 또는 중요도(weight)를 간단한 <strong>쌍대비교(1:1)</strong>를 통해 산출해 내는데 있다.</p></li>
+<li><p><strong>논리적 일관성 유지</strong><br>
+인간은 사물이나 생각을 논리적 일관성을 갖도록 관계를 설정하는 능력을 갖고 있다. 일관성은 두 가지 의미를 갖는데 유사한 사물이나 생각을 동질성이나 관련성에 따라 묶는 것과 특정한 기준이 있을 경우 생각이나 사물 간 강약을 기준에 따라 논리적인 방법으로 구성한다는 것이다.</p></li>
 </ul>
 </section>
 <section id="가지-공리" class="level5">
@@ -2389,11 +2403,11 @@ x_1 \ge 0, \ x_2 \ge 0
 <div>
 <p></p><figure class="figure"><p></p>
 <div>
-<pre class="mermaid mermaid-js">flowchart TB
-
-    가[4가지 공리]
-    가 --- 나0[상호비교] &amp; 나1[동질성] &amp; 나2[독립성] &amp; 나3[기대성]
-
+<pre class="mermaid mermaid-js">flowchart LR
+    subgraph " "
+        가[4가지 공리]
+        가 --- 나0[상호비교] &amp; 나1[동질성] &amp; 나2[독립성] &amp; 나3[기대성]
+    end
 </pre>
 </div>
 <p></p></figure><p></p>
@@ -2594,19 +2608,21 @@ x_1 \ge 0, \ x_2 \ge 0
 <div>
 <p></p><figure class="figure"><p></p>
 <div>
-<pre class="mermaid mermaid-js">flowchart TB
-    0[경제성 평가방법]
-    11[전통적 분석방법]
-    12[현금흐름할인방법]
-    13[원가비교법]
-    21[회수기간법]
-    22[회계적이익률법]
-    23["순현가법(NPV)"]
-    24["내부수익률법(IRR)"]
-
-    0 --- 11 &amp; 12 &amp; 13
-    11 --- 21 &amp; 22
-    12 --- 23 &amp; 24
+<pre class="mermaid mermaid-js">flowchart LR
+    subgraph " "
+        0[경제성 평가방법]
+        11[전통적 분석방법]
+        12[현금흐름할인방법]
+        21[원가비교법]
+        22[회수기간법]
+        23[회계적이익률법]
+        23["순현가법(NPV)"]
+        24["내부수익률법(IRR)"]
+    
+        0 --- 11 &amp; 12 
+        11 --- 21 &amp; 22 &amp; 23
+        12 --- 23 &amp; 24
+    end
 </pre>
 </div>
 <p></p></figure><p></p>
@@ -2619,14 +2635,15 @@ x_1 \ge 0, \ x_2 \ge 0
 <p>전통적 분석방법에는 <strong>회수기간법</strong>과 <strong>회계적 이익률법</strong>이 있다.</p>
 <section id="원가비교법" class="level4">
 <h4 class="anchored" data-anchor-id="원가비교법">원가비교법</h4>
-<p><strong>원가비교법(Minimum Cost Rule)</strong>은 최소비용법으로 <span class="math inline">\(\text{Min\{각 투자안의 투자액과 비용의 합계\}}\)</span>로 대안을 선정하는 방법이다.</p>
+<p><strong>원가비교법(Minimum Cost Rule)</strong>은 최소비용법으로 대안을 선정하는 방법이다.</p>
+<p><span id="eq-minimum-cost-rue"><span class="math display">\[\text{Min\{각 투자안의 투자액과 비용의 합계\}} \tag{29.6}\]</span></span></p>
 </section>
 <section id="회수기간법" class="level4">
 <h4 class="anchored" data-anchor-id="회수기간법">회수기간법</h4>
 <p><strong>회수기간법(payback period method)</strong>은 투자원금을 투자안을 통해 미래 현금유입으로부터 회수하는데 소요되는 기간을 산출하여 의사결정하는 방법이다.</p>
 <p><span id="eq-payback-period-method"><span class="math display">\[
 회수기간 = \frac{투자액}{연간현금유입액}
-\tag{29.6}\]</span></span></p>
+\tag{29.7}\]</span></span></p>
 <p>의사결정 기준은 다음과 같다.</p>
 <ul>
 <li>독립적 투자안<br>
@@ -2797,7 +2814,7 @@ x_1 \ge 0, \ x_2 \ge 0
 <p><strong>회계적 이익률(accounting rate of return)법</strong>은 장부가치기준으로 연평균투자액에 대한 연평균 회계적 순이익 비율을 구하여 투자결정을 하는 방법이다.</p>
 <p><span id="eq-accounting-rate-of-return"><span class="math display">\[
 회계적 \ 이익률 = \frac{연평균순이익}{연평균투자액(장부가치)}, \ 또는 \  \frac{연평균순이익}{\frac{총투자액}{2}}
-\tag{29.7}\]</span></span></p>
+\tag{29.8}\]</span></span></p>
 <p>의사결정 기준은 다음과 같다. - 독립적 투자안<br>
 목표회계적 이익률(요구수익률)보다 높은 투자안을 선택 - 상호배타적인 투자안<br>
 목표회계적 이익률보다 높은 투자안들 중에서 목표 회계적 이익률이 가장 높은 투자안을 선택</p>
@@ -2864,7 +2881,7 @@ NPV = 미래 \ 현금유입액 \ 현가 \ - \ 초기 \ 투자액
 \]</span></p>
 <p><span id="eq-npv"><span class="math display">\[
 NPV = \sum^{n}_{t=1}\frac{CI_t}{(1+R)^t} - I_0
-\tag{29.8}\]</span></span></p>
+\tag{29.9}\]</span></span></p>
 <p>여기서</p>
 <ul>
 <li><span class="math inline">\(CI_t\)</span> : <span class="math inline">\(t\)</span>시점에서 예상되는 현금유입액</li>
@@ -2941,7 +2958,7 @@ B = \frac{300}{(1+0.1)^1} + \frac{450}{(1+0.1)^2} + \frac{750}{(1+0.1)^3} + \fra
 <p><strong>내부수익률(IRR, internal rate of return)법</strong>은 <span class="hl">기대 현금 유입 현가와 현금 유출 현가를 동일하게 하는 할인률인 IRR을 기준으로 투자를 결정하는 방식</span>이다. 즉, 내부수익률(IRR)과 요구수익률(R)를 비교하여 투자를 결정한다. 계산법은 좌변에 이익현가를 두고 우변에 투자액 현가를 두어 일치시키는 할인율로 화폐의 시간가치가 감안된 예상투자수익률을 계산한다.</p>
 <p><span id="eq-irr"><span class="math display">\[
 \sum^{n}_{t=1}\frac{CI_t}{(1+IRR)^t} = \ I_0 \quad (여기서 \ 식을 \ 만족시키는 \ IRR \ 계산)
-\tag{29.9}\]</span></span></p>
+\tag{29.10}\]</span></span></p>
 <p>IRR은 현가표를 이용하여 시행착오법으로 구하며, 현가표에 정확한 값이 없을 경우 보간법 또는 재무계산기나 Excel을 이용하여 계산할 수도 있다.</p>
 <p>의사결정 기준은 다음과 같다.</p>
 <ul>
@@ -3378,7 +3395,7 @@ MARR
 </ul>
 <p><strong>자본비용(할인율)이 20%일 때 순현재가치법으로 경제성 검토</strong></p>
 <ul>
-<li>NPV 수식 참고(<a href="#eq-npv" class="quarto-xref"><span>29.8</span></a>)</li>
+<li>NPV 수식 참고(<a href="#eq-npv" class="quarto-xref"><span>29.9</span></a>)</li>
 <li>투자안 검토 - <span class="math inline">\(A = [\frac{2470}{(1+0.2)^1} + ... + \frac{2470}{(1+0.2)^5}] - \frac{2470}{(1+0.2)^0} = 411.27\)</span>(만원)$ - <span class="math inline">\(B = [\frac{2310}{(1+0.2)^1} + ... + \frac{2310}{(1+0.2)^4}] - \frac{2310}{(1+0.2)^0} = 504.62\)</span>(만원)$</li>
 <li>따라서 NPV가 큰 B기계 투자안이 효과적</li>
 </ul>
