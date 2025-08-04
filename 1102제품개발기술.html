@@ -1223,7 +1223,7 @@ window.Quarto = {
         D1[Design]
         Verify
     end
-    style 10 fill:#f9f9f9
+    style 10 fill:#ffffff
 
     subgraph 20[IDOV]
         Identify
@@ -1232,7 +1232,7 @@ window.Quarto = {
         Validate
         dummy01[투명로드]
     end
-    style 20 fill:#f9f9f9
+    style 20 fill:#ffffff
 
     style dummy01 fill:none,stroke:none,color:#fff,opacity:0
 
@@ -1245,7 +1245,7 @@ window.Quarto = {
 </div>
 </center>
 <ul>
-<li>DMADV (Define, Measure, Analyze, Design, Verify)
+<li><strong>DMADV (Define, Measure, Analyze, Design, Verify)</strong>
 <ul>
 <li><strong>Define (정의)</strong><br>
 프로젝트 목표와 고객 요구 사항을 정의하고, 성공적인 제품 또는 서비스 설계를 위한 목표를 설정한다.</li>
@@ -1258,7 +1258,7 @@ window.Quarto = {
 <li><strong>Verify (검증)</strong><br>
 설계가 실제로 고객 요구를 충족하는지 확인하고, 필요한 경우 추가적인 수정과 개선을 통해 제품을 검증한다.</li>
 </ul></li>
-<li>IDOV (Identify, Design, Optimize, Validate) 이 방법은 DFSS의 또 다른 접근 방식으로, IDOV는 특히 제품 설계에 필요한 각 단계를 좀 더 구체적으로 정의한다.
+<li><strong>IDOV (Identify, Design, Optimize, Validate)</strong> 이 방법은 DFSS의 또 다른 접근 방식으로, IDOV는 특히 제품 설계에 필요한 각 단계를 좀 더 구체적으로 정의한다.
 <ul>
 <li><strong>Identify</strong><br>
 고객 요구 사항과 기대를 파악한다.</li>
@@ -1304,6 +1304,7 @@ L(y) = k(y-T)^2
 </section>
 <section id="품질설계-단계" class="level4">
 <h4 class="anchored" data-anchor-id="품질설계-단계">품질설계 단계</h4>
+<p>강건설계 단계는 시스템 설계, 파라미터 설계, 그리고 허용차(공차) 설계로 진행된다.</p>
 <center>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
@@ -1320,11 +1321,11 @@ L(y) = k(y-T)^2
 </div>
 </center>
 <ul>
-<li><p>시스템 설계<br>
+<li><p><strong>시스템 설계</strong><br>
 기능 설계로서 관련 기술이 중심이 되고, 시스템은 어떤 방식으로 할 것인가를 연구하는 단계로 1차 설계라고도 한다.</p></li>
-<li><p>파라미터 설계<br>
+<li><p><strong>파라미터 설계</strong><br>
 제품설계에 채택되는 파라미터 최적수준을 결정하는 방법으로 품질을 좋게하고 비용(cost)은 낮게 하는 방법으로써 2차 설계라고도 한다.</p></li>
-<li><p>허용차(공차) 설계<br>
+<li><p><strong>허용차(공차) 설계</strong><br>
 설계 변수 변동 범위에 대하여 손실비용을 고려한 허용범위를 정하는 단계이다.</p></li>
 </ul>
 </section>
@@ -1332,22 +1333,22 @@ L(y) = k(y-T)^2
 <h4 class="anchored" data-anchor-id="품질에-영향을-주는-인자">품질에 영향을 주는 인자</h4>
 <p>강건설계에서는 품질에 영향을 주는 인자를 신호인자, 잡음인자, 제어인자, 오차인자로 구분하였다.</p>
 <ul>
-<li>신호인자(Signal Factor, M)
+<li><strong>신호인자</strong>(Signal Factor, M)
 <ul>
 <li>최적화시키는 인자가 아니라 출력에 관련된 입력인자</li>
 <li>브레이크 시스템에 있어 브레이크를 밟는 힘에 해당</li>
 </ul></li>
-<li>잡음인자(Noise Factor, X)
+<li><strong>잡음인자</strong>(Noise Factor, X)
 <ul>
 <li>제품 특성에 영향을 주고 제어 불가능한 변수(실험 가능)</li>
 <li>브레이크 시스템에 있어 타이어 상태, 도로 상태 등</li>
 </ul></li>
-<li>제어인자(Control Factor, Z)
+<li><strong>제어인자</strong>(Control Factor, Z)
 <ul>
 <li>제품 특성에 영향을 주고, 제어 가능한 변수</li>
 <li>브레이크 시스템 재료</li>
 </ul></li>
-<li>오차인자
+<li><strong>오차인자</strong>
 <ul>
 <li>제품 특성에 영향을 미미하게 미치거나 제어 불가능하고 실험할 수 없는 인자</li>
 <li>브레이크 시스템에 있어 자동차 주위 온도</li>
@@ -1413,19 +1414,24 @@ L(y) = k(y-T)^2
 </ul>
 <p>일반적인 역공학 수행 과정은 다음과 같다.</p>
 <ol type="1">
-<li>분해 및 분석 제품이나 시스템을 물리적으로 분해하여 그 구성 요소와 구조를 분석한다. 소프트웨어의 경우, 실행 파일을 분석하거나 디버깅 도구를 사용하여 프로그램의 동작 방식을 이해한다.</li>
-<li>정보 추출 제품의 설계도나 소스 코드, 기계 부품의 설계 사양 등 관련 정보를 추출한다.</li>
-<li>모델링 및 재설계 분석된 정보를 바탕으로 원래 제품의 모델을 재구성하거나, 새로운 설계를 진행한다.</li>
-<li>시뮬레이션 및 테스트 재설계된 모델이나 소프트웨어를 실제로 테스트하여, 기존 제품과 동일한 성능이나 기능을 제공하는지 확인한다.</li>
-<li>개선 및 최적화 역공학을 통해 얻은 정보를 바탕으로 제품이나 시스템을 개선하고 최적화한다.</li>
+<li>분해 및 분석<br>
+제품이나 시스템을 물리적으로 분해하여 그 구성 요소와 구조를 분석한다. 소프트웨어의 경우, 실행 파일을 분석하거나 디버깅 도구를 사용하여 프로그램의 동작 방식을 이해한다.</li>
+<li><strong>정보 추출</strong><br>
+제품의 설계도나 소스 코드, 기계 부품의 설계 사양 등 관련 정보를 추출한다.</li>
+<li><strong>모델링 및 재설계</strong><br>
+분석된 정보를 바탕으로 원래 제품의 모델을 재구성하거나, 새로운 설계를 진행한다.</li>
+<li><strong>시뮬레이션 및 테스트</strong><br>
+재설계된 모델이나 소프트웨어를 실제로 테스트하여, 기존 제품과 동일한 성능이나 기능을 제공하는지 확인한다.</li>
+<li><strong>개선 및 최적화</strong><br>
+역공학을 통해 얻은 정보를 바탕으로 제품이나 시스템을 개선하고 최적화한다.</li>
 </ol>
 <p>역공학의 장점과 한계는 다음과 같다.</p>
 <table class="caption-top table">
 <caption>역공학 장점과 한계</caption>
 <colgroup>
-<col style="width: 12%">
-<col style="width: 44%">
-<col style="width: 42%">
+<col style="width: 20%">
+<col style="width: 40%">
+<col style="width: 40%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -1437,23 +1443,23 @@ L(y) = k(y-T)^2
 <tbody>
 <tr class="odd">
 <td><strong>기술 분석 및 개선</strong></td>
-<td>- 기존 제품이나 시스템의 작동 원리 분석 가능<br>- 기술적 한계 파악 및 혁신 가능</td>
-<td>- 제품 분석 및 재구성 과정에서 시간과 비용이 많이 소요됨</td>
+<td>• 기존 제품이나 시스템의 작동 원리 분석 가능<br>• 기술적 한계 파악 및 혁신 가능</td>
+<td>• 제품 분석 및 재구성 과정에서 시간과 비용이 많이 소요됨</td>
 </tr>
 <tr class="even">
 <td><strong>제품/시스템 개발</strong></td>
-<td>- 새로운 제품 개발에 필요한 정보 확보<br>- 시스템 간 호환성 향상 가능</td>
-<td>- 원 제품의 기술 구조가 복잡한 경우 분석이 어려움</td>
+<td>• 새로운 제품 개발에 필요한 정보 확보<br>- 시스템 간 호환성 향상 가능</td>
+<td>• 원 제품의 기술 구조가 복잡한 경우 분석이 어려움</td>
 </tr>
 <tr class="odd">
 <td><strong>보안 측면</strong></td>
-<td>- 보안 취약점을 분석하고 이를 강화할 수 있음</td>
-<td>- 소프트웨어나 제품의 역공학은 저작권·특허 등 <strong>법적 문제</strong>를 유발할 수 있음</td>
+<td>• 보안 취약점을 분석하고 이를 강화할 수 있음</td>
+<td>• 소프트웨어나 제품의 역공학은 저작권·특허 등 <strong>법적 문제</strong>를 유발할 수 있음</td>
 </tr>
 <tr class="even">
 <td><strong>윤리/법적 요소</strong></td>
 <td>—</td>
-<td>- 경쟁사 제품 분석 시 <strong>윤리적 논란</strong> 발생 가능<br>- 법적 분쟁 소지 존재</td>
+<td>• 경쟁사 제품 분석 시 <strong>윤리적 논란</strong> 발생 가능<br>- 법적 분쟁 소지 존재</td>
 </tr>
 </tbody>
 </table>
@@ -1464,11 +1470,16 @@ L(y) = k(y-T)^2
 <p><strong>VRP (Variety Reduction Program)</strong>은 <span class="hl">주로 제조업과 물류 분야에서 사용되는 개념으로, 제품이나 서비스의 다양성을 줄이는 효율화 전략</span>이다. 이 프로그램 목적은 <strong>불필요한 제품 변형</strong>이나 <strong>옵션</strong>을 제거하거나 축소하여 생산성을 높이고, <strong>비용 절감</strong>, <strong>재고 관리 효율화</strong>, <strong>공정 단순화</strong> 등을 달성하는 것이다.</p>
 <p>VRP의 주요 목적과 장점은 다음과 같다.</p>
 <ol type="1">
-<li><strong>생산 효율성 향상</strong> 제품이나 부품의 종류가 많을수록 생산 공정이 복잡해지고, 이에 따른 생산 비용이 증가한다. VRP는 불필요한 변형이나 모델을 줄여 생산 라인에서의 <strong>효율성을 높인다</strong>.</li>
-<li><strong>재고 관리 최적화</strong> 제품의 종류가 많으면 재고 관리가 복잡해지고, 불필요한 재고를 보유할 위험이 크다. VRP는 제품의 다양성을 줄여 <strong>재고 회전율을 높이고</strong>, 불필요한 재고를 줄이는 데 기여한다.</li>
-<li><strong>공급망 효율화</strong> 부품이나 원자재의 종류가 줄어들면, 공급망 관리가 단순화되고 <strong>물류 비용 절감</strong>을 이끌어낸다. 부품 수가 줄어듦으로써 <strong>공급업체와의 협력</strong>도 효율적이 된다.</li>
-<li><strong>품질 향상</strong> 다양한 제품을 생산하는 대신, 한정된 범위의 제품에 집중함으로써 품질을 향상시키는 데 집중할 수 있다. 표준화된 제품을 만들면 품질 관리가 용이해진다.</li>
-<li><strong>비용 절감</strong> 다양한 부품이나 모델을 관리하고 생산하는 데 드는 비용을 절감할 수 있다. 또한, <strong>설비 투자 비용</strong>이나 <strong>인력 교육 비용</strong>도 줄어든다.</li>
+<li><strong>생산 효율성 향상</strong><br>
+제품이나 부품의 종류가 많을수록 생산 공정이 복잡해지고, 이에 따른 생산 비용이 증가한다. VRP는 불필요한 변형이나 모델을 줄여 생산 라인에서의 <strong>효율성을 높인다</strong>.</li>
+<li><strong>재고 관리 최적화</strong><br>
+제품의 종류가 많으면 재고 관리가 복잡해지고, 불필요한 재고를 보유할 위험이 크다. VRP는 제품의 다양성을 줄여 <strong>재고 회전율을 높이고</strong>, 불필요한 재고를 줄이는 데 기여한다.</li>
+<li><strong>공급망 효율화</strong><br>
+부품이나 원자재의 종류가 줄어들면, 공급망 관리가 단순화되고 <strong>물류 비용 절감</strong>을 이끌어낸다. 부품 수가 줄어듦으로써 <strong>공급업체와의 협력</strong>도 효율적이 된다.</li>
+<li><strong>품질 향상</strong><br>
+다양한 제품을 생산하는 대신, 한정된 범위의 제품에 집중함으로써 품질을 향상시키는 데 집중할 수 있다. 표준화된 제품을 만들면 품질 관리가 용이해진다.</li>
+<li><strong>비용 절감</strong><br>
+다양한 부품이나 모델을 관리하고 생산하는 데 드는 비용을 절감할 수 있다. 또한, <strong>설비 투자 비용</strong>이나 <strong>인력 교육 비용</strong>도 줄어든다.</li>
 </ol>
 <p>일반적인 VRP 구현 방법은 다음과 같다.</p>
 <ul>
@@ -1501,7 +1512,7 @@ L(y) = k(y-T)^2
 </ul></li>
 <li><strong>다기능 집약</strong>(GT)
 <ul>
-<li>배제, 결합, 교환, 간소화(<span class="quarto-unresolved-ref">?nte-ecrs</span>)를 통해 부품수와 공정수를 삭감하는 것이다.</li>
+<li>배제, 결합, 교환, 간소화(<a href="0801프로세스분석과개선.html#sec-ecrs" class="quarto-xref">ECRS&nbsp;<span>개선 4원칙</span></a>)를 통해 부품수와 공정수를 삭감하는 것이다.</li>
 <li>부품 간소화와 공정 단순화</li>
 </ul></li>
 <li><strong>범위</strong>(Range)
@@ -1602,8 +1613,10 @@ BPR을 통해 달성하고자 하는 목표를 설정한다. 예를 들어, 비�
 <p>BPR을 성공적으로 수행하기 위해서는 <font color="blue">변화 관리, 체계적인 계획 수립, 조직 구성원의 적극적인 참여</font>가 필수적이다.</p>
 <p>BPR을 적용한 주요 사례이다.</p>
 <ul>
-<li><strong>제조업</strong> 제조업체들이 생산 프로세스를 재설계하여 생산성을 향상시키고, 생산 비용을 절감한 사례가 많다. 예를 들어, <strong>하니웰(Honeywell)</strong>은 BPR을 통해 생산 라인을 재설계하여 대규모 비용 절감을 달성했다.</li>
-<li><strong>서비스업</strong> 서비스 산업에서는 고객 서비스 개선과 프로세스 자동화를 통해 고객 만족도를 높이는 데 BPR을 활용한다. <strong>뱅크 오브 아메리카(Bank of America)</strong>는 고객 응대 프로세스를 재설계하여 서비스 시간을 단축하고 고객 만족도를 증가시켰다.</li>
+<li><strong>제조업</strong><br>
+제조업체들이 생산 프로세스를 재설계하여 생산성을 향상시키고, 생산 비용을 절감한 사례가 많다. 예를 들어, <strong>하니웰(Honeywell)</strong>은 BPR을 통해 생산 라인을 재설계하여 대규모 비용 절감을 달성했다.</li>
+<li><strong>서비스업</strong><br>
+서비스 산업에서는 고객 서비스 개선과 프로세스 자동화를 통해 고객 만족도를 높이는 데 BPR을 활용한다. <strong>뱅크 오브 아메리카(Bank of America)</strong>는 고객 응대 프로세스를 재설계하여 서비스 시간을 단축하고 고객 만족도를 증가시켰다.</li>
 </ul>
 <p>BPR은 조직 비지니스 프로세스를 근본적으로 재설계하여 효율성과 경쟁력을 극대화하는 방법론이다. 하지만 높은 비용과 리스크가 따를 수 있기 때문에 신중하게 접근해야 하며, 성공적인 실행을 위해서는 조직 전체가 협력하고 철저한 계획을 수립해야 한다.</p>
 <p><em>_EOD_</em></p>
