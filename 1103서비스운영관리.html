@@ -556,10 +556,10 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="sec-servqual">서비스 품질 5가지 차원</h3>
 <p><strong>SERVQUAL 모델</strong>은 <span class="hl">서비스 품질을 신뢰성, 반응성(대응성), 확신성, 공감, 유형성의 5가지 차원으로 구분하여, 각 차원이 고객의 기대를 충족시키는 정도를 평가</span>한다. 이를 통해 기업은 서비스 품질을 향상시키기 위한 전략을 마련할 수 있다.</p>
 <table class="caption-top table">
-<caption><strong>서비스 품질의 5가지 차원</strong></caption>
+<caption>서비스 품질의 5가지 차원</caption>
 <colgroup>
-<col style="width: 39%">
-<col style="width: 60%">
+<col style="width: 30%">
+<col style="width: 70%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -591,7 +591,7 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 <p>이 5가지 요소는 <strong>SERVQUAL 모형</strong>에서 서비스 품질을 평가하는 핵심 기준으로 활용된다.</p>
-<p>서비스 품질 평가 기준은 다음과 같다.</p>
+<p>서비스 품질 평가 기준은 소비자(고객) 기대와 실제 경험이다.</p>
 <ul>
 <li><strong>기대</strong>: 고객이 서비스 제공자를 선택하기 전에 가질 것으로 예상되는 서비스 품질</li>
 <li><strong>실제 경험</strong>: 고객이 실제 경험한 서비스 품질</li>
@@ -846,6 +846,12 @@ ul.task-list li input[type="checkbox"] {
 <section id="서비타이제이션" class="level3">
 <h3 class="anchored" data-anchor-id="서비타이제이션">서비타이제이션</h3>
 <p><strong>서비타이제이션(Servitization)</strong>은 <span class="hl">제조업에서 제품 판매에 서비스 요소를 결합하여, 서비스 중심의 비즈니스 모델로 전환하는 전략</span>을 의미한다. 단순히 물건을 생산하고 판매하는 것을 넘어, <strong>부가가치가 높은 서비스</strong>를 제공함으로써 고객과의 장기적인 관계를 구축하고 수익을 창출한다.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/servitization.png" class="img-fluid figure-img"></p>
+<figcaption>서비타이제이션</figcaption>
+</figure>
+</div>
 <ol type="1">
 <li><strong>제품 + 서비스 통합</strong>
 <ul>
@@ -876,15 +882,20 @@ ul.task-list li input[type="checkbox"] {
 </li>
 <li><strong>결과 지향 서비스</strong> – 고객이 원하는 결과(성과)를 기반으로 계약을 체결하고, 성과에 따라 대가를 받는 방식.</li>
 </ol>
-<p>서비타이제이션 효과는 다음과 같다.<br>
-- <strong>수익 모델 다변화</strong><br>
+<p>서비타이제이션 효과는 다음과 같다.</p>
+<ul>
+<li><strong>수익 모델 다변화</strong><br>
 제품 판매 외에도 서비스 구독, 유지보수 등으로 <strong>안정적이고 반복적인 수익</strong>을 창출<br>
-- <strong>고객 충성도 향상</strong><br>
+</li>
+<li><strong>고객 충성도 향상</strong><br>
 지속적인 서비스 제공으로 <strong>고객 만족과 충성도</strong>를 높인다.<br>
-- <strong>시장 경쟁력 확보</strong><br>
+</li>
+<li><strong>시장 경쟁력 확보</strong><br>
 제품의 <strong>차별화</strong>가 어려운 상황에서 서비스로 경쟁력을 확보한다.<br>
-- <strong>환경적 지속 가능성</strong><br>
-제품을 효율적으로 관리하고 <strong>수명 주기를 연장</strong>하여 자원 낭비를 줄인다.</p>
+</li>
+<li><strong>환경적 지속 가능성</strong><br>
+제품을 효율적으로 관리하고 <strong>수명 주기를 연장</strong>하여 자원 낭비를 줄인다.</li>
+</ul>
 <p>기업별 서비타이제이션 주요 사례이다.</p>
 <ul>
 <li><strong>롤스로이스(Rolls-Royce)</strong>: 항공기 엔진의 사용 시간에 따라 비용을 청구하는 <strong>“Power by the Hour”</strong> 프로그램 운영.<br>
@@ -905,13 +916,24 @@ ul.task-list li input[type="checkbox"] {
 <p></p><figure class="figure"><p></p>
 <div>
 <pre class="mermaid mermaid-js">flowchart TB
-    0["마케팅 믹스 4P"]
-    11["제품(Product)"]
-    12["유통(Place)"]
-    13["가격(Price)"]
-    14["판매촉진(Promotion)"]
+    subgraph s1["4P"]
     
-    0 --- 11 &amp; 13 &amp; 12 &amp; 14
+        11["제품(Product)"]
+        12["유통(Place)"]
+        13["가격(Price)"]
+        14["판매촉진(Promotion)"]
+    end 
+
+    subgraph s2["6P"]
+        20["마케팅 믹스 4P"]
+        21["사람"]
+        22["과정(Process)"]
+        23[투명노드]
+    end
+    style s2 fill:#ffffff
+    style 23 fill:none,stroke:none,color:#fff,opacity:0    
+
+    s0["마케팅 믹스"] --- s1 &amp; s2
 </pre>
 </div>
 <p></p></figure><p></p>
