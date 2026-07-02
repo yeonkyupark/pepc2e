@@ -2,17 +2,20 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="YK">
-<meta name="dcterms.date" content="2025-08-04">
+<meta name="dcterms.date" content="2026-07-02">
 <meta name="keywords" content="공장관리기술사, 생산운영, 재고, 물류, 공정, 설비, 작업, 생산성, 원가, OR">
 <meta name="description" content="공장관리기술사는 공장관리 분야와 생산운영에 있어 전문지식과 실무경험을 갖추고 기술업무를 수행하는 직무이다. 공장관리기술사 직무를 위한 관련 학습내용을 요약 정리한다.">
 
 <title>생산운영과 공장관리(2E)</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -42,10 +45,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-2180b82fd49e24c9ff3cde7ab0c979e5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-2be468ad9c103491d814df2e404184d6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -538,7 +541,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">August 4, 2025</p>
+      <p class="date">July 2, 2026</p>
     </div>
   </div>
   
@@ -587,7 +590,7 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-목차 구성
+<span class="screen-reader-only">Caution</span>목차 구성
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -608,13 +611,13 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <p>공장관리기술사 <strong>기출 문제</strong>는 아래와 같이 명시한다.</p>
 <blockquote class="blockquote">
-<div class="callout callout-style-default callout-tip no-icon callout-titled" title="기출: 회차-교시-문제번호">
+<div class="callout callout-style-default callout-tip no-icon callout-empty-content callout-titled" title="기출: 회차-교시-문제번호">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-기출: 회차-교시-문제번호
+<span class="screen-reader-only">Tip</span>기출: 회차-교시-문제번호
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -630,7 +633,7 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-예제
+<span class="screen-reader-only">Important</span>예제
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -646,7 +649,7 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-보충설명
+<span class="screen-reader-only">Note</span>보충설명
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -728,13 +731,14 @@ ul.task-list li input[type="checkbox"] {
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

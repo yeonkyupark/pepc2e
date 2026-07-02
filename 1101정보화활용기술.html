@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -11,6 +11,9 @@
 
 <title>정보화 활용 기술 – 생산운영과 공장관리(2E)</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -41,10 +44,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-2180b82fd49e24c9ff3cde7ab0c979e5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-2be468ad9c103491d814df2e404184d6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -812,23 +815,25 @@ MES는 <font color="blue">제조 현장에서 생산을 실시간으로 관리</
 <table class="caption-top table">
 <caption>CRM 도입 기대 효과</caption>
 <colgroup>
-<col style="width: 22%">
-<col style="width: 77%">
+<col style="width: 21%">
+<col style="width: 75%">
+<col style="width: 1%">
 </colgroup>
 <thead>
 <tr class="header">
 <th>업무 영역</th>
 <th>CRM 기대 효과</th>
+<th></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>마케팅 기회 분석</td>
-<td><ul>
-<li><p>수익 및 고객 평생 가치(LTV) 증대</p></li>
-<li><p>신규 고객 유치 및 기존 고객 활성화</p></li>
-<li><p>고객 Life Cycle상 결정적 시점에 효과적 마케팅 활동</p></li>
-<li><p>평생 고객으로 가치를 창출할 수 있게 함</p></li>
+<td colspan="2"><ul>
+<li>수익 및 고객 평생 가치(LTV) 증대 |</li>
+<li>신규 고객 유치 및 기존 고객 활성화 | |</li>
+<li>고객 Life Cycle상 결정적 시점에 효과적 마케팅 활동 | |</li>
+<li>평생 고객으로 가치를 창출할 수 있게 함 |</li>
 </ul></td>
 </tr>
 <tr class="even">
@@ -838,6 +843,7 @@ MES는 <font color="blue">제조 현장에서 생산을 실시간으로 관리</
 <li><p>시장에서 경쟁력 있는 제품 파악 및 신속한 대응 전략 수립</p></li>
 <li><p>수익성 높은 고객 분류와 Target Marketing</p></li>
 </ul></td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>마케팅 관리</td>
@@ -846,6 +852,7 @@ MES는 <font color="blue">제조 현장에서 생산을 실시간으로 관리</
 <li><p>상품에 대한 시장 반응의 신속한 파악 및 보완</p></li>
 <li><p>고객 Need변화에 대한 신속한 파악 및 대응</p></li>
 </ul></td>
+<td></td>
 </tr>
 <tr class="even">
 <td>고객 서비스</td>
@@ -854,6 +861,7 @@ MES는 <font color="blue">제조 현장에서 생산을 실시간으로 관리</
 <li><p>고객 행위에 대한 이해</p></li>
 <li><p>Cross-Selling과 Up-selling 기회 증대 및 활용</p></li>
 </ul></td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>고객 채널 관리</td>
@@ -861,6 +869,7 @@ MES는 <font color="blue">제조 현장에서 생산을 실시간으로 관리</
 <li><p>고객 Needs에 맞춘 최적 채널 제공</p></li>
 <li><p>비용을 최소화할 수 있는 고객 유도</p></li>
 </ul></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -2150,13 +2159,14 @@ EDI는 실시간 데이터 전송을 통해 거래 속도를 빠르게 하고, �
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
