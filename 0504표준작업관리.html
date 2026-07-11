@@ -1102,35 +1102,35 @@ window.Quarto = {
 <thead>
 <tr class="header">
 <th>구분</th>
-<th>평준화법 (Normalization)</th>
+<th>평준화법 (Normalization Method)</th>
 <th>웨스팅하우스법 (Westinghouse System)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>평가 요소</td>
-<td>수행 속도 1가지</td>
-<td>능력, 노력, 상태, 일관성의 4가지</td>
+<td><strong>평가 요소</strong></td>
+<td>작업자의 <strong>전체적인 수행 속도(Performance Rating)</strong></td>
+<td><strong>숙련도(Skill), 노력(Effort), 작업조건(Condition), 일관성(Consistency)</strong> 4가지 요소</td>
 </tr>
 <tr class="even">
-<td>평가 방식</td>
-<td>직관적 속도 비교</td>
-<td>요소별 평가값 합산</td>
+<td><strong>평가 방식</strong></td>
+<td>시간연구자가 작업자의 전체적인 속도를 보고 종합적으로 판단</td>
+<td>4개 요소를 각각 평가한 후 합산하여 종합 Rating 산출</td>
 </tr>
 <tr class="odd">
-<td>적용 방식</td>
-<td>스톱워치 시간에 보정계수 곱</td>
-<td>요소별 등급 매긴 후 합산하여 보정</td>
+<td><strong>적용 방식</strong></td>
+<td>측정시간 × Rating 계수 → 정상시간(Normal Time) 산출</td>
+<td>측정시간 × (1 + 각 요소별 평가값 합계) → 정상시간 산출</td>
 </tr>
 <tr class="even">
-<td>장점</td>
-<td>단순, 신속</td>
-<td>세밀한 평가 가능</td>
+<td><strong>장점</strong></td>
+<td>간단하고 빠르게 적용 가능</td>
+<td>평가 근거가 세분화되어 평준화법보다 체계적</td>
 </tr>
 <tr class="odd">
-<td>단점</td>
-<td>주관성 큼, 정밀도 낮음</td>
-<td>복잡, 교육 필요</td>
+<td><strong>단점</strong></td>
+<td>Rating 판단 근거가 불명확하고 주관성이 큼</td>
+<td>평가 항목이 많아 복잡하고 평가자 교육 필요</td>
 </tr>
 </tbody>
 </table>
@@ -1774,7 +1774,9 @@ window.Quarto = {
 <p>다음은 MODAPTS 기준 예시이다.</p>
 <blockquote class="blockquote">
 <p>작업: 상자에 물건을 넣고 닫은 뒤 라벨 부착<br>
-동작 분석 및 시간 할당 | 동작 | 모듈 수 | 시간(초) | |——|———-|———-| | Reach to item | 4 | 0.40 | | Grasp item | 2 | 0.20 | | Move to box | 6 | 0.60 | | Insert into box | 6 | 0.60 | | Close box | 8 | 0.80 | | Apply label | 10 | 1.00 | | <strong>합계</strong> | - | <strong>3.60초</strong> |</p>
+동작 분석 및 시간 할당<br>
+| 동작 | 모듈 수 | 시간(초) |<br>
+|——|———-|———-| | Reach to item | 4 | 0.40 | | Grasp item | 2 | 0.20 | | Move to box | 6 | 0.60 | | Insert into box | 6 | 0.60 | | Close box | 8 | 0.80 | | Apply label | 10 | 1.00 | | <strong>합계</strong> | - | <strong>3.60초</strong> |</p>
 <p>→ 표준시간 = 합계 시간 + 여유율 적용</p>
 </blockquote>
 <p>합성 레이팅 장점과 단점은 다음과 같다.</p>
